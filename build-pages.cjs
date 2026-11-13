@@ -42,7 +42,7 @@ function page(route,zh,en,content,related='',options={}){
  const topic=options.topic;
  const heading=require('./content/design-shell.cjs').heading(route,zh,en,options);
  const localeHead=`<link rel="canonical" href="/${route}/?lang=zh"><link rel="alternate" hreflang="zh-CN" href="/${route}/?lang=zh"><link rel="alternate" hreflang="en-AU" href="/${route}/?lang=en"><link rel="alternate" hreflang="x-default" href="/${route}/?lang=zh"><script type="application/json" id="page-meta">${JSON.stringify(metadata).replace(/</g,'\\u003c')}</script>${options.extraHead||''}`;
- const html=`<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${e(metadata.titleZh)}</title><meta name="description" content="${e(metadata.descriptionZh)}">${localeHead}<link rel="icon" href="/assets/ellis-services-logo.png"><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="/lower.css"><link rel="stylesheet" href="/cinematic.css"><link rel="stylesheet" href="/continuous.css"><link rel="stylesheet" href="/designer.css"><script src="/detail.js" defer></script><script src="/designer-motion.js" defer></script></head><body class="cinematic-v2 detail-page${topic?' content-detail':''}"><a class="skip-link" href="#main">Skip to content</a>${header}<main id="main" class="detail-main"><nav class="breadcrumbs"><a href="/" data-zh="首页" data-en="Home">首页</a><span aria-hidden="true"> / </span>${topic?`<a href="/${topic.isService?'services':'sectors'}/" data-local-page data-zh="${topic.isService?'服务目录':'商业场景'}" data-en="${topic.isService?'Services':'Property sectors'}">${topic.isService?'服务目录':'商业场景'}</a><span aria-hidden="true"> / </span>`:''}<span data-zh="${e(zh)}" data-en="${e(en)}">${e(zh)}</span></nav>${heading}${content}${related}</main>${footer}</body></html>`;
+ const html=`<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${e(metadata.titleZh)}</title><meta name="description" content="${e(metadata.descriptionZh)}">${localeHead}<link rel="icon" href="/assets/ellis-services-logo.png"><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="/lower.css"><link rel="stylesheet" href="/cinematic.css"><link rel="stylesheet" href="/continuous.css"><link rel="stylesheet" href="/designer.css?v=20261114-11"><script src="/detail.js" defer></script><script src="/designer-motion.js?v=20261114-11" defer></script></head><body class="cinematic-v2 detail-page${topic?' content-detail':''}"><a class="skip-link" href="#main">Skip to content</a>${header}<main id="main" class="detail-main"><nav class="breadcrumbs"><a href="/" data-zh="首页" data-en="Home">首页</a><span aria-hidden="true"> / </span>${topic?`<a href="/${topic.isService?'services':'sectors'}/" data-local-page data-zh="${topic.isService?'服务目录':'商业场景'}" data-en="${topic.isService?'Services':'Property sectors'}">${topic.isService?'服务目录':'商业场景'}</a><span aria-hidden="true"> / </span>`:''}<span data-zh="${e(zh)}" data-en="${e(en)}">${e(zh)}</span></nav>${heading}${content}${related}</main>${footer}</body></html>`;
  const finalHtml=html.replace('</head>',organizationSchema+'</head>').replace('class="cinematic-v2 detail-page','class="cinematic-v2 designer-detail detail-page').replace('<main id="main"',require('./content/design-shell.cjs').rail+'<main id="main"').replace(heading+content,heading+'<div id="page-content" class="designer-page-content">'+content+'</div>');
  const dest=path.join(root,route,'index.html');fs.mkdirSync(path.dirname(dest),{recursive:true});fs.writeFileSync(dest,finalHtml);
 }
@@ -64,3 +64,14 @@ home=home.replace(/<div class="service-ribbon"[^>]*>[\s\S]*?<\/div><\/div>/,`<di
 home=home.replace(/(<div[^>]*id="faq-list"[^>]*>)[\s\S]*?(<\/div>\s*<\/section>)/,`$1${data.faqs.map((f,i)=>`<details data-index="${i}"${i===0?' open':''}><summary>${dual('span',f[0],f[1])}</summary>${dual('p',f[2],f[3])}</details>`).join('')}$2`);
 fs.writeFileSync(path.join(root,'index.html'),home);
 console.log('Built 31 detail/index pages and linked homepage.');
+
+
+
+
+
+
+
+
+
+
+
