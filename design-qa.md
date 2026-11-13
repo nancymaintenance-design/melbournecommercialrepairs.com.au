@@ -32,3 +32,5 @@ Interactions and motion: native scroll drives roof up to -51px and pipe group -1
 Residual P3 / accepted differences: exact generated architectural perspective, decorative label styling, reference icon ornaments and thumbnail crops vary slightly. No pixel-perfect claim. Formal content increases page height compared with mock captions. No actionable P0/P1/P2 remains in the tested viewports.
 
 Implementation checklist: [x] 31 inner pages [x] source comparisons [x] lower chapters [x] real scroll frames [x] bilingual mobile [x] desktop [x] reduced motion [x] build/idempotence/links [x] no content or URL regression.
+
+Final lower-chapter iteration: the systems note was too shallow relative to the reference, and the detached interior wall approached the right crop. Filled the note with the existing first scope sentence, constrained the room width, and added three real linked retail entrance annotations. Recaptured all three comparisons; both major chapters remain visible. Representative 390px bilingual states rechecked 6/6 without overflow. Final static link count 1641; original content and metadata still unchanged.
