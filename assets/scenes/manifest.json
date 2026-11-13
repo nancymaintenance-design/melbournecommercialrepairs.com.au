@@ -1,0 +1,45 @@
+{
+  "city": "Melbourne",
+  "states": [
+    {
+      "state": 0,
+      "file": "01-home.webp",
+      "opaque_bbox": [
+        27,
+        26,
+        1512,
+        951
+      ]
+    },
+    {
+      "state": 1,
+      "file": "02-building-interior.webp",
+      "opaque_bbox": [
+        12,
+        22,
+        1520,
+        953
+      ]
+    },
+    {
+      "state": 2,
+      "file": "03-equipment.webp",
+      "opaque_bbox": [
+        77,
+        8,
+        1461,
+        1015
+      ]
+    },
+    {
+      "state": 3,
+      "file": "04-landscaping.webp",
+      "opaque_bbox": [
+        6,
+        23,
+        1533,
+        1001
+      ]
+    }
+  ]
+}

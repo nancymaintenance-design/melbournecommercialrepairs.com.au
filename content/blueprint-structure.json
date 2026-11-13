@@ -1,0 +1,314 @@
+{
+  "S01": {
+    "h1En": "Commercial Building Maintenance & Repairs in Melbourne",
+    "h2En": [
+      "Planned Maintenance and Reactive Building Repairs",
+      "Repairs to Doors, Walls, Ceilings and Everyday Fixtures",
+      "Commercial Carpentry, Joinery and Painting Repairs",
+      "Coordinating Repair Lists Around Your Business Operations"
+    ],
+    "faqEn": [
+      "Which repairs are included in commercial building maintenance?",
+      "Can you arrange a recurring maintenance programme for our building?",
+      "Can building repairs be scheduled around our opening hours?",
+      "Can we book a one-off repair or a list of small jobs?",
+      "What information helps you scope and quote a maintenance job?"
+    ]
+  },
+  "S02": {
+    "h1En": "Commercial Roof Repairs, Waterproofing & Remedial Works in Melbourne",
+    "h2En": [
+      "Commercial Roof Leaks, Flashings and Box Gutter Repairs",
+      "Waterproofing for Rooftops, Wet Areas and Below-Ground Spaces",
+      "Remedial Repairs to Concrete, Joints and Water-Damaged Building Elements",
+      "Assessing Repair, Restoration and Replacement Options"
+    ],
+    "faqEn": [
+      "How do you decide whether a commercial roof needs repair or replacement?",
+      "What affects the price of replacing a commercial roof?",
+      "How frequently should a commercial roof be inspected?",
+      "Which parts of a commercial building can be waterproofed?",
+      "How long will the waterproofing work and curing stages take?"
+    ]
+  },
+  "S03": {
+    "h1En": "Commercial Electricians & Electrical Maintenance in Melbourne",
+    "h2En": [
+      "Electrical Fault Finding and Power Supply Repairs",
+      "Switchboard Upgrades, New Circuits and Three-Phase Power",
+      "LED Lighting for Offices, Retail Spaces and Warehouses",
+      "Exit Lighting, Emergency Lighting and Scheduled Testing"
+    ],
+    "faqEn": [
+      "What types of work does your commercial electrical service cover?",
+      "Can you provide a continuing electrical maintenance service for our site?",
+      "Can existing fluorescent office fittings be upgraded to LEDs?",
+      "Which lighting options suit a warehouse or industrial workspace?",
+      "Can electrical work be arranged outside our normal trading hours?"
+    ]
+  },
+  "S04": {
+    "h1En": "Commercial Plumbing, Drainage & Gas Services in Melbourne",
+    "h2En": [
+      "Commercial Plumbing Repairs for Leaks, Toilets and Hot Water",
+      "Blocked Drains, CCTV Inspections and Drainage Maintenance",
+      "Gas Fitting and Gas Appliance Servicing for Business Premises",
+      "Planned Servicing for Backflow Devices, TMVs and Water Systems"
+    ],
+    "faqEn": [
+      "How is a suitable commercial plumbing maintenance interval decided?",
+      "Can drain jetting and camera inspections be included in our maintenance plan?",
+      "What records will we receive after a plumbing maintenance visit?",
+      "How are call-out, repair and larger plumbing project costs quoted?",
+      "Can you investigate a gas appliance fault at our commercial premises?"
+    ]
+  },
+  "S05": {
+    "h1En": "Commercial Air Conditioning & HVAC Maintenance in Melbourne",
+    "h2En": [
+      "Scheduled Commercial Air Conditioning Servicing",
+      "HVAC Fault Finding, Breakdown Repairs and System Upgrades",
+      "Mechanical Ventilation for Occupied Commercial Buildings",
+      "Building Controls, Chillers and Mechanical Plant Maintenance"
+    ],
+    "faqEn": [
+      "What work is included in a commercial HVAC servicing visit?",
+      "How should servicing frequency be set for our air conditioning systems?",
+      "What determines the cost of a commercial HVAC maintenance plan?",
+      "How does planned HVAC maintenance differ from a breakdown repair?",
+      "Can the maintenance scope include building controls and mechanical plant?"
+    ]
+  },
+  "S06": {
+    "h1En": "Fire Protection, Security & Access Control in Melbourne",
+    "h2En": [
+      "Fire Equipment Maintenance and Essential Safety Measures",
+      "Commercial CCTV, Alarm Repairs and Security System Upgrades",
+      "Access Control for Staff, Visitors and Shared Entrances",
+      "Coordinated Testing, Maintenance Records and System Handover"
+    ],
+    "faqEn": [
+      "What systems are covered by a building’s essential safety measures?",
+      "How frequently does a fire hydrant system require testing?",
+      "Can door access control be connected to our existing cameras and alarms?",
+      "How can repeated false alarms at our business be investigated?",
+      "How will electronic door access behave during a power failure?"
+    ]
+  },
+  "S07": {
+    "h1En": "Commercial Garden Maintenance & Irrigation in Melbourne",
+    "h2En": [
+      "Scheduled Lawn, Garden and Grounds Care",
+      "Hedge Trimming, Weed Control and Garden Renewals",
+      "Irrigation Fault Finding, Repairs and Seasonal Settings",
+      "Maintenance Plans for Commercial Sites"
+    ],
+    "faqEn": [
+      "Which tasks can be included in a commercial garden maintenance plan?",
+      "How do you decide the right visit frequency for a commercial garden?",
+      "What affects the time needed to maintain a commercial garden?",
+      "Can irrigation servicing continue after a new system is installed?",
+      "Can you diagnose dry lawn patches caused by faulty irrigation?"
+    ]
+  },
+  "S08": {
+    "h1En": "Commercial Signage Installation & Maintenance in Melbourne",
+    "h2En": [
+      "Shopfront, Building and Reception Sign Installation",
+      "Illuminated Sign, Lightbox and Panel Repairs",
+      "Wayfinding, Directories and Site Sign Updates",
+      "Sign Removal, Access Planning and Ongoing Maintenance"
+    ],
+    "faqEn": [
+      "Can an existing sign be repaired even if another company installed it?",
+      "What details are useful when requesting a signage quote?",
+      "Can the previous shop sign be taken down before the replacement is fitted?",
+      "Can you supply a coordinated set of wayfinding signs for one site?",
+      "Can a flickering lightbox be repaired instead of replacing the whole sign?"
+    ]
+  },
+  "S09": {
+    "h1En": "High-Rise Window & Façade Cleaning in Melbourne",
+    "h2En": [
+      "Exterior Glass and Window Frame Cleaning",
+      "Façade Washdowns for Cladding, Render and Masonry",
+      "Access Planning for Occupied Commercial Buildings",
+      "One-Off Cleans and Scheduled Façade Care"
+    ],
+    "faqEn": [
+      "How does a full façade washdown differ from a window clean?",
+      "Which types of staining can be treated during a façade clean?",
+      "How is the cleaning schedule chosen for a commercial façade?",
+      "Can high-access cleaning take place while tenants remain in the building?",
+      "How are high-access cleaning bookings affected by bad weather?"
+    ]
+  },
+  "S10": {
+    "h1En": "Commercial Cleaning Services in Melbourne",
+    "h2En": [
+      "Routine Cleaning for Workplaces and Shared Areas",
+      "Deep Cleaning, Carpet Care and Hard-Floor Maintenance",
+      "Washroom Hygiene, Consumables and Waste Handling",
+      "Cleaning Schedules Built Around Site Operations"
+    ],
+    "faqEn": [
+      "Which factors determine the price of a commercial cleaning service?",
+      "Which tasks belong in a routine office cleaning scope?",
+      "When is a deep clean more suitable than a routine clean?",
+      "Can periodic carpet and floor treatments be added to a regular contract?",
+      "Can you arrange a single clean without an ongoing maintenance contract?"
+    ]
+  },
+  "S11": {
+    "h1En": "Car Park Repairs, Line Marking & Maintenance in Melbourne",
+    "h2En": [
+      "Parking Bay, Access Lane and Pedestrian Line Marking",
+      "Pothole Repairs, Asphalt Patching and Resurfacing",
+      "Bollards, Wheel Stops and External Fixtures",
+      "Staged Works, Drainage and Site Reopening"
+    ],
+    "faqEn": [
+      "When can vehicles return after new car park markings are applied?",
+      "Can existing line markings be removed before the layout is changed?",
+      "Can an existing asphalt car park be resurfaced instead of rebuilt?",
+      "Is it possible to keep part of the car park open during the works?",
+      "Can minor cracks and damaged concrete surfaces be repaired?"
+    ]
+  },
+  "S12": {
+    "h1En": "Commercial Fitouts, Refurbishments & Make Good in Melbourne",
+    "h2En": [
+      "Office and Commercial Interior Refurbishments",
+      "Staged Fitouts for Occupied Business Premises",
+      "Make Good, Defit and Tenancy Reinstatement",
+      "Coordinated Trades and Handover Preparation"
+    ],
+    "faqEn": [
+      "Which works may be included in a commercial tenancy make good?",
+      "What affects the cost of a make good project in Melbourne?",
+      "How early should make good works be planned before the handover date?",
+      "Can staff remain on site while an office refurbishment is completed?",
+      "What is the difference between a strip out and a complete make good?"
+    ]
+  },
+  "I01": {
+    "h1En": "Office Building Maintenance in Melbourne",
+    "h2En": [
+      "Repairs Across Occupied Offices and Tenancies",
+      "HVAC, Lighting and Electrical Faults at Work",
+      "Kitchenettes, Washrooms and Shared Amenities",
+      "Planned Visits and Works Around Office Hours"
+    ],
+    "faqEn": [
+      "What repairs can be included in a commercial maintenance visit?",
+      "Can maintenance be booked outside normal office hours?",
+      "Can one visit cover faults on several office floors?",
+      "How do you plan repairs while staff remain in the building?"
+    ]
+  },
+  "I02": {
+    "h1En": "Retail & Shopping Centre Maintenance in Melbourne",
+    "h2En": [
+      "Shopfronts, Store Fixtures and Tenancy Repairs",
+      "Roof Leaks, Plumbing Faults and Shared Amenities",
+      "Entrances, Signage and Customer Access",
+      "Works Planned Around Trading and Centre Access"
+    ],
+    "faqEn": [
+      "Can site work be completed before shops open?",
+      "Can maintenance be coordinated across several retail locations?",
+      "Can entrance areas and adjoining car parks be maintained together?",
+      "How are repairs organised around shopping-centre access requirements?"
+    ]
+  },
+  "I03": {
+    "h1En": "Restaurant & Hotel Maintenance in Melbourne",
+    "h2En": [
+      "Restaurant Kitchens, Service Areas and Drainage",
+      "Dining Areas, Bars and Customer Amenities",
+      "Hotel Rooms, Bathrooms and Guest Areas",
+      "Planned Works Around Service and Occupancy"
+    ],
+    "faqEn": [
+      "Can repairs be scheduled between trading or service periods?",
+      "Is planned maintenance available alongside urgent repairs?",
+      "Can you coordinate maintenance for a group of hospitality venues?",
+      "Can room and bathroom repairs be staged around hotel occupancy?"
+    ]
+  },
+  "I04": {
+    "h1En": "Warehouse & Logistics Facility Maintenance in Melbourne",
+    "h2En": [
+      "Roofs, Gutters and Water Ingress",
+      "Warehouse Floors, Loading Areas and Traffic Routes",
+      "Lighting, Ventilation and Staff Facilities",
+      "Planned Works Around Dispatch and Site Access"
+    ],
+    "faqEn": [
+      "Can warehouse repairs be booked as individual jobs?",
+      "What determines the price of a warehouse maintenance job?",
+      "How will works be separated from forklifts and loading operations?",
+      "Can roof, floor and external-area repairs be coordinated together?"
+    ]
+  },
+  "I05": {
+    "h1En": "Factory & Industrial Property Maintenance in Melbourne",
+    "h2En": [
+      "Factory Buildings, Roofs and External Fabric",
+      "Floors, Hardstand and Vehicle Access",
+      "Electrical, Ventilation and Building Services",
+      "Planned Site Works Across Industrial Estates"
+    ],
+    "faqEn": [
+      "Can work be arranged around tenants and operating hours?",
+      "Can you maintain shared grounds across a multi-tenancy industrial site?",
+      "Does your scope cover the building, production machinery or both?",
+      "Can floor and exterior repairs be planned for a shutdown period?"
+    ]
+  },
+  "I06": {
+    "h1En": "Medical Centre & Healthcare Facility Maintenance in Melbourne",
+    "h2En": [
+      "Consulting Rooms, Reception and Interior Repairs",
+      "Plumbing, Lighting and Building Services",
+      "Repairs Planned Around Patients and Appointments",
+      "Entrances, Paths and Outdoor Areas"
+    ],
+    "faqEn": [
+      "Which building repairs can be arranged for a healthcare facility?",
+      "How can outdoor maintenance keep patient routes open?",
+      "Can clinic maintenance be arranged after hours or on weekends?",
+      "Do you repair building facilities or clinical equipment?"
+    ]
+  },
+  "I07": {
+    "h1En": "School & Community Facility Maintenance in Melbourne",
+    "h2En": [
+      "Classrooms, Amenities and Shared Indoor Spaces",
+      "Grounds, Fences and Access Points",
+      "Larger Works During School Holidays",
+      "Maintenance for Community Halls and Shared Facilities"
+    ],
+    "faqEn": [
+      "Can major repairs be arranged for school holiday periods?",
+      "Can internal repairs and grounds care be coordinated together?",
+      "What checks and documents can be provided before site access?",
+      "Can urgent repairs be handled during the school term?"
+    ]
+  },
+  "I08": {
+    "h1En": "Commercial Strata & Common Property Maintenance in Melbourne",
+    "h2En": [
+      "Foyers, Corridors and Shared Building Areas",
+      "Shared Car Parks, Gardens and Access Systems",
+      "Planned Maintenance and Committee Work Orders",
+      "Coordinated Trades and Completion Records"
+    ],
+    "faqEn": [
+      "Can you work with an owners corporation or its strata manager?",
+      "Which shared-area repairs can be included?",
+      "Can several trades be coordinated under one maintenance job?",
+      "What information can the committee receive when the job is finished?"
+    ]
+  }
+}

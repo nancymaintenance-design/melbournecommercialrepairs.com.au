@@ -1,0 +1,42 @@
+{
+  "city": "Melbourne",
+  "type": "conceptual-key-states",
+  "assets": [
+    {
+      "id": "01-interior-cutaway",
+      "label": "室内维修 · 玻璃立面展开",
+      "src": "assets/motion/01-interior-cutaway.webp",
+      "source": "source-artwork/01-interior-cutaway.png",
+      "width": 1536,
+      "height": 1024,
+      "alpha": true
+    },
+    {
+      "id": "02-interior-open",
+      "label": "室内维修 · 楼层分层剖面",
+      "src": "assets/motion/02-interior-open.webp",
+      "source": "source-artwork/02-interior-open.png",
+      "width": 1536,
+      "height": 1024,
+      "alpha": true
+    },
+    {
+      "id": "03-equipment-lift",
+      "label": "设备系统 · 顶部大幅上拉",
+      "src": "assets/motion/03-equipment-lift.webp",
+      "source": "source-artwork/03-equipment-lift.png",
+      "width": 1536,
+      "height": 1024,
+      "alpha": true
+    },
+    {
+      "id": "04-equipment-exploded",
+      "label": "设备系统 · 机电三层展开",
+      "src": "assets/motion/04-equipment-exploded.webp",
+      "source": "source-artwork/04-equipment-exploded.png",
+      "width": 1536,
+      "height": 1024,
+      "alpha": true
+    }
+  ]
+}

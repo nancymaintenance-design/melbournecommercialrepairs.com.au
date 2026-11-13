@@ -1,0 +1,13 @@
+{
+  "name": "ellis-melbourne-commercial-repairs",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Bilingual Ellis Services Group commercial property maintenance website for Melbourne",
+  "scripts": {
+    "build": "node build-pages.cjs",
+    "check": "node --check app.js && node --check detail.js && node --check designer-motion.js && node --check motion.js && node --check scene-visual.js && node --check build-pages.cjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
