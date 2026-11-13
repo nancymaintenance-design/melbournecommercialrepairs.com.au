@@ -47,6 +47,8 @@
 .designer-detail .topic-section .scope-number{border:0;border-radius:0;padding:0;font-size:45px;letter-spacing:-.09em;font-family:Arial,sans-serif}
 .designer-detail .topic-section h2{font-size:clamp(26px,2.6vw,42px);max-width:18em;line-height:1.12}
 .designer-detail .topic-section p{font-size:16px}
+.scope-subsection{margin-top:26px;padding-top:22px;border-top:1px solid currentColor}
+.scope-subsection h3{font-size:21px;line-height:1.35;letter-spacing:-.025em;margin:0 0 14px}
 .designer-detail .topic-section.has-entered{transform:perspective(1000px) rotateX(var(--tilt-x,0deg)) rotateY(var(--tilt-y,0deg));transition:transform .35s,opacity .7s}
 .designer-detail .topic-faq{margin-top:75px;border:2px solid var(--lime);box-shadow:-12px 12px 0 var(--orange);border-radius:40px}
 .designer-detail .topic-cta{color:var(--ink);margin-top:55px;box-shadow:10px 10px 0 var(--lime);border:0}
