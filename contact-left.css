@@ -1,0 +1,28 @@
+/* Contact route only: preserve the existing right column and layout. */
+#location .contact-left-visual{position:relative;isolation:isolate;overflow:hidden;border-radius:38px;padding:32px;color:#fff;background:linear-gradient(145deg,#061afa,#1249ff 54%,#0015aa);box-shadow:0 18px 38px #0b27b52a;--contact-drift:0px}
+#location .contact-left-visual::before,#location .contact-left-visual::after{content:"";position:absolute;pointer-events:none;z-index:-1;inset:-80% -45% 35%;border-radius:45%;border:1px solid #a4dcff88;background:linear-gradient(160deg,#61b2ff88,#1948ff18 60%,#00115c90);transform:translateY(var(--contact-drift)) rotate(-20deg);box-shadow:0 12px 30px #010c8233,inset 0 1px 0 #d9f5ff99}
+#location .contact-left-visual::after{inset:52% -25% -70%;background:linear-gradient(170deg,#548dff77,#061ac4);transform:translateY(calc(var(--contact-drift)*-.6)) rotate(17deg);border-color:#728eff80}
+#location .contact-left-visual>.eyebrow{color:#dfff00;margin:0 0 15px;font-weight:800}
+#location .contact-left-visual>h2{color:#fff;font-size:36px;line-height:1.15;margin:0 0 24px;letter-spacing:-.025em}
+#location .contact-info-panel{position:relative;border:1px solid #c6e9ffbb;border-radius:29px;padding:22px 25px;background:linear-gradient(135deg,#6bafff36,#0929d9b5 62%,#66a5ff35);box-shadow:8px 10px 0 -1px #164aff,-1px 0 0 1px #ffffff20,15px 18px 0 -2px #0421a9,0 20px 35px #000e6a50,inset 0 1px 2px #e3f8ff90;margin:0 11px 15px 0}
+#location .contact-info-panel::before{content:"";position:absolute;inset:-1px;border:1px solid #bcdcff66;border-radius:inherit;box-shadow:inset 0 0 18px #b0e1ff22;pointer-events:none;animation:contact-edge-light 6s ease-in-out infinite}
+#location .contact-info-panel h3{font-size:25px;color:#fff;margin:0 0 14px;display:table;border-bottom:5px solid #dfff00;padding-bottom:5px}
+#location .contact-info-panel dl{margin:0}
+#location .contact-info-row{display:grid;grid-template-columns:82px minmax(0,1fr);gap:10px;padding:17px 0;border-top:1px solid #cce0ff66;align-items:start}
+#location .contact-info-row dt{font-size:14px;font-weight:700;line-height:1.5;display:flex;align-items:center;gap:8px;margin:0}
+#location .contact-info-row dt::before{content:"";width:7px;height:7px;border-radius:50%;background:#dfff00;flex:none}
+#location .contact-info-row dd{font-size:18px;font-weight:700;line-height:1.45;margin:0;min-width:0;color:#fff;overflow-wrap:anywhere}
+#location .contact-info-row dd a{color:#fff;text-decoration:none}
+#location .contact-info-row dd .contact-info-action{display:inline-flex;align-items:center;min-height:36px;padding:6px 15px;background:#dfff00;color:#061bdc;border-radius:999px;margin-top:10px;font-size:13px;font-weight:800;box-shadow:0 3px 0 #011da72b}
+#location .contact-info-row dd .contact-mail-action{background:transparent;color:#fff;border:1px solid #fff}
+#location .contact-info-row a:hover{text-decoration:underline;text-underline-offset:4px}
+#location .contact-info-row a:focus-visible{outline:3px solid #ff5cb9;outline-offset:4px}
+#location .contact-info-email{font-size:clamp(14px,1.13vw,18px);white-space:nowrap;letter-spacing:-.02em}
+#location .contact-info-address span{display:block}
+#location .contact-left-visual.is-contact-armed .contact-info-panel{opacity:0;translate:0 18px}
+#location .contact-left-visual.is-contact-entered .contact-info-panel{animation:contact-panel-arrive .7s cubic-bezier(.2,.75,.2,1) both}
+@keyframes contact-panel-arrive{to{opacity:1;translate:0 0}}
+@keyframes contact-edge-light{50%{border-color:#e3f8ff;box-shadow:inset 0 0 25px #b0e1ff40}}
+@media(max-width:1150px){#location .contact-left-visual{padding:26px 20px}#location .contact-info-panel{padding:20px 18px}#location .contact-info-row{grid-template-columns:1fr;gap:6px}#location .contact-info-email{font-size:16px;white-space:normal}}
+@media(max-width:700px){#location .contact-left-visual{border-radius:30px;padding:26px 18px}#location .contact-left-visual>h2{font-size:30px}#location .contact-info-panel{border-radius:24px;padding:20px 16px}#location .contact-info-row dd{font-size:17px}#location .contact-info-email{font-size:15px}}
+@media(prefers-reduced-motion:reduce){#location .contact-left-visual *,#location .contact-left-visual *::before{animation:none!important}#location .contact-left-visual.is-contact-armed .contact-info-panel{opacity:1;translate:none}#location .contact-left-visual{--contact-drift:0px!important}}

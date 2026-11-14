@@ -1,0 +1,85 @@
+/* Only the homepage brand/insurance composition. Original PNG stays untouched. */
+body.cinematic-v2 #about[data-about-brand]{display:block;gap:0;background:#f8f5ed;border:0;padding:48px var(--gutter) 54px;overflow:hidden;color:#080d35}
+#about[data-about-brand] .ab-kicker{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-bottom:25px;font:800 13px/1.4 'Courier New',monospace;letter-spacing:.07em}
+#about[data-about-brand] .ab-kicker p{margin:0;display:flex;gap:10px;max-width:none}
+#about[data-about-brand] .ab-artboard{position:relative;isolation:isolate;border-radius:70px;overflow:hidden;padding-bottom:13px;margin-inline:calc(var(--gutter)*-.5)}
+#about[data-about-brand] .ab-orange-surface{position:absolute;inset:0;background:#ff5d00;border-radius:inherit;z-index:-1}
+#about[data-about-brand] .ab-top{position:relative;display:grid;grid-template-columns:62% 38%;height:clamp(350px,27vw,440px)}
+#about[data-about-brand] .ab-brand{position:relative;min-width:0;isolation:isolate;height:100%}
+#about[data-about-brand] .ab-pink-surface,#about[data-about-brand] .ab-lime-surface{position:absolute;inset:0 0 -7px -50px;border-radius:90px 0 145px 0;transform:skewX(-8deg);transform-origin:100% 0;z-index:-1}
+#about[data-about-brand] .ab-pink-surface{right:-18px;background:#ff40ad}
+#about[data-about-brand] .ab-lime-surface{background:#dcff00}
+#about[data-about-brand] .ab-brand-content{display:grid;grid-template-columns:36% minmax(0,1fr);align-items:center;gap:18px;height:100%;padding:32px 45px 34px 35px}
+#about[data-about-brand] .ab-original-logo{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:contain;object-position:center;opacity:1!important;transform:none!important;clip-path:none!important;mask:none!important;filter:none!important;position:relative;z-index:2}
+#about[data-about-brand] .ab-wordmark{min-width:0;position:relative;z-index:2;padding-right:12px}
+#about[data-about-brand] .ab-word-mask{overflow:hidden;padding-right:15px;margin-right:-15px}
+#about[data-about-brand] .ab-word{display:block;font:italic 950 clamp(96px,11.2vw,190px)/.98 Arial,sans-serif;letter-spacing:-.075em;color:#1122ff;white-space:nowrap;padding-right:8px}
+#about[data-about-brand] .ab-services{display:block;font:900 clamp(18px,2.5vw,39px)/1.15 Arial,sans-serif;letter-spacing:.15em;white-space:nowrap;margin-top:8px}
+#about[data-about-brand] .ab-motto{display:block;font:800 clamp(12px,1.5vw,22px)/1.3 Arial,sans-serif;letter-spacing:.09em;white-space:nowrap;margin-top:27px}
+#about[data-about-brand] .ab-insurance{position:relative;min-width:0;display:flex;align-items:center;justify-content:center;padding:36px 35px 44px 24px}
+#about[data-about-brand] .ab-insurance-content{width:100%;position:relative}
+#about[data-about-brand] .ab-insurance-amount{display:block;font:950 clamp(115px,12.5vw,220px)/.95 Arial,sans-serif;letter-spacing:-.075em;white-space:nowrap}
+#about[data-about-brand] .ab-insurance-en{display:block;font:900 clamp(24px,2.55vw,43px)/1.13 Arial,sans-serif;letter-spacing:-.045em;margin-top:8px;overflow-wrap:normal}
+#about[data-about-brand] .ab-insurance-zh{display:block;font:900 clamp(21px,2.05vw,35px)/1.3 Arial,sans-serif;letter-spacing:-.035em;margin-top:15px}
+html[lang=en] #about[data-about-brand] .ab-insurance-zh{display:none}
+#about[data-about-brand] .ab-intro-shell{position:relative;isolation:isolate;margin:-7px 11px 0 15px;border-radius:100px 100px 82px 90px}
+#about[data-about-brand] .ab-intro-shell::before{content:"";position:absolute;inset:0 0 0 -17px;background:#ff1726;border-radius:inherit;z-index:0}
+#about[data-about-brand] .ab-intro-shell::after{content:"";position:absolute;inset:9px -1px -11px -3px;background:#1726ff;border-radius:inherit;z-index:-1}
+#about[data-about-brand] .ab-intro{position:relative;z-index:1;background:#faf7ef;border-radius:inherit;display:grid;grid-template-columns:32% minmax(0,1fr);align-items:center;gap:30px;padding:39px 48px;min-height:238px}
+body.cinematic-v2 #about[data-about-brand] h2{font:900 46px/1.18 Arial,sans-serif;letter-spacing:-.045em;max-width:320px;margin:0;color:#080d35;text-wrap:balance}
+#about[data-about-brand] .ab-copy{border-left:2px solid #ff182c;padding-left:36px;min-width:0}
+#about[data-about-brand] .ab-copy p{font:600 18px/1.65 Arial,sans-serif;max-width:none;margin:0 0 9px;color:#12183b;letter-spacing:0}
+#about[data-about-brand] .ab-learn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;background:#1524ff;color:#fff;min-height:49px;padding:12px 29px;margin-top:10px;font:800 21px/1.2 Arial,sans-serif;text-decoration:none;transition:background .25s,color .25s}
+#about[data-about-brand] .ab-learn:hover{background:#dcff00;color:#101eec}
+#about[data-about-brand] .ab-registration{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:15px 28px;padding-top:28px}
+#about[data-about-brand] .ab-registration-summary{min-width:0}
+#about[data-about-brand] .ab-registration-summary h3{font:900 19px/1.4 Arial,sans-serif;letter-spacing:.025em;margin:0 0 10px;color:#101422;overflow-wrap:break-word}
+#about[data-about-brand] .ab-registration-summary p{font:650 16px/1.8 Arial,sans-serif;letter-spacing:0;max-width:none;margin:0;color:#101422;white-space:normal;overflow-wrap:break-word;font-variant-numeric:tabular-nums}
+#about[data-about-brand] .ab-registration-summary p>span{display:inline-block;padding-inline:10px}
+#about[data-about-brand] .ab-register-link{display:inline-flex;align-items:center;min-height:44px;color:#1225ff;font:800 16px/1.5 Arial,sans-serif;text-decoration:underline;text-underline-offset:6px;white-space:normal}
+#about[data-about-brand] .ab-registration-more{grid-column:1/-1;border:1.5px solid #4656b4;border-radius:22px;overflow:hidden;background:#fffdf7}
+#about[data-about-brand] .ab-registration-more>summary{cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:48px;padding:14px 18px;font:750 15px/1.5 Arial,sans-serif;color:#101d50;list-style:none}
+#about[data-about-brand] .ab-registration-more>summary:hover{background:#f0f3ff}
+#about[data-about-brand] .ab-registration-more>summary::-webkit-details-marker{display:none}
+#about[data-about-brand] .ab-registration-more>summary>span:last-child{font-size:20px;transition:rotate .3s}
+#about[data-about-brand] .ab-registration-more[open]>summary>span:last-child{rotate:45deg}
+#about[data-about-brand] .business-registration{margin:0;border:0;border-top:1px solid #101eeb20;background:#faf8f2;box-shadow:none;border-radius:0;padding:22px}
+#about[data-about-brand] .business-registration h3{font-size:19px;line-height:1.4;color:#11182e;margin-top:8px}
+#about[data-about-brand] .business-registration .registration-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:20px 24px}
+#about[data-about-brand] .business-registration .registration-grid>div{min-width:0}
+#about[data-about-brand] .business-registration dt{font-size:14px;line-height:1.5;color:#46516c}
+#about[data-about-brand] .business-registration dd{font-size:16px;line-height:1.7;overflow-wrap:break-word;font-variant-numeric:tabular-nums}
+#about[data-about-brand] a:focus-visible,#about[data-about-brand] summary:focus-visible{outline:3px solid #ff3e9c;outline-offset:4px}
+#about[data-about-brand].ab-armed .ab-lime-surface,#about[data-about-brand].ab-armed .ab-pink-surface{clip-path:inset(0 100% 0 0 round 90px)}
+#about[data-about-brand].ab-armed .ab-orange-surface{clip-path:inset(0 0 0 100% round 90px)}
+#about[data-about-brand].ab-armed .ab-word{clip-path:inset(0 100% 0 0)}
+#about[data-about-brand].ab-armed .ab-insurance-content{opacity:0;translate:25px 0}
+#about[data-about-brand].ab-armed .ab-copy{opacity:0}
+#about[data-about-brand].ab-armed.ab-entered .ab-lime-surface,#about[data-about-brand].ab-armed.ab-entered .ab-pink-surface{animation:ab-curve-unfold .9s cubic-bezier(.2,.75,.25,1) both}
+#about[data-about-brand].ab-armed.ab-entered .ab-lime-surface{animation-delay:.08s}
+#about[data-about-brand].ab-armed.ab-entered .ab-orange-surface{animation:ab-curve-unfold .9s cubic-bezier(.2,.75,.25,1) both}
+#about[data-about-brand].ab-armed.ab-entered .ab-word{animation:ab-word-reveal .9s cubic-bezier(.2,.75,.25,1) .2s both}
+#about[data-about-brand].ab-armed.ab-entered .ab-insurance-content{animation:ab-insurance-arrive .75s cubic-bezier(.2,.75,.25,1) .25s both}
+#about[data-about-brand].ab-armed.ab-entered .ab-copy{animation:ab-copy-reveal .6s ease .45s both}
+@keyframes ab-curve-unfold{to{clip-path:inset(0 round 90px)}}
+@keyframes ab-word-reveal{to{clip-path:inset(0)}}
+@keyframes ab-insurance-arrive{to{opacity:1;translate:0 0}}
+@keyframes ab-copy-reveal{to{opacity:1}}
+html[lang=en] #about[data-about-brand] .ab-copy p{font-size:16px;line-height:1.6}
+html[lang=en] #about[data-about-brand] h2{font-size:43px;max-width:360px}
+@media(min-width:1700px){#about[data-about-brand] .ab-top{height:440px}#about[data-about-brand] .ab-intro{min-height:245px}#about[data-about-brand] .ab-copy p{font-size:20px}#about[data-about-brand] .ab-kicker{font-size:16px}}
+@media(min-width:901px) and (max-width:1150px){#about[data-about-brand] .ab-brand-content{padding:25px 25px 25px 22px;gap:12px}#about[data-about-brand] .ab-services{font-size:21px;letter-spacing:.1em}#about[data-about-brand] .ab-insurance{padding-inline:18px}#about[data-about-brand] .ab-intro{padding:32px;gap:24px;grid-template-columns:32% minmax(0,1fr)}body.cinematic-v2 #about[data-about-brand] h2{font-size:40px}#about[data-about-brand] .ab-copy{padding-left:24px}#about[data-about-brand] .ab-copy p{font-size:15px}#about[data-about-brand] .ab-learn{font-size:18px}#about[data-about-brand] .ab-kicker{font-size:11px}}
+@media(max-width:900px){body.cinematic-v2 #about[data-about-brand]{padding-top:42px;padding-bottom:46px}#about[data-about-brand] .ab-kicker{font-size:11px;align-items:flex-start;margin-bottom:19px;gap:16px}#about[data-about-brand] .ab-kicker>span{max-width:155px;text-align:right;font-size:9px;line-height:1.5}#about[data-about-brand] .ab-artboard{margin-inline:-8px;border-radius:40px}#about[data-about-brand] .ab-top{display:block;height:auto}#about[data-about-brand] .ab-brand{height:220px}#about[data-about-brand] .ab-brand-content{grid-template-columns:40% minmax(0,1fr);gap:9px;padding:28px 23px}#about[data-about-brand] .ab-original-logo{width:100%;max-height:180px;object-fit:contain}#about[data-about-brand] .ab-pink-surface,#about[data-about-brand] .ab-lime-surface{transform:none;inset:0 -2px -12px 0;border-radius:40px 40px 60px 0}#about[data-about-brand] .ab-pink-surface{bottom:-25px}#about[data-about-brand] .ab-word{font-size:clamp(58px,16vw,110px);letter-spacing:-.07em}#about[data-about-brand] .ab-services{font-size:clamp(10px,3vw,18px);letter-spacing:.13em;margin-top:6px}#about[data-about-brand] .ab-motto{font-size:clamp(8px,2.25vw,13px);letter-spacing:.055em;margin-top:15px}#about[data-about-brand] .ab-wordmark{padding-right:0}#about[data-about-brand] .ab-insurance{padding:49px 27px 37px;min-height:250px}#about[data-about-brand] .ab-insurance-amount{font-size:clamp(105px,29vw,170px)}#about[data-about-brand] .ab-insurance-en{font-size:clamp(24px,6.4vw,35px);line-height:1.15;margin-top:8px;letter-spacing:-.035em}#about[data-about-brand] .ab-insurance-zh{font-size:clamp(22px,6vw,30px);margin-top:13px}#about[data-about-brand] .ab-intro-shell{margin:-2px 9px 0 11px;border-radius:45px 45px 38px 42px}#about[data-about-brand] .ab-intro-shell::before{left:-12px}#about[data-about-brand] .ab-intro{display:block;padding:29px 24px 30px;min-height:0}body.cinematic-v2 #about[data-about-brand] h2,html[lang=en] #about[data-about-brand] h2{font-size:32px;line-height:1.2;max-width:100%;text-wrap:balance}#about[data-about-brand] .ab-copy{border-left:0;border-top:1px solid #ff172680;padding:20px 0 0;margin-top:21px}#about[data-about-brand] .ab-copy p,html[lang=en] #about[data-about-brand] .ab-copy p{font-size:14px;line-height:1.75;font-weight:500;margin-bottom:11px}#about[data-about-brand] .ab-learn{font-size:18px;min-height:46px;padding:12px 25px;margin-top:8px}#about[data-about-brand] .ab-registration{display:flex;flex-direction:column;align-items:stretch;gap:15px;padding-top:24px}#about[data-about-brand] .ab-registration-summary h3{font-size:14px;letter-spacing:.015em}#about[data-about-brand] .ab-registration-summary p{font-size:12px;line-height:1.8;letter-spacing:0}#about[data-about-brand] .ab-registration-summary p>span{padding-inline:3px}#about[data-about-brand] .ab-register-link{font-size:14px;align-self:flex-start}#about[data-about-brand] .business-registration .registration-grid{grid-template-columns:1fr 1fr}#about[data-about-brand] .business-registration{padding:18px}#about[data-about-brand] .ab-insurance-content{max-width:500px}}
+@media(prefers-reduced-motion:reduce){#about[data-about-brand] *,#about[data-about-brand] *::before,#about[data-about-brand] *::after{animation:none!important;transition:none!important}#about[data-about-brand].ab-armed .ab-lime-surface,#about[data-about-brand].ab-armed .ab-pink-surface,#about[data-about-brand].ab-armed .ab-orange-surface,#about[data-about-brand].ab-armed .ab-word{clip-path:none}#about[data-about-brand].ab-armed .ab-insurance-content{opacity:1;translate:none}#about[data-about-brand].ab-armed .ab-copy{opacity:1}}
+/* Registration is functional information, independent of the brand artwork. */
+@media(max-width:900px){
+ #about[data-about-brand] .ab-registration-summary h3{font-size:17px;line-height:1.45;letter-spacing:.015em;margin-bottom:10px}
+ #about[data-about-brand] .ab-registration-summary p{font-size:14.5px;line-height:1.85}
+ #about[data-about-brand] .ab-registration-summary p>span{padding-inline:4px}
+ #about[data-about-brand] .ab-register-link{font-size:15px;line-height:1.5}
+ #about[data-about-brand] .ab-registration-more>summary{font-size:14.5px;line-height:1.5;min-height:48px;padding:13px 16px}
+ #about[data-about-brand] .business-registration h3{font-size:17px;line-height:1.45}
+ #about[data-about-brand] .business-registration .registration-grid{gap:18px 16px}
+ #about[data-about-brand] .business-registration dt{font-size:14px}
+ #about[data-about-brand] .business-registration dd{font-size:15px;line-height:1.7}
+}

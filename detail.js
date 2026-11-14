@@ -12,7 +12,7 @@
   const canonical=$('link[rel="canonical"]');if(canonical){const u=new URL(metadata.route||location.pathname,location.origin);u.searchParams.set('lang',language);canonical.href=u.href;}
   $('#language-switch').setAttribute('aria-label',language==='en'?'切换到中文':'Switch to English');
   $('#main-nav').setAttribute('aria-label',language==='en'?'Main navigation':'主导航');
-  const currentPath=metadata.route?.startsWith('/services/')?'/services/':metadata.route?.startsWith('/sectors/')?'/sectors/':metadata.route?.startsWith('/insights/')?'/insights/':metadata.route;
+  const currentPath=metadata.route?.startsWith('/services/')?'/services/':metadata.route?.startsWith('/sectors/')?'/sectors/':metadata.route?.startsWith('/areas/')?'/areas/melbourne/':metadata.route?.startsWith('/insights/')?'/insights/':metadata.route;
   all('#main-nav a').forEach(a=>{const current=new URL(a.href).pathname===currentPath;a.classList.toggle('active',current);if(current)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});
   $('.topic-toc')?.setAttribute('aria-label',language==='en'?'On this page':'本页内容');
   $('#year').textContent=new Date().getFullYear();

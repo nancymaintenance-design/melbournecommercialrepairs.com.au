@@ -1,0 +1,7 @@
+/* Restore the original image-led inner-page compositions.
+   Only the duplicate bridge chapter is removed in design-shell.cjs.
+   H1-first ordering, clear images, rounded cards and the full model timeline
+   continue to be supplied by designer.css and designer-motion.js.
+   Do not reinstate compact model caps or text-only colour panels here. */
+/* Keep full-size model callouts inside the viewport. */
+.reference-hero.template-systems .layer-stage .visual-callout{right:9%}

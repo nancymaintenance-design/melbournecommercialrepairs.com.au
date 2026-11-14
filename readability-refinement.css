@@ -1,0 +1,52 @@
+/* Readable information and small actions. Decorative typography stays untouched. */
+body.cinematic-v2 .site-footer .footer-registration{
+ font-size:15px;line-height:1.75;gap:10px;overflow-wrap:break-word;
+}
+body.cinematic-v2 .site-footer .footer-registration>a{
+ display:inline-flex;align-items:center;min-height:40px;font-size:15px;line-height:1.6;
+}
+body.cinematic-v2 .site-footer .footer-map-contact>a:not(:first-child){
+ font-size:15px;line-height:1.7;overflow-wrap:break-word;
+}
+body.cinematic-v2 .site-footer .footer-location>span{font-size:14px;line-height:1.7}
+body.cinematic-v2 .site-footer .footer-bottom{
+ font-size:13px;line-height:1.75;letter-spacing:.01em;
+}
+body.cinematic-v2 .site-footer nav>h3{font-size:16px;line-height:1.5}
+body.cinematic-v2 .site-footer nav>a{
+ font-size:15px;line-height:1.65;min-height:34px;
+}
+body.cinematic-v2 .business-registration .registration-grid>div{min-width:0}
+body.cinematic-v2 .business-registration .registration-grid dt{
+ font-size:14px;line-height:1.6;margin-bottom:7px;color:#46516c;
+}
+body.cinematic-v2 .business-registration .registration-grid dd{
+ font-size:16px;line-height:1.7;overflow-wrap:break-word;font-variant-numeric:tabular-nums;
+}
+body.cinematic-v2 .business-registration .registration-date{
+ font-size:14px;line-height:1.7;color:#46516c;
+}
+body.cinematic-v2 .business-registration>.text-link{
+ display:inline-flex;align-items:center;min-height:44px;font-size:15px;line-height:1.6;
+}
+body.cinematic-v2 .prototype-note,
+body.cinematic-v2 .form-demo-note{
+ font-size:14px;line-height:1.7;letter-spacing:.01em;opacity:1;
+}
+body.cinematic-v2 .location-copy .location-note{font-size:14px;line-height:1.7}
+body.contact-page .contact-preview-note{font-size:14px;line-height:1.6}
+#copy-status,#contact-copy-status{font-size:14px;line-height:1.6}
+.contact-draft-result>p:not(:empty){font-size:15px;line-height:1.7}
+@media(max-width:900px){
+ body.cinematic-v2 .business-registration .registration-grid dd{font-size:15px}
+ body.contact-page .contact-photo-note{font-size:14px;line-height:1.4}
+}
+@media(max-width:700px){
+ body.cinematic-v2 .site-footer .footer-registration,
+ body.cinematic-v2 .site-footer .footer-registration>a,
+ body.cinematic-v2 .site-footer .footer-map-contact>a:not(:first-child){font-size:14px}
+ body.cinematic-v2 .site-footer nav>h3{font-size:15px}
+ body.cinematic-v2 .site-footer .footer-bottom{font-size:13px;line-height:1.8}
+ body.contact-page .contact-small-action,
+ html[lang=en] body.contact-page .contact-small-action{font-size:14px}
+}
