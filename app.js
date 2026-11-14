@@ -77,7 +77,9 @@
     track.appendChild(group.cloneNode(true));
   }
   function renderServices() {
-    $('#service-grid').innerHTML = services.map((service, index) => `<a class="service-card" href="/services/${serviceSlugs[index]}/?lang=${language}" data-service="${index}" aria-label="${esc(tr('查看', 'Explore ') + service[language])}"><div class="service-card-top">${icon(index)}<span class="service-card-index">${String(index+1).padStart(2,'0')} / 12</span></div><h3>${service[language]}</h3><p>${tr(service.subZh,service.subEn)}</p><span class="service-card-arrow" aria-hidden="true">↗</span></a>`).join('');
+    const grid=$('#service-grid');
+    if(!grid.querySelector('.showcase-card')) grid.innerHTML=window.EllisServiceShowcase.cards(services,serviceSlugs);
+    grid.querySelectorAll('[data-service]').forEach(card=>{const index=Number(card.dataset.service);card.href='/services/'+serviceSlugs[index]+'/?lang='+language;card.setAttribute('aria-label',tr('查看','Explore ')+services[index][language]);});
 
     const previousValue = $('#quote-service').value;
     $('#quote-service').innerHTML = `<option value="">${tr('选择服务类型','Select a service')}</option><option value="multi">${tr('多项服务 / 综合维护','Multiple services / General maintenance')}</option>` + services.map((service,index) => `<option value="${index}">${service[language]}</option>`).join('');
@@ -85,7 +87,7 @@
   }
   function renderSectors() {
     renderSectorFilm();
-    $('#sector-options').innerHTML = sectors.map((sector,index) => `<button role="tab" id="sector-tab-${index}" aria-controls="sector-detail" aria-selected="${index === activeSector}" tabindex="${index === activeSector ? '0' : '-1'}" class="sector-tab" data-sector="${index}"><span>${String(index+1).padStart(2,'0')}</span><span>${sector[language]}</span><span aria-hidden="true">↗</span></button>`).join('');
+    $('#sector-options').innerHTML = window.EllisPropertySelector.tabs(sectors,language,activeSector);
     $$('[data-sector]').forEach(button => {
       button.addEventListener('click',() => selectSector(Number(button.dataset.sector)));
       button.addEventListener('keydown',event => {
@@ -123,14 +125,10 @@
     $$('[data-sector-card]').forEach(button=>button.addEventListener('click',()=>{selectSector(Number(button.dataset.sectorCard));$('.sector-selection').scrollIntoView({behavior:reduceMotion.matches?'instant':'smooth',block:'start'});}));
   }
   function renderSectorDetail() {
-    const sector = sectors[activeSector];
-    const panel = $('#sector-detail');
-    panel.setAttribute('aria-labelledby',`sector-tab-${activeSector}`);
-    panel.innerHTML = `${icon(sector.icon,'sector-visual')}<span class="sector-detail-number" aria-hidden="true">${String(activeSector+1).padStart(2,'0')}</span><span class="micro-label">${tr('商业空间','COMMERCIAL SPACES')} / ${String(activeSector+1).padStart(2,'0')}</span><h3>${sector[language]}</h3><p>${tr(sector.descZh,sector.descEn)}</p><div class="sector-tags">${tr(sector.tagsZh,sector.tagsEn).map(tag=>`<span>${tag}</span>`).join('')}</div><a class="sector-detail-link text-link" href="/sectors/${sectorSlugs[activeSector]}/?lang=${language}">${tr('查看物业维护详情 ↗','Explore property maintenance ↗')}</a>`;
+    window.EllisPropertySelector.update({panel:$('#sector-detail'),data:sectors,slugs:sectorSlugs,language,index:activeSector});
   }
   function renderNews() {
-    $('#news-grid').innerHTML = articles.map((article,index)=>`<a class="news-card" href="/insights/${articleSlugs[index]}/?lang=${language}" data-article="${index}"><div class="news-art"><span class="news-art-label">ELLIS / ${tr('维护见解','FIELD NOTES')}</span>${icon(article.icon,'news-icon')}<span class="news-art-number">0${index+1}</span></div><span class="news-category">${tr(article.catZh,article.catEn)}</span><h3>${article[language]}</h3><span class="news-read"><span>${tr('阅读全文','READ THE INSIGHT')}</span><span aria-hidden="true">↗</span></span></a>`).join('');
-
+    window.EllisNewsMagazine.update({node:$('#news'),data:articles,slugs:articleSlugs,language});
   }
   function renderFaq() {
     const openItems = $$('details[open]', $('#faq-list')).map(el=>el.dataset.index);
@@ -170,8 +168,8 @@
     $$('.section-heading h2,.section-heading .heading-aside,.faq-intro,.about-copy,.contact-main h2,.footer-wordmark').forEach(el=>el.setAttribute('data-reveal',''));
     $$('.city-illustration').forEach(el=>el.setAttribute('data-parallax','25'));
     $$('.news-art svg').forEach(el=>el.setAttribute('data-parallax','16'));
-    $('.about-e').setAttribute('data-parallax','24');
-    $('.contact-star').setAttribute('data-parallax','-30');
+    $('.about-e')?.setAttribute('data-parallax','24');
+    $('.contact-star')?.setAttribute('data-parallax','-30');
     if(inStory){
       const behavior=document.documentElement.style.scrollBehavior;
       document.documentElement.style.scrollBehavior='auto';

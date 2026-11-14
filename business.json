@@ -13,7 +13,9 @@
   "mapsUrl": "https://maps.app.goo.gl/Pv4etoJxN2tekg9h9",
   "mapEmbedUrl": "https://www.google.com/maps?cid=5829696045991509477&output=embed",
   "mapAddress": "459 Collins St, Melbourne VIC 3004, Australia",
-  "telephone": "+61 405 878 406",
+  "telephone": "+61 482 602 558",
+  "telephoneDisplay": "0482 602 558",
+  "telephoneHref": "tel:+61482602558",
   "latitude": -37.8179855,
   "longitude": 144.9589035,
   "verifiedOn": "2026-11-13"
