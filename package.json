@@ -7,7 +7,8 @@
     "build": "node build-pages.cjs",
     "check": "node --check app.js && node --check detail.js && node --check designer-motion.js && node --check motion.js && node --check scene-visual.js && node --check build-pages.cjs && node --check service-showcase.js && node --check content/asset-versions.cjs && node --check service-directory.js && node --check content/service-directory.cjs && node --check content/design-shell.cjs && node --check sector-explorer.js && node --check content/sector-explorer.cjs",
     "test:assets": "node tests/asset-versions.cjs",
-    "test:visuals": "node tests/visual-preservation.cjs"
+    "test:visuals": "node tests/visual-preservation.cjs",
+    "test:compact": "node tests/compact-inner-pages.cjs"
   },
   "engines": {
     "node": ">=20"

@@ -1,3 +1,49 @@
+# 新闻、FAQ、关于我们局部设计 QA
+
+final result: passed
+
+2026-11-14，分支 codex/editorial-faq-about，本地 http://127.0.0.1:8765 。本轮仅三张独立索引页，未重新发布。
+
+## 视觉证据
+
+源图：本目录 reference-insights.png、reference-faq.png、reference-about.png，均 1717×916。
+
+实现：insights-desktop-zh.png、faq-desktop-zh.png、about-desktop-zh.png，并有对应 desktop-en、mobile-zh、mobile-en 截图。
+
+对照：comparison-insights.png、comparison-faq.png、comparison-about.png；每张同时包含上方源图与下方浏览器实拍。已打开三张合成对照，逐页评估。桌面 CSS viewport 1717×916，DPR 1；浏览器截图表面为 1707×911，合成对照将实拍放大约 0.6% 到源图尺寸，原始实拍保持不变。未将这点浏览器边缘差异当成界面问题。
+
+附加尺寸：1280×800 笔记本、390×844 手机。手机原始截图表面为 380×822 左右，以实际 DOM viewport 和 screenshot 同时评估；未将截图表面缩放当成文字截断。
+
+三张完整对照中 Logo、保险三行、首题答案、完整文章标题均可清楚阅读；另打开 about-mobile-en.png、about-mobile-zh.png、insights-mobile-en.png 放大检查保险及长英文标题，未仅凭文件路径评估。来源中示意题目与现有正式文案不同，按用户要求以正式内容为准。
+
+## 必查表面
+
+- 字体：沿用 Arial / 全站中文系统字体。桌面 H1 实测 44–56px；390px 中文 33.93px、英文 30px。正文立即显示，不挂入场隐藏。标题自然换行，英文资讯 H1 从四行修正为两行，无孤立汉字尾行。
+- 布局：三页只有一个紧凑标题区。新闻中间主推与两侧辅助、FAQ 左目录右答案、关于左品牌右介绍及橙色横条均与目标结构对应。保留圆角、粉色和橙色错层。第一完整答案、后续题目、文章阅读入口可见。小屏顺排，关于将服务索引与登记摘要移动到保险之后，数据只有一份。
+- 颜色：电蓝、荧光黄绿、暖白、橙色、热粉作为当前站点的对应 token，文字高对比。未引入新的大面积深色开场。
+- 图像：复用三张现有高分辨率写实资讯封面，与三篇真实主题对应；原始 PNG Logo 和用户原文件 SHA256 一致。未将整页参考图烘焙成 UI，正文、分类、链接、保险均真实 DOM；无破图、模糊滤镜或人物 Logo 缺失。
+- 文案：原三篇完整双语标题、URL 和五组双语 FAQ 保留。公司真实名称、ABN、ACN、登记详情 URL 与地区说明保留。$20M 固定显示，不做数字计数。英文保险只显示完整正式英文表述，去除手机重复说明行的视觉占用。
+
+## 对照修正记录
+
+1. P2：初版手机英文资讯 H1 占四行，首篇阅读入口约 889px，844px 首屏无法完整看到。修正英文 H1 为 30px；复拍 insights-mobile-en.png，标题两行，入口约 797px，完整可见。
+2. P2：初版手机英文关于保险在约 820px 才出现。将唯一的服务入口与登记摘要在小屏移到保险之后；隐藏重复的英文金额说明，保留 $20M 和 Public Liability Insurance。复拍 about-mobile-en.png：保险顶部约 647px、底部约 809px，简介与完整保险同处首屏。
+3. P2：1280×800 英文笔记本状态，新闻阅读入口和关于保险超出首屏。减小该桌面区间的封面高度与公司卡片内距，正文保持完整；复测三个阅读入口约 766–782px，关于保险底部约 763px。
+4. 交互稳健性：过滤时同步关闭隐藏的 FAQ 原生 details，避免快速切换时的异步 toggle 关闭最终答案。连续 planning → care → scope 实测最终两题可见、第一题展开；Enter 打开第二题并关闭第一题。
+
+上述问题均已复拍并重新核对，无遗留可操作 P0/P1/P2。
+
+## 交互和范围
+
+新闻分类筛选及双语状态通过；主推文章点击进入原 maintenance-plan 详情，正文存在，返回正常。FAQ 中英文搜索、分类交集、清除、无结果重置、计数、键盘 Enter 与快速分类通过。系统减少动效下首题仍展开，H1/答案 opacity 1，分类动画 none。控制台 error 记录为空。临时视口/系统媒体模拟已复原。
+
+build、check、六个新脚本和模板 node --check、test:compact、test:assets、test:visuals、git diff --check 通过。范围保护：42 页中 3 页授权改变，其他 39 页内容与布局相同，仅构建生成的缓存版本和换行格式可不同；报告见 scope-check.json。没有新 Hero、标题锁屏、重复目录或重复动画挂载。未开展整站 SEO/性能审核。
+
+参考图中的独立问号、书签、盾牌等附加装饰未作为必须新增的资产；使用现有品牌、封面与纸张交互层完成本轮主要构图，减少无关装饰以满足用户首屏内容要求。P3 后续可继续调整纸张材质细节，不影响当前功能与阅读。
+
+
+---
+
 # Current QA — shared telephone, readable details and restored home contact
 
 final result: passed

@@ -14,7 +14,9 @@ const newAreaPages=new Set([
  'cbd-inner','eastern','south-east','western','northern','north-east',
  'north-west','bayside-southern','casey-cardinia','frankston-mornington-peninsula'
 ].map(slug=>'areas/melbourne/'+slug+'/index.html'));
-const changedCompositions=new Set(['services/index.html','sectors/index.html','contact/index.html','areas/melbourne/index.html']);
+// These three compact index pages now have an explicitly approved replacement
+// composition. Their source-backed content is checked in compact-inner-pages.cjs.
+const changedCompositions=new Set(['services/index.html','sectors/index.html','contact/index.html','areas/melbourne/index.html','insights/index.html','faq/index.html','about/index.html']);
 let restored=0,links=0,images=0,pages=0,metadataPreserved=0;
 for(const p of walk(root)){
  const rel=path.relative(root,p).replaceAll('\\','/'),h=fs.readFileSync(p,'utf8');pages++;assert.equal((h.match(/<h1\b/g)||[]).length,1,'One H1: '+rel);

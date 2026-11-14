@@ -1,0 +1,20 @@
+/* Compact, searchable FAQ index. The caller owns the shared data and header. */
+const e=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const dual=(tag,zh,en,cls='')=>`<${tag}${cls?` class="${cls}"`:''} data-zh="${e(zh)}" data-en="${e(en)}">${e(zh)}</${tag}>`;
+exports.section=function(faqs,services,serviceSlugs){
+ const groups=[['all','全部问题','All questions'],['scope','服务与范围','Services & coverage'],['planning','施工与安排','Work & arrangements'],['care','定期维护','Ongoing maintenance']];
+ const categories=['scope','planning','care','scope','planning'];
+ const links=[
+  [['/sectors/','商业物业类型','Property types'],['/services/','查看服务范围','Explore our services']],
+  [['/services/','多工种服务','Our trade services'],['/contact/','描述项目需求','Tell us about the project']],
+  [['/services/','维护服务','Maintenance services'],['/contact/','安排物业维护','Plan property maintenance']],
+  [['/areas/melbourne/','墨尔本服务地区','Melbourne service areas']],
+  [['/contact/','开始项目咨询','Start a project enquiry']]
+ ];
+ return `<section class="fq-index" aria-labelledby="fq-heading">
+ <header class="fq-heading-row"><div class="fq-heading-copy"><p class="fq-eyebrow">FAQ / ELLIS MELBOURNE</p>${dual('h1','商业物业维护常见问题','Commercial property maintenance FAQs','fq-title').replace('<h1 ','<h1 id="fq-heading" ')}${dual('p','关于服务范围、维护与施工安排，先把问题说明白。','Answers about service scope, maintenance and site arrangements.','fq-intro')}</div>
+ <form class="fq-search" role="search"><label class="fq-search-label" for="fq-search-input" data-zh="搜索常见问题" data-en="Search frequently asked questions">搜索常见问题</label><input id="fq-search-input" type="search" autocomplete="off" placeholder="搜索问题，例如：施工、维护、墨尔本" aria-label="搜索常见问题" data-search-placeholder-zh="搜索问题，例如：施工、维护、墨尔本" data-search-placeholder-en="Search questions: work, maintenance, Melbourne"><button class="fq-search-clear" type="button" hidden data-zh="清除" data-en="Clear">清除</button></form></header>
+ <div class="fq-layout"><aside class="fq-sidebar"><nav class="fq-categories" aria-label="问题分类"><h2 data-zh="问题分类" data-en="Question categories">问题分类</h2>${groups.map(([key,zh,en],i)=>`<button type="button" class="fq-category${i===0?' is-active':''}" data-fq-category="${key}" aria-pressed="${i===0?'true':'false'}">${dual('span',zh,en)}<span class="fq-category-arrow" aria-hidden="true">↗</span></button>`).join('')}</nav><div class="fq-help"><p data-zh="还有具体项目想咨询？" data-en="Have a particular project in mind?">还有具体项目想咨询？</p><a href="/contact/" data-local-page data-zh="描述项目需求 ↗" data-en="Discuss your project ↗">描述项目需求 ↗</a></div></aside>
+ <div class="fq-panel-wrap"><div class="fq-panel"><p class="fq-result-count" role="status" aria-live="polite" aria-atomic="true" data-fq-count>${faqs.length} 个问题</p><div class="fq-questions">${faqs.map((f,i)=>`<details class="fq-question" data-fq-group="${categories[i]||'scope'}" data-fq-search="${e(f.join(' '))}"${i===0?' open':''}><summary><span class="fq-number" aria-hidden="true">${String(i+1).padStart(2,'0')}</span>${dual('span',f[0],f[1],'fq-question-title')}<span class="fq-toggle" aria-hidden="true"><span>+</span><span>−</span></span></summary><div class="fq-answer">${dual('p',f[2],f[3])}<nav class="fq-answer-links" aria-label="${e(f[1])}">${(links[i]||[]).map(([href,zh,en])=>`<a href="${href}" data-local-page data-zh="${e(zh)}" data-en="${e(en)}">${e(zh)}</a>`).join('')}</nav></div></details>`).join('')}</div><div class="fq-empty" hidden>${dual('h2','没有找到匹配的问题','No matching questions')}${dual('p','试试其他关键词，或查看全部问题。','Try another keyword, or return to all questions.')}<button type="button" class="fq-reset" data-zh="查看全部问题" data-en="Show all questions">查看全部问题</button></div></div></div></div>
+ <nav class="fq-bottom-links" aria-label="Related information"><a href="/services/" data-local-page data-zh="服务范围" data-en="Our services">服务范围</a><a href="/areas/melbourne/" data-local-page data-zh="墨尔本服务地区" data-en="Melbourne service areas">墨尔本服务地区</a><a href="/contact/" data-local-page data-zh="联系 ELLIS ↗" data-en="Contact ELLIS ↗">联系 ELLIS ↗</a></nav></section>`;
+};
