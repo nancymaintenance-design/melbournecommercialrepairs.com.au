@@ -157,3 +157,11 @@ H1 文案与原生滚动同步移出，不再锁住首屏等待一段滚动进�
 service-showcase.js 同时供构建与浏览器使用，单一滚动进度、单个RAF更新三卡及局部模型，不使用旧.service-card入场选择器，避免双重绑定。桌面仅约447px有效展开段，完成后退出；手机无额外锁屏尾段。无JS和减少动效直接为完整目录。
 内页正式H1排在SPACES装饰词之前，加载后即见；不改正文、元数据、URL。
 用户最后要求仅本地端口，确认后才能部署。本轮禁止推送、开新PR触发预览或部署；本地预览 http://127.0.0.1:8765/?lang=zh#services 。验收与录屏在reports/home-service-showcase-2026-11-14。
+
+## 2026-11-16 页尾与咨询区衔接（最新）
+
+黑色页尾由 content/footer.cjs 统一生成，样式为 footer-brand.css；覆盖此前三列页尾设计。保留原始透明 Logo 与独立 ELLIS 字标，奶白/橙色错层底板，四列公司与导航内容，固定 $20M Public Liability Insurance，底部真实登记链接。Instagram、Facebook、Google Reviews、LinkedIn 使用本轮用户提供的四个精确链接，不替换为搜索或推测的评价地址。
+
+首页橙色项目安排模块、荧光绿联系栏及蓝粉背板均保持原源文件和 HTML。仅页尾衔接间距改变：桌面背板下方39px奶白间隔，390px手机34px；页尾内容与联系栏左右对齐（桌面误差小于1px）。手机平台卡片纵向排列，中型屏两列，大桌面四列。文字即时可读，悬停位移/箭头过渡尊重减少动态偏好。页尾地址沿用用户已确认的459 Collins Street, Melbourne, VIC 3000；地图原商家记录与登记资料未改。
+
+只在本地8765预览，未推送部署。验证与截图位于本站 reports/footer-social-refinement-2026-11-16/。

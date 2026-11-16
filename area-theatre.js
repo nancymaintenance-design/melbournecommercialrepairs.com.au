@@ -210,7 +210,8 @@
       if (!canAnimate()) { state.last = 0; return; }
       const seconds = state.last ? Math.max(0, (now - state.last) / 1000) : 0;
       state.last = now; state.elapsed += seconds;
-      if (!state.frozen) state.hour = (state.hour + seconds * .25) % 24;
+      // A complete 24-hour visual cycle now takes 48 seconds (previously 96).
+      if (!state.frozen) state.hour = (state.hour + seconds * .5) % 24;
       if (state.scrollDirty) measureScroll();
       state.x += (state.pointerX - state.x) * .12;
       state.y += (state.scrollY + state.pointerY - state.y) * .12;
