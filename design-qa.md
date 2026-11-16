@@ -1,52 +1,44 @@
-# Homepage FAQ visual verification — 2026-11-16
+# Inner footer transition — design QA — 2026-11-16
 
-Source visual truth: C:/Users/UFTR/AppData/Local/Temp/codex-clipboard-212785eb-ee83-45d1-bfeb-dc151a2b76ca.png (1825 × 862).
-Implementation: E:/Ellis-Services/Ellis Services WordPress/reports/home-faq-fold-2026-11-16/desktop-zh.png (1825 × 650 crop of 1825 × 862 CSS viewport, density 1).
-Comparison input: E:/Ellis-Services/Ellis Services WordPress/reports/home-faq-fold-2026-11-16/comparison.png. The source content region and rendered content region are displayed together at matching widths. Vertical compression is intentional: the user requested approximately 400–480px and smaller text than the source mockup.
-State: first question selected; Chinese. Supporting captures: desktop-en.png, mobile-zh.png, mobile-en.png (390 × 844 CSS viewport). Also checked 320 × 780.
+Source truth: E:/Download/ELLIS_Inner_Footer_Design_Codex.md and attached inner-page references. Primary visual comparisons: C:/Users/UFTR/AppData/Local/Temp/codex-clipboard-c058db0e-d7fd-40a2-b753-4aca3ed3b3e3.png (contact), codex-clipboard-eb5838c1-4464-48aa-8837-5560012f6172.png in the same directory (areas).
+Rendered captures: E:/Ellis-Services/Ellis Services WordPress/reports/inner-footer-transition-2026-11-16/about-desktop.png, contact-desktop.png, services-desktop.png, areas-desktop.png; contact-mobile-zh.png, contact-mobile-en.png and social-mobile-zh.png.
+Comparison evidence: E:/Ellis-Services/Ellis Services WordPress/reports/inner-footer-transition-2026-11-16/comparison.png combines the actual source and rendered capture in one image. Regions share a normalized 700px width. Source reference height is approximately 949px, desktop CSS viewport 1686×1050, screenshot density 1. Different natural content heights are intentionally retained; these are footer-boundary comparisons, not replacement page layouts.
 
-## Findings and iterations
+## Findings and fixes
 
-- Initial desktop region measured 524px; reduced local padding and panel minimum height. Final measured 476px at 1270px desktop and about 483px at 1825px desktop (English 481px). This is within the requested approximate height; content can grow on narrower screens.
-- Initial English mobile styling overrode the selected lime background. Removed the over-specific base selector. Post-fix evidence mobile-en.png shows the lime selected label.
-- Initial English mobile step pills stacked separately and left stray arrows. Switched the local sequence to three equal columns with natural label wrapping. Post-fix mobile-en.png has a complete readable sequence and no overflow.
-- No remaining actionable P0/P1/P2 findings.
+- Initial contact composition kept its old 100svh minimum and stacked an additional bottom pad. Removed that minimum only from the contact content ending, retained the existing form-grid height and its safety space. Faded the last 40px of its existing decorative background into the verified blue surface. Final contact-desktop.png has a continuous seam without the excess viewport spacer.
+- Animating the structural blue cap temporarily exposed a straight pale seam. Kept that structural fill static; only the backing and decorative hairline enter by 8px over 380ms. The settled and entering contours remain connected to content.
+- Initial small mobile company heading left a trailing character. Local mobile footer heading now uses 20px, normal white-space and balanced wrapping. contact-mobile-zh.png confirms a readable heading without the orphan.
+- No actionable P0/P1/P2 findings remain.
 
-## Required fidelity surfaces
+## Fidelity surfaces
 
-Typography: existing Arial / Noto Sans CJK SC / Microsoft YaHei stack. H2 36–42px desktop, 30px mobile; question labels 18–20px; answer paragraph 18px desktop, 17px mobile. Full questions, answers and FAQ link use real HTML. Focused text inspection used the original full-size desktop and mobile captures, not only the reduced comparison board.
+Fonts/typography: reuse the existing font stack and black-footer heading/link hierarchy. The mobile company heading is locally sized to fit. Facebook and Google Reviews title, subtitle and arrow explicitly use #081d3b in normal/hover/focus states; brand icon fills remain unchanged. Actual computed text color is rgb(8,29,59).
 
-Spacing/layout: one blue answer surface with three raised rounded tabs, orange offset backing, pink tab edge and independent curled corner. Desktop answer region reserves the tallest answer in one CSS grid track; six sequential switches stayed exactly 230px. Mobile buttons and their corresponding answers are interleaved in a vertical accordion. No extra full-screen segment or scroll lock.
+Spacing/layout: one shallow asymmetric content edge, 6–10px local thin backing and one fine blue line across warm white. Reallocated existing terminal padding: colored endings about 144px total (36+108), paper endings 76px (32+44), existing area frame endings 64–76px. Mobile colored endings 84px (26+58), paper 54px (24+30), areas 50–58px. Contact uses its existing form-grid bottom safety space instead of additional padding. All dimensions follow content flow. Footer top safety space 44px desktop / 30px mobile, original rounded structure preserved. FooterShell supplies warm-white side/bottom margins.
 
-Colors/tokens: electric blue #0834ff, fluorescent lime #e3ff00, orange #ff7100, warm white from existing --paper. Text areas are solid colors. Contrast and selected/keyboard-focus states remain clear.
+Colors: actual ending surfaces were read in the browser before configuration. About/FAQ/insights #1026ff; contact #1025ff; service directory fixed #fb43bf; sectors #ff5300; details #faf7ef; area pages #f8f5ee. Blue/pink use a local orange backing; orange uses electric blue. The body background and upper content designs remain unchanged.
 
-Asset quality: separate transparent orange/lime curl raster generated for this component; no text baked into it. No existing logo or scene image changed. The curl shape differs slightly from the mockup and omits the embossed ELLIS decoration (P3); its subject, palette and independent layer are retained.
+Assets: existing logo, scenes, background artwork, social icons and all footer HTML retained. Only small CSS/SVG contour decorations were added, as explicitly requested by the MD. No new raster art, giant objects or repeated enquiry modules.
 
-Copy: exactly the three requested topics; bilingual equivalent responses. Full FAQ page data and generated HTML hash unchanged. Homepage title and upper-right real FAQ route match the request.
+Copy/content: no new headings or copy in the decoration. All 41 non-home main-content HTML blocks and all footer HTML match the pre-task snapshot after removing the new main theme attributes. Homepage hash is byte-identical. Forms, translations, metadata and URLs are unchanged.
 
-## Interaction checks
+## Interaction and responsive checks
 
-- Default first answer; all three correct answers accessible by click.
-- Six repeated/alternating desktop switches: one visible answer and stable 230px reading surface.
-- Arrow keys and Home: roving tab focus and selected state update correctly.
-- Mobile open/close, category switching and resizing preserve a valid state.
-- Chinese/English content and FAQ URLs preserve the active language.
-- Actual FAQ link clicked to /faq/?lang=en and existing H1 verified.
-- 320px viewport: no document or FAQ horizontal overflow.
-- Reduced-motion emulation: answer still usable, zero component animations.
-- Browser console error log at final local check: empty.
+- About registration expanded: shell top equals live main bottom and is pushed down by the expanded content.
+- FAQ question folding and search: shell follows live content height, gap remains zero; related links retained.
+- Contact input accepts a temporary test value; submit button remains enabled. Test text cleared; no form submission or message sent.
+- All three service categories preserve the outer pink surface and matching transition, independent of the active card.
+- Desktop about/contact/services: no horizontal overflow, correct social colors; 108px decorative area.
+- Eleven mobile page-family samples: no horizontal overflow, contiguous shell boundary and zero footer external margin; variants 58px color / 38px area / 30px paper. Contact additionally checked in Chinese and English at 390×844; 320px narrow viewport checked.
+- Decoration is aria-hidden, SVG not focusable, pointer-events:none, no interactive elements. One IntersectionObserver disconnects after first reveal, no scroll listener or RAF loop added.
+- Reduced-motion emulation: zero transition animations, static contour retained. Console error check empty.
+- Footer side corners and bottom are warm white, not the global blue body.
 
-## Scope and build
+## Scope and validation
 
-scope-check.json: homepage body outside FAQ unchanged; independent FAQ page SHA256 unchanged; exactly three question controls. Earlier homepage performance work preserved.
-Build, syntax checks, asset cache checks and seven existing homepage performance regressions passed. No deployment or push.
+Build, syntax checks and asset-cache tests pass. Scope checks: 41 non-home pages, one component per page, unchanged homepage/main content/footer HTML. Branch codex/inner-footer-transition. Local port 8765; not pushed or deployed.
 
-## Implementation checklist
-
-- [x] Local component and initial HTML generation
-- [x] Bilingual content and existing full FAQ route
-- [x] Stable desktop tabs / mobile accordion
-- [x] Independent curl and interruptible short transitions
-- [x] Actual desktop/mobile screenshots and visual comparison
+Follow-up polish: the small source-reference ribbon is not duplicated on every page. Existing contact ribbon remains; paper variants deliberately use only a short orange edge and blue line per the MD.
 
 final result: passed

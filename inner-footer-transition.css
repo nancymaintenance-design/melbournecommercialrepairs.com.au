@@ -1,0 +1,62 @@
+/* Loaded by non-home pages only. Footer HTML, forms and content remain shared. */
+body.cinematic-v2.designer-detail #main[data-ending-theme]{margin-bottom:0;padding-bottom:0;border-bottom-left-radius:0;border-bottom-right-radius:0}
+/* Redistribute the existing last-block padding; do not stack another spacer. */
+#main[data-ending-layout="about"]>.ap-profile{padding-bottom:36px}
+#main[data-ending-layout="faq"]>.fq-index{padding-bottom:36px}
+#main[data-ending-layout="insights"]>.ie-editorial{padding-bottom:36px}
+#main[data-ending-layout="services"]>.service-directory{padding-bottom:36px;border-bottom-left-radius:0;border-bottom-right-radius:0}
+#main[data-ending-layout="sectors"]>.sector-explorer{padding-bottom:36px;border-bottom-left-radius:0;border-bottom-right-radius:0}
+body.cinematic-v2.designer-detail #main[data-ending-layout="contact"]{padding-bottom:0}
+/* The form grid already supplies its own bottom safety space. Do not retain a
+   second viewport-height spacer underneath it on taller screens. */
+#main[data-ending-layout="contact"] .contact-first-screen{min-height:0}
+#main[data-ending-layout="contact"] .contact-first-screen::before{mask-image:linear-gradient(to bottom,#000 calc(100% - 40px),transparent)}
+#main[data-ending-layout="topic"]>.topic-related,
+#main[data-ending-layout="privacy"]>.designer-page-content,
+#main[data-ending-layout="article"]>.detail-links{padding-bottom:32px;margin-bottom:0;border-bottom-left-radius:0;border-bottom-right-radius:0}
+#main[data-ending-layout="area-region"]>.area-detail-content{padding-bottom:24px}
+#main[data-ending-layout="area-overview"]>.ma-directory{padding-bottom:12px}
+.inner-footer-shell{--transition-paper:#f8f5ee;--shell-inset:clamp(12px,1.2vw,20px);position:relative;display:flow-root;background:var(--transition-paper);padding:0 var(--shell-inset) 14px;isolation:isolate}
+.inner-footer-shell .footer-transition{position:relative;height:108px;margin-inline:calc(-1 * var(--shell-inset));background:var(--transition-paper);overflow:hidden;pointer-events:none;user-select:none}
+.inner-footer-shell .ft-cap{position:absolute;inset:-1px 0 auto;width:100%;height:64px;display:block}
+.inner-footer-shell .ft-surface{fill:var(--ending-surface)}
+.inner-footer-shell .ft-thin-backing{fill:var(--ending-accent)}
+.inner-footer-shell .ft-hairline{position:absolute;left:5.4%;bottom:20px;width:69%;height:18px;overflow:visible;fill:none;stroke:#1424ff;stroke-width:1.4;vector-effect:non-scaling-stroke;display:block}
+.inner-footer-shell :is(.ft-hairline,.ft-paper-edge) path{vector-effect:non-scaling-stroke}
+.inner-footer-shell .ft-paper-edge{position:absolute;left:0;top:4px;width:clamp(40px,5vw,85px);height:12px;fill:none;stroke:var(--ending-accent);stroke-width:3;opacity:.9}
+.inner-footer-shell[data-footer-size="paper"] .footer-transition{height:44px}
+.inner-footer-shell[data-footer-size="short"] .footer-transition{height:52px}
+.inner-footer-shell:is([data-footer-size="paper"],[data-footer-size="short"]) .ft-hairline{height:12px;bottom:15px;width:54%}
+body.cinematic-v2.designer-detail .inner-footer-shell>.site-footer.footer-brand-panel{margin:0;border-radius:32px;padding-top:44px;padding-bottom:24px}
+.inner-footer-shell .footer-brand-panel .footer-company h2{text-wrap:balance}
+/* Pin text colors on light social cards in every interaction state. Icon fills
+   stay owned by the original social marks. Home does not load this sheet. */
+.inner-footer-shell .footer-brand-panel :is(.footer-facebook,.footer-google),
+.inner-footer-shell .footer-brand-panel :is(.footer-facebook,.footer-google) .social-copy,
+.inner-footer-shell .footer-brand-panel :is(.footer-facebook,.footer-google) .social-copy>*,
+.inner-footer-shell .footer-brand-panel :is(.footer-facebook,.footer-google) .social-arrow{color:#081d3b}
+.inner-footer-shell .footer-transition.ft-entered :is(.ft-thin-backing,.ft-hairline,.ft-paper-edge){animation:footer-edge-arrive 380ms cubic-bezier(.22,.7,.2,1) both}
+@keyframes footer-edge-arrive{from{opacity:.4;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:700px){
+ #main[data-ending-layout="about"]>.ap-profile,
+ #main[data-ending-layout="faq"]>.fq-index,
+ #main[data-ending-layout="insights"]>.ie-editorial,
+ #main[data-ending-layout="services"]>.service-directory,
+ #main[data-ending-layout="sectors"]>.sector-explorer{padding-bottom:26px}
+ body.cinematic-v2.designer-detail #main[data-ending-layout="contact"]{padding-bottom:0}
+ #main[data-ending-layout="topic"]>.topic-related,
+ #main[data-ending-layout="privacy"]>.designer-page-content,
+ #main[data-ending-layout="article"]>.detail-links{padding-bottom:24px}
+ #main[data-ending-layout="area-region"]>.area-detail-content{padding-bottom:20px}
+ .inner-footer-shell{--shell-inset:10px;padding-bottom:10px}
+ .inner-footer-shell .footer-transition{height:58px}
+ .inner-footer-shell .ft-cap{height:34px}
+ .inner-footer-shell .ft-hairline{bottom:10px;width:77%;height:10px;stroke-width:1.3}
+ .inner-footer-shell[data-footer-size="paper"] .footer-transition{height:30px}
+ .inner-footer-shell[data-footer-size="short"] .footer-transition{height:38px}
+ .inner-footer-shell:is([data-footer-size="paper"],[data-footer-size="short"]) .ft-hairline{bottom:10px;width:66%;height:9px}
+ .inner-footer-shell .ft-paper-edge{width:38px;top:2px;height:8px}
+ body.cinematic-v2.designer-detail .inner-footer-shell>.site-footer.footer-brand-panel{border-radius:28px;padding-top:30px;padding-bottom:22px}
+ .inner-footer-shell .footer-brand-panel .footer-company h2{font-size:20px;white-space:normal;text-wrap:balance}
+}
+@media(prefers-reduced-motion:reduce){.inner-footer-shell .footer-transition.ft-entered :is(.ft-thin-backing,.ft-hairline,.ft-paper-edge){animation:none}}

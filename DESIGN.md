@@ -171,3 +171,7 @@ service-showcase.js 同时供构建与浏览器使用，单一滚动进度、单
 性能优化只改变运行效率：不得统一缩短动画时长、删除delay、改场景停留或锁屏长度、改变现有UI或四张横移卡片。所有CSS、建筑素材与正式内容保持。EllisMotion继续是首页场景切换的唯一滚动时间线；背景/标题的章节阈值和建筑140ms退出、220ms进入、CSS的1.2s镜头过渡等原值保留。图片解码完成前沿用上一张可用图片；相同帧不重复写样式，服务目录离屏停止无效更新。反向滚动从当前可见位置重新定目标，保留原五次输入节奏和180/600ms手势边界。明确的首页锚点导航直接到内容，独立内页链接保持真实路由。
 
 本轮在codex/home-motion-performance本地验证，未经当次发布授权不推送或部署。检查记录见本站reports/home-performance-2026-11-16。
+
+## 2026-11-16 非首页内容与页尾衔接
+
+所有非首页通过 content/footer-transition.cjs 在公共 page() 构建入口接入一个 FooterTransition/FooterShell。按实际末段外层配置颜色，服务目录固定粉色，不跟随活动卡片；奶白详情与地区既有立体边缘使用短版。保留正文、表单、SEO、页尾HTML和真实链接。仅装饰层一次380ms轻量入场，结构曲面保持静止，减少动态偏好下静态显示；不加咨询模块、锁屏或滚动监听。Facebook/Google Reviews深色文字修正局限于内页Shell。首页文件字节不变。本轮仅本地分支codex/inner-footer-transition，未发布。报告见reports/inner-footer-transition-2026-11-16。
