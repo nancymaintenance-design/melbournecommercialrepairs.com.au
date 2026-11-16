@@ -1,0 +1,70 @@
+/* Homepage project enquiry: scoped reference composition. */
+body #location h2{font-size:clamp(30px,3.2vw,46px);line-height:1.15;max-width:none}
+#location .location-email{font-size:16px;color:inherit;overflow-wrap:anywhere;text-underline-offset:5px}
+#location .location-actions{flex-wrap:wrap}
+body #contact.project-process{position:relative;display:grid;grid-template-columns:minmax(0,1.34fr) minmax(0,1fr);align-items:start;column-gap:3%;row-gap:35px;min-height:0;margin:8px 3.4% 94px;padding:48px 4.2% 0;border-radius:40px;overflow:visible;isolation:isolate;background:linear-gradient(115deg,#ff9a58,#ff783b 60%,#ff985f);color:#101b37;box-shadow:inset 0 2px 0 #fff8}
+#contact.project-process:after{display:none}
+#contact.project-process:before{width:700px;height:700px;top:-525px;right:0;clip-path:inset(525px 0 0 0);animation:none}
+#contact.project-process .pp-copy{min-width:0;padding-top:3px}
+#contact.project-process .eyebrow{margin:0 0 22px;display:flex;gap:16px;align-items:center;font-size:14px;line-height:1.25;letter-spacing:.08em}
+body #contact.project-process h2{font-size:clamp(42px,4vw,70px);line-height:1.12;letter-spacing:-.045em;margin:0 0 24px;max-width:none;font-weight:900}
+#contact.project-process h2>span{display:block}
+#contact.project-process .pp-headline-end{text-decoration:underline;text-decoration-color:#e1ff00;text-decoration-thickness:5px;text-underline-offset:12px;text-decoration-skip-ink:none}
+#contact.project-process .pp-intro{font-size:clamp(16px,1.25vw,22px);font-weight:650;line-height:1.55;margin:0 0 20px;max-width:none}
+#contact.project-process .pp-tags{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:40px}
+#contact.project-process .pp-tags>span{display:flex;align-items:center;justify-content:center;gap:14px;padding:13px 24px;border:1.5px solid #16233e;border-radius:999px;font-size:clamp(15px,1.25vw,22px);line-height:1.2;font-weight:750}
+#contact.project-process .pp-icon{display:block;width:29px;height:29px;flex:0 0 auto}
+#contact.project-process .pp-steps{position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;isolation:isolate;padding:0 0 0 22px}
+#contact.project-process .pp-connector{position:absolute;z-index:-1;left:20px;top:-9px;width:112%;height:76px;object-fit:fill;pointer-events:none}
+#contact.project-process .pp-note{position:relative;min-width:0;transition:translate .25s}
+#contact.project-process .pp-note:hover{translate:0 -3px}
+#contact.project-process .pp-number{display:grid;place-items:center;width:48px;height:48px;margin:0 0 12px;border-radius:50%;background:#063eff;box-shadow:0 0 0 8px #ff8a47;color:white;font-size:23px;font-weight:850}
+#contact.project-process .pp-note h3{font-size:clamp(20px,1.45vw,26px);font-weight:850;letter-spacing:-.035em;margin:0 0 5px;line-height:1.3}
+#contact.project-process .pp-note p{font-size:clamp(14px,1.05vw,18px);line-height:1.55;margin:0;max-width:235px}
+#contact.project-process .pp-action{position:relative;min-width:0;aspect-ratio:1.2;margin-top:-40px;align-self:start;isolation:isolate}
+#contact.project-process .pp-note-shell{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:fill;pointer-events:none;z-index:-1}
+#contact.project-process .pp-action-face{position:relative;padding:23% 11% 10% 14%;color:#fff9ef}
+#contact.project-process .pp-note-arrow{position:absolute;right:9%;top:20%;width:46px;height:46px;filter:brightness(0) invert(1)}
+#contact.project-process .pp-action h3{font-size:clamp(32px,3.15vw,56px);line-height:1.13;letter-spacing:-.04em;font-weight:900;margin:0 0 20px;color:inherit;max-width:none}
+#contact.project-process .pp-action-description{font-size:clamp(17px,1.48vw,26px);font-weight:650;line-height:1.4;white-space:pre-line;margin:0 0 28px;max-width:none;color:inherit}
+#contact.project-process .pp-submit{display:flex;align-items:center;justify-content:center;gap:22px;width:100%;min-height:88px;padding:18px 24px;border:0;border-radius:999px;background:#e0ff00;color:#101b37;font:850 clamp(20px,1.95vw,35px)/1.25 Arial,'Microsoft YaHei',sans-serif;cursor:pointer;transition:box-shadow .25s,background .25s}
+#contact.project-process .pp-submit .pp-icon{width:40px;height:40px}
+#contact.project-process .pp-submit:hover{background:#efff6b;box-shadow:0 7px 0 #ff953a}
+#contact.project-process .pp-submit:focus-visible,#contact.project-process .pp-contact-item:focus-visible{outline:3px solid white;outline-offset:5px}
+#contact.project-process .pp-action-note{font-size:clamp(16px,1.28vw,23px);font-weight:650;text-align:center;margin:24px 0 0;color:inherit;max-width:none}
+#contact.project-process .pp-contact-strip{grid-column:1/-1;position:relative;z-index:2;display:grid;grid-template-columns:1.01fr 1.2fr 1fr;align-items:center;gap:0;margin:0 -3% -43px;padding:30px 26px;min-height:150px;border-radius:44px;background:#e2ff08;box-shadow:0 13px 0 #2732e9,11px 12px 0 #f94ac0,0 22px 22px #3b254343;border-top:1px solid #f8ff95}
+#contact.project-process .pp-contact-item{display:flex;align-items:center;gap:24px;padding:0 24px;min-width:0;color:#101b37;text-decoration:none}
+#contact.project-process .pp-contact-item+.pp-contact-item{border-left:2px solid #2936fe}
+#contact.project-process .pp-contact-item>.pp-icon{width:43px;height:43px}
+#contact.project-process .pp-contact-item>span{display:block;min-width:0}
+#contact.project-process .pp-contact-label{display:block;font-size:clamp(15px,1.12vw,20px);font-weight:750;margin-bottom:8px;line-height:1.2}
+#contact.project-process .pp-contact-item strong{display:block;font-size:clamp(20px,1.85vw,33px);line-height:1.23;font-weight:850;letter-spacing:-.035em;overflow-wrap:anywhere}
+#contact.project-process .pp-contact-item:hover strong{text-decoration:underline;text-underline-offset:5px}
+html[lang=en] #contact.project-process h2{font-size:clamp(36px,3.1vw,56px);letter-spacing:-.04em}
+html[lang=en] #contact.project-process .pp-action h3{font-size:clamp(28px,2.55vw,45px);max-width:95%}
+html[lang=en] #contact.project-process .pp-submit{font-size:clamp(19px,1.55vw,27px)}
+html[lang=en] #contact.project-process .pp-contact-item:last-child strong{font-size:clamp(17px,1.25vw,23px)}
+@media(min-width:1600px){#contact.project-process .pp-action{width:110%;margin-left:-3%}#contact.project-process .pp-action-face{padding-top:24%}}
+@media(max-width:1200px){body #contact.project-process{padding:38px 4% 0;column-gap:2%}#contact.project-process .pp-tags{gap:9px;margin-bottom:30px}#contact.project-process .pp-tags>span{padding:10px 15px;gap:8px}#contact.project-process .pp-tags .pp-icon{width:23px;height:23px}#contact.project-process .pp-action{margin-top:0;align-self:center}#contact.project-process .pp-action-face{padding-top:24%}#contact.project-process .pp-submit{min-height:66px;padding:15px 12px;gap:10px}#contact.project-process .pp-action-description{margin-bottom:18px}#contact.project-process .pp-action h3{margin-bottom:13px}#contact.project-process .pp-action-note{margin-top:17px}#contact.project-process .pp-contact-item{padding:0 14px;gap:13px}#contact.project-process .pp-contact-item>.pp-icon{width:30px;height:30px}#contact.project-process .pp-contact-strip{padding-inline:14px;min-height:125px}}
+@media(max-width:900px){body #contact.project-process{grid-template-columns:1fr;row-gap:30px;margin-inline:20px;padding:35px 30px 0}body #contact.project-process h2{font-size:48px}#contact.project-process .pp-action{width:100%;max-width:620px;margin:-15px auto 0;aspect-ratio:1.2}#contact.project-process .pp-action h3{font-size:48px}#contact.project-process .pp-action-description{font-size:23px}#contact.project-process .pp-submit{min-height:78px;font-size:29px}#contact.project-process .pp-action-note{font-size:21px}#contact.project-process .pp-contact-strip{grid-template-columns:1fr;margin-inline:-10px;gap:20px;border-radius:30px;padding:24px;min-height:0}#contact.project-process .pp-contact-item{padding:0 0 20px;gap:19px}#contact.project-process .pp-contact-item+.pp-contact-item{border-left:0;border-top:1px solid #2936fe55;padding-top:18px}#contact.project-process .pp-contact-item:last-child{padding-bottom:0}#contact.project-process .pp-contact-item strong{font-size:25px}html[lang=en] #contact.project-process .pp-action h3{font-size:38px}html[lang=en] #contact.project-process .pp-contact-item:last-child strong{font-size:22px}}
+@media(max-width:520px){body #contact.project-process{margin:8px 12px 84px;padding:30px 21px 0;border-radius:30px;row-gap:20px}#contact.project-process .eyebrow{font-size:13px;margin-bottom:18px}body #contact.project-process h2{font-size:clamp(30px,8vw,42px);line-height:1.2;margin-bottom:24px}#contact.project-process .pp-headline-end{text-underline-offset:8px;text-decoration-thickness:4px}#contact.project-process .pp-intro{font-size:16px;font-weight:600;margin-bottom:18px}#contact.project-process .pp-tags{gap:6px;margin-bottom:25px}#contact.project-process .pp-tags>span{gap:5px;padding:9px 10px;font-size:12px}#contact.project-process .pp-tags .pp-icon{width:20px;height:20px}#contact.project-process .pp-steps{grid-template-columns:1fr;gap:22px;padding:0}#contact.project-process .pp-connector{display:none}#contact.project-process .pp-note{padding-left:60px;min-height:60px}#contact.project-process .pp-number{position:absolute;left:0;top:0;width:40px;height:40px;font-size:20px;box-shadow:none}#contact.project-process .pp-note h3{font-size:20px}#contact.project-process .pp-note p{font-size:15px;max-width:none}#contact.project-process .pp-action{width:calc(100% + 24px);margin:0 -12px}#contact.project-process .pp-action-face{padding:24% 10% 11% 13%}#contact.project-process .pp-action h3{font-size:31px;margin-bottom:14px}#contact.project-process .pp-action-description{font-size:17px;line-height:1.4;margin-bottom:16px}#contact.project-process .pp-submit{min-height:56px;font-size:21px;gap:8px;padding:11px}#contact.project-process .pp-submit .pp-icon{width:27px;height:27px}#contact.project-process .pp-note-arrow{width:29px;height:29px}#contact.project-process .pp-action-note{font-size:14px;margin-top:16px}#contact.project-process .pp-contact-strip{margin-top:3px;padding:24px 19px;margin-inline:-8px;border-radius:28px}#contact.project-process .pp-contact-item strong{font-size:22px}#contact.project-process .pp-contact-label{font-size:15px;margin-bottom:6px}#contact.project-process .pp-contact-item{gap:15px}html[lang=en] #contact.project-process h2{font-size:31px}html[lang=en] #contact.project-process .pp-action h3{font-size:27px}html[lang=en] #contact.project-process .pp-action-description{font-size:16px}html[lang=en] #contact.project-process .pp-submit{font-size:16px}html[lang=en] #contact.project-process .pp-action-note{font-size:13px}html[lang=en] #contact.project-process .pp-contact-item:last-child strong{font-size:20px}}
+@media(prefers-reduced-motion:reduce){#contact.project-process *,#contact.project-process:before{animation:none!important;transition:none!important}}
+
+/* Screenshot calibration against the 1717 × 916 source. */
+body #contact.project-process{row-gap:3px}
+#contact.project-process .pp-action{margin-top:-58px}
+#contact.project-process .pp-action-face{padding-right:17%}
+#contact.project-process .pp-note-arrow{filter:brightness(0) invert(1)!important}
+#contact.project-process .pp-connector{height:180px;top:-64px}
+#contact.project-process .pp-contact-item:nth-child(2) strong{font-size:clamp(20px,1.62vw,29px);white-space:nowrap;letter-spacing:-.055em}
+@media(max-width:1200px){#contact.project-process .pp-action{margin-top:0}#contact.project-process .pp-contact-item:nth-child(2) strong{font-size:clamp(17px,1.55vw,23px)}}
+@media(max-width:900px){body #contact.project-process{row-gap:25px}#contact.project-process .pp-action{margin-top:-15px}#contact.project-process .pp-contact-item:nth-child(2) strong{font-size:25px;white-space:normal;letter-spacing:-.035em}}
+@media(max-width:520px){body #contact.project-process{row-gap:20px}#contact.project-process .pp-action{margin-top:0}#contact.project-process .pp-action-face{padding-right:12%}#contact.project-process .pp-contact-item:nth-child(2) strong{font-size:21px}}
+/* The section reveal must not clip the floating contact strip. */
+body #contact.project-process{clip-path:none!important}
+@media(min-width:901px){#contact.project-process .pp-note-shell{height:calc(100% + 35px)}}
+@media(max-width:520px){#contact.project-process .pp-action-face{padding-right:19%}#contact.project-process .pp-action-note{font-size:13px;margin-top:12px;text-align:left;padding-left:8px}#contact.project-process .pp-contact-item:nth-child(2) strong{font-size:clamp(16px,4.4vw,19px);letter-spacing:-.045em}}
+@media(max-width:520px){#contact.project-process .pp-contact-item:nth-child(2) strong{font-size:clamp(14px,4vw,16px)}}
+@media(min-width:901px){html[lang=en] #contact.project-process .pp-tags{gap:10px}html[lang=en] #contact.project-process .pp-tags>span{font-size:16px;padding:12px 16px;gap:9px}html[lang=en] #contact.project-process .pp-intro{font-size:18px}html[lang=en] #contact.project-process .pp-note h3{font-size:21px}html[lang=en] #contact.project-process .pp-note p{font-size:15px}html[lang=en] #contact.project-process .pp-submit{font-size:22px}html[lang=en] #contact.project-process .pp-action h3{font-size:38px}}
+body #contact.project-process{scroll-margin-top:110px}
+@media(max-width:520px){body #contact.project-process{scroll-margin-top:90px}}

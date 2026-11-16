@@ -1,0 +1,8 @@
+{
+  "sourceArchive": "Ellis_Hotspot_Codex_Pack.zip",
+  "files": {
+    "ellis-explorer.js": "271c51c8ceb5990dd2ee54fbee085fe3f6c6ae295bf321b6cde93b3d72c147ae",
+    "ellis-explorer.css": "bc716182151b4ded30695cc799aa935fd075853d140c87beba72459b67f0dd8c",
+    "ellis-sectors.js": "380dc5571d33cf23414a63aa09a7dd87aa589cb6a454f663e01ef51526c85535"
+  }
+}

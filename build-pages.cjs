@@ -22,11 +22,7 @@ let home=fs.readFileSync(path.join(root,'index.html'),'utf8');
 home=require('./navigation.cjs').rewrite(home);
 home=home.replace(/<link\b[^>]*href="\/?navigation-refinement\.css(?:\?[^\"]*)?"[^>]*>/g,'').replace('</head>','<link rel="stylesheet" href="/navigation-refinement.css"></head>');
 home=home.replace(/(<a[^>]*class="brand"[^>]*href=")#[^"]*/,'$1/').replace(/(<a href=")#home(" class="brand")/,'$1/$2');
-let footer=fs.readFileSync(path.join(root,'footer.html'),'utf8');
-footer=footer.replace(/<div class="footer-registration">[\s\S]*?<\/div>/,'');
-footer=footer.replace(/(<p class="footer-location">)/,`<div class="footer-registration"><span>${business.legalName}</span>${external(business.registerUrl,'ABN '+business.abn+' ↗','ABN '+business.abn+' ↗')}</div>$1`);
-footer=footer.replace(/<p class="footer-map-contact">[\s\S]*?<\/p>/,'');
-footer=footer.replace('<p class="footer-location">',`<p class="footer-map-contact"><a href="${business.telephoneHref}">${business.telephoneDisplay}</a><a href="${business.mapsUrl}" target="_blank" rel="noopener noreferrer">459 Collins St, Melbourne VIC 3004 ↗</a></p><p class="footer-location">`);
+let footer=require('./content/footer.cjs')(business);
 footer=footer.replace('href="/#about"','href="/about/" data-local-page');
 footer=footer.replaceAll('href="/#faq"','href="/faq/"').replaceAll('href="/#contact"','href="/contact/"');
 fs.writeFileSync(path.join(root,'footer.html'),footer);
@@ -39,6 +35,8 @@ home=home.replace(/\s*<script type="application\/ld\+json">[\s\S]*?<\/script>\s*
 home=home.replace(/<!-- home-locales:start -->[\s\S]*?<!-- home-locales:end -->/,'').replace('</head>','<!-- home-locales:start --><link rel="canonical" href="/?lang=zh"><link rel="alternate" hreflang="zh-CN" href="/?lang=zh"><link rel="alternate" hreflang="en-AU" href="/?lang=en"><link rel="alternate" hreflang="x-default" href="/?lang=zh"><!-- home-locales:end --></head>');
 home=home.replace(/<a class="sector-directory-link\b[^\"]*"[\s\S]*?<\/a>/g,'').replace(/<div class="sector-layout"/, '<a class="sector-directory-link text-link" href="/sectors/" data-local-page data-zh="查看全部 8 类物业维护详情 ↗" data-en="Explore all 8 property maintenance pages ↗">查看全部 8 类物业维护详情 ↗</a><div class="sector-layout"');
 home=home.replace(/<footer[\s\S]*?<\/footer>/,footer.trim());
+home=home.replace(/<link\b[^>]*href="\/?footer-brand\.css(?:\?[^\"]*)?"[^>]*>/g,'');
+home=home.replace(/<link\b[^>]*href="\/?home-project-process\.css(?:\?[^\"]*)?"[^>]*>/g,'').replace('</head>','<link rel="stylesheet" href="/home-project-process.css"></head>');
 const header=home.match(/  <header[\s\S]*?<\/header>/)[0].replace(/href="#/g,'href="/#').replace(/src="assets\//g,'src="/assets/');
 const cards=(items,base,slugs)=>`<div class="detail-links">${items.map((x,i)=>`<a href="/${base}/${slugs[i]}/" data-local-page>${dual('h3',x.zh,x.en)}${dual('p',x.subZh||x.descZh||x.catZh,x.subEn||x.descEn||x.catEn)}<span aria-hidden="true">↗</span></a>`).join('')}</div>`;
 function page(route,zh,en,content,related='',options={}){
@@ -57,8 +55,8 @@ function page(route,zh,en,content,related='',options={}){
  const areaAssets=areaOverview||areaRegion?'<link rel="stylesheet" href="/area-theatre.css">'+(areaOverview?'<script src="/area-theatre.js" defer></script>':''):'';
  const customContent=['services','sectors'].includes(route)||areaOverview||areaRegion||!!compactPage;
  const compactAssets=compactPage?`<link rel="stylesheet" href="/compact-index-shell.css"><link rel="stylesheet" href="/${compactPage[0]}.css"><script src="/${compactPage[0]}.js" defer></script>`:'';
- const finalHtml=html.replace('</head>',`<link rel="stylesheet" href="/inner-flow.css">${route==='services'?'<link rel="stylesheet" href="/service-directory.css"><script src="/service-directory.js" defer></script>':route==='sectors'?'<link rel="stylesheet" href="/sector-explorer.css"><script src="/sector-explorer.js" defer></script>':''}`+areaAssets+compactAssets+'<link rel="stylesheet" href="/navigation-refinement.css"><link rel="stylesheet" href="/readability-refinement.css">'+pageOrganizationSchema+'</head>').replace('class="cinematic-v2 detail-page','class="cinematic-v2 designer-detail detail-page'+(compactPage?' '+compactPage[1]:'')).replace('<main id="main"',require('./content/design-shell.cjs').rail+'<main id="main"').replace(heading+content,heading+(customContent?content:'<div id="page-content" class="designer-page-content">'+content+'</div>'));
- const dest=path.join(root,route,'index.html');fs.mkdirSync(path.dirname(dest),{recursive:true});fs.writeFileSync(dest,versionAssets(finalHtml,root));
+ const finalHtml=html.replace('</head>',`<link rel="stylesheet" href="/inner-flow.css">${route==='services'?'<link rel="stylesheet" href="/service-directory.css"><script src="/service-directory.js" defer></script>':route==='sectors'?'<link rel="stylesheet" href="/sector-explorer.css"><link rel="stylesheet" href="/vendor/ellis-hotspot-kit/ellis-explorer.css"><link rel="stylesheet" href="/sector-hotspot-kit.css"><script src="/vendor/ellis-hotspot-kit/ellis-sectors.js" defer></script><script src="/vendor/ellis-hotspot-kit/ellis-explorer.js" defer></script><script src="/sector-hotspot-kit.js" defer></script>':''}`+areaAssets+compactAssets+'<link rel="stylesheet" href="/navigation-refinement.css"><link rel="stylesheet" href="/readability-refinement.css">'+pageOrganizationSchema+'</head>').replace('class="cinematic-v2 detail-page','class="cinematic-v2 designer-detail detail-page'+(compactPage?' '+compactPage[1]:'')).replace('<main id="main"',require('./content/design-shell.cjs').rail+'<main id="main"').replace(heading+content,heading+(customContent?content:'<div id="page-content" class="designer-page-content">'+content+'</div>'));
+ const dest=path.join(root,route,'index.html');fs.mkdirSync(path.dirname(dest),{recursive:true});fs.writeFileSync(dest,versionAssets(finalHtml.replace('</head>','<link rel="stylesheet" href="/footer-brand.css"></head>'),root));
 }
 const topicRecords=require('./content/render-topics.cjs')(page,data,serviceSlugs,sectorSlugs);
 page('services','墨尔本商业维护服务','Commercial maintenance services in Melbourne','');
@@ -102,5 +100,6 @@ home=home.slice(0,areaStart)+areaTheatre.section({home:true})+home.slice(areaEnd
 if(!home.includes('area-theatre.css'))home=home.replace('</head>','<link rel="stylesheet" href="area-theatre.css"></head>');
 if(!home.includes('area-theatre.js'))home=home.replace('</head>','<script src="area-theatre.js" defer></script></head>');
 home=home.replace(/<link\b[^>]*href="\/?(?:home-location|navigation-refinement|readability-refinement)\.css(?:\?[^\"]*)?"[^>]*>/g,'').replace('</head>','<link rel="stylesheet" href="/navigation-refinement.css"><link rel="stylesheet" href="/readability-refinement.css"></head>');
-fs.writeFileSync(path.join(root,'index.html'),versionAssets(home,root));
+fs.writeFileSync(path.join(root,'index.html'),versionAssets(home.replace('</head>','<link rel="stylesheet" href="/footer-brand.css"></head>'),root));
 console.log('Built 41 detail/index pages and linked homepage.');
+
