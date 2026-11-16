@@ -12,10 +12,15 @@
     camera.insertAdjacentHTML('beforebegin','<div class="arch-route" aria-hidden="true"><i></i></div>');
     camera.insertAdjacentHTML('afterend','<div class="arch-callout" aria-hidden="true"></div>');
     const callout=host.querySelector('.arch-callout');
+    const unavailable=host.querySelector('.visual-unavailable');
     const ready = new Set();
+    const loaded = new Set();
+    const decoding = new Map();
     let progress = 0, paused = false, view = 'all', exploded=false, lastGood = 0, disposed = false;
-    let shown=0,desired=0,swapping=false,generation=0,animation=null;
+    let shown=-1,desired=0,swapping=false,generation=0,animation=null;
+    const style=(node,key,value)=>{if(node.style.getPropertyValue?.(key)!==value)node.style.setProperty(key,value)};
     function show(index){
+      if(shown===index)return;
       shown=index;
       if(ready.has(index))lastGood=index;
       images.forEach((image,i)=>{image.style.opacity=i===index?'1':'0';image.style.clipPath='none';});
@@ -26,7 +31,7 @@
     }
     function selectState(index){
       desired=index;
-      if(paused||document.hidden||!camera.animate){cancelSwap();show(index);return;}
+      if(paused||document.hidden||!camera.animate){if(swapping)cancelSwap();show(index);return;}
       if(swapping||shown===index)return;
       swapping=true;const token=++generation;
       // Whole-picture handoff: one illustration at a time, no masks or overlaps.
@@ -53,30 +58,43 @@
       const stops=[0,.18,.51,.81,1],phase=stateByView[view]??0;
       const local=clamp((progress-stops[phase])/(stops[phase+1]-stops[phase]));
       const arc=Math.sin(local*Math.PI);
-      camera.style.setProperty('--camera-scale', paused ? '1' : String(target[2]+(exploded?.05:0)+arc*.008));
-      camera.style.setProperty('--camera-x', paused ? '0%' : `${target[0]+arc*1.1+local*.3}%`);
-      camera.style.setProperty('--camera-y', paused ? '0%' : `${Math.min(0,target[1]-arc*.65-local*.2)}%`);
+      style(camera,'--camera-scale', paused ? '1' : String(target[2]+(exploded?.05:0)+arc*.008));
+      style(camera,'--camera-x', paused ? '0%' : `${target[0]+arc*1.1+local*.3}%`);
+      style(camera,'--camera-y', paused ? '0%' : `${Math.min(0,target[1]-arc*.65-local*.2)}%`);
       const label=(labels[view]||labels.all)[document.documentElement.lang==='en'?1:0];
       if(callout.textContent!==label)callout.textContent=label;
-      host.dataset.view = view;
-      host.dataset.motionRunning = String(!paused);
-      host.dataset.renderer = 'calibrated-key-states';
-      host.querySelector('.visual-unavailable').hidden = ready.size > 0;
+      if(host.dataset.view!==view)host.dataset.view=view;
+      if(host.dataset.motionRunning!==String(!paused))host.dataset.motionRunning=String(!paused);
+      if(host.dataset.renderer!=='calibrated-key-states')host.dataset.renderer='calibrated-key-states';
+      if(unavailable.hidden!==(loaded.size>0))unavailable.hidden=loaded.size>0;
     }
     const handlers = images.map((img,i) => {
-      const load = () => { if(img.naturalWidth) ready.add(i); paint(); };
-      const error = () => { ready.delete(i); paint(); };
+      // Decode each source once, off the visible handoff. Keep the last ready
+      // illustration until the requested image can be painted without a decode stall.
+      const load = () => {
+        if(disposed||!img.naturalWidth||decoding.has(i))return;
+        loaded.add(i);
+        const job=Promise.resolve().then(()=>typeof img.decode==='function'?img.decode():undefined);
+        decoding.set(i,job);
+        job.then(()=>{if(disposed)return;ready.add(i);if(shown===i)lastGood=i;paint();},()=>{if(!disposed){ready.delete(i);loaded.delete(i);paint();}});
+      };
+      const error = () => { ready.delete(i); loaded.delete(i); decoding.delete(i); if(!disposed)paint(); };
       img.addEventListener('load',load); img.addEventListener('error',error);
-      if(img.complete && img.naturalWidth) ready.add(i);
+      if(img.complete && img.naturalWidth) load();
       return () => { img.removeEventListener('load',load); img.removeEventListener('error',error); };
     });
     show(0);paint();
     document.addEventListener('ellislanguagechange',paint);
     return {
-      setView(value) { view=value; paint(); },
-      setExploded(value) { exploded=!!value; paint(); },
-      setPaused(value) { paused=!!value; paint(); },
-      setScroll(value) { progress=clamp(Number(value)||0); paint(); },
+      setFrame(next) {
+        const p=clamp(Number(next.progress)||0),e=!!next.exploded,s=!!next.paused;
+        if(view===next.view&&progress===p&&exploded===e&&paused===s)return;
+        view=next.view;progress=p;exploded=e;paused=s;paint();
+      },
+      setView(value) { if(view!==value){view=value;paint();} },
+      setExploded(value) { if(exploded!==!!value){exploded=!!value;paint();} },
+      setPaused(value) { if(paused!==!!value){paused=!!value;paint();} },
+      setScroll(value) { const p=clamp(Number(value)||0);if(progress!==p){progress=p;paint();} },
       destroy() { disposed=true; cancelSwap(); handlers.forEach(remove=>remove()); document.removeEventListener('ellislanguagechange',paint);host.querySelector('.arch-route')?.remove();callout.remove(); }
     };
   };

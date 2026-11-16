@@ -9,7 +9,6 @@
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   let paused = reduceMotion.matches;
   let currentView = 'all';
-  let scene;
   const tr = (zh, en) => language === 'zh' ? zh : en;
   const esc = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const iconPaths = [
@@ -131,8 +130,7 @@
     window.EllisNewsMagazine.update({node:$('#news'),data:articles,slugs:articleSlugs,language});
   }
   function renderFaq() {
-    const openItems = $$('details[open]', $('#faq-list')).map(el=>el.dataset.index);
-    $('#faq-list').innerHTML = faqs.map((faq,index)=>`<details data-index="${index}"${openItems.includes(String(index)) ? ' open' : ''}><summary>${tr(faq[0],faq[1])}</summary><p>${tr(faq[2],faq[3])}</p></details>`).join('');
+    window.EllisHomeFaq?.refresh(language);
   }
   function applyLanguage() {
     const story=document.querySelector('#home');
@@ -177,6 +175,7 @@
       document.documentElement.style.scrollBehavior=behavior;
     }
     $$('a[href^="/"]').forEach(a=>{const u=new URL(a.href);u.searchParams.set('lang',language);a.href=u.pathname+u.search+u.hash;});
+    syncHomeNavigation();
     document.dispatchEvent(new CustomEvent('ellislanguagechange'));
   }
 
@@ -238,14 +237,16 @@
   });
   $$('#main-nav a').forEach(link=>link.addEventListener('click',()=>{$('#main-nav').classList.remove('is-open');$('#menu-toggle').setAttribute('aria-expanded','false');$('#menu-toggle').setAttribute('aria-label',tr('打开菜单','Open menu'));}));
   document.addEventListener('keydown',event=>{if(event.key==='Escape'&&$('#main-nav').classList.contains('is-open')){$('#main-nav').classList.remove('is-open');$('#menu-toggle').setAttribute('aria-expanded','false');$('#menu-toggle').setAttribute('aria-label',tr('打开菜单','Open menu'));$('#menu-toggle').focus();}});
-  let scrollQueued=false;
-  function onScroll(){if(scrollQueued)return;scrollQueued=true;requestAnimationFrame(()=>{scrollQueued=false;const top=window.scrollY;scene?.setScroll(Math.min(1,top/Math.max(1,$('#home').offsetHeight)));const ids=['home','services','sectors','areas','news','faq','about','contact'];let active='home';for(const id of ids){if(document.getElementById(id).getBoundingClientRect().top<155)active=id;}$$('#main-nav a').forEach(link=>{const isActive=new URL(link.href).pathname==='/';link.classList.toggle('active',isActive);if(isActive)link.setAttribute('aria-current','location');else link.removeAttribute('aria-current');});});}
-  window.addEventListener('scroll',onScroll,{passive:true});
+  // Navigation now uses independent routes. Its active state does not depend
+  // on scroll; EllisMotion alone owns the shared story's scroll timeline.
+  function syncHomeNavigation(){
+    $$('#main-nav a').forEach(link=>{const isActive=new URL(link.href).pathname==='/';link.classList.toggle('active',isActive);if(isActive)link.setAttribute('aria-current','location');else link.removeAttribute('aria-current');});
+  }
   $('#year').textContent=String(new Date().getFullYear());
   let ribbonResize=0;
   window.addEventListener('resize',()=>{clearTimeout(ribbonResize);ribbonResize=setTimeout(renderRibbon,120)});
   document.fonts?.ready.then(renderRibbon);
-  applyLanguage();onScroll();
+  applyLanguage();
   const enquiry=new URLSearchParams(location.search);
   if(enquiry.has('service')||enquiry.get('region')==='Melbourne') openQuote({region:'Melbourne',service:enquiry.get('service')??undefined});
 })();

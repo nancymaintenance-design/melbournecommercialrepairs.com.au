@@ -84,7 +84,8 @@ home=home.replace(/<section id="news"[\s\S]*?<\/section>/,require('./home-news-m
 if(!home.includes('home-news-magazine.js'))home=home.replace(/<script src="app\.js(?:\?[^\"]*)?"/,match=>'<link rel="stylesheet" href="home-news-magazine.css"><script src="home-news-magazine.js" defer></script>'+match);
 const ribbonCycle=data.services.map(x=>`<b data-zh="${e(x.zh)}" data-en="${e(x.en)}">${e(x.zh)}</b><i>·</i>`).join('');
 home=home.replace(/<div class="service-ribbon"[^>]*>[\s\S]*?<\/div><\/div>/,`<div class="service-ribbon" aria-hidden="true"><div class="ribbon-track"><span class="ribbon-group">${ribbonCycle}</span><span class="ribbon-group">${ribbonCycle}</span></div></div>`);
-home=home.replace(/(<div[^>]*id="faq-list"[^>]*>)[\s\S]*?(<\/div>\s*<\/section>)/,`$1${data.faqs.map((f,i)=>`<details data-index="${i}"${i===0?' open':''}><summary>${dual('span',f[0],f[1])}</summary>${dual('p',f[2],f[3])}</details>`).join('')}$2`);
+home=home.replace(/<section id="faq"[\s\S]*?<\/section>/,require('./content/home-faq-fold.cjs').section());
+if(!home.includes('home-faq-fold.js'))home=home.replace(/<script src="app\.js(?:\?[^\"]*)?"/,match=>'<link rel="stylesheet" href="home-faq-fold.css"><script src="home-faq-fold.js" defer></script>'+match);
 home=home.replace(/<section id="services"[\s\S]*?<\/section>/,require('./service-showcase.js').section(data.services,serviceSlugs));
 if(!home.includes('service-showcase.css'))home=home.replace(/<script src="app\.js(?:\?[^\"]*)?"/, '<link rel="stylesheet" href="service-showcase.css"><script src="service-showcase.js" defer></script><script src="app.js"');
 const selectorStart=home.search(/<div class="sector-layout"(?:\s|>)/);
