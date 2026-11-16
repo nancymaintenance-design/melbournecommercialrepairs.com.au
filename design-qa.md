@@ -1,38 +1,52 @@
-# 商业种类独立页热点包接入与首页恢复 — 2026-11-16
+# Homepage FAQ visual verification — 2026-11-16
 
-本记录取代此前误接到首页的接入记录。本轮最终范围为导航栏“商业种类”进入的 /sectors/ 独立页。
+Source visual truth: C:/Users/UFTR/AppData/Local/Temp/codex-clipboard-212785eb-ee83-45d1-bfeb-dc151a2b76ca.png (1825 × 862).
+Implementation: E:/Ellis-Services/Ellis Services WordPress/reports/home-faq-fold-2026-11-16/desktop-zh.png (1825 × 650 crop of 1825 × 862 CSS viewport, density 1).
+Comparison input: E:/Ellis-Services/Ellis Services WordPress/reports/home-faq-fold-2026-11-16/comparison.png. The source content region and rendered content region are displayed together at matching widths. Vertical compression is intentional: the user requested approximately 400–480px and smaller text than the source mockup.
+State: first question selected; Chinese. Supporting captures: desktop-en.png, mobile-zh.png, mobile-en.png (390 × 844 CSS viewport). Also checked 320 × 780.
 
-## 首页恢复
-- index.html 与 app.js 已恢复为本次错误接入前的快照，并通过字节一致比较。
-- 四张横向移动卡片、八类物业选择器和原有热点弹卡保持接入前实现。
-- 首页不加载附件代码包，不挂载园区组件。此前其他已完成修改保留。
+## Findings and iterations
 
-## 独立页实现
-- /sectors/ 保留紧凑的单个 H1、原有橙色背景、原3D园区图及页面间距。
-- 原样复用附件的交互、样式和中英文数据，三个 vendor 文件通过 SHA-256 比对。
-- sector-hotspot-kit.js 负责八个编号坐标、现有 URL 映射及语言桥接。
-- sector-hotspot-kit.css 仅覆盖独立页适配，不作用于首页。
-- 编号点击联动服务浮卡和右侧详情；手机合并为一个底部面板。
-- 01办公室26%/13%，02零售63%/13%，03餐饮20%/39%，04仓储76%/55%，05工业90%/23%，06医疗18%/66%，07教育43%/69%，08公共物业53%/37%。
+- Initial desktop region measured 524px; reduced local padding and panel minimum height. Final measured 476px at 1270px desktop and about 483px at 1825px desktop (English 481px). This is within the requested approximate height; content can grow on narrower screens.
+- Initial English mobile styling overrode the selected lime background. Removed the over-specific base selector. Post-fix evidence mobile-en.png shows the lime selected label.
+- Initial English mobile step pills stacked separately and left stray arrows. Switched the local sequence to three equal columns with natural label wrapping. Post-fix mobile-en.png has a complete readable sequence and no overflow.
+- No remaining actionable P0/P1/P2 findings.
 
-## 验证
-- 构建、脚本语法、资源引用检查通过。
-- tests/campus-pack.cjs：首页恢复、独立页单实例、三个附件文件未改、八类场景、24项服务、中英文64条路径、单个H1、原园区图均通过。
-- 真实浏览器：导航进入 /sectors/；逐一选择八类编号，浮卡与右侧详情对应，链接与语言正确。
-- 语言切换保留当前选择并同步浮卡、详情及链接。
-- 手机390×844：右侧栏隐藏，合并底部面板显示三个服务和详情入口；已修复页尾覆盖浮卡的层级问题，按钮可点击。
-- 无需改动其他内页。未推送、未部署、未修改服务器。
+## Required fidelity surfaces
 
-截图：
-- sectors-desktop-zh.jpg
-- sectors-mobile-zh.jpg
+Typography: existing Arial / Noto Sans CJK SC / Microsoft YaHei stack. H2 36–42px desktop, 30px mobile; question labels 18–20px; answer paragraph 18px desktop, 17px mobile. Full questions, answers and FAQ link use real HTML. Focused text inspection used the original full-size desktop and mobile captures, not only the reduced comparison board.
 
-本地预览：http://127.0.0.1:8765/sectors/?lang=zh
-首页：http://127.0.0.1:8765/?lang=zh
+Spacing/layout: one blue answer surface with three raised rounded tabs, orange offset backing, pink tab edge and independent curled corner. Desktop answer region reserves the tallest answer in one CSS grid track; six sequential switches stayed exactly 230px. Mobile buttons and their corresponding answers are interleaved in a vertical accordion. No extra full-screen segment or scroll lock.
 
-## 2026-11-16 补充：八类直接入口
-- /sectors/ 原园区组件下方恢复八个真实 HTML 详情链接，桌面四列两行，手机两列。
-- 复用已有物业名称、翻译和 URL；语言切换同步显示文案及 ?lang 状态。
-- 手机隐藏附件内重复的分类选择目录，保留八个编号热点及合并浮卡；下方八个入口均直接进入详情页。
-- 已在真实浏览器逐个点击八个入口，核对目标页 H1 与路由；英文八条链接正确，390px 无水平溢出。
-- 构建、资源检查及首页快照字节一致检查通过；首页未改，未发布。
+Colors/tokens: electric blue #0834ff, fluorescent lime #e3ff00, orange #ff7100, warm white from existing --paper. Text areas are solid colors. Contrast and selected/keyboard-focus states remain clear.
+
+Asset quality: separate transparent orange/lime curl raster generated for this component; no text baked into it. No existing logo or scene image changed. The curl shape differs slightly from the mockup and omits the embossed ELLIS decoration (P3); its subject, palette and independent layer are retained.
+
+Copy: exactly the three requested topics; bilingual equivalent responses. Full FAQ page data and generated HTML hash unchanged. Homepage title and upper-right real FAQ route match the request.
+
+## Interaction checks
+
+- Default first answer; all three correct answers accessible by click.
+- Six repeated/alternating desktop switches: one visible answer and stable 230px reading surface.
+- Arrow keys and Home: roving tab focus and selected state update correctly.
+- Mobile open/close, category switching and resizing preserve a valid state.
+- Chinese/English content and FAQ URLs preserve the active language.
+- Actual FAQ link clicked to /faq/?lang=en and existing H1 verified.
+- 320px viewport: no document or FAQ horizontal overflow.
+- Reduced-motion emulation: answer still usable, zero component animations.
+- Browser console error log at final local check: empty.
+
+## Scope and build
+
+scope-check.json: homepage body outside FAQ unchanged; independent FAQ page SHA256 unchanged; exactly three question controls. Earlier homepage performance work preserved.
+Build, syntax checks, asset cache checks and seven existing homepage performance regressions passed. No deployment or push.
+
+## Implementation checklist
+
+- [x] Local component and initial HTML generation
+- [x] Bilingual content and existing full FAQ route
+- [x] Stable desktop tabs / mobile accordion
+- [x] Independent curl and interruptible short transitions
+- [x] Actual desktop/mobile screenshots and visual comparison
+
+final result: passed

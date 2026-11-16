@@ -19,9 +19,10 @@
     let story = null, storyPin = null, storyNode = null, chapters = [], steps = [], counters = [];
     let storyScene = null, sceneAttempted = false, sceneChapter = -1, scenePaused = null, sceneScroll = -1;
     let currentChapter = -1, currentStoryProgress = 0, chapterMode = null;
-    let wheelStep=-1, wheelLastAt=0, wheelPosition=0;
+    let wheelStep=-1, wheelLastAt=0, wheelPosition=0, wheelDirection=0;
     const wheelStops=[0,.18,.51,.81,1];
     function wheelProgress(position){const phase=Math.min(3,Math.floor(position/5));return wheelStops[phase]+(wheelStops[phase+1]-wheelStops[phase])*((position-phase*5)/5);}
+    function positionAtProgress(progress){let phase=0;while(phase<3&&progress>wheelStops[phase+1])phase++;return phase*5+5*clamp((progress-wheelStops[phase])/(wheelStops[phase+1]-wheelStops[phase]));}
     let sectors = [], parallax = [], keyboardInput = false;
     const registered = new WeakSet();
     const pendingReveals = new Set();
@@ -126,6 +127,7 @@
     }
     function applySceneChapter(index) {
       if (!storyScene || sceneChapter === index) return;
+      if(storyScene.setFrame)return;
       sceneChapter = index;
       storyScene.setView?.(['all', 'building', 'systems', 'grounds'][index]);
       storyScene.setExploded?.(index === 2);
@@ -139,9 +141,14 @@
         // This may be a canvas or a visual adapter element; the public API is identical.
         storyScene = window.createEllisScene(storyNode);
         sceneChapter = -1; scenePaused = null; sceneScroll = -1;
-        setScenePaused(disabled || !isSceneVisible());
-        applySceneChapter(Math.max(0, currentChapter));
-        storyScene?.setScroll?.(currentStoryProgress);
+        if(storyScene.setFrame){
+          scenePaused=disabled||!isSceneVisible();sceneChapter=Math.max(0,currentChapter);
+          storyScene.setFrame({view:['all','building','systems','grounds'][sceneChapter],exploded:sceneChapter===2,paused:scenePaused,progress:currentStoryProgress});
+        }else{
+          setScenePaused(disabled || !isSceneVisible());
+          applySceneChapter(Math.max(0, currentChapter));
+          storyScene?.setScroll?.(currentStoryProgress);
+        }
         sceneScroll = currentStoryProgress;
       } catch {
         storyScene = null;
@@ -249,6 +256,7 @@
         return { record, value: disabled ? 0 : travel * record.amplitude };
       });
       const sceneVisible = isSceneVisible();
+      const openingTravel=story&& !disabled?Math.max(0,y-story.offsetTop+headerHeight):0;
 
       setStyle(root, '--page-progress', pageProgress.toFixed(5));
       if (storyMetrics) {
@@ -256,7 +264,6 @@
         currentStoryProgress = progress;
         const color = storyColor(progress);
         setStyle(story, '--story-progress', progress.toFixed(5));
-        const openingTravel=disabled?0:Math.max(0,y-story.offsetTop+headerHeight);
         setStyle(story, '--opening-y', `${-openingTravel.toFixed(2)}px`);
         setStyle(story, '--story-bg', color.bg);
         setStyle(story, '--story-fg', color.fg);
@@ -282,8 +289,16 @@
         setStyle(record.element, '--parallax-y', `${value.toFixed(2)}px`);
       });
       ensureStoryScene();
-      setScenePaused(disabled || !sceneVisible);
-      if (storyScene && Math.abs(sceneScroll - currentStoryProgress) > .0001) {
+      if(storyScene?.setFrame){
+        const index=Math.max(0,currentChapter);
+        const nextPaused=disabled||!sceneVisible;
+        if(sceneChapter!==index||scenePaused!==nextPaused||Math.abs(sceneScroll-currentStoryProgress)>.0001){
+          sceneChapter=index;scenePaused=nextPaused;
+          storyScene.setFrame({view:['all','building','systems','grounds'][index],exploded:index===2,paused:scenePaused,progress:currentStoryProgress});
+          sceneScroll=currentStoryProgress;
+        }
+      }else setScenePaused(disabled || !sceneVisible);
+      if (storyScene && !storyScene.setFrame && Math.abs(sceneScroll - currentStoryProgress) > .0001) {
         sceneScroll = currentStoryProgress;
         storyScene.setScroll?.(currentStoryProgress);
       }
@@ -315,12 +330,13 @@
       if(window.scrollY<start-2||window.scrollY>start+metrics.range+2)return;
       const direction=Math.sign(event.deltaY),now=performance.now();
       const delta=event.deltaY*(event.deltaMode===1?16:event.deltaMode===2?viewportHeight:1);
-      if(now-wheelLastAt>600&&Math.abs(metrics.progress-wheelProgress(wheelPosition))>.14)wheelPosition=Math.max(0,currentChapter)*5;
+      if((wheelDirection&&direction!==wheelDirection)||(now-wheelLastAt>600&&Math.abs(metrics.progress-wheelProgress(wheelPosition))>.14))wheelPosition=positionAtProgress(metrics.progress);
       if((wheelPosition===0&&direction<0)||(wheelPosition===20&&direction>0))return;
       event.preventDefault();
       // Trackpad momentum belongs to one gesture; discrete mouse notches can queue.
-      if(Math.abs(delta)<60&&now-wheelLastAt<180){wheelLastAt=now;return;}
+      if(direction===wheelDirection&&Math.abs(delta)<60&&now-wheelLastAt<180){wheelLastAt=now;return;}
       wheelLastAt=now;
+      wheelDirection=direction;
       wheelPosition=clamp(wheelPosition+direction,0,20);
       wheelStep=Math.min(3,Math.floor(wheelPosition/5));
       // Five deliberate inputs per scene; intermediate inputs move the camera.
@@ -330,6 +346,21 @@
     function onClick(event) {
       const target = event.target instanceof Element ? event.target : event.target?.parentElement;
       if (!target) return;
+      // Explicit navigation is a direct route to content, never another story
+      // gesture. Keep the locked showcase and its deliberate wheel pacing intact.
+      const anchor=target.closest('a[href]');
+      if(anchor&&!event.defaultPrevented&&!event.ctrlKey&&!event.metaKey&&!event.shiftKey&&!event.altKey&&!(event.button>0)&&(!anchor.target||anchor.target==='_self')){
+        let url;try{url=new URL(anchor.href,location.href)}catch{}
+        if(url&&url.origin===location.origin&&url.pathname===location.pathname&&['#services','#home','#main'].includes(url.hash)){
+          const destination=document.getElementById(url.hash.slice(1));
+          if(destination){
+            const top=Math.max(0,destination.getBoundingClientRect().top+window.scrollY-headerHeight);
+            event.preventDefault();wheelDirection=0;wheelLastAt=0;
+            if(location.href!==url.href)history.pushState(null,'',url.href);
+            window.scrollTo({top,behavior:'instant'});schedule();return;
+          }
+        }
+      }
       if (target.closest('#motion-switch')) {
         if (!systemReduced) { userPaused = !userPaused; applyMode(); }
       } else if (target.closest('#pause-toggle') && !syncingHero) {
