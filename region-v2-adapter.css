@@ -1,0 +1,30 @@
+body.region-v2-host{margin:0;background:#f7f3ed;overflow-x:clip}
+.region-v2-content{display:block;padding-top:78px;background:var(--ivory);color:var(--ink);font-family:var(--font);min-width:0}
+.region-v2-content .hero{margin-top:0}
+.region-v2-content :is(.hero h1,.section-heading h2){white-space:normal}
+.region-v2-content .footer-bridge{margin-bottom:0}
+body.region-v2-host .region-footer-shell>.site-footer.footer-brand-panel{padding-top:28px;padding-bottom:18px}
+body.region-v2-host .footer-brand-panel .footer-columns{padding-bottom:20px}
+body.region-v2-host .footer-brand-panel .footer-brand{min-height:64px;padding-block:4px}
+body.region-v2-host .footer-brand-panel .footer-brand .brand-logo{width:56px;height:56px}
+body.region-v2-host .footer-brand-panel .footer-brand .brand-name{font-size:40px}
+body.region-v2-host .footer-brand-panel .footer-company h2{font-size:20px}
+body.region-v2-host .footer-brand-panel .footer-company p,body.region-v2-host .footer-brand-panel .footer-address{font-size:14px}
+body.region-v2-host .footer-brand-panel nav h3{font-size:22px}
+body.region-v2-host .footer-brand-panel nav a{font-size:16px;min-height:26px;line-height:1.45}
+body.region-v2-host .footer-brand-panel .footer-social{min-height:66px;padding-block:8px}
+body.region-v2-host .footer-brand-panel .social-copy strong{font-size:20px}
+body.region-v2-host .footer-brand-panel .social-copy>span{font-size:13px}
+@media(max-width:950px){.region-v2-content{padding-top:72px}}
+
+/* Integration allowance for the longer English headline inside the retained shell. */
+html[lang=en] .region-v2-content .hero--hub .hero__grid{height:auto;min-height:310px}
+html[lang=en] .region-v2-content .hero--hub h1{font-size:clamp(26px,2.65vw,40px);line-height:1.15}
+html[lang=en] .region-v2-content .hero--hub .hero__copy{padding-bottom:14px}
+@media(max-width:680px){
+ .region-v2-content .hero--hub{padding-top:24px}
+ html[lang=en] .region-v2-content .hero--hub .hero__grid{min-height:0}
+ html[lang=en] .region-v2-content .hero--hub h1{font-size:27px}
+}
+
+.region-v2-content .hero__actions .button{flex-shrink:0;white-space:nowrap}
