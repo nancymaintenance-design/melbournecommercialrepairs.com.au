@@ -1,169 +1,119 @@
-/* Contact page only: create a local enquiry draft, without sending data. */
+/* Contact enquiries: send to the same-origin server API; credentials stay on the server. */
 (() => {
   'use strict';
   const form = document.getElementById('contact-enquiry-form');
   if (!form || form.dataset.contactMounted) return;
   form.dataset.contactMounted = 'true';
-  const result = document.getElementById('contact-draft-result');
-  const draft = document.getElementById('contact-draft-text');
-  const copy = document.getElementById('contact-copy-draft');
-  const status = document.getElementById('contact-copy-status');
-  const formStatus = document.getElementById('contact-form-status');
-  const readyLink = document.getElementById('contact-draft-ready-link');
-  if (!result || !draft) return;
-
+  document.getElementById('contact-draft-result')?.remove();
+  document.getElementById('contact-draft-ready-link')?.remove();
+  let formStatus = document.getElementById('contact-form-status');
+  if (!formStatus) { formStatus = document.createElement('p'); formStatus.id = 'contact-form-status'; form.append(formStatus); }
+  formStatus.setAttribute('role', 'status'); formStatus.setAttribute('aria-live', 'polite');
+  const statusContainer = formStatus.closest('.contact-preview-note') || formStatus;
+  Object.assign(statusContainer.style, { position: 'static', margin: '12px 14px', color: 'inherit' });
   const language = () => document.documentElement.lang.toLowerCase().startsWith('en') ? 'en' : 'zh';
   const tr = (zh, en) => language() === 'en' ? en : zh;
-  const service = form.elements.namedItem('service');
-  const region = form.elements.namedItem('region');
-  const sector = form.elements.namedItem('sector');
   const photos = form.elements.namedItem('photos');
   const photoList = document.getElementById('contact-photo-list');
   let selectedPhotos = photos instanceof HTMLInputElement ? [...photos.files] : [];
-  // The renderer owns the complete service catalogue and its translations.
-  const serviceOptions = service instanceof HTMLSelectElement ? [...service.options] : [];
-  const services = Object.fromEntries(serviceOptions
-    .filter(node => /^(?:[0-9]|1[01])$/.test(node.value))
-    .map(node => [node.value, { zh: node.dataset.zh, en: node.dataset.en }]));
-  if (service instanceof HTMLSelectElement) service.required = true;
-  if (region instanceof HTMLSelectElement) region.required = true;
-  for (const name of ['name', 'email', 'details']) {
-    const control = form.elements.namedItem(name);
-    if (control) control.required = true;
-  }
-  const email = form.elements.namedItem('email');
-  if (email instanceof HTMLInputElement) email.type = 'email';
-
-  let draftReady = false;
+  let sending = false;
+  let outcome = '';
+  let requestId = crypto.randomUUID();
   let lastLanguage = '';
-  const setStatus = text => { if (status) status.textContent = text; };
-  const syncFormStatus = () => {
-    if(formStatus) formStatus.textContent = draftReady
-      ? tr('草稿已生成，尚未发送。 ', 'Draft ready. It has not been sent. ')
-      : '';
-    if(formStatus?.parentElement) formStatus.parentElement.hidden = !draftReady;
-    if(readyLink) readyLink.hidden = !draftReady;
+  let preparedPhotos = null;
+  const messages = {
+    sending: ['正在发送，请稍候…', 'Sending your enquiry…'],
+    sent: ['项目需求已提交。Ellis 将通过您提供的联系方式回复。', 'Your enquiry has been submitted. Ellis will reply using your contact details.'],
+    failed: ['暂未确认发送成功，内容和照片已保留。请重试，或致电 ellis 0482 602 558。', 'Sending could not be confirmed. Your details and photos are kept here. Please retry or call ellis on 0482 602 558.'],
+    limit: ['最多添加 5 张照片。请移除多余照片后重试。', 'Please attach up to 5 photos. Remove extra photos and try again.'],
+    photo: ['有照片无法读取或压缩，请改用 JPG、PNG 或 WebP，或移除该照片后重试。', 'A photo could not be read or resized. Use JPG, PNG or WebP, or remove that photo and retry.'],
+    rate: ['提交较频繁，请 10 分钟后重试，或致电 ellis 0482 602 558。', 'Too many attempts. Please try again in 10 minutes or call ellis on 0482 602 558.'],
+    fields: ['请检查必填项目与邮箱后再提交。', 'Please check the required fields and email address.']
   };
+  const showStatus = value => {
+    outcome = value; statusContainer.hidden = !value;
+    formStatus.textContent = value ? tr(...messages[value]) : '';
+  };
+  const changed = () => { if (sending) return; requestId = crypto.randomUUID(); showStatus(''); };
   const renderPhotoList = () => {
     if (!photoList) return;
     const fragment = document.createDocumentFragment();
     selectedPhotos.forEach((file, index) => {
       const item = document.createElement('li');
-      const filename = document.createElement('span');
-      filename.textContent = file.name;
-      const remove = document.createElement('button');
-      remove.type = 'button';
-      remove.textContent = '×';
+      const filename = document.createElement('span'); filename.textContent = file.name;
+      const remove = document.createElement('button'); remove.type = 'button'; remove.textContent = '×'; remove.disabled = sending;
       remove.setAttribute('aria-label', tr('移除照片：', 'Remove photo: ') + file.name);
       remove.addEventListener('click', () => {
-        selectedPhotos.splice(index, 1);
+        selectedPhotos.splice(index, 1); preparedPhotos = null;
         if (photos instanceof HTMLInputElement) {
-          if (typeof DataTransfer === 'function') {
-            const transfer = new DataTransfer();
-            selectedPhotos.forEach(selected => transfer.items.add(selected));
-            photos.files = transfer.files;
-          } else photos.value = '';
+          if (typeof DataTransfer === 'function') { const transfer = new DataTransfer(); selectedPhotos.forEach(file => transfer.items.add(file)); photos.files = transfer.files; }
+          else photos.value = '';
         }
-        renderPhotoList();
-        hideDraft();
+        renderPhotoList(); changed();
       });
-      item.append(filename, remove);
-      fragment.append(item);
+      item.append(filename, remove); fragment.append(item);
     });
-    photoList.replaceChildren(fragment);
-    photoList.hidden = selectedPhotos.length === 0;
+    photoList.replaceChildren(fragment); photoList.hidden = selectedPhotos.length === 0;
   };
-  const createDraft = () => {
-    const values = Object.fromEntries(new FormData(form));
-    const selectedOption = service instanceof HTMLSelectElement ? service.selectedOptions[0] : null;
-    const chosen = services[values.service]?.[language()]
-      || selectedOption?.dataset[language()] || selectedOption?.textContent || '';
-    const selectedSector = sector instanceof HTMLSelectElement ? sector.selectedOptions[0] : null;
-    const chosenSector = values.sector
-      ? selectedSector?.dataset[language()] || selectedSector?.textContent || ''
-      : tr('待确认', 'To be confirmed');
-    draft.value = [
-      tr('Ellis Services Group — 项目咨询草稿', 'Ellis Services Group — Enquiry Draft'),
-      '',
-      `${tr('姓名', 'Name')}: ${values.name || ''}`,
-      `${tr('联系电话', 'Phone number')}: ${values.phone || tr('待补充', 'To be confirmed')}`,
-      `${tr('邮箱', 'Email')}: ${values.email || ''}`,
-      `${tr('地区', 'Region')}: Melbourne`,
-      `${tr('服务', 'Service')}: ${chosen}`,
-      `${tr('商业物业类型', 'Property type')}: ${chosenSector}`,
-      `${tr('物业地址 / 所在区域', 'Property address / location')}: ${values.address || tr('待补充', 'To be confirmed')}`,
-      '',
-      `${tr('项目需求', 'Project details')}:`,
-      values.details || '',
-      '',
-      `${tr('现场照片（仅文件名，未上传）', 'Site photos (filenames only; not uploaded)')}: ${selectedPhotos.length ? selectedPhotos.map(file => file.name).join(', ') : tr('未选择照片', 'No photos selected')}`,
-      '',
-      tr('此为 UI 预览草稿，尚未发送。', 'UI preview draft. This enquiry has not been sent.')
-    ].join('\n');
-  };
-  const syncLanguage = () => {
-    const next = language();
-    if (next === lastLanguage) return;
-    lastLanguage = next;
-    form.querySelectorAll('[data-placeholder-zh][data-placeholder-en]').forEach(control => {
-      control.placeholder = control.getAttribute(`data-placeholder-${next}`);
-    });
-    for (const select of [service, region, sector]) {
-      if (select instanceof HTMLSelectElement) {
-        [...select.options].forEach(node => {
-          if (node.dataset[next]) node.textContent = node.dataset[next];
-        });
-      }
-    }
-    draft.setAttribute('aria-label', tr('咨询草稿', 'Enquiry draft'));
-    if (photos) photos.setAttribute('aria-label', tr('添加现场照片', 'Add site photos'));
-    renderPhotoList();
-    setStatus('');
-    if (draftReady && !result.hidden) createDraft();
-    syncFormStatus();
-  };
-  const hideDraft = () => {
-    result.hidden = true;
-    draftReady = false;
-    setStatus('');
-    syncFormStatus();
-  };
-
-  form.addEventListener('submit', event => {
-    event.preventDefault();
-    if (!form.reportValidity()) return;
-    createDraft();
-    draftReady = true;
-    result.hidden = false;
-    setStatus('');
-    syncFormStatus();
-  });
-  form.addEventListener('input', hideDraft);
-  form.addEventListener('change', hideDraft);
-  photos?.addEventListener('change', () => {
-    selectedPhotos = [...photos.files];
-    renderPhotoList();
-    hideDraft();
-  });
-  document.getElementById('contact-start-enquiry')?.addEventListener('click', () => {
-    form.elements.namedItem('name')?.focus({ preventScroll: true });
-  });
-  copy?.addEventListener('click', async event => {
-    event.preventDefault();
-    if (!draftReady || result.hidden) return;
+  // Re-encode images without metadata; cap each at 580 kB, with at most five attachments.
+  async function preparePhoto(file) {
+    if (!['image/jpeg', 'image/png', 'image/webp'].includes(file.type) || file.size > 25000000 || !file.size) throw new Error('photo');
+    const url = URL.createObjectURL(file); const image = new Image();
     try {
-      if (!navigator.clipboard?.writeText) throw new Error('Clipboard unavailable');
-      await navigator.clipboard.writeText(draft.value);
-      if (draftReady && !result.hidden) setStatus(tr('已复制。草稿尚未发送。', 'Copied. The draft has not been sent.'));
-    } catch {
-      if (!draftReady || result.hidden) return;
-      draft.focus({ preventScroll: true });
-      draft.select();
-      setStatus(tr('草稿已选中，请使用系统复制功能。', 'The draft is selected. Use your device’s copy command.'));
+      image.src = url; await image.decode();
+      let scale = Math.min(1, 1800 / Math.max(image.naturalWidth, image.naturalHeight));
+      const canvas = document.createElement('canvas'); const context = canvas.getContext('2d');
+      if (!context || !image.naturalWidth || !image.naturalHeight) throw new Error('photo');
+      for (let attempt = 0; attempt < 6; attempt++) {
+        canvas.width = Math.max(1, Math.round(image.naturalWidth * scale)); canvas.height = Math.max(1, Math.round(image.naturalHeight * scale));
+        context.fillStyle = '#fff'; context.fillRect(0, 0, canvas.width, canvas.height); context.drawImage(image, 0, 0, canvas.width, canvas.height);
+        const content = canvas.toDataURL('image/jpeg', Math.max(0.5, 0.85 - attempt * 0.07)).split(',')[1];
+        if (content && content.length * 0.75 <= 580000) return { filename: `${file.name.replace(/\.[^.]*$/, '').slice(0, 100)}.jpg`, content };
+        scale *= 0.75;
+      }
+      throw new Error('photo');
+    } finally { URL.revokeObjectURL(url); }
+  }
+  if (!form.elements.namedItem('website')) {
+    const trap = document.createElement('input'); trap.name = 'website'; trap.type = 'text'; trap.tabIndex = -1; trap.autocomplete = 'off'; trap.setAttribute('aria-hidden', 'true'); trap.style.display = 'none'; form.append(trap);
+  }
+  const syncLanguage = () => {
+    const next = language(); if (next === lastLanguage) return; lastLanguage = next;
+    form.querySelectorAll('[data-placeholder-zh][data-placeholder-en]').forEach(control => { control.placeholder = control.getAttribute(`data-placeholder-${next}`); });
+    form.querySelectorAll('select option').forEach(option => { if (option.dataset[next]) option.textContent = option.dataset[next]; });
+    if (photos) photos.setAttribute('aria-label', tr('添加现场照片', 'Add site photos'));
+    renderPhotoList(); showStatus(outcome);
+  };
+  form.addEventListener('submit', async event => {
+    event.preventDefault(); if (sending || !form.reportValidity()) return;
+    if (selectedPhotos.length > 5) { showStatus('limit'); return; }
+    const values = Object.fromEntries(new FormData(form)); delete values.photos;
+    sending = true; showStatus('sending'); form.setAttribute('aria-busy', 'true');
+    const controls = [...form.elements].filter(control => !control.disabled);
+    controls.forEach(control => { control.disabled = true; }); renderPhotoList();
+    try {
+      if (!preparedPhotos) {
+        const converted = [];
+        for (const file of selectedPhotos) converted.push(await preparePhoto(file));
+        preparedPhotos = converted;
+      }
+      const response = await fetch('/api/enquiry', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ ...values, requestId, photos: preparedPhotos }), signal: AbortSignal.timeout(25000) });
+      const result = await response.json().catch(() => ({}));
+      if (!response.ok || result.ok !== true) {
+        showStatus(response.status === 429 ? 'rate' : response.status === 400 ? 'fields' : 'failed'); return;
+      }
+      showStatus('sent');
+    } catch (error) {
+      if (!preparedPhotos) { preparedPhotos = null; showStatus('photo'); }
+      else showStatus('failed');
+    } finally {
+      sending = false; controls.forEach(control => { control.disabled = false; }); form.removeAttribute('aria-busy'); renderPhotoList();
     }
   });
+  form.addEventListener('input', changed); form.addEventListener('change', changed);
+  photos?.addEventListener('change', () => { selectedPhotos = [...photos.files]; preparedPhotos = null; renderPhotoList(); changed(); });
+  document.getElementById('contact-start-enquiry')?.addEventListener('click', () => form.elements.namedItem('name')?.focus({ preventScroll: true }));
   document.getElementById('language-switch')?.addEventListener('click', () => queueMicrotask(syncLanguage));
   new MutationObserver(syncLanguage).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
-  hideDraft();
-  syncLanguage();
+  showStatus(''); syncLanguage();
 })();
