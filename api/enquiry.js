@@ -3,7 +3,7 @@ const { createHash } = require('node:crypto');
 const MAX_BODY = 4200000;
 const MAX_PHOTOS = 5;
 const MAX_PHOTO_BYTES = 3000000;
-const RECIPIENT = 'elliservices.group@gmail.com';
+const RECIPIENT = 'melbournecommercialrepairs.au@outlook.com';
 const PRODUCTION_ORIGIN = 'https://melbournecommercialrepairscomau.vercel.app';
 // Keep this catalogue aligned with the numeric contact select values in app.js.
 const SERVICES = ['Building & General Maintenance', 'Roofing, Waterproofing & Remedial Works', 'Electrical & Lighting', 'Plumbing, Drainage & Gas', 'HVAC & Building Systems', 'Fire, Security & Access', 'Landscaping, Grounds & Irrigation', 'Signage & Wayfinding', 'Façade & High-Access Cleaning', 'Cleaning, Waste & Hygiene', 'Car Parks & External Works', 'Fit-outs, Refurbishments & Make Good'];

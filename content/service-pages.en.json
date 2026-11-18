@@ -1,0 +1,1510 @@
+[
+  {
+    "title": "Commercial Building Maintenance and Everyday Repairs",
+    "heroCopy": "We repair doors and hardware, walls and ceilings, fixed joinery and everyday facilities, taking each task from site inspection through to a clear handover.",
+    "problems": [
+      {
+        "id": "building-maintenance-01",
+        "number": "01",
+        "label": "Doors not closing smoothly, loose hardware",
+        "solution": {
+          "heading": "Door and Hardware Repairs",
+          "inspection": "We inspect door leaves, frames, hinges and latches.",
+          "method": "We adjust positions, reinforce connections or replace damaged parts.",
+          "check": "We test opening and closing, lock engagement and record completed items."
+        }
+      },
+      {
+        "id": "building-maintenance-02",
+        "number": "02",
+        "label": "Wall damage, cracking joints",
+        "solution": {
+          "heading": "Wall Damage and Joint Repairs",
+          "inspection": "We assess the extent of damage, panel and substrate condition, noting moisture or abnormal connections.",
+          "method": "We treat damaged substrate, patch or replace affected panels, then restore joints and finishes.",
+          "check": "We check surface levelness, sealing and surrounding protection, recording completed areas."
+        }
+      },
+      {
+        "id": "building-maintenance-03",
+        "number": "03",
+        "label": "Ceiling stains, panel damage",
+        "solution": {
+          "heading": "Ceiling Stain and Panel Repairs",
+          "inspection": "We inspect panels, supports and adjacent equipment, identifying water marks and damaged areas.",
+          "method": "We repair affected areas in order of priority, then replace or restore damaged ceiling panels.",
+          "check": "We verify panel installation, joints and surrounding finishes, and organise before‑and‑after photos."
+        }
+      },
+      {
+        "id": "building-maintenance-04",
+        "number": "04",
+        "label": "Cabinet loosening, trim detachment",
+        "solution": {
+          "heading": "Fixed Cabinet and Trim Repairs",
+          "inspection": "We inspect cabinets, hardware, connection points and adjacent wall and floor conditions.",
+          "method": "We adjust or replace damaged parts, reinforce connections and repair local trim.",
+          "check": "We examine cabinet doors, drawers and fixed components for use, confirming the scope of work."
+        }
+      }
+    ],
+    "specialistModule": {
+      "title": "Patch, Replace or Zone Update?",
+      "intro": "",
+      "layout": "Blue strip with three overlapping rounded material cards of varying heights – cream wall panels, fluorescent yellow hinges, orange office partitions, continuing the previous design.",
+      "items": [
+        {
+          "title": "Partial Patching",
+          "body": "We address local damage, joints and finish issues."
+        },
+        {
+          "title": "Component Replacement",
+          "body": "We replace damaged hardware, panels or functional parts."
+        },
+        {
+          "title": "Zone Update",
+          "body": "We organise multiple repairs and local updates by usage area."
+        }
+      ]
+    },
+    "workflow": [
+      {
+        "number": "1",
+        "title": "On‑site Inspection",
+        "body": "We assess damage, dimensions and access conditions."
+      },
+      {
+        "number": "2",
+        "title": "Define Scope",
+        "body": "We confirm methods, materials and pricing."
+      },
+      {
+        "number": "3",
+        "title": "Zone Construction",
+        "body": "We arrange protection, trades and construction sequence."
+      },
+      {
+        "number": "4",
+        "title": "Completion Handover",
+        "body": "We check operational status and record follow‑up items."
+      }
+    ],
+    "gallery": {
+      "title": "Wall and Trim Repairs",
+      "theme": "",
+      "layout": "Large before‑and‑after comparison slider, followed by two process photos, with a project log on the side.",
+      "shots": [
+        "Before: wall and baseboard junction",
+        "During: substrate treatment and local patching",
+        "After: same angle finish and trim",
+        "Inspection: details near door and cabinet"
+      ],
+      "label": "Case layout illustration – replace with real projects when live",
+      "status": "illustrative-until-real-project-assets-added"
+    },
+    "handover": [
+      "Completed project checklist",
+      "Process and finished photos",
+      "Operational check and follow‑up items"
+    ],
+    "faq": [
+      {
+        "question": "Can multiple repairs be handled at once?",
+        "answer": "Yes. We first compile issues, on‑site photos and access conditions, then assign appropriate trades based on the work scope."
+      },
+      {
+        "question": "When to patch versus replace?",
+        "answer": "We assess damage extent, connection points and material condition, then explain the work included in partial patching and component replacement."
+      },
+      {
+        "question": "If the ceiling shows water marks, should we fix leaks first?",
+        "answer": "We first inspect the water‑affected areas and then outline the sequence of leak repair and ceiling restoration."
+      },
+      {
+        "question": "Can construction be scheduled by business hours?",
+        "answer": "We design zone schedules based on property usage times, access routes and construction scope, and explain which areas need entry at each stage."
+      }
+    ]
+  },
+  {
+    "title": "Roofing, Waterproofing & Building Repairs",
+    "heroCopy": "We handle commercial roof leaks, gutters, downpipes, flashing and waterproofing damage, using water stains and roof condition to define the repair scope.",
+    "problems": [
+      {
+        "id": "roofing-waterproofing-01",
+        "number": "01",
+        "label": "Indoor water stains, recurring leaks",
+        "solution": {
+          "heading": "Roof Leak & Flashing Repair",
+          "inspection": "We use indoor water stains to inspect the corresponding roof, seams, roof penetrations and drainage paths.",
+          "method": "We repair or replace damaged roof panels, flashing and waterproofing seals on site.",
+          "check": "We check connections and drainage, record treated areas and any follow‑up observations."
+        }
+      },
+      {
+        "id": "roofing-waterproofing-02",
+        "number": "02",
+        "label": "Box‑shaped gutter standing water, overflow",
+        "solution": {
+          "heading": "Box‑shaped Gutter & Downpipe Maintenance",
+          "inspection": "We inspect standing water locations, outlets, downpipes and connections to clarify the drainage path.",
+          "method": "We clear blockages or damaged sections, repair connections and specify any gutter components that need replacement.",
+          "check": "We verify drainage and connections at treated areas and provide hand‑over photos."
+        }
+      },
+      {
+        "id": "roofing-waterproofing-03",
+        "number": "03",
+        "label": "Roof seams and flashing damage",
+        "solution": {
+          "heading": "Roof Seam & Flashing Treatment",
+          "inspection": "We inspect lap joints, fix points, wall edges and roof penetrations, noting loose or damaged areas.",
+          "method": "We repair or replace relevant roof panels, flashing and connection parts as required.",
+          "check": "We re‑inspect connections and seals, record completed locations and any follow‑up observations."
+        }
+      },
+      {
+        "id": "roofing-waterproofing-04",
+        "number": "04",
+        "label": "Waterproofing layer blistering, cracking",
+        "solution": {
+          "heading": "Waterproofing Layer & Sub‑strate Repair",
+          "inspection": "We inspect blistering, cracking, corners and substrate condition, distinguishing surface damage from underlying issues.",
+          "method": "We identify affected areas, treat the substrate and complete the corresponding waterproofing layer and seal repairs.",
+          "check": "We verify the treatment scope and detail completion, and compile material and process records."
+        }
+      }
+    ],
+    "specialistModule": {
+      "title": "From Water Stains to Roof Connections",
+      "intro": "",
+      "layout": "A large, slightly angled view of the roof profile occupies two‑thirds of the left side on a cream background; the right side shows a vertical, four‑level, rounded‑corner checklist. Clicking a tag highlights the corresponding construction layer and path; the model does not rotate the entire page.",
+      "items": [
+        {
+          "title": "Roof & Fix Points",
+          "body": "We inspect roof panels, lap joints and fix points."
+        },
+        {
+          "title": "Roof Penetrations & Flashing",
+          "body": "We inspect equipment penetrations, wall edges and seals."
+        },
+        {
+          "title": "Gutters & Downpipes",
+          "body": "We inspect drainage paths, standing water locations and connections."
+        },
+        {
+          "title": "Waterproofing Layer & Sub‑strate",
+          "body": "We inspect surface damage, corners and substrate condition."
+        }
+      ]
+    },
+    "workflow": [
+      {
+        "number": "1",
+        "title": "Water Stain & Roof Inspection",
+        "body": "We record problem locations and associated roof areas."
+      },
+      {
+        "number": "2",
+        "title": "Define Repair Approach",
+        "body": "We explain the treatment scope, materials and connection methods."
+      },
+      {
+        "number": "3",
+        "title": "Schedule Access & Construction",
+        "body": "We coordinate roof access, site protection and weather conditions."
+      },
+      {
+        "number": "4",
+        "title": "Check Connections & Drainage",
+        "body": "We inspect treated areas and provide before/after photos."
+      }
+    ],
+    "gallery": {
+      "title": "Gutter & Roof Flashing Repair Records",
+      "theme": "",
+      "layout": "A large, top‑down roof photo paired with three vertical detail shots, using switchable hotspots to display roof seams, gutters and downpipes; no office wall slider is used.",
+      "shots": [
+        "Problem location: roof and gutter connection",
+        "Detail: flashing and lap joint area",
+        "Process: component treatment",
+        "Completion: same location connection and drainage path"
+      ],
+      "label": "Case Layout Illustration | Replace with real projects when live",
+      "status": "illustrative-until-real-project-assets-added"
+    },
+    "handover": [
+      "List of roof treatment locations",
+      "Before and after photos",
+      "Connection and drainage inspection records"
+    ],
+    "faq": [
+      {
+        "question": "Do I need to replace the entire roof for leak repairs?",
+        "answer": "We first assess the damage extent and relevant seams, flashing and drainage areas, then explain whether a local repair or component replacement is required."
+      },
+      {
+        "question": "Can box‑shaped gutters and downpipes be treated together?",
+        "answer": "Yes. We treat the box‑shaped gutter, outlet and downpipe as a connected drainage path and identify the areas that need work."
+      },
+      {
+        "question": "Can I repair the damaged ceiling inside at the same time?",
+        "answer": "We can include roof work and interior ceiling restoration in the same scope, scheduling trades accordingly based on site conditions."
+      },
+      {
+        "question": "What roof information is needed for a quote?",
+        "answer": "We need the property address, leak location, roof type and access conditions. Existing water stains and roof photos help us prepare for the site visit."
+      }
+    ]
+  },
+  {
+    "title": "Commercial Electrical & Lighting",
+    "heroCopy": "We handle commercial lighting, electrical faults, switches, sockets and space power updates, coordinating equipment, circuits and usage areas to plan construction clearly.",
+    "problems": [
+      {
+        "id": "electrical-lighting-01",
+        "number": "01",
+        "label": "Lights not working or flickering",
+        "solution": {
+          "heading": "Lighting Faults & Fixture Updates",
+          "inspection": "We inspect fixtures, controls and related circuits, distinguishing single fixture issues from area-wide problems.",
+          "method": "We replace faulty components or update fixtures based on installation location and usage needs.",
+          "check": "We test lighting and control functions, recording completed work."
+        }
+      },
+      {
+        "id": "electrical-lighting-02",
+        "number": "02",
+        "label": "Circuit tripping or power irregularities",
+        "solution": {
+          "heading": "Circuit & Power Issue Resolution",
+          "inspection": "We examine relevant equipment, circuits and power connections to determine the scope of the problem.",
+          "method": "We address faulty components or connections per the inspection, and identify items that need updating.",
+          "check": "We test the affected circuits and equipment, documenting completed repairs."
+        }
+      },
+      {
+        "id": "electrical-lighting-03",
+        "number": "03",
+        "label": "Switches or sockets damaged or insufficient",
+        "solution": {
+          "heading": "Switch & Socket Repairs & Placement Updates",
+          "inspection": "We verify equipment use, existing points, installation locations and power conditions.",
+          "method": "We repair or replace damaged points and, within the confirmed scope, add new or relocate existing ones.",
+          "check": "We test the relevant points and equipment, cross‑checking installation and construction records."
+        }
+      },
+      {
+        "id": "electrical-lighting-04",
+        "number": "04",
+        "label": "Insufficient lighting in corridors or work areas",
+        "solution": {
+          "heading": "Corridor & Work Area Lighting Updates",
+          "inspection": "We review work positions, mounting heights, shelving obstructions and existing fixtures and control zones.",
+          "method": "We update fixtures or adjust layouts within the confirmed scope, aligning lighting with actual use areas.",
+          "check": "We assess lighting and control performance, recording fixture positions and completed items."
+        }
+      }
+    ],
+    "specialistModule": {
+      "title": "Different Areas, Different Lighting Arrangements",
+      "intro": "",
+      "layout": "A wide commercial space model with a blue background spans the page, with three cream‑white scene tags below. Switching between office, corridor and warehouse tags lights up only the corresponding area with a fluorescent yellow strip; a narrow orange sidebar on the right shows the key points for that area. No fabricated lux, energy‑saving ratios or meter readings.",
+      "items": [
+        {
+          "title": "Office & Reception",
+          "body": "We coordinate lighting updates with workstations, reception areas and existing fixture placements."
+        },
+        {
+          "title": "Corridors & Public Areas",
+          "body": "We inspect passage routes, control methods and lighting zones."
+        },
+        {
+          "title": "Warehouses & Work Zones",
+          "body": "We determine fixture placement based on mounting height, shelving and work positions."
+        }
+      ]
+    },
+    "workflow": [
+      {
+        "number": "1",
+        "title": "Understand Equipment & Faults",
+        "body": "We record the problem scope and on‑site usage needs."
+      },
+      {
+        "number": "2",
+        "title": "Inspect & Define the Plan",
+        "body": "We identify relevant circuits, components and construction details."
+      },
+      {
+        "number": "3",
+        "title": "Zone‑Based Construction Planning",
+        "body": "We discuss construction times and affected usage areas."
+      },
+      {
+        "number": "4",
+        "title": "Test & Handover",
+        "body": "We check functionality and deliver relevant construction records."
+      }
+    ],
+    "gallery": {
+      "title": "From Fixture to Usage Area Lighting Updates",
+      "theme": "",
+      "layout": "Side‑by‑side wide‑angle space photos from the same angle: top shows the original site, bottom shows completed fixtures and space; two small inset images show fixture and control details. Clear labels illustrate changes without flashy effects, reflecting actual construction records.",
+      "shots": [
+        "Original site: workstations & corridors",
+        "Arrangement: fixture & control zones",
+        "Completion: same‑angle overall lighting",
+        "Detail: fixture & control components"
+      ],
+      "label": "Illustrative layout – replace with real project assets once available",
+      "status": "illustrative-until-real-project-assets-added"
+    },
+    "handover": [
+      "Repair and replacement item list",
+      "Fixture & area records",
+      "Function checks and construction records"
+    ],
+    "faq": [
+      {
+        "question": "Can I just fix a single fixture or area?",
+        "answer": "Yes. We first define the fault scope, then explain the work required for individual fixtures, related controls or area circuits."
+      },
+      {
+        "question": "Will lighting updates affect business operations?",
+        "answer": "We coordinate circuit, construction area and business hours to schedule work, and inform you in advance of any areas that need to be accessed or temporarily closed."
+      },
+      {
+        "question": "Can I add switches and sockets at the same time?",
+        "answer": "We check device locations, usage needs and existing power conditions together, then specify new points and the related construction scope."
+      },
+      {
+        "question": "What information is needed for a fixture update quote?",
+        "answer": "We gather the venue type, fixture count, mounting height, control method and access conditions, then confirm the specific arrangement on site."
+      }
+    ]
+  },
+  {
+    "title": "Plumbing, Drainage & Gas",
+    "heroCopy": "We handle leaks, drainage blockages, hot water and gas work in commercial premises, checking connections and system status to define repair and replacement scope.",
+    "problems": [
+      {
+        "id": "plumbing-drainage-gas-01",
+        "number": "01",
+        "label": "Sink and floor drain slow to clear",
+        "solution": {
+          "heading": "Commercial Drainage Blockage & Pipe Repairs",
+          "inspection": "We inspect affected fixtures, drain connections and pipe runs, and probe inside pipes as needed.",
+          "method": "Based on the inspection we clear blockages and identify damaged pipe sections or joints that need fixing.",
+          "check": "We check drain and connection status, record completed locations and any follow‑up actions."
+        }
+      },
+      {
+        "id": "plumbing-drainage-gas-02",
+        "number": "02",
+        "label": "Pipe and joint leaks",
+        "solution": {
+          "heading": "Pipe and Joint Leak Repairs",
+          "inspection": "We locate the leak, examine the relevant pipe sections, valves and fixture connections.",
+          "method": "We repair or replace damaged components and define the scope for any finish restoration.",
+          "check": "We inspect connections and usage, summarise repaired locations and next steps."
+        }
+      },
+      {
+        "id": "plumbing-drainage-gas-03",
+        "number": "03",
+        "label": "Insufficient hot water, unstable temperature",
+        "solution": {
+          "heading": "Commercial Hot Water Equipment Maintenance & Upgrade",
+          "inspection": "We verify equipment condition, connections, temperature performance and on‑site water demand.",
+          "method": "We repair relevant parts or outline equipment upgrade and connection work based on the inspection.",
+          "check": "We test equipment operation and hot water performance, recording any repairs or replacements."
+        }
+      },
+      {
+        "id": "plumbing-drainage-gas-04",
+        "number": "04",
+        "label": "Gas equipment connection and upgrade needs",
+        "solution": {
+          "heading": "Gas Equipment Connection & Upgrade",
+          "inspection": "We review the equipment, existing connections and installation conditions to define the scope of work.",
+          "method": "We arrange connection, repair or upgrade work according to confirmed equipment and site requirements.",
+          "check": "We complete functional checks, recording connection and equipment work items."
+        }
+      }
+    ],
+    "specialistModule": {
+      "title": "Water, Drainage, Hot Water & Gas – Identify Systems Before Acting",
+      "intro": "",
+      "layout": "Cream‑coloured horizontal bands for each system, each with a coloured rounded tag, a close‑up rendering of a key component and a line of scope. Selecting drainage expands a blue‑background pipe cross‑section card. Gas remains in its own zone to avoid cross‑routing errors.",
+      "items": [
+        {
+          "title": "Water Supply & Leaks",
+          "body": "We inspect pipes, valves and fixture connections to define leak and replacement scope."
+        },
+        {
+          "title": "Drainage & Blockages",
+          "body": "We assess fixture and pipe drainage status, clear blockages and repair damaged joints."
+        },
+        {
+          "title": "Hot Water Equipment",
+          "body": "We combine equipment condition, water demand and on‑site connections to plan repairs or upgrades."
+        },
+        {
+          "title": "Gas‑Related Work",
+          "body": "We define connection, repair or upgrade scope based on equipment and site conditions."
+        }
+      ]
+    },
+    "workflow": [
+      {
+        "number": "1",
+        "title": "Identify the affected area",
+        "body": "We record the issue, equipment and business operations."
+      },
+      {
+        "number": "2",
+        "title": "Inspect systems and connections",
+        "body": "We pinpoint relevant components and the scope of work required."
+      },
+      {
+        "number": "3",
+        "title": "Schedule repairs and replacements",
+        "body": "We coordinate the sequence of work and facility usage during the project."
+      },
+      {
+        "number": "4",
+        "title": "Functional checks and record keeping",
+        "body": "We test the repaired systems and document completion."
+      }
+    ],
+    "gallery": {
+      "title": "On‑site Records of Drainage Issues and Pipe Work",
+      "theme": "",
+      "layout": "Three continuous film‑style galleries: fixture site, pipe work, final inspection. Beside a vertical orange scope card that details the location, work performed and hand‑over record. Images show only the site and results, not step‑by‑step tutorials.",
+      "shots": [
+        "Site: affected fixture and drain point",
+        "Inspection: pipe and connection location",
+        "Process: relevant pipe section work",
+        "Completion: drain and connection check"
+      ],
+      "label": "Case layout illustration – replace with real projects when available",
+      "status": "illustrative-until-real-project-assets-added"
+    },
+    "handover": [
+      "Pipe and equipment work list",
+      "Inspection and construction photos",
+      "System checks and follow‑up items"
+    ],
+    "faq": [
+      {
+        "question": "If several drains slow down at once, can they be checked together?",
+        "answer": "Yes. We inspect all affected fixtures and their connected drain paths together, then define the scope of work."
+      },
+      {
+        "question": "Do we need to shut off water or pause equipment during repairs?",
+        "answer": "We first identify the systems and areas involved, then discuss facility use during construction and post‑work checks."
+      },
+      {
+        "question": "Can hot water issues be checked alongside equipment and connections?",
+        "answer": "Yes. We assess hot water equipment, connection status and water demand together, then outline the required repairs or upgrades."
+      },
+      {
+        "question": "Can plumbing, drainage and equipment upgrades be scheduled together?",
+        "answer": "We can consolidate related work into a clear scope, scheduling it by system connection and site operation."
+      }
+    ]
+  },
+  {
+    "title": "HVAC and Building Systems",
+    "heroCopy": "We inspect and maintain HVAC equipment, return‑air components, condensate drainage and control systems, scheduling repairs around on‑site faults and operating periods.",
+    "problems": [
+      {
+        "id": "hvac-building-systems-01",
+        "number": "01",
+        "label": "Insufficient cooling/heating, zone temperature differences",
+        "solution": {
+          "heading": "Zone temperature and return‑air issues",
+          "inspection": "We verify equipment operation, zone settings and return‑air status, recording affected locations and times.",
+          "method": "Based on the inspection we clean and maintain relevant components, address control or component faults, and identify items that need replacement.",
+          "check": "After completion we check operating status, return‑air performance and condensate discharge, and record the work performed."
+        }
+      },
+      {
+        "id": "hvac-building-systems-02",
+        "number": "02",
+        "label": "Condensate dripping, poor drainage",
+        "solution": {
+          "heading": "Condensate dripping and drainage maintenance",
+          "inspection": "We inspect condensate pans, discharge paths, connections and surrounding finishes that may be affected.",
+          "method": "We clear blockages or damaged connections, then determine the scope of finish restoration required.",
+          "check": "We check drainage and equipment operation, recording the location of work and any follow‑up actions."
+        }
+      },
+      {
+        "id": "hvac-building-systems-03",
+        "number": "03",
+        "label": "Equipment noise, vibration or shutdown",
+        "solution": {
+          "heading": "Equipment noise, vibration and shutdown repair",
+          "inspection": "We record the times when anomalies occur, inspect equipment operation, fixed parts and control behaviour.",
+          "method": "Based on the inspection we adjust relevant components, repair or replace damaged items.",
+          "check": "We check equipment operation and response, compiling repair and replacement records."
+        }
+      },
+      {
+        "id": "hvac-building-systems-04",
+        "number": "04",
+        "label": "Dust on grilles, return‑air performance changes",
+        "solution": {
+          "heading": "Grille and return‑air component maintenance",
+          "inspection": "We inspect grilles, filter components and return‑air paths for dust and operating status.",
+          "method": "We clean and maintain relevant components, identifying parts that need repair or replacement.",
+          "check": "We check return‑air performance and on‑site cleaning, recording completed items."
+        }
+      }
+    ],
+    "specialistModule": {
+      "title": "Follow the equipment path, see every detail.",
+      "intro": "Equipment, airflow, drainage and control are displayed separately to help property staff understand the scope of maintenance.",
+      "layout": "A horizontal, large cross‑section of equipment runs through the centre, with three capsule tags above; clicking a tag highlights the corresponding area in fluorescent yellow and shows side notes, avoiding four identical cards.",
+      "items": [
+        {
+          "title": "Equipment and airflow",
+          "body": "Check unit status, filter components, fan and return‑air path."
+        },
+        {
+          "title": "Drainage and connections",
+          "body": "Check condensate discharge, joints and surrounding finishes."
+        },
+        {
+          "title": "Control and usage",
+          "body": "Verify zones, times and control behaviour to match the actual usage."
+        }
+      ]
+    },
+    "workflow": [
+      {
+        "number": "1",
+        "title": "Record operating issues",
+        "body": "Summarise equipment location, fault symptoms and occurrence times."
+      },
+      {
+        "number": "2",
+        "title": "On‑site inspection",
+        "body": "Inspect equipment, airflow, drainage and control performance."
+      },
+      {
+        "number": "3",
+        "title": "Maintenance and repair",
+        "body": "Carry out cleaning, repair or component replacement within the defined scope."
+      },
+      {
+        "number": "4",
+        "title": "Run check and handover",
+        "body": "Record completed items and any follow‑up maintenance."
+      }
+    ],
+    "gallery": {
+      "title": "From equipment details to the finished process",
+      "theme": "Office HVAC maintenance illustration: rooftop unit panorama, grille and filter details, condensate drainage check, tidy ceiling after completion.",
+      "layout": "Three horizontal equipment film strips on a deep blue background, with the central image largest and a cream‑white work‑record sheet on the right; switch between equipment inspection, maintenance process and run check.",
+      "shots": [
+        "Rooftop unit and location panorama",
+        "Grille and filter details",
+        "Condensate discharge check",
+        "Finished unit and ceiling"
+      ],
+      "label": "Case layout illustration – replace with real projects when live",
+      "status": "illustrative-until-real-project-assets-added"
+    },
+    "handover": [
+      "Equipment and location list",
+      "Maintenance and replacement records",
+      "Run check and follow‑up items"
+    ],
+    "faq": [
+      {
+        "question": "Can I have a single inspection for areas that are too cold in one part of a building and too hot in another?",
+        "answer": "We combine zone, return‑air path and actual usage times to inspect the temperature difference across the affected areas."
+      },
+      {
+        "question": "Can I address air‑conditioner dripping and ceiling water marks together?",
+        "answer": "We first check the source and discharge of condensate, then decide the order of drainage work and finish repair."
+      },
+      {
+        "question": "Can maintenance be scheduled around office or business hours?",
+        "answer": "We plan entry order based on equipment location, access conditions and usage schedules, and communicate any affected areas in advance."
+      },
+      {
+        "question": "What equipment information helps define the scope of work?",
+        "answer": "Equipment location, model tags, fault symptoms and occurrence times help us prepare; on‑site photos can also be provided."
+      }
+    ]
+  },
+  {
+    "title": "Fire, Security and Access Control",
+    "heroCopy": "We inspect and maintain fire-related equipment, access control and security systems at commercial premises, handling equipment faults, access issues and routine maintenance.",
+    "problems": [
+      {
+        "id": "fire-security-access-01",
+        "number": "01",
+        "label": "Access recognition faults and restricted entry",
+        "solution": {
+          "heading": "Access control and entry equipment maintenance",
+          "inspection": "We check the condition of card readers, doors, controls and power connections to pinpoint where the fault occurs.",
+          "method": "We repair or replace affected components within the fault scope and resolve door-to-system coordination issues.",
+          "check": "On completion we verify authorised access, door closing and system response, and record the adjustments made."
+        }
+      },
+      {
+        "id": "fire-security-access-02",
+        "number": "02",
+        "label": "Intercom audio or video faults",
+        "solution": {
+          "heading": "Commercial intercom maintenance",
+          "inspection": "We confirm device location, audio and video performance, connections and related power supply.",
+          "method": "We repair or replace components based on findings and resolve installation and connection issues.",
+          "check": "We test call, audio and video functions and record adjustments."
+        }
+      },
+      {
+        "id": "fire-security-access-03",
+        "number": "03",
+        "label": "Camera coverage and connection issues",
+        "solution": {
+          "heading": "Security equipment and connection maintenance",
+          "inspection": "We check camera mounting positions, connection status and the areas requiring coverage on site.",
+          "method": "We address faulty components and connections, and adjust mounting positions to the confirmed coverage scope.",
+          "check": "We review equipment performance and compile adjustments and replacements."
+        }
+      },
+      {
+        "id": "fire-security-access-04",
+        "number": "04",
+        "label": "Abnormal fire-related equipment condition",
+        "solution": {
+          "heading": "Fire-related equipment maintenance",
+          "inspection": "We verify equipment location, visible condition and fault records to identify items requiring attention.",
+          "method": "We complete maintenance, repair or replacement of relevant equipment within the agreed scope.",
+          "check": "We compile equipment work and inspection records and hand over any follow-up items."
+        }
+      }
+    ],
+    "specialistModule": {
+      "title": "One entry point, three systems clearly defined.",
+      "intro": "Presenting the scope of fire, security and access work separately reduces omissions in maintenance communication.",
+      "layout": "Centre: large commercial entry perspective; left: three vertical system labels; right: a narrow orange scope list. When a system is selected, connector lines and corresponding equipment highlight together.",
+      "items": [
+        {
+          "title": "Fire-related equipment",
+          "body": "Verify equipment location, visible condition, fault records and items requiring attention."
+        },
+        {
+          "title": "Security and intercom",
+          "body": "Check device mounting, connections, video or audio performance."
+        },
+        {
+          "title": "Access control and entry",
+          "body": "Check entry components, authorised use and door operation."
+        }
+      ]
+    },
+    "workflow": [
+      {
+        "number": "1",
+        "title": "Verify equipment and issues",
+        "body": "Record entry point, equipment location and fault symptoms."
+      },
+      {
+        "number": "2",
+        "title": "Define scope of work",
+        "body": "Distinguish system faults, component damage and site conditions."
+      },
+      {
+        "number": "3",
+        "title": "Repair and adjustment",
+        "body": "Address equipment and installed components within scope."
+      },
+      {
+        "number": "4",
+        "title": "Function check and records",
+        "body": "Confirm operational performance and hand over completed items."
+      }
+    ],
+    "gallery": {
+      "title": "Equipment location and work performed, recorded together.",
+      "theme": "Commercial entry maintenance illustration: entry overview, card reader and door closer details, equipment label records, completed entry.",
+      "layout": "One vertical entry photo with two wide equipment close-ups on the right; thin blue numbered lines link the photos, and an orange record strip at the bottom notes location / work / check.",
+      "shots": [
+        "Overall entry location",
+        "Card reader and door closer",
+        "Equipment label and work record",
+        "Completed entry condition"
+      ],
+      "label": "Layout illustration | Replace with real project on launch",
+      "status": "illustrative-until-real-project-assets-added"
+    },
+    "handover": [
+      "Equipment location and work list",
+      "Replacement and adjustment records",
+      "Function check and operation handover"
+    ],
+    "faq": [
+      {
+        "question": "Can door closing issues and access recognition faults be checked together?",
+        "answer": "We inspect the door, hardware and access equipment together, distinguishing mechanical components from system issues."
+      },
+      {
+        "question": "Can entry equipment be adjusted after a tenant change at a commercial premises?",
+        "answer": "We can check equipment and access arrangements against the new usage, identifying what to retain, adjust or replace."
+      },
+      {
+        "question": "What system information should be provided before maintenance?",
+        "answer": "Equipment location, model, fault symptoms and existing maintenance records help us focus the on-site inspection."
+      },
+      {
+        "question": "Will replaced equipment and adjustments be recorded?",
+        "answer": "We compile completed repairs, component replacements and adjustments, and hand over the related inspection results."
+      }
+    ]
+  },
+  {
+    "title": "Commercial Landscaping and Irrigation",
+    "heroCopy": "We maintain commercial entrances, planted areas and courtyards, looking after lawns, pruning, garden bed edges and irrigation to keep outdoor areas tidy and organised.",
+    "problems": [
+      {
+        "id": "landscaping-irrigation-01",
+        "number": "01",
+        "label": "Untidy lawns and overgrown edges",
+        "solution": {
+          "heading": "Landscape edges and routine care",
+          "inspection": "We inspect the boundaries between lawns, garden beds, planting and pedestrian paths.",
+          "method": "We prune, remove weeds and green waste, restore edges and replenish or update local areas as needed.",
+          "check": "We check access space, garden edges and site clean-up, and record follow-up maintenance."
+        }
+      },
+      {
+        "id": "landscaping-irrigation-02",
+        "number": "02",
+        "label": "Overgrown shrubs obstructing paths",
+        "solution": {
+          "heading": "Shrub pruning and path clearance",
+          "inspection": "We review plant growth, site boundaries and pedestrian and vehicle routes.",
+          "method": "We prune within the agreed scope, remove cuttings and tidy adjacent areas.",
+          "check": "We check path clearance, pruning boundaries and site clean-up."
+        }
+      },
+      {
+        "id": "landscaping-irrigation-03",
+        "number": "03",
+        "label": "Faulty sprinklers or uneven watering",
+        "solution": {
+          "heading": "Sprinkler and irrigation repairs",
+          "inspection": "We check sprinklers, drip lines, connections and controls, noting areas with uneven watering.",
+          "method": "We repair or replace damaged components and adjust irrigation within the agreed site scope.",
+          "check": "We check water delivery and connections and record the locations treated."
+        }
+      },
+      {
+        "id": "landscaping-irrigation-04",
+        "number": "04",
+        "label": "Untidy beds and gaps in planting",
+        "solution": {
+          "heading": "Garden bed care and replacement planting",
+          "inspection": "We review the planting space, existing plants, boundaries and areas needing renewal.",
+          "method": "We remove weeds and green waste, tidy beds and replace planting within the agreed scope.",
+          "check": "We confirm completed areas and clean-up, and note follow-up maintenance."
+        }
+      }
+    ],
+    "specialistModule": {
+      "title": "Above-ground planting. Below-ground irrigation.",
+      "intro": "Connect the appearance of your grounds with watering performance, from the wider site to sprinklers and planting details.",
+      "items": [
+        {
+          "title": "Grounds presentation",
+          "body": "Lawn mowing, plant care, garden bed cleaning and edge restoration."
+        },
+        {
+          "title": "Irrigation performance",
+          "body": "Check sprinklers, drip lines, control settings and local leaks."
+        },
+        {
+          "title": "Scheduled maintenance",
+          "body": "Plan maintenance around plant growth, site use and reported issues."
+        }
+      ]
+    },
+    "workflow": [
+      {
+        "number": "1",
+        "title": "Review the grounds",
+        "body": "Check planting, edges, irrigation and access."
+      },
+      {
+        "number": "2",
+        "title": "Define the maintenance scope",
+        "body": "Confirm pruning, tidying, repairs and replacement planting."
+      },
+      {
+        "number": "3",
+        "title": "Work by area",
+        "body": "Arrange grounds and irrigation work around site use."
+      },
+      {
+        "number": "4",
+        "title": "Clean up and hand over",
+        "body": "Remove green waste and record follow-up maintenance."
+      }
+    ],
+    "gallery": {
+      "title": "One viewpoint. A clear view of the changes.",
+      "shots": [
+        "Entrance before maintenance, same viewpoint",
+        "Pruning and edge restoration",
+        "Sprinkler and garden bed details",
+        "Entrance after maintenance, same viewpoint"
+      ],
+      "label": "Illustrative project layout | Replace with real project photos"
+    },
+    "handover": [
+      "Completed grounds maintenance list",
+      "Irrigation work and site photos",
+      "Follow-up pruning and planting"
+    ],
+    "faq": [
+      {
+        "question": "Can pruning and irrigation repairs be arranged together?",
+        "answer": "We review the planting areas and irrigation performance together, then arrange pruning, cleaning and equipment repairs around the scope."
+      },
+      {
+        "question": "Can you maintain landscaping around commercial entrances and car parks?",
+        "answer": "We can maintain planting around entrances, paths, garden strips and car park boundaries, arranging work around site access."
+      },
+      {
+        "question": "Can missing plants or untidy garden beds be updated locally?",
+        "answer": "We inspect the planting space and site conditions before defining the scope for cleaning, replacement planting or local renewal."
+      },
+      {
+        "question": "Can you set up a regular maintenance list?",
+        "answer": "We can prepare maintenance tasks around the site size, plant growth and use, then agree on the arrangements."
+      }
+    ]
+  },
+  {
+    "title": "Commercial Signage and Wayfinding",
+    "heroCopy": "We install, update and repair commercial signage and wayfinding, including shopfronts, dimensional lettering, lightboxes, entrance signs and site directions, so information fits the space clearly.",
+    "problems": [
+      {
+        "id": "signage-wayfinding-01",
+        "number": "01",
+        "label": "Ageing shopfront or outdated branding",
+        "solution": {
+          "heading": "Shopfront and wayfinding updates",
+          "inspection": "We review existing dimensions, positions, surfaces and installation conditions, confirming what stays and what changes.",
+          "method": "We produce, install or update signs to the agreed layout and materials, including related fixings and finishes.",
+          "check": "We check the information, installation and site clean-up, and record completed work."
+        }
+      },
+      {
+        "id": "signage-wayfinding-02",
+        "number": "02",
+        "label": "Partly unlit or unclear lightbox",
+        "solution": {
+          "heading": "Lightbox and display maintenance",
+          "inspection": "We inspect the lightbox exterior, lighting components, controls and connections.",
+          "method": "We repair or replace components within the fault scope and address surface damage.",
+          "check": "We check the display and installation and record the work."
+        }
+      },
+      {
+        "id": "signage-wayfinding-03",
+        "number": "03",
+        "label": "Unclear directions or hard-to-find entrances",
+        "solution": {
+          "heading": "Entrance and site wayfinding updates",
+          "inspection": "We review entrances, travel routes, existing information and destination areas.",
+          "method": "We produce or update wayfinding to the agreed wording and layout and install it in the corresponding locations.",
+          "check": "We confirm the information, direction and installation and organise completion photos."
+        }
+      },
+      {
+        "id": "signage-wayfinding-04",
+        "number": "04",
+        "label": "Loose signs or damaged surfaces and edges",
+        "solution": {
+          "heading": "Sign fixings and finish repairs",
+          "inspection": "We inspect signs, fixings, surface edges and adjacent finishes.",
+          "method": "We repair or replace damaged sections and address associated fixings and edges.",
+          "check": "We check the installation and appearance and record the repair scope."
+        }
+      }
+    ],
+    "specialistModule": {
+      "title": "Clear information, from entrance to destination.",
+      "intro": "Facade branding, entrance identification and internal directions each have a place in the way people move through a site.",
+      "items": [
+        {
+          "title": "Facade branding",
+          "body": "Shopfronts, lightboxes, dimensional letters and wall signs."
+        },
+        {
+          "title": "Entrance identification",
+          "body": "Entrance signs, floor information, business hours and glass signage."
+        },
+        {
+          "title": "Site directions",
+          "body": "Directional signs for floors, rooms, parking and shared areas."
+        }
+      ]
+    },
+    "workflow": [
+      {
+        "number": "1",
+        "title": "Measure and review",
+        "body": "Review positions, dimensions and information needs."
+      },
+      {
+        "number": "2",
+        "title": "Confirm layout and materials",
+        "body": "Define the content, appearance and work scope."
+      },
+      {
+        "number": "3",
+        "title": "Produce and install",
+        "body": "Produce, update and fix signage to suit site conditions."
+      },
+      {
+        "number": "4",
+        "title": "Check and hand over",
+        "body": "Check presentation and installation, and prepare site records."
+      }
+    ],
+    "gallery": {
+      "title": "See the whole sign and the details.",
+      "shots": [
+        "Overall shopfront position",
+        "Day and night presentation",
+        "Lettering materials and edges",
+        "Entrance and internal directions"
+      ],
+      "label": "Illustrative project layout | Replace with real project photos"
+    },
+    "handover": [
+      "Approved layout and installation positions",
+      "Production and completion photos",
+      "Follow-up cleaning and maintenance"
+    ],
+    "faq": [
+      {
+        "question": "Can part of an existing shopfront structure be retained?",
+        "answer": "We inspect the existing structure, dimensions and appearance before identifying parts suitable for retention, repair or replacement."
+      },
+      {
+        "question": "What information is needed before sign production?",
+        "answer": "Brand artwork, wording, installation locations and site photos help us organise the brief. We then confirm dimensions and the production scope."
+      },
+      {
+        "question": "Can the shopfront, entrance signs and internal directions be handled together?",
+        "answer": "We can plan production around consistent information and visual direction, installing each element to suit its location."
+      },
+      {
+        "question": "Does an unlit lightbox need complete replacement?",
+        "answer": "We first inspect the affected components and the existing sign before defining the scope for local repairs or replacement."
+      }
+    ]
+  },
+  {
+    "title": "Facade and High-Access Cleaning",
+    "heroCopy": "We clean commercial facades, glass and elevated surfaces, planning staged work around materials, staining and site access.",
+    "problems": [
+      {
+        "id": "facade-high-access-cleaning-01",
+        "number": "01",
+        "label": "Dusty glass and visible water marks",
+        "solution": {
+          "heading": "Glass and window frame cleaning",
+          "inspection": "We review glass, frames, staining and surrounding access conditions.",
+          "method": "We clean to suit the surface, address dirt around edges and protect adjacent finishes.",
+          "check": "We check water marks, residue and frame details and organise completion photos."
+        }
+      },
+      {
+        "id": "facade-high-access-cleaning-02",
+        "number": "02",
+        "label": "Facade staining and rain streaks",
+        "solution": {
+          "heading": "Facade staining and rain-streak cleaning",
+          "inspection": "We review materials, stain patterns, joints and nearby access.",
+          "method": "We select a method for the material, complete a sample area, then protect adjacent surfaces and clean in sections.",
+          "check": "We check consistency, edges and residue and record any surface damage found."
+        }
+      },
+      {
+        "id": "facade-high-access-cleaning-03",
+        "number": "03",
+        "label": "Dirty canopies and elevated surfaces",
+        "solution": {
+          "heading": "Canopy and elevated surface cleaning",
+          "inspection": "We review materials, dirt distribution, access and the areas in use below.",
+          "method": "We clean the agreed elevated sections, protecting related equipment and finishes.",
+          "check": "We recheck edges and residue and record the work area and issues found."
+        }
+      },
+      {
+        "id": "facade-high-access-cleaning-04",
+        "number": "04",
+        "label": "Cleaning above an entrance affects access",
+        "solution": {
+          "heading": "Staged cleaning around entrances",
+          "inspection": "We review pedestrian routes, business hours and the work area above the entrance.",
+          "method": "We define work areas and access sequence, then carry out cleaning to the agreed plan.",
+          "check": "We check completion and site clean-up and hand over access restoration and follow-up items."
+        }
+      }
+    ],
+    "specialistModule": {
+      "title": "Different materials. Different cleaning arrangements.",
+      "intro": "Surface materials, stain types and access conditions all form part of the scope.",
+      "items": [
+        {
+          "title": "Glass and window frames",
+          "body": "Treat surface dirt and edge build-up while protecting frames and adjacent finishes."
+        },
+        {
+          "title": "Metal and coated finishes",
+          "body": "Select cleaning methods for the finish and check a sample area first."
+        },
+        {
+          "title": "Brick, stone and facade surfaces",
+          "body": "Identify stains and surface conditions, separating cleaning from areas needing repairs."
+        }
+      ]
+    },
+    "workflow": [
+      {
+        "number": "1",
+        "title": "Review the facade",
+        "body": "Confirm materials, cleaning height and access areas."
+      },
+      {
+        "number": "2",
+        "title": "Define the arrangements",
+        "body": "Confirm sample areas, access method, protection and staging."
+      },
+      {
+        "number": "3",
+        "title": "Clean in sections",
+        "body": "Work to the agreed scope and manage the area below."
+      },
+      {
+        "number": "4",
+        "title": "Check and record",
+        "body": "Review the results and record photos and issues found."
+      }
+    ],
+    "gallery": {
+      "title": "The same facade. A clear view of the change.",
+      "shots": [
+        "Facade overview from the same viewpoint",
+        "Close-up of staining",
+        "Staged cleaning work",
+        "Completed frame and edge details"
+      ],
+      "label": "Illustrative project layout | Replace with real project photos"
+    },
+    "handover": [
+      "Surface and cleaning scope list",
+      "Before and after photos from the same viewpoint",
+      "Surface issues and follow-up repairs"
+    ],
+    "faq": [
+      {
+        "question": "Can glass and facade surfaces be cleaned together?",
+        "answer": "We can review both surfaces, define methods for their materials and access conditions, then combine the work sequence."
+      },
+      {
+        "question": "Can entrances remain in use during cleaning?",
+        "answer": "We review entrances and pedestrian paths, define work areas around business operations and clarify where access needs temporary adjustment."
+      },
+      {
+        "question": "Will facade cracks and damage also be repaired?",
+        "answer": "We record cracks and damage found and list cleaning and repairs as separate parts of the work scope."
+      },
+      {
+        "question": "What site information is needed for a quote?",
+        "answer": "We need the building location, surfaces to be cleaned, height and access conditions. Photos help us assess the initial scope."
+      }
+    ]
+  },
+  {
+    "title": "Commercial Cleaning and Environmental Care",
+    "heroCopy": "We clean commercial interiors, shared areas and waste collection points, arranging routine care and periodic deep cleaning around how often areas are used.",
+    "problems": [
+      {
+        "id": "cleaning-waste-hygiene-01",
+        "number": "01",
+        "label": "Recurring floor stains and dust",
+        "solution": {
+          "heading": "Deep cleaning for shared-area floors",
+          "inspection": "We review floor materials, stain types, use frequency and site access arrangements.",
+          "method": "We choose a suitable method and work by area to clean edges, stains and larger floor surfaces.",
+          "check": "We check residue and edges and confirm the area is ready for the appropriate return to use."
+        }
+      },
+      {
+        "id": "cleaning-waste-hygiene-02",
+        "number": "02",
+        "label": "Local carpet and upholstery stains",
+        "solution": {
+          "heading": "Local carpet and upholstery cleaning",
+          "inspection": "We review materials, the extent of staining and site use.",
+          "method": "We select a method for the material and stain type, treating the affected and adjacent areas.",
+          "check": "We check residue and completion and clarify return-to-use arrangements."
+        }
+      },
+      {
+        "id": "cleaning-waste-hygiene-03",
+        "number": "03",
+        "label": "Bathroom scale and dirt build-up",
+        "solution": {
+          "heading": "Commercial bathroom cleaning",
+          "inspection": "We check surface materials, scale, dirt and areas needing particular attention.",
+          "method": "We clean fixtures, partitions, floors and edges by area, then tidy the site.",
+          "check": "We check the completion list, edges and residue and note follow-up items."
+        }
+      },
+      {
+        "id": "cleaning-waste-hygiene-04",
+        "number": "04",
+        "label": "Dirty bin rooms and collection points",
+        "solution": {
+          "heading": "Bin room and collection point care",
+          "inspection": "We review the collection area, surfaces and the scope of tidying required.",
+          "method": "We tidy and clean to the checklist and clarify sorting and removal handover items.",
+          "check": "We check the area and edges and organise the relevant records."
+        }
+      }
+    ],
+    "specialistModule": {
+      "title": "A cleaning plan for each area and schedule.",
+      "intro": "Define the scope, frequency and suitable access times around actual site use.",
+      "items": [
+        {
+          "title": "Routine care",
+          "body": "Surface cleaning and tidying for frequently used areas."
+        },
+        {
+          "title": "Deep cleaning",
+          "body": "Address accumulated dirt, edges and local stains beyond routine cleaning."
+        },
+        {
+          "title": "Waste point care",
+          "body": "Tidy and clean collection areas and clarify waste sorting and removal responsibilities."
+        }
+      ]
+    },
+    "workflow": [
+      {
+        "number": "1",
+        "title": "Review the areas",
+        "body": "Confirm materials, staining and site use."
+      },
+      {
+        "number": "2",
+        "title": "Define the checklist",
+        "body": "List areas, tasks, frequency and access times."
+      },
+      {
+        "number": "3",
+        "title": "Work by area",
+        "body": "Plan cleaning and return to use around site movement."
+      },
+      {
+        "number": "4",
+        "title": "Hand over records",
+        "body": "Confirm completed items and note areas needing further attention."
+      }
+    ],
+    "gallery": {
+      "title": "From the wider area to the corners.",
+      "shots": [
+        "Shared-area cleaning before and after",
+        "Floor edge details",
+        "Cleaning equipment at work",
+        "Completed collection point"
+      ],
+      "label": "Illustrative project layout | Replace with real project photos"
+    },
+    "handover": [
+      "Area and task completion list",
+      "Cleaning and waste point records",
+      "Follow-up cleaning items"
+    ],
+    "faq": [
+      {
+        "question": "Can you arrange regular cleaning and one-off deep cleaning?",
+        "answer": "We handle both, defining scope and frequency separately around how the areas are used."
+      },
+      {
+        "question": "Does cleaning include waste removal?",
+        "answer": "We list bin room cleaning, waste tidying and removal separately, defining the scope around the type and quantity of waste on site."
+      },
+      {
+        "question": "Can you work around shopping centre or office access times?",
+        "answer": "We plan the access sequence around business hours, keys or access control arrangements and area use."
+      },
+      {
+        "question": "Can cleaning records be provided by area?",
+        "answer": "We can agree on record arrangements when defining the scope, listing completed and follow-up items by area."
+      }
+    ]
+  },
+  {
+    "title": "Car Parks and External Works",
+    "heroCopy": "We repair commercial car park surfaces, line marking and external fixtures, arranging staged work around vehicle and pedestrian access.",
+    "problems": [
+      {
+        "id": "car-parks-external-works-01",
+        "number": "01",
+        "label": "Potholes and local surface damage",
+        "solution": {
+          "heading": "Local car park surface repairs",
+          "inspection": "We review potholes, surface damage, surrounding substrate condition and site access.",
+          "method": "We complete local repairs to the agreed scope and arrange related surface and line-marking restoration.",
+          "check": "We check the completed area and surface and hand over reopening arrangements."
+        }
+      },
+      {
+        "id": "car-parks-external-works-02",
+        "number": "02",
+        "label": "Faded parking and access markings",
+        "solution": {
+          "heading": "Car park markings and access area renewal",
+          "inspection": "We review the existing layout, surface, worn markings and traffic arrangements.",
+          "method": "We arrange cleaning, surface preparation and remarking to the agreed scope, managing work access in sections.",
+          "check": "We confirm positions and results, record the scope and clarify reopening arrangements."
+        }
+      },
+      {
+        "id": "car-parks-external-works-03",
+        "number": "03",
+        "label": "Damaged bollards or wheel stops",
+        "solution": {
+          "heading": "Bollard and wheel stop repairs",
+          "inspection": "We inspect the fixtures, fixings and surrounding ground.",
+          "method": "We repair or replace damaged fixtures and complete related fixing and surface work.",
+          "check": "We confirm positions, installation and clean-up and record the work."
+        }
+      },
+      {
+        "id": "car-parks-external-works-04",
+        "number": "04",
+        "label": "Blocked drains or local ponding",
+        "solution": {
+          "heading": "Drain inlet and ponding area work",
+          "inspection": "We review ponding, inlets, drainage connections and adjacent surfaces.",
+          "method": "We complete the agreed cleaning and identify drainage or surface sections needing repair.",
+          "check": "We check treated areas and record completion and follow-up items."
+        }
+      }
+    ],
+    "specialistModule": {
+      "title": "Define the work zone. Then plan access.",
+      "intro": "Repair areas, vehicle routes and pedestrian paths are planned together.",
+      "items": [
+        {
+          "title": "Surfaces and line marking",
+          "body": "Separate local repairs, surface renewal and line marking, defining each area."
+        },
+        {
+          "title": "External fixtures",
+          "body": "Review bollards, wheel stops and fixings to define repairs or replacement."
+        },
+        {
+          "title": "Drainage and boundaries",
+          "body": "Review ponding, inlets and adjacent surfaces, separating cleaning from areas needing further repairs."
+        }
+      ]
+    },
+    "workflow": [
+      {
+        "number": "1",
+        "title": "Review the site",
+        "body": "Record damage and vehicle and pedestrian movement."
+      },
+      {
+        "number": "2",
+        "title": "Define the areas",
+        "body": "Confirm work zones, sequence and material scope."
+      },
+      {
+        "number": "3",
+        "title": "Work in sections",
+        "body": "Complete surface, fixture and line-marking work to the site plan."
+      },
+      {
+        "number": "4",
+        "title": "Check and reopen",
+        "body": "Confirm completion and hand over reopening arrangements."
+      }
+    ],
+    "gallery": {
+      "title": "From surface repairs to line-marking details.",
+      "shots": [
+        "Site overview from the same viewpoint",
+        "Close-up of surface damage",
+        "Surface preparation",
+        "Completed markings and fixtures"
+      ],
+      "label": "Illustrative project layout | Replace with real project photos"
+    },
+    "handover": [
+      "Work zone and completion list",
+      "Surface, marking and fixture photos",
+      "Reopening and follow-up items"
+    ],
+    "faq": [
+      {
+        "question": "Does the whole car park need to close?",
+        "answer": "We first review traffic and scope to determine whether work can be staged, then clarify work zones and temporary routes."
+      },
+      {
+        "question": "Can surface repairs and line marking be done together?",
+        "answer": "We can include both in one scope, arranging the sequence around repair locations, materials and surface conditions."
+      },
+      {
+        "question": "Can bollards and wheel stops be replaced?",
+        "answer": "We inspect the fixtures, fixings and surrounding surface before defining repair, replacement and reinstatement work."
+      },
+      {
+        "question": "Is clearing a drain enough to resolve ponding?",
+        "answer": "We review ponding, inlets and surrounding surfaces to distinguish cleaning from drainage or surface issues needing further work."
+      }
+    ]
+  },
+  {
+    "title": "Commercial Fit-outs and Make-good",
+    "heroCopy": "We handle commercial refurbishments, local updates and end-of-lease make-good, organising removal, repairs, finishes and the relevant trades into a clear work scope.",
+    "problems": [
+      {
+        "id": "fit-outs-make-good-01",
+        "number": "01",
+        "label": "Old partitions and fixtures to remove",
+        "solution": {
+          "heading": "Partition and fixed-fixture removal",
+          "inspection": "We confirm removal items, retained services, connections and site access.",
+          "method": "We arrange protection, removal and disposal to the agreed scope, coordinating the relevant trades.",
+          "check": "We check the removal list and clean-up and record subsequent repair areas."
+        }
+      },
+      {
+        "id": "fit-outs-make-good-02",
+        "number": "02",
+        "label": "Wall and floor damage after removal",
+        "solution": {
+          "heading": "Wall and floor reinstatement after removal",
+          "inspection": "We review the removal scope, existing surfaces, fixings and parts to retain.",
+          "method": "We arrange removal, substrate repairs and finish reinstatement to the agreed list, coordinating the trades.",
+          "check": "We check completion item by item, organise photos and note follow-up work."
+        }
+      },
+      {
+        "id": "fit-outs-make-good-03",
+        "number": "03",
+        "label": "Shopfront and signage updates",
+        "solution": {
+          "heading": "Shopfront and commercial signage updates",
+          "inspection": "We review the shopfront, signs, fixings and finishes and identify retained and updated parts.",
+          "method": "We complete removal, sign updates and surface restoration within the agreed scope.",
+          "check": "We check information, installation and completed finishes."
+        }
+      },
+      {
+        "id": "fit-outs-make-good-04",
+        "number": "04",
+        "label": "Make-good requires several trades",
+        "solution": {
+          "heading": "Multi-trade make-good arrangements",
+          "inspection": "We combine the confirmed checklist and site issues and define the boundaries for each trade.",
+          "method": "We sequence protection, removal, repairs and finishes and record scope changes during the work.",
+          "check": "We hand over against the checklist, with completion photos and follow-up items."
+        }
+      }
+    ],
+    "specialistModule": {
+      "title": "What stays, what goes and what is restored.",
+      "intro": "Turn the space changes into a checklist that can be confirmed, completed and handed over.",
+      "items": [
+        {
+          "title": "Retain",
+          "body": "Identify retained fixtures, surfaces and areas needing protection."
+        },
+        {
+          "title": "Remove",
+          "body": "List removal items, disposal scope and the sequence between trades."
+        },
+        {
+          "title": "Restore",
+          "body": "Define repairs, replacements and finished surfaces for an item-by-item handover."
+        }
+      ]
+    },
+    "workflow": [
+      {
+        "number": "1",
+        "title": "Confirm the checklist",
+        "body": "Review the existing space and confirmed refurbishment or make-good requirements."
+      },
+      {
+        "number": "2",
+        "title": "Define the scope",
+        "body": "Confirm retained, removed and restored items and materials."
+      },
+      {
+        "number": "3",
+        "title": "Work in stages",
+        "body": "Sequence protection, removal, repairs and trades."
+      },
+      {
+        "number": "4",
+        "title": "Hand over item by item",
+        "body": "Check results against the list, organise photos and note follow-up items."
+      }
+    ],
+    "gallery": {
+      "title": "One space. Every stage recorded.",
+      "shots": [
+        "Existing space from the same viewpoint",
+        "Removal and clean-up",
+        "Substrate repair details",
+        "The reinstated space"
+      ],
+      "label": "Illustrative project layout | Replace with real project photos"
+    },
+    "handover": [
+      "Retained, removed and restored items list",
+      "Same-viewpoint photos at each stage",
+      "Handover and follow-up items"
+    ],
+    "faq": [
+      {
+        "question": "Can you quote against our make-good checklist?",
+        "answer": "We can review the confirmed checklist and site conditions item by item, listing the scope, materials and points needing further confirmation."
+      },
+      {
+        "question": "Can removal, repairs and finish updates be handled together?",
+        "answer": "We can include these in one project and arrange the trades and sequence around site conditions."
+      },
+      {
+        "question": "Can parts of the premises remain in use during refurbishment?",
+        "answer": "We review retained areas, access routes and the work to define zones and staged arrangements."
+      },
+      {
+        "question": "How is the work scope checked at completion?",
+        "answer": "We check against the agreed list, organise completion photos and record items needing further follow-up."
+      }
+    ]
+  }
+]

@@ -15,8 +15,8 @@ ${d('p','把需求告诉我们，\n一起明确下一步安排。','Tell us what
 <button type="button" class="pp-submit" data-quote>${d('span','填写项目需求','Tell us about your project')}${icon('arrow-up-right')}</button>
 ${d('p','也可以直接致电或发送邮件','You can also call or email us.','pp-action-note')}</div></aside>
 <div class="pp-contact-strip">
-<a class="pp-contact-item" href="tel:+61482602558">${icon('phone')}<span>${d('span','直接致电','Call us','pp-contact-label')}<strong>ellis · 0482 602 558</strong></span></a>
-<a class="pp-contact-item" href="mailto:elliservices.group@gmail.com">${icon('envelope-simple')}<span>${d('span','发送项目资料','Send project details','pp-contact-label')}<strong>elliservices.group@<wbr>gmail.com</strong></span></a>
+<a class="pp-contact-item" href="tel:+61450666876">${icon('phone')}<span>${d('span','直接致电','Call us','pp-contact-label')}<strong>ellis · 0450666876</strong></span></a>
+<a class="pp-contact-item" href="mailto:melbournecommercialrepairs.au@outlook.com">${icon('envelope-simple')}<span>${d('span','发送项目资料','Send project details','pp-contact-label')}<strong>melbournecommercialrepairs.au@<wbr>outlook.com</strong></span></a>
 <div class="pp-contact-item">${icon('clock')}<span>${d('span','营业时间','Opening hours','pp-contact-label')}${d('strong','周一至周日 9:00–21:00','Monday–Sunday, 9:00 am–9:00 pm')}</span></div>
 </div></section>`;
 

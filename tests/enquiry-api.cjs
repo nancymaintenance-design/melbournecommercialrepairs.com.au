@@ -19,7 +19,7 @@ test('sends only to Ellis, with visitor reply-to and attached bytes', async () =
   body.photos = [{ filename: 'site.png', content: 'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+aP2kAAAAASUVORK5CYII=' }];
   const res = await run(body); assert.equal(res.statusCode, 200);
   const mail = JSON.parse(calls[0].body);
-  assert.deepEqual(mail.to, ['elliservices.group@gmail.com']); assert.equal(mail.reply_to, body.email);
+  assert.deepEqual(mail.to, ['melbournecommercialrepairs.au@outlook.com']); assert.equal(mail.reply_to, body.email);
   assert.equal(mail.attachments[0].content, body.photos[0].content);
   assert.match(calls[0].headers['Idempotency-Key'], /^ellis-enquiry\//);
   assert.equal(res.body.id, undefined);

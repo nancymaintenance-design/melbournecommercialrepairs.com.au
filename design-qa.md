@@ -1,3 +1,47 @@
+# Latest verification — service reference fidelity correction — 2026-11-18
+
+The previous service visual pass was too permissive and is superseded. The user's observation was correct: generic controls and single notes had removed readable construction labels, full scope checklists, stage paper notes and model scale.
+
+Source truth: the original ELLIS_12_Service_UI_Reference_Pack_2026-11-17.zip; SHA-256 comparison confirms all 13 reference images match the extracted images under E:/Ellis-Services/Ellis Services WordPress/obsidian/service-ui-reference-2026-11-17/ELLIS_12_Service_UI/images. Copy and states follow the original guide/JSON; real shared site shell is retained.
+
+Actual current browser evidence: E:/Ellis-Services/Ellis Services WordPress/reports/service-ui-2026-11-18/correction/01–12-final.jpg. CSS viewport1280×720; raster1270×714, uniform ratio1270/1280. Default source states, Chinese. Side-by-side: reference-vs-revised.jpg; focused four-page comparison: focused-reference-vs-revised.jpg; post-recapture source comparison: recapture-verification.jpg. The source1024×1536 long-images intentionally use compressed text, while guide-sized live reading copy expands naturally. Both sides retain aspect ratio; no forced height match.
+
+P1/P2 correction history: (1) catalogued omitted labels, undersized models, absent checklists/route connectors/stage notes and generic galleries; (2) rebuilt all twelve professional compositions and five independent raster assets, restored full lists and real DOM annotations/region selection, refactored long English side content into normal flow, corrected duplicate navigation offset; (3) captured all twelve live views and compared with original regions; (4) rejected unpainted early04/09 screenshots and recaptured both correctly; verified full parking site visibility and distinct category thumbnails. The comparison views have been opened and inspected. These are browser captures, not generated UI mockups.
+
+Functional verification: original12 routes and48 full issue states, complete supplied workflow/FAQ copy,1,201 local links/assets, uniqueIDs and tab-to-panel associations;36 specialist selections; stage arrows/keyboard, sign day/night, HVAC phase film and before/after slider. The missing sign panel found during this run was fixed and retested. Final36 English responsive states at1024/390/320 pass overflow, reading notes, oneH1, noHan in service content and unfolded footer checks. New preview console error query empty. Build/syntax/cache/shared navigation tests pass. Temporary viewport/media emulation restored before handoff.
+
+P3 follow-up only: independent raster camera details/geometry and small decorative differences remain; exact pixel identity is not claimed. Header/Footer deliberately match the existing whole-site UI, and normal-size live text takes more natural height than compressed long-image references. No remaining substantive functional, reading or composition blocker in inspected states. No homepage/API changes, messages, push or deployment.
+
+final result: passed
+
+Detailed evidence and asset prompts: E:/Ellis-Services/Ellis Services WordPress/reports/service-ui-2026-11-18/correction/修正记录.md
+
+---
+
+# Service visual fidelity correction — 2026-11-18
+
+The previous service visual pass was too permissive. Current source comparison identifies P1/P2 reductions: missing readable diagram labels, undersized model regions, generic specialist tabs replacing distinct compositions, absent full checklists and three-stage paper notes, incomplete gallery presentation. Functional checks do not close those visual findings.
+
+final result: blocked
+
+# Latest verification — 12 service reference pages — 2026-11-18
+
+Source: CODEX_SERVICE_UI_GUIDE.md, service-pages.json, all twelve numbered full references and the enlarged building-maintenance reference. Implementation: the twelve existing /services/ routes at http://127.0.0.1:8767, local only.
+
+Actual normal-browser viewport captures: E:/Ellis-Services/Ellis Services WordPress/reports/service-ui-2026-11-18/01–12-final-desktop-viewport.jpg. Final side-by-side visual evidence: final-reference-comparison.jpg. Early CDP component crops were found to include incorrect coordinates; these are superseded by actual viewport captures. No screenshot reference is served as the UI.
+
+Visual pass inspected composition, independent imagery, readable 17–18px body text, title hierarchy, palette, rounded offsets, state clarity and DOM copy. Generic professional bands were replaced with twelve service-specific compositions. Fixed wrong hero labels, gallery caption mappings, misleading signage thumbnail actions and a 24px caption cascade collision at tablet widths. Normal reading sizes intentionally require more height than compressed source long-images. Shared Header, language switch, homepage and full Footer remain unchanged.
+
+Functional evidence: 48 issue states, twelve route/asset contracts, workflow/FAQ source completeness, original internal links, selected-state language persistence, gallery controls, original Contact service preselection, zero console errors. Final English 1024/390/320-width sweep: 36 states without Han in service UI, overflow, duplicate H1 or footer disclosures. Recorded in final-responsive-checks.json. Build, syntax, asset cache and 42-page shared-navigation checks passed. Motion reductions and offscreen pauses remain; temporary browser emulation restored.
+
+Remaining P3: independently recreated artwork has different camera crops, small geometry and icons; exact raster identity is not claimed. No outstanding P0/P1/P2 functional, responsive or reading blocker in the verified states. No backend messages sent, no push, no deployment.
+
+final result: passed
+
+Detailed Chinese report: E:/Ellis-Services/Ellis Services WordPress/reports/service-ui-2026-11-18/预览与验收.md
+
+---
+
 # Latest verification — navigation, English UI and visible footer — 2026-11-18
 
 Follow-up: navigation button states and every footer now use the homepage's shared CSS directly. Removed remaining regional footer padding/size rules; light social cards retain dark text even on hover/focus. Forty-two shared-shell comparisons, 96 contrast states and six footer typography comparisons passed. Latest evidence: `E:/Ellis-Services/Ellis Services WordPress/reports/shared-shell-2026-11-18/验收记录.md`. Earlier compact footer findings below are superseded.
