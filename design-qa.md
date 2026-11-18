@@ -1,3 +1,55 @@
+# FAQ reference comparison — 2026-11-18
+
+Compared the user’s 1024×1536 desktop and 724×2172 mobile references with the revised urgent-topic state at 1440×900, 724×900 and 390×844. The report contains equal-width side-by-side section comparisons, full captures, image sources, and functional results. See [FAQ reference comparison and verification](<E:/Ellis-Services/Ellis Services WordPress/reports/faq-ui-2026-11-18/FAQ-参考图对照与验收.md>).
+
+Earlier hero attempts used a single question mark and then a free-standing letter group. The revised architecture image now incorporates the F and A and layers the metal Q in front. Section comparisons capture the thicker shortcut plates, enlarged numbers, desktop sidebar, and blue mobile reading area. Mobile comparison identified text overlap from the bands and a pause button too close to search. The current captures show the corrected band and control positions. Remaining differences are the independent artwork’s material and perspective details, and taller cards for the full readable answers.
+
+Verified page implementation and checked the visual differences against both references. User review of the revised appearance is pending.
+
+# Previous verification — Plumbing gallery contrast and reference fidelity — 2026-11-18
+
+Source: original service pack images/04-plumbing-drainage-gas-full.png, its gallery/work-record section, the matching guide and bilingual JSON. Local target: /services/plumbing-drainage-gas/#gallery and the immediately adjacent handover strip only.
+
+Evidence directory: E:/Ellis-Services/Ellis Services WordPress/reports/plumbing-gallery-2026-11-18. Original reference-full.png 1024×1536; before-gallery.jpg; final after-zh-1440-viewport.jpg / after-zh-gallery-handover.jpg; English desktop and both mobile full captures; reference-vs-final.jpg and before-after.jpg. Browser CSS viewport 1440×950, 1024×900 and 390×850, scale 1; content widths 1430/1014/380 reflect the scrollbar. Source and implementation crops are compared at an equal 1000px display width with natural aspect ratio. Default Chinese settled state is used for the design comparison.
+
+Resolved findings: unrelated orange connector/pump and gas assets made the drainage gallery blend into its orange frame; replaced with four independent, environment-backed photos matching the original site/inspection/work/completion intent. First pass had tall title/caption spacing and delayed image paint in the screenshot; title/notice now share a compact row, side record spans both header/film rows, captions are natural, and all four final images are visibly painted. Global filter reset initially left black icons on blue; tightly scoped monochrome icon recolouring restores white. A gradient boundary crossed handover text; solid blue title/lime body/orange decoration now match the source composition without crossing text.
+
+Fidelity: original high-saturation palette, continuous four-picture film, rounded cream captions, blue connecting marks, scope card, clipboard and offset backing remain. Real HTML holds all captions and records. Generated independent photos have the correct subject, neutral surroundings, clear crops and image boundaries; no reference screenshot serves as UI, no model substituted for site photography, no invented real-project claim. Body labels and full original data remain legible; natural card height is retained rather than shrinking copy to source raster size.
+
+Verification: build, project syntax check, plumbing gallery contract, 12-service/48-state contract, shared 42-page navigation/locale contract, asset versions and diff whitespace checks passed. Desktop and 390px Chinese/English plus 1024px English show four decoded images, no caption/document overflow; English main has no Han. Measured navy/cream and navy/lime contrast 16.1:1 and 15.47:1; white/blue 7.7:1. Reduced-motion gallery is visible and has no animation. Console error query empty. No new JS or changed global motion delays. Scope manifest confirms existing About/home work, other routes, business data, header/footer and all other plumbing markup unchanged.
+
+P3: independently generated site photos use different camera details from the original; complete bilingual labels and record copy produce a slightly taller region than the compressed reference. No actionable P0/P1/P2 remains.
+
+final result: passed
+
+Details, exact changed-file list, source prompts and screenshots: reports/plumbing-gallery-2026-11-18/修正与验收.md. Local only; no push or deployment.
+
+---
+
+# Latest verification — About company identity — 2026-11-18
+
+Source visual truth: E:/Ellis-Services/Ellis Services WordPress/reports/about-identity-2026-11-18/reference.png (1717×916, original user attachment). Source facts: unchanged business.json. Target: only /about/ company registration module.
+
+Rendered evidence: after-zh-desktop-full.jpg, after-en-desktop-full.jpg, after-zh-desktop-module.jpg, after-en-desktop-module.jpg, after-zh-mobile-full.jpg, after-en-mobile-full.jpg, after-zh-mobile-module.jpg and after-zh-mobile-reduced.jpg in that report directory. Before: before-desktop.jpg (original folded state) and before-expanded-desktop.jpg. Full-page comparison: before-after.jpg. Focused design comparison: reference-vs-final.jpg.
+
+CSS viewports 1440×1050 and 390×850, deviceScaleFactor=1. Actual content raster widths 1430/380 reflect the 10px scrollbar. Reference and rendered module crops are compared at an equal 1050px display width, preserving both natural heights. Default settled English desktop state is used for the visual comparison; Chinese and mobile are additionally inspected. Actual data contains full dates, full region and the required original verification note; these are retained rather than compressed to screenshot shorthand.
+
+Fidelity surfaces: original brand type with heavy italic company-name hierarchy, large copyable HTML ABN/ACN, source-matched navy/lime/orange/pink/cream surfaces, 42/58 asymmetric construction, native paired registration records and visible links. Independent alpha badge artwork matches the metallic/lime direction; the original logo and all public shell/insurance content are unchanged. Real HTML holds every company field and the badge label. No screenshot or full module raster serves as the UI.
+
+Comparison history: v1 found badge/name overlap and an orange stripe outside the boundary; fixed positioning and stripe origin. v3 found a small/low badge, wrapped desktop region action and weak lime backing; enlarged/repositioned the badge, reallocated action columns and reordered backplates. Final narrow entry check found a 2px transient horizontal spill; numeric tiles now enter vertically. reference-vs-final.jpg and the four final locale/width checks show the corrections. No actionable P0/P1/P2 remains.
+
+Runtime evidence: 8 public facts visible without disclosure in all four requested states; English main text has no Han; no horizontal or field overflow; one H1; ABN Lookup actually opens the official matching ABN page; area and Contact links navigate to existing routes with current lang. Keyboard Tab/Enter and 3px blue focus ring verified. Single-pass 4.4s badge/4.6s edge sequence, stable numeric translate 0px after entry, slight visual-only pointer tilt; desktop/mobile reduced-motion has no module animations, no transform and all facts visible. Console error query empty.
+
+Build, project check, local JS syntax checks, about identity data/source regression, 42-page navigation/locale contract and asset cache check passed. Scope evidence in scope-preservation.json confirms the original About title, brand, intro, service groups, insurance, shared Header and Footer are byte-identical. Business data and other runtime pages have no task-induced content changes; prior pending homepage work was preserved.
+
+P3: generated badge highlights/fluting and the existing site font differ slightly from the source. Complete dates/region/verification notes add natural height. These are disclosed rather than described as pixel-exact. No push/deployment. Local preview remains http://127.0.0.1:8767/about/?lang=zh#company-registration.
+
+final result: passed
+
+Detailed test matrix, full file list, asset source and screenshots: E:/Ellis-Services/Ellis Services WordPress/reports/about-identity-2026-11-18/验收与文件清单.md
+
+---
+
 # Latest verification — service reference fidelity correction — 2026-11-18
 
 The previous service visual pass was too permissive and is superseded. The user's observation was correct: generic controls and single notes had removed readable construction labels, full scope checklists, stage paper notes and model scale.

@@ -4,7 +4,7 @@ const section=(s,id)=>s.match(new RegExp('<section[^>]*id="'+id+'"[^]*?</section
 const map=section(h,'location'),oldMap=section(b,'location'),flow=section(h,'contact');
 assert(map.includes('墨尔本服务位置'));assert.equal(map.match(/<iframe[^]*?<\/iframe>/)[0],oldMap.match(/<iframe[^]*?<\/iframe>/)[0]);
 for(const text of ['459 Collins St, Melbourne VIC 3004, Australia','tel:+61450666876','mailto:melbournecommercialrepairs.au@outlook.com'])assert(map.includes(text));
-assert(!map.includes('href="/#contact"'));assert.equal((flow.match(/data-quote/g)||[]).length,1);assert.equal((flow.match(/class="pp-note /g)||[]).length,3);
+assert(!map.includes('href="/#contact"'));assert(!flow.includes('data-quote'));assert(flow.includes('<a class="pp-submit" href="/contact/" data-local-page>'));assert.equal((flow.match(/class="pp-note /g)||[]).length,3);
 for(const t of ['提交需求','沟通与报价','确认安排','单项维修','多工种项目','定期维护','填写项目需求'])assert(flow.includes(t));
 assert(!/Collins|Insurance|<iframe/.test(flow));
 assert(flow.includes('ellis · 0450666876'));

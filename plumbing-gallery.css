@@ -1,0 +1,72 @@
+/* Only the plumbing gallery. The shared service fidelity layer remains in place. */
+.service-ui[data-service-reference="plumbing-drainage-gas"] #gallery{
+ display:grid;grid-template-columns:minmax(0,3.5fr) minmax(245px,1fr);gap:11px 20px;padding:22px;border-radius:30px;box-shadow:0 6px 0 #e2ff08;
+}
+.service-ui[data-service-reference="plumbing-drainage-gas"] #gallery .pg-heading{grid-column:1;grid-row:1;display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;min-inline-size:0}
+.service-ui[data-service-reference="plumbing-drainage-gas"] #gallery .pg-heading>.su-section-heading{margin:0}
+.service-ui[data-service-reference="plumbing-drainage-gas"] #gallery .su-section-heading h2{font-size:clamp(25px,2.2vw,33px);line-height:1.2;letter-spacing:-.035em;margin-bottom:0}
+.service-ui[data-service-reference="plumbing-drainage-gas"] #gallery .su-eyebrow{display:none}
+.service-ui[data-service-reference="plumbing-drainage-gas"] #gallery .su-illustration-label{margin:0!important;font-size:13px!important}
+.service-ui[data-service-reference="plumbing-drainage-gas"] #gallery .pg-film{display:contents}
+.service-ui[data-service-reference="plumbing-drainage-gas"] #gallery .pg-frames{grid-column:1;grid-row:2;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;min-inline-size:0;align-items:stretch}
+.service-ui[data-service-reference="plumbing-drainage-gas"] #gallery .pg-frames figure{position:relative;min-inline-size:0;display:flex;flex-direction:column;margin:0;padding:0;background:#f8f5ee;border:2px solid #f8f5ee;border-radius:18px;overflow:visible;box-shadow:0 3px 0 #1424ff33}
+.service-ui[data-service-reference="plumbing-drainage-gas"] #gallery .pg-photo{aspect-ratio:4/3;background:#dddeda;border-radius:15px 15px 0 0;overflow:clip}
+.service-ui[data-service-reference="plumbing-drainage-gas"] #gallery .pg-photo>img{display:block;inline-size:100%;block-size:100%;object-fit:cover;object-position:center}
+.service-ui[data-service-reference="plumbing-drainage-gas"] #gallery .pg-frames figcaption{position:static;display:flex;flex:1;flex-flow:row wrap;align-content:center;justify-content:flex-start;gap:3px 7px;min-block-size:48px;margin:0;padding:9px 10px;background:#f8f5ee;border-radius:0 0 15px 15px;color:#0b1836;text-align:start;font-size:15px;line-height:1.4;font-weight:650;overflow-wrap:normal;word-break:normal}
+.service-ui[data-service-reference="plumbing-drainage-gas"] #gallery .pg-phase{font-size:15px;line-height:1.2;font-weight:900;color:#1424ff;letter-spacing:-.02em}
+.service-ui[data-service-reference="plumbing-drainage-gas"] #gallery .pg-join{position:absolute;inset-inline-end:-20px;inset-block-start:37%;translate:0 -50%;inline-size:29px;block-size:29px;display:grid;place-items:center;border:2px solid #f8f5ee;border-radius:50%;background:#1424ff;z-index:2;pointer-events:none}
+/* Override the legacy global filter reset only to recolour these monochrome icons. */
+.service-ui[data-service-reference="plumbing-drainage-gas"] #gallery .pg-join img{inline-size:20px;block-size:20px;filter:brightness(0) invert(1)!important}
+.service-ui[data-service-reference="plumbing-drainage-gas"] #gallery .pg-record{grid-column:2;grid-row:1/3;min-inline-size:0;border:3px solid #1424ff;border-radius:24px;padding:17px 16px;background:#f8f5ee;color:#0b1836;box-shadow:3px 4px 0 #fb43bf}
+.service-ui[data-service-reference="plumbing-drainage-gas"] #gallery .pg-record h3{font-size:20px;line-height:1.25;margin:0 0 12px;font-weight:900;color:#0b1836}
+.service-ui[data-service-reference="plumbing-drainage-gas"] #gallery .pg-record dl{margin:0}
+.service-ui[data-service-reference="plumbing-drainage-gas"] #gallery .pg-record dl>div{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:8px;align-items:center;border-top:1px solid #0b183633;padding:12px 0}
+.service-ui[data-service-reference="plumbing-drainage-gas"] #gallery .pg-record dl>div:last-child{padding-bottom:0}
+.service-ui[data-service-reference="plumbing-drainage-gas"] #gallery .pg-record dt{display:flex;align-items:center;gap:6px;font-size:15px;line-height:1.35;font-weight:850}
+.service-ui[data-service-reference="plumbing-drainage-gas"] #gallery .pg-record dt img{inline-size:24px;block-size:24px;flex:none}
+.service-ui[data-service-reference="plumbing-drainage-gas"] #gallery .pg-record dd{margin:0;font-size:15px;line-height:1.5;font-weight:600;overflow-wrap:normal;word-break:normal}
+/* Keep handover copy on solid contrasting surfaces, never across a gradient boundary. */
+.service-ui[data-service-reference="plumbing-drainage-gas"] .su-handover{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr) 140px;gap:0;padding:0;min-block-size:154px;background:transparent;border-radius:30px;box-shadow:none}
+.service-ui[data-service-reference="plumbing-drainage-gas"] .su-handover>div{position:relative;align-self:stretch;display:flex;flex-direction:column;justify-content:center;margin-inline-end:14px;padding:23px 25px 23px 84px;background:#1424ff;color:#fff;border-radius:29px 44px 44px 29px;box-shadow:0 5px 0 #e2ff08}
+.service-ui[data-service-reference="plumbing-drainage-gas"] .su-handover>div::before{content:"";position:absolute;inset-inline-start:20px;inset-block-start:50%;translate:0 -50%;inline-size:45px;block-size:58px;background:url('/assets/sector-selector/icons/clipboard-text.svg') center/contain no-repeat;filter:brightness(0) invert(1)!important}
+.service-ui[data-service-reference="plumbing-drainage-gas"] .su-handover h2{font-size:clamp(24px,2vw,30px);line-height:1.2;color:#fff}
+.service-ui[data-service-reference="plumbing-drainage-gas"] .su-handover>div p{font-size:16px;line-height:1.5;color:#fff}
+.service-ui[data-service-reference="plumbing-drainage-gas"] .su-handover>ul{align-self:stretch;display:flex;flex-direction:column;justify-content:center;margin:0;padding:20px 24px;background:#e2ff08;color:#0b1836;border-radius:30px 0 0 30px;box-shadow:0 5px 0 #ff5a08}
+.service-ui[data-service-reference="plumbing-drainage-gas"] .su-handover li{color:#0b1836;font-size:17px;line-height:1.45}
+.service-ui[data-service-reference="plumbing-drainage-gas"] .su-handover>img{display:block;inline-size:140px;block-size:100%;max-block-size:205px;padding:8px;object-fit:contain;align-self:stretch;justify-self:center;background:#ff5a08;border-radius:0 30px 30px 0;box-shadow:0 5px 0 #ff5a08;rotate:0deg;transform:none}
+@media(min-width:701px) and (max-width:1150px){
+ .service-ui[data-service-reference="plumbing-drainage-gas"] #gallery{grid-template-columns:minmax(0,3fr) minmax(210px,1fr);column-gap:14px}
+ .service-ui[data-service-reference="plumbing-drainage-gas"] #gallery .pg-frames{gap:7px}
+ .service-ui[data-service-reference="plumbing-drainage-gas"] #gallery .pg-record{padding:15px 12px}
+ .service-ui[data-service-reference="plumbing-drainage-gas"] #gallery .pg-record h3{font-size:18px}
+ .service-ui[data-service-reference="plumbing-drainage-gas"] #gallery .pg-record dt{font-size:14px}
+ .service-ui[data-service-reference="plumbing-drainage-gas"] #gallery .pg-record dd{font-size:13px}
+ .service-ui[data-service-reference="plumbing-drainage-gas"] #gallery .pg-record dl>div{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:7px;padding:9px 0}
+ .service-ui[data-service-reference="plumbing-drainage-gas"] #gallery .pg-photo{aspect-ratio:1.1}
+ .service-ui[data-service-reference="plumbing-drainage-gas"] #gallery .pg-frames figcaption{padding:9px 8px;font-size:14px;min-block-size:60px}
+ .service-ui[data-service-reference="plumbing-drainage-gas"] #gallery .pg-phase{font-size:14px}
+ .service-ui[data-service-reference="plumbing-drainage-gas"] #gallery .pg-join{inset-inline-end:-18px;inline-size:27px;block-size:27px}
+ .service-ui[data-service-reference="plumbing-drainage-gas"] .su-handover{grid-template-columns:1fr 1fr}
+ .service-ui[data-service-reference="plumbing-drainage-gas"] .su-handover>img{display:none}
+ .service-ui[data-service-reference="plumbing-drainage-gas"] .su-handover>ul{border-radius:29px}
+}
+@media(max-width:700px){
+ .service-ui[data-service-reference="plumbing-drainage-gas"] #gallery{grid-template-columns:minmax(0,1fr);padding:20px 15px;border-radius:26px;gap:16px}
+ .service-ui[data-service-reference="plumbing-drainage-gas"] #gallery .pg-heading{grid-column:1;grid-row:1;gap:10px}
+ .service-ui[data-service-reference="plumbing-drainage-gas"] #gallery .pg-frames{grid-column:1;grid-row:2;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px 9px}
+ .service-ui[data-service-reference="plumbing-drainage-gas"] #gallery .pg-photo{aspect-ratio:1}
+ .service-ui[data-service-reference="plumbing-drainage-gas"] #gallery .pg-frames figcaption{flex-direction:column;flex-wrap:nowrap;font-size:15px;min-block-size:84px;padding:10px 9px}
+ .service-ui[data-service-reference="plumbing-drainage-gas"] #gallery .pg-phase{font-size:14px}
+ .service-ui[data-service-reference="plumbing-drainage-gas"] #gallery .pg-join{inset-inline-end:-18px;inline-size:28px;block-size:28px}
+ .service-ui[data-service-reference="plumbing-drainage-gas"] #gallery .pg-frames figure:nth-child(2)>.pg-join{display:none}
+ .service-ui[data-service-reference="plumbing-drainage-gas"] #gallery .pg-record{grid-column:1;grid-row:3;padding:18px 16px;border-radius:21px}
+ .service-ui[data-service-reference="plumbing-drainage-gas"] #gallery .pg-record h3{font-size:20px}
+ .service-ui[data-service-reference="plumbing-drainage-gas"] #gallery .pg-record dl>div{grid-template-columns:minmax(0,.9fr) minmax(0,1.2fr);gap:12px;padding:12px 0}
+ .service-ui[data-service-reference="plumbing-drainage-gas"] #gallery .pg-record dt{font-size:15px}
+ .service-ui[data-service-reference="plumbing-drainage-gas"] #gallery .pg-record dd{font-size:15px;line-height:1.5}
+ .service-ui[data-service-reference="plumbing-drainage-gas"] .su-handover{grid-template-columns:1fr;gap:12px;background:transparent;border-radius:26px}
+ .service-ui[data-service-reference="plumbing-drainage-gas"] .su-handover>div{margin-inline-end:0;padding:22px 20px 22px 73px;border-radius:25px;box-shadow:0 4px 0 #e2ff08}
+ .service-ui[data-service-reference="plumbing-drainage-gas"] .su-handover>div::before{inset-inline-start:17px;inline-size:37px;block-size:45px}
+ .service-ui[data-service-reference="plumbing-drainage-gas"] .su-handover>ul{padding:20px 22px;border-radius:25px}
+ .service-ui[data-service-reference="plumbing-drainage-gas"] .su-handover>img{display:none}
+}

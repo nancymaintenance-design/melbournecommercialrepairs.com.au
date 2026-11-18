@@ -33,6 +33,7 @@ module.exports=services=>Object.fromEntries(services.map((s,i)=>[s.slug,{
  ]:i===2?['/assets/service-reference-v1/gallery-electrical-lighting-before.webp','/assets/service-reference-v1/gallery-electrical-lighting-after.webp',...scenes[i].slice(0,2)]
  :i===7?['/assets/service-reference-v1/gallery-signage-wayfinding-day.webp','/assets/service-reference-v1/gallery-signage-wayfinding-night.webp',showcase('signage'),detail('signage')]
  :i===11?['/assets/service-reference-v1/gallery-fit-outs-make-good-existing.webp','/assets/service-reference-v1/gallery-fit-outs-make-good-work.webp','/assets/service-reference-v1/gallery-fit-outs-make-good-complete.webp',detail('wall-repair')]
+ :i===3?['site','inspection','work','completed'].map(phase=>'/assets/service-reference-v1/gallery-plumbing-'+phase+'-v2.webp')
  :i===4?[detail('hvac-equipment'),problem('hvac-filter'),problem('hvac-condensate'),detail('hvac-technician')]
  :i===5?['/assets/service-reference-v1/specialist-fire-security-access.webp',problem('access-reader'),problem('security-camera'),problem('security-intercom')]:scenes[i]
 }]))
