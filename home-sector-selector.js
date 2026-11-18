@@ -239,7 +239,7 @@
   }
 ]
  ];
- function officePopover(){return '<div id="ps-office-popover" class="ps-office-popover" role="dialog" aria-modal="false" aria-labelledby="ps-office-title" hidden><div class="ps-office-heading"><img class="ps-office-icon" alt="" width="28" height="28"><strong id="ps-office-title"></strong><button type="button" class="ps-office-close" aria-label="关闭服务卡片">×</button></div><div class="ps-office-body"><p></p><a class="ps-office-link"><span></span><span aria-hidden="true">↗</span></a></div></div>';}
+ function officePopover(){return '<div id="ps-office-popover" class="ps-office-popover" role="dialog" aria-modal="false" aria-labelledby="ps-office-title" hidden><div class="ps-office-heading"><img class="ps-office-icon" alt="" width="28" height="28"><strong id="ps-office-title"></strong><button type="button" class="ps-office-close" aria-label="Close service details" data-aria-label-zh="关闭服务卡片" data-aria-label-en="Close service details">×</button></div><div class="ps-office-body"><p></p><a class="ps-office-link"><span></span><span aria-hidden="true">↗</span></a></div></div>';}
  function placeOfficePopover(anchor,bounds,size,viewport,avoid=[]){
   const leftEdge=Math.max(10,bounds.left+8),rightEdge=Math.min(viewport.width-10,bounds.right-8);
   const topInset=viewport.top||12,maxLeft=Math.max(leftEdge,rightEdge-size.width),maxTop=Math.max(topInset,viewport.height-size.height-12);

@@ -225,9 +225,9 @@ function hubRegionPreview(c) {
     const v=visual(c,r.slug);
     const labels=hubRegionLabels[r.areaParam]||[r.nameZh,r.nameEn];
     const primary=labels[c.lang==='zh'?0:1];
-    const secondary=labels[c.lang==='zh'?1:0];
+    const secondary=c.lang==='zh'?labels[1]:'Commercial property services';
     const primaryMarkup=r.areaParam==='frankston-mornington-peninsula'&&c.lang==='zh'?'Frankston 与<br><span>Mornington Peninsula</span>':e(primary);
-    return `<article class="area-card${i===0?' is-active':''}" data-region-card="${e(r.areaParam)}"><button class="area-card__select area-card__preview${i===0?' is-active':''}" type="button" data-region-preview-select="${e(r.areaParam)}" aria-controls="preview-${e(r.areaParam)}" aria-pressed="${i===0?'true':'false'}" aria-label="${e(c.t('预览：','Preview: ')+primary)}"><span class="area-card__image">${picture(c,v.card)}</span><span class="area-card__body"><strong class="area-card__title">${primaryMarkup}</strong><span class="area-card__subtitle" lang="${c.lang==='zh'?'en':'zh-Hans'}">${e(secondary)}</span></span></button><a class="area-card__link" href="${e(c.regionHref(r))}" aria-label="${e(c.t('查看','Explore ')+primary+c.t('维护服务',' maintenance services'))}">${icon('arrow')}</a></article>`;
+    return `<article class="area-card${i===0?' is-active':''}" data-region-card="${e(r.areaParam)}"><button class="area-card__select area-card__preview${i===0?' is-active':''}" type="button" data-region-preview-select="${e(r.areaParam)}" aria-controls="preview-${e(r.areaParam)}" aria-pressed="${i===0?'true':'false'}" aria-label="${e(c.t('预览：','Preview: ')+primary)}"><span class="area-card__image">${picture(c,v.card)}</span><span class="area-card__body"><strong class="area-card__title">${primaryMarkup}</strong><span class="area-card__subtitle" lang="en">${e(secondary)}</span></span></button><a class="area-card__link" href="${e(c.regionHref(r))}" aria-label="${e(c.t('查看','Explore ')+primary+c.t('维护服务',' maintenance services'))}">${icon('arrow')}</a></article>`;
   }).join('')}</div><div class="region-preview">${c.data.regions.map((r,i)=>{
     const v=visual(c,r.slug);
     const serviceIndexes=r.slug==='cbd-inner-melbourne'?[0,1,3]:[0,1,2];

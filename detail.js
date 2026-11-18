@@ -16,10 +16,11 @@
   all('#main-nav a').forEach(a=>{const current=new URL(a.href).pathname===currentPath;a.classList.toggle('active',current);if(current)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});
   $('.topic-toc')?.setAttribute('aria-label',language==='en'?'On this page':'本页内容');
   $('#year').textContent=new Date().getFullYear();
+  window.EllisLocaleUI?.apply();
  }
  $('#language-switch').onclick=()=>{language=language==='zh'?'en':'zh';apply();const u=new URL(location.href);u.searchParams.set('lang',language);history.replaceState(null,'',u)};
- $('#menu-toggle').onclick=()=>{const open=$('#menu-toggle').getAttribute('aria-expanded')!=='true';$('#menu-toggle').setAttribute('aria-expanded',open);$('#main-nav').classList.toggle('is-open',open)};
- document.addEventListener('keydown',e=>{if(e.key==='Escape'){$('#main-nav').classList.remove('is-open');$('#menu-toggle').setAttribute('aria-expanded','false')}});
+ $('#menu-toggle').onclick=()=>{const open=$('#menu-toggle').getAttribute('aria-expanded')!=='true';$('#menu-toggle').setAttribute('aria-expanded',open);$('#main-nav').classList.toggle('is-open',open);window.EllisLocaleUI?.syncMenu()};
+ document.addEventListener('keydown',e=>{if(e.key==='Escape'){$('#main-nav').classList.remove('is-open');$('#menu-toggle').setAttribute('aria-expanded','false');window.EllisLocaleUI?.syncMenu()}});
  apply();
  const media=matchMedia('(prefers-reduced-motion: reduce)');
  let observer;

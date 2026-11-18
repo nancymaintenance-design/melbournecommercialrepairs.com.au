@@ -3,6 +3,4 @@
 @import url("/lower.css") layer(host);
 @import url("/cinematic.css") layer(host);
 @import url("/designer.css") layer(host);
-@import url("/navigation-refinement.css") layer(host);
-@import url("/footer-brand.css") layer(host);
 @import url("/inner-footer-transition.css") layer(host);
