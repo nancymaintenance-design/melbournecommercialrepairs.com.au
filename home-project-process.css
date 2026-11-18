@@ -57,6 +57,7 @@ body #contact.project-process{row-gap:3px}
 #contact.project-process .pp-note-arrow{filter:brightness(0) invert(1)!important}
 #contact.project-process .pp-connector{height:180px;top:-64px}
 #contact.project-process .pp-contact-item:nth-child(2) strong{font-size:clamp(20px,1.62vw,29px);white-space:nowrap;letter-spacing:-.055em}
+#contact.project-process .pp-contact-item:nth-child(2) strong{white-space:normal;overflow-wrap:anywhere}
 @media(max-width:1200px){#contact.project-process .pp-action{margin-top:0}#contact.project-process .pp-contact-item:nth-child(2) strong{font-size:clamp(17px,1.55vw,23px)}}
 @media(max-width:900px){body #contact.project-process{row-gap:25px}#contact.project-process .pp-action{margin-top:-15px}#contact.project-process .pp-contact-item:nth-child(2) strong{font-size:25px;white-space:normal;letter-spacing:-.035em}}
 @media(max-width:520px){body #contact.project-process{row-gap:20px}#contact.project-process .pp-action{margin-top:0}#contact.project-process .pp-action-face{padding-right:12%}#contact.project-process .pp-contact-item:nth-child(2) strong{font-size:21px}}

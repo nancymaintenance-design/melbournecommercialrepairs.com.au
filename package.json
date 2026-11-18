@@ -5,13 +5,14 @@
   "description": "Bilingual Ellis Services Group commercial property maintenance website for Melbourne",
   "scripts": {
     "build": "node build-pages.cjs && node build-region-v2.mjs",
-    "check": "node --check app.js && node --check detail.js && node --check designer-motion.js && node --check motion.js && node --check scene-visual.js && node --check build-pages.cjs && node --check service-showcase.js && node --check content/asset-versions.cjs && node --check service-directory.js && node --check content/service-directory.cjs && node --check content/design-shell.cjs && node --check sector-explorer.js && node --check content/sector-explorer.cjs",
+    "check": "node --check app.js && node --check detail.js && node --check designer-motion.js && node --check motion.js && node --check scene-visual.js && node --check build-pages.cjs && node --check service-showcase.js && node --check content/asset-versions.cjs && node --check service-directory.js && node --check content/service-directory.cjs && node --check content/design-shell.cjs && node --check sector-explorer.js && node --check content/sector-explorer.cjs && node --check content/service-ui-details.cjs && node --check content/service-ui.cjs && node --check service-reference.js",
     "test:assets": "node tests/asset-versions.cjs",
     "test:visuals": "node tests/visual-preservation.cjs",
     "test:compact": "node tests/compact-inner-pages.cjs",
     "test:regions": "node tests/region-v2-integration.mjs",
     "test:navigation": "node tests/navigation-locale.cjs",
-    "test:enquiry": "node tests/enquiry-api.cjs"
+    "test:enquiry": "node tests/enquiry-api.cjs",
+    "test:services": "node tests/service-reference.cjs"
   },
   "engines": {
     "node": ">=20"

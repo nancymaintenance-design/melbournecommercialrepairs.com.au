@@ -1,5 +1,10 @@
 /* One navigation geometry contract, including legacy page-scoped overrides. */
 :root{--header-height:78px;--nav-height:78px;--nav-logo:54px;--nav-wordmark:34px;--nav-link-size:14px}
+/* Continue a blue hero behind the shared pill's four exposed corners.
+   This document-top paint scrolls away naturally; lower reading areas stay warm white. */
+body.detail-page.service-reference-page{--nav-surround:#1424ff}
+body.detail-page.region-v2-host{--nav-surround:#1000ff}
+body.detail-page:is(.service-reference-page,.region-v2-host)::before{content:"";position:absolute;inset:0 0 auto;block-size:var(--header-height);background:var(--nav-surround);pointer-events:none}
 body .site-header{box-sizing:border-box!important;display:flex!important;align-items:center!important;justify-content:space-between!important;position:fixed!important;inset:0 auto auto 0!important;translate:none!important;transform:none!important;width:100%!important;height:var(--nav-height)!important;min-height:var(--nav-height)!important;margin:0!important;padding:0 32px!important;gap:28px!important;border:0!important;border-radius:999px!important;z-index:90;background:var(--paper,#faf7ef);color:#10142a;box-shadow:0 9px 18px #10142a12;backdrop-filter:none}
 body .site-header .brand{display:flex;align-items:center;gap:12px!important;flex:0 0 auto;text-decoration:none;color:inherit}
 /* Preserve the homepage's original document flow, including reduced motion. */

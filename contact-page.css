@@ -140,3 +140,5 @@ html[lang=en] .contact-submit{font-size:calc(32 * var(--cu))}
 @media(min-width:901px){html[lang=en] body.contact-page .contact-form-heading h2{font-size:calc(32 * var(--cu))!important;line-height:calc(48 * var(--cu));letter-spacing:calc(-1 * var(--cu));max-width:calc(455 * var(--cu))}}
 
 .contact-photo-format{display:block;margin:6px 4px 0;font-size:12px;line-height:1.4;color:#071239}
+/* The current company mailbox is longer; keep it readable without colliding with its action. */
+.contact-detail-row .contact-email{white-space:normal;overflow-wrap:anywhere;min-width:0}

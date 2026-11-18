@@ -18,6 +18,12 @@ module.exports=function renderTopics(page,data,serviceSlugs,sectorSlugs){
  const byId=Object.fromEntries(records.map(x=>[x.id,x]));
  function links(ids,cls='detail-links'){return `<div class="${cls}">${ids.map(id=>{const x=byId[id];if(!x)throw Error('Unknown link '+id);return `<a href="/${x.route}/" data-local-page><span class="micro-label">${id}</span>${dual('h3',...x.label)}${dual('p',...x.intro)}<span class="related-arrow" aria-hidden="true">↗</span></a>`}).join('')}</div>`;}
  for(const x of records){
+  if(x.isService){
+   const serviceUI=require('./service-ui.cjs'),s=serviceUI.pack.services[x.index],en=require('./service-pages.en.json')[x.index];
+   const schema={'@context':'https://schema.org','@type':'Service',name:s.EnglishH1,serviceType:en.title,description:en.heroCopy,provider:{'@id':'/#ellis-organization'},areaServed:{'@type':'City',name:'Melbourne'}};
+   page(x.route,s.ChineseH1,s.EnglishH1,serviceUI.section(x.index,x,records),'',{topic:x,serviceReference:true,titleZh:s.ChineseH1+' | Ellis Services Group',titleEn:s.EnglishH1+' | Ellis Services Group',descriptionZh:s.heroCopy,descriptionEn:en.heroCopy,extraHead:`<script src="/service-reference.js" defer></script><script type="application/ld+json">${json(schema)}</script>`});
+   continue;
+  }
   const contents=`<nav class="topic-toc" aria-label="Page topics">${x.sections.map((s,i)=>`<a href="#scope-${i+1}"><span>0${i+1}</span>${dual('span',s.h2Zh,s.h2En)}</a>`).join('')}</nav>`;
   const sections=`<div class="topic-sections">${x.sections.map((s,i)=>`<section id="scope-${i+1}" class="topic-section" data-entrance><span class="scope-number" aria-hidden="true">0${i+1} ↗</span>${dual('h2',s.h2Zh,s.h2En)}${dual('p',s.zh,s.en)}${s.subsections.map(sub=>`<div class="scope-subsection">${dual('h3',sub.h3Zh,sub.h3En)}${dual('p',sub.zh,sub.en)}</div>`).join('')}<div class="scope-service-links">${(sectionLinks[x.id]?.[i]||[]).map(id=>`<a href="/${byId[id].route}/" data-local-page data-zh="${esc(byId[id].label[0])} ↗" data-en="${esc(byId[id].label[1])} ↗">${esc(byId[id].label[0])} ↗</a>`).join('')}</div></section>`).join('')}</div>`;
   const faq=`<section class="topic-faq" id="questions" data-entrance>${dual('p','项目常见问题','PROJECT QUESTIONS','eyebrow')}${dual('h2',x.label[0]+'常见问题',x.label[1]+' FAQs')}<div class="topic-faq-list">${x.faqs.map(f=>`<details><summary>${dual('span',f.qZh,f.qEn)}<span class="faq-symbol" aria-hidden="true">+</span></summary>${dual('p',f.zh,f.en)}</details>`).join('')}</div></section>`;
