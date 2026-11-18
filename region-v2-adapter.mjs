@@ -15,3 +15,16 @@ async function mount(){
 }
 mount();
 new MutationObserver(mount).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});
+
+// A single delegated photo transition for tab-led scenes. Older async decodes
+// cannot overwrite a newer choice, and language remounts leave no old listeners.
+main.addEventListener('ellis:scenechange',async event=>{
+ const wrapper=event.target.closest('[data-scene-views]');if(!wrapper)return;
+ const index=String(event.detail.index),src=JSON.parse(wrapper.dataset.sceneViews)[Number(index)];
+ const image=wrapper.querySelector('.rr-scene-photo>img');if(!image||!src||image.getAttribute('src')===src)return;
+ const incoming=new Image();incoming.src=src;
+ try{await incoming.decode();}catch{return;}
+ if(!image.isConnected||wrapper.getAttribute('data-active-scene')!==index)return;
+ image.getAnimations().forEach(animation=>animation.cancel());image.src=src;
+ if(!matchMedia('(prefers-reduced-motion: reduce)').matches)image.animate([{opacity:.75,transform:'scale(1.015)'},{opacity:1,transform:'scale(1)'}],{duration:220,easing:'ease-out'});
+});

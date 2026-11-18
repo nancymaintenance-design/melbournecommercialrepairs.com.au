@@ -50,3 +50,18 @@ body.cinematic-v2 .footer-brand-panel a:hover{color:var(--footer-lime);text-deco
 @media(max-width:520px){body.cinematic-v2:has(#contact.project-process) .footer-brand-panel{margin-top:89px}.footer-brand-panel .footer-google .social-copy strong{font-size:21px}}
 @media(max-width:360px){.footer-brand-panel .footer-social{grid-template-columns:32px minmax(0,1fr) 20px;padding-inline:12px;gap:8px}.footer-brand-panel .footer-social .social-icon{width:32px;height:32px}.footer-brand-panel .social-copy{padding-left:10px}.footer-brand-panel .social-copy strong{font-size:21px}.footer-brand-panel .footer-google .social-copy strong{font-size:19px}}
 @media(prefers-reduced-motion:reduce){.footer-brand-panel a,.footer-brand-panel .social-arrow{transition:none!important}}
+
+/* Shared by home and every inner page, including hover and keyboard focus. */
+body.cinematic-v2 .site-footer.footer-brand-panel{font-family:var(--sans,Arial,sans-serif);font-weight:400;line-height:1.5}
+.footer-brand-panel .footer-company h2{text-wrap:balance}
+.footer-brand-panel .footer-bottom{font-family:inherit;font-weight:400}
+body.cinematic-v2 .footer-brand-panel :is(.footer-facebook,.footer-google),
+body.cinematic-v2 .footer-brand-panel :is(.footer-facebook,.footer-google):is(:hover,:focus-visible),
+body.cinematic-v2 .footer-brand-panel :is(.footer-facebook,.footer-google) .social-copy,
+body.cinematic-v2 .footer-brand-panel :is(.footer-facebook,.footer-google) .social-copy>*,
+body.cinematic-v2 .footer-brand-panel :is(.footer-facebook,.footer-google) .social-arrow{color:#081d3b}
+body.cinematic-v2 .footer-brand-panel :is(.footer-instagram,.footer-linkedin),
+body.cinematic-v2 .footer-brand-panel :is(.footer-instagram,.footer-linkedin):is(:hover,:focus-visible),
+body.cinematic-v2 .footer-brand-panel :is(.footer-instagram,.footer-linkedin) .social-copy,
+body.cinematic-v2 .footer-brand-panel :is(.footer-instagram,.footer-linkedin) .social-copy>*,
+body.cinematic-v2 .footer-brand-panel :is(.footer-instagram,.footer-linkedin) .social-arrow{color:#fff8ee}

@@ -10,6 +10,7 @@
     "test:visuals": "node tests/visual-preservation.cjs",
     "test:compact": "node tests/compact-inner-pages.cjs",
     "test:regions": "node tests/region-v2-integration.mjs",
+    "test:navigation": "node tests/navigation-locale.cjs",
     "test:enquiry": "node tests/enquiry-api.cjs"
   },
   "engines": {
