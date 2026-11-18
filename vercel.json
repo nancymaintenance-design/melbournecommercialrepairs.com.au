@@ -1,5 +1,21 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "buildCommand": "npm run build",
-  "outputDirectory": "."
+  "outputDirectory": ".",
+  "routes": [
+    { "src": "^/_ellisl10n(?:/.*)?$", "status": 404 },
+    {
+      "src": "^/$",
+      "methods": ["GET", "HEAD"],
+      "has": [{ "type": "query", "key": "lang", "value": "^en$" }],
+      "dest": "/_ellisl10n/index.html"
+    },
+    {
+      "src": "^/(about|contact|faq|privacy|(?:services|sectors|insights|areas/melbourne)(?:/[a-z-]+)?)/?$",
+      "methods": ["GET", "HEAD"],
+      "has": [{ "type": "query", "key": "lang", "value": "^en$" }],
+      "dest": "/_ellisl10n/$1/index.html"
+    },
+    { "handle": "filesystem" }
+  ]
 }

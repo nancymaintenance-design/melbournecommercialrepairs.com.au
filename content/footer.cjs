@@ -1,4 +1,5 @@
 /* Shared footer: business facts and actual destinations, independent of the enquiry strip. */
+const publicAddress=require('./public-address.cjs');
 const e=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;');
 const dual=(tag,zh,en,cls='')=>`<${tag}${cls?` class="${cls}"`:''} data-zh="${e(zh)}" data-en="${e(en)}">${e(zh)}</${tag}>`;
 const svg=(content,cls='')=>`<svg${cls?` class="${cls}"`:''} viewBox="0 0 48 48" aria-hidden="true">${content}</svg>`;
@@ -26,7 +27,7 @@ module.exports=business=>`<footer class="site-footer melbourne-footer footer-bra
  <a href="/" class="brand footer-brand" aria-label="Ellis Services Group home"><img class="brand-logo" src="/assets/ellis-services-logo.png" alt="" width="512" height="512"><span class="brand-name">ELLIS<span>SERVICES GROUP</span></span></a>
  ${dual('h2','墨尔本商业物业维修与维护','Commercial property care in Melbourne')}
  ${dual('p','建筑、设备与室外场地，统筹安排。','Coordinated work for buildings, systems and grounds.')}
- <a class="footer-address" href="${e(business.mapsUrl)}" target="_blank" rel="noopener noreferrer">${icons.pin}<span>459 Collins Street, Melbourne, VIC 3000</span></a>
+ <a class="footer-address" href="${e(business.mapsUrl)}" target="_blank" rel="noopener noreferrer">${icons.pin}<span>${e(publicAddress(business).full)}</span></a>
  <span class="footer-insurance">${icons.shield}<span>$20M Public Liability Insurance</span></span></div>
  ${groups.map(([zh,en,label,links])=>`<nav aria-label="${label}">${dual('h3',zh,en)}${links.map(([href,z,h])=>`<a href="${href}" data-zh="${e(z)}" data-en="${e(h)}">${e(z)}</a>`).join('')}</nav>`).join('')}
  <span class="footer-etch" aria-hidden="true">ELLIS</span></div>

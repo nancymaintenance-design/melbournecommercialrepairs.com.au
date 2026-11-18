@@ -4,12 +4,9 @@
  const metadata=JSON.parse($('#page-meta')?.textContent||'{}');
  function apply(){
   document.documentElement.lang=language==='en'?'en':'zh-CN';
-  all('[data-zh][data-en]').forEach(n=>n.textContent=n.dataset[language].replace(/\\n/g,'\n'));
+  all('[data-zh][data-en]').forEach(n=>{const copy=n.dataset[language].replace(/\\n/g,'\n');if(n.textContent!==copy)n.textContent=copy;});
   all('a[href^="/"]').forEach(a=>{const u=new URL(a.href);u.searchParams.set('lang',language);a.href=u.pathname+u.search+u.hash});
   $('.lang-en').classList.toggle('active',language==='en');$('.lang-zh').classList.toggle('active',language==='zh');
-  document.title=metadata[language==='en'?'titleEn':'titleZh']||$('h1').textContent+' | Ellis Services Group Melbourne';
-  const description=$('meta[name="description"]');if(description)description.content=metadata[language==='en'?'descriptionEn':'descriptionZh']||description.content;
-  const canonical=$('link[rel="canonical"]');if(canonical){const u=new URL(metadata.route||location.pathname,location.origin);u.searchParams.set('lang',language);canonical.href=u.href;}
   $('#language-switch').setAttribute('aria-label',language==='en'?'切换到中文':'Switch to English');
   $('#main-nav').setAttribute('aria-label',language==='en'?'Main navigation':'主导航');
   const currentPath=metadata.route?.startsWith('/services/')?'/services/':metadata.route?.startsWith('/sectors/')?'/sectors/':metadata.route?.startsWith('/areas/')?'/areas/melbourne/':metadata.route?.startsWith('/insights/')?'/insights/':metadata.route;
