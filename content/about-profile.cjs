@@ -1,7 +1,7 @@
 /* Dedicated company profile. Keep public company facts supplied by business.json. */
 const escape=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;');
 const dual=(tag,zh,en,cls='')=>`<${tag}${cls?` class="${cls}"`:''} data-zh="${escape(zh)}" data-en="${escape(en)}">${escape(zh)}</${tag}>`;
-exports.section=(business,registration)=>{
+exports.section=business=>{
  const groups=[
   ['building-maintenance','建筑与日常维修','Building & general maintenance','BUILDINGS'],
   ['hvac-building-systems','空调与设备系统','HVAC & building systems','SYSTEMS'],
@@ -17,7 +17,7 @@ exports.section=(business,registration)=>{
    </div></article>
    <aside class="ap-insurance-band" aria-label="$20M Public Liability Insurance"><strong class="ap-insurance-amount">$20M</strong><div class="ap-insurance-copy"><strong>Public Liability Insurance</strong>${dual('span','2000万澳币公众责任险','Public liability cover of $20 million','ap-insurance-zh')}</div><a class="ap-contact-link" href="/contact/" data-local-page data-zh="联系 ELLIS ↗" data-en="Contact ELLIS ↗">联系 ELLIS ↗</a></aside>
    <div class="ap-secondary-info"></div>
-   <details class="ap-registration-details"><summary>${dual('span','查看完整公司登记资料','View full company registration')}<span class="ap-details-mark" aria-hidden="true">+</span></summary><div class="ap-registration-content">${registration}${dual('p','我们的服务面向墨尔本。主要经营登记地区为 VIC 3030；该公开记录未列出街道地址。','Our services are for Melbourne. The public register lists VIC 3030 as the main business location and does not publish a street address.','ap-register-note')}<a href="${escape(business.mapsUrl)}" class="ap-map-link" target="_blank" rel="noopener noreferrer" data-zh="查看商家地图 ↗" data-en="View business map ↗">查看商家地图 ↗</a></div></details>
+   ${require('./about-identity.cjs').section(business)}
   </div>
  </section>`;
 };

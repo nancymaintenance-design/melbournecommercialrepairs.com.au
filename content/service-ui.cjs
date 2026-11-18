@@ -42,7 +42,10 @@ function gallery(s,en,a){
   content=`<div class="su-stage-film"><div class="su-stage-strip" role="group" aria-label="Project stages" data-aria-label-zh="项目阶段" data-aria-label-en="Project stages">${labels.map(([z,e],i)=>`<button type="button" data-stage-card="${i}" aria-pressed="${i===0}">${pic(i)}${dual('span',z,e)}</button>`).join('')}</div>${record}</div>`;
  }
  else if(type==='systems'){
-  content=`<div class="su-plumbing-film"><div>${s.gallery.shots.map((z,i)=>`<figure>${pic(i)}${dual('figcaption',z,en.gallery.shots[i])}</figure>`).join('')}</div>${record}</div>`;
+  const scopeLabels=[['处理范围','Work scope'],['施工记录','Work records'],['交付事项','Handover']];
+  const recordIcons=['wrench','clipboard-text','check-circle'];
+  const records=`<aside class="su-record pg-record">${dual('h3','项目范围记录','Scope record')}<dl>${scopeLabels.map(([z,e],i)=>`<div><dt><img src="/assets/sector-selector/icons/${recordIcons[i]}.svg" width="26" height="26" alt="" aria-hidden="true">${dual('span',z,e)}</dt>${dual('dd',s.handover[i],en.handover[i])}</div>`).join('')}</dl></aside>`;
+  content=`<div class="su-plumbing-film pg-film"><div class="pg-frames">${s.gallery.shots.map((z,i)=>`<figure><div class="pg-photo">${pic(i)}</div><figcaption>${dual('strong',String(i+1).padStart(2,'0')+' / '+z.split('：')[0],String(i+1).padStart(2,'0')+' / '+en.gallery.shots[i].split(':')[0],'pg-phase')}${dual('span',z.split('：').slice(1).join('：'),en.gallery.shots[i].split(':').slice(1).join(':').trim())}</figcaption>${i<3?'<span class="pg-join" aria-hidden="true"><img src="/assets/sector-selector/icons/arrow-right.svg" width="22" height="22" alt=""></span>':''}</figure>`).join('')}</div>${records}</div>`;
  }
  else if(type==='hvac'){
   const phases=[['设备检查','Equipment inspection'],['维护过程','Maintenance'],['运行检查','Operation checks']];
@@ -58,7 +61,8 @@ function gallery(s,en,a){
   const film=day?[2,3].map(i=>`<figure>${pic(i)}${dual('figcaption',...captions[i])}</figure>`).join(''):s.gallery.shots.slice(1).map((x,j)=>`<button type="button" data-gallery-jump="${j+1}">${pic(j+1)}${dual('span',...captions[j+1])}</button>`).join('');
   content=`<div class="su-gallery-tabs su-tabs" role="tablist" aria-label="Gallery" data-aria-label-zh="图库视角" data-aria-label-en="Gallery views">${labels.map(([z,e],i)=>control('gallery',i,z,e,i===0)).join('')}</div><div class="su-gallery-layout su-gallery-${type}"><div class="su-gallery-stage">${labels.map(([z,e],i)=>panel('gallery',i,`<figure>${pic(i)}${dual('figcaption',z,e)}</figure>`,i===0)).join('')}</div>${record}<div class="su-film">${film}</div></div>`;
  }
- return `<section class="su-gallery su-gallery-kind-${type}" id="gallery" data-su-reveal>${heading('04',s.gallery.title,en.gallery.title)}${dual('p',s.gallery.label,en.gallery.label,'su-illustration-label')}${content}</section>`;
+ const intro=heading('04',s.gallery.title,en.gallery.title)+dual('p',s.gallery.label,en.gallery.label,'su-illustration-label');
+ return `<section class="su-gallery su-gallery-kind-${type}" id="gallery" data-su-reveal>${type==='systems'?'<div class="pg-heading">'+intro+'</div>':intro}${content}</section>`;
 }
 exports.section=function(index,topic,records){
  const s=pack.services[index],en=english[index],a=assets[s.slug];if(!en)throw Error('Missing service English '+s.slug);

@@ -34,6 +34,10 @@ for(const page of [data.hub,...data.regions]){
  html=html.replace(/<script type="application\/json" id="page-meta">[\s\S]*?<\/script>/,`<script type="application/json" id="page-meta">${JSON.stringify(meta)}</script>`);
  html=html.replace(/<body\b[\s\S]*<\/body>/,`<body class="cinematic-v2 designer-detail detail-page region-v2-host">${header}<main id="main" class="region-v2-content ${kind}" data-lang="zh">${variants.zh}</main><script type="application/json" id="region-v2-locales">${JSON.stringify(variants).replaceAll('<','\\u003c')}</script><div class="inner-footer-shell region-footer-shell">${footer}</div><script type="module" src="/region-v2-adapter.mjs"></script></body>`);
  html=html.replace('</head>',`<link rel="stylesheet" href="/region-v2-host.css"><link rel="stylesheet" href="${assetBase}/styles.css"><link rel="stylesheet" href="/region-v2-adapter.css"><link rel="stylesheet" href="/region-reference.css"><link rel="stylesheet" href="/navigation-refinement.css"><link rel="stylesheet" href="/footer-brand.css"></head>`);
+ if(page===data.hub){
+  html=html.replace('</head>','<link rel="stylesheet" href="/region-city-cycle.css"></head>')
+   .replace('</body>','<script type="module" src="/region-city-cycle.mjs"></script></body>');
+ }
  await fs.writeFile(file,versionAssets(html,root));
 }
 console.log('Integrated V2: 11 existing routes, bilingual initial markup, scoped fidelity, original navigation and footer.');

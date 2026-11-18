@@ -12,7 +12,7 @@ ${[['提交需求','Share your requirements','物业位置、维修事项、期�
 <div class="pp-action-face"><img class="pp-note-arrow" src="/assets/project-process/arrow-up-right.svg" alt="" aria-hidden="true" width="44" height="44">
 ${d('h3','开始项目咨询','Start your project enquiry')}
 ${d('p','把需求告诉我们，\n一起明确下一步安排。','Tell us what you need.\nLet’s arrange the next step.','pp-action-description')}
-<button type="button" class="pp-submit" data-quote>${d('span','填写项目需求','Tell us about your project')}${icon('arrow-up-right')}</button>
+<a class="pp-submit" href="/contact/" data-local-page>${d('span','填写项目需求','Tell us about your project')}${icon('arrow-up-right')}</a>
 ${d('p','也可以直接致电或发送邮件','You can also call or email us.','pp-action-note')}</div></aside>
 <div class="pp-contact-strip">
 <a class="pp-contact-item" href="tel:+61450666876">${icon('phone')}<span>${d('span','直接致电','Call us','pp-contact-label')}<strong>ellis · 0450666876</strong></span></a>

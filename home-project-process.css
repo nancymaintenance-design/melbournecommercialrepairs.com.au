@@ -27,7 +27,7 @@ body #contact.project-process h2{font-size:clamp(42px,4vw,70px);line-height:1.12
 #contact.project-process .pp-note-arrow{position:absolute;right:9%;top:20%;width:46px;height:46px;filter:brightness(0) invert(1)}
 #contact.project-process .pp-action h3{font-size:clamp(32px,3.15vw,56px);line-height:1.13;letter-spacing:-.04em;font-weight:900;margin:0 0 20px;color:inherit;max-width:none}
 #contact.project-process .pp-action-description{font-size:clamp(17px,1.48vw,26px);font-weight:650;line-height:1.4;white-space:pre-line;margin:0 0 28px;max-width:none;color:inherit}
-#contact.project-process .pp-submit{display:flex;align-items:center;justify-content:center;gap:22px;width:100%;min-height:88px;padding:18px 24px;border:0;border-radius:999px;background:#e0ff00;color:#101b37;font:850 clamp(20px,1.95vw,35px)/1.25 Arial,'Microsoft YaHei',sans-serif;cursor:pointer;transition:box-shadow .25s,background .25s}
+#contact.project-process .pp-submit{display:flex;align-items:center;justify-content:center;gap:22px;width:100%;min-height:88px;padding:18px 24px;border:0;border-radius:999px;background:#e0ff00;color:#101b37;text-decoration:none;font:850 clamp(20px,1.95vw,35px)/1.25 Arial,'Microsoft YaHei',sans-serif;cursor:pointer;transition:box-shadow .25s,background .25s}
 #contact.project-process .pp-submit .pp-icon{width:40px;height:40px}
 #contact.project-process .pp-submit:hover{background:#efff6b;box-shadow:0 7px 0 #ff953a}
 #contact.project-process .pp-submit:focus-visible,#contact.project-process .pp-contact-item:focus-visible{outline:3px solid white;outline-offset:5px}
