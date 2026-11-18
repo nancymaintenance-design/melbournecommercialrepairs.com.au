@@ -5,9 +5,12 @@ async function mount(){
  const lang=document.documentElement.lang.startsWith('en')?'en':'zh';
  if(current===lang)return;
  current=lang;
- const template=document.createElement('template');template.innerHTML=variants[lang];
- main.replaceChildren(template.content.cloneNode(true));
- main.dataset.lang=lang;main.classList.add('js');
+ if(main.dataset.lang!==lang){
+  const template=document.createElement('template');template.innerHTML=variants[lang];
+  main.replaceChildren(template.content.cloneNode(true));
+  main.dataset.lang=lang;
+ }
+ main.classList.add('js');
  // Package interaction module initialises only this content root. No contact
  // demo markup or submit handler is mounted by a region page.
  const module=await import('./vendor/ellis-regions-v2/src/app-integration.mjs');

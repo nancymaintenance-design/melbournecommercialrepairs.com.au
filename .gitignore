@@ -9,3 +9,6 @@ __pycache__/
 Thumbs.db
 playwright-report/
 test-results/
+/_ellisl10n/
+/sitemap.xml
+/robots.txt

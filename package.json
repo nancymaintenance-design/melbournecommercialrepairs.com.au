@@ -4,7 +4,7 @@
   "private": true,
   "description": "Bilingual Ellis Services Group commercial property maintenance website for Melbourne",
   "scripts": {
-    "build": "node build-pages.cjs && node build-region-v2.mjs",
+    "build": "node build-pages.cjs && node build-region-v2.mjs && node build-search.cjs",
     "check": "node --check app.js && node --check detail.js && node --check designer-motion.js && node --check motion.js && node --check scene-visual.js && node --check build-pages.cjs && node --check service-showcase.js && node --check content/asset-versions.cjs && node --check service-directory.js && node --check content/service-directory.cjs && node --check content/design-shell.cjs && node --check sector-explorer.js && node --check content/sector-explorer.cjs && node --check content/service-ui-details.cjs && node --check content/service-ui.cjs && node --check service-reference.js",
     "test:assets": "node tests/asset-versions.cjs",
     "test:visuals": "node tests/visual-preservation.cjs",
@@ -16,5 +16,8 @@
   },
   "engines": {
     "node": ">=20"
+  },
+  "devDependencies": {
+    "parse5": "7.3.0"
   }
 }

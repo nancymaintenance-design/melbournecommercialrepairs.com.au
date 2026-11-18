@@ -140,15 +140,11 @@
     const inStory=!document.body.classList.contains('motion-reduced') && y < story.offsetTop+story.offsetHeight-pin.offsetHeight;
     const progress=Math.max(0,(y-story.offsetTop+header)/Math.max(1,story.offsetHeight-pin.offsetHeight));
     document.documentElement.lang = language === 'zh' ? 'zh-CN' : 'en';
-    const canonical=document.querySelector('link[rel="canonical"]');if(canonical)canonical.href=new URL('/?lang='+language,location.origin).href;
     const mapFrame=document.querySelector('#location iframe');
     if(mapFrame){
-      mapFrame.title=tr('Ellis 商家地图 — 墨尔本 Collins Street 459 号','Ellis business map — 459 Collins St, Melbourne');
       const mapUrl=new URL(mapFrame.src),mapLanguage=language==='zh'?'zh-CN':'en';
       if(mapUrl.searchParams.get('hl')!==mapLanguage){mapUrl.searchParams.set('hl',mapLanguage);mapFrame.src=mapUrl.href;}
     }
-    document.title = tr('墨尔本商业物业维护与维修 | Ellis Services Group','Commercial Property Maintenance & Repairs in Melbourne | Ellis Services Group');
-    document.querySelector('meta[name="description"]')?.setAttribute('content',tr('Ellis Services Group 为墨尔本商业物业提供建筑维修、空调水电、园林绿化、广告标识及外立面高空清洁。','Ellis Services Group coordinates commercial property maintenance in Melbourne: building repairs, HVAC, electrical, plumbing, landscaping, signage and high-access cleaning.'));
     $$('[data-zh][data-en]').forEach(el=>{el.textContent = el.getAttribute(`data-${language}`).replace(/\\n/g,'\n');});
     $$('[data-placeholder-zh]').forEach(el=>{el.placeholder = el.getAttribute(`data-placeholder-${language}`);});
     $('.lang-zh').classList.toggle('active',language==='zh');
