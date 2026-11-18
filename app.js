@@ -177,6 +177,7 @@
     $$('a[href^="/"]').forEach(a=>{const u=new URL(a.href);u.searchParams.set('lang',language);a.href=u.pathname+u.search+u.hash;});
     syncHomeNavigation();
     document.dispatchEvent(new CustomEvent('ellislanguagechange'));
+    window.EllisLocaleUI?.apply();
   }
 
   const dialogTriggers = new WeakMap();

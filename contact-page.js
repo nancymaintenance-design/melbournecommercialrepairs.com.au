@@ -4,6 +4,8 @@
   const form = document.getElementById('contact-enquiry-form');
   if (!form || form.dataset.contactMounted) return;
   form.dataset.contactMounted = 'true';
+  // Own validation copy follows the page language rather than the browser UI.
+  form.noValidate = true;
   document.getElementById('contact-draft-result')?.remove();
   document.getElementById('contact-draft-ready-link')?.remove();
   let formStatus = document.getElementById('contact-form-status');
@@ -34,7 +36,7 @@
     outcome = value; statusContainer.hidden = !value;
     formStatus.textContent = value ? tr(...messages[value]) : '';
   };
-  const changed = () => { if (sending) return; requestId = crypto.randomUUID(); showStatus(''); };
+  const changed = () => { if (sending) return; requestId = crypto.randomUUID(); showStatus(''); for(const control of form.querySelectorAll('[aria-invalid]'))if(control.validity.valid){control.removeAttribute('aria-invalid');control.removeAttribute('aria-describedby');} };
   const renderPhotoList = () => {
     if (!photoList) return;
     const fragment = document.createDocumentFragment();
@@ -85,7 +87,13 @@
     renderPhotoList(); showStatus(outcome);
   };
   form.addEventListener('submit', async event => {
-    event.preventDefault(); if (sending || !form.reportValidity()) return;
+    event.preventDefault(); if (sending) return;
+    if(!form.checkValidity()){
+      showStatus('fields');
+      const invalid=[...form.elements].filter(control=>control.willValidate&&!control.validity.valid);
+      invalid.forEach(control=>{control.setAttribute('aria-invalid','true');control.setAttribute('aria-describedby',formStatus.id);});
+      invalid[0]?.focus();return;
+    }
     if (selectedPhotos.length > 5) { showStatus('limit'); return; }
     const values = Object.fromEntries(new FormData(form)); delete values.photos;
     sending = true; showStatus('sending'); form.setAttribute('aria-busy', 'true');

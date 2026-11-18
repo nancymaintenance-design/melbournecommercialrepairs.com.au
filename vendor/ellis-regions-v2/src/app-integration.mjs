@@ -60,7 +60,7 @@ export function initialiseSelectionGroup(wrapper, {
   // Buttons retain native Tab/Space/Enter behavior; arrows are an added convenience.
   wrapper.addEventListener('keydown', (event) => {
     const trigger = event.target.closest(`[${triggerAttribute}]`);
-    if (!trigger || !wrapper.contains(trigger) || !['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+    if (!trigger || !wrapper.contains(trigger) || event.ctrlKey || event.metaKey || event.altKey || !['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
     const group = trigger.closest('[data-choice-group], .scene-selector, .region-preview-controls') || trigger.parentElement;
     const peers = Array.from(group.querySelectorAll(`[${triggerAttribute}]`));
     if (peers.length < 2 || !peers.includes(trigger)) return;

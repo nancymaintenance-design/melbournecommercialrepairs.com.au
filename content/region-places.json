@@ -1,0 +1,89 @@
+{
+  "cbd-inner": [
+    "Melbourne CBD",
+    "Docklands",
+    "Southbank",
+    "South Melbourne",
+    "Port Melbourne",
+    "Richmond",
+    "South Yarra"
+  ],
+  "eastern": [
+    "Box Hill",
+    "Doncaster",
+    "Ringwood",
+    "Hawthorn",
+    "Camberwell",
+    "Glen Waverley",
+    "Bayswater"
+  ],
+  "south-east": [
+    "Clayton",
+    "Mulgrave",
+    "Notting Hill",
+    "Oakleigh",
+    "Springvale",
+    "Dandenong",
+    "Dandenong South",
+    "Keysborough"
+  ],
+  "western": [
+    "Footscray",
+    "Sunshine",
+    "Sunshine West",
+    "Derrimut",
+    "Laverton North",
+    "Truganina",
+    "Altona North",
+    "Werribee"
+  ],
+  "northern": [
+    "Preston",
+    "Reservoir",
+    "Coburg",
+    "Campbellfield",
+    "Thomastown",
+    "Epping",
+    "Somerton"
+  ],
+  "north-east": [
+    "Heidelberg",
+    "Heidelberg West",
+    "Ivanhoe",
+    "Bundoora",
+    "Greensborough",
+    "Eltham"
+  ],
+  "north-west": [
+    "Tullamarine",
+    "Airport West",
+    "Essendon",
+    "Keilor Park",
+    "Keilor East",
+    "Broadmeadows"
+  ],
+  "bayside-southern": [
+    "Brighton",
+    "Sandringham",
+    "Highett",
+    "Moorabbin",
+    "Cheltenham",
+    "Braeside",
+    "Mordialloc"
+  ],
+  "casey-cardinia": [
+    "Narre Warren",
+    "Berwick",
+    "Cranbourne",
+    "Officer",
+    "Pakenham"
+  ],
+  "frankston-mornington-peninsula": [
+    "Frankston",
+    "Carrum Downs",
+    "Seaford",
+    "Mornington",
+    "Hastings",
+    "Rosebud"
+  ]
+}
