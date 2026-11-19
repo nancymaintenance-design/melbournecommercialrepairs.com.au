@@ -61,8 +61,8 @@ function page(route,zh,en,content,related='',options={}){
 const topicRecords=require('./content/render-topics.cjs')(page,data,serviceSlugs,sectorSlugs);
 page('services','墨尔本商业维护服务','Commercial maintenance services in Melbourne','');
 page('sectors','我们服务的商业物业','Commercial properties we maintain','');
-page('about','关于 Ellis Services Group','About Ellis Services Group',dual('p','Ellis Services Group 为墨尔本商业物业统筹建筑维修、楼宇设备与室外场地维护。从单项维修到持续维护，我们结合现场需求，明确工作范围及工种安排。','Ellis Services Group coordinates building repairs, building systems and grounds maintenance for commercial properties in Melbourne. From one-off repairs to ongoing maintenance, we define the scope and coordinate the trades around your site.','detail-lead')+registration+dual('h2','服务墨尔本商业物业','Supporting Melbourne commercial properties')+dual('p','我们的服务面向墨尔本。主要经营登记地区为 VIC 3030；该公开记录未列出街道地址。','Our services are for Melbourne. The public register lists VIC 3030 as the main business location and does not publish a street address.')+external(business.mapsUrl,'查看商家地图 ↗','View business map ↗'),dual('h2','了解我们的服务','Explore our services')+cards(data.services.slice(0,3),'services',serviceSlugs.slice(0,3)));
-data.articles.forEach((x,i)=>page('insights/'+articleSlugs[i],x.zh,x.en,x.bodyZh.map(([h,t],j)=>dual('h2',h,x.bodyEn[j][0])+dual('p',t,x.bodyEn[j][1])).join(''),dual('h2','从资讯到具体服务','Explore the relevant services')+cards([data.services[x.icon],data.services[0]],'services',[serviceSlugs[x.icon],serviceSlugs[0]])));
+page('about','关于 Ellis Services Group','About Ellis Services Group','');
+data.articles.forEach((x,i)=>page('insights/'+articleSlugs[i],x.zh,x.en,x.bodyZh.map(([h,t],j)=>dual('h2',h,x.bodyEn[j][0])+dual('p',t,x.bodyEn[j][1])).join(''),dual('h2','从资讯到具体服务','Explore related services')+cards([data.services[x.icon],data.services[0]],'services',[serviceSlugs[x.icon],serviceSlugs[0]])));
 page('insights','商业物业维护资讯','Commercial property maintenance insights',cards(data.articles,'insights',articleSlugs));
 page('areas/melbourne','墨尔本服务地区','Service area: Melbourne','');
 areaRegions.forEach(region=>{

@@ -7,7 +7,7 @@ const html=fs.readFileSync(path.join(__dirname,'../about/index.html'),'utf8');
 const moduleHTML=render(business);
 assert(!/<details\b|<summary\b|\shidden(?:\s|=|>)|aria-expanded|data-toggle/.test(moduleHTML),'All identity data is available without disclosure state');
 assert.equal((moduleHTML.match(/<dd\b/g)||[]).length,8,'Two identifiers and six public registration fields');
-assert(moduleHTML.includes('ABN 登记日期')&&moduleHTML.includes('ABN registered from'),'ABN date is labelled as a registration start, not an expiry');
+assert(moduleHTML.includes('ABN 登记日期')&&moduleHTML.includes('ABN registration date'),'ABN date is labelled as a registration start, not an expiry');
 assert(!moduleHTML.includes('ABN 有效日期'),'No ambiguous expiry-style label');
 const nameText=moduleHTML.match(/<h2[^>]*id="identity-title"[^>]*>([\s\S]*?)<\/h2>/)[1].replace(/<[^>]+>/g,'').replace(/\s+/g,' ').trim();
 assert.equal(nameText,business.legalName,'The complete legal name remains real text');

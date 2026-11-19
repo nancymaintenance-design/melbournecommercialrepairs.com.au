@@ -7,11 +7,11 @@ exports.section=business=>{
  const nameLines=business.legalName==='ELLIS SERVICES GROUP PTY LTD'?business.legalName.match(/ELLIS|SERVICES|GROUP|PTY LTD/g):[business.legalName];
  const fields=[
   ['status','shield-check','ABN 状态','ABN status',business.abnStatus==='Active'?'有效':business.abnStatus,business.abnStatus],
-  ['active-date','calendar-blank','ABN 登记日期','ABN registered from',date(business.activeFrom,'zh-CN'),date(business.activeFrom,'en-AU')],
+  ['active-date','calendar-blank','ABN 登记日期','ABN registration date',date(business.activeFrom,'zh-CN'),date(business.activeFrom,'en-AU')],
   ['gst','stack','GST 状态','GST status',business.gstFrom?'已登记':'未登记',business.gstFrom?'Registered':'Not registered'],
-  ['gst-date','calendar-blank','GST 登记日期','GST registered from',date(business.gstFrom,'zh-CN'),date(business.gstFrom,'en-AU')],
+  ['gst-date','calendar-blank','GST 登记日期','GST registration date',date(business.gstFrom,'zh-CN'),date(business.gstFrom,'en-AU')],
   ['type','buildings','公司类型','Company type',business.entityType==='Australian Private Company'?'澳大利亚私人公司':business.entityType,business.entityType],
-  ['region','house-line','主要经营登记地区','Registration region',business.registeredRegion,business.registeredRegion]
+  ['region','house-line','主要经营登记地区','Registered business location',business.registeredRegion,business.registeredRegion]
  ];
  return `<section class="ap-identity" id="company-registration" aria-labelledby="identity-title" data-entrance data-company-identity>
   <div class="ai-surface">
@@ -29,6 +29,6 @@ exports.section=business=>{
    </div>
    <span class="ai-edge-light" aria-hidden="true"></span>
   </div>
-  <div class="ai-footnotes">${dual('p','登记信息核对于 '+date(business.verifiedOn,'zh-CN'),'Registration checked on '+date(business.verifiedOn,'en-AU'),'ai-checked')}${dual('p','我们的服务面向墨尔本。主要经营登记地区为 VIC 3030；该公开记录未列出街道地址，登记地区并非办公街道地址。','Our services are for Melbourne. The public register lists VIC 3030 as the main business location; it does not publish an office street address.','ai-register-note')}<a href="${escape(business.mapsUrl)}" target="_blank" rel="noopener noreferrer" data-zh="查看商家地图 ↗" data-en="View business map ↗">查看商家地图 ↗</a></div>
+  <div class="ai-footnotes">${dual('p','登记信息核对于 '+date(business.verifiedOn,'zh-CN'),'Registration details checked on '+date(business.verifiedOn,'en-AU'),'ai-checked')}<a href="${escape(business.mapsUrl)}" target="_blank" rel="noopener noreferrer" data-zh="查看商家地图 ↗" data-en="View our location on Google Maps ↗">查看商家地图 ↗</a></div>
  </section>`;
 };

@@ -19,7 +19,10 @@ for(const [i,q] of questions.entries()){
 assert.equal((main.match(/<h1\b/g)||[]).length,1);assert(!main.includes('<details'));
 assert.equal((main.match(/data-faq-topic=/g)||[]).length,14);
 for(const id of ['q08','q14','q06','q19'])assert(main.includes('data-faq-jump="'+id+'"'));
-assert.equal((main.match(/data-faq-copy=/g)||[]).length,77);
+for(const file of ['faq/index.html','_ellisl10n/faq/index.html']){
+ const localizedMain=read(file).match(/<main\b[\s\S]*?<\/main>/)[0];
+ assert.doesNotMatch(localizedMain,/data-faq-copy=|faq-copy-area|faq-motion|复制本题链接|Copy question link|暂停动效|Pause motion/,file);
+}
 for(const [attr,url] of [...main.matchAll(/(src|href)="(\/[^"#?]+)(?:[?#][^"]*)?"/g)].map(m=>[m[1],m[2]])){
  const target=path.join(root,url,url.endsWith('/')?'index.html':'');assert(fs.existsSync(target),attr+' valid: '+url);
 }
@@ -33,17 +36,4 @@ handlers.compositionstart();handlers.input({isComposing:true});assert.equal(call
 let prevented=false;handlers.keydown({key:'Enter',isComposing:true,preventDefault(){prevented=true;}});assert(prevented);
 handlers.compositionend();assert.equal(calls.length,1);assert.equal(context.state().query,'roof');assert.equal(context.state().topic,'all');
 console.log('IME composition handlers passed: no filter while composing; Enter does not submit; completion applies one global search.');
-console.log('FAQ source and HTML contracts passed: 13 topics,77 unique QIDs,154 complete original language answers,14 categories,4 quick links,77 copy buttons,real URLs,original header/footer,no accordion.');
-// Exercise the real click handler with clipboard permission failure, rather
-// than relying on a browser's clipboard being available in every context.
-(async()=>{
- const body=read('faq-stage.js').match(/root.addEventListener\('click',async event=>\{([\s\S]*?)\n \}\);/)[1];
- const AsyncFunction=Object.getPrototypeOf(async function(){}).constructor;
- const feedback={textContent:''},input={value:'',focus(){this.focused=true;},select(){this.selected=true;}},fallback={hidden:true,querySelector:()=>input};
- const area={querySelector:s=>s==='.faq-copy-feedback'?feedback:fallback};
- const button={dataset:{faqCopy:'q41'},closest:()=>area},event={target:{closest:()=>button}};
- const handler=new AsyncFunction('event','byId','lang','copyTimers','tr','location','navigator',body);
- await handler(event,new Map([['q41',{topic:'plumbing'}]]),()=>'en',new Map(),(zh,en)=>en,{origin:'http://127.0.0.1:8767'},{clipboard:{writeText:async()=>{throw Error('Permission denied');}}});
- assert.equal(fallback.hidden,false);assert(input.focused&&input.selected);assert.equal(input.value,'http://127.0.0.1:8767/faq/?lang=en&topic=plumbing#q41');
- console.log('Clipboard denial fallback passed: complete selectable link, focused input, stable language/QID.');
-})();
+console.log('FAQ contracts passed: 13 topics, 77 stable anchors, complete bilingual answers, four quick links, and no copy or motion toggle controls.');

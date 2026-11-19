@@ -118,7 +118,7 @@ body.about-profile-page .ai-area span{text-decoration:underline;text-decoration-
 body.about-profile-page .ai-verify:hover{background:var(--ai-lime);translate:0 -3px;box-shadow:0 6px 0 var(--ai-pink)}
 body.about-profile-page .ai-area:hover{color:var(--ai-blue);translate:0 -2px}
 body.about-profile-page .ap-identity a:focus-visible{outline:3px solid var(--ai-blue);outline-offset:5px}
-body.about-profile-page .ai-footnotes{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:8px 22px;align-items:start;padding:31px 12px 0;color:var(--ai-paper)}
+body.about-profile-page .ai-footnotes{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 22px;align-items:start;padding:31px 12px 0;color:var(--ai-paper)}
 body.about-profile-page .ai-footnotes p{max-width:none;margin:0;font:500 14px/1.6 Arial,sans-serif;color:inherit}
 body.about-profile-page .ai-footnotes .ai-checked{font-weight:750;white-space:nowrap}
 body.about-profile-page .ai-footnotes a{color:var(--ai-paper);font:750 14px/1.6 Arial,sans-serif;min-height:32px;text-underline-offset:4px;white-space:nowrap}
@@ -142,8 +142,6 @@ body.about-profile-page .ai-edge-light{position:absolute;top:0;left:0;width:64px
  body.about-profile-page .ai-actions a{font-size:15px;min-height:50px}
  body.about-profile-page .ai-actions img{width:20px;height:20px}
  body.about-profile-page .ai-footnotes{grid-template-columns:1fr auto;gap:6px 20px}
- body.about-profile-page .ai-footnotes .ai-register-note{grid-column:1;grid-row:2}
- body.about-profile-page .ai-footnotes a{grid-column:2;grid-row:1/3}
 }
 @media(max-width:760px){
  body.about-profile-page .ap-identity{margin:7px 6px 0 0;scroll-margin-top:90px}

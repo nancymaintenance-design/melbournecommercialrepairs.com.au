@@ -56,11 +56,11 @@
           "id": "q04",
           "number": 4,
           "question": {
-            "en": "Can you maintain several Melbourne locations under one arrangement?",
+            "en": "Can you maintain several Melbourne sites under one agreement?",
             "zh": "墨尔本有多处门店或物业，能统一报修吗？"
           },
           "answer": {
-            "en": "We can review a multi-site repair list and organise jobs by property, priority and access window. The participating addresses, scope, reporting format and service availability are confirmed before the arrangement starts.",
+            "en": "We can review your repair list and plan jobs by site, priority and access times. Before work starts, we agree on the sites, scope, reporting and available services.",
             "zh": "我们可以按物业地址、紧急程度和进场时间整理多站点维修清单。具体覆盖地址、工作范围、汇报格式及到场安排，会在开始前逐项确认。"
           }
         },
@@ -118,12 +118,12 @@
           "id": "q08",
           "number": 8,
           "question": {
-            "en": "How quickly can someone attend an urgent commercial repair in Melbourne?",
+            "en": "How soon can you attend an urgent repair at a commercial property in Melbourne?",
             "zh": "墨尔本商业物业紧急维修多久能到？"
           },
           "answer": {
-            "en": "We assess the immediate risk, business impact, site location and access requirements first. We then confirm the earliest available attendance window; response times are not quoted without checking the actual job and availability.",
-            "zh": "我们先判断现场风险、营业影响、地址及进场条件，再确认最早可到场时间。具体响应时效以故障情况和实际排班为准。"
+            "en": "We assess the immediate risk, impact on your business, location and access. Then we let you know the earliest time we can attend.",
+            "zh": "我们先判断现场风险、营业影响、地址及进场条件，再确认最早可到场时间。"
           }
         },
         {
@@ -252,7 +252,7 @@
           "id": "q18",
           "number": 18,
           "question": {
-            "en": "Can you work to a purchase order and our approval limits?",
+            "en": "Can you work to a purchase order and within our approval limits?",
             "zh": "可以按采购单 PO 和维修审批额度执行吗？"
           },
           "answer": {
@@ -436,7 +436,7 @@
           "id": "q31",
           "number": 31,
           "question": {
-            "en": "Can you repair storm-damaged Colorbond roofing and flashings?",
+            "en": "Can you repair storm-damaged COLORBOND® roofing and flashings?",
             "zh": "暴风雨损坏的 Colorbond 屋面和泛水板能修吗？"
           },
           "answer": {
@@ -748,7 +748,7 @@
             "zh": "老旧商用空调应该维修还是更换？"
           },
           "answer": {
-            "en": "We compare the fault, equipment condition, parts availability, repair scope and operating requirements. Replacement is considered when repairs cannot provide a practical or reliable outcome for the equipment's condition.",
+            "en": "We look at the fault, the condition of the equipment, parts availability and what the system needs to do. We consider replacement when a repair is unlikely to be practical or reliable.",
             "zh": "我们对比故障情况、设备状态、配件供应、维修范围和实际运行需求。当维修已无法对现有设备提供合理、稳定的处理结果时，再评估更换方案。"
           }
         },
@@ -784,7 +784,7 @@
             "zh": "商业楼宇冷却塔需要单独的维护和合规计划吗？"
           },
           "answer": {
-            "en": "Yes. Victoria has specific cooling-tower registration, risk management, audit and water-testing requirements. We distinguish this statutory programme from ordinary air-conditioning servicing and confirm the relevant specialist responsibilities before any work is scoped.",
+            "en": "Yes. Victoria has specific cooling-tower registration, risk management, audit and water-testing requirements. These requirements are separate from routine air conditioning servicing. We confirm who is responsible for the specialist work before agreeing on a scope.",
             "zh": "需要。维州对冷却塔注册、风险管理计划、独立审计及水质检测有专项要求。我们会将这类法定计划与一般空调保养区分，并在界定工作前确认相应专业责任。"
           }
         }
@@ -896,7 +896,7 @@
             "zh": "能在下班后给办公室或商铺重新刷漆吗？"
           },
           "answer": {
-            "en": "We assess after-hours scheduling against site access, ventilation, product curing time and noise restrictions. The work can be planned by zone so reopening and normal use are considered in the programme.",
+            "en": "We assess after-hours scheduling against site access, ventilation, product curing time and noise restrictions. We can plan painting by area and allow for reopening and normal use in the work schedule.",
             "zh": "我们会结合进场时间、通风条件、涂料固化时间及噪声限制评估非营业时间施工。可以按区域分阶段安排，并在排期中考虑重新开放使用的时间。"
           }
         },
@@ -1056,7 +1056,7 @@
             "zh": "购物中心对施工证件、送货和作业时间有要求，也能安排吗？"
           },
           "answer": {
-            "en": "We review the centre's induction, work permits, approved hours, loading-bay access, noise controls and fire-system isolation requirements before the job is booked. The programme is based on the approvals actually obtained for that tenancy.",
+            "en": "We review the centre's induction, work permits, approved hours, loading-bay access, noise controls and fire-system isolation requirements before the job is booked. We schedule the work around the approvals for that tenancy.",
             "zh": "我们在排期前核对商场培训、施工许可、允许时间、卸货通道、噪声管制及消防系统隔离要求，并以该商铺实际获批的条件安排施工。"
           }
         },
@@ -1100,7 +1100,7 @@
           "id": "q77",
           "number": 77,
           "question": {
-            "en": "What do you need to quote an office or warehouse make-good project?",
+            "en": "What information do you need to quote make-good work for an office or warehouse?",
             "zh": "办公室或仓库退租恢复报价需要哪些资料？"
           },
           "answer": {

@@ -81,33 +81,17 @@
   if(a.dataset.faqJump){event.preventDefault();goQuestion(a.dataset.faqJump);}
   else if(a.dataset.faqTopic||a.dataset.faqNext){event.preventDefault();topic=a.dataset.faqTopic||a.dataset.faqNext;render({animate:true});remember('faq-results');locate('faq-results');}
  });
- const copyTimers=new Map();
- root.addEventListener('click',async event=>{
-  const button=event.target.closest('[data-faq-copy]');if(!button)return;
-  const id=button.dataset.faqCopy,q=byId.get(id),url=new URL('/faq/',location.origin);
-  url.searchParams.set('lang',lang());url.searchParams.set('topic',q.topic);url.hash=id;
-  const area=button.closest('.faq-copy-area'),feedback=area.querySelector('.faq-copy-feedback'),fallback=area.querySelector('.faq-copy-fallback');
-  clearTimeout(copyTimers.get(id));fallback.hidden=true;
-  try {if(!navigator.clipboard?.writeText)throw Error('Clipboard unavailable');await navigator.clipboard.writeText(url.href);feedback.textContent=tr('链接已复制','Link copied');copyTimers.set(id,setTimeout(()=>{feedback.textContent='';},2500));}
-  catch {feedback.textContent='';fallback.hidden=false;const input=fallback.querySelector('input');input.value=url.href;input.focus();input.select();}
- });
- document.querySelector('#language-switch')?.addEventListener('click',()=>queueMicrotask(()=>{
-  copyTimers.forEach(timer=>clearTimeout(timer));copyTimers.clear();
-  root.querySelectorAll('.faq-copy-feedback').forEach(node=>{node.textContent='';});
-  render();syncMotion();
- }));
+ document.querySelector('#language-switch')?.addEventListener('click',()=>queueMicrotask(render));
  window.addEventListener('popstate',()=>{const requested=new URLSearchParams(location.search).get('lang')==='en'?'en':'zh';if(requested!==lang())document.querySelector('#language-switch').click();readUrl();});
  window.addEventListener('hashchange',()=>{const id=location.hash.slice(1).toLowerCase();if(byId.has(id))goQuestion(id,{history:false,focus:false});});
 
- const reduced=matchMedia('(prefers-reduced-motion: reduce)'),stage=root.querySelector('.faq-stage'),motionButton=root.querySelector('.faq-motion');
- let paused=false,onScreen=true,frame=0;
- motionButton.hidden=false;
- function syncMotion(){root.classList.toggle('is-paused',paused||reduced.matches);root.classList.toggle('is-offscreen',!onScreen||document.hidden||!document.hasFocus());motionButton.hidden=reduced.matches;translate(motionButton,paused?'播放动效':'暂停动效',paused?'Play motion':'Pause motion');}
- motionButton.addEventListener('click',()=>{paused=!paused;syncMotion();});
+ const reduced=matchMedia('(prefers-reduced-motion: reduce)'),stage=root.querySelector('.faq-stage');
+ let onScreen=true,frame=0;
+ function syncMotion(){root.classList.toggle('is-offscreen',!onScreen||document.hidden||!document.hasFocus());}
  new IntersectionObserver(entries=>{onScreen=entries[0].isIntersecting;syncMotion();}).observe(stage);
- document.addEventListener('visibilitychange',syncMotion);window.addEventListener('blur',syncMotion);window.addEventListener('focus',syncMotion);reduced.addEventListener('change',syncMotion);
+ document.addEventListener('visibilitychange',syncMotion);window.addEventListener('blur',syncMotion);window.addEventListener('focus',syncMotion);
  stage.addEventListener('pointermove',event=>{
-  if(paused||reduced.matches||!onScreen||event.pointerType==='touch'||frame)return;
+  if(reduced.matches||!onScreen||event.pointerType==='touch'||frame)return;
   const {clientX,clientY}=event;
   frame=requestAnimationFrame(()=>{frame=0;const r=stage.getBoundingClientRect(),x=(clientX-r.left)/r.width-.5,y=(clientY-r.top)/r.height-.5;
    stage.style.setProperty('--scene-y',`${x*7}deg`);stage.style.setProperty('--scene-x',`${x*8}px`);stage.style.setProperty('--scene-py',`${y*5}px`);
