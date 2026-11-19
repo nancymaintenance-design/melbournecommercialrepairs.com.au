@@ -12,7 +12,7 @@
   let active = 'all', frame = 0;
   const updateStatus = () => {
     const count = cards.filter(card => !card.hidden).length;
-    status.textContent = active === 'all' ? '' : document.documentElement.lang === 'en' ? `${count} insight` : `${count} 篇资讯`;
+    status.textContent = active === 'all' ? '' : document.documentElement.lang === 'en' ? `${count} ${count === 1 ? 'article' : 'articles'}` : `${count} 篇资讯`;
     module.querySelector('[data-ie-filters]').setAttribute('aria-label', document.documentElement.lang === 'en' ? 'Article categories' : '资讯分类');
   };
   buttons.forEach(button => button.addEventListener('click', () => {

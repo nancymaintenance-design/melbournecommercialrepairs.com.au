@@ -142,15 +142,15 @@
         "coverageNote": "服务覆盖墨尔本主要商业区域与周边地区，根据物业位置安排合适的维护方案。"
       },
       "en": {
-        "h1": "Melbourne commercial maintenance Start with your region",
+        "h1": "Commercial property maintenance across Melbourne",
         "metaTitle": "Commercial Property Service Areas Melbourne | Ellis",
         "metaDescription": "Explore Ellis commercial maintenance by Melbourne region. Find relevant building, equipment and external services, then discuss the scope and access for your property.",
         "eyebrow": "ELLIS / MELBOURNE / SERVICE AREAS",
-        "heroLead": "Choose your property’s region and find the right maintenance starting point.",
+        "heroLead": "Find maintenance services in your part of Melbourne.",
         "intro": "From city offices to commercial strips, industrial premises and warehouses, maintenance needs to reflect the property’s use, site conditions and access. Start with your region, then explore relevant services and project arrangements.",
         "sectionHeadings": {
-          "regions": "Choose your service region",
-          "services": "Choose the work you need",
+          "regions": "Find your area",
+          "services": "Find the service you need",
           "planning": "Share these three project details",
           "contact": "Choose the area and tell us about the work"
         },
@@ -160,24 +160,24 @@
         "planning": [
           {
             "title": "Location and property use",
-            "body": "Share the address and type of premises so the location and relevant services are clear."
+            "body": "Tell us the site address and the type of property."
           },
           {
             "title": "The work needed",
-            "body": "Describe the issue, affected areas and photos. Several tasks can be included in one list."
+            "body": "List the issues and the areas affected. You can include several jobs and attach site photos."
           },
           {
             "title": "Access and timing",
-            "body": "Include trading, delivery and management requirements, plus the nominated site contact."
+            "body": "Include trading hours, delivery times and site rules, and tell us who to contact."
           }
         ],
         "cta": {
-          "title": "Tell us where and what needs work",
+          "title": "Tell us where you need maintenance",
           "body": "We plan the work around your property and location.",
           "primaryLabel": "Send project details",
           "secondaryLabel": "Call Ellie 0450666876"
         },
-        "coverageNote": "Region groups help you find services. Project arrangements are confirmed against the property address, scope and access conditions."
+        "coverageNote": "Browse by area, then share your address, the work you need and any access requirements."
       }
     },
     "regionLinks": [
@@ -282,7 +282,7 @@
       "slug": "cbd-inner-melbourne",
       "route": "/areas/melbourne/cbd-inner/",
       "nameZh": "市中心及内城",
-      "nameEn": "Melbourne CBD & Inner Melbourne",
+      "nameEn": "Melbourne CBD and inner suburbs",
       "sourceHeading": "市中心及内城 / Melbourne CBD & Inner Melbourne",
       "coverageSuburbs": [
         "Melbourne CBD",
@@ -462,11 +462,11 @@
           }
         },
         "en": {
-          "h1": "Commercial Property Maintenance in Melbourne CBD & Inner Melbourne",
+          "h1": "Commercial Property Maintenance in Melbourne CBD and inner suburbs",
           "metaTitle": "Commercial Property Maintenance Melbourne CBD | Ellis",
           "metaDescription": "Building repairs, air conditioning, tenancy make good and façade cleaning for Melbourne CBD and inner-city properties. Discuss access and your project scope.",
           "heroLead": "Plan repairs around occupied floors, shop entrances and building access requirements.",
-          "localIntro": "Central Melbourne combines offices, retail premises and hospitality spaces, including businesses in laneways and arcades. We organise maintenance around how each property is used, rather than assuming every city site has the same access. An office floor may need staged work, while a shop tenancy may need repairs aligned with a handover date. Share the floor, loading arrangements, building contact and preferred work window with your enquiry. We use those details to clarify the inspection, materials route and work sequence. Where shared building systems or common areas are involved, the scope also needs to reflect the building manager’s requirements.",
+          "localIntro": "Central Melbourne combines offices, retail premises and hospitality spaces, including businesses in laneways and arcades. We organise maintenance around how each property is used, rather than assuming every city site has the same access. An office floor may need staged work, while a shop tenancy may need repairs aligned with a handover date. Share the floor, loading arrangements, building contact and preferred work window with your enquiry. We use those details to plan the inspection, work out how to bring materials in and schedule the trades. Where shared building systems or common areas are involved, the scope also needs to reflect the building manager’s requirements.",
           "sectionHeadings": {
             "services": "Services for CBD and inner-city properties",
             "scenarios": "Repairs planned around the property",
@@ -529,11 +529,11 @@
               "body": "Share the building manager’s details, registration process and floors we need to access."
             },
             {
-              "title": "Loading and materials route",
-              "body": "Identify vehicle access, goods-lift booking and temporary storage conditions before the visit."
+              "title": "Loading and access for materials",
+              "body": "Identify vehicle access, goods-lift booking and temporary storage options before the visit."
             },
             {
-              "title": "Available work windows",
+              "title": "Available work times",
               "body": "Tell us about tenant, trading and neighbouring-space restrictions. Dates and hours are confirmed for each project."
             }
           ],
@@ -554,7 +554,7 @@
           "cta": {
             "title": "Plan your city property project",
             "body": "Share the building, floor and repair needs so we can start with the site conditions.",
-            "label": "Enquire about this region"
+            "label": "Enquire about work in this area"
           }
         }
       },
@@ -600,7 +600,7 @@
       "slug": "eastern-suburbs",
       "route": "/areas/melbourne/eastern/",
       "nameZh": "东区",
-      "nameEn": "Eastern Suburbs Melbourne",
+      "nameEn": "Melbourne’s eastern suburbs",
       "sourceHeading": "东区 / Eastern Suburbs Melbourne",
       "coverageSuburbs": [
         "Box Hill",
@@ -781,10 +781,10 @@
         },
         "en": {
           "h1": "Commercial Property Maintenance in Melbourne’s Eastern Suburbs",
-          "metaTitle": "Commercial Maintenance Eastern Suburbs Melbourne | Ellis",
+          "metaTitle": "Commercial Maintenance Melbourne’s eastern suburbs | Ellis",
           "metaDescription": "Shop, office and retail property repairs across Melbourne’s eastern suburbs. Discuss building repairs, lighting, air conditioning and tenancy refurbishment.",
-          "heroLead": "Organise repairs around customer spaces, office work and the trading day.",
-          "localIntro": "Melbourne’s eastern suburbs include shopping centres, strip retail and office premises. The region’s activity centres support a mix of commercial uses, so the practical repair plan depends on the individual tenancy and its shared spaces. We separate customer-facing work from back-of-house tasks and identify the routes that need to remain available. Doors, finishes, lighting, air conditioning and refurbishment needs can be discussed together, with the sequence shaped by access and the agreed scope. Share the property address, photographs and trading requirements. Where common areas or shared equipment are involved, the relevant management conditions need to be established before work is arranged.",
+          "heroLead": "Organise repairs around shop trading hours, customer access and office operations.",
+          "localIntro": "Melbourne’s eastern suburbs include shopping centres, shopping strips and office premises. The region’s activity centres support a mix of commercial uses, so the practical repair plan depends on the individual tenancy and its shared spaces. We separate customer-facing work from back-of-house tasks and identify the routes that need to remain available. Doors, finishes, lighting, air conditioning and refurbishment needs can be discussed together, with the sequence shaped by access and the agreed scope. Share the property address, photographs and trading requirements. Where common areas or shared equipment are involved, we confirm the requirements with building management before scheduling the work.",
           "sectionHeadings": {
             "services": "Services for eastern-suburb properties",
             "scenarios": "Three ways to organise the work",
@@ -871,7 +871,7 @@
           ],
           "cta": {
             "title": "Keep your shop or office ready for business",
-            "body": "Send the property type, affected areas and available work windows.",
+            "body": "Send the property type, affected areas and available times for the work.",
             "label": "Enquire about the eastern suburbs"
           }
         }
@@ -1102,8 +1102,8 @@
           "h1": "Commercial & Industrial Property Maintenance in South East Melbourne",
           "metaTitle": "Commercial & Industrial Maintenance South East Melbourne | Ellis",
           "metaDescription": "Building, roof, plumbing and lighting maintenance for commercial and industrial properties in South East Melbourne. Discuss site access and work staging.",
-          "heroLead": "Plan building, plant-area and external repairs around the way your site operates.",
-          "localIntro": "South East Melbourne includes commercial offices and industrial premises alongside research and manufacturing precincts. We begin by distinguishing the building, building services and production equipment so the maintenance scope is clear. Roof leaks, drainage faults, lighting and building repairs may each affect different parts of an operating site. The plan therefore needs to consider goods protection, equipment access, staff movement and the areas that can be separated. Share photographs, the location of the issue and a site contact. Related tasks can then be organised into a sequence, with any interruption and return-to-use arrangements confirmed against the actual site conditions.",
+          "heroLead": "Plan work on buildings, plant areas and outdoor spaces around your operations.",
+          "localIntro": "South East Melbourne includes commercial offices and industrial premises alongside research and manufacturing precincts. We begin by distinguishing the building, building services and production equipment so the maintenance scope is clear. Roof leaks, drainage faults, lighting and building repairs may each affect different parts of an operating site. The plan therefore needs to consider goods protection, equipment access, staff movement and which areas can be closed off. Share photographs, the location of the issue and a site contact. Related tasks can then be organised into a sequence, with any interruption and plans for reopening agreed to suit the site.",
           "sectionHeadings": {
             "services": "Building and equipment services in the south east",
             "scenarios": "Turn site issues into defined tasks",
@@ -1171,7 +1171,7 @@
             },
             {
               "title": "Work windows and return to use",
-              "body": "Confirm when inspection, work and handover can occur. Include return-to-use requirements in the scope."
+              "body": "Confirm when inspection, work and handover can occur. Include requirements for reopening in the scope."
             }
           ],
           "faq": [
@@ -1185,12 +1185,12 @@
             },
             {
               "question": "Can several trades be arranged for the same site?",
-              "answer": "You can provide building, roofing, plumbing and electrical needs together. We will clarify dependencies, separation conditions and access windows before defining the scope and sequence."
+              "answer": "You can provide building, roofing, plumbing and electrical needs together. We will clarify dependencies, separation conditions and times we can access the site before defining the scope and sequence."
             }
           ],
           "cta": {
             "title": "Define the work for your south-east property",
-            "body": "Tell us the site use, affected areas and access windows so the repair scope can be organised.",
+            "body": "Tell us the site use, affected areas and times we can access the site so the repair scope can be organised.",
             "label": "Enquire about the south east"
           }
         }
@@ -1237,7 +1237,7 @@
       "slug": "western-suburbs",
       "route": "/areas/melbourne/western/",
       "nameZh": "西区",
-      "nameEn": "Western Suburbs Melbourne",
+      "nameEn": "Melbourne’s western suburbs",
       "sourceHeading": "西区 / Western Suburbs Melbourne",
       "coverageSuburbs": [
         "Footscray",
@@ -1414,10 +1414,10 @@
         },
         "en": {
           "h1": "Commercial Property & Warehouse Maintenance in Melbourne’s West",
-          "metaTitle": "Commercial Property Maintenance Western Suburbs Melbourne | Ellis",
+          "metaTitle": "Commercial Property Maintenance Melbourne’s western suburbs | Ellis",
           "metaDescription": "Warehouse and commercial property repairs in Melbourne’s west, including roofs, building fabric, external access areas and signage. Discuss your site requirements.",
-          "heroLead": "Bring roof, building and external-area repairs into one clear site plan.",
-          "localIntro": "Melbourne’s western suburbs contain shops and offices as well as manufacturing, warehousing and logistics premises. On a site with loading areas, the relationship between a repair and vehicle movement can determine how the work is staged. We identify roofing, entrances, external surfaces, line marking and wayfinding as separate tasks, then discuss how they fit around deliveries and access. Include entrance photographs, affected locations and the types of vehicles using the property in your enquiry. If work needs a temporary route change or a closed area, those operating conditions must be understood before the scope and sequence are confirmed.",
+          "heroLead": "Plan roof, building and outdoor repairs around deliveries and site access.",
+          "localIntro": "Melbourne’s western suburbs contain shops and offices as well as manufacturing, warehousing and logistics premises. On a site with loading areas, vehicle movements affect when and where repairs can take place. We identify roofing, entrances, external surfaces, line marking and wayfinding as separate tasks, then discuss how they fit around deliveries and access. Include entrance photographs, affected locations and the types of vehicles using the property in your enquiry. If work needs a temporary route change or a closed area, we confirm those arrangements before agreeing on the scope and order of work.",
           "sectionHeadings": {
             "services": "Services for warehouses and commercial sites",
             "scenarios": "Follow the site route to the repair",
@@ -1476,16 +1476,16 @@
           ],
           "planning": [
             {
-              "title": "Vehicles and goods movement",
+              "title": "Vehicle and freight movements",
               "body": "Identify truck entrances, loading positions and pedestrian routes to inform work areas."
             },
             {
               "title": "Deliveries and site constraints",
-              "body": "Share delivery peaks, parking limits and temporary materials-storage conditions."
+              "body": "Share delivery peaks, parking limits and options for storing materials on site."
             },
             {
               "title": "Work areas and reopening",
-              "body": "Confirm when closed areas can reopen, including any material-specific return-to-use conditions."
+              "body": "Confirm when closed areas can reopen, including any material-specific conditions for reopening."
             }
           ],
           "faq": [
@@ -1551,7 +1551,7 @@
       "slug": "northern-suburbs",
       "route": "/areas/melbourne/northern/",
       "nameZh": "北区",
-      "nameEn": "Northern Suburbs Melbourne",
+      "nameEn": "Melbourne’s northern suburbs",
       "sourceHeading": "北区 / Northern Suburbs Melbourne",
       "coverageSuburbs": [
         "Preston",
@@ -1732,10 +1732,10 @@
         },
         "en": {
           "h1": "Commercial Property Maintenance in Melbourne’s Northern Suburbs",
-          "metaTitle": "Commercial Maintenance Northern Suburbs Melbourne | Ellis",
+          "metaTitle": "Commercial Maintenance Melbourne’s northern suburbs | Ellis",
           "metaDescription": "Commercial building repairs, plumbing, lighting and grounds maintenance in Melbourne’s northern suburbs. Turn individual issues into a clear maintenance scope.",
-          "heroLead": "Bring everyday building, equipment and external-area issues into an organised work list.",
-          "localIntro": "Northern-suburb enquiries can involve shops, offices and industrial properties. When smaller repair items have accumulated, sorting them by location, effect on use and related work helps establish a practical scope. We can discuss a single repair project or ongoing maintenance covering building fabric, lighting, water and drainage, and external areas. For workshops and shared sites, the work needs to account for equipment surroundings and staff access. For customer-facing premises, entrances and trading arrangements matter. Send an initial list with photographs and locations. We can then clarify individual tasks, dependencies and the areas to inspect before agreeing on the work to proceed.",
+          "heroLead": "Put building, equipment and outdoor repairs on one maintenance list.",
+          "localIntro": "We maintain shops, offices and industrial properties across Melbourne’s northern suburbs. When smaller repair items have accumulated, sorting them by location, effect on use and related work helps establish a practical scope. We can discuss a single repair project or ongoing maintenance covering building fabric, lighting, water and drainage, and external areas. For workshops and shared sites, the work needs to account for clearance around equipment and access for staff. For customer-facing premises, entrances and trading arrangements matter. Send an initial list with photographs and locations. We can then clarify individual tasks, dependencies and the areas to inspect before agreeing on the work to proceed.",
           "sectionHeadings": {
             "services": "Everyday maintenance services in the north",
             "scenarios": "From individual faults to a work list",
@@ -1821,8 +1821,8 @@
             }
           ],
           "cta": {
-            "title": "Send us your northern property work list",
-            "body": "Everyday repairs, equipment concerns and external maintenance can start in one enquiry.",
+            "title": "Send us your maintenance list",
+            "body": "Tell us about repairs, equipment faults and outdoor maintenance in one enquiry.",
             "label": "Enquire about the northern suburbs"
           }
         }
@@ -2056,7 +2056,7 @@
           "metaTitle": "Commercial Property Maintenance North East Melbourne | Ellis",
           "metaDescription": "Building repairs, air conditioning, plumbing and grounds maintenance for commercial properties in North East Melbourne. Discuss access, scope and site needs.",
           "heroLead": "Plan maintenance around reception spaces, occupied rooms and shared grounds.",
-          "localIntro": "North East Melbourne includes a mix of commercial, health and community settings. Banyule’s major activity centres support retail, health and professional services. For a clinic, office or education site, we start with the way the building is used: who enters each area, which rooms remain occupied and when work can take place. We then define the repair scope, work zones and handover requirements. If doors, air conditioning, plumbing and outdoor areas need attention together, send one issue list. We can discuss a practical sequence and identify what needs closer inspection before a quotation is finalised. Tasks in shared areas and individual tenancies are recorded separately for the nominated contacts.",
+          "localIntro": "North East Melbourne includes a mix of commercial, health and community settings. Banyule’s major activity centres support retail, health and professional services. For a clinic, office or education site, we start with the way the building is used: who enters each area, which rooms remain occupied and when work can take place. We then define the repair scope, work zones and handover requirements. If doors, air conditioning, plumbing and outdoor areas need attention together, send us one list of the issues. We can discuss a practical sequence and identify what needs closer inspection before a quotation is finalised. Tasks in shared areas and individual tenancies are recorded separately for the nominated contacts.",
           "sectionHeadings": {
             "services": "Maintenance options for your property",
             "scenarios": "Plan work around how the site is used",
@@ -2116,7 +2116,7 @@
           "planning": [
             {
               "title": "Room use and access",
-              "body": "Identify occupied rooms, entrances that must stay available and the person providing keys or access."
+              "body": "Identify occupied rooms, entrances that must stay available and who will provide keys or arrange access."
             },
             {
               "title": "Noise and clean-up windows",
@@ -2124,7 +2124,7 @@
             },
             {
               "title": "Equipment and facility information",
-              "body": "Model details, photos and existing repair records help prepare the inspection; specialist systems are addressed to the site requirements."
+              "body": "Model details, photos and existing repair records help prepare the inspection; we plan specialist work around the site requirements."
             }
           ],
           "faq": [
@@ -2143,8 +2143,8 @@
           ],
           "cta": {
             "title": "Discuss your North East Melbourne property",
-            "body": "Send the address, property use, photos and access windows so we can define the work.",
-            "label": "Enquire about this region"
+            "body": "Send the address, property use, photos and times we can access the site so we can define the work.",
+            "label": "Enquire about work in this area"
           }
         }
       },
@@ -2372,8 +2372,8 @@
           "h1": "Commercial Property Maintenance in North West Melbourne",
           "metaTitle": "Commercial Property Maintenance North West Melbourne | Ellis",
           "metaDescription": "Roofing, electrical, building and external maintenance for North West Melbourne commercial premises. Plan work around loading, access and operations.",
-          "heroLead": "Connect roof, warehouse, access-way and office maintenance with your site operations.",
-          "localIntro": "North West Melbourne includes warehouses, business parks and trading premises. Hume Council identifies employment areas around the airport and a supporting freight network. For these sites, we review loading windows, equipment locations, roof access and pedestrian requirements before defining maintenance work. Roof leaks, lighting issues and external repairs can be collected into one task list and staged according to their effect on operations. Where a task requires an area to close, vehicles to move or access routes to change, we discuss those arrangements as part of the scope. Customer-facing areas, staff offices and goods storage receive separate protection and handover requirements so the site contact can follow the work.",
+          "heroLead": "Plan roof, warehouse and office maintenance around loading and access.",
+          "localIntro": "North West Melbourne includes warehouses, business parks and trading premises. Hume Council identifies employment areas around the airport and a supporting freight network. For these sites, we review loading windows, equipment locations, roof access and pedestrian requirements before defining maintenance work. List roof leaks, lighting faults and outdoor repairs together. We can stage the work around your operations. Where a task requires an area to close, vehicles to move or access routes to change, we discuss those arrangements as part of the scope. Customer-facing areas, staff offices and goods storage can have different requirements for site protection and handover so the site contact can follow the work.",
           "sectionHeadings": {
             "services": "Maintenance for commercial and industrial sites",
             "scenarios": "Explore the site from loading area to office",
@@ -2440,7 +2440,7 @@
               "body": "Describe site induction, keys, roof access arrangements and known site restrictions."
             },
             {
-              "title": "Zoning and reopening",
+              "title": "Work zones and reopening",
               "body": "Include goods to be moved, affected areas and the handover contact in the work plan."
             }
           ],
@@ -2461,7 +2461,7 @@
           "cta": {
             "title": "Plan maintenance for your North West site",
             "body": "Send the address, task list, loading windows and photos to discuss site access.",
-            "label": "Enquire about this region"
+            "label": "Enquire about work in this area"
           }
         }
       },
@@ -2502,7 +2502,7 @@
       "slug": "bayside-southern-suburbs",
       "number": "08",
       "nameZh": "Bayside 及南部",
-      "nameEn": "Bayside & Southern Suburbs Melbourne",
+      "nameEn": "Bayside and Melbourne’s southern suburbs",
       "sourceHeading": "Bayside 及南部 / Bayside & Southern Suburbs Melbourne",
       "coverageSuburbs": [
         "Brighton",
@@ -2689,9 +2689,9 @@
         "en": {
           "h1": "Commercial Property Maintenance in Bayside & Southern Melbourne",
           "metaTitle": "Commercial Property Maintenance Bayside & Southern Melbourne | Ellis",
-          "metaDescription": "Facade, roofing, signage and external maintenance for Bayside and Southern Melbourne commercial properties. Explore site planning and enquire about your project.",
-          "heroLead": "Connect shopfront, roof and external maintenance with the way your premises trade.",
-          "localIntro": "This region combines Bayside shopping villages with commercial and industrial premises in Melbourne’s south. Bayside Council describes retail, dining and service activity in its shopping precincts, while Kingston planning addresses industrial land, parking and truck access. We plan maintenance around the actual use of your shop, office or industrial site. For facade, roof or signage work, we review the materials, observed damage, public routes and access method before discussing the scope. Properties near the bay are assessed on their individual condition. Share photos, previous maintenance records and trading arrangements so repairs, cleaning and facility updates have a clear starting point. We can then identify how the tasks fit together.",
+          "metaDescription": "Façade, roofing, signage and external maintenance for Bayside and Southern Melbourne commercial properties. Explore site planning and enquire about your project.",
+          "heroLead": "Schedule shopfront, roof and outdoor maintenance around your trading hours.",
+          "localIntro": "This region combines Bayside shopping villages with commercial and industrial premises in Melbourne’s south. Bayside Council describes retail, dining and service activity in its shopping precincts, while Kingston planning addresses industrial land, parking and truck access. We plan maintenance around how you use your shop, office or industrial site. For façade, roof or signage work, we review the materials, observed damage, public access routes and access method before discussing the scope. Properties near the bay are assessed on their individual condition. Share photos, previous maintenance records and trading arrangements so we can plan repairs, cleaning and upgrades. We can then identify how the tasks fit together.",
           "sectionHeadings": {
             "services": "Maintenance from shopfront to site boundary",
             "scenarios": "Choose the property situation",
@@ -2704,8 +2704,8 @@
           "scenarios": [
             {
               "id": "active-shopfront",
-              "title": "Trading shopfronts and facades",
-              "problem": "Glazing, facade or signage work must be planned around an entrance used by customers.",
+              "title": "Trading shopfronts and façades",
+              "problem": "Glazing, façade or signage work must be planned around an entrance used by customers.",
               "approach": "Review materials, sign positions, access methods and work boundaries before coordinating cleaning and signage tasks.",
               "handover": "Provide the completed scope and photos, identifying any areas that need follow-up.",
               "serviceSlugs": [
@@ -2751,15 +2751,15 @@
           "planning": [
             {
               "title": "Frontage and access",
-              "body": "Share trading hours, entrances, public routes and any arrangements needed with the property manager."
+              "body": "Share trading hours, entrances, public access routes and any arrangements needed with the property manager."
             },
             {
               "title": "Materials and condition",
-              "body": "Send photos of glazing, finishes, roofs and existing signs so the method can reflect the actual condition."
+              "body": "Send photos of glazing, finishes, roofs and existing signs so we can choose a method that suits their condition."
             },
             {
               "title": "Vehicles and work boundaries",
-              "body": "Describe vehicle movements and available closure areas before industrial or car park work zones are set."
+              "body": "Describe vehicle movements and areas you can close off before industrial or car park work zones are set."
             }
           ],
           "faq": [
@@ -2769,7 +2769,7 @@
             },
             {
               "question": "Can signage updates be coordinated with shopfront maintenance?",
-              "answer": "Yes. We review the sign information, position, fixing conditions and facade condition, then separate the repair, cleaning and replacement tasks."
+              "answer": "Yes. We review the sign information, position, fixing conditions and façade condition, then separate the repair, cleaning and replacement tasks."
             },
             {
               "question": "Is this page only for coastal shops?",
@@ -2779,7 +2779,7 @@
           "cta": {
             "title": "Tell us what your frontage, roof or site needs",
             "body": "Send the property address, photos and trading arrangements to discuss the work.",
-            "label": "Enquire about this region"
+            "label": "Enquire about work in this area"
           }
         }
       },
@@ -3006,8 +3006,8 @@
           "h1": "Commercial Property Maintenance in Casey & Cardinia",
           "metaTitle": "Commercial Property Maintenance Casey & Cardinia | Ellis",
           "metaDescription": "Building repairs, commercial updates, electrical and grounds maintenance in Casey and Cardinia. Explore staged work, tenant changes and site planning.",
-          "heroLead": "Plan occupied-building repairs, tenancy changes and grounds maintenance in one clear sequence.",
-          "localIntro": "Casey and Cardinia contain commercial centres and employment precincts serving different property uses. Casey’s activity centres and Cardinia’s commercial, manufacturing and logistics areas provide a varied setting for maintenance. For occupied sites, we focus on building defects, electrical needs, external maintenance and tenancy handover items. A recently handed-over property can provide its defect list and project records so responsibilities and the proposed commission are separated before work is agreed. For an existing property update, we start with the present use, available work windows and any need to reopen areas in stages. Each site has its own contact and task list, allowing multiple properties to be discussed through a clear work sequence.",
+          "heroLead": "Plan repairs, tenancy changeovers and grounds maintenance around occupied spaces.",
+          "localIntro": "Casey and Cardinia have a mix of commercial centres and employment precincts. Casey’s activity centres and Cardinia’s commercial, manufacturing and logistics areas provide a varied setting for maintenance. For occupied sites, we focus on building defects, electrical needs, external maintenance and tenancy handover items. A recently handed-over property can provide its defect list and project records so responsibilities and the proposed work are identified separately before work is agreed. For an existing property update, we start with the present use, available times for the work and any need to reopen areas in stages. Each site has its own contact and task list, so we can plan the work across multiple properties.",
           "sectionHeadings": {
             "services": "Maintenance and updates for outer south-east properties",
             "scenarios": "From everyday repairs to tenancy handover",
@@ -3066,8 +3066,8 @@
           ],
           "planning": [
             {
-              "title": "Handover and commission",
-              "body": "Include project records, warranty information or defect lists to distinguish responsibilities from the work being commissioned."
+              "title": "Handover and scope of work",
+              "body": "Include project records, warranty information or defect lists to distinguish responsibilities from the work you want us to do."
             },
             {
               "title": "Tenants and reopening",
@@ -3081,7 +3081,7 @@
           "faq": [
             {
               "question": "Can I enquire about defects in a recently handed-over commercial property?",
-              "answer": "Yes. Share handover documents, the defect list and photos. We distinguish the proposed commission from items that need clarification with the original contractor or supplier before discussing the work."
+              "answer": "Yes. Share handover documents, the defect list and photos. Before agreeing on the work, we identify which items we can address and which need to go back to the original contractor or supplier."
             },
             {
               "question": "Can tenancy handover and ongoing maintenance be planned together?",
@@ -3089,13 +3089,13 @@
             },
             {
               "question": "Can multiple commercial sites be included in one enquiry?",
-              "answer": "Yes. List each address, site contact, main issues and access windows so we can discuss an inspection and attendance sequence."
+              "answer": "Yes. List each address, site contact, main issues and times we can access the site so we can discuss an inspection and attendance sequence."
             }
           ],
           "cta": {
             "title": "Plan the next step for your Casey or Cardinia property",
-            "body": "Tell us the property stage, maintenance needs and preferred work sequence.",
-            "label": "Enquire about this region"
+            "body": "Tell us the how the property is being used, what needs work and your preferred timing.",
+            "label": "Enquire about work in this area"
           }
         }
       },
@@ -3323,8 +3323,8 @@
           "h1": "Commercial Property Maintenance in Frankston & Mornington Peninsula",
           "metaTitle": "Commercial Maintenance Frankston & Mornington Peninsula | Ellis",
           "metaDescription": "Building, roofing, cleaning and grounds maintenance for Frankston and Mornington Peninsula commercial premises. Discuss access, trading hours and site needs.",
-          "heroLead": "Fit building, reception and outdoor maintenance into the way your premises operate.",
-          "localIntro": "Frankston and the Mornington Peninsula contain a range of commercial premises. Frankston’s industrial strategy identifies precincts including Carrum Downs and Seaford, while the Peninsula supports tourism and visitor-related businesses. For hospitality venues, industrial properties and outdoor areas, we begin with the address, trading arrangements, task list and available access before discussing inspection and work sequencing. External tasks are planned around the actual materials, weather conditions and site requirements. If you manage several premises, list each site separately so access contacts, material preparation and handover responsibilities are clear. Share any bookings, delivery times or public activities that affect entry. Specific attendance and project timing are agreed after the location and scope have been reviewed.",
+          "heroLead": "Schedule maintenance for buildings, reception areas and grounds around your operating hours.",
+          "localIntro": "Frankston and the Mornington Peninsula contain a range of commercial premises. Frankston’s industrial strategy identifies precincts including Carrum Downs and Seaford, while the Peninsula supports tourism and visitor-related businesses. For hospitality venues, industrial properties and outdoor areas, we begin with the address, trading arrangements, task list and available access before planning the inspection and order of work. External tasks are planned around the materials, weather and site requirements. If you manage several premises, list each site separately so access contacts, material preparation and handover responsibilities are clear. Share any bookings, delivery times or public activities that affect entry. We agree on site visits and timing after reviewing the location and scope.",
           "sectionHeadings": {
             "services": "Maintenance for Frankston and Peninsula premises",
             "scenarios": "Trading spaces, industrial premises and outdoor areas",
@@ -3384,7 +3384,7 @@
           "planning": [
             {
               "title": "Trading and bookings",
-              "body": "Share busy periods, booked events and work windows so staged attendance can be discussed."
+              "body": "Share busy periods, booked events and work windows so we can plan visits in stages."
             },
             {
               "title": "Address and site preparation",
@@ -3392,13 +3392,13 @@
             },
             {
               "title": "Conditions for external work",
-              "body": "Confirm roof, grounds and other external work sequencing against actual weather, materials and site conditions."
+              "body": "Plan roof, grounds and other outdoor work around the weather, materials and site conditions."
             }
           ],
           "faq": [
             {
               "question": "Can work be planned around restaurant or visitor-venue trading hours?",
-              "answer": "Yes. Share trading hours, bookings and available work windows. We discuss separate areas or stages based on the task, with dates and times agreed after the scope is confirmed."
+              "answer": "Yes. Share trading hours, bookings and available times for the work. We discuss separate areas or stages based on the task, with dates and times agreed after the scope is confirmed."
             },
             {
               "question": "How is outdoor work on the Peninsula scheduled?",
@@ -3411,8 +3411,8 @@
           ],
           "cta": {
             "title": "Plan your Frankston or Peninsula maintenance",
-            "body": "Send the address, maintenance list and trading hours to discuss a suitable work sequence.",
-            "label": "Enquire about this region"
+            "body": "Send the address, maintenance list and trading hours so we can plan the order of work.",
+            "label": "Enquire about work in this area"
           }
         }
       },

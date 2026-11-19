@@ -25,8 +25,8 @@ const platforms=[
 module.exports=business=>`<footer class="site-footer melbourne-footer footer-brand-panel" id="site-footer">
  <div class="footer-columns"><div class="footer-company">
  <a href="/" class="brand footer-brand" aria-label="Ellis Services Group home"><img class="brand-logo" src="/assets/ellis-services-logo.png" alt="" width="512" height="512"><span class="brand-name">ELLIS<span>SERVICES GROUP</span></span></a>
- ${dual('h2','墨尔本商业物业维修与维护','Commercial property care in Melbourne')}
- ${dual('p','建筑、设备与室外场地，统筹安排。','Coordinated work for buildings, systems and grounds.')}
+ ${dual('h2','墨尔本商业物业维修与维护','Commercial property maintenance in Melbourne')}
+ ${dual('p','建筑、设备与室外场地，统筹安排。','Repairs and maintenance for buildings, building services and grounds.')}
  <a class="footer-address" href="${e(business.mapsUrl)}" target="_blank" rel="noopener noreferrer">${icons.pin}<span>${e(publicAddress(business).full)}</span></a>
  <span class="footer-insurance">${icons.shield}<span>$20M Public Liability Insurance</span></span></div>
  ${groups.map(([zh,en,label,links])=>`<nav aria-label="${label}">${dual('h3',zh,en)}${links.map(([href,z,h])=>`<a href="${href}" data-zh="${e(z)}" data-en="${e(h)}">${e(z)}</a>`).join('')}</nav>`).join('')}

@@ -23,7 +23,7 @@
       18,
       24
     ],
-    "galleryLabel": "案例版式示意｜上线替换为真实项目",
+    "galleryLabel": "维护场景示例",
     "linkPolicy": "沿用现有路由、语言参数和真实外链配置；选择状态使用按钮，页面跳转使用真实链接。",
     "assetPolicy": "referenceImage 是整页视觉参考，不作为网页截图背景；独立主视觉、问题图及案例图复用已有素材或另行补齐。",
     "motionPolicy": "一次入场，文字和操作直接可用，离开视口暂停连续动效，尊重减少动效偏好。",
@@ -152,7 +152,7 @@
           "完成后：同角度饰面与收口",
           "检查：门旁与柜边细节"
         ],
-        "label": "案例版式示意｜上线替换为真实项目",
+        "label": "维护场景示例",
         "status": "illustrative-until-real-project-assets-added"
       },
       "handover": [
@@ -294,7 +294,7 @@
           "过程：相关构件处理",
           "完成：同位置连接与排水路径"
         ],
-        "label": "案例版式示意｜上线替换为真实项目",
+        "label": "维护场景示例",
         "status": "illustrative-until-real-project-assets-added"
       },
       "handover": [
@@ -431,7 +431,7 @@
           "完成：同角度整体照明",
           "细节：灯具与控制部件"
         ],
-        "label": "案例版式示意｜上线替换为真实项目",
+        "label": "维护场景示例",
         "status": "illustrative-until-real-project-assets-added"
       },
       "handover": [
@@ -572,7 +572,7 @@
           "过程：相关管段处理",
           "完成：排水与连接检查"
         ],
-        "label": "案例版式示意｜上线替换为真实项目",
+        "label": "维护场景示例",
         "status": "illustrative-until-real-project-assets-added"
       },
       "handover": [
@@ -720,7 +720,7 @@
           "冷凝水排放检查",
           "完成后的设备与天花"
         ],
-        "label": "案例版式示意｜上线替换为真实项目",
+        "label": "维护场景示例",
         "status": "illustrative-until-real-project-assets-added"
       },
       "handover": [
@@ -867,7 +867,7 @@
           "设备标签与处理记录",
           "完成后的入口状态"
         ],
-        "label": "案例版式示意｜上线替换为真实项目",
+        "label": "维护场景示例",
         "status": "illustrative-until-real-project-assets-added"
       },
       "handover": [
@@ -1014,7 +1014,7 @@
           "喷头及花坛细节",
           "同角度入口维护后"
         ],
-        "label": "案例版式示意｜上线替换为真实项目",
+        "label": "维护场景示例",
         "status": "illustrative-until-real-project-assets-added"
       },
       "handover": [
@@ -1161,7 +1161,7 @@
           "立体字材料与边缘",
           "入口及室内导视"
         ],
-        "label": "案例版式示意｜上线替换为真实项目",
+        "label": "维护场景示例",
         "status": "illustrative-until-real-project-assets-added"
       },
       "handover": [
@@ -1197,7 +1197,7 @@
       "referenceImage": "images/09-facade-high-access-cleaning-full.png",
       "title": "外立面与高空清洁",
       "ChineseH1": "墨尔本外立面与高空清洁",
-      "EnglishH1": "Commercial Facade & High Access Cleaning in Melbourne",
+      "EnglishH1": "Commercial Façade & High-Access Cleaning in Melbourne",
       "heroCopy": "我们清洁商业建筑的外墙、玻璃与高处表面，按材质、污渍和现场通行条件制定分段作业安排。",
       "heroVisual": {
         "subject": "高层商业建筑的局部玻璃幕墙模型，保留真实楼层比例与幕墙细节；一侧呈清洁前灰尘水痕，另一侧透亮。",
@@ -1307,7 +1307,7 @@
           "分段施工过程",
           "窗框边角完成情况"
         ],
-        "label": "案例版式示意｜上线替换为真实项目",
+        "label": "维护场景示例",
         "status": "illustrative-until-real-project-assets-added"
       },
       "handover": [
@@ -1453,7 +1453,7 @@
           "清洁设备作业过程",
           "收集点完成情况"
         ],
-        "label": "案例版式示意｜上线替换为真实项目",
+        "label": "维护场景示例",
         "status": "illustrative-until-real-project-assets-added"
       },
       "handover": [
@@ -1599,7 +1599,7 @@
           "表面准备过程",
           "标线与设施完成细节"
         ],
-        "label": "案例版式示意｜上线替换为真实项目",
+        "label": "维护场景示例",
         "status": "illustrative-until-real-project-assets-added"
       },
       "handover": [
@@ -1745,7 +1745,7 @@
           "基面修补细节",
           "恢复后的完整空间"
         ],
-        "label": "案例版式示意｜上线替换为真实项目",
+        "label": "维护场景示例",
         "status": "illustrative-until-real-project-assets-added"
       },
       "handover": [

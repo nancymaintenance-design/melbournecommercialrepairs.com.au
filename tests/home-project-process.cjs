@@ -16,5 +16,12 @@ assert(flow.includes('Monday–Sunday, 9:00 am–9:00 pm'));
 const withoutSelector=s=>{const start=s.indexOf('<div class="sector-selection"');if(start<0)return s;const tags=/<\/?div\b[^>]*>/g;tags.lastIndex=start;let depth=0,m;while((m=tags.exec(s))){depth+=m[0].startsWith('</')?-1:1;if(!depth)return s.slice(0,start)+s.slice(tags.lastIndex);}throw new Error('Incomplete property selector');};
 const stable=s=>withoutSelector(s.replaceAll('elliservices.group@gmail.com','melbournecommercialrepairs.au@outlook.com').replaceAll('+61 482 602 558','+61 450 666 876').replaceAll('0482 602 558','0450666876').replaceAll('+61482602558','+61450666876').replaceAll('\r\n','\n').replace(/<section[^>]*id="(?:location|contact)"[^]*?<\/section>/g,'').replace(/<link[^>]*href="\/?home-project-process.css[^>]*>/g,'').replace(/<link\b[^>]*href="(?:\/?home-sector-selector\.css|\/?home-commercial-campus\.css|\/?vendor\/ellis-hotspot-kit\/ellis-explorer\.css)[^"]*"[^>]*>|<script\b[^>]*src="(?:\/?home-sector-selector\.js|\/?home-commercial-campus\.js|\/?vendor\/ellis-hotspot-kit\/(?:ellis-explorer|ellis-sectors)\.js)[^"]*"[^>]*><\/script>/g,'').replace(/([.](?:css|js))\?v=[a-f0-9]+/g,'$1'));
 const withoutMetadata=html=>html.replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>|<!-- home-locales:start -->[\s\S]*?<!-- home-locales:end -->/g,'');
-assert.equal(stable(withoutMetadata(h)),stable(withoutMetadata(b)));
+const withoutRevisedCopy=html=>html
+ .replace(/<p class="(?:visual-unavailable|form-demo-note)"[^>]*>[\s\S]*?<\/p>/g,'')
+ .replace(/<p data-zh="草稿仅在当前页面生成[^>]*>[^<]*<\/p>/g,'')
+ .replace(/^[ \t]*<noscript><p class="section">当前为静态阅读模式[^<]*<\/p><\/noscript>\r?\n/m,'')
+ .replace(/\sdata-(?:(?:[\w-]+-)?en|aria-label-zh)="[^"]*"/g,'')
+ .replace(/\s+(?=<\/main>)/g,'\n');
+assert.match(h,/<p class="form-demo-note">[^]*?<a href="\/contact\/"[^>]*>在线提交项目需求 ↗<\/a><\/p>/);
+assert.equal(stable(withoutRevisedCopy(withoutMetadata(h))),stable(withoutRevisedCopy(withoutMetadata(b))));
 console.log(JSON.stringify({mapPreserved:true,steps:3,oneProjectCTA:true,referenceContactStrip:true,otherHomepageMarkupPreserved:true}));

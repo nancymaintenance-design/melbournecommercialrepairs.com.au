@@ -20,9 +20,9 @@
 
 **中文：** 我们既处理单项维修，也评估定期维护需求。门体损坏、吊顶板破损、水管配件漏水等可单独报修；反复出现的故障可以按周期维护安排。
 
-### Q04. Can you maintain several Melbourne locations under one arrangement? / 墨尔本有多处门店或物业，能统一报修吗？
+### Q04. Can you maintain several Melbourne sites under one agreement? / 墨尔本有多处门店或物业，能统一报修吗？
 
-**EN:** We can review a multi-site repair list and organise jobs by property, priority and access window. The participating addresses, scope, reporting format and service availability are confirmed before the arrangement starts.
+**EN:** We can review your repair list and plan jobs by site, priority and access times. Before work starts, we agree on the sites, scope, reporting and available services.
 
 **中文：** 我们可以按物业地址、紧急程度和进场时间整理多站点维修清单。具体覆盖地址、工作范围、汇报格式及到场安排，会在开始前逐项确认。
 
@@ -46,11 +46,11 @@
 
 ## 02. Emergency repairs and response / 紧急报修与响应
 
-### Q08. How quickly can someone attend an urgent commercial repair in Melbourne? / 墨尔本商业物业紧急维修多久能到？
+### Q08. How soon can you attend an urgent repair at a commercial property in Melbourne? / 墨尔本商业物业紧急维修多久能到？
 
-**EN:** We assess the immediate risk, business impact, site location and access requirements first. We then confirm the earliest available attendance window; response times are not quoted without checking the actual job and availability.
+**EN:** We assess the immediate risk, impact on your business, location and access. Then we let you know the earliest time we can attend.
 
-**中文：** 我们先判断现场风险、营业影响、地址及进场条件，再确认最早可到场时间。具体响应时效以故障情况和实际排班为准。
+**中文：** 我们先判断现场风险、营业影响、地址及进场条件，再确认最早可到场时间。
 
 ### Q09. Do you take after-hours or weekend emergency jobs? / 下班后、周末或节假日能安排紧急维修吗？
 
@@ -108,7 +108,7 @@
 
 **中文：** 我们会记录新增缺陷，说明对原施工范围的影响，并在产生额外费用的工作开始前提交变更内容供确认；涉及即时安全风险的必要处置会另行说明。
 
-### Q18. Can you work to a purchase order and our approval limits? / 可以按采购单 PO 和维修审批额度执行吗？
+### Q18. Can you work to a purchase order and within our approval limits? / 可以按采购单 PO 和维修审批额度执行吗？
 
 **EN:** We can identify the work-order number, purchase order, site code and approval contact before attendance. We distinguish pre-approved repairs from work that needs a separate variation approval.
 
@@ -190,7 +190,7 @@
 
 **中文：** 我们评估锈蚀、屋面板老化、泛水节点和排水问题的范围。局部缺陷可考虑针对性维修；大面积失效或反复漏水，则需要评估分阶段或整体更换。
 
-### Q31. Can you repair storm-damaged Colorbond roofing and flashings? / 暴风雨损坏的 Colorbond 屋面和泛水板能修吗？
+### Q31. Can you repair storm-damaged COLORBOND® roofing and flashings? / 暴风雨损坏的 Colorbond 屋面和泛水板能修吗？
 
 **EN:** We inspect the affected sheets, fasteners, flashings, roof penetrations and drainage. The repair scope identifies damaged components, access and fall-protection requirements and any temporary weatherproofing needed.
 
@@ -326,7 +326,7 @@
 
 ### Q52. Should we repair or replace an ageing commercial air conditioner? / 老旧商用空调应该维修还是更换？
 
-**EN:** We compare the fault, equipment condition, parts availability, repair scope and operating requirements. Replacement is considered when repairs cannot provide a practical or reliable outcome for the equipment's condition.
+**EN:** We look at the fault, the condition of the equipment, parts availability and what the system needs to do. We consider replacement when a repair is unlikely to be practical or reliable.
 
 **中文：** 我们对比故障情况、设备状态、配件供应、维修范围和实际运行需求。当维修已无法对现有设备提供合理、稳定的处理结果时，再评估更换方案。
 
@@ -344,7 +344,7 @@
 
 ### Q55. Does a commercial cooling tower need a separate maintenance and compliance plan? / 商业楼宇冷却塔需要单独的维护和合规计划吗？
 
-**EN:** Yes. Victoria has specific cooling-tower registration, risk management, audit and water-testing requirements. We distinguish this statutory programme from ordinary air-conditioning servicing and confirm the relevant specialist responsibilities before any work is scoped.
+**EN:** Yes. Victoria has specific cooling-tower registration, risk management, audit and water-testing requirements. These requirements are separate from routine air conditioning servicing. We confirm who is responsible for the specialist work before agreeing on a scope.
 
 **中文：** 需要。维州对冷却塔注册、风险管理计划、独立审计及水质检测有专项要求。我们会将这类法定计划与一般空调保养区分，并在界定工作前确认相应专业责任。
 
@@ -390,7 +390,7 @@
 
 ### Q62. Can you repaint our office or shop after hours? / 能在下班后给办公室或商铺重新刷漆吗？
 
-**EN:** We assess after-hours scheduling against site access, ventilation, product curing time and noise restrictions. The work can be planned by zone so reopening and normal use are considered in the programme.
+**EN:** We assess after-hours scheduling against site access, ventilation, product curing time and noise restrictions. We can plan painting by area and allow for reopening and normal use in the work schedule.
 
 **中文：** 我们会结合进场时间、通风条件、涂料固化时间及噪声限制评估非营业时间施工。可以按区域分阶段安排，并在排期中考虑重新开放使用的时间。
 
@@ -460,7 +460,7 @@
 
 ### Q73. Can you work in a shopping centre with strict access and delivery hours? / 购物中心对施工证件、送货和作业时间有要求，也能安排吗？
 
-**EN:** We review the centre's induction, work permits, approved hours, loading-bay access, noise controls and fire-system isolation requirements before the job is booked. The programme is based on the approvals actually obtained for that tenancy.
+**EN:** We review the centre's induction, work permits, approved hours, loading-bay access, noise controls and fire-system isolation requirements before the job is booked. We schedule the work around the approvals for that tenancy.
 
 **中文：** 我们在排期前核对商场培训、施工许可、允许时间、卸货通道、噪声管制及消防系统隔离要求，并以该商铺实际获批的条件安排施工。
 
@@ -482,7 +482,7 @@
 
 **中文：** 我们核对租约交还条件、现场现状和确认的恢复范围。项目可包括拆除租户设施、修复墙面与吊顶、重新涂装、恢复地面及其他列明的 Make Good 工作。
 
-### Q77. What do you need to quote an office or warehouse make-good project? / 办公室或仓库退租恢复报价需要哪些资料？
+### Q77. What information do you need to quote make-good work for an office or warehouse? / 办公室或仓库退租恢复报价需要哪些资料？
 
 **EN:** We need the site address, lease end date, relevant make-good clauses, floor area, photos, building access rules and any landlord or property-manager handover notes. We use those details to define the inspection, work sequence and quotation scope.
 

@@ -12,7 +12,7 @@ for(const [i,phase]of ['site','inspection','work','completed'].entries()){
 assert(!/connector-pipe|problem-plumbing-gas|design\/plumbing/.test(gallery),'No orange-only model or unrelated gas photo in the drainage gallery');
 assert.equal((gallery.match(/class="pg-phase"/g)||[]).length,4,'Four HTML stage labels');
 assert.equal((gallery.match(/class="pg-join"/g)||[]).length,3,'Three decorative sequence markers');
-assert(gallery.includes('案例版式示意｜上线替换为真实项目'),'Illustrations are not presented as real work');
+assert(gallery.includes('维护场景示例')&&gallery.includes('Maintenance scene examples'),'Gallery assets are clearly identified as examples');
 assert(!/<button\b|role="button"/.test(gallery),'Sequence markers are not nonfunctional controls');
 for(const s of require('../content/service-pages.json').services){
  const page=fs.readFileSync(path.join(root,s.route,'index.html'),'utf8');
