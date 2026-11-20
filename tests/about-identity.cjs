@@ -20,7 +20,7 @@ assert.equal(new URL(business.registerUrl).searchParams.get('id'),business.abn.r
 for(const file of ['assets/about-identity/registration-badge.png','areas/melbourne/index.html','contact/index.html'])assert(fs.existsSync(path.join(__dirname,'..',file)),file+' exists');
 assert(html.includes(moduleHTML),'Built About contains the open identity module');
 assert(!html.includes('ap-registration-details'),'Retired disclosure removed from generated About');
-assert(html.includes('$20M')&&html.includes('Public Liability Insurance')&&html.includes('2000万澳币公众责任险'),'Insurance retained');
+assert(html.includes('$20M')&&html.includes('Public Liability Insurance')&&html.includes('2,000 万澳元公众责任险'),'Insurance retained');
 assert(html.includes('href="/contact/" data-local-page'),'Existing contact entry retained');
 // A changed business source must flow through, rather than retaining values read from the mockup.
 const changed=render({...business,abn:'11 222 333 444',acn:'222 333 444',registeredRegion:'VIC 3999, Australia',activeFrom:'2021-02-03',gstFrom:'2021-02-04',verifiedOn:'2026-11-14'});

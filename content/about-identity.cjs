@@ -11,7 +11,7 @@ exports.section=business=>{
   ['gst','stack','GST 状态','GST status',business.gstFrom?'已登记':'未登记',business.gstFrom?'Registered':'Not registered'],
   ['gst-date','calendar-blank','GST 登记日期','GST registration date',date(business.gstFrom,'zh-CN'),date(business.gstFrom,'en-AU')],
   ['type','buildings','公司类型','Company type',business.entityType==='Australian Private Company'?'澳大利亚私人公司':business.entityType,business.entityType],
-  ['region','house-line','主要经营登记地区','Registered business location',business.registeredRegion,business.registeredRegion]
+  ['region','house-line','主要经营登记地区','Principal business region',business.registeredRegion,business.registeredRegion]
  ];
  return `<section class="ap-identity" id="company-registration" aria-labelledby="identity-title" data-entrance data-company-identity>
   <div class="ai-surface">
@@ -25,10 +25,10 @@ exports.section=business=>{
    <div class="ai-records">
     <dl class="ai-numbers"><div class="ai-number ai-abn"><dt>ABN</dt><dd>${escape(business.abn)}</dd></div><div class="ai-number ai-acn"><dt>ACN</dt><dd>${escape(business.acn)}</dd></div></dl>
     <dl class="ai-fields">${fields.map(([key,svg,zh,en,valueZh,valueEn])=>`<div class="ai-field ai-field-${key}"><dt><span class="ai-field-icon" aria-hidden="true">${icon(svg)}</span>${dual('span',zh,en)}</dt>${dual('dd',valueZh,valueEn)}</div>`).join('')}</dl>
-    <nav class="ai-actions" aria-label="公司登记核验与服务地区" data-aria-label-zh="公司登记核验与服务地区" data-aria-label-en="Company registration and service area links"><a class="ai-verify" href="${escape(business.registerUrl)}" target="_blank" rel="noopener noreferrer">${dual('span','在 ABN Lookup 官方核验','Verify on ABN Lookup')}<img src="/assets/sector-selector/icons/arrow-up-right.svg" width="25" height="25" alt="" aria-hidden="true"></a><a class="ai-area" href="/areas/melbourne/" data-local-page>${dual('span','墨尔本服务地区','Melbourne service area')}<img src="/assets/sector-selector/icons/arrow-up-right.svg" width="24" height="24" alt="" aria-hidden="true"></a></nav>
+    <nav class="ai-actions" aria-label="公司登记与服务地区" data-aria-label-zh="公司登记与服务地区" data-aria-label-en="Company registration and service area links"><a class="ai-verify" href="${escape(business.registerUrl)}" target="_blank" rel="noopener noreferrer">${dual('span','官方 ABN 登记资料','ABN Lookup record')}<img src="/assets/sector-selector/icons/arrow-up-right.svg" width="25" height="25" alt="" aria-hidden="true"></a><a class="ai-area" href="/areas/melbourne/" data-local-page>${dual('span','墨尔本服务地区','Melbourne service area')}<img src="/assets/sector-selector/icons/arrow-up-right.svg" width="24" height="24" alt="" aria-hidden="true"></a></nav>
    </div>
    <span class="ai-edge-light" aria-hidden="true"></span>
   </div>
-  <div class="ai-footnotes">${dual('p','登记信息核对于 '+date(business.verifiedOn,'zh-CN'),'Registration details checked on '+date(business.verifiedOn,'en-AU'),'ai-checked')}<a href="${escape(business.mapsUrl)}" target="_blank" rel="noopener noreferrer" data-zh="查看商家地图 ↗" data-en="View our location on Google Maps ↗">查看商家地图 ↗</a></div>
+  <div class="ai-footnotes">${dual('p','登记资料核对日期为 '+date(business.verifiedOn,'zh-CN'),'Registration details checked on '+date(business.verifiedOn,'en-AU'),'ai-checked')}<a href="${escape(business.mapsUrl)}" target="_blank" rel="noopener noreferrer" data-zh="查看商家地图 ↗" data-en="View our location on Google Maps ↗">查看商家地图 ↗</a></div>
  </section>`;
 };

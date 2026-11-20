@@ -4,6 +4,10 @@
   "outputDirectory": ".",
   "routes": [
     { "src": "^/_ellisl10n(?:/.*)?$", "status": 404 },
+    { "src": "^/content/machine-discovery\\.cjs$", "status": 404 },
+    { "src": "^/feed(?:-en)?\\.xml$", "headers": { "Content-Type": "application/rss+xml; charset=utf-8" }, "continue": true },
+    { "src": "^/feed(?:-en)?\\.json$", "headers": { "Content-Type": "application/feed+json; charset=utf-8" }, "continue": true },
+    { "src": "^/llms\\.txt$", "headers": { "Content-Type": "text/plain; charset=utf-8" }, "continue": true },
     {
       "src": "^/$",
       "methods": ["GET", "HEAD"],

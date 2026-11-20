@@ -66,11 +66,13 @@ for (const lang of ['zh','en']) {
   assert(nodes.some(node=>attribute(node,'hreflang')==='zh-CN'&&attribute(node,'href')===canonicalUrl(route,'zh')));
   assert(sitemap.includes(canonical));
   const json = nodes.filter(node=>attribute(node,'type')==='application/ld+json').map(node=>JSON.parse(node.childNodes[0].value));
-  const schema = json.find(entity=>entity['@type']==='Article');
+  assert.equal(json.length,1,route+' one structured data graph');
+  const schema = json[0]['@graph'].find(entity=>entity['@type']==='Article');
   assert.equal(schema.url,canonical);
   assert.equal(schema.inLanguage,lang==='en'?'en-AU':'zh-CN');
   assert.equal(schema.headline,article.title[lang==='en'?1:0].replaceAll('\n',' '));
   assert.equal(schema.author['@id'],origin+'/#ellis-organization');
+  assert(json[0]['@graph'].some(entity=>entity['@id']===schema.mainEntityOfPage['@id']&&entity.url===canonical));
   assert.equal(schema.datePublished,article.publishedOn);
   assert(!schema.dateModified,'No generated modification date');
   for(const node of main.filter(node=>node.tagName==='img')){

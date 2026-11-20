@@ -370,7 +370,7 @@
           "metaTitle": "墨尔本市中心商业物业维护与维修 | Ellis",
           "metaDescription": "Ellis 为墨尔本市中心及内城商业空间安排楼宇维修、空调维护、翻新与外立面清洁。提供物业位置和进场要求，讨论项目范围。",
           "heroLead": "从办公楼层到街边商铺，把维修范围、楼宇管理要求与进场时间一起安排清楚。",
-          "localIntro": "市中心及内城的办公、零售和餐饮空间，往往需要把施工与正在使用的楼层、商铺入口和公共通道一起考虑。我们从物业的实际使用方式出发，将日常维修、空调设备、租赁交接及外立面工作拆成可安排的任务。咨询时可提供楼层、装卸位置、物业联系人及可施工时间；我们据此明确查看顺序、材料搬运和分区施工安排。涉及楼宇共有设施时，先梳理管理方要求与工作边界，再确定施工方案。",
+          "localIntro": "我们在墨尔本市中心及内城为办公楼、沿街商铺、商场和餐饮场所安排维修。从楼层维修和空调故障，到外立面作业和租约交还，我们会与楼宇管理方协调卸货、电梯和公共通道。办公楼可按楼层安排，商铺维修可配合营业时间和交还日期。",
           "sectionHeadings": {
             "services": "市中心商业物业的服务入口",
             "scenarios": "从楼层到门店，按现场安排维修",
@@ -430,29 +430,29 @@
           "planning": [
             {
               "title": "楼宇许可与联系人",
-              "body": "提供物业管理联系信息、登记要求和可进入楼层，便于安排现场查看。"
+              "body": "我们与楼宇管理方协调承包商登记和需要进入的楼层。"
             },
             {
               "title": "装卸与材料路径",
-              "body": "说明车辆停靠、货梯预订和材料暂存条件，避免到场后才确定搬运路线。"
+              "body": "我们在到场前确认车辆入口、货梯预约和材料临时存放位置。"
             },
             {
               "title": "可施工的时间段",
-              "body": "列明营业、租户及相邻空间限制；具体施工日期和时段按项目确认。"
+              "body": "我们结合租户、商铺和相邻区域的使用要求安排施工时间。"
             }
           ],
           "faq": [
             {
               "question": "市中心写字楼需要物业批准后才能安排吗？",
-              "answer": "需要先了解该楼宇的进入及施工要求。你可以把物业管理方的条件、许可流程和可施工时段发给我们，我们将这些条件纳入安排。"
+              "answer": "我们会与楼宇管理方协调进场、审批、卸货和允许施工的时段，并据此安排各楼层的维修。"
             },
             {
               "question": "可以在办公室仍有人使用时施工吗？",
-              "answer": "我们会先评估工作范围、噪声、隔离和通行条件，再讨论分区或错峰安排。是否适合在占用状态下施工，需要按现场情况确认。"
+              "answer": "我们可以把维修分层或分区安排。我们先确认噪声、通行和隔离要求，优先把影响较大的工作排在较安静的时段。"
             },
             {
               "question": "内城办公室退租恢复能和清洁一起安排吗？",
-              "answer": "可以把修复和清洁放在同一份范围清单中讨论。请提供已确认的退租要求及交接日期，我们会安排工序并说明需要先确认的事项。"
+              "answer": "我们可以统筹退租恢复和清洁，按租约交还要求和日期安排拆除、修补、涂装和清理。"
             }
           ],
           "cta": {
@@ -466,7 +466,7 @@
           "metaTitle": "Commercial Property Maintenance Melbourne CBD | Ellis",
           "metaDescription": "Building repairs, air conditioning, tenancy make good and façade cleaning for Melbourne CBD and inner-city properties. Discuss access and your project scope.",
           "heroLead": "Plan repairs around occupied floors, shop entrances and building access requirements.",
-          "localIntro": "Central Melbourne combines offices, retail premises and hospitality spaces, including businesses in laneways and arcades. We organise maintenance around how each property is used, rather than assuming every city site has the same access. An office floor may need staged work, while a shop tenancy may need repairs aligned with a handover date. Share the floor, loading arrangements, building contact and preferred work window with your enquiry. We use those details to plan the inspection, work out how to bring materials in and schedule the trades. Where shared building systems or common areas are involved, the scope also needs to reflect the building manager’s requirements.",
+          "localIntro": "We look after offices, shops, arcades and hospitality venues across central Melbourne and the inner suburbs. We coordinate building repairs, air conditioning, façade access and tenancy handovers with building management. We can stage work by office floor or plan shop repairs around trading hours and make-good dates.",
           "sectionHeadings": {
             "services": "Services for CBD and inner-city properties",
             "scenarios": "Repairs planned around the property",
@@ -526,34 +526,34 @@
           "planning": [
             {
               "title": "Building contact and approvals",
-              "body": "Share the building manager’s details, registration process and floors we need to access."
+              "body": "We coordinate contractor registration and floor access with building management."
             },
             {
               "title": "Loading and access for materials",
-              "body": "Identify vehicle access, goods-lift booking and temporary storage options before the visit."
+              "body": "We confirm vehicle access, goods lift bookings and temporary storage before we arrive."
             },
             {
               "title": "Available work times",
-              "body": "Tell us about tenant, trading and neighbouring-space restrictions. Dates and hours are confirmed for each project."
+              "body": "We schedule the work around tenants, trading hours and neighbouring premises."
             }
           ],
           "faq": [
             {
               "question": "Do city office projects need building management approval first?",
-              "answer": "We first need to understand the building’s access and work requirements. Send the manager’s conditions, approval process and permitted work windows so these can be included in the arrangements."
+              "answer": "We liaise with building management on access, approvals, loading and permitted hours, then schedule the work by floor."
             },
             {
               "question": "Can repairs take place while the office is occupied?",
-              "answer": "We assess the scope, noise, separation and access before discussing staged or quieter-period work. Whether occupied-site work is suitable depends on the actual conditions."
+              "answer": "We can stage repairs by floor or work zone. We review access, noise and separation, then schedule the more disruptive work for quieter periods."
             },
             {
               "question": "Can office make good and cleaning be arranged together?",
-              "answer": "We can discuss the repairs and cleaning within one scope. Share the agreed make-good requirements and handover date so the sequence and outstanding decisions can be identified."
+              "answer": "We can coordinate make-good repairs and cleaning, and sequence strip-out, repairs, painting and cleaning around the handover requirements and date."
             }
           ],
           "cta": {
             "title": "Plan your city property project",
-            "body": "Share the building, floor and repair needs so we can start with the site conditions.",
+            "body": "Tell us which building and floor need repairs. We’ll confirm access and plan the visit.",
             "label": "Enquire about work in this area"
           }
         }
@@ -688,7 +688,7 @@
           "metaTitle": "墨尔本东区商业维修与物业维护 | Ellis",
           "metaDescription": "为墨尔本东区商铺、购物中心和办公室安排建筑维修、照明、空调及翻新。按营业时间、公共通道和租赁范围讨论施工。",
           "heroLead": "从商场入口到办公室后场，把维修安排融入物业的营业节奏。",
-          "localIntro": "东区的商业空间涵盖购物中心、沿街店面与办公室。对于仍在营业的场所，维修不仅涉及损坏部位，还要考虑顾客通道、公共区域及相邻租户。我们会分别梳理前场和后场任务，确认哪些工作可以分区完成，哪些需要物业或租赁方先确定范围。若同时涉及门窗、照明、空调或翻新，可先合并列出问题，再按现场条件安排工序。区域内不同物业的管理方式并不相同，具体工作以你的地址、照片和使用要求为基础。",
+          "localIntro": "我们为墨尔本东区的购物中心、沿街商铺和办公室维修门窗、室内饰面、照明及空调，也安排商业翻新。我们把营业区和后场分开安排，与物业管理方确认顾客通道和共用设施，方便店铺和办公室继续运作。",
           "sectionHeadings": {
             "services": "东区商业空间维修入口",
             "scenarios": "按营业状态，安排三类工作",
@@ -748,29 +748,29 @@
           "planning": [
             {
               "title": "营业与顾客动线",
-              "body": "列出开门、收货和顾客高峰时段，明确需要保留的出入口。"
+              "body": "我们根据营业、送货和客流高峰安排施工，提前确认需要保持开放的入口。"
             },
             {
               "title": "租赁与公共区域边界",
-              "body": "把店内责任范围和商场共有区域分开，先确认由谁批准和交接。"
+              "body": "我们与店铺和物业方明确店内与共用区域的施工范围，安排审批和交接。"
             },
             {
               "title": "分区交付顺序",
-              "body": "按照可封闭区域和材料条件确定工序，不预设所有工作都能一次完成。"
+              "body": "我们根据可独立作业的区域和所需材料安排施工顺序。"
             }
           ],
           "faq": [
             {
               "question": "购物中心内的店面维修需要先提供什么？",
-              "answer": "请提供店铺位置、物业管理要求、损坏照片和可进入时间。若影响商场公区或机电设施，也请说明批准和隔离要求。"
+              "answer": "提供店铺位置和需要维修的问题即可开始沟通。我们会与商场管理方核对进场、审批、共用设施和通行保护要求。"
             },
             {
               "question": "只做局部维修，也可以咨询吗？",
-              "answer": "可以。告诉我们具体部位和使用问题，我们会讨论局部修复范围；是否需要扩大处理范围，要根据检查情况确定。"
+              "answer": "我们接受单项维修。我们先查看受损位置和对使用的影响，再说明局部维修的范围，以及是否发现需要一并处理的问题。"
             },
             {
               "question": "可以按门店营业时间安排工作吗？",
-              "answer": "可以先围绕你的营业、收货和交接时间讨论安排。最终时段取决于工作内容、物业条件和双方确认的排期。"
+              "answer": "我们会把门店营业、送货和交还时间纳入排期，并提前说明各阶段的施工区域和进场安排。"
             }
           ],
           "cta": {
@@ -784,7 +784,7 @@
           "metaTitle": "Commercial Maintenance Melbourne’s eastern suburbs | Ellis",
           "metaDescription": "Shop, office and retail property repairs across Melbourne’s eastern suburbs. Discuss building repairs, lighting, air conditioning and tenancy refurbishment.",
           "heroLead": "Organise repairs around shop trading hours, customer access and office operations.",
-          "localIntro": "Melbourne’s eastern suburbs include shopping centres, shopping strips and office premises. The region’s activity centres support a mix of commercial uses, so the practical repair plan depends on the individual tenancy and its shared spaces. We separate customer-facing work from back-of-house tasks and identify the routes that need to remain available. Doors, finishes, lighting, air conditioning and refurbishment needs can be discussed together, with the sequence shaped by access and the agreed scope. Share the property address, photographs and trading requirements. Where common areas or shared equipment are involved, we confirm the requirements with building management before scheduling the work.",
+          "localIntro": "We repair doors, finishes, lighting and air conditioning in shopping centres, strip shops and offices across Melbourne’s east. We also coordinate refurbishments. We stage work across customer areas and back-of-house spaces and liaise with building management on access and shared services.",
           "sectionHeadings": {
             "services": "Services for eastern-suburb properties",
             "scenarios": "Three ways to organise the work",
@@ -844,29 +844,29 @@
           "planning": [
             {
               "title": "Trading and customer routes",
-              "body": "List opening, delivery and busy periods, and identify entrances that must stay available."
+              "body": "We plan around trading, deliveries and peak periods, and agree on which entrances stay open."
             },
             {
               "title": "Tenancy and common-area boundaries",
-              "body": "Separate shop responsibilities from shared areas and identify who approves and accepts the work."
+              "body": "We agree on the scope for the shop and common areas, and confirm who approves the work and accepts handover."
             },
             {
               "title": "Staged handover",
-              "body": "Set the sequence according to areas that can be separated and the materials involved."
+              "body": "We sequence the work around areas we can separate and the materials the job needs."
             }
           ],
           "faq": [
             {
               "question": "What do you need for repairs inside a shopping centre?",
-              "answer": "Share the tenancy location, management requirements, photographs and available access times. Include approval and separation requirements where common areas or shared systems may be affected."
+              "answer": "Tell us where the tenancy is and what needs fixing. We’ll liaise with centre management on access, approvals, shared services and pedestrian protection."
             },
             {
               "question": "Can I enquire about a small, localised repair?",
-              "answer": "Yes. Tell us which part needs attention and how it affects use. We can discuss a targeted scope, with any wider repair needs determined through inspection."
+              "answer": "Yes. We take on one-off repairs. We check the affected area and how the fault disrupts use, then explain the scope and any related work we find."
             },
             {
               "question": "Can the work be planned around shop trading hours?",
-              "answer": "We can discuss trading, deliveries and handover times when planning. The final work window depends on the tasks, property conditions and the agreed schedule."
+              "answer": "We plan the work around trading hours, deliveries and handover dates. We’ll confirm the work zones and access arrangements for each stage."
             }
           ],
           "cta": {
@@ -1007,7 +1007,7 @@
           "metaTitle": "墨尔本东南区商业与工业物业维护 | Ellis",
           "metaDescription": "为墨尔本东南区厂房、办公园区及商业场地安排建筑、屋面、水电和设备维护。围绕生产分区、设备通道与进场条件明确方案。",
           "heroLead": "厂房、办公室与场地一起考虑，把维修工序与现场运营安排清楚。",
-          "localIntro": "东南区同时拥有商业办公、制造和研究相关空间。我们在讨论维修时，先区分建筑本体、楼宇设备和生产设备的责任范围，再确认影响哪些工作区域。对屋面渗漏、管道排水、照明或建筑修复，项目计划需要考虑货物和设备保护、人员通行以及可隔离的工作窗口。请提供平面位置、问题照片及现场联系人；若多个问题有关联，我们会将查看顺序和处理边界列清楚。任何涉及停止使用或恢复运行的安排，都会在明确现场条件后再确认。",
+          "localIntro": "我们为墨尔本东南区的办公楼、厂房和园区安排屋面、排水、照明及建筑维修。我们会明确建筑及楼宇设备的维修范围，协调货物保护、人员通行和受影响区域的停用及恢复时间，配合现场的生产和办公安排。",
           "sectionHeadings": {
             "services": "东南区建筑与设备维护入口",
             "scenarios": "把现场问题拆成可安排的任务",
@@ -1067,29 +1067,29 @@
           "planning": [
             {
               "title": "建筑与设备责任边界",
-              "body": "说明问题属于房屋、公共设备还是生产设备，必要时提供现有维护资料。"
+              "body": "我们查明确实受影响的区域，区分建筑、共用设备及专用生产设备的维修范围。"
             },
             {
               "title": "现场隔离与设备保护",
-              "body": "列出需保持运转或限制进入的区域，用于制定作业安排。"
+              "body": "我们核对哪些区域需要保持运行、哪些需要临时限制进出，再划分施工区。"
             },
             {
               "title": "工作窗口与恢复条件",
-              "body": "确认何时可以查看、施工和交接；具体恢复步骤纳入项目范围。"
+              "body": "我们提前确认检查、施工、验收和恢复使用的时间。"
             }
           ],
           "faq": [
             {
               "question": "厂房屋面漏水要先发哪些资料？",
-              "answer": "请提供漏水部位照片、发生情况及下方空间用途，并说明屋面是否有既定进场管理要求。这有助于明确查看范围和货物、设备保护安排。"
+              "answer": "报修时告诉我们漏水位置、出现时间和下方区域的用途。我们会协调屋面进场，安排检查，并保护受影响的货物或设备。"
             },
             {
-              "question": "你们会处理生产设备故障吗？",
-              "answer": "本页面重点是建筑、楼宇设备和场地维护。请说明设备类型及故障情况，我们会先明确是否属于可提供的工作范围，再讨论安排。"
+              "question": "你们负责哪些厂房设备维修？",
+              "answer": "我们负责建筑、楼宇设备和室外场地维护。涉及厂房内的专用生产设备时，我们会与现场负责人厘清设备和楼宇维修的分工。"
             },
             {
               "question": "多个工种可以在同一个现场统一安排吗？",
-              "answer": "可以把建筑、屋面、水电等事项一起列出。我们会核对工作之间的依赖关系、隔离条件和进场时间，再形成明确的施工范围与顺序。"
+              "answer": "我们可在一个项目中协调建筑、屋面、水管和电气工种，并安排工序、隔离区域及进场时间。"
             }
           ],
           "cta": {
@@ -1103,7 +1103,7 @@
           "metaTitle": "Commercial & Industrial Maintenance South East Melbourne | Ellis",
           "metaDescription": "Building, roof, plumbing and lighting maintenance for commercial and industrial properties in South East Melbourne. Discuss site access and work staging.",
           "heroLead": "Plan work on buildings, plant areas and outdoor spaces around your operations.",
-          "localIntro": "South East Melbourne includes commercial offices and industrial premises alongside research and manufacturing precincts. We begin by distinguishing the building, building services and production equipment so the maintenance scope is clear. Roof leaks, drainage faults, lighting and building repairs may each affect different parts of an operating site. The plan therefore needs to consider goods protection, equipment access, staff movement and which areas can be closed off. Share photographs, the location of the issue and a site contact. Related tasks can then be organised into a sequence, with any interruption and plans for reopening agreed to suit the site.",
+          "localIntro": "We look after roofs, drainage, lighting and building repairs for offices, factories and business parks in Melbourne’s south-east. We distinguish building and building services work from production equipment and plan access, protection for stock and any shutdown or reopening around your operations.",
           "sectionHeadings": {
             "services": "Building and equipment services in the south east",
             "scenarios": "Turn site issues into defined tasks",
@@ -1163,29 +1163,29 @@
           "planning": [
             {
               "title": "Building and equipment boundaries",
-              "body": "Explain whether the issue concerns the building, shared plant or production equipment, with available maintenance information."
+              "body": "We identify the affected areas and set out the scope for the building and shared services, with production equipment considered separately."
             },
             {
               "title": "Separation and equipment protection",
-              "body": "Identify areas that must remain operational or have restricted access so these can shape the work plan."
+              "body": "We find out which areas need to stay operational and which need restricted access, then set the work zones."
             },
             {
-              "title": "Work windows and return to use",
-              "body": "Confirm when inspection, work and handover can occur. Include requirements for reopening in the scope."
+              "title": "Work hours and reopening",
+              "body": "We agree on inspection, work, handover and reopening times in advance."
             }
           ],
           "faq": [
             {
               "question": "What should I send about an industrial roof leak?",
-              "answer": "Send photographs, when the leak occurs and how the space below is used. Include existing roof-access requirements so the inspection and protection of goods or equipment can be considered."
+              "answer": "Tell us where and when the roof leaks and what the area below is used for. We’ll coordinate roof access, inspect the leak and plan protection for stock and equipment."
             },
             {
-              "question": "Does this service cover production machinery faults?",
-              "answer": "This page focuses on buildings, building services and external areas. Tell us the equipment type and fault so we can first clarify whether the work is within the services we provide."
+              "question": "Which equipment do you maintain at industrial sites?",
+              "answer": "We look after the building, building services and external areas. When the issue also involves specialist production machinery, we work with your site contact to clarify where our building maintenance work fits."
             },
             {
               "question": "Can several trades be arranged for the same site?",
-              "answer": "You can provide building, roofing, plumbing and electrical needs together. We will clarify dependencies, separation conditions and times we can access the site before defining the scope and sequence."
+              "answer": "We can coordinate building, roofing, plumbing and electrical trades under one scope. We organise the sequence, work zones and access around your site."
             }
           ],
           "cta": {
@@ -1304,7 +1304,7 @@
           "anchorZh": "园区标识与导视",
           "anchorEn": "Site signage and wayfinding",
           "contextZh": "让场地功能与行进方向在方案中保持一致。",
-          "contextEn": "Align site information with the agreed movement plan.",
+          "contextEn": "We place signs to suit the agreed vehicle and pedestrian routes.",
           "route": "/services/signage-wayfinding/",
           "hrefZh": "/services/signage-wayfinding/?lang=zh",
           "hrefEn": "/services/signage-wayfinding/?lang=en",
@@ -1321,7 +1321,7 @@
           "metaTitle": "墨尔本西区商业物业与仓库维护 | Ellis",
           "metaDescription": "为墨尔本西区商业物业、仓库及物流场地安排屋面、建筑、通道和标识维护。按装卸时段与车辆路线确认维修计划。",
           "heroLead": "从仓库屋面到装卸通道，把建筑维修与车辆、人员动线一起安排。",
-          "localIntro": "墨尔本西区的商业场地既包括店面与办公室，也包括制造、仓储和物流物业。对于带装卸区域的现场，维修位置与车辆路线之间的关系，往往决定施工如何分区。我们会把屋面问题、门口修复、外部地面、划线及导视需求分别列明，结合收发货安排确定查看和施工顺序。咨询时可提供入口照片、受影响区域及车辆使用情况；对于需要临时调整路线或封闭区域的工作，我们会先讨论现场组织条件，再确认具体方案。",
+          "localIntro": "我们为墨尔本西区的仓库、物流中心、工业物业、商铺和办公室安排维修。屋面、出入口、外部地面、标线和导视可纳入同一项目。我们根据货车、叉车和行人路线划分施工区，配合收发货时间安排进场。",
           "sectionHeadings": {
             "services": "西区仓库与商业场地服务",
             "scenarios": "沿着场地动线找到维修入口",
@@ -1381,29 +1381,29 @@
           "planning": [
             {
               "title": "车辆与货物动线",
-              "body": "注明货车出入口、装卸位置和人员路线，为现场分区提供依据。"
+              "body": "我们把货车入口、装卸位置和行人路线纳入施工分区。"
             },
             {
               "title": "收发货及场地限制",
-              "body": "提供收货高峰、停车和材料暂存限制，施工窗口按双方确认安排。"
+              "body": "我们协调送货高峰、停车和材料临时存放。"
             },
             {
               "title": "工作面与交付条件",
-              "body": "对需封闭或等待材料达到使用条件的区域，先明确何时能恢复通行。"
+              "body": "我们检查维修区域，并根据材料养护和通行要求确认开放时间。"
             }
           ],
           "faq": [
             {
               "question": "仓库仍在收发货，能安排场地维修吗？",
-              "answer": "我们会先了解货车、叉车和人员路线，再讨论分区与时间安排。能否在运营同时施工，取决于工作范围和现场能否形成合适的隔离条件。"
+              "answer": "我们会把货车、叉车和行人路线纳入施工计划，按装卸时段安排分区作业，并提前确认临时通道。"
             },
             {
               "question": "停车场修复和划线可以一起讨论吗？",
-              "answer": "可以。先确认地面状态、修复边界及需要保留或调整的线路，再决定修复、养护和划线的先后顺序。"
+              "answer": "可以。我们先明确路面修补范围及需保留的标线，再安排维修、养护和重新划线。"
             },
             {
               "question": "多个租户使用的通道由谁提供要求？",
-              "answer": "建议指定物业管理或现场协调联系人，整理共有区域要求以及各租户的通行限制。我们根据确认后的信息确定工作范围和安排。"
+              "answer": "我们与物业经理或现场负责人统一对接，确认共用区域和各租户的通行要求，再将临时路线纳入施工安排。"
             }
           ],
           "cta": {
@@ -1417,7 +1417,7 @@
           "metaTitle": "Commercial Property Maintenance Melbourne’s western suburbs | Ellis",
           "metaDescription": "Warehouse and commercial property repairs in Melbourne’s west, including roofs, building fabric, external access areas and signage. Discuss your site requirements.",
           "heroLead": "Plan roof, building and outdoor repairs around deliveries and site access.",
-          "localIntro": "Melbourne’s western suburbs contain shops and offices as well as manufacturing, warehousing and logistics premises. On a site with loading areas, vehicle movements affect when and where repairs can take place. We identify roofing, entrances, external surfaces, line marking and wayfinding as separate tasks, then discuss how they fit around deliveries and access. Include entrance photographs, affected locations and the types of vehicles using the property in your enquiry. If work needs a temporary route change or a closed area, we confirm those arrangements before agreeing on the scope and order of work.",
+          "localIntro": "We maintain warehouses, logistics and industrial sites, shops and offices across Melbourne’s west. We can combine roofing, entrance repairs, external surfaces, line marking and signage in one job. We plan work zones and access around deliveries, forklifts and pedestrian routes.",
           "sectionHeadings": {
             "services": "Services for warehouses and commercial sites",
             "scenarios": "Follow the site route to the repair",
@@ -1477,29 +1477,29 @@
           "planning": [
             {
               "title": "Vehicle and freight movements",
-              "body": "Identify truck entrances, loading positions and pedestrian routes to inform work areas."
+              "body": "We set work zones around truck entrances, loading points and pedestrian routes."
             },
             {
               "title": "Deliveries and site constraints",
-              "body": "Share delivery peaks, parking limits and options for storing materials on site."
+              "body": "We plan around delivery peaks, parking limits and space for materials."
             },
             {
               "title": "Work areas and reopening",
-              "body": "Confirm when closed areas can reopen, including any material-specific conditions for reopening."
+              "body": "We check completed areas and agree on reopening times based on curing and access requirements."
             }
           ],
           "faq": [
             {
               "question": "Can external repairs be planned while a warehouse receives deliveries?",
-              "answer": "We first need to understand truck, forklift and pedestrian routes. We can then discuss staging and timing; work during operations depends on the scope and suitable separation at the site."
+              "answer": "We plan work zones around truck, forklift and pedestrian routes. We schedule each stage around loading times and agree on temporary access in advance."
             },
             {
               "question": "Can pavement repairs and line marking be discussed together?",
-              "answer": "Yes. The surface condition, repair boundaries and markings to retain or change need to be established before sequencing repairs, curing and marking."
+              "answer": "Yes. We agree on the pavement repair scope and which markings to retain, then schedule repairs, curing and line marking."
             },
             {
               "question": "Who should provide requirements for a shared tenant access route?",
-              "answer": "A property manager or nominated site coordinator can consolidate common-area requirements and tenant access restrictions. We use that confirmed information to define the work and arrangements."
+              "answer": "We work with your property manager or site contact to agree access requirements for shared areas and individual tenancies. We include temporary routes in the work plan."
             }
           ],
           "cta": {
@@ -1639,7 +1639,7 @@
           "metaTitle": "墨尔本北区商业物业维护与维修 | Ellis",
           "metaDescription": "为墨尔本北区商铺、办公场所及工业物业安排日常建筑维修、水电与外部场地维护。将零散问题整理成可执行的工作清单。",
           "heroLead": "把日常发现的问题汇成一份清单，让建筑、设备与外部场地的维护有次序。",
-          "localIntro": "北区的服务需求涉及商铺、办公场所及工业物业等不同空间。面对多次累积的小修事项，先按位置、使用影响和关联工种整理，比仅按报修时间排序更有助于确定范围。我们可围绕门窗、墙面、照明、用水排水及外部场地讨论单次修复或持续维护。对于车间与共享场地，先确认工作区、设备周边和人员通道；对于沿街商业空间，则把顾客入口与营业安排一起考虑。你可以先发一份问题清单，我们再逐项核对查看和处理方式。",
+          "localIntro": "我们为墨尔本北区的商铺、办公场所和工业物业提供单项维修及定期维护。涉及门窗、墙面、照明、排水和室外场地的多项故障，我们会按位置、使用影响和工种统一排期。车间施工会保留必要的设备和人员通道，沿街店铺则按营业和顾客通行安排。",
           "sectionHeadings": {
             "services": "北区日常维护服务入口",
             "scenarios": "从零散报修到清晰的维护清单",
@@ -1699,29 +1699,29 @@
           "planning": [
             {
               "title": "按区域建立问题清单",
-              "body": "每项附位置、照片和使用影响，不必先判断由哪个工种处理。"
+              "body": "我们按位置和使用影响整理故障，并安排相应工种。"
             },
             {
               "title": "确定优先次序",
-              "body": "把影响通行或使用的问题与外观更新分开讨论，明确这次要完成的范围。"
+              "body": "我们区分影响使用的故障与外观更新，再列明本次维修范围。"
             },
             {
               "title": "选择单次或持续维护",
-              "body": "单次项目明确交付清单；持续维护则需要约定频次、内容和报告方式。"
+              "body": "单项项目按清单交接。定期维护会明确频率、项目和汇报方式。"
             }
           ],
           "faq": [
             {
               "question": "北区物业有很多小问题，能一次发清单吗？",
-              "answer": "可以。按区域列出问题并附照片即可。我们会先梳理工作边界和相关工种，再确认哪些项目可以一起安排。"
+              "answer": "可以。门窗、照明、排水等问题可以统一报修，我们按位置和工种整理，安排合适的上门顺序。"
             },
             {
               "question": "日常维修可以逐步做，不一次全部施工吗？",
-              "answer": "可以讨论分阶段处理。需要先明确每阶段的范围、现场进入条件及项目之间的依赖，避免后续工作影响已完成部分。"
+              "answer": "我们会把施工分成便于开放、维修和交还的区域，并明确每一阶段的进场及前后工序。"
             },
             {
               "question": "你们可以提供持续维护计划吗？",
-              "answer": "可以根据物业用途和具体需求讨论持续维护。检查频次、实际服务内容和记录方式会在范围确认时约定，不预设所有物业使用同一套计划。"
+              "answer": "我们按物业用途和设备状况制定定期维护计划，明确检查频率、维护项目及每次的记录。"
             }
           ],
           "cta": {
@@ -1735,7 +1735,7 @@
           "metaTitle": "Commercial Maintenance Melbourne’s northern suburbs | Ellis",
           "metaDescription": "Commercial building repairs, plumbing, lighting and grounds maintenance in Melbourne’s northern suburbs. Turn individual issues into a clear maintenance scope.",
           "heroLead": "Put building, equipment and outdoor repairs on one maintenance list.",
-          "localIntro": "We maintain shops, offices and industrial properties across Melbourne’s northern suburbs. When smaller repair items have accumulated, sorting them by location, effect on use and related work helps establish a practical scope. We can discuss a single repair project or ongoing maintenance covering building fabric, lighting, water and drainage, and external areas. For workshops and shared sites, the work needs to account for clearance around equipment and access for staff. For customer-facing premises, entrances and trading arrangements matter. Send an initial list with photographs and locations. We can then clarify individual tasks, dependencies and the areas to inspect before agreeing on the work to proceed.",
+          "localIntro": "We provide one-off repairs and scheduled maintenance for shops, offices and industrial properties in Melbourne’s north. We group door, wall, lighting, drainage and grounds repairs by location and trade so we can schedule them around your operations. We plan around equipment clearances in workshops and customer access at shops.",
           "sectionHeadings": {
             "services": "Everyday maintenance services in the north",
             "scenarios": "From individual faults to a work list",
@@ -1795,29 +1795,29 @@
           "planning": [
             {
               "title": "Build a list by area",
-              "body": "Include the location, photographs and impact on use. You do not need to assign the trade first."
+              "body": "We group faults by location and impact, then arrange the right trades."
             },
             {
               "title": "Agree on priorities",
-              "body": "Discuss access or use concerns separately from presentation updates and define this project’s scope."
+              "body": "We separate faults that affect day-to-day use from presentation updates and set out the scope for this job."
             },
             {
               "title": "Choose one-off or ongoing work",
-              "body": "A one-off project needs a handover list. Ongoing work also needs agreed frequency, tasks and reporting."
+              "body": "We hand over one-off repairs with a clear list. For ongoing maintenance, we agree on the schedule, tasks and reporting."
             }
           ],
           "faq": [
             {
               "question": "Can I send one list of smaller issues at a northern property?",
-              "answer": "Yes. Group the issues by area and add photographs. We can clarify boundaries and related trades before deciding which items can be arranged together."
+              "answer": "Yes. You can send us several door, lighting, drainage or other issues in one enquiry. We group them by area and trade and plan the site visits."
             },
             {
               "question": "Can the repairs be completed in stages?",
-              "answer": "Staged work can be discussed. Each stage needs a defined scope, access arrangements and any dependencies so later tasks do not compromise completed work."
+              "answer": "We can stage repairs by area. We set out access, the order of work and when we can hand each area back."
             },
             {
               "question": "Can you provide an ongoing maintenance plan?",
-              "answer": "We can discuss ongoing maintenance around the property’s use and needs. Inspection frequency, actual services and records are agreed as part of the scope rather than applying one plan to every property."
+              "answer": "We build a maintenance schedule around the property’s use and the condition of its equipment. We agree on inspection intervals, the work covered and reporting for each visit."
             }
           ],
           "cta": {
@@ -1960,7 +1960,7 @@
           "metaTitle": "墨尔本东北区商业物业维修与维护 | Ellis Services Group",
           "metaDescription": "为墨尔本东北区的办公室、诊所、教育与社区商业设施安排建筑、空调、水电及园林维护。了解进场安排、服务范围并提交项目需求。",
           "heroLead": "从接待空间到庭院设施，把维修工作与场所的日常使用安排在一起。",
-          "localIntro": "东北区包含健康服务、商业与社区设施等不同物业场景。Banyule 的主要活动中心也承担零售、健康与专业服务功能。对于诊所、办公室或教育场地，我们会先了解房间用途、公众出入路线和可施工时间，再确定维修范围、作业分区与收尾安排。若一处场地同时涉及门窗、空调、供排水及室外设施，可把问题清单一起发给我们；我们将按现场条件说明工作顺序及需要进一步检查的事项。公共空间与租户内部的任务分别记录，便于指定负责人核对和接收。",
+          "localIntro": "我们为墨尔本东北区及 Banyule 一带的诊所、办公室、学校和社区设施提供维修。门窗、空调、供排水和室外设施可统一报修。我们按房间用途和公众通行要求划分工作区，并分别记录共用区域和租户空间的施工与交接事项。",
           "sectionHeadings": {
             "services": "适合东北区物业的维护入口",
             "scenarios": "按场所使用方式安排维修",
@@ -2020,29 +2020,29 @@
           "planning": [
             {
               "title": "房间使用与通行",
-              "body": "说明哪些房间正常使用，哪些入口必须保留，以及钥匙或门禁由谁提供。"
+              "body": "我们确认在用房间、要保持开放的入口和进场联系人。"
             },
             {
               "title": "噪声与清理时段",
-              "body": "告诉我们预约、上课或活动时间；按商定范围讨论噪声、粉尘控制和收尾清理。"
+              "body": "我们配合预约、上课和活动时间安排噪声、粉尘控制及清理。"
             },
             {
               "title": "设备与设施资料",
-              "body": "设备型号、问题照片和既有维修记录，可帮助我们准备检查；涉及专业系统时按现场要求安排。"
+              "body": "我们参考设备型号、照片和维修记录，安排现场检查及相关专业工种。"
             }
           ],
           "faq": [
             {
               "question": "可以在场所继续使用时维修吗？",
-              "answer": "可以讨论分区或分时段安排。我们会先了解公众通行、房间使用和作业影响，再说明哪些工作可以分开进行、哪些需要暂时停用相关区域。"
+              "answer": "我们会结合房间用途和公众通行划分施工区，并说明哪些空间可以继续使用，以及哪些需要暂时停用。"
             },
             {
               "question": "诊所或教育场地咨询时需要提供什么？",
-              "answer": "提供物业地址、问题照片、相关房间用途、可进入时间和现场联系人即可开始沟通。涉及场所内部要求时，请同时提供进场说明。"
+              "answer": "告诉我们地址、受影响的房间和现场联系人。我们会与物业方确认接待、预约、人员通行及进场要求，并安排检查。"
             },
             {
               "question": "几个维修项目可以合并安排吗？",
-              "answer": "可以把建筑、设备、水电或室外问题列在同一份需求中。我们会区分现场检查、施工和复查事项，再讨论可合并的进场安排。"
+              "answer": "可以。我们统一接收建筑、设备、水电和室外设施的报修，按检查、施工和验收安排工种，并尽量合并适合同次完成的项目。"
             }
           ],
           "cta": {
@@ -2056,7 +2056,7 @@
           "metaTitle": "Commercial Property Maintenance North East Melbourne | Ellis",
           "metaDescription": "Building repairs, air conditioning, plumbing and grounds maintenance for commercial properties in North East Melbourne. Discuss access, scope and site needs.",
           "heroLead": "Plan maintenance around reception spaces, occupied rooms and shared grounds.",
-          "localIntro": "North East Melbourne includes a mix of commercial, health and community settings. Banyule’s major activity centres support retail, health and professional services. For a clinic, office or education site, we start with the way the building is used: who enters each area, which rooms remain occupied and when work can take place. We then define the repair scope, work zones and handover requirements. If doors, air conditioning, plumbing and outdoor areas need attention together, send us one list of the issues. We can discuss a practical sequence and identify what needs closer inspection before a quotation is finalised. Tasks in shared areas and individual tenancies are recorded separately for the nominated contacts.",
+          "localIntro": "We maintain clinics, offices, schools and community premises across Melbourne’s north-east, including Banyule. We can organise door, air conditioning, plumbing and grounds repairs together. We plan around occupied rooms and public access, and record work in common areas separately from individual tenancies for handover.",
           "sectionHeadings": {
             "services": "Maintenance options for your property",
             "scenarios": "Plan work around how the site is used",
@@ -2116,29 +2116,29 @@
           "planning": [
             {
               "title": "Room use and access",
-              "body": "Identify occupied rooms, entrances that must stay available and who will provide keys or arrange access."
+              "body": "We confirm which rooms are occupied, which entrances must stay open and who will arrange access."
             },
             {
               "title": "Noise and clean-up windows",
-              "body": "Share appointment, class or event times so we can discuss noise, dust controls and clean-up within the agreed scope."
+              "body": "We plan noisy work, dust controls and clean-up around bookings, classes and events."
             },
             {
               "title": "Equipment and facility information",
-              "body": "Model details, photos and existing repair records help prepare the inspection; we plan specialist work around the site requirements."
+              "body": "We use the equipment details, photos and service records to prepare for the inspection and arrange specialist trades."
             }
           ],
           "faq": [
             {
               "question": "Can maintenance be planned while the premises remain in use?",
-              "answer": "We can discuss separate work zones or time windows. We first review public access, room use and the impact of the proposed work, then explain which tasks can be separated and which require an affected area to be temporarily unavailable."
+              "answer": "We plan work zones around room use and public access. We’ll explain which areas can stay open and which need to close temporarily."
             },
             {
               "question": "What should a clinic or education site include in an enquiry?",
-              "answer": "Send the property address, issue photos, room use, access times and site contact. Include any site-specific entry instructions so we can plan the assessment."
+              "answer": "Tell us the address, the rooms affected and your site contact. We’ll work with you on reception, bookings, access and any site entry requirements before arranging an inspection."
             },
             {
               "question": "Can several maintenance items be planned together?",
-              "answer": "Yes. Include building, equipment, plumbing and outdoor issues in one request. We separate inspection, work and follow-up requirements, then discuss which site visits can be combined."
+              "answer": "Yes. We can coordinate building, equipment, plumbing and grounds work under one enquiry. We schedule inspection, repairs and follow-up and combine visits where the tasks fit together."
             }
           ],
           "cta": {
@@ -2277,7 +2277,7 @@
           "metaTitle": "墨尔本西北区商业物业与仓库维护 | Ellis Services Group",
           "metaDescription": "为墨尔本西北区仓库、商业园区与办公物业提供屋面、电气、建筑及室外维护。了解装卸通道、场地分区和进场计划。",
           "heroLead": "把屋面、仓库、通道与办公区域的维护，接入您的现场运营安排。",
-          "localIntro": "西北区包括仓储、商业园区与日常营业物业。Hume 官方资料指出，机场周边的就业区域与货运网络相连接。针对这类场地，我们会核对您的装卸时段、设备位置、屋面进入方式和现场通行要求，再确定维护范围。屋面漏水、照明问题与场地修复可以先形成一份任务清单，再按对运营的影响分区安排。涉及停用、移车或暂时改变通道的工作，会在范围确认时一并讨论。客户接待、员工办公和货物储存区域分别说明保护与收尾要求，便于现场负责人跟进。",
+          "localIntro": "我们为墨尔本西北区的仓库、展厅、办公室和商业园区提供维护，包括 Hume 和机场周边的物业。从屋面漏水和照明故障到场地修复，我们会按物业用途和收发货时间安排施工，并提前协调需移车、暂时封闭或调整通道的区域。",
           "sectionHeadings": {
             "services": "西北区商业与工业物业维护",
             "scenarios": "从装卸区到办公区，逐项展开",
@@ -2337,29 +2337,29 @@
           "planning": [
             {
               "title": "送货与车辆时间",
-              "body": "提供装卸高峰、车辆尺寸限制、停车点及需保留的通道。"
+              "body": "我们按收发货高峰、车辆尺寸、停车要求和必须开放的路线安排施工。"
             },
             {
               "title": "进入与屋面条件",
-              "body": "说明入场登记、钥匙、屋面进入方式及现场已知限制。"
+              "body": "我们与现场负责人协调入场培训、钥匙、屋面进场和现场限制。"
             },
             {
               "title": "分区与恢复开放",
-              "body": "将需移开的货物、暂时停用范围和验收联系人写进施工安排。"
+              "body": "我们提前确认需要移走的货物、受影响的区域及完工交接联系人。"
             }
           ],
           "faq": [
             {
               "question": "仓库不能整天关闭，可以分区维护吗？",
-              "answer": "可以讨论分区施工。请提供装卸和作业时间、需保持通行的路线及可暂时停用的范围，我们会据此说明可行安排。"
+              "answer": "我们会根据仓库运营和装卸时间分区施工，与现场负责人确认哪些通道需要保持开放、哪些区域可短暂停用。"
             },
             {
               "question": "可以同时处理屋面、照明和室外场地吗？",
-              "answer": "可以把这些事项放在同一次咨询中。我们会区分检查条件、现场保护和工种衔接，说明哪些项目可以合并进场。"
+              "answer": "可以。我们会把屋面、照明和外场维修统一排期，并提前确认进场、现场保护及可在同一次完成的工作。"
             },
             {
-              "question": "这里包括机场设施维修吗？",
-              "answer": "本页针对该大区的商业物业与工业场地。需要受控区域或特殊场所的工作，请提供具体地址、权限和工作要求，由我们先确认能否承接。"
+              "question": "机场周边的商业物业可以报修吗？",
+              "answer": "我们服务机场周边的商业和工业物业。涉及有门禁或特殊入场要求的场地，我们会与物业负责人确认进场许可及许可范围。"
             }
           ],
           "cta": {
@@ -2373,7 +2373,7 @@
           "metaTitle": "Commercial Property Maintenance North West Melbourne | Ellis",
           "metaDescription": "Roofing, electrical, building and external maintenance for North West Melbourne commercial premises. Plan work around loading, access and operations.",
           "heroLead": "Plan roof, warehouse and office maintenance around loading and access.",
-          "localIntro": "North West Melbourne includes warehouses, business parks and trading premises. Hume Council identifies employment areas around the airport and a supporting freight network. For these sites, we review loading windows, equipment locations, roof access and pedestrian requirements before defining maintenance work. List roof leaks, lighting faults and outdoor repairs together. We can stage the work around your operations. Where a task requires an area to close, vehicles to move or access routes to change, we discuss those arrangements as part of the scope. Customer-facing areas, staff offices and goods storage can have different requirements for site protection and handover so the site contact can follow the work.",
+          "localIntro": "We maintain warehouses, showrooms, offices and business parks in Melbourne’s north-west, including Hume and the airport precinct. We plan roof repairs, lighting work and external maintenance around trading and loading hours. We agree on vehicle moves, temporary closures and alternative access before affected areas are taken out of use.",
           "sectionHeadings": {
             "services": "Maintenance for commercial and industrial sites",
             "scenarios": "Explore the site from loading area to office",
@@ -2418,7 +2418,7 @@
               "id": "showroom-office",
               "title": "Showrooms and adjoining offices",
               "problem": "Customer-facing, staff and warehouse spaces require different maintenance arrangements.",
-              "approach": "Review doors, finishes and lighting separately while confirming reception use and work windows.",
+              "approach": "We check doors, finishes and lighting, then plan repairs around use of the reception area.",
               "handover": "Record completed tasks by use area for the relevant site contacts.",
               "serviceSlugs": [
                 "building-maintenance",
@@ -2433,29 +2433,29 @@
           "planning": [
             {
               "title": "Deliveries and vehicles",
-              "body": "Share loading peaks, vehicle-size limits, parking arrangements and routes that must remain available."
+              "body": "We plan the work around loading peaks, vehicle size limits, parking and the routes that must stay open."
             },
             {
               "title": "Entry and roof access",
-              "body": "Describe site induction, keys, roof access arrangements and known site restrictions."
+              "body": "We coordinate inductions, keys, roof access and site restrictions with your site contact."
             },
             {
               "title": "Work zones and reopening",
-              "body": "Include goods to be moved, affected areas and the handover contact in the work plan."
+              "body": "We agree up front on stock to move, areas affected and who will receive handover."
             }
           ],
           "faq": [
             {
               "question": "Can warehouse maintenance be staged without closing the entire site?",
-              "answer": "We can discuss staged work zones. Provide loading and operating times, routes that must remain available and areas that can be temporarily taken out of use so we can assess the arrangements."
+              "answer": "We can stage warehouse maintenance around operating and loading hours. We agree with your site contact on which routes need to stay open and which areas can close temporarily."
             },
             {
               "question": "Can roofing, lighting and external works be discussed together?",
-              "answer": "Yes. Include them in one enquiry. We review inspection access, protection measures and the work sequence to identify which tasks can share a site visit."
+              "answer": "Yes. We can schedule roofing, lighting and external works together. We confirm access, site protection and which work can share a visit."
             },
             {
-              "question": "Does this page cover work inside airport facilities?",
-              "answer": "This page covers commercial and industrial premises in the region. For controlled or specialist locations, provide the exact address, access permissions and work requirements so we can confirm suitability before proceeding."
+              "question": "Do you maintain commercial premises around the airport?",
+              "answer": "We maintain commercial and industrial properties around the airport. For sites with controlled access, we work with your site contact to confirm access permissions and the scope they cover."
             }
           ],
           "cta": {
@@ -2595,7 +2595,7 @@
           "metaTitle": "Bayside 及墨尔本南部商业物业维护 | Ellis Services Group",
           "metaDescription": "为 Bayside 与墨尔本南部商业街、办公及工业物业安排外立面、屋面、标识和室外维护。查看场景与进场计划，咨询项目范围。",
           "heroLead": "让门面、屋面和室外场地的维护，与日常营业保持清楚衔接。",
-          "localIntro": "这一大区既包括 Bayside 的购物村与商业街，也包括南部的商业和工业物业。Bayside 官方资料强调当地商圈的餐饮、零售与服务功能；Kingston 的规划则涉及工业用地、停车和货车进入条件。我们围绕店面、办公室与工业场地的实际用途安排维护。对于外立面、屋面或标识工作，先核对建筑材质、损坏位置、公众通道与进入方式，再讨论作业范围。请提供现场照片、既有记录和营业安排，让修复、清洁及设施更新有明确依据。",
+          "localIntro": "我们服务 Bayside 的沿街商铺、餐饮场所，以及 Kingston 一带和墨尔本南部的商业及工业物业。我们会检查外立面、屋面或标识的材质和损坏位置，并安排入口保护及高处作业，配合顾客通行、停车和送货要求。",
           "sectionHeadings": {
             "services": "从门面到场地的维护入口",
             "scenarios": "选择您的商业物业场景",
@@ -2655,29 +2655,29 @@
           "planning": [
             {
               "title": "门面与通行",
-              "body": "提供营业时段、入口数量、公共通道以及是否需与物业经理协商。"
+              "body": "我们把营业时间、顾客入口和公众通行要求纳入排期，并与物业经理协调。"
             },
             {
               "title": "材质与现状",
-              "body": "提供玻璃、饰面、屋面和既有标识的照片；以实际状况决定方法。"
+              "body": "我们检查玻璃、饰面、屋面和现有标识的状态，确定适合的清洁或维修方式。"
             },
             {
               "title": "车辆与围挡",
-              "body": "工业或停车区域说明车辆进出和可封闭范围，再确定施工分区。"
+              "body": "我们按车辆和行人路线划分厂区或停车场作业范围，并提前协调临时封闭。"
             }
           ],
           "faq": [
             {
               "question": "靠近海湾的物业需要特别维护吗？",
-              "answer": "需要根据材质、暴露条件和实际损坏判断。请提供外部构件照片与既有记录，我们会检查相关部位，再说明适合的维护范围。"
+              "answer": "我们会检查靠海物业的材料、腐蚀和天气暴露情况，再安排适合的清洁、维修或定期维护。"
             },
             {
               "question": "标识更新能和门面维护一起安排吗？",
-              "answer": "可以一起沟通。我们会核对标识设计资料、位置、固定条件与门面现状，分清需要修复、清洁或更新的内容。"
+              "answer": "可以。我们一并核对标识、安装点和外立面状况，再安排维修、清洁和更新工序。"
             },
             {
-              "question": "本页只服务海边商铺吗？",
-              "answer": "也面向该大区的办公室、商业及工业物业。页面中的服务入口帮助您按建筑和场地需求选择项目，具体安排以地址及现场情况确认。"
+              "question": "也为办公楼和工业物业提供维护吗？",
+              "answer": "我们也服务该区的办公楼、商业园区和工业物业，安排建筑、设备及室外场地维护。"
             }
           ],
           "cta": {
@@ -2691,7 +2691,7 @@
           "metaTitle": "Commercial Property Maintenance Bayside & Southern Melbourne | Ellis",
           "metaDescription": "Façade, roofing, signage and external maintenance for Bayside and Southern Melbourne commercial properties. Explore site planning and enquire about your project.",
           "heroLead": "Schedule shopfront, roof and outdoor maintenance around your trading hours.",
-          "localIntro": "This region combines Bayside shopping villages with commercial and industrial premises in Melbourne’s south. Bayside Council describes retail, dining and service activity in its shopping precincts, while Kingston planning addresses industrial land, parking and truck access. We plan maintenance around how you use your shop, office or industrial site. For façade, roof or signage work, we review the materials, observed damage, public access routes and access method before discussing the scope. Properties near the bay are assessed on their individual condition. Share photos, previous maintenance records and trading arrangements so we can plan repairs, cleaning and upgrades. We can then identify how the tasks fit together.",
+          "localIntro": "We maintain Bayside shopfronts and hospitality venues as well as commercial and industrial properties in Kingston and Melbourne’s south. For façade, roofing and signage work, we assess the materials and damage, then plan access and protection around entrances, parking and deliveries.",
           "sectionHeadings": {
             "services": "Maintenance from shopfront to site boundary",
             "scenarios": "Choose the property situation",
@@ -2751,29 +2751,29 @@
           "planning": [
             {
               "title": "Frontage and access",
-              "body": "Share trading hours, entrances, public access routes and any arrangements needed with the property manager."
+              "body": "We plan around trading hours, entrances and pedestrian access, and liaise with your property manager."
             },
             {
               "title": "Materials and condition",
-              "body": "Send photos of glazing, finishes, roofs and existing signs so we can choose a method that suits their condition."
+              "body": "We check glazing, finishes, roofing and existing signs to choose cleaning or repair methods suited to their condition."
             },
             {
               "title": "Vehicles and work boundaries",
-              "body": "Describe vehicle movements and areas you can close off before industrial or car park work zones are set."
+              "body": "We plan industrial and car park work zones around vehicles and pedestrians, and agree on any temporary closures in advance."
             }
           ],
           "faq": [
             {
               "question": "Does a property near the bay need different maintenance?",
-              "answer": "The materials, exposure and observed condition determine the requirements. Send photos and existing records so we can inspect the relevant components and explain an appropriate scope."
+              "answer": "We assess materials, corrosion and weather exposure at properties near the bay, then plan cleaning, repairs or ongoing maintenance to suit the site."
             },
             {
               "question": "Can signage updates be coordinated with shopfront maintenance?",
-              "answer": "Yes. We review the sign information, position, fixing conditions and façade condition, then separate the repair, cleaning and replacement tasks."
+              "answer": "Yes. We check the signs, fixings and façade together and schedule repairs, cleaning and updates in a sensible order."
             },
             {
-              "question": "Is this page only for coastal shops?",
-              "answer": "It also covers offices and commercial or industrial premises in the region. Choose services based on the building and site needs; the exact arrangements are confirmed from the address and site conditions."
+              "question": "Do you also maintain offices and industrial properties?",
+              "answer": "We also maintain offices, business parks and industrial properties in the area, including buildings, equipment and external areas."
             }
           ],
           "cta": {
@@ -2911,7 +2911,7 @@
           "metaTitle": "Casey 与 Cardinia 商业物业维护 | Ellis Services Group",
           "metaDescription": "为 Casey 与 Cardinia 商业、办公和园区物业安排建筑维修、空间更新、电气及园林维护。查看分阶段施工和交接方案。",
           "heroLead": "从使用中的维修清单，到租户更替与园区维护，把每一步安排清楚。",
-          "localIntro": "Casey 与 Cardinia 既有商业中心，也有不同用途的就业园区。Casey 的活动中心与 Cardinia 的商业、制造及物流用地形成多种物业维护场景。对于已投入使用的场地，我们重点梳理建筑问题、电气需求、室外维护和租户交接事项。新近交付的物业可提供缺陷清单及现有交付资料，先区分原项目责任和本次委托范围。已有物业更新则从当前使用情况、施工时间和分阶段开放需求开始。每处地址分别记录现场负责人及待处理事项，便于统一讨论工作顺序。",
+          "localIntro": "我们为 Casey 与 Cardinia 的购物中心、商业园区、厂房和物流物业安排建筑、电气及室外维修。已经营业的场所可分区施工，租户交接或物业翻新也可统一安排。新交付的物业，我们会根据已有的缺陷记录明确本次工作；管理多个地点时，我们按地址分列任务并统一排期。",
           "sectionHeadings": {
             "services": "外东南区物业使用与更新服务",
             "scenarios": "从日常维修到租户交接",
@@ -2971,29 +2971,29 @@
           "planning": [
             {
               "title": "交付与委托范围",
-              "body": "有原项目资料、保修信息或缺陷清单时一并提供，先厘清责任与本次工作范围。"
+              "body": "我们参考交接资料、保修记录和缺陷清单，列清本次需要检查和维修的项目。"
             },
             {
               "title": "租户与开放顺序",
-              "body": "说明目前使用区域、交接时间与计划开放顺序，让施工分期有明确依据。"
+              "body": "我们根据在用区域、交还日期和重新开放顺序安排分区施工。"
             },
             {
               "title": "维护周期与边界",
-              "body": "园区类项目说明场地边界、重点区域和已有维护安排，便于制定接续工作。"
+              "body": "我们按园区范围、重点区域和现有维护计划安排后续工作。"
             }
           ],
           "faq": [
             {
               "question": "刚交付的商业物业有问题，可以咨询吗？",
-              "answer": "可以先提供交付资料、缺陷清单和现场照片。我们会区分本次委托范围与需向原施工或供应方确认的事项，再讨论可安排的工作。"
+              "answer": "可以。我们会参考交接资料、缺陷清单和照片，检查现场并向您说明本次维修范围。"
             },
             {
               "question": "租户交接和后续维护可以一起规划吗？",
-              "answer": "可以先形成两部分清单：交接前需要完成的事项，以及使用期间的维护需求。具体施工范围和先后次序由现场资料与双方确认决定。"
+              "answer": "可以。我们把交接前需完成的维修与日常使用期间的维护分开排期，兼顾交还日期和物业运营。"
             },
             {
               "question": "多个商业场地可以统一提交需求吗？",
-              "answer": "可以。请分别列出每处地址、现场联系人、主要问题和可进入时间，我们会据此讨论检查及进场顺序。"
+              "answer": "可以。我们按地址分列事项和现场联系人，再统一安排各处的检查及施工。"
             }
           ],
           "cta": {
@@ -3007,7 +3007,7 @@
           "metaTitle": "Commercial Property Maintenance Casey & Cardinia | Ellis",
           "metaDescription": "Building repairs, commercial updates, electrical and grounds maintenance in Casey and Cardinia. Explore staged work, tenant changes and site planning.",
           "heroLead": "Plan repairs, tenancy changeovers and grounds maintenance around occupied spaces.",
-          "localIntro": "Casey and Cardinia have a mix of commercial centres and employment precincts. Casey’s activity centres and Cardinia’s commercial, manufacturing and logistics areas provide a varied setting for maintenance. For occupied sites, we focus on building defects, electrical needs, external maintenance and tenancy handover items. A recently handed-over property can provide its defect list and project records so responsibilities and the proposed work are identified separately before work is agreed. For an existing property update, we start with the present use, available times for the work and any need to reopen areas in stages. Each site has its own contact and task list, so we can plan the work across multiple properties.",
+          "localIntro": "We coordinate building, electrical and grounds repairs for shops, business parks, factories and logistics sites in Casey and Cardinia. We can stage work at occupied premises and organise fit-out updates or tenancy handovers. For a recently completed property, we use the existing defect list to scope the work. We can also manage repairs across multiple addresses.",
           "sectionHeadings": {
             "services": "Maintenance and updates for outer south-east properties",
             "scenarios": "From everyday repairs to tenancy handover",
@@ -3067,29 +3067,29 @@
           "planning": [
             {
               "title": "Handover and scope of work",
-              "body": "Include project records, warranty information or defect lists to distinguish responsibilities from the work you want us to do."
+              "body": "We use handover records, warranty information and defect lists to identify what needs inspecting and repairing for this job."
             },
             {
               "title": "Tenants and reopening",
-              "body": "Identify occupied areas, handover timing and the intended reopening sequence to inform staging."
+              "body": "We stage work around occupied areas, handover dates and the order in which areas will reopen."
             },
             {
               "title": "Maintenance cycle and boundaries",
-              "body": "For business parks, share site boundaries, priority areas and existing maintenance arrangements to plan follow-on work."
+              "body": "We plan follow-up work around park boundaries, priority areas and the existing maintenance schedule."
             }
           ],
           "faq": [
             {
               "question": "Can I enquire about defects in a recently handed-over commercial property?",
-              "answer": "Yes. Share handover documents, the defect list and photos. Before agreeing on the work, we identify which items we can address and which need to go back to the original contractor or supplier."
+              "answer": "Yes. We review handover records, the defect list and photos, then inspect the property and set out the maintenance work we can organise."
             },
             {
               "question": "Can tenancy handover and ongoing maintenance be planned together?",
-              "answer": "Yes. Start with two lists: items needed before handover and maintenance required during occupation. Site information and the agreed scope determine the sequence."
+              "answer": "Yes. We schedule work due before handover separately from ongoing maintenance, so we can plan around both the handover date and daily operations."
             },
             {
               "question": "Can multiple commercial sites be included in one enquiry?",
-              "answer": "Yes. List each address, site contact, main issues and times we can access the site so we can discuss an inspection and attendance sequence."
+              "answer": "Yes. We group the work by address and site contact, then coordinate inspections and repairs across the properties."
             }
           ],
           "cta": {
@@ -3186,7 +3186,7 @@
           "anchorZh": "商业清洁与环境维护",
           "anchorEn": "Commercial cleaning and hygiene",
           "contextZh": "将营业空间、公共区域及清理时段一起规划。",
-          "contextEn": "Plan cleaning around trading spaces, shared areas and work windows.",
+          "contextEn": "We schedule cleaning around trading hours and shared access.",
           "route": "/services/cleaning-waste-hygiene/",
           "hrefZh": "/services/cleaning-waste-hygiene/?lang=zh",
           "hrefEn": "/services/cleaning-waste-hygiene/?lang=en",
@@ -3228,7 +3228,7 @@
           "metaTitle": "Frankston 与莫宁顿半岛商业物业维护 | Ellis Services Group",
           "metaDescription": "为 Frankston 与莫宁顿半岛商业、餐饮及工业物业安排建筑、屋面、清洁和园林维护。结合营业时段与现场情况咨询项目。",
           "heroLead": "把接待空间、建筑设施与室外环境的维护，安排进实际营业节奏。",
-          "localIntro": "Frankston 与莫宁顿半岛拥有多种商业物业。Frankston 的工业规划涵盖 Carrum Downs 与 Seaford 等片区，半岛也有旅游与访客服务相关企业。对于餐饮接待场所、工业物业和室外环境，我们会先了解物业地址、营业安排、现场任务及可进入时间，再讨论检查和施工次序。室外工作按实际材料、天气条件和场地情况确认；多处物业则分别列出需求，便于把进场、材料准备与验收责任安排清楚。若存在预约、送货或人员活动限制，也可以在咨询时一并说明。",
+          "localIntro": "我们服务 Frankston、Carrum Downs、Seaford 和莫宁顿半岛的餐饮、旅游接待及工业物业。我们按营业时间、预约、活动和送货安排进场，室外工作还会结合天气和材料条件。多处物业可统一协调，我们按地点安排材料、进场和完工交接。",
           "sectionHeadings": {
             "services": "半岛与 Frankston 商业维护入口",
             "scenarios": "营业空间、工业设施与室外环境",
@@ -3288,29 +3288,29 @@
           "planning": [
             {
               "title": "营业与预约",
-              "body": "告知营业高峰、预约活动及可施工时间，便于讨论分时段安排。"
+              "body": "我们结合营业高峰、预约活动和进场时间安排分阶段维护。"
             },
             {
               "title": "地址与现场准备",
-              "body": "多处物业逐一提供地址、联系人和照片；明确材料运送与进入条件。"
+              "body": "我们按地址对接各物业负责人，安排送货、进场和验收。"
             },
             {
               "title": "室外作业条件",
-              "body": "屋面、园林或外部工作按实际天气、材质和作业条件确认顺序。"
+              "body": "我们按天气、材料和进场条件安排屋面、园林及其他室外维护。"
             }
           ],
           "faq": [
             {
               "question": "可以按餐厅或接待场所的营业时间安排吗？",
-              "answer": "可以先沟通营业、预约和可施工时间。我们会根据作业内容说明分区或分阶段方案，具体日期与时间在范围确认后商定。"
+              "answer": "可以。我们会结合营业、预约和活动时间安排分区或分阶段施工，并提前确认日期和进场时段。"
             },
             {
               "question": "半岛室外工程会怎样安排时间？",
-              "answer": "需要结合具体地址、工作内容和实际天气条件安排。提供照片、材料情况及进入方式，可帮助我们准备检查并说明施工顺序。"
+              "answer": "我们按物业位置、室外作业范围、天气和材料条件安排施工，并提前确认进场方式。"
             },
             {
               "question": "可以同时咨询工业物业和商业营业场所吗？",
-              "answer": "可以。请分别提供各场地用途、地址和问题清单，我们会按不同现场条件梳理维护范围和安排。"
+              "answer": "可以。我们按地址和物业用途整理各场地的维修需求，再统一安排相应工种和进场。"
             }
           ],
           "cta": {
@@ -3324,7 +3324,7 @@
           "metaTitle": "Commercial Maintenance Frankston & Mornington Peninsula | Ellis",
           "metaDescription": "Building, roofing, cleaning and grounds maintenance for Frankston and Mornington Peninsula commercial premises. Discuss access, trading hours and site needs.",
           "heroLead": "Schedule maintenance for buildings, reception areas and grounds around your operating hours.",
-          "localIntro": "Frankston and the Mornington Peninsula contain a range of commercial premises. Frankston’s industrial strategy identifies precincts including Carrum Downs and Seaford, while the Peninsula supports tourism and visitor-related businesses. For hospitality venues, industrial properties and outdoor areas, we begin with the address, trading arrangements, task list and available access before planning the inspection and order of work. External tasks are planned around the materials, weather and site requirements. If you manage several premises, list each site separately so access contacts, material preparation and handover responsibilities are clear. Share any bookings, delivery times or public activities that affect entry. We agree on site visits and timing after reviewing the location and scope.",
+          "localIntro": "We maintain hospitality, visitor and industrial properties across Frankston, Carrum Downs, Seaford and the Mornington Peninsula. We schedule access around trading, bookings, events and deliveries, and plan outdoor work around the weather and materials. For businesses with several locations, we organise access, materials and handover for each site.",
           "sectionHeadings": {
             "services": "Maintenance for Frankston and Peninsula premises",
             "scenarios": "Trading spaces, industrial premises and outdoor areas",
@@ -3384,29 +3384,29 @@
           "planning": [
             {
               "title": "Trading and bookings",
-              "body": "Share busy periods, booked events and work windows so we can plan visits in stages."
+              "body": "We schedule each stage around busy periods, bookings and access hours."
             },
             {
               "title": "Address and site preparation",
-              "body": "For multiple premises, provide each address, contact and photos, together with delivery and entry requirements."
+              "body": "For multiple locations, we coordinate deliveries, access and handover with the contact at each property."
             },
             {
               "title": "Conditions for external work",
-              "body": "Plan roof, grounds and other outdoor work around the weather, materials and site conditions."
+              "body": "We schedule roofing, grounds and other outdoor work around weather, materials and access."
             }
           ],
           "faq": [
             {
               "question": "Can work be planned around restaurant or visitor-venue trading hours?",
-              "answer": "Yes. Share trading hours, bookings and available times for the work. We discuss separate areas or stages based on the task, with dates and times agreed after the scope is confirmed."
+              "answer": "Yes. We stage work around trading hours, bookings and events, and confirm access and dates in advance."
             },
             {
               "question": "How is outdoor work on the Peninsula scheduled?",
-              "answer": "Scheduling depends on the address, scope and actual weather conditions. Photos, material details and access information help us prepare the inspection and explain the sequence."
+              "answer": "We schedule outdoor work around the location, the materials and the weather. We confirm how we’ll access the area before the visit."
             },
             {
               "question": "Can industrial premises and trading venues be included in the same enquiry?",
-              "answer": "Yes. Provide each property’s use, address and task list. We review the maintenance scope and arrangements against the conditions at each site."
+              "answer": "Yes. We group the work by site and property use, then coordinate the trades and access across your locations."
             }
           ],
           "cta": {

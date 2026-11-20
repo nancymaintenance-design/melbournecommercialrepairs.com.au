@@ -5,6 +5,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const {parse} = require('parse5');
 const {origin, canonicalUrl} = require('./content/search-config.cjs');
+const {pageRecord, writeResources} = require('./content/machine-discovery.cjs');
 const {sectors, sectorSlugs} = require('./content/site-data.cjs');
 const propertySelector = require('./home-sector-selector.js');
 const servicePack = require('./content/service-pages.json').services;
@@ -123,7 +124,7 @@ function render(source, route, language) {
   if (node.tagName === 'title') replaceBody(node, escapeText(metadata['title' + suffix]));
   if (node.tagName === 'meta' && attr(node, 'name') === 'description') update.content = metadata['description' + suffix];
   if (node.tagName === 'link' && attr(node, 'rel') === 'canonical') update.href = canonicalUrl(route, language);
-  if (node.tagName === 'script' && attr(node, 'type') === 'application/ld+json') {
+  if (node.tagName === 'script' && attr(node, 'type') === 'application/ld+json' && attr(node,'data-ellis-discovery') === undefined) {
    const json = JSON.stringify(structuredData(readJson(node), nodes, route, language)).replaceAll('<', '\\u003c');
    schemaContent.push(json);
    replaceBody(node, json);
@@ -159,7 +160,7 @@ function render(source, route, language) {
  }
  const main = source.match(/<main\b[\s\S]*?<\/main>/)?.[0];
  assert(main, 'Missing main content on ' + route);
- return {source, fingerprint: [main, metadata, schemaContent]};
+ return {source, metadata, fingerprint: [main, metadata, schemaContent]};
 }
 
 function* pageFiles(directory) {
@@ -173,6 +174,16 @@ const pages = [path.join(root, 'index.html'), ...['about', 'areas', 'contact', '
  .flatMap(section => [...pageFiles(path.join(root, section))])];
 const sitemap = [];
 const nextLastmod = {};
+const publicRecords = {zh: [], en: []};
+function withMachineMetadata({source, metadata}, route, language) {
+ const record = pageRecord(source, route, language, metadata);
+ publicRecords[language].push(record);
+ // Replace the old graph after localisation so the sitemap fingerprint still uses the existing inputs.
+ return source
+  .replace(/<script type="application\/ld\+json"(?: data-ellis-discovery)?>(?:[\s\S]*?)<\/script>/g, '')
+  .replace(/<link rel="alternate" type="application\/(?:rss\+xml|feed\+json)"[^>]*>/g, '')
+  .replace('</head>', () => record.markup + '</head>');
+}
 for (const file of pages) {
  const relative = path.relative(root, file);
  const route = '/' + relative.replaceAll('\\', '/').replace(/index\.html$/, '');
@@ -181,8 +192,8 @@ for (const file of pages) {
  const en = render(source, route, 'en');
  const destination = path.join(root, localeDirectory, relative);
  fs.mkdirSync(path.dirname(destination), {recursive: true});
- fs.writeFileSync(file, zh.source);
- fs.writeFileSync(destination, en.source);
+ fs.writeFileSync(file, withMachineMetadata(zh, route, 'zh'));
+ fs.writeFileSync(destination, withMachineMetadata(en, route, 'en'));
  const hash = crypto.createHash('sha256').update(JSON.stringify([zh.fingerprint, en.fingerprint]).replaceAll('\\r\\n', '\\n')).digest('hex');
  const entry = lastmod[route];
  const date = hash === entry?.hash ? entry.date : dateOverride;
@@ -196,4 +207,5 @@ if (dateOverride) fs.writeFileSync(lastmodFile, JSON.stringify(nextLastmod, null
 fs.writeFileSync(path.join(root, 'sitemap.xml'), '<?xml version="1.0" encoding="UTF-8"?>\n' +
  '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + sitemap.join('\n') + '\n</urlset>\n');
 fs.writeFileSync(path.join(root, 'robots.txt'), 'User-agent: *\nAllow: /\nSitemap: ' + origin + '/sitemap.xml\n');
+writeResources(root, publicRecords);
 console.log('Localized ' + pages.length + ' existing routes and generated ' + sitemap.length + ' sitemap entries.');

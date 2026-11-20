@@ -12,3 +12,8 @@ test-results/
 /_ellisl10n/
 /sitemap.xml
 /robots.txt
+/feed.xml
+/feed.json
+/feed-en.xml
+/feed-en.json
+/llms.txt

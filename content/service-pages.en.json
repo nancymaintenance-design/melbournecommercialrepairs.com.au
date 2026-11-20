@@ -86,7 +86,7 @@
       {
         "number": "4",
         "title": "Check the work and hand over",
-        "body": "We check operational status and record follow‑up items."
+        "body": "We check that the repaired area works as intended and note anything that needs follow-up."
       }
     ],
     "gallery": {
@@ -109,12 +109,12 @@
     ],
     "faq": [
       {
-        "question": "Can multiple repairs be handled at once?",
-        "answer": "Yes. We first compile issues, on-site photos and access conditions, then assign appropriate trades based on the work scope."
+        "question": "Can you take care of several repairs in one visit?",
+        "answer": "Yes. We review the faults and access requirements, then group the work and arrange the trades it needs."
       },
       {
-        "question": "When to patch versus replace?",
-        "answer": "We assess damage extent, connection points and material condition, then explain the work included in partial patching and component replacement."
+        "question": "When do you patch damage, and when do you replace the part?",
+        "answer": "We check how far the damage extends and the condition of the surrounding materials and fixings. We explain what can be patched and what needs replacing."
       },
       {
         "question": "If the ceiling shows water marks, should we fix leaks first?",
@@ -212,7 +212,7 @@
       {
         "number": "3",
         "title": "Plan access and schedule the work",
-        "body": "We coordinate roof access, site protection and weather conditions."
+        "body": "We arrange roof access and site protection, and schedule the work around the weather."
       },
       {
         "number": "4",
@@ -244,16 +244,16 @@
         "answer": "We assess the extent of the damage and check the seams, flashings and drainage. Then we explain whether we can repair the affected area or need to replace components."
       },
       {
-        "question": "Can box‑shaped gutters and downpipes be treated together?",
-        "answer": "Yes. We treat the box‑shaped gutter, outlet and downpipe as a connected drainage path and identify the areas that need work."
+        "question": "Can you repair a box gutter and its downpipes together?",
+        "answer": "Yes. We check the box gutter, outlet and downpipe as one drainage run, then confirm which sections need work."
       },
       {
-        "question": "Can I repair the damaged ceiling inside at the same time?",
-        "answer": "We can include roof repairs and ceiling reinstatement in the same job and schedule the trades to suit the site."
+        "question": "Can you repair the damaged ceiling as well as the roof?",
+        "answer": "We can coordinate roof repairs and ceiling reinstatement in the same job, with the ceiling work scheduled after we address the source of the leak."
       },
       {
-        "question": "What roof information is needed for a quote?",
-        "answer": "We need the property address, leak location, roof type and access conditions. Existing water stains and roof photos help us prepare for the site visit."
+        "question": "How do you quote on a roof leak?",
+        "answer": "We start with the property address and where the leak shows up. We confirm the roof type, access and what needs inspecting before setting out the repair scope."
       }
     ]
   },
@@ -367,20 +367,20 @@
     ],
     "faq": [
       {
-        "question": "Can I just fix a single fixture or area?",
-        "answer": "Yes. We first define the fault scope, then explain the work required for individual fixtures, related controls or area circuits."
+        "question": "Can you repair a single light fitting or one area?",
+        "answer": "Yes. We look at the affected fitting, controls and circuit, then set out the work needed for that fitting or area."
       },
       {
         "question": "Will lighting updates affect business operations?",
         "answer": "We schedule work around the affected circuits, work areas and your business hours. We let you know in advance where access or temporary closures are needed."
       },
       {
-        "question": "Can I add switches and sockets at the same time?",
-        "answer": "We check equipment locations, power requirements and the existing supply before specifying new power points and the scope of work."
+        "question": "Can you install switches and power points during the same job?",
+        "answer": "Yes. We check equipment locations, the existing supply and power requirements before we specify the fittings and electrical work."
       },
       {
-        "question": "What information is needed for a fixture update quote?",
-        "answer": "We gather the venue type, fixture count, mounting height, control method and access conditions, then confirm the specific arrangement on site."
+        "question": "How do you quote on a lighting upgrade?",
+        "answer": "We confirm the type and number of fittings, mounting heights, controls and access. We check those details on site before finalising the scope."
       }
     ]
   },
@@ -498,20 +498,20 @@
     ],
     "faq": [
       {
-        "question": "If several drains slow down at once, can they be checked together?",
-        "answer": "Yes. We inspect all affected fixtures and their connected drain paths together, then define the scope of work."
+        "question": "Can you investigate several slow drains at once?",
+        "answer": "Yes. We inspect the affected fixtures and shared pipework to find where the restriction starts."
       },
       {
-        "question": "Do we need to shut off water or pause equipment during repairs?",
-        "answer": "We identify the systems and areas involved, then agree on how the premises can be used during the work and what we will check afterwards."
+        "question": "Will you need to turn off the water or shut down equipment?",
+        "answer": "We identify what needs isolating, agree on any interruptions and explain how the affected areas will be returned to use."
       },
       {
-        "question": "Can hot water issues be checked alongside equipment and connections?",
-        "answer": "Yes. We assess hot water equipment, connection status and water demand together, then outline the required repairs or upgrades."
+        "question": "Can you inspect the hot water unit and its connections together?",
+        "answer": "Yes. We check the hot water equipment, connections and demand, then explain what needs repair or replacement."
       },
       {
-        "question": "Can plumbing, drainage and equipment upgrades be scheduled together?",
-        "answer": "We can consolidate related work into a clear scope, scheduling it by system connection and site operation."
+        "question": "Can you coordinate plumbing, drainage and equipment upgrades?",
+        "answer": "Yes. We look at how the systems connect and schedule the work around how you use the site."
       }
     ]
   },
@@ -587,22 +587,22 @@
       {
         "number": "1",
         "title": "Record the operating issues",
-        "body": "Summarise equipment location, fault symptoms and occurrence times."
+        "body": "We summarise equipment location, fault symptoms and occurrence times."
       },
       {
         "number": "2",
         "title": "Inspect the system on site",
-        "body": "Inspect equipment, airflow, drainage and control performance."
+        "body": "We inspect equipment, airflow, drainage and control performance."
       },
       {
         "number": "3",
         "title": "Service or repair the equipment",
-        "body": "Carry out cleaning, repair or component replacement within the defined scope."
+        "body": "We carry out cleaning, repair or component replacement within the defined scope."
       },
       {
         "number": "4",
         "title": "Test operation and hand over",
-        "body": "Record completed items and any follow‑up maintenance."
+        "body": "We record completed items and any follow‑up maintenance."
       }
     ],
     "gallery": {
@@ -625,20 +625,20 @@
     ],
     "faq": [
       {
-        "question": "Can I have a single inspection for areas that are too cold in one part of a building and too hot in another?",
-        "answer": "We check the affected zones, return-air paths and operating hours to find out why temperatures differ."
+        "question": "Can you investigate hot and cold spots in the same building?",
+        "answer": "Yes. We check the affected zones, return air and operating schedules to find out why temperatures differ."
       },
       {
-        "question": "Can I address air‑conditioner dripping and ceiling water marks together?",
-        "answer": "We first check the source and discharge of condensate, then decide the order of drainage work and finish repair."
+        "question": "Can you fix an air conditioning leak and the ceiling damage it caused?",
+        "answer": "We trace where the condensate is coming from and how it drains. Then we arrange the drainage repair and reinstate the affected ceiling in the right order."
       },
       {
         "question": "Can maintenance be scheduled around office or business hours?",
         "answer": "We plan access around the equipment location and your operating hours, and tell you which areas the work will affect."
       },
       {
-        "question": "What equipment information helps define the scope of work?",
-        "answer": "Equipment location, model tags, fault symptoms and occurrence times help us prepare; on-site photos can also be provided."
+        "question": "What details help you assess an air conditioning fault?",
+        "answer": "The equipment’s location, model and when the fault occurs can help us prepare. If you already have a photo of the unit or its label, you can include it with your enquiry."
       }
     ]
   },
@@ -714,22 +714,22 @@
       {
         "number": "1",
         "title": "Identify the equipment and fault",
-        "body": "Record entry point, equipment location and fault symptoms."
+        "body": "We record entry point, equipment location and fault symptoms."
       },
       {
         "number": "2",
         "title": "Agree on the scope",
-        "body": "Distinguish system faults, component damage and site conditions."
+        "body": "We distinguish system faults, component damage and site conditions."
       },
       {
         "number": "3",
         "title": "Carry out repairs and adjustments",
-        "body": "Address equipment and installed components within scope."
+        "body": "We address equipment and installed components within scope."
       },
       {
         "number": "4",
         "title": "Test and record the work",
-        "body": "Confirm operational performance and hand over completed items."
+        "body": "We confirm operational performance and hand over completed items."
       }
     ],
     "gallery": {
@@ -752,20 +752,20 @@
     ],
     "faq": [
       {
-        "question": "Can door closing issues and access recognition faults be checked together?",
-        "answer": "We inspect the door, hardware and access equipment together, distinguishing mechanical components from system issues."
+        "question": "Can you investigate door closing and card reader faults at the same time?",
+        "answer": "Yes. We check the door, hardware and access controls together to find out whether the fault is mechanical or part of the access system."
       },
       {
-        "question": "Can entry equipment be adjusted after a tenant change at a commercial premises?",
-        "answer": "We can check the equipment and access controls against how you plan to use the space, then identify what to keep, adjust or replace."
+        "question": "Can you update the access system when a tenancy changes hands?",
+        "answer": "We review how the new tenant will use the premises and work out which access equipment can stay, which needs adjusting and which needs replacing."
       },
       {
-        "question": "What system information should be provided before maintenance?",
-        "answer": "Equipment location, model, fault symptoms and existing maintenance records help us focus the on-site inspection."
+        "question": "What helps you prepare for a security or access service visit?",
+        "answer": "We start with where and when the fault occurs. Equipment details or maintenance records can help us bring the right information to the visit."
       },
       {
-        "question": "Will replaced equipment and adjustments be recorded?",
-        "answer": "We compile completed repairs, component replacements and adjustments, and hand over the related inspection results."
+        "question": "Do you record parts replaced and adjustments made?",
+        "answer": "Yes. At handover we summarise what we repaired, which parts we replaced and the results of our checks."
       }
     ]
   },
@@ -840,22 +840,22 @@
       {
         "number": "1",
         "title": "Inspect the grounds",
-        "body": "Check planting, edges, irrigation and access."
+        "body": "We check planting, edges, irrigation and access."
       },
       {
         "number": "2",
         "title": "Agree on the maintenance scope",
-        "body": "Confirm pruning, tidying, repairs and replacement planting."
+        "body": "We confirm pruning, tidying, repairs and replacement planting."
       },
       {
         "number": "3",
         "title": "Work through each area",
-        "body": "Arrange grounds and irrigation work around site use."
+        "body": "We arrange grounds and irrigation work around site use."
       },
       {
         "number": "4",
         "title": "Clean up and hand over",
-        "body": "Remove green waste and record follow-up maintenance."
+        "body": "We remove green waste and record follow-up maintenance."
       }
     ],
     "gallery": {
@@ -883,12 +883,12 @@
         "answer": "We can maintain planting around entrances, paths, garden strips and car park boundaries, arranging work around site access."
       },
       {
-        "question": "Can missing plants or untidy garden beds be updated locally?",
-        "answer": "We inspect the planting area before agreeing on what to clear, replant or repair."
+        "question": "Can you refresh part of a garden bed or replace missing plants?",
+        "answer": "Yes. We inspect the bed and agree on what needs clearing, replanting or repair."
       },
       {
-        "question": "Can you set up a regular maintenance list?",
-        "answer": "We agree on maintenance tasks to suit the size of the site, plant growth and how the area is used."
+        "question": "Can you set up a regular grounds maintenance schedule?",
+        "answer": "We agree on a schedule that suits the grounds, plant growth and how people use the property."
       }
     ]
   },
@@ -963,22 +963,22 @@
       {
         "number": "1",
         "title": "Measure and inspect",
-        "body": "Review positions, dimensions and information needs."
+        "body": "We review positions, dimensions and information needs."
       },
       {
         "number": "2",
         "title": "Confirm the layout and materials",
-        "body": "Agree on the wording, design and scope of work."
+        "body": "We agree on the wording, design and scope of work."
       },
       {
         "number": "3",
         "title": "Make and install the signs",
-        "body": "Make, update and fit signs to suit the site."
+        "body": "We make, update and fit signs to suit the site."
       },
       {
         "number": "4",
         "title": "Check and hand over",
-        "body": "Check presentation and installation, and prepare site records."
+        "body": "We check presentation and installation, and prepare site records."
       }
     ],
     "gallery": {
@@ -1002,16 +1002,16 @@
         "answer": "We inspect the existing structure, dimensions and appearance before identifying parts suitable for retention, repair or replacement."
       },
       {
-        "question": "What information is needed before sign production?",
-        "answer": "Brand artwork, wording, installation locations and site photos help us organise the brief. We then confirm dimensions and the production scope."
+        "question": "What do you need to prepare a new sign?",
+        "answer": "Brand artwork, wording and the proposed location are enough to start. We check the measurements and site details before confirming production."
       },
       {
-        "question": "Can the shopfront, entrance signs and internal directions be handled together?",
-        "answer": "We can plan production around consistent information and visual direction, installing each element to suit its location."
+        "question": "Can you coordinate shopfront, entrance and internal signs?",
+        "answer": "Yes. We coordinate the wording, design and locations so the signs work together and are easy to follow."
       },
       {
-        "question": "Does an unlit lightbox need complete replacement?",
-        "answer": "We first inspect the affected components and the existing sign before defining the scope for local repairs or replacement."
+        "question": "Can you repair a lightbox that has stopped working?",
+        "answer": "We inspect the lightbox and lighting components, then explain what can be repaired and which parts need replacing."
       }
     ]
   },
@@ -1086,22 +1086,22 @@
       {
         "number": "1",
         "title": "Inspect the façade",
-        "body": "Confirm materials, cleaning height and access areas."
+        "body": "We confirm materials, cleaning height and access areas."
       },
       {
         "number": "2",
         "title": "Confirm access and the work area",
-        "body": "Confirm sample areas, access method, protection and staging."
+        "body": "We confirm sample areas, access method, protection and staging."
       },
       {
         "number": "3",
         "title": "Clean in sections",
-        "body": "Work to the agreed scope and manage the area below."
+        "body": "We work to the agreed scope and manage the area below."
       },
       {
         "number": "4",
         "title": "Inspect and record the work",
-        "body": "Review the results and record photos and issues found."
+        "body": "We review the results and record photos and issues found."
       }
     ],
     "gallery": {
@@ -1121,8 +1121,8 @@
     ],
     "faq": [
       {
-        "question": "Can glass and façade surfaces be cleaned together?",
-        "answer": "We can review both surfaces, define methods for their materials and access conditions, then combine the work sequence."
+        "question": "Can you clean glazing and the façade in one visit?",
+        "answer": "We assess the materials and access, choose a method for each surface and plan the work together."
       },
       {
         "question": "Can entrances remain in use during cleaning?",
@@ -1133,8 +1133,8 @@
         "answer": "We record cracks and damage found and list cleaning and repairs as separate parts of the work scope."
       },
       {
-        "question": "What site information is needed for a quote?",
-        "answer": "We need the building location, surfaces to be cleaned, height and access conditions. Photos help us assess the initial scope."
+        "question": "How do you quote for façade cleaning?",
+        "answer": "We confirm which surfaces need cleaning, the working height and the access available. Any photos you already have can help us prepare for the site visit."
       }
     ]
   },
@@ -1182,7 +1182,7 @@
         "solution": {
           "heading": "Bin room and collection point care",
           "inspection": "We review the collection area, surfaces and the scope of tidying required.",
-          "method": "We tidy and clean to the checklist and clarify sorting and removal handover items.",
+          "method": "We clean the agreed areas and record which waste we sorted or removed.",
           "check": "We check the area and edges and organise the relevant records."
         }
       }
@@ -1209,22 +1209,22 @@
       {
         "number": "1",
         "title": "Inspect the areas",
-        "body": "Confirm materials, staining and site use."
+        "body": "We confirm materials, staining and site use."
       },
       {
         "number": "2",
         "title": "Agree on the cleaning checklist",
-        "body": "List areas, tasks, frequency and access times."
+        "body": "We list areas, tasks, frequency and access times."
       },
       {
         "number": "3",
         "title": "Clean each area",
-        "body": "Plan cleaning and return to use around site movement."
+        "body": "We plan cleaning and return to use around site movement."
       },
       {
         "number": "4",
         "title": "Check the work and hand over",
-        "body": "Confirm completed items and note areas needing further attention."
+        "body": "We confirm completed items and note areas needing further attention."
       }
     ],
     "gallery": {
@@ -1248,16 +1248,16 @@
         "answer": "We handle both, defining scope and frequency separately around how the areas are used."
       },
       {
-        "question": "Does cleaning include waste removal?",
-        "answer": "We list bin room cleaning, waste tidying and removal separately, defining the scope around the type and quantity of waste on site."
+        "question": "Can you include bin room cleaning and waste removal?",
+        "answer": "We can include bin room cleaning and list any waste sorting or removal separately, so the scope is clear before we start."
       },
       {
         "question": "Can you work around shopping centre or office access times?",
         "answer": "We plan the access sequence around business hours, keys or access control arrangements and area use."
       },
       {
-        "question": "Can cleaning records be provided by area?",
-        "answer": "When agreeing on the scope, we can also agree on what to record, including completed work and follow-up by area."
+        "question": "Can you report on cleaning by area?",
+        "answer": "Yes. We agree on what to report and record completed work and follow-up items by area."
       }
     ]
   },
@@ -1332,22 +1332,22 @@
       {
         "number": "1",
         "title": "Inspect the site",
-        "body": "Record damage and vehicle and pedestrian movement."
+        "body": "We record damage and vehicle and pedestrian movement."
       },
       {
         "number": "2",
         "title": "Define the work zones",
-        "body": "Confirm work zones, sequence and material scope."
+        "body": "We confirm work zones, sequence and material scope."
       },
       {
         "number": "3",
         "title": "Work in sections",
-        "body": "Complete surface, fixture and line-marking work to the site plan."
+        "body": "We complete surface, fixture and line-marking work to the site plan."
       },
       {
         "number": "4",
         "title": "Check the work and reopen the area",
-        "body": "Check the finished work and confirm when the area can reopen."
+        "body": "We check the finished work and confirm when the area can reopen."
       }
     ],
     "gallery": {
@@ -1367,8 +1367,8 @@
     ],
     "faq": [
       {
-        "question": "Does the whole car park need to close?",
-        "answer": "We first review traffic and scope to determine whether work can be staged, then clarify work zones and temporary routes."
+        "question": "Can you repair a car park in stages?",
+        "answer": "We plan the work around vehicle and pedestrian movements. We confirm which sections need to close and where temporary routes can run."
       },
       {
         "question": "Can surface repairs and line marking be done together?",
@@ -1379,8 +1379,8 @@
         "answer": "We inspect the fixtures, fixings and surrounding surface before defining repair, replacement and reinstatement work."
       },
       {
-        "question": "Is clearing a drain enough to resolve ponding?",
-        "answer": "We review ponding, inlets and surrounding surfaces to distinguish cleaning from drainage or surface issues needing further work."
+        "question": "How do you fix standing water in a car park?",
+        "answer": "We check the drains, surrounding surfaces and where water collects. Then we determine whether the site needs cleaning, drainage work or surface repairs."
       }
     ]
   },
@@ -1427,15 +1427,15 @@
         "label": "Make-good requires several trades",
         "solution": {
           "heading": "Make-good work involving several trades",
-          "inspection": "We combine the confirmed checklist and site issues and define the boundaries for each trade.",
+          "inspection": "We review the agreed requirements and the site, then set out the work for each trade.",
           "method": "We sequence protection, removal, repairs and finishes and record scope changes during the work.",
-          "check": "We hand over against the checklist, with completion photos and follow-up items."
+          "check": "We check the completed work, prepare handover photos where permitted and note any follow-up."
         }
       }
     ],
     "specialistModule": {
       "title": "What to keep, remove or reinstate",
-      "intro": "Turn the space changes into a checklist that can be confirmed, completed and handed over.",
+      "intro": "We agree on what to keep, remove and reinstate, then check the work against that list at handover.",
       "items": [
         {
           "title": "Retain",
@@ -1455,22 +1455,22 @@
       {
         "number": "1",
         "title": "Confirm the work list",
-        "body": "Review the existing space and confirmed refurbishment or make-good requirements."
+        "body": "We review the existing space and confirmed refurbishment or make-good requirements."
       },
       {
         "number": "2",
         "title": "Agree on the scope",
-        "body": "Confirm retained, removed and restored items and materials."
+        "body": "We confirm retained, removed and restored items and materials."
       },
       {
         "number": "3",
         "title": "Work in stages",
-        "body": "Sequence protection, removal, repairs and trades."
+        "body": "We sequence protection, removal, repairs and trades."
       },
       {
         "number": "4",
         "title": "Check each item at handover",
-        "body": "Check results against the list, organise photos and note follow-up items."
+        "body": "We check results against the list, organise photos and note follow-up items."
       }
     ],
     "gallery": {
@@ -1490,20 +1490,20 @@
     ],
     "faq": [
       {
-        "question": "Can you quote against our make-good checklist?",
-        "answer": "We can review the work list and the site, then set out the scope, materials and details that still need to be agreed."
+        "question": "Can you quote from our make-good scope?",
+        "answer": "Yes. We review the lease handover requirements and the premises, then set out the repairs, materials and work to be agreed."
       },
       {
-        "question": "Can removal, repairs and finish updates be handled together?",
-        "answer": "We can include these in one project and arrange the trades and sequence around site conditions."
+        "question": "Can you handle strip-out, repairs and finishing together?",
+        "answer": "Yes. We coordinate the trades and sequence strip-out, repairs and finishing around access at your premises."
       },
       {
         "question": "Can parts of the premises remain in use during refurbishment?",
         "answer": "We check what needs to stay, how we will access the site and which parts of the job can be done in stages."
       },
       {
-        "question": "How do you check that the agreed work is complete?",
-        "answer": "We check against the agreed list, organise completion photos and record items needing further follow-up."
+        "question": "How do you check the make-good work is complete?",
+        "answer": "We check the finished work against the agreed scope, share completion photos where permitted and record any items that need follow-up."
       }
     ]
   }

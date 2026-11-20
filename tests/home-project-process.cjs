@@ -15,9 +15,17 @@ assert(flow.includes('Monday–Sunday, 9:00 am–9:00 pm'));
 // The subsequently approved office-hotspot component has its own scope regression.
 const withoutSelector=s=>{const start=s.indexOf('<div class="sector-selection"');if(start<0)return s;const tags=/<\/?div\b[^>]*>/g;tags.lastIndex=start;let depth=0,m;while((m=tags.exec(s))){depth+=m[0].startsWith('</')?-1:1;if(!depth)return s.slice(0,start)+s.slice(tags.lastIndex);}throw new Error('Incomplete property selector');};
 const stable=s=>withoutSelector(s.replaceAll('elliservices.group@gmail.com','melbournecommercialrepairs.au@outlook.com').replaceAll('+61 482 602 558','+61 450 666 876').replaceAll('0482 602 558','0450666876').replaceAll('+61482602558','+61450666876').replaceAll('\r\n','\n').replace(/<section[^>]*id="(?:location|contact)"[^]*?<\/section>/g,'').replace(/<link[^>]*href="\/?home-project-process.css[^>]*>/g,'').replace(/<link\b[^>]*href="(?:\/?home-sector-selector\.css|\/?home-commercial-campus\.css|\/?vendor\/ellis-hotspot-kit\/ellis-explorer\.css)[^"]*"[^>]*>|<script\b[^>]*src="(?:\/?home-sector-selector\.js|\/?home-commercial-campus\.js|\/?vendor\/ellis-hotspot-kit\/(?:ellis-explorer|ellis-sectors)\.js)[^"]*"[^>]*><\/script>/g,'').replace(/([.](?:css|js))\?v=[a-f0-9]+/g,'$1'));
-const withoutMetadata=html=>html.replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>|<!-- home-locales:start -->[\s\S]*?<!-- home-locales:end -->/g,'');
+const withoutMetadata=html=>html.replace(/<!-- home-locales:start -->[\s\S]*?<!-- home-locales:end -->/g,'')
+ .replace(/<head>[\s\S]*?<\/head>/,head=>head
+ .replace(/<script type="application\/ld\+json"(?: data-ellis-discovery)?>[\s\S]*?<\/script>/g,'')
+ .replace(/<link rel="alternate" type="application\/(?:rss\+xml|feed\+json)"[^>]*>/g,'')
+ .replace(/>\s+</g,'><'));
 const withoutRevisedCopy=html=>html
  .replace(/<p class="(?:visual-unavailable|form-demo-note)"[^>]*>[\s\S]*?<\/p>/g,'')
+ .replace(/<p class="(?:story-description|nm-intro)"[^>]*>[^<]*<\/p>/g,match=>match.replace(/ data-(?:zh|en)="[^"]*"|>[^<]*<\/p>/g,value=>value.startsWith('>')?'></p>':''))
+ .replace(/<h3\b[^>]*\bid="nm-title-\d+"[^>]*>[^<]*<\/h3>/g,match=>match.replace(/ data-(?:zh|en)="[^"]*"|>[^<]*<\/h3>/g,value=>value.startsWith('>')?'></h3>':''))
+ .replace(/<span\b[^>]*\bclass="nm-note"[^>]*>[^<]*<\/span>/g,'<span class="nm-note"></span>')
+ .replace(/(<div class="hf-answer-copy">\s*<h3[^>]*>[^<]*<\/h3>)<p[^>]*>[^<]*<\/p>/g,'$1<p></p>')
  .replace(/<p data-zh="草稿仅在当前页面生成[^>]*>[^<]*<\/p>/g,'')
  .replace(/^[ \t]*<noscript><p class="section">当前为静态阅读模式[^<]*<\/p><\/noscript>\r?\n/m,'')
  .replace(/\sdata-(?:(?:[\w-]+-)?en|aria-label-zh)="[^"]*"/g,'')

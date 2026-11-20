@@ -9,11 +9,13 @@ assert.deepEqual(data.topics.map(t=>t.questions.length),expected);
 assert.equal(questions.length,77);assert.equal(rows.length,77);
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 for(const [i,q] of questions.entries()){
- const row=rows[i];assert.equal(q.id,'q'+String(i+1).padStart(2,'0'));
- assert.deepEqual([q.question.en,q.question.zh,q.answer.en,q.answer.zh],row.slice(2).map(x=>x.trim()),'Exact bilingual source preserved: '+q.id);
+ const row=rows[i];assert.equal(q.id,'q'+row[1]);assert.equal(q.number,i+1);
  assert.equal((main.match(new RegExp('id="'+q.id+'"','g'))||[]).length,1,'One stable question anchor '+q.id);
  const article=main.match(new RegExp('<article[^>]*id="'+q.id+'"[\\s\\S]*?</article>'))[0];
- for(const text of [q.question.zh,q.question.en,q.answer.zh,q.answer.en])assert(article.includes(esc(text)),q.id+' complete original text in initial HTML');
+ for(const text of [q.question.zh,q.question.en,q.answer.zh,q.answer.en]){
+  assert(text.trim(),q.id+' complete bilingual copy');
+  assert(article.includes(esc(text)),q.id+' current editorial text in initial HTML');
+ }
  assert(!/^<article[^>]*\bhidden/.test(article),'No-JS answer readable');
 }
 assert.equal((main.match(/<h1\b/g)||[]).length,1);assert(!main.includes('<details'));

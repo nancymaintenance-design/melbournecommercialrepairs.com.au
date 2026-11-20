@@ -47,7 +47,7 @@ function detail(article, ui) {
  function title(index) {
   const [id,,words]=steps[index];
   const heading = topic && id==='evidence'
-   ? topic.panel || ['先看现象，再核对证据','Start with the symptoms, then check the evidence']
+   ? topic.panel || ['我们如何查明故障','How we investigate the fault']
    : words;
   return `<h2 id="tn-h-${id}" class="led-chapter-title"><span class="led-chapter-number" aria-hidden="true">${icons[index]}</span>${text('span',heading)}</h2>`;
  }
@@ -83,7 +83,7 @@ function detail(article, ui) {
    <span class="led-progress" aria-hidden="true"><i></i></span>
   </nav>
  </div>`;
- const mechanism = `<div class="led-mechanism-head">${title(0)}${text('p',topic?.aside || ['视频条纹是线索，不等于故障结论。','Video bands are a clue, not a fault diagnosis.'],'led-aside')}</div>
+ const mechanism = `<div class="led-mechanism-head">${title(0)}${text('p',topic?.aside || ['我们会把视频条纹与现场观察、实测结果一起核对。','We compare video banding with what we observe and measure on site.'],'led-aside')}</div>
   <div class="led-mechanism-copy">${paragraphs(article.mechanism)}</div>
   <ul class="led-keywords">${article.keywords.map(key=>text('li',key)).join('')}</ul>
   <p class="led-context">${text('span',['延伸阅读','Further reading'])} ${link(related[0].route,related[0].title.map(s=>s.replaceAll('\n',' ')))}</p>`;
@@ -123,7 +123,7 @@ function detail(article, ui) {
  </dl>`;
  const recordRows = topic?.record || record;
  const verification = `${title(3)}<div class="led-record-panel">
-  ${text('p',['记录项目示意','Record headings'],'led-record-label')}
+  ${text('p',['验收记录项目','What we record at handover'],'led-record-label')}
   <dl>${recordRows.map(([key,value])=>`<div>${text('dt',key)}${text('dd',value)}</div>`).join('')}</dl>
   ${paragraphs(article.verification)}
   <p class="led-context">${text('span',['对应服务','Related service'])} ${link(service,serviceName(article.primary))}</p>
@@ -134,7 +134,7 @@ function detail(article, ui) {
 
  const tail = `<div class="led-wrap led-tail">
   <section class="led-service" aria-labelledby="led-service-heading">
-   <div>${text('p',['本篇对应服务','Service for this article'])}
+   <div>${text('p',['相关维修服务','Related maintenance service'])}
     <h2 id="led-service-heading">${text('span',serviceTitle)}</h2>
     ${link(service,topic?['查看服务范围','Explore the service']:['查看电气与照明服务','Explore electrical and lighting services'],'tn-button')}${article.secondary?`
     ${link('/services/'+article.secondary+'/',serviceName(article.secondary),'field-topic-secondary')}`:''}
