@@ -204,10 +204,16 @@
     openDialog($('#content-dialog'));
   }
   function openQuote(options={}) {
-    if(options.region || options.service!==undefined) $('#draft-result').hidden=true;
-    if(options.region) $('#quote-form').elements.region.value=options.region;
-    if(options.service!==undefined) $('#quote-service').value=options.service;
-    openDialog($('#quote-dialog'));
+    const current=new URLSearchParams(location.search);
+    const params=new URLSearchParams({lang:language});
+    const requested=String(options.service??current.get('service')??$('#quote-service').value);
+    const service=requested==='multi'||serviceSlugs.includes(requested)?requested:/^(?:[0-9]|1[01])$/.test(requested)?serviceSlugs[Number(requested)]:'';
+    if(service) params.set('service',service);
+    const region=options.region??current.get('region');
+    if(region==='Melbourne') params.set('region',region);
+    const destination='/contact/?'+params.toString()+'#contact-enquiry-form';
+    if(options.replace) location.replace(destination);
+    else location.assign(destination);
   }
   $$('[data-quote]').forEach(button=>button.addEventListener('click',()=>openQuote()));
   $$('[data-region]').forEach(button=>button.addEventListener('click',()=>openQuote({region:button.dataset.region})));
@@ -245,5 +251,5 @@
   document.fonts?.ready.then(renderRibbon);
   applyLanguage();
   const enquiry=new URLSearchParams(location.search);
-  if(enquiry.has('service')||enquiry.get('region')==='Melbourne') openQuote({region:'Melbourne',service:enquiry.get('service')??undefined});
+  if(enquiry.has('service')||enquiry.get('region')==='Melbourne') openQuote({region:'Melbourne',service:enquiry.get('service')??undefined,replace:true});
 })();

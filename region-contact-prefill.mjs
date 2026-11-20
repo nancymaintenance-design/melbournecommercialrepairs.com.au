@@ -11,7 +11,7 @@ if(form){
  let selectedArea=data.regions.find(region=>region.areaParam===context.area);
  let generatedAddress='';
  if(context.areaName&&address&&!address.value){address.value=context.areaName;generatedAddress=address.value;}
- if(context.service&&service&&!service.value){
+ if(context.service&&service&&!service.value&&form.dataset.servicePrefillReady!=='true'){
   // Existing contact form deliberately retains its numeric service contract.
   const index=SERVICE_CATALOG.findIndex(item=>item.slug===context.service);
   if(index>=0&&[...service.options].some(option=>option.value===String(index)))service.value=String(index);

@@ -8,6 +8,7 @@ const areaRegions=require('./content/area-data.cjs');
 const areaTheatre=require('./content/area-theatre.cjs');
 const areaDetail=require('./content/area-detail.cjs');
 const footerTransition=require('./content/footer-transition.cjs');
+const technicalNotes=require('./content/technical-notes-render.cjs');
 const e=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;');
 const dual=(tag,zh,en,cls='')=>`<${tag}${cls?` class="${cls}"`:''} data-zh="${e(zh)}" data-en="${e(en)}">${e(zh)}</${tag}>`;
 const business=require('./business.json');
@@ -43,18 +44,18 @@ function page(route,zh,en,content,related='',options={}){
  const areaOverview=route==='areas/melbourne',areaRegion=options.areaRegion===true;
  const compactPages={insights:['insights-editorial','insights-editorial-page'],faq:['faq-stage','faq-index-page'],about:['about-profile','about-profile-page']};
  const compactPage=compactPages[route];
- if(compactPage){content='';related='';}
+ if(compactPage&&!options.technical){content='';related='';}
  if(route==='privacy')content+=dual('h2','Google 地图','Google Maps')+dual('p','首页嵌入 Google 地图。加载地图时，浏览器会连接 Google，其隐私政策适用于地图服务。你也可以通过地图链接直接打开商家位置。','The homepage embeds Google Maps. Loading the map connects your browser to Google, whose privacy policy applies to the map service. You can also open our business location using the map link.')+external('https://policies.google.com/privacy','Google 隐私政策 ↗','Google privacy policy ↗');
  const metadata={route:'/'+route+'/',titleZh:options.titleZh||zh+' | Ellis Services Group Melbourne',titleEn:options.titleEn||en+' | Ellis Services Group Melbourne',descriptionZh:options.descriptionZh||zh+'。Ellis Services Group 为墨尔本商业物业统筹维修与维护项目。',descriptionEn:options.descriptionEn||en+'. We coordinate commercial property repairs and maintenance in Melbourne.'};
  const topic=options.topic;
- const heading=options.serviceReference?'':compactPage?(route==='insights'?require('./content/insights-editorial.cjs').section(data.articles,articleSlugs):route==='faq'?require('./content/faq-stage.cjs').section(data.faqs,data.services,serviceSlugs):require('./content/about-profile.cjs').section(business,registration)):areaOverview?areaTheatre.section({home:false}):areaRegion?'':route==='contact'?require('./content/contact-page.cjs').section(data.services,data.sectors):route==='services'?require('./content/service-directory.cjs').section(data.services,serviceSlugs,zh,en):route==='sectors'?require('./content/sector-explorer.cjs').section(data.sectors,sectorSlugs,zh,en):require('./content/design-shell.cjs').heading(route,zh,en,options);
+ const heading=options.serviceReference||options.technical?'':compactPage?(route==='faq'?require('./content/faq-stage.cjs').section(data.faqs,data.services,serviceSlugs):require('./content/about-profile.cjs').section(business,registration)):areaOverview?areaTheatre.section({home:false}):areaRegion?'':route==='contact'?require('./content/contact-page.cjs').section(data.services,data.sectors):route==='services'?require('./content/service-directory.cjs').section(data.services,serviceSlugs,zh,en):route==='sectors'?require('./content/sector-explorer.cjs').section(data.sectors,sectorSlugs,zh,en):require('./content/design-shell.cjs').heading(route,zh,en,options);
  const pageHead=localeHead(metadata)+(options.extraHead||'');
  const html=`<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${e(metadata.titleZh)}</title><meta name="description" content="${e(metadata.descriptionZh)}">${pageHead}<link rel="icon" href="/assets/ellis-services-logo.png"><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="/lower.css"><link rel="stylesheet" href="/cinematic.css"><link rel="stylesheet" href="/continuous.css"><link rel="stylesheet" href="/designer.css?v=20261114-13"><script src="/locale-ui.js" defer></script><script src="/detail.js" defer></script><script src="/designer-motion.js?v=20261114-13" defer></script></head><body class="cinematic-v2 detail-page${topic?' content-detail':''}${route==='contact'?' contact-page':''}${areaOverview?' area-overview-page':areaRegion?' area-region-page':''}"><a class="skip-link" href="#main">Skip to content</a>${header}<main id="main" class="detail-main"><nav class="breadcrumbs"><a href="/" data-zh="首页" data-en="Home">首页</a><span aria-hidden="true"> / </span>${topic?`<a href="/${topic.isService?'services':'sectors'}/" data-local-page data-zh="${topic.isService?'服务目录':'商业场景'}" data-en="${topic.isService?'Services':'Property sectors'}">${topic.isService?'服务目录':'商业场景'}</a><span aria-hidden="true"> / </span>`:''}<span data-zh="${e(zh)}" data-en="${e(en)}">${e(zh)}</span></nav>${heading}${content}${related}</main>${footer}</body></html>`;
  const areaAssets=areaOverview||areaRegion?'<link rel="stylesheet" href="/area-theatre.css">'+(areaOverview?'<script src="/area-theatre.js" defer></script>':''):'';
- const customContent=['services','sectors'].includes(route)||areaOverview||areaRegion||!!compactPage||options.serviceReference;
- const compactAssets=compactPage?`<link rel="stylesheet" href="/compact-index-shell.css"><link rel="stylesheet" href="/${compactPage[0]}.css"><script src="/${compactPage[0]}.js" defer></script>`:'';
- const finalHtml=html.replace('</head>',`<link rel="stylesheet" href="/inner-flow.css">${route==='services'?'<link rel="stylesheet" href="/service-directory.css"><script src="/service-directory.js" defer></script>':route==='sectors'?'<link rel="stylesheet" href="/sector-explorer.css"><link rel="stylesheet" href="/vendor/ellis-hotspot-kit/ellis-explorer.css"><link rel="stylesheet" href="/sector-hotspot-kit.css"><script src="/vendor/ellis-hotspot-kit/ellis-sectors.js" defer></script><script src="/vendor/ellis-hotspot-kit/ellis-explorer.js" defer></script><script src="/sector-hotspot-kit.js" defer></script>':''}`+areaAssets+compactAssets+'<link rel="stylesheet" href="/navigation-refinement.css"><link rel="stylesheet" href="/readability-refinement.css">'+organizationSchema+'</head>').replace('class="cinematic-v2 detail-page','class="cinematic-v2 designer-detail detail-page'+(compactPage?' '+compactPage[1]:'')).replace('<main id="main"',require('./content/design-shell.cjs').rail+'<main id="main"').replace(heading+content,heading+(customContent?content:'<div id="page-content" class="designer-page-content">'+content+'</div>'));
- const ending=footerTransition.ending(route,{topic,areaOverview,areaRegion});
+ const customContent=['services','sectors'].includes(route)||areaOverview||areaRegion||!!compactPage||options.serviceReference||options.technical;
+ const compactAssets=options.technical?(route==='insights'?'<link rel="stylesheet" href="/compact-index-shell.css">':'')+technicalNotes.assets:compactPage?`<link rel="stylesheet" href="/compact-index-shell.css"><link rel="stylesheet" href="/${compactPage[0]}.css"><script src="/${compactPage[0]}.js" defer></script>`:'';
+ const finalHtml=html.replace('</head>',`<link rel="stylesheet" href="/inner-flow.css">${route==='services'?'<link rel="stylesheet" href="/service-directory.css"><script src="/service-directory.js" defer></script>':route==='sectors'?'<link rel="stylesheet" href="/sector-explorer.css"><link rel="stylesheet" href="/vendor/ellis-hotspot-kit/ellis-explorer.css"><link rel="stylesheet" href="/sector-hotspot-kit.css"><script src="/vendor/ellis-hotspot-kit/ellis-sectors.js" defer></script><script src="/vendor/ellis-hotspot-kit/ellis-explorer.js" defer></script><script src="/sector-hotspot-kit.js" defer></script>':''}`+areaAssets+compactAssets+'<link rel="stylesheet" href="/navigation-refinement.css"><link rel="stylesheet" href="/readability-refinement.css">'+organizationSchema+'</head>').replace('class="cinematic-v2 detail-page','class="cinematic-v2 designer-detail detail-page'+(compactPage?' '+compactPage[1]:'')+(options.technical?' tn-page':'')).replace('<main id="main"',require('./content/design-shell.cjs').rail+'<main id="main"').replace(heading+content,heading+(customContent?content:'<div id="page-content" class="designer-page-content">'+content+'</div>'));
+ const ending=footerTransition.ending(options.technical?'insights':route,{topic,areaOverview,areaRegion});
  const withFooterShell=finalHtml.replace('class="cinematic-v2 designer-detail detail-page','class="cinematic-v2 designer-detail detail-page'+(options.serviceReference?' service-reference-page':'')).replace('<main id="main" class="detail-main">','<main id="main" class="detail-main"'+footerTransition.attributes(ending)+'>').replace(footer,footerTransition.wrap(footer,ending));
  const dest=path.join(root,route,'index.html');fs.mkdirSync(path.dirname(dest),{recursive:true});fs.writeFileSync(dest,versionAssets(withFooterShell.replace('</head>','<link rel="stylesheet" href="/footer-brand.css"><link rel="stylesheet" href="/inner-footer-transition.css"><script src="/inner-footer-transition.js" defer></script>'+(options.serviceReference?'<link rel="stylesheet" href="/service-reference.css"><link rel="stylesheet" href="/service-reference-fidelity.css">':'')+'</head>'),root));
 }
@@ -63,7 +64,19 @@ page('services','墨尔本商业维护服务','Commercial maintenance services i
 page('sectors','我们服务的商业物业','Commercial properties we maintain','');
 page('about','关于 Ellis Services Group','About Ellis Services Group','');
 data.articles.forEach((x,i)=>page('insights/'+articleSlugs[i],x.zh,x.en,x.bodyZh.map(([h,t],j)=>dual('h2',h,x.bodyEn[j][0])+dual('p',t,x.bodyEn[j][1])).join(''),dual('h2','从资讯到具体服务','Explore related services')+cards([data.services[x.icon],data.services[0]],'services',[serviceSlugs[x.icon],serviceSlugs[0]])));
-page('insights','商业物业维护资讯','Commercial property maintenance insights',cards(data.articles,'insights',articleSlugs));
+page('insights','墨尔本商业维护技术研究与实务','Melbourne commercial maintenance research and practice',technicalNotes.library(),'',{
+ technical:true,titleEn:'Melbourne Commercial Maintenance Technical Notes | Ellis Services Group',
+ descriptionZh:`查阅 ${technicalNotes.articles.length} 篇墨尔本商业物业维护技术综述，了解故障机理、诊断证据、维修方法和验收记录。`,
+ descriptionEn:`Explore ${technicalNotes.articles.length} technical reviews of commercial maintenance: fault mechanisms, evidence, repair options and verification for Melbourne properties.`
+});
+for(const article of technicalNotes.articles){
+ const [zh,en]=article.title.map(title=>title.replaceAll('\n',' '));
+ const [descriptionZh,descriptionEn]=article.summary;
+ const schema=JSON.stringify(technicalNotes.schema(article)).replaceAll('<','\\u003c');
+ page(article.route.slice(1,-1),zh,en,technicalNotes.detail(article),'',{
+  technical:true,descriptionZh,descriptionEn,extraHead:'<script type="application/ld+json">'+schema+'</script>'
+ });
+}
 page('areas/melbourne','墨尔本服务地区','Service area: Melbourne','');
 areaRegions.forEach(region=>{
  const locationEn=/Melbourne/i.test(region.en)?region.en:region.en+', Melbourne';
@@ -102,5 +115,5 @@ if(!home.includes('area-theatre.css'))home=home.replace('</head>','<link rel="st
 if(!home.includes('area-theatre.js'))home=home.replace('</head>','<script src="area-theatre.js" defer></script></head>');
 home=home.replace(/<link\b[^>]*href="\/?(?:home-location|navigation-refinement|readability-refinement)\.css(?:\?[^\"]*)?"[^>]*>/g,'').replace('</head>','<link rel="stylesheet" href="/navigation-refinement.css"><link rel="stylesheet" href="/readability-refinement.css"></head>');
 fs.writeFileSync(path.join(root,'index.html'),versionAssets(home.replace('</head>','<link rel="stylesheet" href="/footer-brand.css"></head>'),root));
-console.log('Built 41 detail/index pages and linked homepage.');
+console.log('Built detail and index pages, including '+technicalNotes.articles.length+' technical notes.');
 

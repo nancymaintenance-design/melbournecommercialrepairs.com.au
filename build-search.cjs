@@ -67,6 +67,14 @@ function structuredData(schema, nodes, route, language) {
  if (schema['@type'] === 'Service') {
   return {'@context': schema['@context'], '@graph': [localizeService(schema), breadcrumbs(nodes, route, language)]};
  }
+ if (schema['@type'] === 'Article') {
+  const meta = readJson(nodes.find(node => attr(node, 'id') === 'page-meta'));
+  const suffix = language === 'en' ? 'En' : 'Zh';
+  return {...schema, '@id': url + '#article', url, mainEntityOfPage: url,
+   inLanguage: language === 'en' ? 'en-AU' : 'zh-CN',
+   headline: meta['title' + suffix].replace(/ \| Ellis Services Group Melbourne$/, ''),
+   description: meta['description' + suffix]};
+ }
  if (!schema['@graph']) return schema;
  return {...schema, '@graph': schema['@graph'].map(entity => {
   if (entity['@type'] === 'Service') return localizeService(entity);

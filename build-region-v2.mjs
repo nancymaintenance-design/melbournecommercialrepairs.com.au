@@ -28,7 +28,7 @@ for(const page of [data.hub,...data.regions]){
  const header=html.match(/<header class="site-header"[\s\S]*?<\/header>/)[0];
  const footer=html.match(/<footer\b[\s\S]*?<\/footer>/)[0];
  const kind=page===data.hub?'page-hub':`page-region theme-${page.designFamily} region-${page.areaParam}`;
- const variants=Object.fromEntries(['zh','en'].map(lang=>[lang,(page===data.hub?withOverviewPlaces(renderMain({data,pathname:page.route,lang,assetBase,siteOrigin:origin,preview:false,contactLocal:true}),data,lang):renderRegionReference({data,page,lang})).replaceAll(origin,'').replaceAll('/assets/ellis-regions-v2/hero-melbourne-v2.webp','/assets/region-reference-v3/overview-city.webp')]));
+ const variants=Object.fromEntries(['zh','en'].map(lang=>[lang,(page===data.hub?withOverviewPlaces(renderMain({data,pathname:page.route,lang,assetBase,siteOrigin:origin,preview:false,contactLocal:true,includeHubCoverage:false}),data,lang):renderRegionReference({data,page,lang})).replaceAll(origin,'').replaceAll('/assets/ellis-regions-v2/hero-melbourne-v2.webp','/assets/region-reference-v3/overview-city.webp')]));
  const meta={route:page.route,titleZh:page.locales.zh.metaTitle,titleEn:page.locales.en.metaTitle,descriptionZh:page.locales.zh.metaDescription,descriptionEn:page.locales.en.metaDescription};
  html=html.replace(/<link rel="stylesheet"[^>]*>/g,'').replace(/<script src="\/(?:designer-motion|area-theatre|inner-footer-transition)\.js[^>]*><\/script>/g,'');
  html=html.replace(/<script type="application\/json" id="page-meta">[\s\S]*?<\/script>/,`<script type="application/json" id="page-meta">${JSON.stringify(meta)}</script>`);
