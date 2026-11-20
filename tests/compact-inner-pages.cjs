@@ -9,7 +9,8 @@ const routes=['insights','faq','about'];
 for(const route of routes){
  const h=read(route+'/index.html'),b=old(route+'/index.html');
  assert.equal((h.match(/<h1\b/g)||[]).length,1,route+' has one H1');
- assert.equal(h.match(/id="page-meta">(.*?)<\/script>/)[1],b.match(/id="page-meta">(.*?)<\/script>/)[1],route+' preserves bilingual SEO metadata');
+ if(route==='insights')assert.equal(JSON.parse(h.match(/id="page-meta">(.*?)<\/script>/)[1]).route,'/insights/','Technical library preserves the existing News route');
+ else assert.equal(h.match(/id="page-meta">(.*?)<\/script>/)[1],b.match(/id="page-meta">(.*?)<\/script>/)[1],route+' preserves bilingual SEO metadata');
  assert(!h.includes('class="reference-hero'),route+' has no duplicate opening building hero');
  assert(!h.includes('data-scroll-visual'),route+' has no pinned model opening');
  assert.equal((h.match(/id="main-nav"/g)||[]).length,1,'One original navigation');
@@ -17,12 +18,7 @@ for(const route of routes){
   const u=decodeURI(href.split('?')[0]);assert(fs.existsSync(path.join(root,u,u.endsWith('/')?'index.html':'')),'Real link: '+href);
  }
 }
-const news=read('insights/index.html');
-for(const [i,a]of data.articles.entries()){
- for(const t of [a.zh,a.en])assert(news.includes(escape(t)),'Original full article title: '+t);
- const slug=['maintenance-plan','facade-cleaning','signage-make-good'][i];
- assert(news.includes('/insights/'+slug+'/'),'Original article URL: '+slug);
-}
+// The News library and original article routes are covered by technical-notes.cjs.
 const faq=read('faq/index.html');
 for(const row of data.faqs)for(const text of row)assert(faq.includes(escape(text)),'Original FAQ content: '+text);
 assert(/<details\b[^>]*\bopen\b/.test(faq),'A full answer is open without JavaScript');
@@ -35,4 +31,4 @@ assert(about.includes('/assets/ellis-services-logo.png'),'Original supplied logo
 const stable=h=>h.replaceAll('\r\n','\n').replace(/([.](?:css|js))\?v=[a-f0-9]+/g,'$1');
 assert(stable(read('index.html'))===stable(old('index.html')),'Homepage markup and content remain unchanged');
 for(const route of ['contact','services','sectors','areas/melbourne','insights/maintenance-plan','insights/facade-cleaning','insights/signage-make-good'])assert(stable(read(route+'/index.html'))===stable(old(route+'/index.html')),'Outside-scope page unchanged: '+route);
-console.log(JSON.stringify({compactPages:3,singleH1:true,metadataPreserved:true,articleTitlesAndRoutes:3,originalFAQs:data.faqs.length,originalLogoAndRegistration:true,insuranceDOM:true,homepageAndOtherModulesPreserved:true}));
+console.log(JSON.stringify({compactPages:3,singleH1:true,metadataPreserved:true,originalFAQs:data.faqs.length,originalLogoAndRegistration:true,insuranceDOM:true,homepageAndOtherModulesPreserved:true}));

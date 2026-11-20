@@ -249,8 +249,8 @@ function hubCoverage(c) {
   const copy=c.data.hub.locales[c.lang];
   return `<section class="hub-coverage content-width" aria-label="${c.t('服务覆盖范围','Service coverage')}"><details class="hub-coverage__details"><summary><strong>${c.t('我们的覆盖范围','Our service coverage')}</strong>${icon('down')}<span>${e(copy.coverageNote)}</span></summary><div class="hub-coverage__body"><p class="hub-coverage__intro">${e(copy.intro)}</p><section class="hub-planning-detail" aria-labelledby="hub-planning-heading"><h2 id="hub-planning-heading">${e(copy.sectionHeadings.planning)}</h2><ol>${copy.planning.map(step=>`<li><h3>${e(step.title)}</h3><p>${e(step.body)}</p></li>`).join('')}</ol></section><div class="hub-coverage__regions">${c.data.regions.map(r=>`<details class="hub-region-details"><summary><span>${e(c.lang==='zh'?r.nameZh:r.nameEn)}</span>${icon('plus')}</summary><div><p>${e(r.locales[c.lang].heroLead)}</p><ul class="hub-region-details__services">${r.priorityServices.map(service=>`<li><a href="${e(c.service(service.slug))}">${e(c.lang==='zh'?service.anchorZh:service.anchorEn)}${icon('arrow')}</a><span>${e(c.lang==='zh'?service.contextZh:service.contextEn)}</span></li>`).join('')}</ul><ul class="coverage-list">${r.coverageSuburbs.map(place=>`<li>${e(place)}</li>`).join('')}</ul><a class="text-link" href="${e(c.regionHref(r))}">${c.t('进入地区详情','Explore the region')}${icon('arrow')}</a></div></details>`).join('')}</div></div></details></section>`;
 }
-function renderHub(c) {
-  return `${hero(c)}${serviceRail(c)}${hubRegionPreview(c)}${hubServices(c)}${hubEnquiryBand(c)}${hubCoverage(c)}<div class="hub-footer-transition" aria-hidden="true"></div>`;
+function renderHub(c, includeCoverage) {
+  return `${hero(c)}${serviceRail(c)}${hubRegionPreview(c)}${hubServices(c)}${hubEnquiryBand(c)}${includeCoverage ? hubCoverage(c) : ''}<div class="hub-footer-transition" aria-hidden="true"></div>`;
 }
 
 function renderRegion(c,region) {
@@ -269,7 +269,7 @@ function notFound(c) {
 
 export function renderMain(options) {
   const c=makeContext(options);
-  const body=c.local.kind==='hub'?renderHub(c):c.local.kind==='region'?renderRegion(c,c.local.page):c.local.kind==='contact'?contactPage(c):notFound(c);
+  const body=c.local.kind==='hub'?renderHub(c,options.includeHubCoverage??true):c.local.kind==='region'?renderRegion(c,c.local.page):c.local.kind==='contact'?contactPage(c):notFound(c);
   return body;
 }
 export function renderBody(options) {

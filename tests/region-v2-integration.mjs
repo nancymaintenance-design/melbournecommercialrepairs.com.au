@@ -20,7 +20,7 @@ for(const page of [data.hub,...data.regions]){
  assert(!html.includes('area-theatre.js'),`${page.route}: no old area animation instance`);
  assert(!main.includes('data-enquiry-form'),`${page.route}: no demo form`);
  for(const lang of ['zh','en']){
-  const rendered=(page===data.hub?withOverviewPlaces(renderMain({data,pathname:page.route,lang,assetBase:assets,siteOrigin:'https://melbournecommercialrepairscomau.vercel.app',preview:false,contactLocal:true}),data,lang):renderRegionReference({data,page,lang})).replaceAll('/assets/ellis-regions-v2/hero-melbourne-v2.webp','/assets/region-reference-v3/overview-city.webp');
+  const rendered=(page===data.hub?withOverviewPlaces(renderMain({data,pathname:page.route,lang,assetBase:assets,siteOrigin:'https://melbournecommercialrepairscomau.vercel.app',preview:false,contactLocal:true,includeHubCoverage:false}),data,lang):renderRegionReference({data,page,lang})).replaceAll('/assets/ellis-regions-v2/hero-melbourne-v2.webp','/assets/region-reference-v3/overview-city.webp');
   const variants=JSON.parse(html.match(/id="region-v2-locales">([\s\S]*?)<\/script>/)[1]);
   assert.equal(variants[lang],rendered.replaceAll('https://melbournecommercialrepairscomau.vercel.app',''),`${page.route}: complete ${lang} content`);
   if(page!==data.hub){
@@ -30,6 +30,9 @@ for(const page of [data.hub,...data.regions]){
    for(const scene of page.locales[lang].scenarios)for(const key of ['title','problem','approach','handover'])assert(full.includes(esc(scene[key])),`${page.route}: full ${lang} ${key} retained`);
    for(const step of page.locales[lang].planning)assert(full.includes(esc(step.body)),`${page.route}: full ${lang} planning retained`);
   }else{
+   assert(!rendered.includes('hub-coverage__details'),`overview: no duplicate coverage disclosure in ${lang}`);
+   const cardLinks=[...rendered.matchAll(/class="area-card__link" href="([^"]+)"/g)].map(([,href])=>new URL(href,'https://melbournecommercialrepairscomau.vercel.app').pathname);
+   assert.deepEqual(cardLinks,data.regions.map(region=>region.route),`overview: direct links to every region in ${lang}`);
    for(const region of data.regions){
     const preview=rendered.match(new RegExp(`data-region-preview-panel="${region.areaParam}"[\\s\\S]*?<p class="rr-preview-places">([\\s\\S]*?)<\\/p>`))?.[1]||'';
     for(const place of places[region.areaParam])assert(preview.includes(escape(place)),`overview ${region.areaParam}: ${place} visible when selected`);

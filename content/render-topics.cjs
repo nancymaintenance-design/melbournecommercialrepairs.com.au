@@ -1,6 +1,7 @@
 const authored={...require('./services.cjs'),...require('./sectors.cjs')};
 const business=require('../business.json');
 const blueprint=require('./blueprint-structure.json');
+const {serviceNotes}=require('./technical-notes-render.cjs');
 const sectionLinks={S01:[[],[],['S12'],['S02']],S02:[['S04'],[],['S01'],['S09']],S03:[[],['S12'],[],['S06']],S04:[['S01'],['S02'],[],['S05']],S05:[[],['S03','S04'],[],['S06']],S06:[['S03'],[],['S01'],['S05']],S07:[['S11'],[],['S04'],['S08']],S08:[['S01'],['S03'],[],['S12']],S09:[[],['S02'],[],['S10']],S10:[[],[],[],['S09','S12']],S11:[[],['S04'],[],['S03','S10']],S12:[['S01'],['S03'],['S10'],['S08']],I01:[['S01'],['S03','S05'],['S04'],['S10','S12']],I02:[['S01'],['S02','S04'],['S08','S11'],['S12']],I03:[['S04','S05'],['S03'],['S01'],['S10','S12']],I04:[['S02','S04'],['S11'],['S03'],['S12','S01']],I05:[['S01','S02'],['S11'],['S03','S05'],['S07']],I06:[['S01'],['S03','S04','S05'],[],['S07']],I07:[['S01','S03','S04'],['S07','S11'],['S12'],[]],I08:[['S01','S02'],['S06','S07','S11'],[],['S09']]};
 const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;');
 const dual=(tag,zh,en,cls='')=>`<${tag}${cls?` class="${cls}"`:''} data-zh="${esc(zh)}" data-en="${esc(en)}">${esc(zh)}</${tag}>`;
@@ -21,7 +22,8 @@ module.exports=function renderTopics(page,data,serviceSlugs,sectorSlugs){
   if(x.isService){
    const serviceUI=require('./service-ui.cjs'),s=serviceUI.pack.services[x.index],en=require('./service-pages.en.json')[x.index];
    const schema={'@context':'https://schema.org','@type':'Service',name:s.EnglishH1,serviceType:en.title,description:en.heroCopy,provider:{'@id':'/#ellis-organization'},areaServed:{'@type':'City',name:'Melbourne'}};
-   page(x.route,s.ChineseH1,s.EnglishH1,serviceUI.section(x.index,x,records),'',{topic:x,serviceReference:true,titleZh:s.ChineseH1+' | Ellis Services Group',titleEn:s.EnglishH1+' | Ellis Services Group',descriptionZh:s.heroCopy,descriptionEn:en.heroCopy,extraHead:`${s.slug==='plumbing-drainage-gas'?'<link rel="stylesheet" href="/plumbing-gallery.css">':''}<script src="/service-reference.js" defer></script><script type="application/ld+json">${json(schema)}</script>`});
+   const notes=serviceNotes(s.slug);
+   page(x.route,s.ChineseH1,s.EnglishH1,serviceUI.section(x.index,x,records)+notes,'',{topic:x,serviceReference:true,titleZh:s.ChineseH1+' | Ellis Services Group',titleEn:s.EnglishH1+' | Ellis Services Group',descriptionZh:s.heroCopy,descriptionEn:en.heroCopy,extraHead:`${notes?'<link rel="stylesheet" href="/technical-notes.css">':''}${s.slug==='plumbing-drainage-gas'?'<link rel="stylesheet" href="/plumbing-gallery.css">':''}<script src="/service-reference.js" defer></script><script type="application/ld+json">${json(schema)}</script>`});
    continue;
   }
   const contents=`<nav class="topic-toc" aria-label="Page topics">${x.sections.map((s,i)=>`<a href="#scope-${i+1}"><span>0${i+1}</span>${dual('span',s.h2Zh,s.h2En)}</a>`).join('')}</nav>`;

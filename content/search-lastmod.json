@@ -28,7 +28,7 @@
     "date": "2026-11-20"
   },
   "/areas/melbourne/": {
-    "hash": "d13d4078234c442977aaab704ca8f1125d208c698f49e5653298234b4b80a175",
+    "hash": "faee3e712cc016ea05b776bcb899890064eb05ecd2cb637acf26951ba746c2ea",
     "date": "2026-11-20"
   },
   "/areas/melbourne/north-east/": {
@@ -59,20 +59,68 @@
     "hash": "9d16ef4209b902c9b0c7b20d130ff87abdad3ee54342447873eafbfad4c9a364",
     "date": "2026-11-20"
   },
+  "/insights/commercial-water-ingress/": {
+    "hash": "d1f0f87ebeda71e5fc9d9a053e90af15c4ed44bafe21dc3df131f2e71f5e3e62",
+    "date": "2026-11-20"
+  },
+  "/insights/doors-hardware-latching/": {
+    "hash": "60c52ea75b561275bc0e8db4214562c188fafd5e11d5457f733d29e269987d65",
+    "date": "2026-11-20"
+  },
+  "/insights/external-sign-fixings/": {
+    "hash": "6c673e128047b7a1432869f1536db77ebeccb30a8ece2f1ebcaa39a976290a83",
+    "date": "2026-11-20"
+  },
   "/insights/facade-cleaning/": {
     "hash": "98fc03e7d6979af49590e8c4819f368486b8c4dfdb458923019ad863c1f9fab5",
     "date": "2026-11-20"
   },
+  "/insights/fire-door-latching-and-access/": {
+    "hash": "fce0f0677310777df5f113d3c9a1e932a896dc33954e24981ee93e7d2096a890",
+    "date": "2026-11-20"
+  },
   "/insights/": {
-    "hash": "347dd2b3e489b2c5e476be6fa23f4b7a3f1d72cdd7cab017a0e3f88c10f73551",
+    "hash": "12dc02aaf1b9887a783ec685062fb3797c72a981d00e172bb1b7349bbc3c1eb1",
+    "date": "2026-11-20"
+  },
+  "/insights/irrigation-uneven-coverage/": {
+    "hash": "bb3d019606acc3707c5994493c7d5d9b36d19aaea38967c1ddcb5cc413e1ffec",
+    "date": "2026-11-20"
+  },
+  "/insights/led-flicker-drivers-controls/": {
+    "hash": "9a63802045a0d7fc9512f2008ed58dd3307f193a7cf81c97e543453fd1b4f480",
     "date": "2026-11-20"
   },
   "/insights/maintenance-plan/": {
     "hash": "af06aefb1f262dff8523973614675ae2541b916a52066c31725d97b21f7425b6",
     "date": "2026-11-20"
   },
+  "/insights/partition-head-movement/": {
+    "hash": "d9a7252f7ac303701f40d4d36b733627a6653f6f13e39c3ddcfaa6e8591af9d4",
+    "date": "2026-11-20"
+  },
+  "/insights/recurring-drain-blockages/": {
+    "hash": "2faa97f9a82add74c077a6ef0693df2efd957c5774949a76af2e3ecc0c4d8753",
+    "date": "2026-11-20"
+  },
+  "/insights/recurring-faults-maintenance/": {
+    "hash": "86d9aed43234be2ae8b75a7e9acf9a6f83677a6d2eafa82e91d2126727cbb361",
+    "date": "2026-11-20"
+  },
+  "/insights/resilient-floor-moisture/": {
+    "hash": "64931e0821bad866da41a47b92071b2ddd95a53492ab7c0276b5472de06e2434",
+    "date": "2026-11-20"
+  },
   "/insights/signage-make-good/": {
     "hash": "6164b610d986d5cd9a155bb2790d2f7826725bb79e92b78158fea1fb484aa7b5",
+    "date": "2026-11-20"
+  },
+  "/insights/uneven-hvac-zones/": {
+    "hash": "e83aa139ef6919e0109f19916c823ab615d5d7c9634cb1fab85293c382bdda59",
+    "date": "2026-11-20"
+  },
+  "/insights/window-wall-water-ingress/": {
+    "hash": "6531b667ba909d38be6169fa348a59b5840454e8b38c7f57220d1ce43516f0a9",
     "date": "2026-11-20"
   },
   "/privacy/": {
@@ -116,35 +164,35 @@
     "date": "2026-11-20"
   },
   "/services/building-maintenance/": {
-    "hash": "f28771d8f864bcd104bc12be82c6bbc8d615da3baaad0485627edec8bc4e9885",
+    "hash": "317f0801e96c3226746cbee20a601077cbddc35d3d90c978515e0267368105e6",
     "date": "2026-11-20"
   },
   "/services/car-parks-external-works/": {
-    "hash": "b752ef320588fa1729bdfb568d95586f3a3e0b82289c23df20bfc3263938d4b0",
+    "hash": "aa8fcdecf23b914cdf3a17b25a05da7af898e473a34bd8bb27b0b225b46e033a",
     "date": "2026-11-20"
   },
   "/services/cleaning-waste-hygiene/": {
-    "hash": "2cccdd354d1ac0e55bc65f0ebaa929097ae4913907c0ad6f2a8277931643d57e",
+    "hash": "4aa224a1d79aa006556cf5f5657cb8431596eb536179c178718495e4a1c3af9e",
     "date": "2026-11-20"
   },
   "/services/electrical-lighting/": {
-    "hash": "1f5794348678a28633fb70e51db16ac43cfda01767c9235db8170f44c6ad2228",
+    "hash": "55ecd756c8ba06017fd55f2606f885b436a24a80298743a9a237eb3f4bb745fc",
     "date": "2026-11-20"
   },
   "/services/facade-high-access-cleaning/": {
-    "hash": "307feed15d322d9eba94ea607cd1371cdb6186621f93357e53df2b8f90c4ec2e",
+    "hash": "1f53346276d86cf764764bd2778ac1d69a563f3b97de43b32343d4840a6a36ef",
     "date": "2026-11-20"
   },
   "/services/fire-security-access/": {
-    "hash": "9d9b8fdca62fc0b5f832b73b7ae4c1bece99a0e5f120f303c209ea8e751049d0",
+    "hash": "b0792df319ce446b00290e7aff8258be2892b21758028815968b4665da2fcb4a",
     "date": "2026-11-20"
   },
   "/services/fit-outs-make-good/": {
-    "hash": "ae248811789736dc81d1df6a7ad15d62ca69f80e9600df52c07fc842ccd72ef9",
+    "hash": "297053a5aae05778c3b6f56f4673ee47569c0814df424cd13e48187f93ad627e",
     "date": "2026-11-20"
   },
   "/services/hvac-building-systems/": {
-    "hash": "e23af4c43d15eb5779acfef4289bdcffc0e60719bbcd134e8b87928b8517a1a5",
+    "hash": "c5890a0d545e19904353d5622272e86c070394b03af21ecdf4a6536625a96cfd",
     "date": "2026-11-20"
   },
   "/services/": {
@@ -152,19 +200,19 @@
     "date": "2026-11-18"
   },
   "/services/landscaping-irrigation/": {
-    "hash": "f8de44088f7a34a48df0a14c2452915369ad5c0a33ebed4b5b4c48a36569f6bf",
+    "hash": "3558e2e955197308852f7039365ae9251f57e72004442cbc4769717367272bfb",
     "date": "2026-11-20"
   },
   "/services/plumbing-drainage-gas/": {
-    "hash": "e449a0cebf5e9e45f23f71b3f6e20d8d2dd0e279d12067ef9f03ff9f5e36a185",
+    "hash": "54c673b5a3276747b8b73135e493d3b0ad3e9c73365480ad015e057cb6b10ee6",
     "date": "2026-11-20"
   },
   "/services/roofing-waterproofing/": {
-    "hash": "6f9c47a1c717fefe565e214d9d6d81acec6d6613e7b593fe1fd30213839a49bd",
+    "hash": "94bb597986f6ebb7d075b7f5cb50ab216dd70751125786d24626b2a674cf8499",
     "date": "2026-11-20"
   },
   "/services/signage-wayfinding/": {
-    "hash": "135ad3cffb1334d963151478a6f4580d82f4f78261ee616e8b11f1d5da990006",
+    "hash": "2936fc3324472a97d075b18044f155401b51cf30455bc480f07852fe1afc9d74",
     "date": "2026-11-20"
   }
 }

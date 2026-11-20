@@ -4,6 +4,22 @@
   const form = document.getElementById('contact-enquiry-form');
   if (!form || form.dataset.contactMounted) return;
   form.dataset.contactMounted = 'true';
+  const serviceSlugs=['building-maintenance','roofing-waterproofing','electrical-lighting','plumbing-drainage-gas','hvac-building-systems','fire-security-access','landscaping-irrigation','signage-wayfinding','facade-high-access-cleaning','cleaning-waste-hygiene','car-parks-external-works','fit-outs-make-good'];
+  const requestedService=new URLSearchParams(location.search).get('service');
+  const serviceIndex=serviceSlugs.indexOf(requestedService);
+  const serviceValue=serviceIndex<0?requestedService:String(serviceIndex);
+  const serviceField=form.elements.namedItem('service');
+  if(serviceField instanceof HTMLSelectElement&&!serviceField.value&&[...serviceField.options].some(option=>option.value&&option.value===serviceValue)) serviceField.value=serviceValue;
+  form.dataset.servicePrefillReady='true';
+  if(location.hash==='#contact-enquiry-form'){
+    const revealForm=()=>{
+      const headerHeight=document.querySelector('.site-header')?.getBoundingClientRect().height||0;
+      const formStart=form.closest('.contact-form-card')||form;
+      window.scrollTo({top:Math.max(0,formStart.getBoundingClientRect().top+window.scrollY-headerHeight-16)});
+    };
+    if(document.readyState==='complete') revealForm();
+    else window.addEventListener('load',revealForm,{once:true});
+  }
   // Own validation copy follows the page language rather than the browser UI.
   form.noValidate = true;
   document.getElementById('contact-draft-result')?.remove();
