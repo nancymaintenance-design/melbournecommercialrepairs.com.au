@@ -5,6 +5,8 @@ const {parse} = require('parse5');
 const {articles,categories} = require('../content/technical-notes.cjs');
 const {serviceSlugs,articleSlugs} = require('../content/site-data.cjs');
 const {canonicalUrl,origin} = require('../content/search-config.cjs');
+const {routes} = require('../vercel.json');
+const localeRoute = new RegExp(routes.find(route=>route.dest==='/_ellisl10n/$1/index.html').src);
 
 const root = path.resolve(__dirname,'..');
 const read = file => fs.readFileSync(path.join(root,file),'utf8');
@@ -21,8 +23,10 @@ function page(route,lang) {
 const urls = nodes => nodes.filter(node=>node.tagName==='a').map(node=>attribute(node,'href'));
 const sitemap = [...read('sitemap.xml').matchAll(/<loc>([^<]+)<\/loc>/g)].map(([,url])=>url);
 assert.equal(new Set(sitemap).size,sitemap.length,'Sitemap URL uniqueness');
-assert.equal(articles.length,12);
-assert.equal(new Set(articles.map(article=>article.category)).size,Object.keys(categories).length);
+assert.equal(articles.length,24);
+for (const category of Object.keys(categories)) {
+ assert.equal(articles.filter(article=>article.category===category).length,2,category+' technical notes');
+}
 assert.equal(new Set(articles.map(article=>article.slug)).size,articles.length);
 const bySlug = new Map(articles.map(article=>[article.slug,article]));
 
@@ -30,10 +34,11 @@ for (const lang of ['zh','en']) {
  const library = page('/insights/',lang);
  assert.equal(library.filter(node=>node.tagName==='h1').length,1);
  assert.equal(library.filter(node=>node.tagName==='button'&&attribute(node,'data-tn-filter')).length,13);
- assert.equal(library.filter(node=>attribute(node,'data-tn-category')).length,12);
+ assert.equal(library.filter(node=>attribute(node,'data-tn-category')).length,articles.length);
  assert.equal(library.filter(node=>hasClass(node,'tn-feature')).length,1);
  for (const article of articles) {
   const {route} = article;
+  assert(localeRoute.test(route),route+' served as English HTML by Vercel');
   const local = base => lang==='en'?base+'?lang=en':base;
   assert(urls(library).includes(local(route)),route+' discoverable in initial HTML');
   const nodes = page(route,lang);
@@ -76,9 +81,12 @@ for (const lang of ['zh','en']) {
  for(const slug of serviceSlugs){
   const service=page('/services/'+slug+'/',lang);
   const section=service.find(node=>hasClass(node,'tn-service-notes'));
-  const count=urls([...tree(section)]).length;
-  assert(count>=1&&count<=2,slug+' one or two articles');
+  const required = articles.filter(article=>article.primary===slug || article.secondary===slug);
+  const destinations = urls([...tree(section)]);
+  assert.equal(destinations.length,required.length,slug+' article link count');
+  for (const article of required) assert(destinations.includes(article.route+(lang==='en'?'?lang=en':'')));
+  assert(required.length,slug+' has articles');
  }
  for(const slug of articleSlugs) assert(page('/insights/'+slug+'/',lang).some(node=>node.tagName==='h1'),slug+' legacy article preserved');
 }
-console.log('Technical notes: 12 articles, 13 filters, 24 prerendered locale pages, 12 reciprocal service routes, preserved legacy pages and no article external links.');
+console.log('Technical notes: 24 articles, 13 filters, 48 prerendered locale pages, reciprocal service links, preserved legacy pages and no article external links.');

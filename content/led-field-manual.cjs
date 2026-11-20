@@ -28,7 +28,7 @@ const assets = '<link rel="stylesheet" href="/led-field-manual.css"><script src=
 
 function detail(article, ui) {
  const {text,paragraphs,label,link,image,h1,brand,publisher,esc,copy,serviceName,serviceArt,category,related}=ui;
- const topic = topicVisuals[article.slug];
+ const topic = article.visuals || topicVisuals[article.slug];
  const diagnosis = topic ? topic.scenes.map(([action,src],index)=>({key:'case-'+(index+1),action,src})) : ledDiagnosis;
  const initial = topic ? 0 : 1;
  const pageTitle = topic?.titleAccent
@@ -46,7 +46,9 @@ function detail(article, ui) {
 
  function title(index) {
   const [id,,words]=steps[index];
-  const heading = topic && id==='evidence' ? ['先看现象，再核对证据','Start with the symptoms, then check the evidence'] : words;
+  const heading = topic && id==='evidence'
+   ? topic.panel || ['先看现象，再核对证据','Start with the symptoms, then check the evidence']
+   : words;
   return `<h2 id="tn-h-${id}" class="led-chapter-title"><span class="led-chapter-number" aria-hidden="true">${icons[index]}</span>${text('span',heading)}</h2>`;
  }
  function chapter(index,content) {

@@ -191,11 +191,15 @@ const articles = [
  ...require('./technical-notes-practice.cjs')
 ];
 
+for (const article of articles) article.publishedOn = '2026-11-20';
+const secondSeries = require('./technical-notes-series-two.cjs');
+for (const article of secondSeries) article.publishedOn = '2026-11-20';
+articles.push(...secondSeries);
+
 for (const article of articles) {
- const [, , primary] = categories[article.category];
+ const primary = article.primary || categories[article.category][2];
  article.primary = primary;
  article.route = '/insights/' + article.slug + '/';
- article.publishedOn = '2026-11-20';
  if (!serviceSlugs.includes(primary) || (article.secondary && !serviceSlugs.includes(article.secondary))) {
   throw new Error('Unknown service on ' + article.slug);
  }
