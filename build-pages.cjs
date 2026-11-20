@@ -74,7 +74,7 @@ for(const article of technicalNotes.articles){
  const [descriptionZh,descriptionEn]=article.summary;
  const schema=JSON.stringify(technicalNotes.schema(article)).replaceAll('<','\\u003c');
  page(article.route.slice(1,-1),zh,en,technicalNotes.detail(article),'',{
-  technical:true,descriptionZh,descriptionEn,extraHead:'<script type="application/ld+json">'+schema+'</script>'
+  technical:true,descriptionZh,descriptionEn,extraHead:'<script type="application/ld+json">'+schema+'</script>'+technicalNotes.detailAssets
  });
 }
 page('areas/melbourne','墨尔本服务地区','Service area: Melbourne','');

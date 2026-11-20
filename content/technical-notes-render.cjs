@@ -2,6 +2,7 @@ const {articles,categories,serviceArt} = require('./technical-notes.cjs');
 const {services,serviceSlugs} = require('./site-data.cjs');
 const {origin} = require('./search-config.cjs');
 const {name:publisher} = require('../business.json');
+const fieldManual = require('./led-field-manual.cjs');
 
 const esc = value => String(value).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('"','&quot;');
 const flat = value => value.replaceAll('\n',' ');
@@ -19,7 +20,6 @@ const serviceName = slug => {
  const i = serviceSlugs.indexOf(slug);
  return [services[i].zh,services[i].en];
 };
-const serviceUrl = slug => '/services/' + slug + '/';
 const filters = {
  all:['全部','All'], building:['建筑日修','Building repairs'], envelope:['屋顶防水','Roofing & waterproofing'],
  electrical:['电气照明','Electrical & lighting'], plumbing:['水管排水','Plumbing & drainage'], hvac:['空调设备','HVAC & plant'],
@@ -41,11 +41,11 @@ function card(article, featured=false) {
  </article>`;
 }
 
-function ending(article) {
+function libraryEnding() {
  return `<div class="tn-ending"><div class="tn-wrap"><div class="tn-end-card">
-  <div>${text('h2',article?['继续查阅相关技术主题','Keep exploring technical topics']:['从技术问题，\n找到对应服务范围。','From a technical fault\nto the right service.'])}
-  <div class="tn-end-links">${link(article?'/insights/':'/services/',article?['返回文章目录','Back to article library']:['查看全部服务','Explore all services'],'tn-button',article?'↑':'↗')}
-  ${link(article?serviceUrl(article.primary):'#technical-library',article?['查看服务范围','View service scope']:['返回文章目录','Back to article library'],'tn-text-link',article?'→':'↑')}</div></div>
+  <div>${text('h2',['从技术问题，\n找到对应服务范围。','From a technical fault\nto the right service.'])}
+  <div class="tn-end-links">${link('/services/',['查看全部服务','Explore all services'],'tn-button')}
+  ${link('#technical-library',['返回文章目录','Back to article library'],'tn-text-link','↑')}</div></div>
   <span class="tn-end-arrow" aria-hidden="true"></span>
  </div></div></div>`;
 }
@@ -84,67 +84,15 @@ function library() {
      <span class="tn-services-art" aria-hidden="true">${['hero-building-maintenance','specialist-roofing-waterproofing','specialist-hvac-wide-v2','hero-electrical-lighting'].map(src=>image(serviceArt(src))).join('')}</span>
     </a>
    </section>
-  </div>${ending()}
+  </div>${libraryEnding()}
  </div>`;
 }
 
-const chapters = [
- ['mechanism','从现象追溯成因','Fault mechanism','故障机理','Mechanism'],
- ['evidence','现象与诊断依据','Observation and diagnostic evidence','诊断证据','Evidence'],
- ['methods','维修方法与适用条件','Repair options and suitability','方法选择','Repair options'],
- ['verification','验收与记录','Verification and records','验收记录','Verification'],
- ['questions','技术问答','Technical questions','技术问答','Questions']
-];
-function chapter(index,body) {
- const [id,zh,en] = chapters[index];
- return `<section class="tn-chapter" id="tn-${id}" aria-labelledby="tn-h-${id}"><h2 id="tn-h-${id}" class="tn-section-heading"><span class="tn-number" aria-hidden="true">0${index+1} /</span>${text('span',[zh,en])}</h2><div class="tn-chapter-body">${body}</div></section>`;
-}
-function linkedService(slug, colour, picture) {
- return `<a class="tn-linked-service tn-colour-${colour}" href="${serviceUrl(slug)}" data-local-page>
-  ${image(picture || serviceArt('hero-'+slug))}<span>${text('strong',serviceName(slug))}${arrow()}</span></a>`;
-}
 function detail(article) {
- const relatedNote = articleBySlug[article.related[0]];
- const dateText = article.publishedOn && ['zh-CN','en-AU'].map(locale=>
-  new Intl.DateTimeFormat(locale,{dateStyle:'long',timeZone:'UTC'}).format(new Date(article.publishedOn)));
- const date = article.publishedOn
-  ? `<time class="tn-date" datetime="${article.publishedOn}" ${copy(dateText)}>${esc(dateText[0])}</time>`
-  : text('span',['待发布','Awaiting publication'],'tn-date');
- const intro = `<section class="tn-summary" aria-labelledby="tn-summary-title"><div class="tn-summary-copy"><h2 id="tn-summary-title" class="tn-section-heading">${text('span',['摘要','Summary'])}</h2>
-  ${text('p',article.summary)}<ul class="tn-keywords">${article.keywords.map(key=>text('li',key)).join('')}</ul>
-  <p class="tn-byline"><b>${esc(publisher)}</b> · ${text('span',['技术综述','Technical review'])}</p></div><div class="tn-summary-art" aria-hidden="true">${image(article.image)}</div></section>`;
- const evidence = `<div class="tn-table"><table><thead><tr>${[['观察现象','Observation'],['待区分机理','Possible mechanism'],['核对证据','What to check']].map(name=>`<th scope="col" ${copy(name)}>${esc(name[0])}</th>`).join('')}</tr></thead><tbody>
- ${article.evidence.map(([finding,cause,check])=>`<tr><th scope="row" ${copy(finding)}>${esc(finding[0])}</th>${text('td',cause)}${text('td',check)}</tr>`).join('')}</tbody></table></div>`;
- const options = `<dl class="tn-method-list">${article.methods.map(([name,desc])=>`<div>${text('dt',name)}${text('dd',desc)}</div>`).join('')}</dl>`;
- const questions = `<dl class="tn-question-list">${article.faq.map(([question,answer])=>`<div>${text('dt',question)}${text('dd',answer)}</div>`).join('')}</dl>`;
- const nav = `<aside class="tn-toc"><nav aria-labelledby="tn-contents-heading"><h2 id="tn-contents-heading">${text('span',['本文目录','On this page'])}</h2><ol>
- ${chapters.map(([id,,,zh,en])=>`<li>${link('#tn-'+id,[zh,en],'','')}</li>`).join('')}</ol></nav></aside>`;
- const related = `<section class="tn-related" aria-labelledby="tn-related-title"><h2 class="tn-section-heading" id="tn-related-title">${text('span',['相关技术主题与服务','Related technical notes and services'])}</h2>
-  <div class="tn-related-grid">${article.related.map((slug,i)=>{
-   const next=articleBySlug[slug];
-   return `<article class="tn-related-card tn-colour-${i?'pink':'blue'}">${image(next.image)}<div>${text('h3',next.title)}${link(next.route,['继续阅读','Keep reading'],'tn-button')}</div></article>`;
-  }).join('')}
-  ${linkedService(article.primary,'lime')}${article.secondary?'\n  '+linkedService(article.secondary,'orange',article.slug==='window-wall-water-ingress'?'/assets/region-reference-v3/detail-door.webp':null):''}
-  </div></section>`;
- return `<article class="tn tn-detail">
-  <header class="tn-hero tn-article-hero" aria-labelledby="tn-article-title">
-   <div class="tn-wrap tn-hero-grid"><div class="tn-hero-copy">
-   <nav class="tn-crumb" ${label('当前位置','Breadcrumb')}>${link('/',['首页','Home'],'','')}<span aria-hidden="true">/</span>${link('/insights/',['技术文章','Technical notes'],'','')}<span aria-hidden="true">/</span>${text('span',filters[article.category])}</nav>
-   ${brand}${h1(article.title,'tn-article-title')}${text('p',article.summary,'tn-lead')}
-   <div class="tn-meta">${text('span',categories[article.category].slice(0,2),'tn-tag')}${date}</div>
-   </div><figure class="tn-hero-art" data-tn-parallax>${image(article.image,true,article.heroAlt)}</figure></div>
-  </header>
-  <div class="tn-reading-stage"><div class="tn-wrap tn-reading"><div class="tn-main-copy">
-   ${intro}
-   ${chapter(0,paragraphs(article.mechanism)+`<ul class="tn-mechanism-tags">${article.keywords.map(key=>text('li',key)).join('')}</ul>
-   <p class="tn-context-link">${text('span',['延伸阅读','Further reading'])} ${link(relatedNote.route,relatedNote.title.map(flat),'tn-text-link')}</p>`)}
-   ${chapter(1,evidence+`<div class="tn-diagnostic-note">${text('h3',article.judgement.heading)}${paragraphs(article.judgement.body)}</div>`)}
-   ${chapter(2,options)}
-   ${chapter(3,paragraphs(article.verification)+`<p class="tn-context-link">${text('span',['对应服务','Related service'])} ${link(serviceUrl(article.primary),serviceName(article.primary),'tn-text-link')}</p>`)}
-   ${chapter(4,questions)}
-  </div>${nav}</div></div>
-  <div class="tn-wrap">${related}</div>${ending(article)}
- </article>`;
+ return fieldManual.detail(article,{
+  text,paragraphs,label,link,image,h1,brand,publisher,esc,copy,serviceName,serviceArt,
+  category:filters[article.category],related:article.related.map(slug=>articleBySlug[slug])
+ });
 }
 
 function serviceNotes(slug) {
@@ -162,4 +110,4 @@ function schema(article) {
   ...(article.publishedOn?{datePublished:article.publishedOn}:{})};
 }
 const assets='<link rel="stylesheet" href="/technical-notes.css"><script src="/technical-notes.js" defer></script>';
-module.exports = {articles,library,detail,serviceNotes,schema,assets};
+module.exports = {articles,library,detail,detailAssets:fieldManual.assets,serviceNotes,schema,assets};
