@@ -65,7 +65,7 @@ page('sectors','我们服务的商业物业','Commercial properties we maintain'
 page('about','关于 Ellis Services Group','About Ellis Services Group','');
 data.articles.forEach((x,i)=>page('insights/'+articleSlugs[i],x.zh,x.en,x.bodyZh.map(([h,t],j)=>dual('h2',h,x.bodyEn[j][0])+dual('p',t,x.bodyEn[j][1])).join(''),dual('h2','从资讯到具体服务','Explore related services')+cards([data.services[x.icon],data.services[0]],'services',[serviceSlugs[x.icon],serviceSlugs[0]])));
 page('insights','墨尔本商业维护技术研究与实务','Melbourne commercial maintenance research and practice',technicalNotes.library(),'',{
- technical:true,titleEn:'Melbourne Commercial Maintenance Technical Notes | Ellis Services Group',
+ technical:true,extraHead:'<link rel="stylesheet" href="/technical-stage.css"><script src="/technical-stage.js" defer></script>',titleEn:'Melbourne Commercial Maintenance Technical Notes | Ellis Services Group',
  descriptionZh:`查阅 ${technicalNotes.articles.length} 篇墨尔本商业物业维护技术综述，了解故障机理、诊断证据、维修方法和验收记录。`,
  descriptionEn:`Explore ${technicalNotes.articles.length} technical reviews of commercial maintenance: fault mechanisms, evidence, repair options and verification for Melbourne properties.`
 });
