@@ -1,0 +1,395 @@
+.sector-flow {
+  --sector-blue: #201bff;
+  --sector-lime: #ddff00;
+  --sector-orange: #ff5c00;
+  --sector-pink: #f52cb8;
+  --sector-cream: #faf8f0;
+  --sector-ink: #111629;
+  --sector-gutter: clamp(24px, 4.4vw, 72px);
+  --sector-anchor-offset: 80px;
+  position: relative;
+  margin: 0 -4.82456%;
+  background: var(--sector-cream);
+  color: var(--sector-ink);
+}
+
+.sector-flow .sector-flow-nav {
+  position: sticky;
+  top: calc(var(--nav-height, 78px) + 8px);
+  z-index: 15;
+  display: flex;
+  gap: 5px;
+  width: min(calc(100% - var(--sector-gutter) * 2), 1510px);
+  margin: 0 auto clamp(25px, 4vw, 56px);
+  padding: 7px;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scrollbar-width: thin;
+  border: 1px solid #1116291c;
+  border-radius: 30px;
+  background: var(--sector-cream);
+  box-shadow: 0 6px 18px #11162919;
+}
+.sector-flow .sector-flow-nav a {
+  position: relative;
+  flex: 1 0 0;
+  display: flex;
+  align-items: center;
+  gap: .6em;
+  min-height: 48px;
+  min-width: max-content;
+  padding: 8px clamp(9px, 1.1vw, 18px);
+  color: var(--sector-blue);
+  border-radius: 22px;
+  text-decoration: none;
+  font-size: clamp(14px, 1.1vw, 17px);
+  line-height: 1.24;
+  font-weight: 820;
+  overflow-wrap: anywhere;
+}
+.sector-flow .sector-flow-nav a:not(:first-child)::before {
+  content: "";
+  position: absolute;
+  inset: 26% auto 26% -3px;
+  width: 1px;
+  background: #1116294a;
+}
+.sector-flow .sector-flow-nav-number {font-size: 1.25em; font-weight: 950;}
+.sector-flow .sector-flow-nav a:hover {background: #201bff0d;}
+.sector-flow .sector-flow-nav a[aria-current="location"] {background: var(--sector-lime); color: var(--sector-ink);}
+.sector-flow .sector-flow-nav a[aria-current="location"] .sector-flow-nav-number {text-decoration: underline; text-underline-offset: .16em;}
+.sector-flow :is(a, button):focus-visible {outline: 3px dashed currentColor; outline-offset: 4px;}
+.sector-flow .sector-flow-nav a:focus-visible {outline-offset: -4px;}
+.sector-flow .sector-flow-chapter {
+  position: relative;
+  isolation: isolate;
+  scroll-margin-top: var(--sector-anchor-offset);
+}
+.sector-flow .sector-flow-chapter:focus {outline: none;}
+.sector-flow .sector-flow-wrap {
+  width: min(calc(100% - var(--sector-gutter) * 2), 1510px);
+  margin-inline: auto;
+  display: grid;
+  gap: clamp(18px, 2.5vw, 39px);
+  align-items: center;
+  padding-block: clamp(30px, 5vw, 72px);
+}
+.sector-flow .sector-flow-title {grid-area: title; min-width: 0;}
+.designer-detail .sector-flow .sector-flow-title h2 {
+  position: relative;
+  z-index: 1;
+  color: inherit;
+  margin: 0;
+  font-size: clamp(2.25rem, 4.35vw, 4.5rem);
+  line-height: 1.06;
+  font-weight: 940;
+  letter-spacing: -.045em;
+  overflow-wrap: anywhere;
+  text-wrap: balance;
+}
+.sector-flow .sector-flow-number {
+  display: block;
+  width: fit-content;
+  font-size: clamp(5rem, 12vw, 12.5rem);
+  font-weight: 950;
+  line-height: .74;
+  letter-spacing: -.075em;
+  font-variant-numeric: tabular-nums;
+}
+.sector-flow .sector-flow-copy {grid-area: copy; min-width: 0;}
+.designer-detail .sector-flow .sector-flow-copy p {
+  color: inherit;
+  font-size: clamp(1.04rem, 1.43vw, 1.34rem);
+  line-height: 1.65;
+  margin: 0;
+}
+.designer-detail .sector-flow .scope-subsection {margin-top: 20px; padding-top: 16px; border-top: 1px solid currentColor;}
+.designer-detail .sector-flow .scope-subsection h3 {color: inherit; font-size: clamp(1.1rem, 2vw, 1.6rem); margin: 0 0 8px;}
+.sector-flow .sector-flow-scene {grid-area: scene; position: relative; min-width: 0; margin: 0;}
+.sector-flow .sector-flow-scene-inner {position: relative; isolation: isolate; aspect-ratio: 1.65; border-radius: 26px; overflow: clip;}
+.sector-flow .sector-flow-scene-inner > img {display: block; width: 100%; height: 100%; max-width: none; object-fit: cover; border-radius: inherit;}
+.sector-flow .sector-flow-scene figcaption {position: relative; margin: 8px 0 0; font-size: .84rem; font-weight: 760;}
+.sector-flow .sector-flow-links {
+  grid-area: links;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.sector-flow .sector-flow-links a {
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 6px 12px;
+  color: inherit;
+  font-size: clamp(1.09rem, 1.86vw, 1.62rem);
+  line-height: 1.25;
+  text-wrap: balance;
+  text-align: center;
+  font-weight: 880;
+  text-decoration-line: underline;
+  text-decoration-color: var(--sector-lime);
+  text-decoration-thickness: .2em;
+  text-underline-offset: .26em;
+  transition: translate .2s ease;
+}
+.sector-flow .sector-flow-links a + a {border-inline-start: 1px solid currentColor;}
+.sector-flow .sector-flow-links a:hover {translate: 0 -3px;}
+.sector-flow .sector-flow-chapter-1 .sector-flow-wrap {
+  grid-template: "title scene" auto "copy scene" auto "links links" auto / minmax(0, 1fr) minmax(0, 1.7fr);
+  align-items: end;
+  padding-top: 0;
+}
+.sector-flow .sector-flow-chapter-1 .sector-flow-copy {align-self: start;}
+.sector-flow .sector-flow-chapter-1 .sector-flow-number {
+  color: var(--sector-blue); margin-bottom: clamp(22px, 3vw, 45px);
+  padding-bottom: .12em; border-bottom: .065em solid var(--sector-pink);
+}
+.sector-flow .sector-flow-chapter-1 .sector-flow-scene {align-self: center; padding: 18px 0 12px;}
+.sector-flow .sector-flow-chapter-1 .sector-flow-scene::before {
+  content: ""; position: absolute; z-index: -1; inset: 7% -2% 2% -1%;
+  background: var(--sector-lime); border-radius: 25% 9% 12% 14%; transform: rotate(-4deg) skewX(-7deg);
+}
+.sector-flow .sector-flow-chapter-1 .sector-flow-scene figcaption {text-align: end; padding-inline: 16px;}
+.sector-flow .sector-flow-chapter-1 .sector-flow-links {color: var(--sector-blue);}
+.sector-flow-education .sector-flow-chapter-1 .sector-flow-scene-inner {aspect-ratio: 4 / 3; overflow: visible; border-radius: 0;}
+.sector-flow-education .sector-flow-chapter-1 .sector-flow-scene-inner > img {
+  object-fit: contain;
+  filter: drop-shadow(0 6px 0 var(--sector-pink));
+}
+
+.sector-flow .sector-flow-chapter-2 {background: var(--sector-blue); color: var(--sector-cream);}
+.sector-flow .sector-flow-chapter-2::before {
+  content: ""; position: absolute; z-index: -1; inset: 0 0 auto;
+  height: clamp(25px, 7.5vw, 115px); background: var(--sector-orange);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 34%, 0 55%);
+}
+.sector-flow .sector-flow-chapter-2 .sector-flow-wrap {
+  grid-template: "title title" auto "scene copy" auto "links links" auto / minmax(0, 2.35fr) minmax(0, 1fr);
+  padding-top: clamp(50px, 6.5vw, 96px);
+}
+.sector-flow .sector-flow-chapter-2 .sector-flow-number {font-size: clamp(4.5rem, 8.5vw, 9.6rem); margin-bottom: 14px;}
+.sector-flow .sector-flow-chapter-2 .sector-flow-title h2::after,
+.sector-flow .sector-flow-chapter-3 .sector-flow-title h2::after {
+  content: ""; display: block; margin-top: 14px; width: 2.3em; height: .12em;
+  border-radius: 999px; background: var(--sector-lime);
+}
+.sector-flow .sector-flow-chapter-2 .sector-flow-copy {
+  align-self: start; border-inline-start: 5px solid var(--sector-lime); padding-inline-start: 22px;
+}
+.sector-flow .sector-flow-chapter-2 .sector-flow-scene-inner {aspect-ratio: 1.96; border-radius: 0 25px 25px 0;}
+.sector-flow .sector-flow-chapter-2 .sector-flow-scene {
+  margin-inline-start: calc(0px - var(--sector-gutter));
+}
+.sector-flow .sector-flow-chapter-2 .sector-flow-scene figcaption {padding-inline-start: var(--sector-gutter);}
+
+.sector-flow .sector-flow-chapter-3 {background: var(--sector-orange);}
+.sector-flow .sector-flow-chapter-3::before {
+  content: ""; position: absolute; z-index: -1; inset: 0 0 auto;
+  height: clamp(22px, 5vw, 80px); background: var(--sector-blue);
+  clip-path: polygon(0 0, 100% 0, 81% 43%, 57% 100%, 0 25%);
+}
+.sector-flow .sector-flow-chapter-3 .sector-flow-wrap {
+  position: relative;
+  grid-template: "title title" auto "copy scene" auto "links links" auto / minmax(0, 1fr) minmax(0, 1.28fr);
+  padding-top: clamp(56px, 8vw, 126px);
+}
+.sector-flow .sector-flow-chapter-3 .sector-flow-number {
+  position: absolute; right: 0; top: .29em; z-index: -1;
+  font-size: clamp(6rem, 16vw, 16rem); opacity: .23;
+}
+.sector-flow .sector-flow-chapter-3 .sector-flow-title h2 {max-width: 20ch; text-wrap: initial;}
+.sector-flow .sector-flow-chapter-3 .sector-flow-scene::before {
+  content: ""; position: absolute; z-index: -1; inset: 0 -1% 9% -2%;
+  background: var(--sector-blue); border-radius: 25px; transform: rotate(-4deg);
+}
+.sector-flow .sector-flow-chapter-3 .sector-flow-scene-inner {border-radius: 12px 38px 25px 5px;}
+.sector-flow-education .sector-flow-chapter-3 .sector-flow-wrap {
+  grid-template: "title timeline" auto "copy timeline" auto "scene timeline" 1fr / minmax(0, 1.42fr) minmax(0, 1fr);
+  padding-top: clamp(65px, 8vw, 128px);
+  align-items: start;
+}
+.sector-flow-education .sector-flow-chapter-3 .sector-flow-number {
+  opacity: 1; z-index: 0; top: .25em; right: -.08em; font-size: clamp(6rem, 19vw, 19rem);
+}
+.designer-detail .sector-flow-education .sector-flow-chapter-3 .sector-flow-title h2 {text-wrap: balance;}
+.sector-flow-education .sector-flow-chapter-3 .sector-flow-scene {margin-inline-start: calc(0px - var(--sector-gutter));}
+.sector-flow-education .sector-flow-chapter-3 .sector-flow-scene figcaption {padding-inline-start: var(--sector-gutter);}
+.sector-flow-education .sector-flow-chapter-3 .sector-flow-scene-inner {aspect-ratio: 1.38;}
+.sector-flow .sector-flow-timeline {
+  grid-area: timeline; isolation: isolate; position: relative; align-self: stretch;
+  margin-top: clamp(58px, 10vw, 145px);
+  display: flex; flex-direction: column; justify-content: center;
+  padding: clamp(28px, 4vw, 62px) clamp(23px, 3vw, 45px);
+}
+.sector-flow .sector-flow-timeline::before {
+  content: ""; position: absolute; z-index: -1; inset: 0 -6% 0 -4%;
+  background: var(--sector-cream); border-radius: 32px; transform: skewX(-7deg) rotate(-4deg);
+}
+.sector-flow .sector-flow-timeline ol {
+  position: relative; list-style: none; margin: 0 0 18px; padding: 0 0 0 28px;
+}
+.sector-flow .sector-flow-timeline ol::before {content: ""; position: absolute; top: 10%; bottom: 12%; left: 5px; width: 3px; background: var(--sector-blue);}
+.sector-flow .sector-flow-timeline li {
+  position: relative; display: grid; grid-template: "number art" auto "step art" auto / minmax(0, 1fr) auto;
+  align-items: center; padding-block: 12px 20px; min-width: 0; gap: 0 12px;
+}
+.sector-flow .sector-flow-timeline li::before {
+  content: ""; position: absolute; top: 35%; left: -30px; width: 13px; height: 13px;
+  background: var(--sector-cream); border: 3px solid var(--sector-blue); border-radius: 50%;
+  transition: box-shadow .26s, background .26s;
+}
+.sector-flow .sector-flow-timeline li.is-in-view::before {background: var(--sector-lime); box-shadow: 0 0 0 4px #ddff0059;}
+.sector-flow .sector-flow-step-number {grid-area: number; font-size: clamp(1.05rem, 2vw, 1.75rem); font-weight: 950; color: var(--sector-blue);}
+.sector-flow .sector-flow-timeline strong {grid-area: step; font-size: clamp(1.1rem, 2.05vw, 1.85rem); line-height: 1.15;}
+.sector-flow .sector-flow-step-art {
+  grid-area: art; width: clamp(65px, 9vw, 138px); aspect-ratio: 1;
+  background: url('/assets/sector-detail/school-workflow.webp') var(--prop-position) 50% / 400% auto no-repeat;
+  filter: drop-shadow(0 4px 4px #11162930);
+}
+.sector-flow .sector-flow-timeline .sector-flow-links a {justify-content: start; padding-inline: 0; text-align: start;}
+
+.sector-flow .sector-flow-chapter-4 .sector-flow-wrap {
+  grid-template: "title title" auto "scene copy" auto "links links" auto / minmax(0, 1.92fr) minmax(0, 1fr);
+  column-gap: 0;
+}
+.sector-flow-education .sector-flow-chapter-4 .sector-flow-wrap {
+  grid-template-areas: "title title" "scene copy";
+  grid-template-rows: auto auto;
+  padding-bottom: 0;
+}
+.sector-flow .sector-flow-chapter-4 .sector-flow-title {display: flex; align-items: center; gap: clamp(18px, 3vw, 45px);}
+.sector-flow .sector-flow-chapter-4 .sector-flow-number {color: var(--sector-pink); font-size: clamp(4.25rem, 10vw, 10rem);}
+.sector-flow .sector-flow-chapter-4 .sector-flow-title h2 {padding-inline-start: .52em; border-inline-start: .13em solid var(--sector-lime); text-wrap: initial; max-width: 22ch;}
+.sector-flow .sector-flow-chapter-4 .sector-flow-scene {
+  margin-inline-start: calc(0px - var(--sector-gutter)); align-self: stretch;
+  display: grid; grid-template-rows: minmax(0, 1fr) auto;
+}
+.sector-flow .sector-flow-chapter-4 .sector-flow-scene-inner {aspect-ratio: auto; min-height: clamp(340px, 39vw, 585px); border-radius: 0 0 26px 0;}
+.sector-flow .sector-flow-chapter-4 .sector-flow-scene-inner > img {scale: 1.035; translate: 0 var(--scene-shift, 0px);}
+.sector-flow .sector-flow-chapter-4 .sector-flow-scene figcaption {
+  position: absolute; inset: auto auto 15px var(--sector-gutter);
+  margin: 0; padding: 4px 9px; border-radius: 5px; background: var(--sector-ink); color: var(--sector-cream);
+}
+.sector-flow .sector-flow-chapter-4 .sector-flow-copy {
+  position: relative; z-index: 1; align-self: stretch; align-content: center; margin-inline-start: -4%;
+  padding: clamp(25px, 4.1vw, 65px) clamp(22px, 3.2vw, 52px) clamp(25px, 4.5vw, 70px) clamp(24px, 4.7vw, 74px);
+  background: var(--sector-pink); border-radius: 33% 0 0 0 / 17% 0 0 0;
+}
+.sector-flow .sector-flow-chapter-4 .sector-flow-copy::before {
+  content: ""; position: absolute; inset: 0 calc(0px - var(--sector-gutter)) 0 auto; z-index: -1;
+  width: var(--sector-gutter); background: inherit;
+}
+.sector-flow .sector-flow-calendar {
+  display: flex; margin-top: clamp(26px, 4vw, 54px); align-items: center; gap: 14px;
+  font-size: clamp(1.13rem, 2.2vw, 1.86rem); line-height: 1.16;
+}
+.sector-flow .sector-flow-calendar strong {border-inline-start: 5px solid var(--sector-lime); padding-inline-start: 12px;}
+.sector-flow .sector-flow-calendar svg {flex: 0 0 52px; width: 52px; height: 52px; fill: none; stroke: currentColor; stroke-width: 3; stroke-linecap: round;}
+.sector-flow .sector-flow-faq {
+  display: flex; align-items: center; gap: .5em; min-height: 64px; justify-content: start;
+  padding: 18px var(--sector-gutter);
+  background: var(--sector-blue); color: var(--sector-cream);
+  font-size: clamp(1.55rem, 3vw, 2.75rem); line-height: 1.15; font-weight: 900; text-decoration: none;
+}
+.sector-flow-education .sector-flow-faq {
+  position: relative;
+  margin-top: -12px;
+  clip-path: polygon(0 12px, 100% 0, 100% 100%, 0 100%);
+  padding-top: 25px;
+}
+.sector-flow .sector-flow-faq span:last-child {color: var(--sector-lime); transition: translate .2s;}
+.sector-flow .sector-flow-faq:hover span:last-child {translate: 0 4px;}
+.sector-flow .sector-flow-faq:focus-visible {outline-offset: -6px;}
+
+.sector-flow .sector-flow-markup {position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; overflow: visible;}
+.sector-flow .sector-flow-pin line {stroke: var(--sector-lime); stroke-width: 3;}
+.sector-flow .sector-flow-pin circle {fill: var(--sector-lime); stroke: var(--sector-cream); stroke-width: .25;}
+.sector-flow .sector-flow-pin.is-selected line {stroke: white; stroke-width: 5;}
+.sector-flow .sector-flow-route {fill: none; stroke: var(--sector-lime); stroke-width: 2.7; stroke-linecap: round; stroke-linejoin: round; opacity: .88;}
+.sector-flow .sector-flow-hotspot {
+  position: absolute; inset: var(--y) auto auto var(--x); translate: -50% -50%;
+  display: grid; place-items: center; min-height: 34px; max-width: 40%; padding: 4px 13px;
+  border: 1px solid #11162926; border-radius: 99px; background: var(--sector-cream); color: var(--sector-ink);
+  box-shadow: 0 4px 6px #11162940;
+  font-family: inherit;
+  line-height: 1.05;
+  font-size: clamp(.79rem, 1.24vw, 1.06rem); font-weight: 850;
+  cursor: pointer;
+}
+.sector-flow .sector-flow-hotspot[aria-expanded="true"] {background: var(--sector-lime); border-color: var(--sector-ink);}
+.sector-flow .sector-flow-hotspot:focus-visible {outline: 3px solid var(--sector-blue); box-shadow: 0 0 0 7px var(--sector-cream);}
+.designer-detail .sector-flow .sector-flow-note {
+  margin: 10px 0 0; padding: 10px 16px;
+  background: var(--sector-cream); color: var(--sector-ink);
+  font-size: 1rem; border-left: 4px solid var(--sector-lime); border-radius: 0 8px 8px 0;
+}
+.sector-flow .sector-flow-hotspot:disabled {cursor: default; opacity: 1;}
+@media (prefers-reduced-motion: no-preference) {
+  .sector-flow .sector-flow-chapter.is-in-view [data-flow-art] .sector-flow-scene-inner {
+    animation: sector-scene-in .62s cubic-bezier(.2,.7,.3,1) both;
+  }
+  .sector-flow .sector-flow-chapter.is-in-view .sector-flow-hotspot,
+  .sector-flow .sector-flow-chapter.is-in-view .sector-flow-pin {
+    animation: sector-pin-in .38s ease both;
+    animation-delay: calc(.15s + var(--pin-order) * .085s);
+  }
+  .sector-flow .sector-flow-chapter.is-in-view .sector-flow-route {
+    stroke-dasharray: 1;
+    animation: sector-route-in .85s ease-out both;
+  }
+  .sector-flow .sector-flow-chapter-4.is-in-view .sector-flow-copy {animation: sector-panel-in .48s .12s ease-out both;}
+}
+@keyframes sector-scene-in {from {transform: translateY(15px) scale(.982); opacity: .8;} to {transform: none; opacity: 1;}}
+@keyframes sector-pin-in {from {transform: translateY(6px); opacity: .4;} to {transform: none; opacity: 1;}}
+@keyframes sector-route-in {from {stroke-dashoffset: 1;} to {stroke-dashoffset: 0;}}
+@keyframes sector-panel-in {from {transform: translateX(10px); opacity: .78;} to {transform: none; opacity: 1;}}
+
+@media (min-width: 761px) {
+  .sector-flow .sector-flow-nav a {min-width: 0;}
+}
+@media (max-width: 760px) {
+  .sector-flow {--sector-gutter: clamp(12px, 4vw, 28px); --sector-anchor-offset: 66px;}
+  .sector-flow .sector-flow-nav {width: calc(100% - 20px); margin-bottom: 28px; border-radius: 23px; padding: 5px;}
+  .sector-flow .sector-flow-nav a {min-height: 44px; font-size: .875rem; padding-inline: 12px; flex: 0 0 auto; min-width: 0; max-width: 74%;}
+  .sector-flow .sector-flow-wrap {gap: 19px;}
+  .sector-flow :is(.sector-flow-chapter-1,.sector-flow-chapter-2,.sector-flow-chapter-4) .sector-flow-wrap {
+     grid-template: "title" "copy" "scene" "links" / minmax(0, 1fr);
+  }
+  .sector-flow .sector-flow-chapter-3 .sector-flow-wrap {grid-template: "title" "copy" "scene" "links" / minmax(0, 1fr);}
+  .sector-flow-education .sector-flow-chapter-3 .sector-flow-wrap {grid-template: "title" "copy" "scene" "timeline" / minmax(0, 1fr);}
+  .sector-flow .sector-flow-scene, .sector-flow .sector-flow-copy {margin-inline: 0;}
+  .sector-flow .sector-flow-chapter-1 .sector-flow-scene::before {inset-inline: 1% 2%; transform: rotate(-3deg);}
+  .sector-flow .sector-flow-chapter-2 .sector-flow-scene,
+  .sector-flow .sector-flow-chapter-3 .sector-flow-scene,
+  .sector-flow .sector-flow-chapter-4 .sector-flow-scene {margin-inline-start: 0;}
+  .sector-flow .sector-flow-chapter-2 .sector-flow-scene-inner {border-radius: 18px; aspect-ratio: 1.55;}
+  .sector-flow .sector-flow-chapter-2 .sector-flow-scene figcaption,
+  .sector-flow .sector-flow-chapter-3 .sector-flow-scene figcaption {padding-inline-start: 0;}
+  .sector-flow .sector-flow-hotspot {min-height: 44px; padding: 2px 8px;}
+  .sector-flow .sector-flow-chapter-3 .sector-flow-number {opacity: .22; top: .06em; right: -.02em; z-index: -1;}
+  .sector-flow .sector-flow-timeline {margin: 0; padding: 24px 22px;}
+  .sector-flow .sector-flow-timeline::before {inset: 0; transform: none; border-radius: 8px 26px 20px 20px;}
+  .sector-flow .sector-flow-chapter-4 .sector-flow-wrap {grid-template-areas: "title" "scene" "copy" "links"; align-items: start;}
+  .sector-flow-education .sector-flow-chapter-4 .sector-flow-wrap {grid-template-areas: "title" "scene" "copy"; grid-template-rows: auto; padding-bottom: 27px;}
+  .sector-flow .sector-flow-chapter-4 .sector-flow-scene-inner {min-height: 0; aspect-ratio: 4/3; border-radius: 22px 15px 0 0;}
+  .sector-flow .sector-flow-chapter-4 .sector-flow-copy {margin-top: -19px; border-radius: 0 0 20px 20px;}
+  .sector-flow .sector-flow-chapter-4 .sector-flow-copy::before {content: none;}
+  .sector-flow .sector-flow-chapter-4 .sector-flow-scene-inner > img {scale: none; translate: none;}
+  .sector-flow .sector-flow-links {align-items: start; flex-direction: column;}
+  .sector-flow .sector-flow-links a {justify-content: start; padding-inline: 0; text-align: start;}
+  .sector-flow .sector-flow-links a + a {border-inline-start: none;}
+}
+@media (max-width: 700px) {
+  .sector-flow {margin-inline: -5.55556%;}
+}
+@media (prefers-reduced-motion: reduce) {
+  .sector-flow *, .sector-flow *::before, .sector-flow *::after {animation: none !important; transition: none !important;}
+}
+@media (forced-colors: active) {
+  .sector-flow .sector-flow-nav a[aria-current="location"] {border: 2px solid Highlight;}
+  .sector-flow .sector-flow-pin line, .sector-flow .sector-flow-route {stroke: CanvasText;}
+}
