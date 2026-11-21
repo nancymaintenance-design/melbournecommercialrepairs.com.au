@@ -23,14 +23,14 @@ module.exports = [
   judgement:{
    heading:["把维修次数与故障后果分开","Separate call-out frequency from consequence"],
    body:[
-    ["我们把复发间隔、故障后果和能观察到的先兆一起记录。低影响问题有明确磨损趋势时，可以制定有触发条件的检查。影响通行、安全或生产的故障需要优先厘清原因，即使是第一次发生。建议的巡检任务应有可记录的对象和升级条件。","We record recurrence intervals, consequences and any warning signs together. A low-impact fault with a clear wear trend may suit a scheduled check with a defined trigger. A fault that affects access, safety or operations deserves early investigation even on its first occurrence. Each inspection task should say what to observe and when to escalate."]
+    ["我们把复发间隔、故障后果和能观察到的先兆一起记录。低影响问题有明确磨损趋势时，可以制定有触发条件的检查。影响通行、安全或生产的故障需要优先厘清原因，即使是第一次发生。我们在巡检工单中写清检查和记录的项目，以及需要升级处理的条件。","We record recurrence intervals, consequences and any warning signs together. A low-impact fault with a clear wear trend may suit a scheduled check with a defined trigger. A fault that affects access, safety or operations deserves early investigation even on its first occurrence. We set out what to inspect and record, and when to escalate the issue."]
    ]
   },
   verification:[
    ["完成工单时注明恢复的功能、验证条件和仍待处理的上游问题，连到同一资产的历史记录。若原工况还没出现，我们记录下一次观察的时点与负责人。这样复发时可以判断究竟是修复失效，还是原先未覆盖的工况再次出现。","We close the work order with the function restored, the conditions checked and any unresolved upstream issue, linked to the asset history. If the original conditions have not returned, we record when to check next and who will do it. A recurrence can then be traced to either a failed repair or an operating condition the earlier scope did not cover."]
   ],
   faq:[
-   [['维修次数多就该全部换新吗？','Do repeat repairs justify wholesale replacement?'],['先比较故障原因、部件状态、运行风险和可替换性。','Compare cause, asset condition, operational risk and replaceability first.']],
+   [['维修次数多就该全部换新吗？','Do repeat repairs justify wholesale replacement?'],['我们先比较故障原因、部件状态、运行风险和更换条件，再建议继续维修还是更换。','We weigh up the cause, condition, operational risk and replacement options before recommending repair or replacement.']],
    [['何时缩短巡检间隔？','When should inspections be more frequent?'],['复发周期缩短或故障后果加重时，重新评估频率和任务内容。','Reassess frequency and scope when faults recur sooner or have greater consequences.']]
   ],
   related:['window-wall-water-ingress','doors-hardware-latching']
@@ -64,7 +64,7 @@ module.exports = [
   ],
   faq:[
    [['可以暂时把防火门撑开吗？','Can a fire door be wedged open temporarily?'],['保留门组安全功能，尽快报物业管理方安排处理。','Preserve the safety function and report the problem promptly to building management.']],
-   [['更换门禁读头能解决关门问题吗？','Will replacing the card reader fix closing?'],['先区分读卡、锁具状态与门扇机械运行，再决定修复范围。','Distinguish the reader, the lock state and mechanical door movement before specifying a repair.']]
+   [['更换门禁读头能解决关门问题吗？','Will replacing the card reader fix closing?'],['我们分别检查读卡、锁具状态和门扇机械运行，再确定修复范围。','We check the reader, lock state and mechanical door movement separately before confirming the repair scope.']]
   ],
   related:['doors-hardware-latching','uneven-hvac-zones']
  },
@@ -96,8 +96,8 @@ module.exports = [
    ["在可比的运行时长、分区和风况下复测，并保留集水布局、干区、积水与径流位置。通行区域另行观察，核对喷洒是否越过植床边界，以及停水后是否仍有水流到步道。","We retest with comparable run duration, zones and wind and keep the catch layout and the locations of dry spots, ponding and runoff. We observe circulation routes separately to see whether spray crosses the bed edge or runoff still reaches the path after the zone stops."]
   ],
   faq:[
-   [['出现干斑就延长整个分区吗？','Should we simply run the zone for longer?'],['先对照干湿分布，延长运行可能使现有湿区更湿。','Compare wet and dry areas first. A longer run may make existing wet spots worse.']],
-   [['集水测试一次就够吗？','Is a single catch test sufficient?'],['记录工况，再在可比条件下核对调整后的变化。','Record conditions and retest the change under comparable conditions.']]
+   [['出现干斑就延长整个分区吗？','Should we simply run the zone for longer?'],['我们先对照干湿分布，再调整灌溉安排。延长运行可能让原有湿区积水更多。','We compare wet and dry areas before changing the watering schedule. A longer run can make existing wet spots worse.']],
+   [['集水测试一次就够吗？','Is a single catch test sufficient?'],['我们记录测试工况，并在可比条件下复测，确认调整带来的变化。','We record the test conditions and repeat the test under comparable conditions to check the change.']]
   ],
   related:['recurring-drain-blockages','commercial-water-ingress'],secondary:'car-parks-external-works'
  },
@@ -188,15 +188,15 @@ module.exports = [
   judgement:{
    heading:["局部补贴前查两面胶层和水分来源","Check both sides of the bond and the moisture source"],
    body:[
-    ["同一条外墙边的湿区和进水事件相符时，先查围护或用水来源；若损坏只沿强日晒带，则并行查温度、接缝及安装条件。按选定系统要求测基层，比较受影响区与同材质邻区，避免把手持筛查读数当成已满足铺设要求。","Where moisture along an outside wall follows an ingress event, we check the envelope or water source first. If damage follows a sun-exposed strip, we check temperature, joints and installation conditions as well. We test the substrate by the method specified for the selected system and compare like areas. A handheld screening reading alone does not clear a slab for installation."]
+    ["外墙边的湿区与进水时间吻合时，我们先检查建筑围护和用水来源。损坏只出现在强日晒区时，我们也检查温度、接缝及安装条件。我们按选用地面系统的要求检测基层，并与使用同种材料的相邻区域对照。手持仪表的筛查用于定位疑点，基层能否铺设由规定的检测结果确认。","Where moisture along an outside wall follows an ingress event, we check the envelope or water source first. If damage follows a sun-exposed strip, we check temperature, joints and installation conditions as well. We test the substrate by the method specified for the selected system and compare like areas. A handheld screening reading alone does not clear a slab for installation."]
    ]
   },
   verification:[
    ["我们归档测点图、适用测试方法、现场条件、结果及所用系统的接受标准。交接写明已解决的水分来源、换铺边界、养护条件，以及哪些部位需要复检。","We file the test locations, applicable method, site conditions, results and the acceptance criteria for the selected system. We record the moisture source addressed, replacement limits, curing conditions and any areas to recheck."]
   ],
   faq:[
-   [['表面干燥代表基层合格吗？','Does a dry surface show that the substrate is ready?'],['应按地材系统要求选择测法并核对读数，尤其是新基层或有进水史的位置。','Use the method required by the floor system and compare readings, particularly on new slabs or where water has entered before.']],
-   [['同样的胶能直接补贴吗？','Can we simply reuse the same adhesive?'],['先找出失效界面，再核对兼容性和基层条件。','Identify the failed interface, then check compatibility and substrate condition.']]
+   [['表面干燥代表基层合格吗？','Does a dry surface show that the substrate is ready?'],['我们按地面系统要求选择检测方法并比对读数，重点核查新基层和曾经进水的位置。','We use the method required by the floor system and compare readings, paying particular attention to new slabs and areas with a history of water ingress.']],
+   [['同样的胶能直接补贴吗？','Can we simply reuse the same adhesive?'],['我们先找出脱粘发生在哪一层，再核查胶黏剂与地材及基层是否相容。','We identify where the bond failed, then check whether the adhesive is compatible with the flooring and substrate.']]
   ],
   related:['window-wall-water-ingress','commercial-water-ingress']
  },
@@ -229,7 +229,7 @@ module.exports = [
   ],
   faq:[
    [['调大闭门器力度是否更好？','Is more closer force better?'],['阻力来源未明确时可能遮住故障，还可能影响通行和开启。','Extra force can conceal the source of resistance and affect opening effort and access.']],
-   [['能同时移动扣板和调铰链吗？','Can we adjust the strike and hinges together?'],['先记录初始状态和接触点，再逐项复核，便于确认是哪一项恢复了功能。','Record the starting condition and the contact point, then verify each change so the actual fix is clear.']]
+   [['能同时移动扣板和调铰链吗？','Can we adjust the strike and hinges together?'],['我们先记录初始状态和接触点，每调整一项就复查一次，确认哪项调整恢复了功能。','We record the starting condition and contact point, then check the door after each adjustment to identify which change restored operation.']]
   ],
   related:['fire-door-latching-and-access','partition-head-movement']
  }

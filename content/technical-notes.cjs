@@ -35,21 +35,21 @@ const articles = [
   ],
   methods:[
    [['局部修复密封','Repair an isolated seal'],['这种做法适用于局部失效已经定位且排水路径完整的接缝。我们先核对兼容性和接缝变形，保留泄水口。','We use where evidence isolates a failed seal and confirms a working drain path. We check compatibility and joint movement and keep weeps open.']],
-   [['恢复泛水及排水','Restore flashing and drainage'],['若水滞留在框槽或进入后方空腔，分区检查泛水搭接、端部及排水出路。隐蔽节点由合适的专业人员检查。','Where water sits in a channel or reaches the cavity, we investigate flashing laps, ends and outlets by zone. We have concealed details assessed by an appropriate specialist.']]
+   [['恢复泛水及排水','Restore flashing and drainage'],['若水滞留在框槽或进入后方空腔，我们分区检查泛水搭接、端部及排水出路，并安排专业人员检查隐蔽节点。','Where water sits in a channel or reaches the cavity, we investigate flashing laps, ends and outlets by zone. We arrange a specialist assessment of concealed details.']]
   ],
   judgement:{
    heading:["什么时候需要检查相邻立面","When to investigate the adjoining façade"],
    body:[
     ["我们把现场照片按标高、朝向和降雨时间对齐，先辨别水痕是否总在同一条路径上。若低处窗台先湿，可优先查框槽、泛水端部和排水口。若水迹从窗头或高处板缝开始，或只在特定风向复发，诊断范围应包含上方立面。","We line up photos by level, exposure and rainfall timing to see whether the stain follows the same path. Where the sill wets first, start with the frame channel, flashing ends and outlets. If the stain starts at the head or a higher panel joint, or only returns in rain from one direction, include the façade above in the investigation."],
-    ["单独淋湿一个节点，只能说明该节点在当次条件下的表现。在能够安全进行时，由适当人员分区复查并记录湿润顺序、持续时间及是否施加压差。否则某次喷水未复发，不能排除原风雨条件才会启动的路径。","Wetting one detail tells us how that detail behaved under those test conditions. Where a suitably qualified person can test safely, we record which zones were wetted, the sequence and duration, and whether a pressure difference was applied. A negative result under spray alone can leave a wind-driven pathway unresolved."]
+    ["单独淋湿一个节点，只能说明该节点在当次条件下的表现。在现场条件允许时，我们安排合适的专业人员分区复查，并记录湿润顺序、持续时间及是否施加压差。否则某次喷水未复发，不能排除原风雨条件才会启动的路径。","Wetting one detail tells us how that detail behaved under those test conditions. Where testing can be done safely, we arrange for a suitably qualified person to test by zone. We record which zones were wetted, the sequence and duration, and whether a pressure difference was applied. A negative result under spray alone can leave a wind-driven pathway unresolved."]
    ]
   },
   verification:[
-   ["交接时记录修复部位、未打开的节点、排水口状态与复测条件。完工照片应能看见水的出口，而不仅是一道新胶缝。我们对照修前条件，分别记录已复现并处理的路径，以及仍需在相似风雨中复核的位置。","At handover we record the repaired detail, unopened junctions, condition of drains and retest conditions. A completion photo should show where water can leave as well as the new seal. We compare the result with the original conditions and identify paths that were reproduced and resolved, and any locations still to be checked in similar weather."]
+   ["交接时，我们记录修复部位、未打开的节点、排水口状态与复测条件，并在完工照片中拍清排水出口和新做的密封。我们对照修前条件，分别记录已复现并处理的路径，以及仍需在相似风雨中复核的位置。","At handover we record the repaired detail, unopened junctions, condition of drains and retest conditions. Our completion photos show the drainage outlet as well as the new seal. We compare the result with the original conditions and identify paths that were reproduced and resolved, and any locations still to be checked in similar weather."]
   ],
   faq:[
    [['水痕位置就是入水点吗？','Is the stain the entry point?'],['水可以沿接口或空腔迁移。我们会把水痕出现的时间与上游可能进水的节点对照。','Water can travel along a junction or cavity. We compare when the stain appeared with the details where water could have entered upstream.']],
-   [['补胶后没再漏就能验收吗？','Is the absence of a leak after resealing enough?'],['应记录实际经历的暴露条件与验证边界，尤其是原来只有迎风雨才出现的渗漏。','Record the exposure actually experienced and the limits of the check, particularly where the original leak needed wind-driven rain.']]
+   [['补胶后没再漏就能验收吗？','Is the absence of a leak after resealing enough?'],['我们记录复查时实际遇到的天气或测试条件，并注明验证范围，尤其是原来只有迎风雨才出现的渗漏。','We record the weather or test conditions and what the check covered, particularly where the original leak occurred only in wind-driven rain.']]
   ],
   related:['recurring-faults-maintenance','resilient-floor-moisture'], secondary:'building-maintenance'
  },
@@ -65,7 +65,7 @@ const articles = [
   evidence:[
    [['单区午后过热','One zone overheats in the afternoon'],['太阳得热或分区负荷改变','Solar gain or a changed zone load'],['我们对照朝向、遮阳、使用率和送风趋势。','We compare aspect, shading, occupancy and supply trends.']],
    [['指令升高、风量无变化','Airflow does not follow the command'],['末端风阀、压力或量测问题','Damper, pressure or measurement fault'],['我们对照指令与反馈；由暖通人员复核末端实测。','We compare command and feedback and have the terminal reading checked.']],
-   [['相邻分区同时制冷和再热','Adjacent zones cool and reheat together'],['设定、逻辑或传感器偏差','Setpoints, logic or sensor bias'],['我们核对控制序列和再热阀状态。','Look at the control sequence and reheat valve status.']]
+   [['相邻分区同时制冷和再热','Adjacent zones cool and reheat together'],['设定、逻辑或传感器偏差','Setpoints, logic or sensor bias'],['我们核对控制序列和再热阀状态。','We check the control sequence and reheat valve status.']]
   ],
   methods:[
    [['校核控制再观察','Correct controls and observe'],['若趋势显示传感器异常或指令没有正确响应，我们先复核校准和运行序列。','Where trends point to a bad reading or response, we check sensor accuracy and the sequence first.']],
@@ -74,7 +74,7 @@ const articles = [
   judgement:{
    heading:["怎样区分末端故障与公共静压问题","Distinguishing a terminal fault from shared pressure"],
    body:[
-    ["一处偏离时，我们优先看该末端的风量测点、风阀与出风温度。多个末端在同一时段偏离时，要同时核对公共送风静压、机组状态及时间计划。选择同一系统里一个运行正常的邻区作对照，有助于避免把个别局部问题误判成整套系统风量不足。","If one zone deviates, we start with that terminal’s airflow point, damper and discharge temperature. If several deviate together, we check shared duct static pressure, plant state and scheduling as well. A neighbouring zone served by the same system and working correctly makes a useful comparison before calling the whole system undersized."],
+    ["一处偏离时，我们优先看该末端的风量测点、风阀与出风温度。多个末端在同一时段偏离时，我们也核对共用风管静压、机组状态及运行时段，再与同一系统内运行正常的邻区对照，判断问题是局部还是系统性的。","If one zone deviates, we start with that terminal’s airflow point, damper and discharge temperature. If several deviate together, we check shared duct static pressure, plant state and scheduling as well. We compare a neighbouring zone served by the same system to see whether the problem is local or affects the system more widely."],
     ["我们先复核测量，再决定调风量。控制界面显示风阀已开，只代表控制系统看到了一个状态或发出了指令。末端流量与反馈不一致时，应由暖通人员在代表性负荷下核实，避免用永久提高风压掩盖传感器或执行器问题。","We check the measurement before rebalancing. A damper shown as open on screen may reflect a control point rather than confirmed airflow. Where feedback and flow disagree, we have an HVAC specialist check the terminal under a representative load before raising system pressure to compensate for a bad sensor or actuator."]
    ]
   },
@@ -90,7 +90,7 @@ const articles = [
  {
   slug:'led-flicker-drivers-controls',category:'electrical',image:noteArt('led-suspended'),colour:'orange',
   title:['LED 闪烁：\n驱动与控制因素','LED flicker:\nDrivers and controls'],
-  summary:['从灯具分布、调光状态和发生时刻入手，区分单灯驱动问题、控制兼容性和共同供电异常。','Use fixture patterns, dimming levels and timing to separate a local driver problem, a control mismatch and a shared supply issue.'],
+  summary:['我们对照灯具分布、调光状态和出现时刻，区分单灯驱动故障、控制不匹配与共用供电问题。','We compare which fittings flicker, at what dimming level and when, to distinguish local driver faults, control mismatches and shared supply problems.'],
   keywords:[['时间光调制','Temporal light modulation'],['驱动器','LED driver'],['调光负载','Dimming load']],
   mechanism:[
    ["LED 光输出会随驱动电流变化。电流纹波、调光波形，以及驱动与控制器相互作用，可能造成不同形式的时间光调制。肉眼在静止时察觉的闪烁、移动物体出现的断续影像和手机摄像条纹，观察条件不一样。我们先问清是人眼不适、转动部件看起来断续，还是只有录像异常。","LED output responds to changes in drive current. Driver ripple, the dimming waveform and interactions between controls and drivers can all modulate the light over time. Flicker seen while stationary, a broken-up image of a moving object and banding on video show up under different conditions. We first establish whether the problem is visual discomfort, an effect on moving objects or something only the camera records."],
@@ -136,7 +136,7 @@ const articles = [
    [['邻近器具也有回涌','Nearby fixtures back up too'],['共同下游管段受限','Shared downstream restriction'],['我们核对接入走向与公共管段边界。','We confirm the connection layout and the shared section.']]
   ],
   methods:[
-   [['清理与控制来料','Clean and reduce inputs'],['当证据指向沉积且管道状况允许，由合适的管道人员清理。餐饮场所同步核对当地供水机构的贸易废水要求。','Where deposits are the issue and the pipe can tolerate cleaning, we arrange a suitable plumbing contractor. At food premises, we check the local water authority’s trade waste requirements at the same time.']],
+   [['清理与控制来料','Clean and reduce inputs'],['当证据指向沉积且管道状况允许时，我们安排合适的排水专业人员清理。涉及餐饮场所时，我们也核对当地供水机构的商业废水排放要求。','Where deposits are the issue and the pipe can tolerate cleaning, we arrange a suitable plumbing contractor. At food premises, we check the local water authority’s trade waste requirements at the same time.']],
    [['评估局部修复','Assess a targeted pipe repair'],['在确认持续低点、错口或坏段后，再比较局部修复与更换，考虑停业影响与进入条件。','After confirming a persistent sag, displaced joint or damaged section, we compare targeted repair and replacement against access and downtime.']]
   ],
   judgement:{
@@ -149,7 +149,7 @@ const articles = [
    ["我们保留同一方向的清理前后影像，记录起点、距离、检查不到的部位、上游器具和复测负荷。我们分别写明流量是否恢复、可见管段状态以及仍可能导致复发的条件，便于物业判断何时复查。","We keep before-and-after footage in the same direction, with the starting point, distances, inaccessible sections, upstream fixtures and recheck load. Distinguish restored flow from the condition of the pipe you could see and the factors that could cause another blockage."]
   ],
   faq:[
-   [['管道积水一定说明没坡度吗？','Does standing water prove the drain has no fall?'],['不一定。下游限制也会使水留在画面内，需结合定位与复检。','A downstream restriction may also hold water in view. Correlate location and repeat inspection.']],
+   [['管道积水一定说明没坡度吗？','Does standing water prove the drain has no fall?'],['下游受阻也会造成积水。我们对照积水位置和复检结果，判断是坡度问题还是下游受阻。','A downstream restriction can also hold water in the pipe. We compare where it pools with the results of a repeat inspection to distinguish a fall problem from a restriction.']],
    [['清通后还要检查吗？','Is inspection useful after clearing?'],['反复堵塞时，清通后更容易看见此前被沉积遮住的管段。','For a repeat blockage, clearing often exposes sections that deposits previously obscured.']]
   ],
   related:['commercial-water-ingress','recurring-faults-maintenance']
@@ -166,7 +166,7 @@ const articles = [
   evidence:[
    [['雨后外墙与门槛一带进水','Water at perimeter after rain'],['雨水进入或外部排水受限','Rain entry or restricted stormwater drainage'],['关联天气、开始时刻与外部水位。','We compare weather, onset and outside water levels.']],
    [['排水口先回涌','Water rises from a drain first'],['排水倒灌或下游受限','Backflow or downstream restriction'],['我们记录最先出现的器具及共同支管。','We record the first affected fixtures and shared branches.']],
-   [['湿区接近插座或设备','Water near outlets or equipment'],['电气风险','Electrical hazard'],['我们隔离人员，由持证电工确认安全后再进入或复电。','We keep people clear and obtain licensed electrical clearance before entry or re-energisation.']]
+   [['湿区接近插座或设备','Water near outlets or equipment'],['电气风险','Electrical hazard'],['我们协调隔离受影响区域，并安排持牌电工确认安全后，再按确认结果安排进入或恢复供电。','We keep people clear and obtain licensed electrical clearance before entry or re-energisation.']]
   ],
   methods:[
    [['临时控制受影响区域','Contain the affected area'],['清晰划分通行与受影响区域，安排专业人员控制来源，防止污水或积水扩散。','We separate traffic from affected areas, arrange appropriate source control and avoid spreading standing or contaminated water.']],
@@ -176,15 +176,15 @@ const articles = [
    heading:["划分恢复范围时，不只看地面的水线","Why the reopening boundary extends beyond the waterline"],
    body:[
     ["如果水可能沿低处进入隔壁，或进入封闭墙腔，我们会把该区域列为待复核，即使表面没有明显水痕。我们比较同材质的受影响点和未受影响点有助于解释读数，但仍需结合基层、仪器和材料状况。对疑似污水或其他污染，另行安排专业评估。","If water may have tracked into the next room or a closed cavity, we mark that area for further checking even if the finish looks dry. Readings from affected and unaffected areas of the same material help put a measurement in context, alongside the substrate and instrument used. We arrange a separate specialist assessment for suspected sewage or other contamination."],
-    ["开放通行、重新给设备供电和完成装饰面修复也应分开记录。一个区域能够安全通行，不代表相邻区可复电或能覆盖新饰面。","We record pedestrian access, electrical reinstatement and finish repairs as separate decisions. One area being safe to walk through does not clear nearby electrics or make the substrate ready to cover."]
+    ["我们分开记录恢复通行、设备复电和饰面恢复的条件。各区通行经确认后，我们仍会按区域安排电气安全检查和基层复核，再分别安排复电及饰面恢复。","We record the conditions for reopening to pedestrians, restoring power and reinstating finishes separately. Even where access has been cleared, we arrange electrical and substrate checks by area before coordinating either reinstatement."]
    ]
   },
   verification:[
    ["交接按区域列明来源处理状态、进入限制、专业复核、材料读数及记录时间。再次开放前确认通行面与相关设备已获适用的安全确认。仍有隐藏湿区或待复验事项的区域，注明负责人和下一步。","At handover, we record source control, access restrictions, specialist checks and material readings with their times for each zone. We confirm the applicable clearances for walking surfaces and equipment before reopening. Where concealed moisture or another item needs checking, we record the next step and who will handle it."]
   ],
   faq:[
-   [['表面干了就可以开放吗？','Can we reopen when the surface is dry?'],['还需核对隐蔽湿区、污染、电气与地面通行安全。','Consider concealed moisture, contamination, electrical safety and safe walking surfaces.']],
-   [['进水是否都按同一方法清理？','Is clean-up the same for every water source?'],['污水或来源不明的情况需要专业评估，不宜按已确认清洁水的情况处理。','Sewage and unidentified sources need specialist assessment. They should not be treated as confirmed clean water.']]
+   [['表面干了就可以开放吗？','Can we reopen when the surface is dry?'],['我们先核查隐蔽湿区、污染情况和地面通行安全，并安排相应的电气安全检查，再确认哪些区域可以开放。','We check for concealed moisture and contamination, assess whether walking surfaces are safe and arrange electrical safety checks before confirming which areas can reopen.']],
+   [['进水是否都按同一方法清理？','Is clean-up the same for every water source?'],['遇到污水或进水来源不明时，我们安排专项评估，并按确认的污染情况安排清理。','For sewage or water from an unknown source, we arrange a specialist assessment and plan the clean-up based on the contamination findings.']]
   ],
   related:['recurring-drain-blockages','resilient-floor-moisture'],secondary:'cleaning-waste-hygiene'
  },

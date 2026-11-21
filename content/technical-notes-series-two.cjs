@@ -16,7 +16,7 @@ module.exports = [
   ],
   evidence:[
    [['裂缝沿钢筋延伸','Crack follows a bar'],['锈胀或其他沿筋开裂','Corrosion expansion or other reinforcement-related cracking'],['我们对照保护层与钢筋位置，记录锈迹及裂纹延伸。','We compare cover and bar position, and record staining and crack extent.']],
-   [['局部表面掉块','Local piece has broken away'],['保护层分层或局部冲击','Cover delamination or local impact'],['我们先控制落物区域，再由合适人员圈定边界。','We control the falling-object area and have a suitable assessor map its limits.']],
+   [['局部表面掉块','Local piece has broken away'],['保护层分层或局部冲击','Cover delamination or local impact'],['我们先协调隔离落物区域，再安排具备相应能力的专业人员核查损坏边界。','We arrange an exclusion zone below the affected area and organise a specialist assessment to establish the extent of the damage.']],
    [['旧补丁边缘再开裂','Cracking returns at a patch edge'],['周边劣化或新旧材料界面损伤','Deterioration around the patch or a damaged interface'],['我们查旧修补范围、渗水路径及相邻构件的表现。','We check the previous scope, exposure to water and the condition of nearby elements.']]
   ],
   methods:[
@@ -29,7 +29,7 @@ module.exports = [
   ]},
   verification:[['交接记录构件编号、照片方位、实际修补边界、修补前的钢筋和基层状况、材料与检查人。对未能近距离查看的位置，以及仍可能反复受潮的点位，安排后续复查。','We file the element ID, photo orientation, actual patch limits, pre-repair condition of the steel and substrate, the material used and who checked the work. We schedule follow-up for areas that could not be inspected closely or may still get wet.']],
   faq:[
-   [['有锈水就说明钢筋截面已经不足吗？','Does a rust stain prove the steel has lost capacity?'],['锈迹提示需要调查。截面及承载能力须根据钢筋状况与构件受力由适当人员评估。','A stain is a reason to investigate. Section loss and capacity need an assessment of the steel and the structural element.']],
+   [['有锈水就说明钢筋截面已经不足吗？','Does a rust stain prove the steel has lost capacity?'],['锈迹是我们安排进一步检查的线索。我们安排结构专业人员检查钢筋状况和构件受力，再评估截面损失与承载能力。','Rust staining prompts us to investigate. We arrange a structural assessment of the reinforcement and the element to establish any loss of steel section and its effect on load capacity.']],
    [['旧补丁完好还需要记录吗？','Should we record a sound-looking old patch?'],['需要。它能帮助定位过去的修补范围，也给后续复查留下基线。','Yes. It locates the previous work and gives future inspections a baseline.']]
   ],
   related:['recurring-faults-maintenance','commercial-storm-make-safe'],
@@ -72,7 +72,7 @@ module.exports = [
   verification:[['我们保留屋面分区、出口与溢流位置、积水边界、水线和检查时间。我们把排水复查与防水确认分开记录，并注明结构评估的范围、结论和待处理事项。','We keep the roof zones, outlet and overflow locations, pond outline, water marks and inspection time. We record drainage checks separately from membrane checks, along with the scope, findings and outstanding items from any structural assessment.']],
   faq:[
    [['有积水就要重做防水吗？','Does ponding mean the membrane needs replacement?'],['先区分排水、坡度、结构和防水层状态。维修方案取决于查明的原因。','First distinguish drainage, falls, structure and membrane condition. The repair scope follows the cause found.']],
-   [['可以开孔让积水排掉吗？','Can a new hole be made to release the water?'],['新排水点会影响构造、防水及下游排放，必须先由适当专业人员评估。','A new outlet affects the assembly, waterproofing and downstream discharge and needs professional assessment.']]
+   [['可以开孔让积水排掉吗？','Can a new hole be made to release the water?'],['新排水点会影响屋面构造、防水及下游排放。我们先安排相关专业人员评估，再确定能否增设排水点。','A new outlet affects the roof assembly, waterproofing and downstream discharge. We arrange a specialist assessment before deciding whether to add one.']]
   ],
   related:['window-wall-water-ingress','commercial-storm-make-safe'],
   visuals:artwork(['顺着水线找排水瓶颈','Use water marks to trace the drainage restriction'],[
@@ -104,7 +104,7 @@ module.exports = [
    [['过道有人时，空会议室亮灯','An empty room lights up when someone passes'],['感应覆盖越过控制边界','Detection extends beyond the intended zone'],['同一轮验证房间内和相邻过道，记录门开闭状态。','We check inside the room and in the adjacent corridor, recording whether the door is open.']]
   ],
   methods:[
-   [['调整受影响区的覆盖','Correct coverage in the affected zone'],['我们确认覆盖不足或溢出时，由适当电气人员评估感应器位置和配置。有新的隔断时，先按现有布置重新验证边缘工位。','Where dead spots or spillover are confirmed, we have an appropriate electrical practitioner assess placement and configuration. We recheck boundary seats in the current layout after partition changes.']],
+   [['调整受影响区的覆盖','Correct coverage in the affected zone'],['确认感应覆盖不足或越界时，我们安排合适的电气专业人员评估感应器的位置和配置。增设隔断后，我们先按现有布置复测分区边缘工位。','Where dead spots or spillover are confirmed, we have an appropriate electrical practitioner assess placement and configuration. We recheck boundary seats in the current layout after partition changes.']],
    [['核对时程、日光与控制优先级','Check scheduling, daylighting and command priority'],['若探测输入正确但输出异常，我们核对实际分区绑定、时间段、手动覆盖及日光设置。修改后要同时验证有人的工况与无人时的关灯逻辑。','If sensing is correct but output is wrong, we check the zone mapping, schedules, overrides and daylight settings. After changes, we verify occupied operation and the switch-off sequence when the area is empty.']]
   ],
   judgement:{heading:['用办公行为复现误关','Reproduce the fault during normal activities'],body:[
@@ -113,7 +113,7 @@ module.exports = [
   ]},
   verification:[['按房间编号归档感应器与照明组、座位或通道测试点、占用与无人切换时间，以及日光和定时控制状态。普通照明调试与应急照明复核分别记录，涉及应急照明时交由相应人员处理。','We record the room ID, sensor and lighting group, seats or corridor points checked, occupied and vacant timings, and the daylight or scheduling state. We keep ordinary lighting commissioning separate from emergency lighting checks and refer any affected emergency system to the appropriate personnel.']],
   faq:[
-   [['换成更灵敏的感应器会解决吗？','Will a more sensitive sensor fix it?'],['要同时看小动作漏检和越界触发。灵敏度提高可能让相邻区域的移动被算进来。','Check both missed small movements and unwanted detections. More sensitivity can also pick up activity outside the zone.']],
+   [['换成更灵敏的感应器会解决吗？','Will a more sensitive sensor fix it?'],['我们检查小幅动作漏检和分区外误触发的情况。提高灵敏度可能把相邻区域的动作也计入。','We check for missed small movements and false triggers from outside the zone. Higher sensitivity can pick up movement in adjacent areas.']],
    [['开关能开灯，是否说明感应控制正常？','Does a working wall switch prove occupancy control is working?'],['手动开灯验证的是开关指令。我们会另外核对感应输入、延时和分区自动输出。','Manual switching verifies the switch command. We check detection, delay and automatic zone output separately.']]
   ],
   related:['led-flicker-drivers-controls','partition-speech-privacy'],
@@ -147,11 +147,11 @@ module.exports = [
   ],
   methods:[
    [['恢复和观察低频使用水封','Restore and monitor little-used traps'],['这种做法适用于可确认长时间干涸的器具。我们结合使用情况复核补水安排，并记录水封维持时间和返味是否复现。','We use where prolonged disuse is confirmed. We review how the trap is replenished for actual use and record how long it holds and whether the odour returns.']],
-   [['调查共用排水和通气','Investigate the shared drainage and vent system'],['多处同时异常或与上游排放相关时，由适当水管专业人员追查共用管段、通气状态和局部受限情况。','Where several fixtures are affected or the issue follows upstream discharge, we have a suitable plumber assess shared pipework, venting and any restriction.']]
+   [['调查共用排水和通气','Investigate the shared drainage and vent system'],['多处同时异常或与上游排放相关时，我们安排水管专业人员检查共用管段、通气状态和局部受阻情况。','Where several fixtures are affected or the issue follows upstream discharge, we have a suitable plumber assess shared pipework, venting and any restriction.']]
   ],
   judgement:{heading:['看返味是否跟排放动作同一时刻发生','Check whether the odour follows a discharge'],body:[
    ['周一开门发现低频使用地漏有气味，是重要的时间线索。若工作日高峰同时听到咕噜声、看到水位变化，就要记录哪些设备在排放，而不能只反复补水。','An odour from a little-used floor waste on Monday morning gives us a timing clue. Gurgling and a changing water level during weekday peak use call for a record of what was discharging, even if topping up temporarily improves the smell.'],
-   ['有条件时选同一管系中正常器具作为比较，现场区分单点失水与成组的压力影响。物业记录可先写清位置和使用时段，拆检由适当人员完成。','Where practical, we compare a normally operating fixture on the same system to separate one depleted trap from a pressure effect across the group. We use property staff’s observations of the location and use to prepare the visit. We arrange the appropriate trade to inspect inside the system.']
+   ['现场条件允许时，我们对照同一管系中运行正常的洁具，区分单点水封失水和共用管路的压力影响。我们结合物业已有的位置和使用时段记录安排检查，并由我们协调合适的专业人员拆检。','Where practical, we compare a normally operating fixture on the same system to separate one depleted trap from a pressure effect across the group. We use property staff’s observations of the location and use to prepare the visit. We arrange the appropriate trade to inspect inside the system.']
   ]},
   verification:[['交接记录地漏或器具编号、使用频率、故障发生时的排放组合、补水或管路处理后的观察和仍需复查的时段。若来访时没有复现，应说明当时哪些器具在使用。','We file the waste or fixture ID, frequency of use, the combination of discharges when the fault occurred, observations after replenishment or pipework repairs and the period still to be checked. If the fault did not recur, we record which fixtures were operating during the visit.']],
   faq:[
@@ -198,7 +198,7 @@ module.exports = [
   verification:[['交接保存人数、时间、测点、室外对照、机组状态和相关实测结果。改动后记录占用工况、门与系统状态及与原曲线的差异。','We file occupancy, timing, sensor locations, the outdoor comparison, plant state and measured results. After work, we record occupancy, door and system state and how the trend compares with the original.']],
   faq:[
    [['低读数能说明新风达标吗？','Does a low reading prove adequate ventilation?'],['空房或使用时间很短时读数也可能低。应结合实际人数、时间和新风实测。','An empty room or short meeting can also show a low reading. Interpret it alongside occupancy, duration and airflow measurements.']],
-   [['把空调温度设低能解决吗？','Will a colder setpoint fix it?'],['需要检查系统实际引入的室外空气。改变温度设定不一定增加新风。','Check how much outdoor air the system actually brings in. A colder setpoint may leave that unchanged.']]
+   [['把空调温度设低能解决吗？','Will a colder setpoint fix it?'],['我们先检查系统实际引入的室外空气量。调低温度设定本身可能不会增加新风。','We check how much outdoor air the system actually brings in. A colder setpoint may leave that unchanged.']]
   ],
   related:['uneven-hvac-zones','occupancy-sensor-lighting-controls'],
   visuals:artwork(['把人数、时序和设备状态对上','Line up occupancy, timing and plant state'],[
@@ -230,7 +230,7 @@ module.exports = [
    [['拆管后留下空套管','An empty sleeve remains after pipe removal'],['空置开口和原安装条件不同','A vacant opening differs from the original configuration'],['我们记录墙板、套管和开口，交相关人员安排评估。','We record the barrier, sleeve and opening and refer for specialist assessment.']]
   ],
   methods:[
-   [['先补齐点位和系统证据','Identify the location and installed system'],['我们记录足够且现状可核实时，由合适人员核对结构、穿越物及安装范围，补齐现场留档。','Where records and site access allow confirmation, we check the barrier, services and installed detail and complete the site record.']],
+   [['先补齐点位和系统证据','Identify the location and installed system'],['资料和现场条件允许时，我们安排合适的专业人员核查防火分隔、贯穿管线和安装范围，并补齐记录。','Where records and site access allow confirmation, we check the barrier, services and installed detail and complete the site record.']],
    [['按当前组合设计修复','Specify the repair for the current configuration'],['无法确认或现状已更改时，由专业人员选定适用做法。若没有合适匹配，我们先澄清技术方案再施工。','If the installation cannot be confirmed or the configuration has changed, we obtain a specialist repair scope. We resolve any mismatch before work proceeds.']]
   ],
   judgement:{heading:['检查对象是整个贯穿构造','Inspect the complete penetration assembly'],body:[
@@ -239,7 +239,7 @@ module.exports = [
   ]},
   verification:[['我们归档贯穿点编号、分隔位置、穿越物、适用系统文件、封闭前后照片和检查人。我们把不在本次核验范围的点位列入后续记录，并保持编号与平面图一致。','We keep each penetration ID, barrier location, services, applicable system documentation, photos before and after closing up, and who checked it. List locations outside the scope and match their IDs to the plan.']],
   faq:[
-   [['封堵材料颜色相同就可以补用吗？','Can we top up a seal with a product of the same colour?'],['颜色不能确认材料、基材和贯穿构造是否匹配。应以适用系统资料和现状为依据。','Colour cannot establish compatibility with the substrate and penetration assembly. Use the appropriate system evidence and the actual detail.']],
+   [['封堵材料颜色相同就可以补用吗？','Can we top up a seal with a product of the same colour?'],['我们根据适用系统资料核对封堵材料、基材和现场贯穿构造的适配性。颜色相同无法确认适配。','We check the product against the system documentation, substrate and installed penetration detail. A colour match cannot establish compatibility.']],
    [['旧线拆走后还有复查必要吗？','Does a penetration need checking after a cable is removed?'],['我们会核对拆除后留下的空隙和原防火封堵系统，确认剩余部分如何处理，并更新点位记录。','We check the opening left behind and the original fire-stopping system, confirm how to treat what remains and update the record.']]
   ],
   related:['fire-door-latching-and-access','partition-head-movement'],
@@ -276,7 +276,7 @@ module.exports = [
    [['调整路径及根区构造','Reconsider the route and root-zone detail'],['若冲突反复或范围扩大，可联合树艺和场地人员评估改线路、扩大根区空间或采用与现场相容的构造。','If the conflict returns or spreads, involve arboriculture and pavement specialists to assess rerouting, more room for roots or a compatible pavement detail.']]
   ],
   judgement:{heading:['先记录行人绕行，再判断可保留的铺面','Record the pedestrian route before deciding what paving to retain'],body:[
-   ['排查时把人流路线、轮椅或推车经过的位置和夜间通行一起记录。临时改道要确认人能到达同一出入口。再比较高点与两侧的基本标高，避免把下沉误判为邻板被顶起。','We note the pedestrian route, wheelchair and trolley travel and how the area is used after dark. A temporary detour needs to serve the same entrances. We compare the high-looking edge with levels on both sides before deciding which slab actually moved.'],
+   ['我们记录人流路线、轮椅和推车经过的位置及夜间通行情况，并核查临时绕行路线能否到达原出入口。我们再比较高点与两侧标高，确定是局部抬升还是相邻板块下沉。','We note the pedestrian route, wheelchair and trolley travel and how the area is used after dark. We check that any temporary detour serves the same entrances. We compare the high-looking edge with levels on both sides before deciding which slab actually moved.'],
    ['削平或换板能处理表面高差，但根和基层仍可能变化。遇到重要根系时，我们先由树艺人员评估其作用和损伤风险，不把切根当作常规步骤。','Grinding or replacement can remove a surface step while movement below continues. Where important roots may be involved, we obtain arboricultural advice on their role and the risk of damage before considering any root work.']
   ]},
   verification:[['交接记录通行路线、测点和坡向、保护的树木及根区、排水复查结果和后续检查日期。我们留存相同角度照片，便于发现板缝和高差是否继续变化。','At handover, we record the access route, level points and falls, tree and root-zone protection, drainage checks and the next inspection. We keep photos from the same positions to track changes at joints and edges.']],
@@ -323,8 +323,8 @@ module.exports = [
   ]},
   verification:[['我们记录固定点编号、材质与隔离件、受潮范围、封闭前照片以及谁复核了连接和排水。我们把需要随风雨复查的位置列在交接单上。','We record fixing IDs, materials and isolators, moisture exposure, photos before closing up and who checked the support and drainage. We identify locations to revisit after weather exposure.']],
   faq:[
-   [['用不锈钢螺丝能解决铝板孔缘腐蚀吗？','Will stainless screws resolve pitting around aluminium holes?'],['仍需核对金属接触、隔离和排水条件，以及螺丝是否适合该连接。','Check metal contact, isolation and drainage as well as whether the screws suit the connection.']],
-   [['表面擦掉白粉就可以验收吗？','Can we accept the work after cleaning white deposits off?'],['还应核对沉积来源、涂层破损和连接状态，并留下复查点。','Check the source of the deposit, coating condition and connection, and identify any follow-up checks.']]
+   [['用不锈钢螺丝能解决铝板孔缘腐蚀吗？','Will stainless screws resolve pitting around aluminium holes?'],['我们核查金属接触、隔离和排水条件，再判断不锈钢螺丝是否适合该连接。','We check metal contact, isolation and drainage, then assess whether stainless screws suit the connection.']],
+   [['表面擦掉白粉就可以验收吗？','Can we accept the work after cleaning white deposits off?'],['我们还会核查沉积来源、涂层破损和连接状态，并记录需复查的位置。','We check the source of the deposits, the condition of the coating and connection, and record any points for follow-up.']]
   ],
   related:['external-sign-fixings','window-wall-water-ingress'],
   visuals:artwork(['把接触面与受潮点一起标出','Map metal contact and wetting together'],[
@@ -361,9 +361,9 @@ module.exports = [
   ],
   judgement:{heading:['隔墙加厚前，先看声音是否绕行','Look for a bypass before upgrading the partition'],body:[
    ['从同一讲话位置对比靠门、墙中和风口，可以帮助决定优先调查的路径。若墙中不突出而门底或吊顶明显，我们先复核可接近的旁路，必要时请声学人员测量。','We compare the door, middle of the wall and grilles using the same talker position. If the door gap or ceiling stands out, we investigate those accessible paths before changing the wall, with acoustic measurements where needed.'],
-   ['不能为改善隔声而随意封堵回风口或防火分隔。现场方案要同时核对房间原用途、通风和其他约束。','Acoustic changes need to account for return-air paths and the fire separation. We check the room’s intended use, ventilation and other requirements before deciding on a treatment.']
+   ['我们按房间用途、通风和防火分隔要求评估隔声方案，避免封堵回风口或破坏防火分隔。','We check the room’s intended use, ventilation and fire separation before choosing an acoustic treatment that keeps return-air paths and fire barriers effective.']
   ]},
-  verification:[['我们记录房间编号、声源与接收点、门和设备状态、处理的路径和仍可能传声的位置。若项目有明确私密性目标，按约定条件由适当人员复测。','We record the rooms, source and receiver positions, door and plant states, the paths treated and any remaining suspected routes. Where the project has a defined privacy target, we arrange a suitable retest under the agreed conditions.']],
+  verification:[['我们记录房间编号、声源与接收点、门和设备状态、处理的路径和仍可能传声的位置。项目有明确的谈话私密性目标时，我们安排合适的专业人员按约定条件复测。','We record the rooms, source and receiver positions, door and plant states, the paths treated and any remaining suspected routes. Where the project has a defined privacy target, we arrange a suitable retest under the agreed conditions.']],
   faq:[
    [['贴吸音板会让隔壁听不见吗？','Will adding absorptive panels make speech inaudible next door?'],['吸音板能改变本室混响。跨房间的表现仍取决于墙、门和旁路。','Absorption changes reverberation in the room. Sound reaching the next room still depends on the wall, doors and bypass paths.']],
    [['听不清词就能说明问题已经解决吗？','Does indistinct speech prove the issue is resolved?'],['背景声和说话位置会影响结果。我们会在可重复的条件下核对约定目标。','Background noise and talker position affect intelligibility. We check the agreed target under repeatable conditions.']]
@@ -407,7 +407,7 @@ module.exports = [
   ]},
   verification:[['保存网格、伸缩或控制缝位置、局部打开时的层间照片、处理范围及养护条件。通行恢复前核对接缝、收口和实际高差。','We keep the grid, movement-joint locations, photos of the interfaces exposed, repair limits and curing conditions. We check joints, transitions and actual level differences before reopening the floor.']],
   faq:[
-   [['声音空就一定要全部拆掉吗？','Does a hollow sound mean the floor needs removal?'],['先看声音分布、实际松动和基层构造。具体范围由证据和通行风险决定。','Check the pattern, tile movement and substrate assembly first. Evidence and access risk determine the scope.']],
+   [['声音空就一定要全部拆掉吗？','Does a hollow sound mean the floor needs removal?'],['我们先核查空鼓声的分布、瓷砖是否松动及基层构造，再结合检查结果和通行风险确定拆除范围。','We check where the hollow sounds occur, whether the tiles move and how the substrate is built. We use those findings and access risks to establish the removal scope.']],
    [['重新填缝可以处理松动吗？','Will regrouting repair a tile that moves?'],['需要先查砖为何移动。填缝无法确认基层支撑或恢复失效的粘结。','First find why the tile moves. Grout does not establish substrate support or restore a failed bond.']]
   ],
   related:['resilient-floor-moisture','tree-root-footpath-lifting'],
@@ -441,7 +441,7 @@ module.exports = [
   ],
   methods:[
    [['先改善确认的室内结露因素','Address confirmed room-side condensation factors'],['我们核对湿源、运行时段和窗边气流，必要时安排暖通及窗体专业评估比较室内因素和冷边温度。','We check moisture sources, operating schedule and airflow at the window. Where needed, we arrange ventilation and glazing assessment to distinguish room conditions from cold edge temperatures.']],
-   [['按故障位置检查玻璃单元或外部接口','Assess the glazing unit or junction as indicated'],['夹层持续雾化时查玻璃单元与边封。与风雨相关时调查外部接缝和排水，依据证据分别定维修。','We investigate the glazing unit and edge seal for persistent inter-pane misting. For rain-linked wetting, we check the external junction and drainage. We base the scope on what we find.']]
+   [['按故障位置检查玻璃单元或外部接口','Assess the glazing unit or junction as indicated'],['夹层持续起雾时，我们检查玻璃单元与边缘密封。水迹与风雨相关时，我们排查外部接缝和排水，再根据检查结果分别确定维修范围。','We investigate the glazing unit and edge seal for persistent inter-pane misting. For rain-linked wetting, we check the external junction and drainage. We base the scope on what we find.']]
   ],
   judgement:{heading:['在窗面第一次出现湿迹时记录','Record the first wetting rather than the final puddle'],body:[
    ['窗台积水可以是窗上水珠汇下来，也可能沿构造流入。我们在相同窗型中找一扇没有异常的对照窗，比较朝向、边框、窗帘或隔板及设备状态，再回看最早的水迹。','A wet sill can collect water from glass condensation or receive water from the assembly. We compare an unaffected window of the same type, noting aspect, frame, blinds or partitions and plant state, then trace where the first marks appeared.'],
@@ -449,7 +449,7 @@ module.exports = [
   ]},
   verification:[['按窗编号保留湿迹所在面、第一次出现时间、室内外条件、玻璃或接口处理范围及冷晨或风雨复查安排。','For each window, we keep the affected face, onset time, indoor and outdoor conditions, glazing or junction repair scope and any planned check in cold-morning or wet weather.']],
   faq:[
-   [['两层玻璃之间起雾能从室内擦掉吗？','Can mist between the panes be wiped off indoors?'],['若确认水汽在封闭夹层内，擦拭室内表面不能触及，需检查玻璃单元。','If the moisture is inside the sealed space, wiping the room face cannot reach it. Have the glazing unit checked.']],
+   [['两层玻璃之间起雾能从室内擦掉吗？','Can mist between the panes be wiped off indoors?'],['若确认水汽在密封夹层内，擦拭室内表面无法清除。我们会安排检查玻璃单元及边缘密封。','Wiping the room side cannot remove moisture trapped between the panes. We arrange a check of the glazing unit and edge seal.']],
    [['为什么只有玻璃下缘结露？','Why is there condensation only at the bottom edge?'],['边缘温度可能与中心不同，也受室内气流影响。我们会在同一时间核对边缘温度、湿度和玻璃中心的状态。','The edge may be cooler than the centre, and local airflow can also play a part. We compare edge temperature, humidity and the condition at the centre at the same time.']]
   ],
   related:['window-wall-water-ingress','meeting-room-carbon-dioxide-ventilation'],
@@ -483,7 +483,7 @@ module.exports = [
    [['吊顶鼓胀或变形','Ceiling sags or bulges'],['衬板或悬挂系统受损，可能有积水','Possible lining or suspension damage and retained water'],['我们限制下方进入，由相关人员核对支撑和电气条件。','We restrict access below and have supports and electrical conditions assessed.']]
   ],
   methods:[
-   [['先隔离并安排临时保护','Isolate the area and arrange temporary protection'],['在持续风雨或落物风险未解除时，我们先安排绕行和分区隔离。临时保护由适当人员在现场条件允许时实施，并写明适用时限和复查条件。','While weather or falling-object risk persists, we arrange detours and exclusion zones. We have appropriate personnel provide temporary protection when conditions allow, with clear limits and a recheck plan.']],
+   [['先隔离并安排临时保护','Isolate the area and arrange temporary protection'],['风雨持续或仍有落物风险时，我们先安排绕行和隔离。现场条件允许时，我们安排合适的人员布置临时保护，并写明有效时限和复查条件。','While weather or falling-object risk persists, we arrange detours and exclusion zones. We arrange for suitable personnel to provide temporary protection when conditions allow, with clear limits and a recheck plan.']],
    [['分区核验后恢复通行','Verify by zone before reopening'],['相关专业人员审核构造、服务和通行后，区分可开放、临时开放和仍封闭区域。永久维修按核实的损伤、连接和进水范围落实。','Once the structure, services and access have been checked, we identify areas that can reopen, can operate with temporary restrictions or must stay closed. We scope permanent repairs around the confirmed damage, fixings and water entry.']]
   ],
   judgement:{heading:['记录临时措施适用的范围和时限','Record what temporary protection covers and for how long'],body:[
@@ -492,8 +492,8 @@ module.exports = [
   ]},
   verification:[['我们记录时间、区位、临时控制负责人、复查触发条件及可开放路线。我们把屋面和外墙复核、水受影响区域检查、临时措施及永久工作分别归档。','We record the time, locations, person responsible for temporary controls, triggers for reinspection and routes that can open. We file roof and façade checks, wet-area checks, temporary controls and permanent works separately.']],
   faq:[
-   [['雨停了就能开放下方通道吗？','Can the path below reopen once the rain stops?'],['应先确认上方落物、构造和通行风险已由适当人员复核。','Have the overhead, structural and access risks checked before reopening.']],
-   [['临时遮挡完成就可以关闭工单吗？','Can the job be closed after putting up temporary protection?'],['临时处置应保留有效范围、责任人和复查条件，待永久修复按核定范围处理。','Keep the limits, responsible person and recheck conditions on record until permanent work is scoped and addressed.']]
+   [['雨停了就能开放下方通道吗？','Can the path below reopen once the rain stops?'],['我们先安排具备相应能力的专业人员复核落物、结构和通行风险，再根据结果确认哪些区域可以开放。','We arrange a suitably qualified assessment of falling-object, structural and access risks before confirming which areas can reopen.']],
+   [['临时遮挡完成就可以关闭工单吗？','Can the job be closed after putting up temporary protection?'],['我们记录临时保护的有效范围、负责人和复查条件，并跟进已确认范围内的永久修复。','We record what the temporary protection covers, who is responsible and when to recheck it. We follow up on the permanent repairs once the scope is confirmed.']]
   ],
   related:['commercial-water-ingress','flat-roof-ponding-drainage'],
   visuals:artwork(['先划出落物和受潮范围','Map falling-object and wet areas first'],[

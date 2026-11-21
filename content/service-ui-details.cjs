@@ -13,7 +13,7 @@ const annotations={
 const itemIcons={roof:['house-line','house-line','drop','stack'],lighting:['desktop','path','cube'],systems:['drop','drop','gear','flame'],hvac:['wind','drop','desktop'],security:['flame','security-camera','credit-card'],landscape:['tree','plant','gear'],wayfinding:['storefront','door-open','path'],facade:['buildings','buildings','house-line'],matrix:['armchair','desktop','toilet','trash'],parking:['road-horizon','house-line','drop'],stages:['shield-check','wrench','stack']};
 const facadeScope=[
  [['玻璃面、窗框及密封周边。','Glass surfaces, window frames and seal edges.'],['框体饰面与相邻外墙。','Frame finishes and adjacent exterior walls.'],['玻璃幕墙、落地窗、采光立面。','Curtain walls, full-height windows and glazed facades.']],
- [['金属板面、涂层与接缝。','Metal panels, coatings and joints.'],['先核对饰面状态与样区效果。','Check finish condition and the sample area first.'],['金属幕墙、板材与收边。','Metal facades, panels and edge trims.']],
+ [['金属板面、涂层与接缝。','Metal panels, coatings and joints.'],['我们先核查饰面状态和样区效果。','We check the condition of the finish and assess the sample area first.'],['金属幕墙、板材与收边。','Metal facades, panels and edge trims.']],
  [['砖石表面与局部污渍。','Brick and stone surfaces and localised stains.'],['区分清洁和需要修复的部位。','Separate cleanable areas from surfaces needing repair.'],['砖墙、石材及外墙表面。','Brick walls, stonework and exterior surfaces.']]
 ];
 exports.render=function(s,en,a,{dual,image,heading,control,panel}){

@@ -158,8 +158,8 @@
             "zh": "店铺营业时正在漏水，能先止损吗？"
           },
           "answer": {
-            "en": "We first identify the affected area, water source and electrical exposure. The initial work is to contain the leak and protect the occupied area where it is safe to do so; permanent repairs follow once the cause and access are confirmed.",
-            "zh": "我们先确认受影响区域、水源和电气风险。具备安全条件时，优先控制漏水和保护营业区域；查明原因并确认进场条件后，再进行永久修复。"
+            "en": "We first identify the affected area, water source and electrical risk. Where it is safe to do so, we contain the leak and protect occupied areas. We then arrange permanent repairs once we have confirmed the cause and access arrangements.",
+            "zh": "我们先确认受影响区域、漏水来源和电气风险。现场条件安全时，我们会先控制漏水、保护仍在使用的区域。查明原因并确认进场条件后，我们再安排永久修复。"
           }
         },
         {
@@ -232,8 +232,8 @@
             "zh": "可以按确定的施工范围报固定总价吗？"
           },
           "answer": {
-            "en": "A fixed price can be prepared when the defect, materials and access requirements are sufficiently clear. If hidden damage or testing is involved, we first define the investigation and then price the confirmed repair.",
-            "zh": "当故障、材料和进场要求明确后，可以按确定的施工范围编制固定总价。涉及隐蔽损伤或检测时，我们会先界定排查工作，再对已确认的维修内容报价。"
+            "en": "We can give a fixed price once we have confirmed the fault, materials and access requirements. If hidden damage or testing is involved, we first define the investigation and then price the confirmed repairs.",
+            "zh": "故障、材料和进场要求明确后，我们可按确认的施工范围报固定总价。涉及隐蔽损伤或需要检测时，我们先明确排查范围，再对已确认的维修内容报价。"
           }
         },
         {
@@ -354,8 +354,8 @@
             "zh": "仓库墙面被叉车或推车撞坏能修吗？"
           },
           "answer": {
-            "en": "We assess the impact area and check whether only the lining is damaged or the framing and protection barriers are also affected. Repairs are planned around vehicle movements and the site's exclusion requirements.",
-            "zh": "我们检查受撞击区域，区分表面板材损坏与内部框架、防撞设施损坏，并按仓库车辆动线和隔离要求安排施工。"
+            "en": "We assess the impact area to establish whether the damage extends to the framing or protection barriers. We plan repairs around vehicle movements and the site's exclusion requirements.",
+            "zh": "我们检查受撞击区域，判断损坏是否涉及内部框架和防撞设施，再按仓库车辆动线和隔离要求安排施工。"
           }
         },
         {
@@ -366,8 +366,8 @@
             "zh": "办公室隔墙能拆除或改动吗？"
           },
           "answer": {
-            "en": "We first establish whether the partition affects structure, fire separation, electrical services, HVAC or building approvals. A non-structural alteration is scoped separately from any regulated building or services work.",
-            "zh": "我们先确认隔墙是否涉及结构、消防分隔、电气管线、空调系统或建筑审批。非承重隔墙调整与受监管的建筑或机电工程会分别明确施工范围。"
+            "en": "We first check whether the partition affects the structure, fire separation, electrical services, HVAC or building approvals. We scope non-structural alterations separately from regulated building or services work.",
+            "zh": "我们先确认隔墙是否涉及结构、消防分隔、电气管线、空调系统或建筑审批，再分别列明非承重隔墙调整和受监管的建筑或机电工程范围。"
           }
         },
         {
@@ -538,8 +538,8 @@
             "zh": "漏水修好后，受潮天花和墙面也能修复吗？"
           },
           "answer": {
-            "en": "We separate the source repair from reinstatement of damaged linings and finishes. Once moisture conditions and safety have been assessed, the reinstatement scope can include plasterboard, ceiling tiles, patching and painting.",
-            "zh": "我们将漏水源头修复与受损饰面恢复分开界定。确认含水状况和施工安全后，可安排石膏板、吊顶板、墙面修补和涂装恢复等工作。"
+            "en": "We scope leak repairs separately from reinstating damaged linings and finishes. After checking moisture conditions and site safety, we confirm what plasterboard, ceiling tiles, patching or painting the reinstatement requires.",
+            "zh": "我们把漏水源头修复与受损饰面恢复分开安排。核查含水状况和施工安全后，我们再确定石膏板、吊顶板、墙面和涂层需要恢复的范围。"
           }
         }
       ]
@@ -612,8 +612,8 @@
             "zh": "能检查防回流装置和商用厨房排水系统吗？"
           },
           "answer": {
-            "en": "We first establish the installed system and the testing or maintenance requirement. Backflow prevention, gas and other regulated plumbing tasks are assigned according to the relevant Victorian plumbing licence class, with required records identified in the scope.",
-            "zh": "我们先确认设备类型及适用的检测、维护要求。防回流、燃气及其他受监管水管作业，会按维州对应执照类别安排，并在工作范围中说明所需记录。"
+            "en": "We first confirm the installed system and its testing and maintenance requirements. For backflow prevention, gas and other regulated plumbing work, we arrange trades with the relevant Victorian licence class and specify the records required.",
+            "zh": "我们先确认设备类型及适用的检测和维护要求。涉及防回流、燃气或其他受监管水管作业时，我们按维州相应的执照类别安排专业人员，并在工作范围中列明所需记录。"
           }
         },
         {
@@ -662,8 +662,8 @@
             "zh": "商业配电箱断路器反复跳闸，能查出原因吗？"
           },
           "answer": {
-            "en": "Repeated trips require an electrical fault assessment. We identify the affected circuit and arrange licensed testing of the connected equipment, protection devices and wiring before deciding on the repair.",
-            "zh": "反复跳闸需要进行电气故障检测。我们先确认受影响线路，再由具备相应资格的电气人员检查连接设备、保护装置及布线，确定维修内容。"
+            "en": "We identify which circuit is repeatedly tripping, then arrange for a licensed electrician to test the connected equipment, protection devices and wiring. We confirm the repair once the fault is clear.",
+            "zh": "我们先确认反复跳闸涉及的线路，再安排持牌电工检查连接设备、保护装置和布线。查明故障后，我们会确定维修内容。"
           }
         },
         {
@@ -686,8 +686,8 @@
             "zh": "电气维修会导致整间商铺或办公室断电吗？"
           },
           "answer": {
-            "en": "We identify the circuits that need isolation and assess whether the work can be confined to a smaller area. The electrical shutdown, testing and restoration sequence is agreed with the authorised site contact before work begins.",
-            "zh": "我们先确定需要隔离的电路，评估能否将断电影响控制在局部区域。停电、测试和恢复供电的流程会在开工前与授权现场联系人确认。"
+            "en": "We identify the circuits that need isolation and assess whether the work can be confined to a smaller area. Before work begins, we agree the shutdown, testing and restoration sequence with the authorised site contact.",
+            "zh": "我们先确定需要隔离的电路，评估能否把断电影响控制在局部区域。开工前，我们会与获授权的现场联系人确认停电、测试和恢复供电的顺序。"
           }
         },
         {
@@ -760,8 +760,8 @@
             "zh": "商用厨房排风和大楼通风系统能检修吗？"
           },
           "answer": {
-            "en": "We first identify the fan, duct, controls and the building's ventilation requirements. Mechanical servicing is scoped separately from specialist cleaning, fire-related controls or regulated work where those apply.",
-            "zh": "我们先核对风机、风管、控制系统及建筑通风要求。机械设备检修与专项清洁、消防联动或其他受监管作业，会按实际情况分别界定。"
+            "en": "We first check the fan, ductwork, controls and the building's ventilation requirements. We then scope mechanical servicing separately from any specialist cleaning, fire-related controls or other regulated work.",
+            "zh": "我们先核对风机、风管、控制系统和楼宇通风要求，再分别确认机械设备检修、专项清洁、消防联动和其他受监管作业的范围。"
           }
         },
         {
@@ -834,8 +834,8 @@
             "zh": "消防警报反复误响，能检查吗？"
           },
           "answer": {
-            "en": "We arrange appropriately qualified specialists to review the panel, detectors, zones and event history. We coordinate site safety measures with building management while the fault is investigated.",
-            "zh": "我们会安排具备相应资格的专业人员查看报警主机、探测器、分区和事件记录，找出反复报警的原因，并与物业方协调作业期间的安全措施。"
+            "en": "We arrange for appropriately qualified specialists to check the fire panel, detectors, zones and event history. While they investigate, we coordinate site safety measures with building management.",
+            "zh": "我们安排具备相应资质的专业人员检查消防控制盘、探测器、分区和事件记录。排查期间，我们会与物业管理方协调现场安全措施。"
           }
         },
         {
@@ -846,8 +846,8 @@
             "zh": "应急出口指示牌和应急照明故障能检查吗？"
           },
           "answer": {
-            "en": "We identify the affected fittings and the building's applicable testing requirements. Inspection, repairs and documentation are scoped according to whether the work involves electrical installation or an essential safety measure.",
-            "zh": "我们先确认故障灯具及建筑适用的测试要求，再按是否涉及电气安装和 Essential Safety Measures 来界定检查、维修及记录范围。"
+            "en": "We identify the affected fittings and the building's testing requirements. We arrange the checks and repairs and confirm the records needed for any electrical installation work or Essential Safety Measures involved.",
+            "zh": "我们先确认故障灯具和楼宇适用的测试要求，再根据工程是否涉及电气安装或基本安全设施（Essential Safety Measures），安排检查、维修并明确留档内容。"
           }
         },
         {
@@ -870,8 +870,8 @@
             "zh": "店铺卷帘门卡在开启位置，能先保障场所安全再修吗？"
           },
           "answer": {
-            "en": "We assess the shutter's position, motor, guides, controls and visible damage. The immediate scope is to manage access and security risks; permanent repair or replacement is decided after checking the mechanism and parts.",
-            "zh": "我们先检查卷帘门位置、电机、导轨、控制装置和可见损伤。优先评估出入口和场所安全风险，再根据机构及配件情况确定永久维修或更换范围。"
+            "en": "We check the shutter's position, motor, guides, controls and visible damage, then prioritise access and security risks. After checking the mechanism and parts, we confirm whether to repair or replace it.",
+            "zh": "我们先检查卷帘门位置、电机、导轨、控制装置和可见损伤，并优先处理出入口及场所安全风险。核查机械部件和配件情况后，我们再确定永久维修或更换范围。"
           }
         }
       ]
@@ -920,8 +920,8 @@
             "zh": "商业地毯砖、PVC 地板或木地板损坏能局部修复吗？"
           },
           "answer": {
-            "en": "We check the damaged area, substrate, moisture and availability of matching materials. A local replacement may be suitable when the substrate is sound; wider reinstatement is scoped where the damage extends below the finish.",
-            "zh": "我们检查损坏范围、基层、潮湿情况及同款材料供应。基层完好时可评估局部更换；若损伤延伸至基层，则需要扩大修复范围。"
+            "en": "We check the damaged area, substrate, moisture and availability of matching materials. Where the substrate is sound, we assess whether local replacement will work. If damage extends beneath the finish, we include the substrate in the repair scope.",
+            "zh": "我们检查损坏范围、基层、潮湿情况及同款材料供应。基层完好时，我们评估局部更换方案。损伤延伸至基层时，我们把基层修复纳入范围。"
           }
         },
         {
@@ -970,8 +970,8 @@
             "zh": "办公楼、零售中心和仓库外部绿化能定期维护吗？"
           },
           "answer": {
-            "en": "We assess the site's lawns, garden beds, hedges, access routes and grounds presentation requirements. Visit frequency and the work list are based on the property layout, season and agreed maintenance scope.",
-            "zh": "我们检查草坪、花坛、绿篱、通行区域和室外环境维护要求，按物业布局、季节及约定工作范围制定维护内容与频率。"
+            "en": "We assess the lawns, garden beds, hedges, access routes and grounds maintenance needs. We set the work list and visit frequency around the property layout, season and agreed scope.",
+            "zh": "我们检查草坪、花坛、绿篱、通行区域和场地维护需求，再根据物业布局、季节和已确认的工作范围制定维护清单及巡访频次。"
           }
         },
         {
@@ -1006,8 +1006,8 @@
             "zh": "卸货区或建筑入口附近的树枝、绿篱可以修整吗？"
           },
           "answer": {
-            "en": "We assess the vegetation, vehicle and pedestrian clearances and any permit or specialist arborist requirement. The work area and access restrictions are established before pruning or removal begins.",
-            "zh": "我们检查树木与绿篱、车辆和行人通行净空，以及是否需要许可或专业树艺人员，再明确修剪或移除作业区域及临时通行限制。"
+            "en": "We assess the trees, hedges and vehicle and pedestrian clearances. We check whether a permit or specialist arborist is needed and confirm the work area and access restrictions before pruning or removal.",
+            "zh": "我们检查树木、绿篱及车辆和行人通行净空，并确认是否需要许可或安排专业树艺人员。修剪或移除前，我们会明确作业范围和临时通行限制。"
           }
         }
       ]
@@ -1068,8 +1068,8 @@
             "zh": "仓库还在出入货、叉车运行时可以维修吗？"
           },
           "answer": {
-            "en": "We identify loading zones, forklift routes, pedestrian access and any required machinery isolation. The repair area and work window are planned so the agreed traffic controls remain in place during the job.",
-            "zh": "我们先确认装卸区、叉车路线、人员通道及需要隔离的设备。维修区域和施工时段会结合现场交通管理措施确定，确保作业期间相关控制措施持续有效。"
+            "en": "We identify loading zones, forklift routes, pedestrian access and machinery that needs isolating. We plan the repair area and work times around site traffic controls and keep the agreed controls in place during the job.",
+            "zh": "我们先确认装卸区、叉车路线、人员通道及需要隔离的设备，再结合现场交通管理措施安排维修区域和施工时段，并在作业期间维持已约定的交通管控。"
           }
         },
         {

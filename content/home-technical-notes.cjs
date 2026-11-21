@@ -61,14 +61,14 @@ module.exports = [
   ]},
   methods:[
    [['按材质试清，再分区施工','Trial the method and clean by material'],['我们根据材料与饰面状态选择相容的做法。玻璃、雨棚、标识及接缝附近分开确认试清条件。遇到旧涂层、老化接缝或敏感石材时，我们先确认表面能承受的处理方式，再确定整区范围。','We choose methods to suit the material and finish. We confirm trial conditions separately for glazing, awnings, signs and adjacent joints. For aged coatings, weathered joints or sensitive stone, we establish what the surface can tolerate before agreeing on the full scope.']],
-   [['结合营业和通行分阶段安排','Stage access around trading and pedestrian routes'],['我们由合适人员评估设施高度与高处进场条件，并把行人和车辆动线、入口使用、营业时间、租户活动、天气与清洗废水去向纳入施工安排。各区开工前明确隔离范围、沟通联系人及交还检查。','We arrange for suitably qualified people to assess the height and access conditions. We plan for pedestrian and vehicle movements, building entry, trading hours, tenant activity, weather and wash-water management. Before starting each zone, we agree on the exclusion area, site contact and handover checks.']]
+   [['结合营业和通行分阶段安排','Stage access around trading and pedestrian routes'],['我们安排具备相应资质的人员评估作业高度和高处进场条件，并把行人和车辆动线、入口使用、营业时间、租户活动、天气与清洗废水去向纳入施工安排。每个区域开工前，我们都会确认隔离范围、现场联系人和交还检查项目。','We arrange for suitably qualified people to assess the height and access conditions. We plan for pedestrian and vehicle movements, building entry, trading hours, tenant activity, weather and wash-water management. Before starting each zone, we agree on the exclusion area, site contact and handover checks.']]
   ],
   verification:[
    ['交付记录包括作业立面及楼层、试清方法、同视角前后照片、完成范围和仍需处理的部位。我们在表面干燥后复查污痕、残留及外观，确认公共通道具备交还条件；疑似渗漏、涂饰损伤或构件松动另列待处理事项。','We record the elevation and levels, trial method, matching before-and-after photos, completed areas and any outstanding issues. Once dry, we check streaks, residue and finish and confirm public access can be handed back. Suspected leaks, coating damage or loose elements are recorded separately for follow-up.']
   ],
   faq:[
    [['窗框下面的水痕洗完还会回来吗？','Can streaks return beneath a frame after cleaning?'],['有可能。我们检查条痕起点、上方表面和排水情况，再区分定期清洁能处理的沉积，以及需另行修复的构造问题。','They can. We check where the mark begins and look at the surfaces and drainage above it to distinguish deposits that routine cleaning can manage from a detail that needs repair.']],
-   [['同一栋楼能用同一种清洁方法吗？','Can we use one method across the whole building?'],['我们按材质和状态划分作业面。对试清表现一致的区域采用相同方法，接缝、老旧涂层及敏感石材另行确认。','We group surfaces by material and condition. Areas that respond the same way in a trial can share a method. Joints, older coatings and sensitive stone get a separate assessment.']]
+   [['同一栋楼能用同一种清洁方法吗？','Can we use one method across the whole building?'],['我们按材质和状态划分作业面。对试清表现一致的区域采用相同方法，接缝、老旧涂层及敏感石材由我们单独评估。','We group surfaces by material and condition. Areas that respond the same way in a trial can share a method. We assess joints, older coatings and sensitive stone separately.']]
   ],
   primary:'facade-high-access-cleaning',
   related:['facade-fixing-galvanic-corrosion','window-wall-water-ingress'],
@@ -92,7 +92,7 @@ module.exports = [
    ['能够重复使用的构件通常更容易从相邻饰面中独立拆装。粘结在饰面上的面板、穿过多层构造的固定件或找不到记录的旧配线，会增加拆除与修补之间的衔接工作。我们先查确认的交还要求，再复核新标识的位置、尺寸、重量和维护进场需求，判断哪些构件适合保留、哪些需要拆除或重新设计固定。','Components that can be separated from adjacent finishes are generally easier to reuse. Bonded panels, fixings through multiple layers and undocumented wiring can make removal and reinstatement harder to coordinate. We start with the agreed handover requirements, then confirm the new sign’s position, dimensions, weight and maintenance access before deciding what can stay and what needs removal or revised fixings.']
   ],
   evidence:[
-   [['计划保留原有面板或支架','Existing panel or bracket proposed for retention'],['拆装条件可能合适，仍需核对承托和适配','Removal may be straightforward, subject to support and compatibility'],['我们核对构件状态、固定位置、基层和新标识要求，记录保留范围。','We check the component’s condition, fixing locations, substrate and sign requirements and record what will be retained.']],
+   [['计划保留原有面板或支架','Existing panel or bracket proposed for retention'],['构件的承托和安装适配性','Support and compatibility of the existing component'],['我们核对构件状态、固定位置、基层和新标识要求，记录保留范围。','We check the component’s condition, fixing locations, substrate and sign requirements and record what will be retained.']],
    [['拆下旧招牌后露出孔洞、色差或破损','Holes, colour differences or damage exposed after removal'],['旧固定件、饰面老化或基层损伤','Previous fixings, weathered finishes or substrate damage'],['我们按立面位置标出需修补的部位，核对基层及饰面范围，必要时确认样板。','We mark defects by elevation, assess the substrate and extent of finish work, and agree on a sample where needed.']],
    [['旧发光标识与新点位不重合','Existing illuminated sign and new location differ'],['旧供电或控制位置与新布局不匹配','Existing power or control positions do not suit the new layout'],['我们协调电工核对原回路和新点位，和标识、修补及涂装工序一起排期。','We arrange for an electrician to confirm the existing circuit and new location, then coordinate the work with signage, patching and painting.']]
   ],

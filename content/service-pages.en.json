@@ -571,15 +571,15 @@
       "items": [
         {
           "title": "Equipment and airflow",
-          "body": "Check unit status, filter components, fan and return‑air path."
+          "body": "We check unit status, filters, fans and the supply and return air paths."
         },
         {
           "title": "Drainage and connections",
-          "body": "Check condensate discharge, joints and surrounding finishes."
+          "body": "We check condensate discharge, joints and nearby finishes."
         },
         {
           "title": "Controls and operating hours",
-          "body": "Check that zone settings, timers and controls suit how the premises are used."
+          "body": "We check that zone settings, timers and controls suit how the premises are used."
         }
       ]
     },
@@ -698,15 +698,15 @@
       "items": [
         {
           "title": "Fire-related equipment",
-          "body": "Verify equipment location, visible condition, fault records and items requiring attention."
+          "body": "We check equipment locations, visible condition and fault records to identify what needs attention."
         },
         {
           "title": "Security and intercom",
-          "body": "Check device mounting, connections, video or audio performance."
+          "body": "We check device mounting, connections and video or audio performance."
         },
         {
           "title": "Access control and entry",
-          "body": "Check entry components, authorised use and door operation."
+          "body": "We check entry components, access permissions and door operation."
         }
       ]
     },
@@ -1078,7 +1078,7 @@
         },
         {
           "title": "Brick, stone and façade surfaces",
-          "body": "Identify stains and surface conditions, separating cleaning from areas needing repairs."
+          "body": "We check staining and surface condition to identify what we can clean and what needs repair."
         }
       ]
     },
@@ -1320,11 +1320,11 @@
         },
         {
           "title": "External fixtures",
-          "body": "Review bollards, wheel stops and fixings to define repairs or replacement."
+          "body": "We check bollards, wheel stops and their fixings to decide what to repair or replace."
         },
         {
           "title": "Drainage and boundaries",
-          "body": "Review ponding, inlets and adjacent surfaces, separating cleaning from areas needing further repairs."
+          "body": "We check ponding, drain inlets and nearby surfaces to identify where cleaning will suffice and where repairs are needed."
         }
       ]
     },
@@ -1439,7 +1439,7 @@
       "items": [
         {
           "title": "Retain",
-          "body": "Identify retained fixtures, surfaces and areas needing protection."
+          "body": "We identify the fixtures and finishes to retain and the areas that need protection."
         },
         {
           "title": "Remove",
