@@ -106,7 +106,8 @@ function library() {
 function detail(article) {
  return fieldManual.detail(article,{
   text,paragraphs,label,link,image,h1,brand,publisher,esc,copy,serviceName,serviceArt,
-  category:filters[article.category],related:article.related.map(slug=>articleBySlug[slug])
+  category:filters[article.category],related:article.related.map(slug=>articleBySlug[slug]),
+  followUp:article.slug==='maintenance-plan' ? articleBySlug['commercial-maintenance-priorities-and-budget'] : undefined
  });
 }
 

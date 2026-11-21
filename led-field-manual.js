@@ -3,25 +3,27 @@
  if (!manual) return;
 
  const controls = manual.querySelector('.led-diagnosis-controls');
- const scene = manual.querySelector('.led-scene-diagnosis');
- const scenes = [...scene.querySelectorAll('[data-field-scene]')];
- const statuses = [...manual.querySelectorAll('[data-led-status]')];
- const evidenceRows = [...manual.querySelectorAll('[data-led-row]')];
+ if (controls) {
+  const scene = manual.querySelector('.led-scene-diagnosis');
+  const scenes = [...scene.querySelectorAll('[data-field-scene]')];
+  const statuses = [...manual.querySelectorAll('[data-led-status]')];
+  const evidenceRows = [...manual.querySelectorAll('[data-led-row]')];
 
- function showDiagnosis(value) {
-  scene.dataset.ledScene = value;
-  for (const panel of scenes) panel.hidden = panel.dataset.fieldScene !== value;
-  for (const panel of statuses) panel.hidden = panel.dataset.ledStatus !== value;
-  for (const row of evidenceRows) {
-   if (row.dataset.ledRow === value) row.setAttribute('aria-current','true');
-   else row.removeAttribute('aria-current');
+  function showDiagnosis(value) {
+   scene.dataset.ledScene = value;
+   for (const panel of scenes) panel.hidden = panel.dataset.fieldScene !== value;
+   for (const panel of statuses) panel.hidden = panel.dataset.ledStatus !== value;
+   for (const row of evidenceRows) {
+    if (row.dataset.ledRow === value) row.setAttribute('aria-current','true');
+    else row.removeAttribute('aria-current');
+   }
   }
+  controls.addEventListener('change',event=>{
+   if (event.target.matches('input[name="led-diagnosis"]:checked')) showDiagnosis(event.target.value);
+  });
+  showDiagnosis(controls.querySelector(':checked').value);
+  controls.hidden = false;
  }
- controls.addEventListener('change',event=>{
-  if (event.target.matches('input[name="led-diagnosis"]:checked')) showDiagnosis(event.target.value);
- });
- showDiagnosis(controls.querySelector(':checked').value);
- controls.hidden = false;
 
  const header = document.querySelector('.site-header');
  const bar = manual.querySelector('[data-led-chapters]');

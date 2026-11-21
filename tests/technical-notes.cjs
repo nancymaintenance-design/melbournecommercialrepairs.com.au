@@ -23,11 +23,13 @@ function page(route,lang) {
 const urls = nodes => nodes.filter(node=>node.tagName==='a').map(node=>attribute(node,'href'));
 const sitemap = [...read('sitemap.xml').matchAll(/<loc>([^<]+)<\/loc>/g)].map(([,url])=>url);
 assert.equal(new Set(sitemap).size,sitemap.length,'Sitemap URL uniqueness');
-assert.equal(libraryArticles.length,24);
+const editorialArticles = require('../content/commercial-maintenance-articles.json');
+assert.equal(libraryArticles.length,24+editorialArticles.length);
+assert.equal(new Set(editorialArticles.map(article=>article.slug)).size,3);
 assert.equal(articles.length,libraryArticles.length+articleSlugs.length);
 const homeSlugs = new Set(articleSlugs);
 for (const category of Object.keys(categories)) {
- assert.equal(libraryArticles.filter(article=>article.category===category).length,2,category+' technical notes');
+ assert.equal(libraryArticles.filter(article=>article.category===category&&!article.editorial).length,2,category+' original technical notes');
 }
 assert.equal(new Set(articles.map(article=>article.slug)).size,articles.length);
 const bySlug = new Map(articles.map(article=>[article.slug,article]));
@@ -52,7 +54,13 @@ for (const lang of ['zh','en']) {
   assert(mainLinks.every(href=>href.startsWith('#')||(href.startsWith('/')&&!href.startsWith('//'))),route+' no external links');
   assert(!mainLinks.includes('#tn-references'),route+' no references TOC entry');
   assert(!main.some(node=>attribute(node,'id')==='tn-references'||hasClass(node,'tn-bibliography')),route+' no public bibliography');
-  assert.equal(main.filter(node=>hasClass(node,'tn-diagnostic-note')).length,1,route+' topic-specific evidence interpretation');
+  if (article.editorial) {
+   assert(main.some(node=>hasClass(node,'field-topic')&&hasClass(node,'led-manual')),route+' shared field manual');
+   assert(mainLinks.includes(local('/contact/')+'#contact-enquiry-form'),route+' contextual enquiry link');
+   assert.equal(main.filter(node=>hasClass(node,'led-questions')).length,1,route+' renders article questions');
+  } else {
+   assert.equal(main.filter(node=>hasClass(node,'tn-diagnostic-note')).length,1,route+' topic-specific evidence interpretation');
+  }
   for (const href of mainLinks.filter(href=>href.startsWith('#'))) {
    assert(main.some(node=>attribute(node,'id')===href.slice(1)),route+' valid anchor '+href);
   }
@@ -69,8 +77,9 @@ for (const lang of ['zh','en']) {
   } else {
    assert(urls([...tree(primary)]).includes(local(route)),route+' reciprocal service link');
   }
-  assert.equal(main.filter(node=>node.tagName==='table').length,1,route+' semantic table');
-  assert.equal(main.filter(node=>node.tagName==='td').length,6,route+' table evidence');
+  const tableCount=article.editorial?article.editorial.flatMap(section=>section.blocks).filter(([kind])=>kind==='table').length:1;
+  assert.equal(main.filter(node=>node.tagName==='table').length,tableCount,route+' semantic table');
+  assert.equal(main.filter(node=>node.tagName==='td').length,6*tableCount,route+' data cells');
   const canonical = canonicalUrl(route,lang);
   assert.equal(attribute(nodes.find(node=>attribute(node,'rel')==='canonical'),'href'),canonical);
   assert(nodes.some(node=>attribute(node,'hreflang')==='en-AU'&&attribute(node,'href')===canonicalUrl(route,'en')));
@@ -101,4 +110,4 @@ for (const lang of ['zh','en']) {
   assert(required.length,slug+' has articles');
  }
 }
-console.log('Technical notes: 24 library articles, 3 homepage field manuals, 13 filters, 54 prerendered locale pages and no article external links.');
+console.log(`Technical notes: ${libraryArticles.length} library articles, ${homeSlugs.size} homepage field manuals, 13 filters, ${articles.length*2} prerendered locale pages and no article external links.`);

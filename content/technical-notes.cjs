@@ -195,6 +195,7 @@ for (const article of articles) article.publishedOn = '2026-11-20';
 const secondSeries = require('./technical-notes-series-two.cjs');
 for (const article of secondSeries) article.publishedOn = '2026-11-20';
 articles.push(...secondSeries);
+articles.push(...require('./commercial-maintenance-articles.json'));
 const libraryArticles = [...articles];
 articles.push(...require('./home-technical-notes.cjs'));
 

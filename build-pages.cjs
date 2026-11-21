@@ -65,15 +65,16 @@ page('sectors','我们服务的商业物业','Commercial properties we maintain'
 page('about','关于 Ellis Services Group','About Ellis Services Group','');
 page('insights','墨尔本商业维护技术研究与实务','Melbourne commercial maintenance research and practice',technicalNotes.library(),'',{
  technical:true,extraHead:'<link rel="stylesheet" href="/technical-stage.css"><script src="/technical-stage.js" defer></script>',titleEn:'Melbourne Commercial Maintenance Technical Notes | Ellis Services Group',
- descriptionZh:`查阅 ${technicalNotes.libraryArticles.length} 篇墨尔本商业物业维护技术综述，了解故障机理、诊断证据、维修方法和验收记录。`,
- descriptionEn:`Explore ${technicalNotes.libraryArticles.length} technical reviews of commercial maintenance: fault mechanisms, evidence, repair options and verification for Melbourne properties.`
+ descriptionZh:`查阅 ${technicalNotes.libraryArticles.length} 篇墨尔本商业物业维护文章，了解故障排查、维修安排、预算和验收记录。`,
+ descriptionEn:`Explore ${technicalNotes.libraryArticles.length} articles on Melbourne commercial maintenance, covering fault diagnosis, repair options, budgets and handover.`
 });
 for(const article of technicalNotes.articles){
  const [zh,en]=article.title.map(title=>title.replaceAll('\n',' '));
  const [descriptionZh,descriptionEn]=article.summary;
  const schema=JSON.stringify(technicalNotes.schema(article)).replaceAll('<','\\u003c');
  page(article.route.slice(1,-1),zh,en,technicalNotes.detail(article),'',{
-  technical:true,descriptionZh,descriptionEn,extraHead:'<script type="application/ld+json">'+schema+'</script>'+technicalNotes.detailAssets
+  technical:true,descriptionZh,descriptionEn,
+  ...(article.metaTitle && {titleZh:article.metaTitle[0],titleEn:article.metaTitle[1]}),extraHead:'<script type="application/ld+json">'+schema+'</script>'+technicalNotes.detailAssets
  });
 }
 page('areas/melbourne','墨尔本服务地区','Service area: Melbourne','');

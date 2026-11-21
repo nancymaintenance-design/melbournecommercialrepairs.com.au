@@ -1,6 +1,7 @@
 const topicVisuals = require('./technical-field-visuals.cjs');
+const editorialChapter = require('./commercial-article-chapter.cjs');
 const icons = ['01','02','03','04','05'];
-const steps = [
+const technicalSteps = [
  ['mechanism',['成因','Cause'],['从现象追溯成因','Fault mechanism']],
  ['evidence',['诊断','Diagnosis'],['先看分布，再核对证据','Map the pattern, then check the evidence']],
  ['methods',['方法','Methods'],['维修方法与适用条件','Repair options and suitability']],
@@ -27,8 +28,13 @@ const photo = name => '/assets/news-technical/led-manual/' + name + '.webp';
 const assets = '<link rel="stylesheet" href="/led-field-manual.css"><script src="/led-field-manual.js" defer></script>';
 
 function detail(article, ui) {
- const {text,paragraphs,label,link,image,h1,brand,publisher,esc,copy,serviceName,serviceArt,category,related}=ui;
+ const {text,paragraphs,label,link,image,h1,brand,publisher,esc,copy,serviceName,serviceArt,category,related,followUp}=ui;
  const topic = article.visuals || topicVisuals[article.slug];
+ const editorial = article.editorial;
+ const isFieldTopic = Boolean(topic || editorial);
+ const steps = editorial
+  ? [...editorial.map(({short,heading},index) => [technicalSteps[index][0],short,heading]),technicalSteps[4]]
+  : technicalSteps;
  const diagnosis = topic ? topic.scenes.map(([action,src],index)=>({key:'case-'+(index+1),action,src})) : ledDiagnosis;
  const initial = topic ? 0 : 1;
  const pageTitle = topic?.titleAccent
@@ -38,15 +44,15 @@ function detail(article, ui) {
   })
   : article.title;
  const service = '/services/' + article.primary + '/';
- const serviceTitle = topic ? serviceName(article.primary) : ['商业电气与照明','Commercial electrical and lighting'];
- const byline = `<p class="led-byline"><strong>${esc(publisher)}</strong> · ${text('span',['技术综述','Technical review'])}</p>`;
+ const serviceTitle = isFieldTopic ? serviceName(article.primary) : ['商业电气与照明','Commercial electrical and lighting'];
+ const byline = `<p class="led-byline"><strong>${esc(publisher)}</strong> · ${text('span',editorial?['商业维护指南','Commercial maintenance guide']:['技术综述','Technical review'])}</p>`;
  const date = article.publishedOn ? ['zh-CN','en-AU'].map(locale=>new Intl.DateTimeFormat(locale,{
   dateStyle:'long',timeZone:'UTC'
  }).format(new Date(article.publishedOn))) : null;
 
  function title(index) {
   const [id,,words]=steps[index];
-  const heading = topic && id==='evidence'
+  const heading = topic && !editorial && id==='evidence'
    ? topic.panel || ['我们如何查明故障','How we investigate the fault']
    : words;
   return `<h2 id="tn-h-${id}" class="led-chapter-title"><span class="led-chapter-number" aria-hidden="true">${icons[index]}</span>${text('span',heading)}</h2>`;
@@ -83,51 +89,55 @@ function detail(article, ui) {
    <span class="led-progress" aria-hidden="true"><i></i></span>
   </nav>
  </div>`;
- const mechanism = `<div class="led-mechanism-head">${title(0)}${text('p',topic?.aside || ['我们会把视频条纹与现场观察、实测结果一起核对。','We compare video banding with what we observe and measure on site.'],'led-aside')}</div>
-  <div class="led-mechanism-copy">${paragraphs(article.mechanism)}</div>
-  <ul class="led-keywords">${article.keywords.map(key=>text('li',key)).join('')}</ul>
-  <p class="led-context">${text('span',['延伸阅读','Further reading'])} ${link(related[0].route,related[0].title.map(s=>s.replaceAll('\n',' ')))}</p>`;
+ function technicalChapters() {
+  const mechanism = `<div class="led-mechanism-head">${title(0)}${text('p',topic?.aside || ['我们会把视频条纹与现场观察、实测结果一起核对。','We compare video banding with what we observe and measure on site.'],'led-aside')}</div>
+   <div class="led-mechanism-copy">${paragraphs(article.mechanism)}</div>
+   <ul class="led-keywords">${article.keywords.map(key=>text('li',key)).join('')}</ul>
+   <p class="led-context">${text('span',['延伸阅读','Further reading'])} ${link(related[0].route,related[0].title.map(s=>s.replaceAll('\n',' ')))}</p>`;
 
- const controls = `<fieldset class="led-diagnosis-controls" hidden>
-  ${text('legend',['选择出现状态','Choose a symptom pattern'],'led-sr-only')}
-  ${diagnosis.map(({key,action},index)=>`<label><input name="led-diagnosis" type="radio" value="${key}"${index===initial?' checked':''}><span>${text('span',action)}<i aria-hidden="true">✓</i></span></label>`).join('')}
- </fieldset>`;
+  const controls = `<fieldset class="led-diagnosis-controls" hidden>
+   ${text('legend',['选择出现状态','Choose a symptom pattern'],'led-sr-only')}
+   ${diagnosis.map(({key,action},index)=>`<label><input name="led-diagnosis" type="radio" value="${key}"${index===initial?' checked':''}><span>${text('span',action)}<i aria-hidden="true">✓</i></span></label>`).join('')}
+  </fieldset>`;
 
- const descriptions = `<div class="led-scene-copy" aria-live="polite" aria-atomic="true">
-  ${article.evidence.map(([condition,cause,check],index)=>`<div data-led-status="${diagnosis[index].key}"${index===initial?'':' hidden'}>${text('h3',condition)}${text('p',cause)}${text('strong',fields[2])}${text('p',check)}</div>`).join('')}
- </div>`;
- const evidence = `<div class="led-evidence-panel">
-  <div class="led-evidence-head">${title(1)}${controls}</div>
-  <div class="led-evidence-grid">${topic ? topicBoard() : scene('single')}${descriptions}</div>
- </div>
- <div class="led-evidence-table">
-  ${text('h3',['现象与诊断依据','Observation and diagnostic evidence'])}
-  <div class="led-table-wrap"><table role="table" ${label('现象、机理与证据','Observations, mechanisms and checks')}>
-  <thead role="rowgroup"><tr role="row">${fields.map(field=>`<th role="columnheader" scope="col" ${copy(field)}>${esc(field[0])}</th>`).join('')}</tr></thead>
-  <tbody role="rowgroup">${article.evidence.map(([condition,...cells],index)=>`<tr role="row" data-led-row="${diagnosis[index].key}">
-   <th role="rowheader" scope="row">${text('span',condition,'led-row-tag')}</th>
-   ${cells.map((cell,j)=>`<td role="cell">${text('b',fields[j+1],'led-mobile-label')}${text('span',cell)}</td>`).join('')}
-  </tr>`).join('')}</tbody></table></div>
-  <div class="tn-diagnostic-note led-judgement">${text('h3',article.judgement.heading)}${paragraphs(article.judgement.body)}</div>
- </div>`;
+  const descriptions = `<div class="led-scene-copy" aria-live="polite" aria-atomic="true">
+   ${article.evidence.map(([condition,cause,check],index)=>`<div data-led-status="${diagnosis[index].key}"${index===initial?'':' hidden'}>${text('h3',condition)}${text('p',cause)}${text('strong',fields[2])}${text('p',check)}</div>`).join('')}
+  </div>`;
+  const evidence = `<div class="led-evidence-panel">
+   <div class="led-evidence-head">${title(1)}${controls}</div>
+   <div class="led-evidence-grid">${topic ? topicBoard() : scene('single')}${descriptions}</div>
+  </div>
+  <div class="led-evidence-table">
+   ${text('h3',['现象与诊断依据','Observation and diagnostic evidence'])}
+   <div class="led-table-wrap"><table role="table" ${label('现象、机理与证据','Observations, mechanisms and checks')}>
+   <thead role="rowgroup"><tr role="row">${fields.map(field=>`<th role="columnheader" scope="col" ${copy(field)}>${esc(field[0])}</th>`).join('')}</tr></thead>
+   <tbody role="rowgroup">${article.evidence.map(([condition,...cells],index)=>`<tr role="row" data-led-row="${diagnosis[index].key}">
+    <th role="rowheader" scope="row">${text('span',condition,'led-row-tag')}</th>
+    ${cells.map((cell,j)=>`<td role="cell">${text('b',fields[j+1],'led-mobile-label')}${text('span',cell)}</td>`).join('')}
+   </tr>`).join('')}</tbody></table></div>
+   <div class="tn-diagnostic-note led-judgement">${text('h3',article.judgement.heading)}${paragraphs(article.judgement.body)}</div>
+  </div>`;
 
- const methodArt = `<figure class="led-method-parts">${image(photo('driver-dimmer'))}
-  <figcaption><span>${text('span',['驱动器','Driver'])}</span><span>${text('span',['调光状态','Dimming control'])}</span></figcaption>
- </figure>`;
- const methodVisual = index => topic
-  ? `<figure class="led-scene led-scene-method field-topic-method">${image(topic.methods[index])}
-    <figcaption>${text('span',['方法场景示意','Illustrative repair scene'])}</figcaption></figure>`
-  : index ? scene('single','method') : methodArt;
- const methods = `${title(2)}<dl class="led-methods">
-  ${article.methods.map(([name,body],index)=>`<div>${text('dt',name)}<dd>${text('p',body)}${methodVisual(index)}</dd></div>`).join('')}
- </dl>`;
- const recordRows = topic?.record || record;
- const verification = `${title(3)}<div class="led-record-panel">
-  ${text('p',['验收记录项目','What we record at handover'],'led-record-label')}
-  <dl>${recordRows.map(([key,value])=>`<div>${text('dt',key)}${text('dd',value)}</div>`).join('')}</dl>
-  ${paragraphs(article.verification)}
-  <p class="led-context">${text('span',['对应服务','Related service'])} ${link(service,serviceName(article.primary))}</p>
- </div>`;
+  const methodArt = `<figure class="led-method-parts">${image(photo('driver-dimmer'))}
+   <figcaption><span>${text('span',['驱动器','Driver'])}</span><span>${text('span',['调光状态','Dimming control'])}</span></figcaption>
+  </figure>`;
+  const methodVisual = index => topic
+   ? `<figure class="led-scene led-scene-method field-topic-method">${image(topic.methods[index])}
+     <figcaption>${text('span',['方法场景示意','Illustrative repair scene'])}</figcaption></figure>`
+   : index ? scene('single','method') : methodArt;
+  const methods = `${title(2)}<dl class="led-methods">
+   ${article.methods.map(([name,body],index)=>`<div>${text('dt',name)}<dd>${text('p',body)}${methodVisual(index)}</dd></div>`).join('')}
+  </dl>`;
+  const recordRows = topic?.record || record;
+  const verification = `${title(3)}<div class="led-record-panel">
+   ${text('p',['验收记录项目','What we record at handover'],'led-record-label')}
+   <dl>${recordRows.map(([key,value])=>`<div>${text('dt',key)}${text('dd',value)}</div>`).join('')}</dl>
+   ${paragraphs(article.verification)}
+   ${followUp?'<p class="led-context">'+text('span',['维护预算与进场协调','Maintenance budgets and access'])+' '+link(followUp.route,followUp.title.map(s=>s.replaceAll('\n',' ')))+'</p>':''}
+   <p class="led-context">${text('span',['对应服务','Related service'])} ${link(service,serviceName(article.primary))}</p>
+  </div>`;
+  return [mechanism,evidence,methods,verification].map((body,index)=>chapter(index,body)).join('');
+ }
  const questions = `${title(4)}<dl class="led-questions">
   ${article.faq.map(([q,a])=>`<div><dt><span aria-hidden="true">Q</span>${text('strong',q)}</dt><dd><span aria-hidden="true">A</span>${text('span',a)}</dd></div>`).join('')}
  </dl>`;
@@ -136,7 +146,7 @@ function detail(article, ui) {
   <section class="led-service" aria-labelledby="led-service-heading">
    <div>${text('p',['相关维修服务','Related maintenance service'])}
     <h2 id="led-service-heading">${text('span',serviceTitle)}</h2>
-    ${link(service,topic?['查看服务范围','Explore the service']:['查看电气与照明服务','Explore electrical and lighting services'],'tn-button')}${article.secondary?`
+    ${link(service,isFieldTopic?['查看服务范围','Explore the service']:['查看电气与照明服务','Explore electrical and lighting services'],'tn-button')}${article.secondary?`
     ${link('/services/'+article.secondary+'/',serviceName(article.secondary),'field-topic-secondary')}`:''}
    </div>
    ${image(serviceArt('hero-'+article.primary))}
@@ -154,11 +164,11 @@ function detail(article, ui) {
    ${link('#led-top',['回到文章顶部','Back to article top'],'','↑')}
   </nav>
  </div>`;
- const heroArt = topic ? `<figure class="led-exploded field-topic-hero-art" data-tn-parallax>
+ const heroArt = isFieldTopic ? `<figure class="led-exploded field-topic-hero-art" data-tn-parallax>
     <div class="field-topic-hero-media">${image(article.image,true)}</div>
     <figcaption>
      <ul>${article.keywords.map(key=>text('li',key)).join('')}</ul>
-     ${text('span',['技术主题示意','Technical illustration'])}
+     ${text('span',editorial?['商业维护场景示意','Commercial maintenance illustration']:['技术主题示意','Technical illustration'])}
     </figcaption>
    </figure>` : `<figure class="led-exploded" data-tn-parallax>
     <div class="led-exploded-art">${image(photo('exploded'),true)}
@@ -166,11 +176,11 @@ function detail(article, ui) {
     </div>
     <figcaption>${text('span',['结构示意，非接线图','Assembly illustration, not a wiring diagram'])}</figcaption>
    </figure>`;
- return `<article class="tn tn-detail led-manual${topic?' field-topic':''}" id="led-top">
+ return `<article class="tn tn-detail led-manual${isFieldTopic?' field-topic':''}" id="led-top">
  <header class="tn-hero led-hero" aria-labelledby="tn-article-title">
   <div class="led-wrap led-hero-grid">
    <div class="tn-hero-copy">
-    <nav class="tn-crumb" ${label('当前位置','Breadcrumb')}>${link('/',['首页','Home'],'','')}<span aria-hidden="true">/</span>${link('/insights/',['技术文章','Technical notes'],'','')}<span aria-hidden="true">/</span>${text('span',topic?category:['电气与照明','Electrical and lighting'])}</nav>
+    <nav class="tn-crumb" ${label('当前位置','Breadcrumb')}>${link('/',['首页','Home'],'','')}<span aria-hidden="true">/</span>${link('/insights/',['技术文章','Technical notes'],'','')}<span aria-hidden="true">/</span>${text('span',isFieldTopic?category:['电气与照明','Electrical and lighting'])}</nav>
     ${brand}${h1(pageTitle,'tn-article-title')}${text('p',article.summary,'led-lead')}${byline}${date?`
     <time class="led-date" datetime="${article.publishedOn}" ${copy(date)}>${esc(date[0])}</time>`:''}
    </div>
@@ -179,11 +189,8 @@ function detail(article, ui) {
  </header>
  ${chaptersBar}
  <div class="led-wrap led-reading">
-  <dl class="led-intro" ${label('诊断导读','Diagnostic guide')}>${(topic?.guide || prompts).map(([key,value])=>`<div>${text('dt',key)}${text('dd',value)}</div>`).join('')}</dl>
-  ${chapter(0,mechanism)}
-  ${chapter(1,evidence)}
-  ${chapter(2,methods)}
-  ${chapter(3,verification)}
+  ${editorial ? editorial.map(({blocks},index)=>chapter(index,editorialChapter(index,title(index),blocks,ui))).join('') :
+   `<dl class="led-intro" ${label('诊断导读','Diagnostic guide')}>${(topic?.guide || prompts).map(([key,value])=>`<div>${text('dt',key)}${text('dd',value)}</div>`).join('')}</dl>${technicalChapters()}`}
   ${chapter(4,questions)}
  </div>
  ${tail}
