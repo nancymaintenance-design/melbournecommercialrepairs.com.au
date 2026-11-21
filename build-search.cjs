@@ -5,6 +5,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const {parse} = require('parse5');
 const {origin, canonicalUrl} = require('./content/search-config.cjs');
+const {withAnalytics} = require('./content/ga4.cjs');
 const {pageRecord, writeResources} = require('./content/machine-discovery.cjs');
 const {sectors, sectorSlugs} = require('./content/site-data.cjs');
 const propertySelector = require('./home-sector-selector.js');
@@ -192,8 +193,8 @@ for (const file of pages) {
  const en = render(source, route, 'en');
  const destination = path.join(root, localeDirectory, relative);
  fs.mkdirSync(path.dirname(destination), {recursive: true});
- fs.writeFileSync(file, withMachineMetadata(zh, route, 'zh'));
- fs.writeFileSync(destination, withMachineMetadata(en, route, 'en'));
+ fs.writeFileSync(file, withAnalytics(withMachineMetadata(zh, route, 'zh'), canonicalUrl(route, 'zh')));
+ fs.writeFileSync(destination, withAnalytics(withMachineMetadata(en, route, 'en'), canonicalUrl(route, 'en')));
  const hash = crypto.createHash('sha256').update(JSON.stringify([zh.fingerprint, en.fingerprint]).replaceAll('\\r\\n', '\\n')).digest('hex');
  const entry = lastmod[route];
  const date = hash === entry?.hash ? entry.date : dateOverride;
