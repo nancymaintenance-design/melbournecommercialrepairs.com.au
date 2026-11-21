@@ -3,7 +3,18 @@ const { origin } = require('./search-config.cjs');
 const measurementId = 'G-N3CJWJXFCP';
 
 function initialiseAnalytics(productionOrigin, id, pageLocation) {
- if (location.origin !== productionOrigin || navigator.globalPrivacyControl === true || navigator.doNotTrack === '1') return;
+ if (location.origin !== productionOrigin) return;
+
+ // Cookieless Google tags may use the browser URL and referrer despite configured overrides.
+ const policy = document.createElement('meta');
+ policy.name = 'referrer';
+ policy.content = 'strict-origin';
+ document.head.append(policy);
+
+ if (navigator.globalPrivacyControl === true || navigator.doNotTrack === '1') return;
+ if (location.search && !/^\?lang=(?:zh|en)$/.test(location.search)) return;
+ const referrer = document.referrer ? new URL(document.referrer) : null;
+ if (referrer && referrer.href !== referrer.origin + '/') return;
 
  window.dataLayer = window.dataLayer || [];
  function gtag() { window.dataLayer.push(arguments); }
@@ -18,7 +29,7 @@ function initialiseAnalytics(productionOrigin, id, pageLocation) {
  gtag('js', new Date());
  gtag('config', id, {
   page_location: pageLocation,
-  page_referrer: document.referrer ? new URL(document.referrer).origin : '',
+  page_referrer: referrer?.origin || '',
   allow_google_signals: false,
   allow_ad_personalization_signals: false
  });
