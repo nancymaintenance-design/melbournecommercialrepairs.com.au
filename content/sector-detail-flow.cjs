@@ -59,13 +59,13 @@ const hotspots = [
     [49, 18, 47, 31, '墙面', 'Walls', '教室和教职员休息室的墙面维修。', 'Wall repairs in classrooms and staff rooms.'],
     [61, 40, 62, 49, '门', 'Doors', '我们按楼栋记录受影响的门和通行安排。', 'We record affected doors and access arrangements by building.'],
     [36, 74, 42, 66, '地板', 'Flooring', '我们按使用区域确认地板维修和复查项目。', 'We identify flooring repairs and checks by area of use.'],
-    [84, 76, 79, 66, '设施', 'Fixtures', '结合空间使用情况安排洗手间设施维修。', 'Coordinate washroom fixture repairs around room use.']
+    [84, 76, 79, 66, '设施', 'Fixtures', '我们结合洗手间使用时段安排设施维修。', 'We schedule fixture repairs around when the washrooms are in use.']
   ],
   [
-    [59, 31, 54, 45, '入口', 'Entrance', '结合入校及活动路线确认入口范围。', 'Define the entrance scope around school and event access.'],
+    [59, 31, 54, 45, '入口', 'Entrance', '我们核对入校和活动动线，再确定入口维修范围。', 'We check school and event access routes before confirming the entrance repairs.'],
     [18, 69, 18, 82, '围栏', 'Fencing', '我们确认场地围栏的维护范围。', 'We confirm which sections of boundary fencing need maintenance.'],
     [68, 70, 64, 82, '步道', 'Paths', '我们结合现场通行安排步道维护。', 'We plan path maintenance around site access.'],
-    [18, 43, 21, 57, '绿化', 'Planting', '将周边绿化纳入场地养护范围。', 'Include adjacent planting in grounds maintenance.']
+    [18, 43, 21, 57, '绿化', 'Planting', '我们把周边绿化纳入场地养护范围。', 'We include nearby planting in the grounds maintenance scope.']
   ]
 ];
 

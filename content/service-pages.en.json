@@ -343,8 +343,8 @@
       },
       {
         "number": "4",
-        "title": "Test and hand over",
-        "body": "We test the installation and provide the relevant work records."
+        "title": "Electrical testing and handover",
+        "body": "We arrange for licensed electricians to check the affected circuits and equipment, then provide the work records."
       }
     ],
     "gallery": {
@@ -363,7 +363,7 @@
     "handover": [
       "Repair and replacement item list",
       "Fixture & area records",
-      "Test results and work records"
+      "Electrical checks and work records"
     ],
     "faq": [
       {
@@ -474,7 +474,7 @@
       },
       {
         "number": "4",
-        "title": "Test and record the work",
+        "title": "Functional checks and work records",
         "body": "We test the repaired systems and document completion."
       }
     ],
@@ -601,8 +601,8 @@
       },
       {
         "number": "4",
-        "title": "Test operation and hand over",
-        "body": "We record completed items and any follow‑up maintenance."
+        "title": "Operational checks and handover",
+        "body": "We check how the equipment runs and record the completed work and any follow-up maintenance."
       }
     ],
     "gallery": {
@@ -728,7 +728,7 @@
       },
       {
         "number": "4",
-        "title": "Test and record the work",
+        "title": "Functional checks and work records",
         "body": "We confirm operational performance and hand over completed items."
       }
     ],
@@ -1074,7 +1074,7 @@
         },
         {
           "title": "Metal and coated finishes",
-          "body": "Select cleaning methods for the finish and check a sample area first."
+          "body": "We choose a cleaning method for the finish and check how it performs on a small area before proceeding."
         },
         {
           "title": "Brick, stone and façade surfaces",
@@ -1189,7 +1189,7 @@
     ],
     "specialistModule": {
       "title": "A cleaning schedule for each area",
-      "intro": "Define the scope, frequency and suitable access times around actual site use.",
+      "intro": "We set the cleaning scope, frequency and access times around how you use the site.",
       "items": [
         {
           "title": "Routine care",
@@ -1443,11 +1443,11 @@
         },
         {
           "title": "Remove",
-          "body": "List removal items, disposal scope and the sequence between trades."
+          "body": "We list what to remove, plan disposal and set the order of work for each trade."
         },
         {
           "title": "Restore",
-          "body": "Define repairs, replacements and finished surfaces for an item-by-item handover."
+          "body": "We specify the repairs, replacements and finishes, then go through them item by item at handover."
         }
       ]
     },

@@ -11,7 +11,7 @@ const questions = [
   },
   {
     question:['营业期间，如何安排施工？','How do you work around business hours?'],
-    title:['先了解运营，再安排作业。','Plan the work around your operations.'],
+    title:['我们按您的营业安排施工。','We schedule work around your operations.'],
     answer:['我们会按营业时段和通行要求划分施工区，提前与您确认进场时间及各工种的施工顺序。','We plan work zones around your business hours and access routes. We agree on timing and the order of work with you before we start.'],
     steps:[['了解现场','Review the site'],['划分作业区','Agree on work zones'],['确认时段','Confirm timing']]
   },

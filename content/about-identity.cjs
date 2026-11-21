@@ -29,6 +29,6 @@ exports.section=business=>{
    </div>
    <span class="ai-edge-light" aria-hidden="true"></span>
   </div>
-  <div class="ai-footnotes">${dual('p','登记资料核对日期为 '+date(business.verifiedOn,'zh-CN'),'Registration details checked on '+date(business.verifiedOn,'en-AU'),'ai-checked')}<a href="${escape(business.mapsUrl)}" target="_blank" rel="noopener noreferrer" data-zh="查看商家地图 ↗" data-en="View our location on Google Maps ↗">查看商家地图 ↗</a></div>
+  <div class="ai-footnotes">${dual('p','我们于 '+date(business.verifiedOn,'zh-CN')+' 核对登记资料','We checked the registration details on '+date(business.verifiedOn,'en-AU'),'ai-checked')}<a href="${escape(business.mapsUrl)}" target="_blank" rel="noopener noreferrer" data-zh="查看商家地图 ↗" data-en="View our location on Google Maps ↗">查看商家地图 ↗</a></div>
  </section>`;
 };

@@ -399,7 +399,7 @@
             {
               "id": "tenancy-handover",
               "title": "商铺与办公室交接",
-              "problem": "退租恢复要求、既有装饰及拆除范围需要统一。",
+              "problem": "我们先核对退租交还要求和现有装修，再确定拆除范围。",
               "approach": "我们对照双方确认的交接范围，拆分拆除、修复、涂装与清洁任务。",
               "handover": "我们按交接清单核对，并保留约定范围内的照片记录。",
               "serviceSlugs": [
@@ -495,7 +495,7 @@
             {
               "id": "tenancy-handover",
               "title": "Shop and office handovers",
-              "problem": "Make-good requirements, existing fit-out and removal boundaries need to be aligned.",
+              "problem": "We check the make-good requirements and existing fit-out before agreeing what to remove.",
               "approach": "We use the agreed handover scope to plan removal, repairs, painting and cleaning.",
               "handover": "We check the handover list and keep the photos agreed for the project.",
               "serviceSlugs": [
@@ -732,7 +732,7 @@
             {
               "id": "office-comfort",
               "title": "办公与后场设备问题",
-              "problem": "温度、照明或相关设备问题需要与房屋维修一起梳理。",
+              "problem": "我们把温度、照明和设备故障与建筑维修一起排查和安排。",
               "approach": "我们记录问题出现的位置和时间，确认设备访问条件，再分别安排检查与处理。",
               "handover": "我们说明已完成内容、运行检查结果及后续事项。",
               "serviceSlugs": [
@@ -828,7 +828,7 @@
             {
               "id": "office-comfort",
               "title": "Office and back-of-house equipment",
-              "problem": "Temperature, lighting or equipment concerns need to be considered alongside building repairs.",
+              "problem": "We investigate temperature, lighting and equipment issues alongside the building repairs and coordinate the work.",
               "approach": "We record when and where issues occur, confirm plant access and arrange the relevant checks and repairs.",
               "handover": "We report what we completed, how the equipment ran during checks and any follow-up work.",
               "serviceSlugs": [
@@ -1350,7 +1350,7 @@
             {
               "id": "warehouse-shell",
               "title": "仓库建筑外壳",
-              "problem": "屋面或门口问题需要考虑内部储物和日常进出。",
+              "problem": "我们检查屋面或入口问题时，一并确认库存位置和日常通行需求。",
               "approach": "我们确定受影响区域、访问条件及货物保护要求，再安排查看与修复。",
               "handover": "我们记录处理范围、可见完成面及约定的后续事项。",
               "serviceSlugs": [
@@ -1446,7 +1446,7 @@
             {
               "id": "warehouse-shell",
               "title": "Warehouse building fabric",
-              "problem": "Roof or entrance problems need to be considered alongside stock and everyday access.",
+              "problem": "We check roof or entrance issues with stock locations and day-to-day access in mind.",
               "approach": "We confirm the affected areas, access and stock protection before we inspect and repair the site.",
               "handover": "We record where we worked, the visible finishes and any agreed follow-up.",
               "serviceSlugs": [
@@ -1668,7 +1668,7 @@
             {
               "id": "shared-amenities",
               "title": "公共洗手间与用水区域",
-              "problem": "反复出现的用水或排水问题需要结合使用区域检查。",
+              "problem": "我们结合受影响区域的使用情况，排查反复出现的供水或排水故障。",
               "approach": "我们先记录问题出现频率和位置，再安排相应查看、维修和清洁衔接。",
               "handover": "我们说明处理内容、检查情况及需要继续观察的现象。",
               "serviceSlugs": [
@@ -1764,7 +1764,7 @@
             {
               "id": "shared-amenities",
               "title": "Shared amenities and water-use areas",
-              "problem": "Recurring plumbing or drainage issues need to be understood in their use context.",
+              "problem": "We investigate recurring plumbing or drainage issues in the context of how the affected areas are used.",
               "approach": "We record where and how often the issue occurs, then arrange the relevant checks, repairs and cleaning.",
               "handover": "We report what we repaired, what we checked and what needs monitoring.",
               "serviceSlugs": [
@@ -2291,7 +2291,7 @@
             {
               "id": "warehouse-roof",
               "title": "仓库屋面与室内保护",
-              "problem": "漏水位置与储存货物或设备区域相邻，需要先明确受影响范围。",
+              "problem": "漏水点靠近库存或设备时，我们先检查受影响的范围。",
               "approach": "我们核对漏水记录、屋面进入条件和室内保护要求，再说明检查及修复范围。",
               "handover": "我们记录处理位置、检查结果和仍需跟进的点位。",
               "serviceSlugs": [
@@ -2387,7 +2387,7 @@
             {
               "id": "warehouse-roof",
               "title": "Warehouse roof and internal protection",
-              "problem": "A reported leak is close to stored goods or equipment, so its impact needs to be defined.",
+              "problem": "Where a leak is close to stock or equipment, we first check how far the affected area extends.",
               "approach": "We check the leak history, roof access and indoor protection needs before setting the scope for investigation and repairs.",
               "handover": "We record the locations attended, inspection findings and any follow-up work.",
               "serviceSlugs": [
