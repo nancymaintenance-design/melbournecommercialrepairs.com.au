@@ -1,4 +1,4 @@
-const {articles,categories,serviceArt} = require('./technical-notes.cjs');
+const {articles,libraryArticles,categories,serviceArt} = require('./technical-notes.cjs');
 const {services,serviceSlugs} = require('./site-data.cjs');
 const {origin} = require('./search-config.cjs');
 const {name:publisher} = require('../business.json');
@@ -27,7 +27,7 @@ const filters = {
  interiors:['装饰隔断','Interiors & partitions'], floors:['地面墙面','Floor & wall systems'], doors:['门窗五金','Doors & hardware'],
  urgent:['紧急抢修','Urgent repairs']
 };
-const servicesToArticles = Object.fromEntries(serviceSlugs.map(slug=>[slug,articles
+const servicesToArticles = Object.fromEntries(serviceSlugs.map(slug=>[slug,libraryArticles
  .filter(a=>a.primary===slug || a.secondary===slug)
  .sort((a,b)=>Number(b.primary===slug)-Number(a.primary===slug))]));
 
@@ -55,7 +55,7 @@ function libraryEnding() {
 
 function library() {
  const controls = Object.entries(filters).map(([key,name])=>{
-  const count = key==='all'?articles.length:articles.filter(a=>a.category===key).length;
+  const count = key==='all'?libraryArticles.length:libraryArticles.filter(a=>a.category===key).length;
   return `<button type="button" data-tn-filter="${key}" aria-pressed="${key==='all'}" aria-controls="tn-article-results">${text('span',name)} <b>${count}</b></button>`;
  }).join('');
  return `<div class="tn tn-library tn-stage-library" data-tn-stage-library>
@@ -70,19 +70,19 @@ function library() {
    <div class="tn-filters" role="group" ${label('按服务筛选技术文章','Filter technical notes by service')} hidden>${controls}</div>
    <div class="tn-stage-heading">
     ${text('h2',['全部技术文章','All technical articles'],'tn-stage-title tn-section-heading')}
-    <p class="tn-count" role="status" aria-live="polite" aria-atomic="true">${text('span',[`共 ${articles.length} 篇`,`${articles.length} articles`])}</p>
+    <p class="tn-count" role="status" aria-live="polite" aria-atomic="true">${text('span',[`共 ${libraryArticles.length} 篇`,`${libraryArticles.length} articles`])}</p>
    </div>
    <section class="tn-rail tn-stage" data-tn-view="all" ${label('技术文章轮播','Technical articles carousel')}>
     <div class="tn-stage-scene">
      <span class="tn-stage-word" aria-hidden="true">INSIGHTS</span>
      <div id="tn-article-results" class="tn-rail-scroll" tabindex="0" role="group" ${label('技术文章','Technical articles')}>
-      ${articles.map((article,index)=>card(article,index===0)).join('')}
+      ${libraryArticles.map((article,index)=>card(article,index===0)).join('')}
      </div>
     </div>
     <div class="tn-rail-controls" hidden>
      <button type="button" data-tn-step="-1" aria-controls="tn-article-results" ${label('上一篇文章','Previous article')}>${arrow('←')}</button>
      <div class="tn-rail-progress">
-      <input type="range" min="1" max="${articles.length}" step="1" value="1" aria-controls="tn-article-results" ${label('选择文章序号','Choose an article by position')}>
+      <input type="range" min="1" max="${libraryArticles.length}" step="1" value="1" aria-controls="tn-article-results" ${label('选择文章序号','Choose an article by position')}>
       <div class="tn-stage-progress-caption">
        ${text('span',['左右滑动，查阅全部文章','Swipe to browse all articles'],'tn-stage-hint')}
        <p class="tn-rail-position" data-tn-position aria-hidden="true"></p>
@@ -125,4 +125,4 @@ function schema(article) {
   ...(article.publishedOn?{datePublished:article.publishedOn}:{})};
 }
 const assets='<link rel="stylesheet" href="/technical-notes.css"><script src="/technical-notes.js" defer></script>';
-module.exports = {articles,library,detail,detailAssets:fieldManual.assets,serviceNotes,schema,assets};
+module.exports = {articles,libraryArticles,library,detail,detailAssets:fieldManual.assets,serviceNotes,schema,assets};

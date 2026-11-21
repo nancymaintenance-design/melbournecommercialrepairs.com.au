@@ -195,6 +195,8 @@ for (const article of articles) article.publishedOn = '2026-11-20';
 const secondSeries = require('./technical-notes-series-two.cjs');
 for (const article of secondSeries) article.publishedOn = '2026-11-20';
 articles.push(...secondSeries);
+const libraryArticles = [...articles];
+articles.push(...require('./home-technical-notes.cjs'));
 
 for (const article of articles) {
  const primary = article.primary || categories[article.category][2];
@@ -204,4 +206,4 @@ for (const article of articles) {
   throw new Error('Unknown service on ' + article.slug);
  }
 }
-module.exports = {articles, categories, serviceArt};
+module.exports = {articles, libraryArticles, categories, serviceArt};

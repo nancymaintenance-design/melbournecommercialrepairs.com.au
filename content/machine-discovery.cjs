@@ -4,7 +4,7 @@ const path = require('node:path');
 const { parse } = require('parse5');
 const { origin, languages, canonicalUrl } = require('./search-config.cjs');
 const { serviceSlugs, sectorSlugs } = require('./site-data.cjs');
-const { articles } = require('./technical-notes.cjs');
+const { articles, libraryArticles } = require('./technical-notes.cjs');
 const business = require('../business.json');
 const services = require('./service-pages.json').services;
 const englishServices = require('./service-pages.en.json');
@@ -132,7 +132,7 @@ function pageRecord(html, route, language, metadata) {
   const entry = readArticle(nodes, route, language, title);
   const serviceIndex = services.findIndex(service => service.route === route);
   const service = serviceIndex < 0 ? undefined : english(language) ? englishServices[serviceIndex] : services[serviceIndex];
-  const list = directories[route] || (route === '/insights/' ? articles.map(article => article.route) : undefined);
+  const list = directories[route] || (route === '/insights/' ? libraryArticles.map(article => article.route) : undefined);
   const type = pageTypes[route] || (list ? 'CollectionPage' : 'WebPage');
   const pageId = url + (/^\/sectors\/[^/]+\/$/.test(route) ? '#topic' : '#webpage');
   const page = {

@@ -171,8 +171,8 @@ function detail(article, ui) {
   <div class="led-wrap led-hero-grid">
    <div class="tn-hero-copy">
     <nav class="tn-crumb" ${label('当前位置','Breadcrumb')}>${link('/',['首页','Home'],'','')}<span aria-hidden="true">/</span>${link('/insights/',['技术文章','Technical notes'],'','')}<span aria-hidden="true">/</span>${text('span',topic?category:['电气与照明','Electrical and lighting'])}</nav>
-    ${brand}${h1(pageTitle,'tn-article-title')}${text('p',article.summary,'led-lead')}${byline}
-    ${date?`<time class="led-date" datetime="${article.publishedOn}" ${copy(date)}>${esc(date[0])}</time>`:''}
+    ${brand}${h1(pageTitle,'tn-article-title')}${text('p',article.summary,'led-lead')}${byline}${date?`
+    <time class="led-date" datetime="${article.publishedOn}" ${copy(date)}>${esc(date[0])}</time>`:''}
    </div>
    ${heroArt}
   </div>
