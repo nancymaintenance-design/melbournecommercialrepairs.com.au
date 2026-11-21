@@ -48,7 +48,7 @@ const articles = [
    ["交接时记录修复部位、未打开的节点、排水口状态与复测条件。完工照片应能看见水的出口，而不仅是一道新胶缝。我们对照修前条件，分别记录已复现并处理的路径，以及仍需在相似风雨中复核的位置。","At handover we record the repaired detail, unopened junctions, condition of drains and retest conditions. A completion photo should show where water can leave as well as the new seal. We compare the result with the original conditions and identify paths that were reproduced and resolved, and any locations still to be checked in similar weather."]
   ],
   faq:[
-   [['水痕位置就是入水点吗？','Is the stain the entry point?'],['水可以沿接口或空腔迁移。先对照水出现的时序和可能的上游节点。','Water can travel along a junction or cavity. Compare the timing with plausible upstream details.']],
+   [['水痕位置就是入水点吗？','Is the stain the entry point?'],['水可以沿接口或空腔迁移。我们会把水痕出现的时间与上游可能进水的节点对照。','Water can travel along a junction or cavity. We compare when the stain appeared with the details where water could have entered upstream.']],
    [['补胶后没再漏就能验收吗？','Is the absence of a leak after resealing enough?'],['应记录实际经历的暴露条件与验证边界，尤其是原来只有迎风雨才出现的渗漏。','Record the exposure actually experienced and the limits of the check, particularly where the original leak needed wind-driven rain.']]
   ],
   related:['recurring-faults-maintenance','resilient-floor-moisture'], secondary:'building-maintenance'
@@ -82,7 +82,7 @@ const articles = [
    ["验收记录应保留受影响区及对照区的占用状态、设置、室温、风量和出风温度，并标明末端与楼宇控制点编号。尽量复查原投诉时段。若只完成一个季节或负荷范围内的复核，就在交接中圈出剩余工况。","We record occupancy, setting, room temperature, airflow and discharge temperature for the affected and comparison zones, with the terminal and building controls point IDs. We recheck during the original complaint period where possible. If the check covered only one season or load range, we record the conditions still to be checked."]
   ],
   faq:[
-   [['调低公共设定值能解决吗？','Will lowering the common setpoint fix it?'],['会影响其他区域，且可能增加同时制冷和再热。先分清是单区问题还是系统问题。','It affects other zones and can increase simultaneous cooling and reheat. Establish whether the issue is local or system-wide first.']],
+   [['调低公共设定值能解决吗？','Will lowering the common setpoint fix it?'],['调低设定值会影响其他区域，还可能增加同时制冷和再热。我们会先判断问题出在单个分区还是整个系统。','It can affect other zones and increase simultaneous cooling and reheat. We first establish whether the issue is local or system-wide.']],
    [['有趋势记录还需要现场读数吗？','Do trend logs replace site readings?'],['趋势揭示时序。末端读数可帮助发现传感器漂移或风阀反馈异常。','Trends show timing. Terminal measurements help identify sensor drift or misleading damper feedback.']]
   ],
   related:['partition-head-movement','recurring-faults-maintenance']
@@ -116,7 +116,7 @@ const articles = [
    ["我们复核从启动到稳定运行的表现、使用中的调光区间，以及开关或传感器触发后是否复发。我们归档实际安装的灯具、驱动和控制配置，标注测试时段和应用条件。重复发生时，后续人员可以对照这一组记录。","We recheck start-up, steady operation and the dimming range actually used, including what happens after switching or a sensor trigger. We file the installed fitting, driver and control combination with the test period and application conditions so a future call-out can use the same baseline."]
   ],
   faq:[
-   [['视频出现条纹代表灯具一定坏了吗？','Do video bands prove a fitting is faulty?'],['条纹也受拍摄设置影响。作为线索留下，还需对照现场观察和测量。','Camera settings affect banding. Keep it as a clue and compare it with site observations and measurement.']],
+   [['视频出现条纹代表灯具一定坏了吗？','Do video bands prove a fitting is faulty?'],['拍摄设置也会影响条纹。我们把视频作为线索，结合现场观察和测量结果判断。','Camera settings affect banding. We use the video as a clue and compare it with site observations and measurements.']],
    [['同瓦数的驱动器可以互换吗？','Are drivers of the same wattage interchangeable?'],['还要核对输出特性、调光方式、温度范围和灯具适配。','Output characteristics, dimming method, temperature rating and fitting compatibility also matter.']]
   ],
   related:['uneven-hvac-zones','commercial-water-ingress']
@@ -142,7 +142,7 @@ const articles = [
   judgement:{
    heading:["通水恢复后，哪些证据才支持局部修管","What justifies a targeted repair after flow returns"],
    body:[
-    ["我们会把首次回涌的器具、共用支管和复发点位放在排水示意图上。若清理后管线状况可确认，问题随负荷和来料变化，先检查源头管理和当地水务机构要求。若同一处清理后仍表现出偏移、持续积水或结构损伤，再定位并评估修管范围。","We mark the first fixture to surcharge, the shared branches and the repeat location on a drain sketch. If the pipe can be checked after cleaning and the symptoms follow load or inputs, start with source control and the local water authority’s trade waste requirements. If a displaced joint, persistent water or damage remains at the same position after clearing, we locate it and assess the repair scope."]
+    ["我们会把首次回涌的器具、共用支管和复发点位放在排水示意图上。清理后如果管线状况可以确认，而问题随负荷和排放物变化，我们会先核对源头管理及当地水务机构的要求。如果同一位置仍有偏移、持续积水或结构损伤，我们会定位问题并评估修管范围。","We mark the first fixture to surcharge, the shared branches and the repeat location on a drain sketch. If we can inspect the pipe after cleaning and the symptoms vary with load or what enters the drain, we check source control and the local water authority’s trade waste requirements first. If a displaced joint, persistent water or damage remains at the same position after clearing, we locate it and assess the repair scope."]
    ]
   },
   verification:[
@@ -161,7 +161,7 @@ const articles = [
   keywords:[['进水范围','Affected extent'],['电气检查','Electrical clearance'],['重新开放','Reopening']],
   mechanism:[
    ["水在墙脚和地板上出现后，可能继续通过内衬板、踢脚线后方、地材接缝或墙腔扩散。材料吸湿方式和干燥条件各异，最先干燥的表面通常不是情形最严重的位置。我们根据入水点、水位线、相邻空间和构造连接逐段划分影响区。","Once water reaches wall bases and flooring, it can spread behind skirtings and linings, through flooring joints or into cavities. Materials absorb and release moisture differently, and the first surface to dry may be far from the most affected area. We use the entry location, water marks, neighbouring spaces and how they connect to map the affected area."],
-   ["我们先区分来源是否仍在进水、是否可能受污染，以及有无接触电气设备的风险。遇到积水接近电气设备或安全状况不明时，我们限制进入并安排持牌电工评估。吸水、通风或更换饰面是后续材料处置，不能替代电气安全确认。","We first establish whether the source is still active, whether contamination is possible and whether water could have reached electrical equipment. Where electrics may be affected or the condition is unknown, restrict access and arrange assessment by a licensed electrician. Extraction, ventilation and finish replacement are later material decisions and do not establish electrical safety."]
+   ["我们先查明是否仍在进水、水是否可能受污染，以及是否接触了电气设备。如果电气设备可能受影响或状态不明，我们会协调限制进入，并安排持牌电工评估。受影响区域经电气安全确认后，我们再安排抽水、通风或更换饰面。","We check whether water is still coming in, whether it may be contaminated and whether it has reached electrical equipment. If electrics may be affected or their condition is unclear, we coordinate restrictions on access and arrange an assessment by a licensed electrician. In the affected area, we confirm electrical safety before arranging water extraction, ventilation or replacement of finishes."]
   ],
   evidence:[
    [['雨后外墙与门槛一带进水','Water at perimeter after rain'],['雨水进入或外部排水受限','Rain entry or restricted stormwater drainage'],['关联天气、开始时刻与外部水位。','We compare weather, onset and outside water levels.']],

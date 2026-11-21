@@ -76,7 +76,7 @@ module.exports = [
    titleAccent:['外立面和高处清洁','façade and high-access cleaning'],
    panel:['沿立面分区，查清污痕来源','Map the façade and trace the marks'],
    guide:[[['材料','Materials'],['玻璃 / 金属 / 石材与涂层','Glass / metal / stone and coatings']],[['暴露条件','Exposure'],['迎雨面 / 遮蔽面 / 径流','Rain-washed / sheltered / run-off']],[['进场条件','Access'],['入口 / 行人 / 营业','Entry / pedestrians / trading']]],
-   aside:['试清区干燥后再对比，才能看清残留和饰面变化。','Compare the patch once dry to judge residue and finish.'],
+   aside:['我们等试清区干燥后再对照残留和饰面变化。','We check the dry trial patch for residue and changes to the finish.'],
    scenes:[[ ['雨棚下方积灰','Soiling under an awning'],scene('hero-facade-high-access-cleaning')],[['窗框下方条痕','Streaks below frames'],scene('gallery-facade-high-access-cleaning-before')],[['试清后复查','Review the dry trial'],scene('gallery-facade-high-access-cleaning-after')]],
    methods:[scene('gallery-facade-high-access-cleaning-after'),cover('facade-cleaning')],
    record:[[['作业位置','Work area'],['立面、楼层和公共通道','Elevation, levels and public access']],[['试清与照片','Trial and photos'],['试清方法、干燥效果和同视角照片','Trial method, dry finish and matched photos']],[['交还','Handover'],['完成范围和需跟进的位置','Completed areas and locations for follow-up']]]
@@ -116,7 +116,7 @@ module.exports = [
    titleAccent:['标识更新与退租恢复','signage and make good between tenancies'],
    panel:['沿着店面确认保留、拆除和修补','Map what stays, comes out and needs repair'],
    guide:[[['交还范围','Handover scope'],['保留 / 拆除 / 恢复 / 新增','Retain / remove / reinstate / add']],[['基层与固定','Substrate and fixings'],['支架 / 孔位 / 饰面','Brackets / fixings / finishes']],[['配套工种','Trade coordination'],['电气 / 涂装 / 标识','Electrical / painting / signage']]],
-   aside:['先记录准备保留的构件及其连接位置，方便安排相邻工种。','Record what will stay and how it is fixed before scheduling adjacent work.'],
+   aside:['我们先记录要保留的构件和固定位置，再协调相关工种。','We record what will stay and how it is fixed before scheduling the related trades.'],
    scenes:[[ ['核对原有固定','Check existing fixings'],scene('problem-signage-fixing')],[['划定饰面修补范围','Map finish repairs'],scene('gallery-fit-outs-make-good-work')],[['协调新布局与供电','Coordinate layout and supply'],cover('signage-make-good')]],
    methods:[scene('gallery-fit-outs-make-good-existing'),scene('gallery-fit-outs-make-good-complete')],
    record:[[['范围清单','Scope schedule'],['保留、拆除、修补及新增项目','Retained, removed, repaired and new items']],[['饰面与功能','Finish and function'],['孔位、饰面衔接、标识位置与工种记录','Fixing points, finishes, sign locations and trade records']],[['最终交还','Final handover'],['现场照片、待跟进事项与责任人','Site photos, follow-up items and owners']]]

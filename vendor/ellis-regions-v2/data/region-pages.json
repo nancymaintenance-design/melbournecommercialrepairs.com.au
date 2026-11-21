@@ -385,8 +385,8 @@
               "id": "office-floor",
               "title": "营业中的办公室维修",
               "problem": "门、墙面或地面出现问题，但员工仍需使用相邻区域。",
-              "approach": "按楼层与工位分区确认修复范围，安排材料搬运和工序衔接。",
-              "handover": "逐项记录完成范围、现场清理及仍需跟进的事项。",
+              "approach": "我们按楼层与工位分区确认修复范围，安排材料搬运和工序衔接。",
+              "handover": "我们逐项记录完成范围、现场清理及仍需跟进的事项。",
               "serviceSlugs": [
                 "building-maintenance",
                 "hvac-building-systems"
@@ -400,8 +400,8 @@
               "id": "tenancy-handover",
               "title": "商铺与办公室交接",
               "problem": "退租恢复要求、既有装饰及拆除范围需要统一。",
-              "approach": "对照双方确认的交接范围，拆分拆除、修复、涂装与清洁任务。",
-              "handover": "按交接清单核对，并保留约定范围内的照片记录。",
+              "approach": "我们对照双方确认的交接范围，拆分拆除、修复、涂装与清洁任务。",
+              "handover": "我们按交接清单核对，并保留约定范围内的照片记录。",
               "serviceSlugs": [
                 "fit-outs-make-good",
                 "cleaning-waste-hygiene"
@@ -415,8 +415,8 @@
               "id": "street-front",
               "title": "临街外立面与入口",
               "problem": "玻璃、立面或入口清洁可能影响行人及门店使用。",
-              "approach": "先核对可达方式、地面隔离和营业安排，再确定工作顺序。",
-              "handover": "检查完成面及出入口恢复情况，记录无法进入的部位。",
+              "approach": "我们先核对可达方式、地面隔离和营业安排，再确定工作顺序。",
+              "handover": "我们检查完成面及出入口恢复情况，记录无法进入的部位。",
               "serviceSlugs": [
                 "facade-high-access-cleaning",
                 "building-maintenance"
@@ -481,8 +481,8 @@
               "id": "office-floor",
               "title": "Repairs in occupied offices",
               "problem": "Doors, walls or floors need attention while nearby workspaces remain in use.",
-              "approach": "Define the work by floor and work area, including materials movement and the order of trades.",
-              "handover": "Record completed items, site clean-up and any agreed follow-up work.",
+              "approach": "We confirm the scope by floor and work area, then plan materials handling and the order of trades.",
+              "handover": "We record completed work, site clean-up and agreed follow-up items.",
               "serviceSlugs": [
                 "building-maintenance",
                 "hvac-building-systems"
@@ -496,8 +496,8 @@
               "id": "tenancy-handover",
               "title": "Shop and office handovers",
               "problem": "Make-good requirements, existing fit-out and removal boundaries need to be aligned.",
-              "approach": "Work from the agreed handover scope and separate removal, repairs, painting and cleaning tasks.",
-              "handover": "Check the agreed items and retain photographic records within the project scope.",
+              "approach": "We use the agreed handover scope to plan removal, repairs, painting and cleaning.",
+              "handover": "We check the handover list and keep the photos agreed for the project.",
               "serviceSlugs": [
                 "fit-outs-make-good",
                 "cleaning-waste-hygiene"
@@ -511,8 +511,8 @@
               "id": "street-front",
               "title": "Façades and street entrances",
               "problem": "Glass, façade or entrance cleaning can affect pedestrian and shop access.",
-              "approach": "Confirm access equipment, ground separation and trading arrangements before scheduling the work.",
-              "handover": "Review finished surfaces and restored entrances, noting any inaccessible areas.",
+              "approach": "We confirm access equipment, ground-level separation and trading arrangements before scheduling the work.",
+              "handover": "We check the finished surfaces and reopened entrances and record any areas we could not access.",
               "serviceSlugs": [
                 "facade-high-access-cleaning",
                 "building-maintenance"
@@ -703,8 +703,8 @@
               "id": "customer-zone",
               "title": "顾客区域分区维修",
               "problem": "入口、店内通道或表面损坏影响空间使用。",
-              "approach": "先划清顾客路线和工作区，再确认门、墙、地面与照明的处理顺序。",
-              "handover": "按分区检查完成面和通行恢复，交回已约定的区域。",
+              "approach": "我们先划清顾客路线和工作区，再确认门、墙、地面与照明的处理顺序。",
+              "handover": "我们按分区检查完成面和通行恢复，交回已约定的区域。",
               "serviceSlugs": [
                 "building-maintenance",
                 "electrical-lighting"
@@ -718,8 +718,8 @@
               "id": "shop-refresh",
               "title": "营业间隙的门店更新",
               "problem": "现有店面需要修复或更新，但项目不一定需要整体翻新。",
-              "approach": "根据已确认范围组合局部修复、标识更新和收尾工作，讨论可用时间。",
-              "handover": "核对修复边界、标识位置及清洁收尾。",
+              "approach": "我们根据已确认范围组合局部修复、标识更新和收尾工作，讨论可用时间。",
+              "handover": "我们核对修复边界、标识位置及清洁收尾。",
               "serviceSlugs": [
                 "fit-outs-make-good",
                 "signage-wayfinding"
@@ -733,8 +733,8 @@
               "id": "office-comfort",
               "title": "办公与后场设备问题",
               "problem": "温度、照明或相关设备问题需要与房屋维修一起梳理。",
-              "approach": "记录问题出现的位置和时间，确认设备访问条件，再分别安排检查与处理。",
-              "handover": "说明已完成内容、运行检查结果及后续事项。",
+              "approach": "我们记录问题出现的位置和时间，确认设备访问条件，再分别安排检查与处理。",
+              "handover": "我们说明已完成内容、运行检查结果及后续事项。",
               "serviceSlugs": [
                 "hvac-building-systems",
                 "electrical-lighting"
@@ -799,8 +799,8 @@
               "id": "customer-zone",
               "title": "Staged customer-area repairs",
               "problem": "Entrance, aisle or surface damage affects how the space can be used.",
-              "approach": "Define customer routes and work areas, then sequence door, wall, floor and lighting tasks.",
-              "handover": "Check each agreed area and its access before handing it back.",
+              "approach": "We identify customer routes and work areas, then sequence the door, wall, floor and lighting work.",
+              "handover": "We check each completed area and its access before handing it back.",
               "serviceSlugs": [
                 "building-maintenance",
                 "electrical-lighting"
@@ -814,8 +814,8 @@
               "id": "shop-refresh",
               "title": "Targeted shop refreshes",
               "problem": "An existing shop needs repairs or updates without an assumed full refurbishment.",
-              "approach": "Combine agreed repairs, signage updates and finishing work around available time windows.",
-              "handover": "Review repair boundaries, sign positions and the agreed clean-up.",
+              "approach": "We schedule the agreed repairs, signage updates and finishing work around the available hours.",
+              "handover": "We check the limits of each repair, the sign positions and the agreed clean-up.",
               "serviceSlugs": [
                 "fit-outs-make-good",
                 "signage-wayfinding"
@@ -829,8 +829,8 @@
               "id": "office-comfort",
               "title": "Office and back-of-house equipment",
               "problem": "Temperature, lighting or equipment concerns need to be considered alongside building repairs.",
-              "approach": "Record where and when issues occur, confirm plant access and arrange the relevant checks.",
-              "handover": "Explain the completed work, operating checks and any follow-up items.",
+              "approach": "We record when and where issues occur, confirm plant access and arrange the relevant checks and repairs.",
+              "handover": "We report what we completed, how the equipment ran during checks and any follow-up work.",
               "serviceSlugs": [
                 "hvac-building-systems",
                 "electrical-lighting"
@@ -1022,8 +1022,8 @@
               "id": "roof-production",
               "title": "厂房屋面渗漏",
               "problem": "渗水位置与下方货物、设备或通行区域交叉。",
-              "approach": "先梳理内部受影响区域与屋面访问条件，再确定调查和修复范围。",
-              "handover": "记录处理部位及检查情况，说明后续观察事项。",
+              "approach": "我们先梳理内部受影响区域与屋面访问条件，再确定调查和修复范围。",
+              "handover": "我们记录处理部位及检查情况，说明后续观察事项。",
               "serviceSlugs": [
                 "roofing-waterproofing",
                 "building-maintenance"
@@ -1037,8 +1037,8 @@
               "id": "drainage-zones",
               "title": "办公与厂区排水",
               "problem": "多个用水或排水位置的问题需要明确来源和责任边界。",
-              "approach": "按办公、设备和外部场地分区确认问题，再安排相应检查与处理。",
-              "handover": "保留完成范围和检查结果，注明未包含的关联项目。",
+              "approach": "我们按办公、设备和外部场地分区确认问题，再安排相应检查与处理。",
+              "handover": "我们记录完成范围和检查结果，并把需要另行安排的关联项目单列。",
               "serviceSlugs": [
                 "plumbing-drainage-gas",
                 "car-parks-external-works"
@@ -1052,8 +1052,8 @@
               "id": "workshop-fabric",
               "title": "车间建筑与照明",
               "problem": "车间中的门、墙面或照明需要修复，同时要考虑正在使用的设备。",
-              "approach": "确认可作业区域与隔离条件，协调建筑修复和照明工作的先后顺序。",
-              "handover": "按约定区域核对完成项，并清理和恢复工作面。",
+              "approach": "我们确认可作业区域与隔离条件，协调建筑修复和照明工作的先后顺序。",
+              "handover": "我们按约定区域核对完成项，并清理和恢复工作面。",
               "serviceSlugs": [
                 "building-maintenance",
                 "electrical-lighting"
@@ -1118,8 +1118,8 @@
               "id": "roof-production",
               "title": "Roof leaks over working areas",
               "problem": "The leak location overlaps with goods, equipment or access routes below.",
-              "approach": "Identify affected internal areas and roof access before defining investigation and repair work.",
-              "handover": "Record treated areas and checks, including any follow-up observations.",
+              "approach": "We identify affected indoor areas and check roof access before setting the scope for investigation and repairs.",
+              "handover": "We record where we worked, what we checked and what needs monitoring.",
               "serviceSlugs": [
                 "roofing-waterproofing",
                 "building-maintenance"
@@ -1133,8 +1133,8 @@
               "id": "drainage-zones",
               "title": "Office and industrial drainage",
               "problem": "Issues across several water or drainage points need clear boundaries.",
-              "approach": "Separate office, plant-area and external drainage concerns before arranging the relevant checks.",
-              "handover": "Document the work and checks, identifying related items outside the agreed scope.",
+              "approach": "We separate drainage issues in offices, plant areas and outdoor areas, then arrange the relevant checks.",
+              "handover": "We document the work and checks and identify related items for a separate scope.",
               "serviceSlugs": [
                 "plumbing-drainage-gas",
                 "car-parks-external-works"
@@ -1148,8 +1148,8 @@
               "id": "workshop-fabric",
               "title": "Workshop fabric and lighting",
               "problem": "Doors, finishes or lighting need attention around equipment that remains in use.",
-              "approach": "Confirm work areas and separation conditions, then sequence the building and lighting tasks.",
-              "handover": "Review agreed items, clear the work area and record handover conditions.",
+              "approach": "We confirm the work areas and separation arrangements, then sequence the building repairs and lighting work.",
+              "handover": "We check the agreed items, clear the area and record the condition at handover.",
               "serviceSlugs": [
                 "building-maintenance",
                 "electrical-lighting"
@@ -1336,8 +1336,8 @@
               "id": "loading-route",
               "title": "装卸通道与外部地面",
               "problem": "损坏地面、模糊划线或入口问题影响使用安排。",
-              "approach": "先梳理车辆和步行路线，明确维修边界与可分区工作面。",
-              "handover": "检查修复部位、标识和通道恢复情况。",
+              "approach": "我们先梳理车辆和步行路线，明确维修边界与可分区工作面。",
+              "handover": "我们检查修复部位、标识和通道恢复情况。",
               "serviceSlugs": [
                 "car-parks-external-works",
                 "signage-wayfinding"
@@ -1351,8 +1351,8 @@
               "id": "warehouse-shell",
               "title": "仓库建筑外壳",
               "problem": "屋面或门口问题需要考虑内部储物和日常进出。",
-              "approach": "确定受影响区域、访问条件及货物保护要求，再安排查看与修复。",
-              "handover": "记录处理范围、可见完成面及约定的后续事项。",
+              "approach": "我们确定受影响区域、访问条件及货物保护要求，再安排查看与修复。",
+              "handover": "我们记录处理范围、可见完成面及约定的后续事项。",
               "serviceSlugs": [
                 "roofing-waterproofing",
                 "building-maintenance"
@@ -1366,8 +1366,8 @@
               "id": "multi-tenant-estate",
               "title": "多租户园区公区",
               "problem": "不同租户共享入口、停车和导视，维修边界容易混在一起。",
-              "approach": "把共有区域与租户范围分开，逐项确认管理联系人和处理顺序。",
-              "handover": "以区域清单核对完成项，说明仍需其他方确认的内容。",
+              "approach": "我们把共有区域与租户范围分开，逐项确认管理联系人和处理顺序。",
+              "handover": "我们按区域清单核对完成事项，并列明仍待确认的决定。",
               "serviceSlugs": [
                 "building-maintenance",
                 "car-parks-external-works"
@@ -1432,8 +1432,8 @@
               "id": "loading-route",
               "title": "Loading routes and external surfaces",
               "problem": "Surface damage, faded markings or entrance problems affect site use.",
-              "approach": "Map vehicle and pedestrian routes, then define repair boundaries and work areas that can be separated.",
-              "handover": "Review repairs, markings and the agreed restoration of access.",
+              "approach": "We map vehicle and pedestrian routes to define the repair limits and work zones we can separate.",
+              "handover": "We check the repairs, markings and restored access routes.",
               "serviceSlugs": [
                 "car-parks-external-works",
                 "signage-wayfinding"
@@ -1447,8 +1447,8 @@
               "id": "warehouse-shell",
               "title": "Warehouse building fabric",
               "problem": "Roof or entrance problems need to be considered alongside stock and everyday access.",
-              "approach": "Confirm affected areas, access and stock-protection requirements before investigation and repairs.",
-              "handover": "Record the treated scope, visible finishes and agreed follow-up items.",
+              "approach": "We confirm the affected areas, access and stock protection before we inspect and repair the site.",
+              "handover": "We record where we worked, the visible finishes and any agreed follow-up.",
               "serviceSlugs": [
                 "roofing-waterproofing",
                 "building-maintenance"
@@ -1462,8 +1462,8 @@
               "id": "multi-tenant-estate",
               "title": "Shared areas in multi-tenant estates",
               "problem": "Shared entries, parking and wayfinding can have overlapping maintenance responsibilities.",
-              "approach": "Separate common areas from tenancy scope and identify contacts and work priorities.",
-              "handover": "Check completed items by area and identify anything awaiting another party’s decision.",
+              "approach": "We separate common-area work from tenancy work and confirm the site contacts and priorities.",
+              "handover": "We check the completed items by area and list any decisions still needed.",
               "serviceSlugs": [
                 "building-maintenance",
                 "car-parks-external-works"
@@ -1654,8 +1654,8 @@
               "id": "defect-list",
               "title": "积累的建筑小修",
               "problem": "门窗、墙面和地面等问题分散，难以一次说清工作范围。",
-              "approach": "按位置拍照并归类，确认每个修复点的使用影响和处理边界。",
-              "handover": "用逐项清单记录已完成、待确认及后续建议。",
+              "approach": "我们按位置拍照并归类，确认每个修复点的使用影响和处理边界。",
+              "handover": "我们用逐项清单记录已完成、待确认及后续建议。",
               "serviceSlugs": [
                 "building-maintenance",
                 "electrical-lighting"
@@ -1669,8 +1669,8 @@
               "id": "shared-amenities",
               "title": "公共洗手间与用水区域",
               "problem": "反复出现的用水或排水问题需要结合使用区域检查。",
-              "approach": "先记录问题出现频率和位置，再安排相应查看、维修和清洁衔接。",
-              "handover": "说明处理内容、检查情况及需要继续观察的现象。",
+              "approach": "我们先记录问题出现频率和位置，再安排相应查看、维修和清洁衔接。",
+              "handover": "我们说明处理内容、检查情况及需要继续观察的现象。",
               "serviceSlugs": [
                 "plumbing-drainage-gas",
                 "cleaning-waste-hygiene"
@@ -1684,8 +1684,8 @@
               "id": "site-presentation",
               "title": "入口及外部环境维护",
               "problem": "入口、园林与外部区域的工作来自不同报修事项。",
-              "approach": "把建筑入口、种植区和灌溉需求分别列出，按进入条件与现场使用安排任务。",
-              "handover": "核对约定范围，清理工作区并记录后续维护事项。",
+              "approach": "我们把建筑入口、种植区和灌溉需求分别列出，按进入条件与现场使用安排任务。",
+              "handover": "我们核对约定范围，清理工作区并记录后续维护事项。",
               "serviceSlugs": [
                 "landscaping-irrigation",
                 "building-maintenance"
@@ -1750,8 +1750,8 @@
               "id": "defect-list",
               "title": "Accumulated building repairs",
               "problem": "Door, wall and floor issues are spread across the property and need a clear scope.",
-              "approach": "Group photographed items by location, use and the boundaries of each repair.",
-              "handover": "Use an itemised record of completed work, outstanding decisions and follow-up recommendations.",
+              "approach": "We photograph and group the issues by location, then confirm the impact on use and the scope of each repair.",
+              "handover": "We list completed work, outstanding decisions and follow-up recommendations.",
               "serviceSlugs": [
                 "building-maintenance",
                 "electrical-lighting"
@@ -1765,8 +1765,8 @@
               "id": "shared-amenities",
               "title": "Shared amenities and water-use areas",
               "problem": "Recurring plumbing or drainage issues need to be understood in their use context.",
-              "approach": "Record the frequency and location, then coordinate the relevant checks, repairs and cleaning.",
-              "handover": "Explain what was treated, the checks made and anything to continue observing.",
+              "approach": "We record where and how often the issue occurs, then arrange the relevant checks, repairs and cleaning.",
+              "handover": "We report what we repaired, what we checked and what needs monitoring.",
               "serviceSlugs": [
                 "plumbing-drainage-gas",
                 "cleaning-waste-hygiene"
@@ -1780,8 +1780,8 @@
               "id": "site-presentation",
               "title": "Entrances and external presentation",
               "problem": "Entrance, planting and external-area tasks have come from separate requests.",
-              "approach": "Separate building entry, landscape and irrigation needs and arrange them around access and site use.",
-              "handover": "Review the agreed work, clear the area and note ongoing maintenance items.",
+              "approach": "We list entry, landscaping and irrigation tasks separately and schedule them around access and site use.",
+              "handover": "We check the agreed work, clear the area and record follow-up maintenance.",
               "serviceSlugs": [
                 "landscaping-irrigation",
                 "building-maintenance"
@@ -1975,8 +1975,8 @@
               "id": "clinic-reception",
               "title": "诊所与接待空间",
               "problem": "门具、墙面或空调问题与预约接待区域重叠。",
-              "approach": "先确认房间用途、工作边界与出入安排，再分项处理建筑和设备维护。",
-              "handover": "交接完成事项、剩余问题和恢复使用前需要确认的内容。",
+              "approach": "我们先确认房间用途、工作边界与出入安排，再分项处理建筑和设备维护。",
+              "handover": "我们交接完成事项、剩余问题和恢复使用前需要确认的内容。",
               "serviceSlugs": [
                 "building-maintenance",
                 "hvac-building-systems"
@@ -1990,8 +1990,8 @@
               "id": "community-amenities",
               "title": "教育与社区共用设施",
               "problem": "洗手间、茶水区与庭院设施需要在人员使用间隙维护。",
-              "approach": "核对设施清单、用水安排与室外作业边界，将清理、修复和复查分阶段衔接。",
-              "handover": "说明已处理点位及后续维护观察事项。",
+              "approach": "我们核对设施清单、用水安排与室外作业边界，将清理、修复和复查分阶段衔接。",
+              "handover": "我们说明已处理点位及后续维护观察事项。",
               "serviceSlugs": [
                 "plumbing-drainage-gas",
                 "landscaping-irrigation"
@@ -2005,8 +2005,8 @@
               "id": "mixed-tenancy",
               "title": "商业街与楼上办公室",
               "problem": "同一物业有不同租户，室内问题可能涉及公共出入或楼宇设备。",
-              "approach": "区分租户内部与共用区域的工作范围，联系指定现场负责人后安排维修。",
-              "handover": "按区域提供工作记录，便于物业与租户分别跟进。",
+              "approach": "我们区分租户内部与共用区域的工作范围，联系指定现场负责人后安排维修。",
+              "handover": "我们按区域提供工作记录，便于物业与租户分别跟进。",
               "serviceSlugs": [
                 "building-maintenance",
                 "hvac-building-systems"
@@ -2071,8 +2071,8 @@
               "id": "clinic-reception",
               "title": "Clinics and reception spaces",
               "problem": "Door, finish or air-conditioning issues affect an occupied reception area.",
-              "approach": "Confirm room use, work boundaries and access before separating building and equipment tasks.",
-              "handover": "Record completed tasks, outstanding issues and checks required before the area returns to use.",
+              "approach": "We confirm room use, access and work limits before scheduling building and equipment work separately.",
+              "handover": "We record completed work, outstanding issues and checks needed before the area returns to use.",
               "serviceSlugs": [
                 "building-maintenance",
                 "hvac-building-systems"
@@ -2086,8 +2086,8 @@
               "id": "community-amenities",
               "title": "Education and community amenities",
               "problem": "Amenities, staff areas and courtyards need attention between periods of use.",
-              "approach": "Review the facilities list, water-use arrangements and outdoor boundaries; stage cleaning, repairs and checks.",
-              "handover": "Identify attended locations and items to monitor during ongoing maintenance.",
+              "approach": "We check the facilities list, water-use arrangements and outdoor work boundaries, then schedule cleaning, repairs and checks in stages.",
+              "handover": "We report where we worked and what to monitor during ongoing maintenance.",
               "serviceSlugs": [
                 "plumbing-drainage-gas",
                 "landscaping-irrigation"
@@ -2101,8 +2101,8 @@
               "id": "mixed-tenancy",
               "title": "Shops with offices above",
               "problem": "Different tenants share entrances or building services while reporting separate defects.",
-              "approach": "Separate tenancy work from shared-area tasks and arrange access with the nominated site contact.",
-              "handover": "Provide work notes by area so the property manager and tenants can follow up.",
+              "approach": "We separate tenancy work from common-area work and arrange access with the nominated site contact.",
+              "handover": "We provide a record by area so the property manager and tenants can follow up on their respective items.",
               "serviceSlugs": [
                 "building-maintenance",
                 "hvac-building-systems"
@@ -2292,8 +2292,8 @@
               "id": "warehouse-roof",
               "title": "仓库屋面与室内保护",
               "problem": "漏水位置与储存货物或设备区域相邻，需要先明确受影响范围。",
-              "approach": "核对漏水记录、屋面进入条件和室内保护要求，再说明检查及修复范围。",
-              "handover": "记录处理位置、检查结果和仍需跟进的点位。",
+              "approach": "我们核对漏水记录、屋面进入条件和室内保护要求，再说明检查及修复范围。",
+              "handover": "我们记录处理位置、检查结果和仍需跟进的点位。",
               "serviceSlugs": [
                 "roofing-waterproofing",
                 "building-maintenance"
@@ -2307,8 +2307,8 @@
               "id": "loading-access",
               "title": "装卸区与车辆通道",
               "problem": "路面、划线或入口设施维修可能与送货和人员通行发生重叠。",
-              "approach": "结合装卸时间划分施工区域，说明临时通行、作业顺序和恢复开放条件。",
-              "handover": "按区域交接完成事项和使用注意点。",
+              "approach": "我们结合装卸时间划分施工区域，说明临时通行、作业顺序和恢复开放条件。",
+              "handover": "我们按区域交接完成事项和使用注意点。",
               "serviceSlugs": [
                 "car-parks-external-works",
                 "electrical-lighting"
@@ -2322,8 +2322,8 @@
               "id": "showroom-office",
               "title": "展厅与附属办公室",
               "problem": "同一场地的客户接待区、员工空间与仓储区域需要不同维修安排。",
-              "approach": "分别梳理门具、表面与照明问题，把接待使用和作业时间一起确认。",
-              "handover": "按各使用区域记录已处理事项，便于内部负责人接收。",
+              "approach": "我们分别梳理门具、表面与照明问题，把接待使用和作业时间一起确认。",
+              "handover": "我们按各使用区域记录已处理事项，便于内部负责人接收。",
               "serviceSlugs": [
                 "building-maintenance",
                 "electrical-lighting"
@@ -2388,8 +2388,8 @@
               "id": "warehouse-roof",
               "title": "Warehouse roof and internal protection",
               "problem": "A reported leak is close to stored goods or equipment, so its impact needs to be defined.",
-              "approach": "Review leak history, roof access and internal protection needs before defining inspection and repair work.",
-              "handover": "Record attended locations, inspection outcomes and remaining follow-up items.",
+              "approach": "We check the leak history, roof access and indoor protection needs before setting the scope for investigation and repairs.",
+              "handover": "We record the locations attended, inspection findings and any follow-up work.",
               "serviceSlugs": [
                 "roofing-waterproofing",
                 "building-maintenance"
@@ -2403,8 +2403,8 @@
               "id": "loading-access",
               "title": "Loading areas and vehicle routes",
               "problem": "Surface, marking or entrance repairs may overlap deliveries and pedestrian movement.",
-              "approach": "Use loading windows to define work zones, temporary access, sequence and reopening requirements.",
-              "handover": "Hand over completed work and use considerations for each area.",
+              "approach": "We plan work zones around loading times and confirm temporary access, work sequence and reopening requirements.",
+              "handover": "We hand over completed work and note any use requirements for each area.",
               "serviceSlugs": [
                 "car-parks-external-works",
                 "electrical-lighting"
@@ -2419,7 +2419,7 @@
               "title": "Showrooms and adjoining offices",
               "problem": "Customer-facing, staff and warehouse spaces require different maintenance arrangements.",
               "approach": "We check doors, finishes and lighting, then plan repairs around use of the reception area.",
-              "handover": "Record completed tasks by use area for the relevant site contacts.",
+              "handover": "We record completed work by area for the relevant site contacts.",
               "serviceSlugs": [
                 "building-maintenance",
                 "electrical-lighting"
@@ -2610,8 +2610,8 @@
               "id": "active-shopfront",
               "title": "营业中的店面与外立面",
               "problem": "玻璃、外墙或标识需要处理，但入口和顾客通行仍需使用。",
-              "approach": "核对立面材质、安装位置、进入方式和作业边界，再衔接清洁与标识工作。",
-              "handover": "交接处理范围和完成照片，说明仍需跟进的部位。",
+              "approach": "我们核对立面材质、安装位置、进入方式和作业边界，再衔接清洁与标识工作。",
+              "handover": "我们交接处理范围和完成照片，说明仍需跟进的部位。",
               "serviceSlugs": [
                 "facade-high-access-cleaning",
                 "signage-wayfinding"
@@ -2625,8 +2625,8 @@
               "id": "roof-external",
               "title": "屋面与外部构件",
               "problem": "漏水、排水不畅或表面损坏需要明确具体位置与原因。",
-              "approach": "根据现场和记录检查相关构件，再说明修复选项与所需进入安排。",
-              "handover": "记录施工位置及检查结果，便于后续观察。",
+              "approach": "我们根据现场和记录检查相关构件，再说明修复选项与所需进入安排。",
+              "handover": "我们记录施工位置及检查结果，便于后续观察。",
               "serviceSlugs": [
                 "roofing-waterproofing",
                 "building-maintenance"
@@ -2640,8 +2640,8 @@
               "id": "industrial-forecourt",
               "title": "工业物业入口与停车区",
               "problem": "车辆入口、行人路线和停车区域的维护互相关联。",
-              "approach": "先梳理现场进出路线，再安排地面、划线与照明等事项。",
-              "handover": "按场地区域确认完成项与恢复使用要求。",
+              "approach": "我们先梳理现场进出路线，再安排地面、划线与照明等事项。",
+              "handover": "我们按场地区域确认完成项与恢复使用要求。",
               "serviceSlugs": [
                 "car-parks-external-works",
                 "electrical-lighting"
@@ -2706,8 +2706,8 @@
               "id": "active-shopfront",
               "title": "Trading shopfronts and façades",
               "problem": "Glazing, façade or signage work must be planned around an entrance used by customers.",
-              "approach": "Review materials, sign positions, access methods and work boundaries before coordinating cleaning and signage tasks.",
-              "handover": "Provide the completed scope and photos, identifying any areas that need follow-up.",
+              "approach": "We check façade materials, sign locations, access and work boundaries before scheduling cleaning and signage work.",
+              "handover": "We provide the completed scope and photos and identify areas that need follow-up.",
               "serviceSlugs": [
                 "facade-high-access-cleaning",
                 "signage-wayfinding"
@@ -2721,8 +2721,8 @@
               "id": "roof-external",
               "title": "Roofs and external components",
               "problem": "A leak, drainage issue or surface defect needs its location and cause investigated.",
-              "approach": "Inspect relevant components using site observations and records, then explain repair options and access needs.",
-              "handover": "Record work locations and inspection findings for future monitoring.",
+              "approach": "We inspect the relevant components and check the site records before explaining repair options and access requirements.",
+              "handover": "We record the work locations and inspection findings for follow-up.",
               "serviceSlugs": [
                 "roofing-waterproofing",
                 "building-maintenance"
@@ -2736,8 +2736,8 @@
               "id": "industrial-forecourt",
               "title": "Industrial entrances and parking areas",
               "problem": "Vehicle entries, pedestrian routes and parking-area maintenance affect one another.",
-              "approach": "Review entry and exit routes before planning surface, marking and lighting work.",
-              "handover": "Confirm completed tasks and reopening requirements by site area.",
+              "approach": "We check entry and exit routes before planning surface repairs, marking and lighting work.",
+              "handover": "We confirm completed tasks and reopening requirements by area.",
               "serviceSlugs": [
                 "car-parks-external-works",
                 "electrical-lighting"
@@ -2926,8 +2926,8 @@
               "id": "tenancy-change",
               "title": "商铺与办公室交接",
               "problem": "退租恢复、既有装修处理与下一阶段使用要求需要厘清。",
-              "approach": "结合交接资料和现场检查列出保留、拆除、修复及清理事项，说明施工顺序。",
-              "handover": "按照确认清单记录完成事项和待决定内容。",
+              "approach": "我们结合交接资料和现场检查列出保留、拆除、修复及清理事项，说明施工顺序。",
+              "handover": "我们按照确认清单记录完成事项和待决定内容。",
               "serviceSlugs": [
                 "fit-outs-make-good",
                 "building-maintenance"
@@ -2941,8 +2941,8 @@
               "id": "occupied-commercial",
               "title": "使用中的商业与办公楼",
               "problem": "门具、墙地面或照明需求逐步累积，难以一次全部停用处理。",
-              "approach": "按影响与进入条件整理项目，把可同时处理和需分阶段完成的事项区分开。",
-              "handover": "提供分区完成记录与后续维护事项。",
+              "approach": "我们按影响与进入条件整理项目，把可同时处理和需分阶段完成的事项区分开。",
+              "handover": "我们提供分区完成记录与后续维护事项。",
               "serviceSlugs": [
                 "building-maintenance",
                 "electrical-lighting"
@@ -2956,8 +2956,8 @@
               "id": "park-grounds",
               "title": "商业园区与室外场地",
               "problem": "入口、绿化、灌溉和日常人员活动之间需要持续衔接。",
-              "approach": "核对园区边界、用水条件、车辆及人员路线，确定分区维护内容。",
-              "handover": "记录已处理区域与可继续安排的周期性工作。",
+              "approach": "我们核对园区边界、用水条件、车辆及人员路线，确定分区维护内容。",
+              "handover": "我们记录已处理区域与可继续安排的周期性工作。",
               "serviceSlugs": [
                 "landscaping-irrigation",
                 "car-parks-external-works"
@@ -3022,8 +3022,8 @@
               "id": "tenancy-change",
               "title": "Shop and office tenancy changes",
               "problem": "Make-good work, existing fit-outs and the next use of the premises need a clear scope.",
-              "approach": "Use handover documents and a site review to list retained items, removals, repairs and cleaning, then define the sequence.",
-              "handover": "Record completed items and outstanding decisions against the agreed list.",
+              "approach": "We use the handover documents and site inspection to list what stays, what comes out, what needs repair and what needs cleaning, then set the work sequence.",
+              "handover": "We record completed items and outstanding decisions against the agreed list.",
               "serviceSlugs": [
                 "fit-outs-make-good",
                 "building-maintenance"
@@ -3037,8 +3037,8 @@
               "id": "occupied-commercial",
               "title": "Occupied commercial and office buildings",
               "problem": "Door, finish or lighting tasks accumulate while the building remains in use.",
-              "approach": "Sort tasks by impact and access, distinguishing work that can be combined from work requiring stages.",
-              "handover": "Provide completion notes by area and identify subsequent maintenance items.",
+              "approach": "We group tasks by their impact and access needs and identify which can run together and which need separate stages.",
+              "handover": "We provide completion notes by area and list follow-up maintenance work.",
               "serviceSlugs": [
                 "building-maintenance",
                 "electrical-lighting"
@@ -3052,8 +3052,8 @@
               "id": "park-grounds",
               "title": "Business-park grounds and external areas",
               "problem": "Entrances, planting, irrigation and daily site use need coordinated attention.",
-              "approach": "Review boundaries, water arrangements, vehicle and pedestrian routes, then define maintenance by area.",
-              "handover": "Record attended areas and recurring tasks that can be scheduled next.",
+              "approach": "We check site boundaries, water supply arrangements and vehicle and pedestrian routes before defining the maintenance by area.",
+              "handover": "We record the areas we worked on and the recurring tasks we can schedule next.",
               "serviceSlugs": [
                 "landscaping-irrigation",
                 "car-parks-external-works"
@@ -3243,8 +3243,8 @@
               "id": "hospitality-visitor",
               "title": "餐饮与访客接待空间",
               "problem": "入口、公共设施和营业区域需要修复或清洁，同时存在预约与接待安排。",
-              "approach": "先确认营业计划与可交出的区域，再组合建筑维修、清洁和收尾检查。",
-              "handover": "分清已恢复区域、待处理事项和后续维护建议。",
+              "approach": "我们先确认营业计划与可交出的区域，再组合建筑维修、清洁和收尾检查。",
+              "handover": "我们分清已恢复区域、待处理事项和后续维护建议。",
               "serviceSlugs": [
                 "building-maintenance",
                 "cleaning-waste-hygiene"
@@ -3258,8 +3258,8 @@
               "id": "industrial-maintenance",
               "title": "工业与仓储物业",
               "problem": "屋面、门具或公共设施问题影响不同区域，需要按现场用途处理。",
-              "approach": "核对受影响位置、储存区域与进出路线，确定检查、修复和保护安排。",
-              "handover": "按物业区域记录完成内容及需继续观察的事项。",
+              "approach": "我们核对受影响位置、储存区域与进出路线，确定检查、修复和保护安排。",
+              "handover": "我们按物业区域记录完成内容及需继续观察的事项。",
               "serviceSlugs": [
                 "roofing-waterproofing",
                 "building-maintenance"
@@ -3273,8 +3273,8 @@
               "id": "visitor-grounds",
               "title": "入口庭院与室外环境",
               "problem": "种植、灌溉、步道与日常清理需要作为同一使用环境维护。",
-              "approach": "查看用水条件、访客路线、绿化现状与清理需求，安排分区工作。",
-              "handover": "交接已维护区域和可按周期安排的后续事项。",
+              "approach": "我们查看用水条件、访客路线、绿化现状与清理需求，安排分区工作。",
+              "handover": "我们交接已维护区域和可按周期安排的后续事项。",
               "serviceSlugs": [
                 "landscaping-irrigation",
                 "cleaning-waste-hygiene"
@@ -3339,8 +3339,8 @@
               "id": "hospitality-visitor",
               "title": "Hospitality and visitor spaces",
               "problem": "Entrances, amenities and trading spaces need repairs or cleaning around bookings and visitors.",
-              "approach": "Confirm trading arrangements and available work areas before coordinating repairs, cleaning and handover checks.",
-              "handover": "Identify returned areas, remaining tasks and follow-on maintenance recommendations.",
+              "approach": "We confirm trading hours and available work areas before coordinating repairs, cleaning and handover checks.",
+              "handover": "We list the areas handed back, work still outstanding and recommended maintenance.",
               "serviceSlugs": [
                 "building-maintenance",
                 "cleaning-waste-hygiene"
@@ -3354,8 +3354,8 @@
               "id": "industrial-maintenance",
               "title": "Industrial and storage premises",
               "problem": "Roof, door or shared-facility issues affect different parts of the premises.",
-              "approach": "Review affected locations, storage areas and access routes to define inspection, repairs and protection.",
-              "handover": "Record completed work and monitoring items by property area.",
+              "approach": "We check affected locations, storage areas and access routes before arranging inspections, repairs and site protection.",
+              "handover": "We record completed work and items to monitor by property area.",
               "serviceSlugs": [
                 "roofing-waterproofing",
                 "building-maintenance"
@@ -3369,8 +3369,8 @@
               "id": "visitor-grounds",
               "title": "Entrances, courtyards and outdoor areas",
               "problem": "Planting, irrigation, paths and routine cleaning form one shared outdoor environment.",
-              "approach": "Review water arrangements, visitor routes, planting condition and cleaning needs to plan work by zone.",
-              "handover": "Hand over maintained areas and follow-up tasks suitable for a recurring schedule.",
+              "approach": "We check water availability, visitor routes, planting and cleaning needs before scheduling work by area.",
+              "handover": "We hand over the areas maintained and list follow-up work suited to a recurring schedule.",
               "serviceSlugs": [
                 "landscaping-irrigation",
                 "cleaning-waste-hygiene"
