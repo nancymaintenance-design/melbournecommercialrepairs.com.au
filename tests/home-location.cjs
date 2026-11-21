@@ -76,7 +76,7 @@ assert.equal(heroHeadings.length,1,'Original Contact uses one H2');
 assert(attributes(heroHeadings[0][0])['data-zh']&&attributes(heroHeadings[0][0])['data-en'],'Original Contact title remains bilingual');
 assert.equal((home.match(/<h1\b/g)||[]).length,1,'Homepage retains its single original H1');
 assert.equal((location.html.match(/<h1\b/g)||[]).length,0,'Map adds no page H1');
-assert.equal(byId(home,'quote-dialog').length,1,'Existing quote modal is retained');
+assert.equal(byId(home,'quote-dialog').length,0,'Obsolete draft dialog is absent');
 assert.equal(byId(contact,'contact-enquiry-form').length,1,'Actual Contact page still has its enquiry form');
 assert.equal((contact.match(/<h1\b/g)||[]).length,1,'Actual Contact page retains one H1');
 assert.match(contact,/<body\b[^>]*\bcontact-page\b/,'Contact keeps its dedicated form layout');

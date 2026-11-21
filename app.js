@@ -80,9 +80,6 @@
     if(!grid.querySelector('.showcase-card')) grid.innerHTML=window.EllisServiceShowcase.cards(services,serviceSlugs);
     grid.querySelectorAll('[data-service]').forEach(card=>{const index=Number(card.dataset.service);card.href='/services/'+serviceSlugs[index]+'/?lang='+language;card.setAttribute('aria-label',tr('查看','Explore ')+services[index][language]);});
 
-    const previousValue = $('#quote-service').value;
-    $('#quote-service').innerHTML = `<option value="">${tr('选择服务类型','Select a service')}</option><option value="multi">${tr('多项服务 / 综合维护','Multiple services / General maintenance')}</option>` + services.map((service,index) => `<option value="${index}">${service[language]}</option>`).join('');
-    $('#quote-service').value = previousValue;
   }
   function renderSectors() {
     renderSectorFilm();
@@ -150,15 +147,12 @@
     $('.lang-zh').classList.toggle('active',language==='zh');
     $('.lang-en').classList.toggle('active',language==='en');
     $('#language-switch').setAttribute('aria-label',tr('Switch to English','切换到中文'));
-    $('#draft-result').hidden=true;
     $('#main-nav').setAttribute('aria-label',tr('主导航','Main navigation'));
     $('#menu-toggle').setAttribute('aria-label',$('#menu-toggle').getAttribute('aria-expanded')==='true'?tr('关闭菜单','Close menu'):tr('打开菜单','Open menu'));
 
     $('#sector-options').setAttribute('aria-label',tr('商业物业种类','Commercial property sectors'));
     $$('[data-close]').forEach(button=>button.setAttribute('aria-label',tr('关闭','Close')));
-    $('#draft-text').setAttribute('aria-label',tr('咨询草稿','Enquiry draft'));
-    const selectedService=$('#quote-service').value;
-    renderServices(); renderRibbon(); $('#quote-service').value=selectedService; renderSectors(); renderNews(); renderFaq(); updateMotionControls();
+    renderServices(); renderRibbon(); renderSectors(); renderNews(); renderFaq(); updateMotionControls();
     $$('.section-heading h2,.section-heading .heading-aside,.faq-intro,.about-copy,.contact-main h2,.footer-wordmark').forEach(el=>el.setAttribute('data-reveal',''));
     $$('.city-illustration').forEach(el=>el.setAttribute('data-parallax','25'));
     $$('.news-art svg').forEach(el=>el.setAttribute('data-parallax','16'));
@@ -206,7 +200,7 @@
   function openQuote(options={}) {
     const current=new URLSearchParams(location.search);
     const params=new URLSearchParams({lang:language});
-    const requested=String(options.service??current.get('service')??$('#quote-service').value);
+    const requested=String(options.service??current.get('service')??'');
     const service=requested==='multi'||serviceSlugs.includes(requested)?requested:/^(?:[0-9]|1[01])$/.test(requested)?serviceSlugs[Number(requested)]:'';
     if(service) params.set('service',service);
     const region=options.region??current.get('region');
@@ -217,19 +211,6 @@
   }
   $$('[data-quote]').forEach(button=>button.addEventListener('click',()=>openQuote()));
   $$('[data-region]').forEach(button=>button.addEventListener('click',()=>openQuote({region:button.dataset.region})));
-  $('#quote-form').addEventListener('submit',event=>{
-    event.preventDefault();
-    const values=Object.fromEntries(new FormData(event.currentTarget));
-    const chosenService=values.service==='multi'?tr('多项服务 / 综合维护','Multiple services / General maintenance'):services[Number(values.service)]?.[language];
-    const text=[tr('Ellis Services Group — 项目咨询草稿','Ellis Services Group — Enquiry Draft'),' ',`${tr('姓名','Name')}: ${values.name}`,`${tr('邮箱','Email')}: ${values.email}`,`${tr('地区','Region')}: ${values.region}`,`${tr('服务','Service')}: ${chosenService}`,...(values.address?[`${tr('物业地址','Property address')}: ${values.address}`]:[]),'',`${tr('项目需求','Project details')}:`,values.details].join('\n');
-    $('#draft-text').value=text; $('#draft-result').hidden=false; $('#copy-status').textContent='';
-    $('#draft-result').scrollIntoView({behavior:reduceMotion.matches?'instant':'smooth',block:'nearest'});
-  });
-  $('#copy-draft').addEventListener('click',async()=>{
-    try {await navigator.clipboard.writeText($('#draft-text').value);$('#copy-status').textContent=tr('已复制咨询草稿。','Enquiry draft copied.');}
-    catch {$('#draft-text').focus();$('#draft-text').select();$('#copy-status').textContent=tr('草稿已选中，请使用系统复制功能。','The draft is selected. Use your device’s copy command.');}
-  });
-  $('#quote-form').addEventListener('input',()=>{if(!$('#draft-result').hidden)$('#draft-result').hidden=true;});
 
   function updateMotionControls() {}
   $('#language-switch').addEventListener('click',()=>{language=language==='zh'?'en':'zh';applyLanguage();});

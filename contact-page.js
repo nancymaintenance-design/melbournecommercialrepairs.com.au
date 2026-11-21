@@ -41,7 +41,7 @@
   let preparedPhotos = null;
   const messages = {
     sending: ['正在发送，请稍候…', 'Sending your enquiry…'],
-    sent: ['项目需求已提交。Ellis 将通过您提供的联系方式回复。', 'Thanks for your enquiry. We’ll get back to you using the contact details you provided.'],
+    sent: ['我们已收到您的项目需求，会通过您留下的联系方式与您联系，确认下一步安排。', 'Thanks for your enquiry. We’ll get back to you using the contact details you provided.'],
     failed: ['暂未确认发送成功，内容和照片已保留。请重试，或致电 ellis 0450666876。', 'Sending could not be confirmed. Your details and photos are kept here. Please retry or call ellis on 0450666876.'],
     limit: ['最多添加 5 张照片。请移除多余照片后重试。', 'Please attach up to 5 photos. Remove extra photos and try again.'],
     photo: ['有照片无法读取或压缩，请改用 JPG、PNG 或 WebP，或移除该照片后重试。', 'A photo could not be read or resized. Use JPG, PNG or WebP, or remove that photo and retry.'],

@@ -21,7 +21,8 @@ const withoutMetadata=html=>html.replace(/<!-- home-locales:start -->[\s\S]*?<!-
  .replace(/<link rel="alternate" type="application\/(?:rss\+xml|feed\+json)"[^>]*>/g,'')
  .replace(/>\s+</g,'><'));
 const withoutRevisedCopy=html=>html
- .replace(/<p class="(?:visual-unavailable|form-demo-note)"[^>]*>[\s\S]*?<\/p>/g,'')
+ .replace(/<p class="visual-unavailable"[^>]*>[\s\S]*?<\/p>/g,'')
+ .replace(/^[ 	]*<dialog id="quote-dialog"[^>]*>[\s\S]*?<\/dialog>\r?\n/gm,'')
  .replace(/<p class="(?:story-description|nm-intro)"[^>]*>[^<]*<\/p>/g,match=>match.replace(/ data-(?:zh|en)="[^"]*"|>[^<]*<\/p>/g,value=>value.startsWith('>')?'></p>':''))
  .replace(/<h3\b[^>]*\bid="nm-title-\d+"[^>]*>[^<]*<\/h3>/g,match=>match.replace(/ data-(?:zh|en)="[^"]*"|>[^<]*<\/h3>/g,value=>value.startsWith('>')?'></h3>':''))
  .replace(/<span\b[^>]*\bclass="nm-note"[^>]*>[^<]*<\/span>/g,'<span class="nm-note"></span>')
@@ -30,6 +31,6 @@ const withoutRevisedCopy=html=>html
  .replace(/^[ \t]*<noscript><p class="section">当前为静态阅读模式[^<]*<\/p><\/noscript>\r?\n/m,'')
  .replace(/\sdata-(?:(?:[\w-]+-)?en|aria-label-zh)="[^"]*"/g,'')
  .replace(/\s+(?=<\/main>)/g,'\n');
-assert.match(h,/<p class="form-demo-note">[^]*?<a href="\/contact\/"[^>]*>在线提交项目需求 ↗<\/a><\/p>/);
+assert.doesNotMatch(h,/id="quote-(?:dialog|form)"|生成咨询草稿|CREATE ENQUIRY DRAFT/);
 assert.equal(stable(withoutRevisedCopy(withoutMetadata(h))),stable(withoutRevisedCopy(withoutMetadata(b))));
 console.log(JSON.stringify({mapPreserved:true,steps:3,oneProjectCTA:true,referenceContactStrip:true,otherHomepageMarkupPreserved:true}));
