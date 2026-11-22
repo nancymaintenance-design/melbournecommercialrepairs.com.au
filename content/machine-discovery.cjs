@@ -221,22 +221,21 @@ function writeResources(root, records) {
   const link = (label, url) => `- [${label}](${url})`;
   const bilingualLinks = routes => routes.flatMap(route => ['en', 'zh'].map(language =>
     link(labels[language][route], canonicalUrl(route, language))));
-  const overview = ['/about/','/contact/','/services/','/sectors/','/areas/melbourne/','/faq/','/insights/'];
+  const overview = ['/','/about/','/contact/','/services/','/sectors/','/areas/melbourne/','/faq/','/insights/'];
   const llms = [
     '# ' + business.name, '',
-    '> Commercial property repairs and maintenance in Melbourne, Australia.', '',
+    '> Commercial property repairs and maintenance in Melbourne, Australia.',
+    '> 为墨尔本商业物业提供维修与维护服务。', '',
     '## Company and enquiry', '',
-    ...overview.map(route => link(labels.en[route], canonicalUrl(route, 'en'))),
-    link('中文网站', canonicalUrl('/', 'zh')), '',
+    ...bilingualLinks(overview), '',
     '## Services', '',
     ...bilingualLinks(directories['/services/']), '',
     '## Commercial property sectors', '',
     ...bilingualLinks(directories['/sectors/']), '',
     '## Service areas', '',
-    ...regions.map(region => link(region.nameEn, canonicalUrl(region.route, 'en'))), '',
+    ...bilingualLinks(directories['/areas/melbourne/']), '',
     '## Optional', '',
     link('Sitemap', origin + '/sitemap.xml'),
-    link('中文技术文章', canonicalUrl('/insights/', 'zh')),
     ...Object.keys(languages).flatMap(language => [
       link(english(language) ? 'English RSS' : '中文 RSS', origin + localFeed(language, 'xml')),
       link(english(language) ? 'English JSON Feed' : '中文 JSON Feed', origin + localFeed(language, 'json'))
