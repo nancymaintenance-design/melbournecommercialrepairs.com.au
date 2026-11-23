@@ -82,7 +82,7 @@ function feedBody(node, pageUrl) {
   return `<${tagName}${scope ? ` scope="${escape(scope)}"` : ''}>${body}</${tagName}>`;
 }
 
-function readArticle(nodes, route, language, heading) {
+function readArticle(nodes, route, language, heading, updated) {
   if (!/^\/insights\/[^/]+\/$/.test(route)) return;
   const sourceNote = notes.get(route);
   const select = id => nodes.find(node => attr(node, 'id') === id);
@@ -94,9 +94,10 @@ function readArticle(nodes, route, language, heading) {
   const leadNode = sourceNote ? nodes.find(node => hasClass(node, 'led-lead')) : [...descendants(parts[0])].find(n => n.tagName === 'p');
   const lead = flat(visibleText(leadNode));
   const date = nodes.find(node => node.tagName === 'time' && hasClass(node, 'led-date'));
-  const published = attr(date, 'datetime');
+  const published = sourceNote?.publishedAt || attr(date, 'datetime');
+  const modified = published && Date.parse(updated) > Date.parse(published) ? updated : undefined;
   assert(content && lead, 'Incomplete article ' + route);
-  return { url, title: heading, summary: lead, content, published,
+  return { url, title: heading, summary: lead, content, published, modified,
     author: sourceNote && nodes.some(node => hasClass(node, 'led-byline')) ? business.name : undefined,
     image: sourceNote ? new URL(sourceNote.image, origin).href : undefined };
 }
@@ -119,7 +120,7 @@ function breadcrumb(nodes, url, pageTitle, language) {
     itemListElement: list.map((item, i) => ({ '@type': 'ListItem', position: i + 1, ...item })) };
 }
 
-function pageRecord(html, route, language, metadata) {
+function pageRecord(html, route, language, metadata, updated) {
   const nodes = [...descendants(parse(html))];
   const url = canonicalUrl(route, language);
   const locale = languages[language];
@@ -129,7 +130,11 @@ function pageRecord(html, route, language, metadata) {
   const title = note ? flat(note.title[english(language) ? 1 : 0]) :
     flat(kids(headingNode).map(visibleText).join(english(language) ? ' ' : ''));
   const description = english(language) ? metadata.descriptionEn : metadata.descriptionZh;
-  const entry = readArticle(nodes, route, language, title);
+  const entry = readArticle(nodes, route, language, title, updated);
+  const main = nodes.find(node => node.tagName === 'main');
+  const pageImage = [...descendants(main)].filter(node => node.tagName === 'img')
+    .map(node => attr(node, 'src')).find(src => /\.(?:webp|png|jpe?g)$/i.test(src || '') && !src.includes('ellis-services-logo'));
+  const image = entry?.image || new URL(pageImage || '/assets/scenes/01-home.webp', origin).href;
   const serviceIndex = services.findIndex(service => service.route === route);
   const service = serviceIndex < 0 ? undefined : english(language) ? englishServices[serviceIndex] : services[serviceIndex];
   const list = directories[route] || (route === '/insights/' ? libraryArticles.map(article => article.route) : undefined);
@@ -137,7 +142,8 @@ function pageRecord(html, route, language, metadata) {
   const pageId = url + (/^\/sectors\/[^/]+\/$/.test(route) ? '#topic' : '#webpage');
   const page = {
     '@type': type, '@id': pageId, url, name: title, description: entry?.summary || service?.heroCopy || description,
-    inLanguage: locale, isPartOf: ref(websiteId), about: ref(orgId)
+    inLanguage: locale, isPartOf: ref(websiteId), about: ref(orgId),
+    primaryImageOfPage: { '@type': 'ImageObject', contentUrl: image }
   };
   const graph = [organization, website, page];
   const trail = breadcrumb(nodes, url, title, language);
@@ -159,7 +165,8 @@ function pageRecord(html, route, language, metadata) {
     inLanguage: locale, mainEntityOfPage: ref(pageId), publisher: ref(orgId),
     ...(entry.author && { author: ref(orgId) }),
     ...(entry.image && { image: [entry.image] }),
-    ...(entry.published && { datePublished: entry.published })
+    ...(entry.published && { datePublished: entry.published }),
+    ...(entry.modified && { dateModified: entry.modified })
   });
   if (list) addMain({
     '@type': 'ItemList', '@id': url + '#items',
@@ -167,8 +174,14 @@ function pageRecord(html, route, language, metadata) {
   });
   const feeds = [['xml','application/rss+xml','RSS'],['json','application/feed+json','JSON Feed']].map(([ext,type,label]) =>
     `<link rel="alternate" type="${type}" title="${escape(feedTitle(language))} · ${label}" href="${origin + localFeed(language, ext)}">`).join('');
+  const og = {
+    type: entry ? 'article' : 'website', site_name: business.name, locale: locale.replace('-', '_'),
+    url, title: english(language) ? metadata.titleEn : metadata.titleZh, description, image
+  };
+  const previews = Object.entries(og).map(([name, value]) =>
+    `<meta property="og:${name}" content="${escape(value)}" data-ellis-discovery>`).join('');
   const json = JSON.stringify({ '@context': 'https://schema.org', '@graph': graph }).replaceAll('<', '\\u003c');
-  return { route, title, entry, markup: `${feeds}<script type="application/ld+json" data-ellis-discovery>${json}</script>` };
+  return { route, title, entry, markup: `${previews}${feeds}<script type="application/ld+json" data-ellis-discovery>${json}</script>` };
 }
 
 function writeFeed(root, language, items) {
@@ -178,13 +191,14 @@ function writeFeed(root, language, items) {
   const home = canonicalUrl('/insights/', language);
   const locale = languages[language];
   const author = name => ({ name, url: canonicalUrl('/about/', language) });
-  const timestamp = entry => /T.+(?:Z|[+-]\d{2}:\d{2})$/.test(entry.published || '') ? entry.published : undefined;
+  const timestamp = date => /T.+(?:Z|[+-]\d{2}:\d{2})$/.test(date || '') ? date : undefined;
   const id = entry => 'urn:ellis-services:article:' + entry.url.match(/\/insights\/([^/]+)/)[1] + ':' + locale;
   const feed = { version: 'https://jsonfeed.org/version/1.1', title, home_page_url: home,
     feed_url: feedUrl('json'), description, language: locale,
     items: items.map(item => ({
       id: id(item), url: item.url, title: item.title, summary: item.summary, content_html: item.content,
-      date_published: timestamp(item), image: item.image, authors: item.author ? [author(item.author)] : undefined
+      date_published: timestamp(item.published), date_modified: timestamp(item.modified),
+      image: item.image, authors: item.author ? [author(item.author)] : undefined
     })) };
   const element = (name, value) => `<${name}>${escape(value)}</${name}>`;
   const itemXml = items.map(item => `<item>
@@ -193,7 +207,8 @@ ${element('link', item.url)}
 <guid isPermaLink="false">${id(item)}</guid>
 ${element('description', item.summary)}
 ${item.author ? element('dc:creator', item.author) : ''}
-${timestamp(item) ? element('pubDate', new Date(timestamp(item)).toUTCString()) : ''}
+${timestamp(item.published) ? element('pubDate', new Date(item.published).toUTCString()) : ''}
+${timestamp(item.modified) ? element('atom:updated', item.modified) : ''}
 ${element('content:encoded', item.content)}
 </item>`).join('\n');
   const rss = `<?xml version="1.0" encoding="UTF-8"?>

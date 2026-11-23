@@ -15,9 +15,13 @@ const root = __dirname;
 const localeDirectory = '_ellisl10n';
 const lastmodFile = path.join(root, 'content', 'search-lastmod.json');
 const lastmod = fs.existsSync(lastmodFile) ? JSON.parse(fs.readFileSync(lastmodFile, 'utf8')) : {};
-const dateOverride = process.argv[2]?.match(/^--lastmod=(\d{4}-\d{2}-\d{2})$/)?.[1];
-if (process.argv[2]) {
- assert(dateOverride && new Date(dateOverride).toISOString().slice(0, 10) === dateOverride, 'Expected --lastmod=YYYY-MM-DD');
+const option = process.argv[2];
+const seedFingerprints = option === '--record-fingerprints';
+const dateOverride = option?.match(/^--lastmod=(\d{4}-\d{2}-\d{2}(?:T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2}))?)$/)?.[1];
+if (option && !seedFingerprints) {
+ assert(dateOverride && Number.isFinite(Date.parse(dateOverride)) &&
+  new Date(dateOverride.slice(0, 10)).toISOString().slice(0, 10) === dateOverride.slice(0, 10),
+ 'Expected --lastmod=YYYY-MM-DD or an ISO timestamp with a timezone');
 }
 
 const escapeText = text => String(text).replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
@@ -31,9 +35,13 @@ function* descendants(node) {
 }
 const nodesOf = source => [...descendants(parse(source, {sourceCodeLocationInfo: true}))];
 const readJson = node => JSON.parse(textOf(node));
-const inSite = href => href?.startsWith('/') && !href.startsWith('//');
-function withLocale(href, language) {
- const url = new URL(href, origin);
+function withLocale(href, route, language) {
+ if (!href || href.startsWith('#')) return href;
+ const url = new URL(href, origin + route);
+ if (url.origin !== origin) return href;
+ const pathname = url.pathname.replace(/\/index\.html$/, '/').replace(/\/?$/, '/');
+ if (!pageRoutes.has(pathname)) return href;
+ url.pathname = pathname;
  url.searchParams.set('lang', language);
  return url.pathname + url.search + url.hash;
 }
@@ -125,6 +133,7 @@ function render(source, route, language) {
   if (node.tagName === 'title') replaceBody(node, escapeText(metadata['title' + suffix]));
   if (node.tagName === 'meta' && attr(node, 'name') === 'description') update.content = metadata['description' + suffix];
   if (node.tagName === 'link' && attr(node, 'rel') === 'canonical') update.href = canonicalUrl(route, language);
+  if (node.tagName === 'a' && attr(node, 'href') !== undefined) update.href = withLocale(attr(node, 'href'), route, language);
   if (node.tagName === 'script' && attr(node, 'type') === 'application/ld+json' && attr(node,'data-ellis-discovery') === undefined) {
    const json = JSON.stringify(structuredData(readJson(node), nodes, route, language)).replaceAll('<', '\\u003c');
    schemaContent.push(json);
@@ -141,7 +150,6 @@ function render(source, route, language) {
     const value = attr(node, 'data-' + name + '-en');
     if (value !== undefined) update[name] = value;
    }
-   if (node.tagName === 'a' && inSite(attr(node, 'href'))) update.href = withLocale(attr(node, 'href'), language);
    if (hasClass(node, 'lang-en')) update.class = 'lang-en active';
    if (hasClass(node, 'lang-zh')) update.class = 'lang-zh';
    if (attr(node, 'id') === 'main-nav') update['aria-label'] = 'Main navigation';
@@ -173,40 +181,49 @@ function* pageFiles(directory) {
 }
 const pages = [path.join(root, 'index.html'), ...['about', 'areas', 'contact', 'faq', 'insights', 'privacy', 'sectors', 'services']
  .flatMap(section => [...pageFiles(path.join(root, section))])];
+const routeOf = file => '/' + path.relative(root, file).replaceAll('\\', '/').replace(/index\.html$/, '');
+const pageRoutes = new Set(pages.map(routeOf));
 const sitemap = [];
 const nextLastmod = {};
 const publicRecords = {zh: [], en: []};
-function withMachineMetadata({source, metadata}, route, language) {
- const record = pageRecord(source, route, language, metadata);
+function withMachineMetadata({source, metadata}, route, language, updated) {
+ const record = pageRecord(source, route, language, metadata, updated);
  publicRecords[language].push(record);
  // Replace the old graph after localisation so the sitemap fingerprint still uses the existing inputs.
  return source
   .replace(/<script type="application\/ld\+json"(?: data-ellis-discovery)?>(?:[\s\S]*?)<\/script>/g, '')
   .replace(/<link rel="alternate" type="application\/(?:rss\+xml|feed\+json)"[^>]*>/g, '')
+  .replace(/<meta property="og:[^"]+"[^>]* data-ellis-discovery>/g, '')
   .replace('</head>', () => record.markup + '</head>');
 }
 for (const file of pages) {
  const relative = path.relative(root, file);
- const route = '/' + relative.replaceAll('\\', '/').replace(/index\.html$/, '');
+ const route = routeOf(file);
  const source = fs.readFileSync(file, 'utf8');
  const zh = render(source, route, 'zh');
  const en = render(source, route, 'en');
- const destination = path.join(root, localeDirectory, relative);
- fs.mkdirSync(path.dirname(destination), {recursive: true});
- fs.writeFileSync(file, withAnalytics(withMachineMetadata(zh, route, 'zh'), canonicalUrl(route, 'zh')));
- fs.writeFileSync(destination, withAnalytics(withMachineMetadata(en, route, 'en'), canonicalUrl(route, 'en')));
  const hash = crypto.createHash('sha256').update(JSON.stringify([zh.fingerprint, en.fingerprint]).replaceAll('\\r\\n', '\\n')).digest('hex');
  const entry = lastmod[route];
- const date = hash === entry?.hash ? entry.date : dateOverride;
- if (date) nextLastmod[route] = {hash, date};
+ // An ordinary build retains the last verified date. Only an explicit release record advances it.
+ const date = dateOverride && entry?.hash !== hash ? dateOverride : entry?.date;
+ nextLastmod[route] = date ? {hash, date} : {hash};
+ const destination = path.join(root, localeDirectory, relative);
+ fs.mkdirSync(path.dirname(destination), {recursive: true});
+ fs.writeFileSync(file, withAnalytics(withMachineMetadata(zh, route, 'zh', date), canonicalUrl(route, 'zh')));
+ fs.writeFileSync(destination, withAnalytics(withMachineMetadata(en, route, 'en', date), canonicalUrl(route, 'en')));
  for (const language of ['zh', 'en']) {
   sitemap.push('  <url><loc>' + escapeText(canonicalUrl(route, language)) + '</loc>' +
    (date ? '<lastmod>' + date + '</lastmod>' : '') + '</url>');
  }
 }
-if (dateOverride) fs.writeFileSync(lastmodFile, JSON.stringify(nextLastmod, null, 2) + '\n');
+if (dateOverride || seedFingerprints) fs.writeFileSync(lastmodFile, JSON.stringify(nextLastmod, null, 2) + '\n');
 fs.writeFileSync(path.join(root, 'sitemap.xml'), '<?xml version="1.0" encoding="UTF-8"?>\n' +
  '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + sitemap.join('\n') + '\n</urlset>\n');
 fs.writeFileSync(path.join(root, 'robots.txt'), 'User-agent: *\nAllow: /\nSitemap: ' + origin + '/sitemap.xml\n');
 writeResources(root, publicRecords);
+const indexNowKey = process.env.INDEXNOW_PUBLIC_KEY;
+if (indexNowKey) {
+ assert(/^[a-f0-9]{8,128}$/i.test(indexNowKey), 'Invalid IndexNow public verification key format');
+ fs.writeFileSync(path.join(root, indexNowKey + '.txt'), indexNowKey);
+}
 console.log('Localized ' + pages.length + ' existing routes and generated ' + sitemap.length + ' sitemap entries.');

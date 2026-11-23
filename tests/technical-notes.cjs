@@ -6,6 +6,7 @@ const {articles,libraryArticles,categories} = require('../content/technical-note
 const {serviceSlugs,articleSlugs} = require('../content/site-data.cjs');
 const {canonicalUrl,origin} = require('../content/search-config.cjs');
 const {routes} = require('../vercel.json');
+const editorialDates = require('../content/search-lastmod.json');
 const localeRoute = new RegExp(routes.find(route=>route.dest==='/_ellisl10n/$1/index.html').src);
 
 const root = path.resolve(__dirname,'..');
@@ -43,10 +44,10 @@ for (const lang of ['zh','en']) {
  for (const article of articles) {
   const {route} = article;
   assert(localeRoute.test(route),route+' served as English HTML by Vercel');
-  const local = base => lang==='en'?base+'?lang=en':base;
+  const local = base => base+'?lang='+lang;
   const isHomeArticle = homeSlugs.has(article.slug);
   const source = isHomeArticle ? page('/',lang) : library;
-  assert(urls(source).includes(isHomeArticle ? route+'?lang='+lang : local(route)),route+' discoverable in initial HTML');
+  assert(urls(source).includes(local(route)),route+' discoverable in initial HTML');
   const nodes = page(route,lang);
   assert.equal(nodes.filter(node=>node.tagName==='h1').length,1,route);
   const main = [...tree(nodes.find(node=>node.tagName==='main'))];
@@ -93,8 +94,9 @@ for (const lang of ['zh','en']) {
   assert.equal(schema.headline,article.title[lang==='en'?1:0].replaceAll('\n',' '));
   assert.equal(schema.author['@id'],origin+'/#ellis-organization');
   assert(json[0]['@graph'].some(entity=>entity['@id']===schema.mainEntityOfPage['@id']&&entity.url===canonical));
-  assert.equal(schema.datePublished,article.publishedOn);
-  assert(!schema.dateModified,'No generated modification date');
+  assert.equal(schema.datePublished,article.publishedAt || article.publishedOn);
+  const modified = editorialDates[route]?.date;
+  assert.equal(schema.dateModified,Date.parse(modified)>Date.parse(schema.datePublished)?modified:undefined);
   for(const node of main.filter(node=>node.tagName==='img')){
    const src=attribute(node,'src').split('?')[0];
    assert(fs.existsSync(path.join(root,src)),route+' existing visual '+src);
@@ -106,7 +108,7 @@ for (const lang of ['zh','en']) {
   const required = libraryArticles.filter(article=>article.primary===slug || article.secondary===slug);
   const destinations = urls([...tree(section)]);
   assert.equal(destinations.length,required.length,slug+' article link count');
-  for (const article of required) assert(destinations.includes(article.route+(lang==='en'?'?lang=en':'')));
+  for (const article of required) assert(destinations.includes(article.route+'?lang='+lang));
   assert(required.length,slug+' has articles');
  }
 }

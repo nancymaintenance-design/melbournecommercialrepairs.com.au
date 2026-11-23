@@ -191,13 +191,23 @@ const articles = [
  ...require('./technical-notes-practice.cjs')
 ];
 
-for (const article of articles) article.publishedOn = '2026-11-20';
+// Publication timestamps come from the first successful production deployment containing each series.
+for (const article of articles) Object.assign(article, {
+ publishedOn: '2026-11-20', publishedAt: '2026-11-20T01:51:21Z'
+});
 const secondSeries = require('./technical-notes-series-two.cjs');
-for (const article of secondSeries) article.publishedOn = '2026-11-20';
+for (const article of secondSeries) Object.assign(article, {
+ publishedOn: '2026-11-20', publishedAt: '2026-11-20T05:01:19Z'
+});
 articles.push(...secondSeries);
-articles.push(...require('./commercial-maintenance-articles.json'));
+const commercialGuides = require('./commercial-maintenance-articles.json');
+for (const article of commercialGuides) article.publishedAt = '2026-11-21T07:45:31Z';
+articles.push(...commercialGuides);
 const libraryArticles = [...articles];
-articles.push(...require('./home-technical-notes.cjs'));
+const homepageManuals = require('./home-technical-notes.cjs');
+// These URLs already carried published articles before the field-manual rewrite.
+for (const article of homepageManuals) article.publishedAt = '2026-11-13T07:31:58Z';
+articles.push(...homepageManuals);
 
 for (const article of articles) {
  const primary = article.primary || categories[article.category][2];

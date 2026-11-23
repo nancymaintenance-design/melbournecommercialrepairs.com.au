@@ -1,218 +1,278 @@
 {
   "/": {
-    "hash": "4acd2f90905ecf3b0776f22b3900a473e872de1415c155c60c6b6d4c04866fc8",
-    "date": "2026-11-20"
+    "hash": "54cb4068cabb59641fc246a823aa9948eb0e5c316dcadc2cc1eb857d3fcd41ee",
+    "date": "2026-11-21T06:21:02Z"
   },
   "/about/": {
-    "hash": "e449d522a65f64a70fda12843b63cee39b4725f5248c49d97f9c4a8f7c0eda2d",
-    "date": "2026-11-20"
+    "hash": "5f06b7422c255bb10e849532a13eb0342f859a1582c7e2016f2fe081e13a3fe2",
+    "date": "2026-11-21T06:21:02Z"
   },
   "/areas/melbourne/bayside-southern/": {
-    "hash": "df14f98728bbc0d3da478ec681253423c5c147d05b6336a5d2f80c76e47094f6",
-    "date": "2026-11-20"
+    "hash": "61ed7b9ed7a3bba50dc9776326472f4215b4da40f01214d0972745f491ebcf6f",
+    "date": "2026-11-21T06:03:48Z"
   },
   "/areas/melbourne/casey-cardinia/": {
-    "hash": "47bb0b5771584406ce2957598a68af6c0abcab7a98b2b42f72b9e2e0353a82b7",
-    "date": "2026-11-20"
+    "hash": "5c5d4d618e53f4ff6bc50ea6c1c6ac0adc55e9cc3bc3ec88e6fd1886148dfd14",
+    "date": "2026-11-21T06:03:48Z"
   },
   "/areas/melbourne/cbd-inner/": {
-    "hash": "23035ba135165fbbebef3ddf41f22b3076d5d9072b3505dc7e0f34e47e329252",
-    "date": "2026-11-20"
+    "hash": "19202a6ec7a60b6eb4b53138c8b33c802da7a293b52080b698bafaafeb04dcfe",
+    "date": "2026-11-21T06:21:02Z"
   },
   "/areas/melbourne/eastern/": {
-    "hash": "17652f5ecb594c02687ddfd912196d544b92fadb550d9863a7bf664231eec33d",
-    "date": "2026-11-20"
+    "hash": "9bf47db0d8360cb69894c5291ec117af87a702842bfd32f27f12ea7cc4602826",
+    "date": "2026-11-21T06:21:02Z"
   },
   "/areas/melbourne/frankston-mornington-peninsula/": {
-    "hash": "9bc597fb91dabca3bb3008d18f883b892a0aa8b7c29a9affe8462538df7da6ed",
-    "date": "2026-11-20"
+    "hash": "43383d05b79ef11e96528997487731832b79c9cdb6da6b93b5342f474cf43577",
+    "date": "2026-11-21T06:03:48Z"
   },
   "/areas/melbourne/": {
     "hash": "faee3e712cc016ea05b776bcb899890064eb05ecd2cb637acf26951ba746c2ea",
-    "date": "2026-11-20"
+    "date": "2026-11-21T06:21:02Z"
   },
   "/areas/melbourne/north-east/": {
-    "hash": "6274c946a48f5f32c30edde14f572af619e47952d7e1eac131e60876d42efc14",
-    "date": "2026-11-20"
+    "hash": "dea86331fbae7b46bf8c3b6bcc8765bd85656b1f6a5111fdcf42d54651ca738c",
+    "date": "2026-11-21T06:03:48Z"
   },
   "/areas/melbourne/north-west/": {
-    "hash": "4292a11013648363eb0698d097b1eb6fb53d8593f3eaec49e9314fe861336df9",
-    "date": "2026-11-20"
+    "hash": "386e83c0cbe6a55152c2e2bfe72f5d0835e698aac0368cede4ecb2f2e0cd1565",
+    "date": "2026-11-21T06:21:02Z"
   },
   "/areas/melbourne/northern/": {
-    "hash": "840e98343421ec264ee0d899277ee050b396a5cd207be7b1f69300020f272b31",
-    "date": "2026-11-20"
+    "hash": "cedfc8b6d9b1a40f65328a5e29f0ac622cf510f6fdae8f186f70d664707a479e",
+    "date": "2026-11-21T06:21:02Z"
   },
   "/areas/melbourne/south-east/": {
-    "hash": "9de32bac1fab5ad60d3c63181c09c6314b16d29aec473972c14defa32ee8d9b7",
-    "date": "2026-11-20"
+    "hash": "5b7607818c0338d7454bb637be9a52b654845ad825ac25cf56e3c78a7262c462",
+    "date": "2026-11-21T06:03:48Z"
   },
   "/areas/melbourne/western/": {
-    "hash": "242084a3d464a54d88b3c31f66ab917ad3adc69710860c7368a42c427e5f6b22",
-    "date": "2026-11-20"
+    "hash": "3afc20d5f49a2b5ae4181e70a7efae24414a85b105f7512a3d7d940f8f2b6445",
+    "date": "2026-11-21T06:21:02Z"
   },
   "/contact/": {
-    "hash": "e2d05cbfcaac5ef85f1f8031a1357a97964b63be695d2065910aa3bb1ad629c5",
-    "date": "2026-11-20"
+    "hash": "77a27e53d2cf07e90d2100b1301de801e842e034c1d1ff77e7aade3ebbbe5f84",
+    "date": "2026-11-21T06:32:56Z"
   },
   "/faq/": {
-    "hash": "9d16ef4209b902c9b0c7b20d130ff87abdad3ee54342447873eafbfad4c9a364",
-    "date": "2026-11-20"
+    "hash": "9fa5d15e3fdb77417168776fc8c57f312aafdae9c82c5f4137e6e6874e206e5e",
+    "date": "2026-11-21T06:03:48Z"
+  },
+  "/insights/ceramic-floor-tile-debonding/": {
+    "hash": "627d1e196a53825093486670dc6acbb1d452627c2da299e1094a310bd7a387e9",
+    "date": "2026-11-21T06:03:48Z"
+  },
+  "/insights/commercial-maintenance-priorities-and-budget/": {
+    "hash": "4924ec83cfaa59af064785d9a02bd06317ba34c1d489aa0096b9ebbaedfd418a",
+    "date": "2026-11-21T07:45:31Z"
+  },
+  "/insights/commercial-reactive-repairs-melbourne/": {
+    "hash": "1f5077a63bc7a93fe1d759a1cb137057b1d0f52af33557ac5f54339fb9ec979d",
+    "date": "2026-11-21T07:45:31Z"
+  },
+  "/insights/commercial-repair-scope-and-budget/": {
+    "hash": "cb792d4983a85203a7b75f4f9acbaa5701e7941582896a1f5ff97945d561bf92",
+    "date": "2026-11-21T07:45:31Z"
+  },
+  "/insights/commercial-storm-make-safe/": {
+    "hash": "176e9b5846d5a252e6f28b9319153453ef96b8b876962dbd62b93ef70f8e5c59",
+    "date": "2026-11-21T06:03:48Z"
   },
   "/insights/commercial-water-ingress/": {
-    "hash": "d1f0f87ebeda71e5fc9d9a053e90af15c4ed44bafe21dc3df131f2e71f5e3e62",
-    "date": "2026-11-20"
+    "hash": "bb85f63a76bf29f9e4d8e4118425a0f16f3bfb82bec80be68d38c2765b3503ba",
+    "date": "2026-11-21T06:03:48Z"
+  },
+  "/insights/concrete-spalling-corrosion/": {
+    "hash": "aed0586a01a07d489a5e073d6e46bbc3f60440799d2d0463336f6a158ff4c8bf",
+    "date": "2026-11-21T06:03:48Z"
   },
   "/insights/doors-hardware-latching/": {
-    "hash": "60c52ea75b561275bc0e8db4214562c188fafd5e11d5457f733d29e269987d65",
-    "date": "2026-11-20"
+    "hash": "9068bbfc15bbb9a07f9d074c1e66958a739d36a64974b1a0edb9580ee2cd1a08",
+    "date": "2026-11-21T06:03:48Z"
+  },
+  "/insights/drain-trap-seal-odours/": {
+    "hash": "be0d8474580b7ef6d451c2b59a6f193351551d9d0462dbd7d0af73c63a5db8f6",
+    "date": "2026-11-21T06:03:48Z"
   },
   "/insights/external-sign-fixings/": {
-    "hash": "6c673e128047b7a1432869f1536db77ebeccb30a8ece2f1ebcaa39a976290a83",
-    "date": "2026-11-20"
+    "hash": "2cc0e92784899dcffe4e0790f223c4a0112576ee7ee65d22ce8c685c943c0a88",
+    "date": "2026-11-20T07:24:06Z"
   },
   "/insights/facade-cleaning/": {
-    "hash": "98fc03e7d6979af49590e8c4819f368486b8c4dfdb458923019ad863c1f9fab5",
-    "date": "2026-11-20"
+    "hash": "1174ef42e1428fa5998d45d5228f35f69c73a9a231583de358ddeb51e9d82dd8",
+    "date": "2026-11-21T06:03:48Z"
+  },
+  "/insights/facade-fixing-galvanic-corrosion/": {
+    "hash": "b814e47f9beac39e56b659693ed119d26bc3b8fb159029bc4f28e1ac13e29e86",
+    "date": "2026-11-21T06:03:48Z"
   },
   "/insights/fire-door-latching-and-access/": {
-    "hash": "fce0f0677310777df5f113d3c9a1e932a896dc33954e24981ee93e7d2096a890",
-    "date": "2026-11-20"
+    "hash": "df4c81fb7eb3b527c2292f5d6ff950a497008bf1471e0eb7318284a57cae7173",
+    "date": "2026-11-21T06:03:48Z"
+  },
+  "/insights/fire-rated-service-penetrations/": {
+    "hash": "cdac4d5bc700517756d4300a627e709d9d8b0cfbc53997a3cfe0e69bd4feb05d",
+    "date": "2026-11-21T06:03:48Z"
+  },
+  "/insights/flat-roof-ponding-drainage/": {
+    "hash": "1f498e68019643a94df58b7aa9e246ff8c62bd2e134d579e7e421524eaa604af",
+    "date": "2026-11-21T06:03:48Z"
   },
   "/insights/": {
-    "hash": "12dc02aaf1b9887a783ec685062fb3797c72a981d00e172bb1b7349bbc3c1eb1",
-    "date": "2026-11-20"
+    "hash": "46eaa175bcb7aef9d47959f9e683c11d4c7fc0b20c4ad9e01bcd494313937b25",
+    "date": "2026-11-21T07:45:31Z"
   },
   "/insights/irrigation-uneven-coverage/": {
-    "hash": "bb3d019606acc3707c5994493c7d5d9b36d19aaea38967c1ddcb5cc413e1ffec",
-    "date": "2026-11-20"
+    "hash": "5c866fd76adf9f5f82bf7e7a4446cd27f475c738175a324bb3d1d28bd2db3f3e",
+    "date": "2026-11-21T06:03:48Z"
   },
   "/insights/led-flicker-drivers-controls/": {
-    "hash": "9a63802045a0d7fc9512f2008ed58dd3307f193a7cf81c97e543453fd1b4f480",
-    "date": "2026-11-20"
+    "hash": "e9787ba308acb19dba369ff2cedc7b9922be535ccc15ccf2600af9d04f7bf50e",
+    "date": "2026-11-21T06:03:48Z"
   },
   "/insights/maintenance-plan/": {
-    "hash": "af06aefb1f262dff8523973614675ae2541b916a52066c31725d97b21f7425b6",
-    "date": "2026-11-20"
+    "hash": "d55ad56acb633de6856e0b4c5eb27dac4f1e882447b9a3eae74b004ab156cad3",
+    "date": "2026-11-21T00:17:54Z"
+  },
+  "/insights/meeting-room-carbon-dioxide-ventilation/": {
+    "hash": "f3bbf8c691116d747327a97e2cea595dd705f568aa8d94f46d6a75d430ef5398",
+    "date": "2026-11-21T06:03:48Z"
+  },
+  "/insights/occupancy-sensor-lighting-controls/": {
+    "hash": "1ac72299ec4ce0d8b7585c7cb8ac6ab57e2c27921768ba2fe00ed4c839bc14cf",
+    "date": "2026-11-21T06:03:48Z"
   },
   "/insights/partition-head-movement/": {
-    "hash": "d9a7252f7ac303701f40d4d36b733627a6653f6f13e39c3ddcfaa6e8591af9d4",
-    "date": "2026-11-20"
+    "hash": "78756ff6f19126e834be266780e9f29c9a8ef5963c70a713dfd3454223c6aedf",
+    "date": "2026-11-20T07:24:06Z"
+  },
+  "/insights/partition-speech-privacy/": {
+    "hash": "0e6edb7facbdcc65732f34d43f0c5a6a1c04dcb7a4a6a6dbd639ec4719786567",
+    "date": "2026-11-21T06:03:48Z"
   },
   "/insights/recurring-drain-blockages/": {
-    "hash": "2faa97f9a82add74c077a6ef0693df2efd957c5774949a76af2e3ecc0c4d8753",
-    "date": "2026-11-20"
+    "hash": "1c0ca6b0831fb9f7bf0d2d1e7f422991b0376ff1e89cf152a6987bcc61337137",
+    "date": "2026-11-21T06:03:48Z"
   },
   "/insights/recurring-faults-maintenance/": {
-    "hash": "86d9aed43234be2ae8b75a7e9acf9a6f83677a6d2eafa82e91d2126727cbb361",
-    "date": "2026-11-20"
+    "hash": "24151e63444736ece7074641b6bb4f4c6d588d09b48a0886d90a5a83c621f3c9",
+    "date": "2026-11-21T06:03:48Z"
   },
   "/insights/resilient-floor-moisture/": {
-    "hash": "64931e0821bad866da41a47b92071b2ddd95a53492ab7c0276b5472de06e2434",
-    "date": "2026-11-20"
+    "hash": "7beaa1655458375f2cb32801556ecb4d05fac91131738b659d5d190438b1d4e9",
+    "date": "2026-11-21T06:03:48Z"
   },
   "/insights/signage-make-good/": {
-    "hash": "6164b610d986d5cd9a155bb2790d2f7826725bb79e92b78158fea1fb484aa7b5",
-    "date": "2026-11-20"
+    "hash": "fb375e7cbdc29a842aceca17d05ab79cafa4151005be739ae5e7f318376d45f1",
+    "date": "2026-11-21T06:03:48Z"
+  },
+  "/insights/tree-root-footpath-lifting/": {
+    "hash": "3892b26342523b6dd96bea92464fa6eec414f643030e14069ca540d366b607c0",
+    "date": "2026-11-21T06:03:48Z"
   },
   "/insights/uneven-hvac-zones/": {
-    "hash": "e83aa139ef6919e0109f19916c823ab615d5d7c9634cb1fab85293c382bdda59",
-    "date": "2026-11-20"
+    "hash": "4aa047cc881e73d56af85f5e5553c1bc9f67ad02c65c171f56283965d4b6dc3c",
+    "date": "2026-11-21T06:03:48Z"
+  },
+  "/insights/window-condensation-diagnosis/": {
+    "hash": "011c48899c30d35fffe2c29a7d57ec032fb91ee18d14a73a86b796c6654ee88c",
+    "date": "2026-11-21T06:03:48Z"
   },
   "/insights/window-wall-water-ingress/": {
-    "hash": "6531b667ba909d38be6169fa348a59b5840454e8b38c7f57220d1ce43516f0a9",
-    "date": "2026-11-20"
+    "hash": "3d6ab1c5df0cb724787db9f0fc4b983d1698d0f418518a09a779bc49a73f0643",
+    "date": "2026-11-21T06:03:48Z"
   },
   "/privacy/": {
-    "hash": "2e055c8e40980a58a53f9c448cbae698273183395d43611baf8c8d2bab0776f3",
-    "date": "2026-11-20"
+    "hash": "344305f79c6aa3a911e874786bed222c952a21b4ae23a208b1e2bf24769a34cd",
+    "date": "2026-11-21T04:57:02Z"
   },
   "/sectors/commercial-common-areas/": {
-    "hash": "807c95dfdb95489817b884ab191c7ee332ad9fdeea936be3c2c8eaeaa2e321e0",
-    "date": "2026-11-20"
+    "hash": "4ed37dc9608d85a068a75e9466d5ab508f10f1e58ee0ec62839c4e66486b443e",
+    "date": "2026-11-21T05:42:42Z"
   },
   "/sectors/education-community/": {
-    "hash": "28004307a7d03199a24660123cf7fbfbf09710933f8ce142a9a00b10e73ac994",
-    "date": "2026-11-20"
+    "hash": "442a2ae4e853bb2a25e214d5b2db7ffc89927eb813b4cbe01a53b51e25a9adca",
+    "date": "2026-11-20T07:24:06Z"
   },
   "/sectors/hospitality/": {
-    "hash": "a3d094029324160b957b5042637cc65962aa09c5e5bd11be9f678ad375262431",
-    "date": "2026-11-20"
+    "hash": "df4bc34f56e69ea83275ee6ffab8837a14bb3cbbf4219cead6e87842d9748309",
+    "date": "2026-11-21T05:42:42Z"
   },
   "/sectors/": {
-    "hash": "e09c53749df1e5a32f96e561dde62c305c1c567cb6068fe69f251f101a66b6f9",
-    "date": "2026-11-18"
+    "hash": "306d4c2434eba183a19e309b0d9d2cfdd22512351b77f11eac5691f0aa660438",
+    "date": "2026-11-18T07:56:49Z"
   },
   "/sectors/industrial-business-parks/": {
-    "hash": "3db9651ee1c670e6305ea4ddfa1846e01e1236f55746aeff74c8472f9e5f61e0",
-    "date": "2026-11-20"
+    "hash": "50e369f08ff06b046709478d3bb28939dc0fc54415ce7ff5493814786d0801dc",
+    "date": "2026-11-20T07:24:06Z"
   },
   "/sectors/medical-health/": {
-    "hash": "1d02a93c16e2fdefd24959fe90834497b8c5bc7b6dcccc79d884032858ba7b44",
-    "date": "2026-11-20"
+    "hash": "3158f4f0962877af63d2d9b1384269bdba1647784aa0458a477c74837926eac4",
+    "date": "2026-11-20T07:24:06Z"
   },
   "/sectors/offices/": {
-    "hash": "cb6f1164f002796f5a0906ed926c57850a7b99fb807c2e6badba812acfd3fa93",
-    "date": "2026-11-20"
+    "hash": "c14d6129b07343c08daa86f1798364d1326c5d39345c6514fb2e20c09b62b300",
+    "date": "2026-11-20T07:24:06Z"
   },
   "/sectors/retail-shopping-centres/": {
-    "hash": "4dd14cfb222e0a939a231023d7fb23c68e4243550220d55f8d727a09fcffdb32",
-    "date": "2026-11-18"
+    "hash": "4ada90adce8778df819f9aae9e33582e16ffdf109e4491a39e1407924ea7ed6f",
+    "date": "2026-11-21T05:42:42Z"
   },
   "/sectors/warehouses-logistics/": {
-    "hash": "c9f40b2a555641517c6daf66275d19acb751fa11ec3a653c277b1dbe5fb1d0b0",
-    "date": "2026-11-20"
+    "hash": "34d8166b381fd3c39b251b5912bd750ea77bbdaa429c9459059c38d8ed2c838c",
+    "date": "2026-11-20T07:24:06Z"
   },
   "/services/building-maintenance/": {
-    "hash": "317f0801e96c3226746cbee20a601077cbddc35d3d90c978515e0267368105e6",
-    "date": "2026-11-20"
+    "hash": "6f869d187939820f3f2ce0d81693fda1fa443f3186179c5bb2863686af831ec8",
+    "date": "2026-11-20T07:24:06Z"
   },
   "/services/car-parks-external-works/": {
-    "hash": "aa8fcdecf23b914cdf3a17b25a05da7af898e473a34bd8bb27b0b225b46e033a",
-    "date": "2026-11-20"
+    "hash": "1a182abd9ff7c5fde29683cfb4a54a240ddd12d6fcc53d6496010edb031d763d",
+    "date": "2026-11-21T06:03:48Z"
   },
   "/services/cleaning-waste-hygiene/": {
-    "hash": "4aa224a1d79aa006556cf5f5657cb8431596eb536179c178718495e4a1c3af9e",
-    "date": "2026-11-20"
+    "hash": "7b81c4ee5a2be0a3f2d988cb3fdd3bd8c7c815cf73c544b4460cc51952168491",
+    "date": "2026-11-21T06:21:02Z"
   },
   "/services/electrical-lighting/": {
-    "hash": "55ecd756c8ba06017fd55f2606f885b436a24a80298743a9a237eb3f4bb745fc",
-    "date": "2026-11-20"
+    "hash": "15a7e7b1a86ab52710437ea22b56730936e313fd8987899f56e93cdec3961b40",
+    "date": "2026-11-21T06:21:02Z"
   },
   "/services/facade-high-access-cleaning/": {
-    "hash": "1f53346276d86cf764764bd2778ac1d69a563f3b97de43b32343d4840a6a36ef",
-    "date": "2026-11-20"
+    "hash": "0857f14665a5a1c290e1bdc9f5ff15a000a5d866bd1bee5036be012f50807e39",
+    "date": "2026-11-21T06:21:02Z"
   },
   "/services/fire-security-access/": {
-    "hash": "b0792df319ce446b00290e7aff8258be2892b21758028815968b4665da2fcb4a",
-    "date": "2026-11-20"
+    "hash": "3d3f259ffea549544831c236600a9beedef1ddb3c54c353a81cb512b11661e20",
+    "date": "2026-11-21T06:21:02Z"
   },
   "/services/fit-outs-make-good/": {
-    "hash": "297053a5aae05778c3b6f56f4673ee47569c0814df424cd13e48187f93ad627e",
-    "date": "2026-11-20"
+    "hash": "d2de4638e7ec9e5a8aa4d03bcc54a8fc5fc7e65d394744407ada2ad9d7f2e16b",
+    "date": "2026-11-21T06:21:02Z"
   },
   "/services/hvac-building-systems/": {
-    "hash": "c5890a0d545e19904353d5622272e86c070394b03af21ecdf4a6536625a96cfd",
-    "date": "2026-11-20"
+    "hash": "f320463e921ef5b380b78dbb17231120792bc09959311560ab2243bb28386fc2",
+    "date": "2026-11-21T06:21:02Z"
   },
   "/services/": {
-    "hash": "e7e477fa5229cde7c45165b36906c42963098a35b449deccb74721249017e4d8",
-    "date": "2026-11-18"
+    "hash": "a86808b413c7c88d145576b25d10a993979e63fc47b57a8bb6a1b1463754170f",
+    "date": "2026-11-18T07:56:49Z"
   },
   "/services/landscaping-irrigation/": {
-    "hash": "3558e2e955197308852f7039365ae9251f57e72004442cbc4769717367272bfb",
-    "date": "2026-11-20"
+    "hash": "2f3a672d5a791f89776dba8ca4f3cb71b84fdd32f72330a8a09e042a3ee930a7",
+    "date": "2026-11-21T06:21:02Z"
   },
   "/services/plumbing-drainage-gas/": {
-    "hash": "54c673b5a3276747b8b73135e493d3b0ad3e9c73365480ad015e057cb6b10ee6",
-    "date": "2026-11-20"
+    "hash": "b7a6ec3363f9fed643aafdadb42564cad512ee33fcac14155550bd6cf891c8d9",
+    "date": "2026-11-21T06:21:02Z"
   },
   "/services/roofing-waterproofing/": {
-    "hash": "94bb597986f6ebb7d075b7f5cb50ab216dd70751125786d24626b2a674cf8499",
-    "date": "2026-11-20"
+    "hash": "7444bf620c6701b75b7bb73212d238dcb6d0fba1b4df235ffd7f45114a7e20fa",
+    "date": "2026-11-20T07:24:06Z"
   },
   "/services/signage-wayfinding/": {
-    "hash": "2936fc3324472a97d075b18044f155401b51cf30455bc480f07852fe1afc9d74",
-    "date": "2026-11-20"
+    "hash": "e844a6bea814816148590b73c1c31dc74b08234cddcf30b24961fb91818d0d02",
+    "date": "2026-11-21T06:21:02Z"
   }
 }
