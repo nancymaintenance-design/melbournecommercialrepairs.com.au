@@ -7,6 +7,8 @@ const {parse} = require('parse5');
 const {origin, canonicalUrl} = require('./content/search-config.cjs');
 const {withAnalytics} = require('./content/ga4.cjs');
 const {pageRecord, writeResources} = require('./content/machine-discovery.cjs');
+const {withBreadcrumb} = require('./content/breadcrumbs.cjs');
+const versionAssets = require('./content/asset-versions.cjs');
 const {sectors, sectorSlugs} = require('./content/site-data.cjs');
 const propertySelector = require('./home-sector-selector.js');
 const servicePack = require('./content/service-pages.json').services;
@@ -186,15 +188,17 @@ const pageRoutes = new Set(pages.map(routeOf));
 const sitemap = [];
 const nextLastmod = {};
 const publicRecords = {zh: [], en: []};
+const breadcrumbStyles = versionAssets('<link rel="stylesheet" href="/breadcrumbs.css">', root);
 function withMachineMetadata({source, metadata}, route, language, updated) {
- const record = pageRecord(source, route, language, metadata, updated);
+ const breadcrumb = route === '/' ? {source, trail: []} : withBreadcrumb(source, nodesOf, route, language, pageRoutes);
+ const record = pageRecord(breadcrumb.source, route, language, metadata, updated, breadcrumb.trail);
  publicRecords[language].push(record);
  // Replace the old graph after localisation so the sitemap fingerprint still uses the existing inputs.
- return source
+ return breadcrumb.source
   .replace(/<script type="application\/ld\+json"(?: data-ellis-discovery)?>(?:[\s\S]*?)<\/script>/g, '')
   .replace(/<link rel="alternate" type="application\/(?:rss\+xml|feed\+json)"[^>]*>/g, '')
   .replace(/<meta property="og:[^"]+"[^>]* data-ellis-discovery>/g, '')
-  .replace('</head>', () => record.markup + '</head>');
+  .replace('</head>', () => (breadcrumb.trail.length ? breadcrumbStyles : '') + record.markup + '</head>');
 }
 for (const file of pages) {
  const relative = path.relative(root, file);

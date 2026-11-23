@@ -102,25 +102,7 @@ function readArticle(nodes, route, language, heading, updated) {
     image: sourceNote ? new URL(sourceNote.image, origin).href : undefined };
 }
 
-function breadcrumb(nodes, url, pageTitle, language) {
-  const navs = ['tn-crumb', 'rr-breadcrumb', 'breadcrumbs'];
-  const nav = navs.map(name => nodes.find(n => n.tagName === 'nav' && hasClass(n, name))).find(Boolean);
-  if (!nav) return;
-  const list = [...descendants(nav)].filter(node => node.tagName === 'a').flatMap(node => {
-    const link = attr(node, 'href');
-    const name = flat(visibleText(node));
-    if (!link?.startsWith('/') || !name) return [];
-    const page = new URL(link, origin);
-    if (page.origin !== origin) return [];
-    return [{ name, item: canonicalUrl(page.pathname, language) }];
-  }).filter(item => item.item !== url);
-  if (!list.length) return;
-  list.push({ name: pageTitle, item: url });
-  return { '@type': 'BreadcrumbList', '@id': url + '#breadcrumb',
-    itemListElement: list.map((item, i) => ({ '@type': 'ListItem', position: i + 1, ...item })) };
-}
-
-function pageRecord(html, route, language, metadata, updated) {
+function pageRecord(html, route, language, metadata, updated, breadcrumbTrail) {
   const nodes = [...descendants(parse(html))];
   const url = canonicalUrl(route, language);
   const locale = languages[language];
@@ -146,10 +128,12 @@ function pageRecord(html, route, language, metadata, updated) {
     primaryImageOfPage: { '@type': 'ImageObject', contentUrl: image }
   };
   const graph = [organization, website, page];
-  const trail = breadcrumb(nodes, url, title, language);
-  if (trail) {
-    page.breadcrumb = ref(trail['@id']);
-    graph.push(trail);
+  if (breadcrumbTrail.length) {
+    page.breadcrumb = ref(url + '#breadcrumb');
+    graph.push({
+      '@type': 'BreadcrumbList', '@id': url + '#breadcrumb',
+      itemListElement: breadcrumbTrail.map((item, i) => ({ '@type': 'ListItem', position: i + 1, ...item }))
+    });
   }
   function addMain(entity) {
     page.mainEntity = ref(entity['@id']);

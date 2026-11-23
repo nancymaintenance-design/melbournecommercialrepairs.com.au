@@ -1,0 +1,85 @@
+.ellis-breadcrumb {
+  min-width: 0;
+  font-size: .875rem;
+  font-weight: 650;
+  line-height: 1.5;
+  white-space: normal;
+  text-align: start;
+}
+
+.ellis-breadcrumb.ellis-breadcrumb-inline {
+  margin-block-end: .7rem;
+}
+
+.ellis-breadcrumb > ol {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: .14rem .55rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ellis-breadcrumb > ol > li {
+  display: inline-flex;
+  align-items: baseline;
+  gap: .55rem;
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.ellis-breadcrumb.breadcrumbs > ol > li:not(:last-child)::after {
+  content: none;
+}
+
+.ellis-breadcrumb .ellis-breadcrumb-separator {
+  flex: none;
+  opacity: .72;
+}
+
+.ellis-breadcrumb a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: .2em;
+}
+
+.ellis-breadcrumb a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.ellis-breadcrumb.ellis-breadcrumb-contact {
+  color: #fff;
+}
+
+@media (min-width: 900px) {
+  .ellis-breadcrumb.rr-breadcrumb {
+    padding-block-start: 48px;
+  }
+}
+
+@media (min-width: 901px) {
+  .ellis-breadcrumb.ellis-breadcrumb-contact {
+    position: absolute;
+    inset-block-start: max(78px, calc(96 * var(--cu)));
+    inset-inline-start: calc(80 * var(--cu));
+    z-index: 4;
+    font-size: .75rem;
+  }
+}
+
+@media (min-width: 901px) and ((max-width: 1300px) or (max-height: 800px)) {
+  .ellis-breadcrumb.ellis-breadcrumb-contact {
+    inset-inline-start: calc(510 * var(--cu));
+  }
+}
+
+@media (max-width: 900px) {
+  .ellis-breadcrumb.ellis-breadcrumb-contact {
+    order: -2;
+    margin-block-end: -1rem;
+  }
+}
