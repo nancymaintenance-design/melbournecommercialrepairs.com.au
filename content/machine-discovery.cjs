@@ -165,7 +165,7 @@ function pageRecord(html, route, language, metadata, updated, breadcrumbTrail) {
   const previews = Object.entries(og).map(([name, value]) =>
     `<meta property="og:${name}" content="${escape(value)}" data-ellis-discovery>`).join('');
   const json = JSON.stringify({ '@context': 'https://schema.org', '@graph': graph }).replaceAll('<', '\\u003c');
-  return { route, title, entry, markup: `${previews}${feeds}<script type="application/ld+json" data-ellis-discovery>${json}</script>` };
+  return { route, title, entry, json, markup: `${previews}${feeds}<script type="application/ld+json" data-ellis-discovery>${json}</script>` };
 }
 
 function writeFeed(root, language, items) {

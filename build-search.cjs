@@ -194,11 +194,18 @@ function withMachineMetadata({source, metadata}, route, language, updated) {
  const record = pageRecord(breadcrumb.source, route, language, metadata, updated, breadcrumb.trail);
  publicRecords[language].push(record);
  // Replace the old graph after localisation so the sitemap fingerprint still uses the existing inputs.
- return breadcrumb.source
+ const html = breadcrumb.source
   .replace(/<script type="application\/ld\+json"(?: data-ellis-discovery)?>(?:[\s\S]*?)<\/script>/g, '')
+  .replace(/<script type="application\/json" id="ellis-discovery-alternate" data-lang="(?:zh|en)">[\s\S]*?<\/script>/g, '')
   .replace(/<link rel="alternate" type="application\/(?:rss\+xml|feed\+json)"[^>]*>/g, '')
   .replace(/<meta property="og:[^"]+"[^>]* data-ellis-discovery>/g, '')
   .replace('</head>', () => (breadcrumb.trail.length ? breadcrumbStyles : '') + record.markup + '</head>');
+ return {html, json: record.json};
+}
+
+function withAlternateGraph(html, language, json) {
+ return html.replace('</head>', () =>
+  `<script type="application/json" id="ellis-discovery-alternate" data-lang="${language}">${json}</script></head>`);
 }
 for (const file of pages) {
  const relative = path.relative(root, file);
@@ -213,8 +220,10 @@ for (const file of pages) {
  nextLastmod[route] = date ? {hash, date} : {hash};
  const destination = path.join(root, localeDirectory, relative);
  fs.mkdirSync(path.dirname(destination), {recursive: true});
- fs.writeFileSync(file, withAnalytics(withMachineMetadata(zh, route, 'zh', date), canonicalUrl(route, 'zh')));
- fs.writeFileSync(destination, withAnalytics(withMachineMetadata(en, route, 'en', date), canonicalUrl(route, 'en')));
+ const zhPage = withMachineMetadata(zh, route, 'zh', date);
+ const enPage = withMachineMetadata(en, route, 'en', date);
+ fs.writeFileSync(file, withAnalytics(withAlternateGraph(zhPage.html, 'en', enPage.json), canonicalUrl(route, 'zh')));
+ fs.writeFileSync(destination, withAnalytics(withAlternateGraph(enPage.html, 'zh', zhPage.json), canonicalUrl(route, 'en')));
  for (const language of ['zh', 'en']) {
   sitemap.push('  <url><loc>' + escapeText(canonicalUrl(route, language)) + '</loc>' +
    (date ? '<lastmod>' + date + '</lastmod>' : '') + '</url>');

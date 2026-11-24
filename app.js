@@ -213,7 +213,11 @@
   $$('[data-region]').forEach(button=>button.addEventListener('click',()=>openQuote({region:button.dataset.region})));
 
   function updateMotionControls() {}
-  $('#language-switch').addEventListener('click',()=>{language=language==='zh'?'en':'zh';applyLanguage();});
+  $('#language-switch').addEventListener('click',()=>{
+    language=language==='zh'?'en':'zh';
+    window.EllisLocaleUI?.syncUrl(language);
+    applyLanguage();
+  });
   $('#menu-toggle').addEventListener('click',()=>{
     const open=$('#menu-toggle').getAttribute('aria-expanded')!=='true';
     $('#main-nav').classList.toggle('is-open',open);$('#menu-toggle').setAttribute('aria-expanded',String(open));

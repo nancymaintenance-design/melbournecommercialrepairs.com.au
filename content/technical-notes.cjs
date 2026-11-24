@@ -203,7 +203,7 @@ articles.push(...secondSeries);
 const commercialGuides = require('./commercial-maintenance-articles.json');
 for (const article of commercialGuides) article.publishedAt = '2026-11-21T07:45:31Z';
 articles.push(...commercialGuides);
-const libraryArticles = [...articles];
+const serviceArticles = [...articles];
 const homepageManuals = require('./home-technical-notes.cjs');
 // These URLs already carried published articles before the field-manual rewrite.
 for (const article of homepageManuals) article.publishedAt = '2026-11-13T07:31:58Z';
@@ -217,4 +217,4 @@ for (const article of articles) {
   throw new Error('Unknown service on ' + article.slug);
  }
 }
-module.exports = {articles, libraryArticles, categories, serviceArt};
+module.exports = {articles, libraryArticles: articles, serviceArticles, categories, serviceArt};

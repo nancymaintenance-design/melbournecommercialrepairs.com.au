@@ -1,4 +1,4 @@
-const {articles,libraryArticles,categories,serviceArt} = require('./technical-notes.cjs');
+const {articles,libraryArticles,serviceArticles,categories,serviceArt} = require('./technical-notes.cjs');
 const {services,serviceSlugs} = require('./site-data.cjs');
 const {origin} = require('./search-config.cjs');
 const {name:publisher} = require('../business.json');
@@ -27,7 +27,7 @@ const filters = {
  interiors:['装饰隔断','Interiors & partitions'], floors:['地面墙面','Floor & wall systems'], doors:['门窗五金','Doors & hardware'],
  urgent:['紧急抢修','Urgent repairs']
 };
-const servicesToArticles = Object.fromEntries(serviceSlugs.map(slug=>[slug,libraryArticles
+const servicesToArticles = Object.fromEntries(serviceSlugs.map(slug=>[slug,serviceArticles
  .filter(a=>a.primary===slug || a.secondary===slug)
  .sort((a,b)=>Number(b.primary===slug)-Number(a.primary===slug))]));
 

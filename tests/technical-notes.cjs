@@ -2,7 +2,7 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const {parse} = require('parse5');
-const {articles,libraryArticles,categories} = require('../content/technical-notes.cjs');
+const {articles,libraryArticles,serviceArticles,categories} = require('../content/technical-notes.cjs');
 const {serviceSlugs,articleSlugs} = require('../content/site-data.cjs');
 const {canonicalUrl,origin} = require('../content/search-config.cjs');
 const {routes} = require('../vercel.json');
@@ -25,12 +25,12 @@ const urls = nodes => nodes.filter(node=>node.tagName==='a').map(node=>attribute
 const sitemap = [...read('sitemap.xml').matchAll(/<loc>([^<]+)<\/loc>/g)].map(([,url])=>url);
 assert.equal(new Set(sitemap).size,sitemap.length,'Sitemap URL uniqueness');
 const editorialArticles = require('../content/commercial-maintenance-articles.json');
-assert.equal(libraryArticles.length,24+editorialArticles.length);
+assert.equal(libraryArticles.length,24+editorialArticles.length+articleSlugs.length);
 assert.equal(new Set(editorialArticles.map(article=>article.slug)).size,3);
-assert.equal(articles.length,libraryArticles.length+articleSlugs.length);
+assert.deepEqual(articles.map(article=>article.slug),libraryArticles.map(article=>article.slug));
 const homeSlugs = new Set(articleSlugs);
 for (const category of Object.keys(categories)) {
- assert.equal(libraryArticles.filter(article=>article.category===category&&!article.editorial).length,2,category+' original technical notes');
+ assert.equal(serviceArticles.filter(article=>article.category===category&&!article.editorial).length,2,category+' original technical notes');
 }
 assert.equal(new Set(articles.map(article=>article.slug)).size,articles.length);
 const bySlug = new Map(articles.map(article=>[article.slug,article]));
@@ -41,13 +41,16 @@ for (const lang of ['zh','en']) {
  assert.equal(library.filter(node=>node.tagName==='button'&&attribute(node,'data-tn-filter')).length,13);
  assert.equal(library.filter(node=>attribute(node,'data-tn-category')).length,libraryArticles.length);
  assert.equal(library.filter(node=>hasClass(node,'tn-feature')).length,1);
+ const graph = JSON.parse(library.find(node=>attribute(node,'type')==='application/ld+json').childNodes[0].value)['@graph'];
+ assert.deepEqual(graph.find(entity=>entity['@type']==='ItemList').itemListElement.map(item=>item.url),
+  libraryArticles.map(article=>canonicalUrl(article.route,lang)));
  for (const article of articles) {
   const {route} = article;
   assert(localeRoute.test(route),route+' served as English HTML by Vercel');
   const local = base => base+'?lang='+lang;
   const isHomeArticle = homeSlugs.has(article.slug);
-  const source = isHomeArticle ? page('/',lang) : library;
-  assert(urls(source).includes(local(route)),route+' discoverable in initial HTML');
+  assert(urls(library).includes(local(route)),route+' discoverable in initial library HTML');
+  if(isHomeArticle)assert(urls(page('/',lang)).includes(local(route)),route+' still linked from home');
   const nodes = page(route,lang);
   assert.equal(nodes.filter(node=>node.tagName==='h1').length,1,route);
   const main = [...tree(nodes.find(node=>node.tagName==='main'))];
@@ -105,7 +108,7 @@ for (const lang of ['zh','en']) {
  for(const slug of serviceSlugs){
   const service=page('/services/'+slug+'/',lang);
   const section=service.find(node=>hasClass(node,'tn-service-notes'));
-  const required = libraryArticles.filter(article=>article.primary===slug || article.secondary===slug);
+  const required = serviceArticles.filter(article=>article.primary===slug || article.secondary===slug);
   const destinations = urls([...tree(section)]);
   assert.equal(destinations.length,required.length,slug+' article link count');
   for (const article of required) assert(destinations.includes(article.route+'?lang='+lang));
