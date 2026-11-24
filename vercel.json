@@ -18,6 +18,12 @@
       "has": [{ "type": "host", "value": "^melbournecommercialrepairscomau\\.vercel\\.app$" }],
       "dest": "/api/normalize-page?__ellisPage=$1"
     },
+    {
+      "src": "^/$",
+      "methods": ["GET", "HEAD"],
+      "missing": [{ "type": "query", "key": "lang", "value": "^(?:en|zh)$" }],
+      "dest": "/api/normalize-page?__ellisPage=index.html"
+    },
     { "src": "^/feed(?:-en)?\\.xml$", "headers": { "Content-Type": "application/rss+xml; charset=utf-8" }, "continue": true },
     { "src": "^/feed(?:-en)?\\.json$", "headers": { "Content-Type": "application/feed+json; charset=utf-8" }, "continue": true },
     { "src": "^/llms\\.txt$", "headers": { "Content-Type": "text/plain; charset=utf-8" }, "continue": true },

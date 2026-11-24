@@ -15,6 +15,9 @@ module.exports = function normalizePage(req, res) {
   if (path && !pagePath.test(path)) return res.status(404).end();
 
   request.searchParams.delete(internalParameter);
+  if (!path && !['en', 'zh'].includes(request.searchParams.get('lang'))) {
+    request.searchParams.set('lang', 'zh');
+  }
   const canonicalPath = path ? `/${path}/` : '/';
   const host = String(req.headers.host || '').toLowerCase();
   const origin = host === legacyHost ? publicOrigin : '';
