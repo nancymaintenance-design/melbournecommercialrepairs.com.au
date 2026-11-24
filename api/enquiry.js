@@ -1,5 +1,6 @@
 'use strict';
 const { createHash } = require('node:crypto');
+const business = require('../business.json');
 const MAX_BODY = 4200000;
 const MAX_PHOTOS = 5;
 const MAX_PHOTO_BYTES = 3000000;
@@ -36,9 +37,37 @@ function validate(body) {
   if (data.photos.reduce((sum, photo) => sum + photo.bytes, 0) > MAX_PHOTO_BYTES) throw invalid('invalid_photos');
   return data;
 }
+function confirmationMail(email, from, { origin, referer }) {
+  let english = false;
+  try {
+    const page = new URL(referer);
+    english = page.origin === origin && /^\/contact(?:\/index\.html|\/)?$/.test(page.pathname) &&
+      page.searchParams.get('lang') === 'en';
+  } catch { /* The site defaults to Chinese when the page language is unavailable. */ }
+  const phone = business.telephoneDisplay;
+  return {
+    from, to: [email], reply_to: business.email,
+    subject: english ? 'We’ve received your enquiry — Ellis Services Group' : '我们已收到您的项目咨询 — Ellis Services Group',
+    text: (english ? [
+      'Thanks for getting in touch. We’ve received your commercial property maintenance enquiry.',
+      'Our team may be on site and unable to check email straight away. If you need urgent help, please call us on ' + phone + ' rather than waiting for an email reply.',
+      'We’ll review your enquiry and contact you using the details you provided to discuss the next steps.'
+    ] : [
+      '感谢您联系我们。我们已收到您的商业物业维修与维护咨询。',
+      '我们的团队可能正在现场工作，无法立即查看邮件。如需紧急协助，请直接拨打 ' + phone + '，无需等待邮件回复。',
+      '我们会查看您的项目需求，并通过您留下的联系方式与您沟通下一步安排。'
+    ]).concat(business.name).join('\n\n')
+  };
+}
 function createHandler({ env = process.env, fetch: send = globalThis.fetch } = {}) {
   // Best-effort per-instance throttle. Deployments should also use Vercel Firewall rate limiting.
   const attempts = new Map();
+  const sendMail = (mail, key, timeout) => send('https://api.resend.com/emails', {
+    method: 'POST',
+    headers: { Authorization: `Bearer ${env.RESEND_API_KEY}`, 'Content-Type': 'application/json', 'Idempotency-Key': key },
+    body: JSON.stringify(mail),
+    signal: AbortSignal.timeout(timeout)
+  });
   return async function handler(req, res) {
     res.setHeader('Cache-Control', 'no-store'); res.setHeader('X-Content-Type-Options', 'nosniff');
     const reply = (status, error) => res.status(status).json(error ? { ok: false, error } : { ok: true });
@@ -70,13 +99,24 @@ function createHandler({ env = process.env, fetch: send = globalThis.fetch } = {
     };
     const idempotency = createHash('sha256').update(JSON.stringify({ ...mail, requestId: data.requestId })).digest('hex');
     try {
-      const response = await send('https://api.resend.com/emails', { method: 'POST', headers: { Authorization: `Bearer ${env.RESEND_API_KEY}`, 'Content-Type': 'application/json', 'Idempotency-Key': `ellis-enquiry/${idempotency}` }, body: JSON.stringify(mail), signal: AbortSignal.timeout(15000) });
+      const response = await sendMail(mail, `ellis-enquiry/${idempotency}`, 15000);
       if (!response.ok) return reply(502, 'email_send_failed');
       const result = await response.json();
       if (!result.id) return reply(502, 'email_send_failed');
-      // Accepted by Resend; delivery is verified separately in its dashboard.
-      return reply(200);
     } catch { return reply(502, 'email_send_failed'); }
+
+    // Keep both calls within the existing client timeout. Owner acceptance is
+    // final for the web form even if sending the receipt fails afterwards.
+    const logReceiptFailure = (reason, status) => console.warn(JSON.stringify({
+      event: 'enquiry.receipt_failed', requestId: data.requestId, reason, status
+    }));
+    try {
+      const receipt = confirmationMail(data.email, env.RESEND_FROM, req.headers);
+      const response = await sendMail(receipt, `ellis-enquiry-receipt/${idempotency}`, 5000);
+      if (!response.ok) logReceiptFailure('provider_rejected', response.status);
+      else if (!(await response.json())?.id) logReceiptFailure('invalid_provider_response');
+    } catch { logReceiptFailure('transport_or_response_error'); }
+    return reply(200);
   };
 }
 module.exports = createHandler();
