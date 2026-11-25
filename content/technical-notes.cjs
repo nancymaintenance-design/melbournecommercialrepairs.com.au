@@ -40,7 +40,7 @@ const articles = [
   judgement:{
    heading:["什么时候需要检查相邻立面","When to investigate the adjoining façade"],
    body:[
-    ["我们把现场照片按标高、朝向和降雨时间对齐，先辨别水痕是否总在同一条路径上。若低处窗台先湿，可优先查框槽、泛水端部和排水口。若水迹从窗头或高处板缝开始，或只在特定风向复发，诊断范围应包含上方立面。","We line up photos by level, exposure and rainfall timing to see whether the stain follows the same path. Where the sill wets first, start with the frame channel, flashing ends and outlets. If the stain starts at the head or a higher panel joint, or only returns in rain from one direction, include the façade above in the investigation."],
+    ["我们按楼层、立面朝向和降雨时间对照现场照片。低处窗台先湿时，我们检查框槽、泛水端部和泄水口。水痕从窗头或较高板缝开始，或只在特定风向复发时，我们把上方立面接缝一并纳入漏水调查。","We compare site photos by floor level, façade exposure and rainfall timing. If the sill wets first, we inspect the frame channel, flashing ends and weep outlets. If staining starts at the window head or a higher panel joint, or only returns in rain from one direction, we include the façade joints above in our leak investigation."],
     ["单独淋湿一个节点，只能说明该节点在当次条件下的表现。在现场条件允许时，我们安排合适的专业人员分区复查，并记录湿润顺序、持续时间及是否施加压差。否则某次喷水未复发，不能排除原风雨条件才会启动的路径。","Wetting one detail tells us how that detail behaved under those test conditions. Where testing can be done safely, we arrange for a suitably qualified person to test by zone. We record which zones were wetted, the sequence and duration, and whether a pressure difference was applied. A negative result under spray alone can leave a wind-driven pathway unresolved."]
    ]
   },
@@ -69,7 +69,7 @@ const articles = [
   ],
   methods:[
    [['校核控制再观察','Correct controls and observe'],['若趋势显示传感器异常或指令没有正确响应，我们先复核校准和运行序列。','Where trends point to a bad reading or response, we check sensor accuracy and the sequence first.']],
-   [['调平衡或评估分区','Rebalance or assess zoning'],['控制和机械部件正常而末端风量偏离设计时，再调平衡。用途或隔断改变时，先复核设计负荷与新风要求。','Once controls and components work, rebalance against design flows. Changed use or partitions may require a review of loads and outdoor-air requirements.']]
+   [['调平衡或评估分区','Rebalance or assess zoning'],["我们先核对控制和末端机械部件，再把实测风量与设计风量对照，判断是否需要重新调平衡。办公室用途或隔断有变动时，我们会结合新版平面和实际人数复核冷热负荷与新风需求。","Once we’ve checked the controls and terminal hardware, we compare measured and design airflows to establish whether rebalancing is needed. When office use or partitions have changed, we review the loads and outdoor air needs against the current layout and occupancy."]]
   ],
   judgement:{
    heading:["怎样区分末端故障与公共静压问题","Distinguishing a terminal fault from shared pressure"],
@@ -83,7 +83,7 @@ const articles = [
   ],
   faq:[
    [['调低公共设定值能解决吗？','Will lowering the common setpoint fix it?'],['调低设定值会影响其他区域，还可能增加同时制冷和再热。我们会先判断问题出在单个分区还是整个系统。','It can affect other zones and increase simultaneous cooling and reheat. We first establish whether the issue is local or system-wide.']],
-   [['有趋势记录还需要现场读数吗？','Do trend logs replace site readings?'],['趋势揭示时序。末端读数可帮助发现传感器漂移或风阀反馈异常。','Trends show timing. Terminal measurements help identify sensor drift or misleading damper feedback.']]
+   [['有趋势记录还需要现场读数吗？','Do trend logs replace site readings?'],["我们用趋势记录对照故障发生的时间，再在末端核对风量和风阀状态，以便区分传感器漂移和反馈异常。","We use trend logs to establish when the fault occurred, then check airflow and damper position at the terminal to separate sensor drift from misleading feedback."]]
   ],
   related:['partition-head-movement','recurring-faults-maintenance']
  },
@@ -94,7 +94,7 @@ const articles = [
   keywords:[['时间光调制','Temporal light modulation'],['驱动器','LED driver'],['调光负载','Dimming load']],
   mechanism:[
    ["LED 光输出会随驱动电流变化。电流纹波、调光波形，以及驱动与控制器相互作用，可能造成不同形式的时间光调制。肉眼在静止时察觉的闪烁、移动物体出现的断续影像和手机摄像条纹，观察条件不一样。我们先问清是人眼不适、转动部件看起来断续，还是只有录像异常。","LED output responds to changes in drive current. Driver ripple, the dimming waveform and interactions between controls and drivers can all modulate the light over time. Flicker seen while stationary, a broken-up image of a moving object and banding on video show up under different conditions. We first establish whether the problem is visual discomfort, an effect on moving objects or something only the camera records."],
-   ["灯具范围也很关键。单一灯具在预热后异常，可以查局部驱动、接触与散热。共用调光命令的一组灯同时变化，则要核对控制状态和供电。只从一段自动曝光视频判断波动程度，无法排除相机逐行读取产生的条纹。","The number and location of affected fittings matters. One fitting that misbehaves after warming up points towards a local driver, connection or heat issue. A group that changes together on the same dimming command warrants a check of the control state and supply. A single auto-exposure clip cannot separate the light behaviour from banding introduced by the camera’s rolling shutter."]
+   ["我们先记录哪些灯、在哪个时段和调光档位闪烁。单盏灯预热后异常时，我们排查驱动、接触和散热。共用调光命令的一组灯同时异常时，我们转向控制状态和供电检查，并区分肉眼所见与相机逐行读取形成的条纹。","We note which fittings flicker, when it happens and at what dimming level. If one fitting misbehaves after warming up, we look at its driver, connections and heat. If a whole group on the same dimming command changes together, we check the control state and supply. We distinguish visible flicker from camera banding."]
   ],
   evidence:[
    [['仅最低亮度闪烁','Only flickers at low dim levels'],['配对兼容或低端运行不稳','Compatibility or low-end instability'],['列出灯具、驱动和控制器型号，记录出现档位。','We record fitting, driver and controller models and the level where it starts.']],
@@ -117,7 +117,7 @@ const articles = [
   ],
   faq:[
    [['视频出现条纹代表灯具一定坏了吗？','Do video bands prove a fitting is faulty?'],['拍摄设置也会影响条纹。我们把视频作为线索，结合现场观察和测量结果判断。','Camera settings affect banding. We use the video as a clue and compare it with site observations and measurements.']],
-   [['同瓦数的驱动器可以互换吗？','Are drivers of the same wattage interchangeable?'],['还要核对输出特性、调光方式、温度范围和灯具适配。','Output characteristics, dimming method, temperature rating and fitting compatibility also matter.']]
+   [['同瓦数的驱动器可以互换吗？','Are drivers of the same wattage interchangeable?'],["我们核对驱动器的输出、调光方式、温度范围和灯具适配，再确认更换配件是否合适。","We check the driver’s output, dimming method, temperature rating and compatibility with the fitting before specifying a replacement."]]
   ],
   related:['uneven-hvac-zones','commercial-water-ingress']
  },
@@ -128,7 +128,7 @@ const articles = [
   keywords:[['管内影像','Drain CCTV'],['沉积位置','Deposit location'],['商业预处理','Trade waste pretreatment']],
   mechanism:[
    ["餐饮排水的管壁沉积不一定像一层冷却后凝固的油。对污水管的研究发现，某些硬质沉积物的形成涉及油脂中的脂肪酸和钙，也可能夹杂固体。现场看见硬结只能提供线索。我们结合上游来料、预处理维护状况和回堵历史，区分反复沉积与管段损坏。","Build-up in a food premises drain is not always just a layer of cooled cooking oil. Sewer research has found that some hardened deposits involve fatty acids and calcium and can incorporate solids. A hard deposit on camera is only a clue. We look at upstream inputs, pretreatment servicing and the history of blockages before deciding whether deposits or pipe damage are driving the recurrence."],
-   ["油垢、错口和局部低点都可能在同一距离反复积料，也可能同时存在。管内影像只看到某个时刻的水位。下游受限也会造成上游积水，所以凭一帧静水不能认定管坡不合格。清理后复查剩余积水、接口与管壁，并标记与地面位置的对应关系。","Deposits, a displaced joint and a low point can each collect material at the same chainage, and more than one can be present. CCTV shows the water level at one moment. A restriction further downstream can also hold water upstream, so one frame of standing water cannot establish incorrect fall. After clearing, recheck the remaining water, joints and pipe wall and relate them to a location on site."]
+   ["油脂沉积、管节错口和局部低点都可能在同一位置反复积料。我们把清通前后的管内影像放在一起核对，因为下游受阻也会让上游积水。清通后，我们复查残余积水、接口和管壁，并将疑点标到现场平面上，便于区分再次疏通和局部管线维修。","Grease deposits, a displaced joint and a low point can all collect material at the same point. We compare CCTV footage before and after clearing, since a downstream restriction can also hold water upstream. We check any remaining water, the joints and the pipe wall, then mark the location on site so we can distinguish further clearing from local pipe repairs."]
   ],
   evidence:[
    [['同一用水高峰回涌','Backs up at the same peak period'],['负荷与支管能力不匹配','Load and branch capacity mismatch'],['我们记录关联器具、用水时段与上游预处理。','We log connected fixtures, peak periods and upstream pretreatment.']],
@@ -150,7 +150,7 @@ const articles = [
   ],
   faq:[
    [['管道积水一定说明没坡度吗？','Does standing water prove the drain has no fall?'],['下游受阻也会造成积水。我们对照积水位置和复检结果，判断是坡度问题还是下游受阻。','A downstream restriction can also hold water in the pipe. We compare where it pools with the results of a repeat inspection to distinguish a fall problem from a restriction.']],
-   [['清通后还要检查吗？','Is inspection useful after clearing?'],['反复堵塞时，清通后更容易看见此前被沉积遮住的管段。','For a repeat blockage, clearing often exposes sections that deposits previously obscured.']]
+   [['清通后还要检查吗？','Is inspection useful after clearing?'],["反复堵塞时，我们会在清通后复查先前被沉积遮住的管段，确认是否还有油垢、接口错位或局部管线缺陷。","For a recurring blockage, we recheck the sections the deposits covered before clearing. This helps us identify residual grease, displaced joints or local pipe defects."]]
   ],
   related:['commercial-water-ingress','recurring-faults-maintenance']
  },
@@ -183,7 +183,7 @@ const articles = [
    ["交接按区域列明来源处理状态、进入限制、专业复核、材料读数及记录时间。再次开放前确认通行面与相关设备已获适用的安全确认。仍有隐藏湿区或待复验事项的区域，注明负责人和下一步。","At handover, we record source control, access restrictions, specialist checks and material readings with their times for each zone. We confirm the applicable clearances for walking surfaces and equipment before reopening. Where concealed moisture or another item needs checking, we record the next step and who will handle it."]
   ],
   faq:[
-   [['表面干了就可以开放吗？','Can we reopen when the surface is dry?'],['我们先核查隐蔽湿区、污染情况和地面通行安全，并安排相应的电气安全检查，再确认哪些区域可以开放。','We check for concealed moisture and contamination, assess whether walking surfaces are safe and arrange electrical safety checks before confirming which areas can reopen.']],
+   [['表面干了就可以开放吗？','Can we reopen when the surface is dry?'],["我们核查隐蔽湿区、污染和地面通行状况，安排相应的电气安全检查，并把可恢复使用的区域、仍需保护的区域和后续修复工作分开记录。","We check for concealed moisture and contamination, assess walking surfaces and arrange the electrical safety checks. We record which areas can reopen, which still need protection and what reinstatement remains."]],
    [['进水是否都按同一方法清理？','Is clean-up the same for every water source?'],['遇到污水或进水来源不明时，我们安排专项评估，并按确认的污染情况安排清理。','For sewage or water from an unknown source, we arrange a specialist assessment and plan the clean-up based on the contamination findings.']]
   ],
   related:['recurring-drain-blockages','resilient-floor-moisture'],secondary:'cleaning-waste-hygiene'

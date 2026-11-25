@@ -24,8 +24,8 @@
             "zh": "你们维修墨尔本的办公室、商铺、仓库和商业建筑吗？"
           },
           "answer": {
-            "en": "We repair and maintain offices, shops, warehouses, industrial sites and managed commercial properties across Melbourne. We confirm what needs fixing, where the work is and which trades it requires.",
-            "zh": "我们为墨尔本的办公室、商铺、仓库、工业园区和托管商业物业提供维修与维护。我们会核对故障位置和进场要求，明确需要哪些工种及施工范围。"
+            "en": "We repair and maintain offices, shops, warehouses and other commercial properties across Melbourne. We identify where the faults are, how the site operates and which trades and access arrangements the work needs.",
+            "zh": "我们为墨尔本的办公室、商铺、仓库和其他商业物业安排建筑、设备和场地维修。我们先把故障位置和营业情况理清，再列出工作范围、所需工种和进场安排。"
           }
         },
         {
@@ -36,8 +36,8 @@
             "zh": "同一处物业有几项维修，可以一起做吗？"
           },
           "answer": {
-            "en": "We can assess several faults in one visit and group repairs that can be done together under one work order. We’ll explain what can be completed on that visit and what needs parts or a specialist trade.",
-            "zh": "我们可在同一次上门时检查多处故障，并把适合一起做的维修纳入同一工单。我们会提前说明哪些项目可一并完成，以及哪些需要另备配件或安排专业工种。"
+            "en": "Yes. We put items such as door hardware, walls and ceilings on one work order and group jobs that can be done together. We set out the sequence for items that need parts or a separate trade.",
+            "zh": "可以。我们把门五金、墙面和吊顶等维修事项列在一张工单里，安排能同时完成的工作。需要另备配件或不同工种的项目，我们会注明先后顺序。"
           }
         },
         {
@@ -48,8 +48,8 @@
             "zh": "小型商业维修也接吗，还是只做大型合同？"
           },
           "answer": {
-            "en": "We take on one-off repairs as well as scheduled maintenance. You can book a repair for a damaged door, broken ceiling tile or leaking fitting. We can also put recurring problems on a maintenance schedule.",
-            "zh": "单项维修和定期维护都可以安排。门损坏、吊顶板破损或水管配件漏水，可单独报修；反复出现的问题可纳入定期维护。"
+            "en": "We take on individual repairs such as faulty door closers, damaged ceiling tiles and leaking fittings, as well as planned maintenance. For recurring faults, we use the work history and condition of the asset to plan future visits.",
+            "zh": "我们承接闭门器故障、吊顶板破损或水管配件漏水等单项维修，也安排定期维护。遇到同一部件反复报修，我们会把故障记录和设备状况纳入维护计划。"
           }
         },
         {
@@ -60,8 +60,8 @@
             "zh": "墨尔本有多处门店或物业，能统一报修吗？"
           },
           "answer": {
-            "en": "We can manage repairs across multiple locations and schedule them by address, urgency and access hours. Before we start, we’ll confirm the scope, visit times and reporting for each site.",
-            "zh": "我们可以统一接收多个地点的报修，按地址、紧急程度和进场时间排期。开工前，我们会确认各地点的施工范围、到场安排和汇报方式。"
+            "en": "We can coordinate repairs across several Melbourne sites and schedule visits by priority and access. We keep a separate work order for each site so the scope, progress and outstanding items are clear.",
+            "zh": "我们可以统一接收多处墨尔本物业的报修，按紧急程度和进场时段排期。每个点位的工单都会分开记录维修范围、进度及待处理事项。"
           }
         },
         {
@@ -84,8 +84,8 @@
             "zh": "商铺或办公室正常营业时能施工吗？"
           },
           "answer": {
-            "en": "We plan work zones around staff, customers and operational areas. Before starting, we confirm noise, dust, access, service shutdowns and whether any section needs temporary isolation.",
-            "zh": "我们根据员工、顾客及经营区域安排施工分区。开工前确认噪声、粉尘、通行、停水停电及是否需要临时封闭局部区域。"
+            "en": "We plan work zones around customer access, staff areas and deliveries. We agree on any isolation, dust controls or service interruptions with the site contact before scheduling the work in stages.",
+            "zh": "我们按顾客通行、员工工作区和送货路线划分施工区域。需要隔离、控制粉尘或暂停设备时，我们会先和现场联系人定好时段，再分区安排施工。"
           }
         },
         {
@@ -122,8 +122,8 @@
             "zh": "墨尔本商业物业紧急维修多久能到？"
           },
           "answer": {
-            "en": "We assess the immediate risk, impact on your business, location and access. Then we let you know the earliest time we can attend.",
-            "zh": "我们先判断现场风险、营业影响、地址及进场条件，再确认最早可到场时间。"
+            "en": "When an urgent repair comes in, we assess the site risk and the effect on trading. We then confirm the earliest attendance we can arrange based on the address, access and trade required.",
+            "zh": "接到紧急报修后，我们先判断现场风险和营业影响，再结合地址、进场条件和所需工种，确认最早可安排的到场时段。"
           }
         },
         {
@@ -158,8 +158,8 @@
             "zh": "店铺营业时正在漏水，能先止损吗？"
           },
           "answer": {
-            "en": "We first identify the affected area, water source and electrical risk. Where it is safe to do so, we contain the leak and protect occupied areas. We then arrange permanent repairs once we have confirmed the cause and access arrangements.",
-            "zh": "我们先确认受影响区域、漏水来源和电气风险。现场条件安全时，我们会先控制漏水、保护仍在使用的区域。查明原因并确认进场条件后，我们再安排永久修复。"
+            "en": "We assess the affected area, electrical risks and any trading areas that need to be separated before arranging containment. Once we trace the source, we set out the temporary measures, leak repairs and reinstatement separately.",
+            "zh": "我们先判断漏水范围、电气风险及哪些营业区域需要隔开，再安排现场止损。我们查明水源后，会把临时处理、漏源维修和受损区域恢复分别列清。"
           }
         },
         {
@@ -170,8 +170,8 @@
             "zh": "正式维修前能先做临时安全处理吗？"
           },
           "answer": {
-            "en": "We address immediate risks first and make the affected area safe. We’ll explain the temporary measures, which areas need to stay isolated and what the permanent repair involves.",
-            "zh": "我们优先处理眼前的安全风险，保护受影响区域。随后我们会说明临时措施、需要保留的隔离区域和后续维修范围。"
+            "en": "We arrange temporary containment or isolation and record what we’ve addressed and which areas remain separated. We set out the permanent repair separately so property management can confirm the work and reopening arrangements.",
+            "zh": "我们先安排临时止损或隔离措施，并记录哪些区域已处理、哪些需要继续隔离。后续维修单独列范围，便于物业方确认施工和恢复使用的安排。"
           }
         },
         {
@@ -182,8 +182,8 @@
             "zh": "紧急报修时需要提供哪些信息？"
           },
           "answer": {
-            "en": "When you contact us, share the property address, the location of the fault, the site contact and any disruption to trading or access. We’ll confirm access and next steps. If you already have photos or a short video, you can send those with your enquiry.",
-            "zh": "联系我们时，告诉我们物业地址、故障位置、现场联系人，以及对营业或通行的影响。我们会确认进场方式和下一步安排；已有的现场照片或短视频也可以随咨询一并发送。"
+            "en": "When a repair is reported, we confirm the site address, affected area, site contact and impact on trading or access. Existing photos or video help us assess priority, the trade required and how to get to the work area.",
+            "zh": "我们接到报修时会核对物业地址、受影响部位、现场联系人和对营业或通行的影响。现有照片或视频可帮助我们判断优先级、需要的工种和进场方式。"
           }
         }
       ]
@@ -208,8 +208,8 @@
             "zh": "墨尔本商业物业维修一般怎么收费？"
           },
           "answer": {
-            "en": "We price the job based on the fault, labour, materials, access and timing. We set out any inspection or diagnostic charges, the repair work and the site protection it requires.",
-            "zh": "我们根据故障、人工、材料、进场要求和施工时间报价，并列明检查或诊断费用、维修项目及所需的现场保护措施。"
+            "en": "We quote on the affected components, labour and materials, plus access, site protection and work hours. We list any initial diagnostics separately and price the repair once the scope is clear.",
+            "zh": "我们根据受影响的部件、人工和材料，以及进场、现场保护和施工时段报价。需要先诊断的工作单独列明，再对已确认的维修项目报价。"
           }
         },
         {
@@ -244,8 +244,8 @@
             "zh": "开工后发现额外损坏怎么办？"
           },
           "answer": {
-            "en": "If we find further damage, we explain the impact, update the scope and seek approval before starting chargeable extra work. We explain any immediate safety measures separately.",
-            "zh": "如发现额外损坏，我们会说明影响、更新维修范围，并在开展额外收费的工作前征得同意。需要立即采取的安全措施会单独说明。"
+            "en": "If we find further damage, we record its location, explain how it affects the work and set out the variation and cost. We agree the variation before starting extra chargeable work, and record any immediate safety measures separately.",
+            "zh": "发现额外损坏时，我们会记录位置，说明它对施工的影响，并给出变更项目和费用。额外收费项目会在确认同意后安排，立即采取的安全措施则会单独记录。"
           }
         },
         {
@@ -268,8 +268,8 @@
             "zh": "完工后会提供照片和书面维修记录吗？"
           },
           "answer": {
-            "en": "We report what we repaired, which parts we replaced, the results of checks and any follow-up work. We include before-and-after photos where they are suitable and the site permits photography.",
-            "zh": "我们会整理已完成的维修、更换的部件、检查结果及后续事项。项目适合拍摄且物业允许时，我们也会附上完工前后的照片。"
+            "en": "We file the repair locations, parts replaced, check results and any follow-up items against the work order. When site photography is part of the agreed scope, we attach the before and after photos to the same record.",
+            "zh": "我们按工单归档完工记录，包括维修位置、更换部件、检查结果和待处理事项。项目约定拍摄时，前后照片也会归入同一工单。"
           }
         },
         {
@@ -280,8 +280,8 @@
             "zh": "可以提供项目需要的保险、执照和安全文件吗？"
           },
           "answer": {
-            "en": "We coordinate appropriately qualified trades for regulated electrical, plumbing, gas and refrigerant work. We also liaise with building management on the insurance, licence and safety documents the project requires.",
-            "zh": "我们按项目安排具备相应资格的电气、水管、燃气和制冷专业人员，并与物业管理方对接项目需要的保险证明、执照和安全文件。"
+            "en": "We identify the trades needed for the job and coordinate the insurance evidence, trade documents and site safety paperwork requested by property management. We agree which records will be handed over when we confirm the scope.",
+            "zh": "我们会按工作范围确定所需工种，并对接物业方要求的保险证明、专业文件和施工安全资料。需要随项目交付的记录会在确认范围时列明。"
           }
         },
         {
@@ -318,8 +318,8 @@
             "zh": "办公室墙面、石膏板和吊顶损坏能修吗？"
           },
           "answer": {
-            "en": "We inspect the damaged lining, framing and any moisture or impact cause before defining the repair. The scope may include patching, board or tile replacement, joint finishing and matching the existing surface.",
-            "zh": "我们先检查饰面、基层以及受潮或撞击原因，再确定修复范围。工作可包括补板、吊顶板更换、接缝处理及现有表面修复匹配。"
+            "en": "We check whether impact or moisture has affected the plasterboard core, fixings or ceiling grid. We distinguish patching, local board replacement and making good the finish, and coordinate repairs to any active leak first.",
+            "zh": "我们检查撞击或受潮有没有影响石膏板板芯、固定点或吊顶框架。修补、局部换板及饰面恢复会分别列清，涉及漏水时先协调漏源维修。"
           }
         },
         {
@@ -330,8 +330,8 @@
             "zh": "商业门关不严、下沉或卡住，能维修吗？"
           },
           "answer": {
-            "en": "We check alignment, hinges, closers, frames, locks and signs of impact damage. We then confirm whether adjustment, hardware replacement or door and frame repair is appropriate.",
-            "zh": "我们检查门体对位、合页、闭门器、门框、锁具以及撞击损伤，再确定应调整五金、更换配件，还是维修门扇和门框。"
+            "en": "We check door and frame alignment, hinge wear, the closer and latch before scoping adjustments, replacement hardware or repairs to the door. We check that the door opens, closes and latches properly at handover.",
+            "zh": "我们检查门扇和门框对位、合页磨损、闭门器和锁舌，再确定调整五金、更换部件或修复门扇的范围。交付时，我们复查门能否顺畅开关和锁闭。"
           }
         },
         {
@@ -342,8 +342,8 @@
             "zh": "商铺柜台、货架和办公室定制木作破损能修吗？"
           },
           "answer": {
-            "en": "We assess the joinery structure, fixings, hardware and finish. Depending on the condition, we can scope repairs to cabinet doors, shelving, counters, trims and damaged panels, or quote replacement of individual sections.",
-            "zh": "我们检查柜体结构、固定件、五金及表面饰面，根据损伤情况确定柜门、货架、柜台、收边和面板的维修范围，或单独报价更换局部构件。"
+            "en": "We check cabinet doors, hinges, benchtops and fixings to identify what can be kept, repaired or replaced. The quote lists the affected parts and any existing finishes we need to match.",
+            "zh": "我们检查柜门、铰链、台面和固定点，分清哪些部分可以保留、哪些适合局部维修或更换。报价会注明涉及的部件及需要匹配的现有饰面。"
           }
         },
         {
@@ -378,8 +378,8 @@
             "zh": "商业窗框、窗户密封条和漏风问题能处理吗？"
           },
           "answer": {
-            "en": "We inspect the frame, operating hardware, glazing seals and surrounding joints. We distinguish a seal or hardware repair from damaged safety glazing or facade work that needs a specialist assessment.",
-            "zh": "我们检查窗框、开关五金、玻璃密封及周边接缝，区分一般密封或五金维修与需要专项评估的安全玻璃、外立面问题。"
+            "en": "We check the frame, operating hardware, glazing seals and façade joints to distinguish a hardware fault, a draught and water ingress. We itemise seal or hardware repairs based on what we find.",
+            "zh": "我们检查窗框、开关五金、玻璃密封和外墙接缝，区分五金故障、气密问题和雨水渗入。我们按检查结果分别列出密封或五金维修范围。"
           }
         }
       ]
@@ -404,8 +404,8 @@
             "zh": "仓库一下雨就漏水，能找到漏点吗？"
           },
           "answer": {
-            "en": "We inspect roof sheets, laps, fasteners, penetrations, flashings, box gutters and drainage outlets as applicable. We distinguish water entry through the roof from condensation or water backing up in the drainage system before recommending repairs.",
-            "zh": "我们按现场屋面类型检查屋面板、搭接、固定件、穿屋面节点、泛水板、箱形天沟及排水口，并区分屋面渗入、结露和排水倒灌，再确定维修方式。"
+            "en": "We compare indoor water marks with when the leak appeared, then check roof laps, penetrations, flashings, box gutters and outlets. We use what we find about the water path to scope repairs to the source.",
+            "zh": "我们把室内水迹与降雨时点对照，再检查屋面板搭接、设备穿屋面处、泛水板、箱形天沟和落水口。找到可能的入水路径后，再确定漏源维修范围。"
           }
         },
         {
@@ -416,8 +416,8 @@
             "zh": "箱形天沟堵塞会导致厂房内部进水吗？"
           },
           "answer": {
-            "en": "Yes. A blocked or overflowing box gutter can send water into the roof assembly. We check the gutter, outlets, overflow provision and downpipes to find the restriction and plan the repair.",
-            "zh": "会。箱形天沟堵塞或溢流时，雨水可能进入屋面内部。我们会检查天沟、排水口、溢流设施和落水管，找出阻水位置，再安排修复。"
+            "en": "Yes. When a box gutter overflows, we check ponding marks, joints, rainheads, overflow outlets and downpipe entries. If it still overflows after clearing, we identify the drainage or gutter repair as a separate item.",
+            "zh": "会。箱形天沟溢流时，我们检查积水痕迹、接缝、雨水斗、溢流口和落水管入口。清理后仍溢流的，我们按检查结果把排水或天沟修复单独列项。"
           }
         },
         {
@@ -436,12 +436,12 @@
           "id": "q31",
           "number": 31,
           "question": {
-            "en": "Can you repair storm-damaged COLORBOND® roofing and flashings?",
-            "zh": "暴风雨损坏的 Colorbond 屋面和泛水板能修吗？"
+            "en": "Can you repair storm damage to metal roofing and flashings?",
+            "zh": "风暴损坏的金属屋面和泛水板能修吗？"
           },
           "answer": {
-            "en": "We inspect the affected sheets, fasteners, flashings, roof penetrations and drainage. The repair scope identifies damaged components, access and fall-protection requirements and any temporary weatherproofing needed.",
-            "zh": "我们检查受损屋面板、固定件、泛水板、穿屋面节点和排水系统。维修范围会注明需更换构件、进场与防坠落要求，以及是否需要临时防雨处理。"
+            "en": "We check damage to roof sheets, fasteners, flashings and roof penetrations, as well as stormwater drainage. The work scope identifies replacement sections, roof access arrangements and any temporary weather protection.",
+            "zh": "我们会核对屋面板、固定件、泛水板和设备穿屋面处的损坏，并检查雨水排放。维修范围会列明要更换的部位、高处进场安排和临时防雨措施。"
           }
         },
         {
@@ -464,8 +464,8 @@
             "zh": "商业屋面和雨水排水维修如何安排合适的工种？"
           },
           "answer": {
-            "en": "We identify the work needed on roof sheeting, flashings and stormwater drainage, then arrange the appropriately qualified trades for that work in Victoria.",
-            "zh": "我们会明确屋面板、泛水板和雨水排水的维修范围，并按维州要求安排具备相应资格的工种。"
+            "en": "We itemise repairs to roof sheets, flashings and stormwater drainage. Once we identify the source, we coordinate the trades, work sequence and completion records so the related repairs are handled together.",
+            "zh": "我们分别列清屋面板、泛水板和雨水排水的维修项目。确认漏源后，我们协调相应工种、进场顺序和完工记录，让相关工作衔接起来。"
           }
         }
       ]
@@ -490,8 +490,8 @@
             "zh": "商业楼宇天花板滴水，一定是屋顶漏水吗？"
           },
           "answer": {
-            "en": "Not necessarily. We trace the moisture path and check roof drainage, plumbing, air-conditioning condensate and adjacent wet areas as relevant. The visible ceiling stain is not always directly below the entry point.",
-            "zh": "不一定。我们会沿水迹排查屋面排水、水管、空调冷凝水及相邻湿区。天花板出现水痕的位置，未必就在真实进水点正下方。"
+            "en": "A ceiling leak can also come from pipework, air conditioning condensate or a nearby wet area. We compare the water marks with the location of building services, trace the likely water path and confirm which trade should handle the repair.",
+            "zh": "天花滴水的来源也可能是水管、空调冷凝水或相邻湿区。我们把室内水迹和楼宇设备位置对照，沿可能的水路检查，再确认由哪个工种维修。"
           }
         },
         {
@@ -514,8 +514,8 @@
             "zh": "已经打胶补过漏，为什么还会反复渗水？"
           },
           "answer": {
-            "en": "Surface sealing does not correct an underlying membrane failure, failed flashing, trapped moisture or drainage defect. We investigate the source and affected construction layers before specifying another repair.",
-            "zh": "表面打胶无法解决基层防水层失效、泛水缺陷、内部积水或排水不畅。我们会先确认水源和受影响的构造层，再确定修复范围。"
+            "en": "We compare the previous resealing with the water marks and nearby waterproofing details. We scope the repair around the source, whether that’s a sealant joint, flashing or an issue with internal drainage.",
+            "zh": "我们会核对之前打胶的位置、水迹和相邻防水节点。找到是密封接缝、泛水板还是内部排水出了问题后，我们会按漏源确定维修范围。"
           }
         },
         {
@@ -526,8 +526,8 @@
             "zh": "商铺门头、橱窗周边和外墙渗水能查吗？"
           },
           "answer": {
-            "en": "We check window and door junctions, wall penetrations, seals, flashings and nearby drainage. If a visual inspection doesn’t locate the leak, we explain which targeted tests or local openings would help.",
-            "zh": "我们检查门窗接缝、外墙开孔、密封胶、泛水板及附近排水。常规检查未能找到入水点时，我们会说明有针对性的测试或局部开拆方案。"
+            "en": "We check shopfront glazing and door junctions, wall penetrations, flashings and nearby drainage. If the water path isn’t visible, we set out the junctions, local openings or checks needed to narrow it down.",
+            "zh": "我们检查橱窗和门框接缝、外墙开孔、泛水板及附近排水。外观还看不出水路时，我们会列明下一步要检查的节点、局部开拆范围或检测项目。"
           }
         },
         {
@@ -538,8 +538,8 @@
             "zh": "漏水修好后，受潮天花和墙面也能修复吗？"
           },
           "answer": {
-            "en": "We scope leak repairs separately from reinstating damaged linings and finishes. After checking moisture conditions and site safety, we confirm what plasterboard, ceiling tiles, patching or painting the reinstatement requires.",
-            "zh": "我们把漏水源头修复与受损饰面恢复分开安排。核查含水状况和施工安全后，我们再确定石膏板、吊顶板、墙面和涂层需要恢复的范围。"
+            "en": "Yes. We coordinate repairs to the source and assess the moisture damage before scoping plasterboard, ceiling tiles, wall patching and painting. Leak repairs and interior reinstatement are listed separately so the work can be scheduled in order.",
+            "zh": "可以。我们先协调修复漏源并核对受潮范围，再列出石膏板、吊顶板、墙面修补和涂装等恢复项目。漏源维修和室内恢复分开列项，方便安排施工。"
           }
         }
       ]
@@ -564,8 +564,8 @@
             "zh": "办公室或餐厅厕所堵塞、地漏溢水能处理吗？"
           },
           "answer": {
-            "en": "We assess which fixtures are affected and whether the blockage is local or in a shared drainage line. The work may involve drain clearing, inspection and testing; recurring or deep blockages may need CCTV investigation.",
-            "zh": "我们先确认受影响洁具和排水点，判断是局部堵塞还是共用排水管问题。作业可包括疏通、检查和测试；反复或深层堵塞可能需要 CCTV 管道检测。"
+            "en": "We check the affected fixtures, floor wastes and shared lines to distinguish a local blockage from a problem further along the drain. We check flow after clearing and assess whether a drain camera inspection would help with recurring blockages.",
+            "zh": "我们先核对受影响的洁具、地漏和共用排水管，区分局部堵塞与主管问题。疏通后会检查排水是否恢复，反复堵塞时再评估是否需要摄像检测。"
           }
         },
         {
@@ -576,8 +576,8 @@
             "zh": "商用热水系统突然不出热水，能维修吗？"
           },
           "answer": {
-            "en": "We identify the system type, fault symptoms, water supply and any electrical or gas safety issues. We then assess whether a component repair, further testing or replacement is the appropriate scope.",
-            "zh": "我们先确认热水系统类型、故障表现、供水情况及相关电气或燃气安全问题，再判断适合更换零件、进一步检测，还是更换设备。"
+            "en": "We check the commercial hot water unit, supply, temperature controls and demand at busy times. We assess component repairs separately from replacement and include any outage arrangements in the quoted scope.",
+            "zh": "我们会核对商用热水设备型号、供水、温控和高峰用水情况，再把部件维修和设备更换分开评估。涉及停水或停机时，相关安排会列入报价范围。"
           }
         },
         {
@@ -588,8 +588,8 @@
             "zh": "商用厨房闻到燃气味，算紧急故障吗？"
           },
           "answer": {
-            "en": "Yes. If you suspect a gas leak, leave the affected area and call emergency services or the gas emergency line from a safe place. We arrange for licensed gasfitters to carry out follow-up testing and repairs.",
-            "zh": "是。闻到疑似燃气泄漏的气味时，请立即离开受影响区域，从安全地点联系紧急服务或燃气应急热线。后续检测和维修，我们会安排持牌燃气专业人员处理。"
+            "en": "A suspected gas leak needs immediate attention. Leave the affected area and call your gas distributor’s emergency line from a safe place. Call 000 if there’s immediate danger. Once the site is safe, we can coordinate follow-up testing and repairs.",
+            "zh": "疑似燃气泄漏需要立即处理。请离开受影响区域，从安全地点联系燃气供应商的应急热线。有即时危险时请拨打 000。现场恢复安全后，我们会协调后续检测和维修。"
           }
         },
         {
@@ -600,8 +600,8 @@
             "zh": "仓库地漏反复堵塞，是什么原因？"
           },
           "answer": {
-            "en": "Repeated blockages can be linked to debris, sediment, grease, roots, damaged pipework or insufficient drainage capacity. We assess the line and use inspection findings to distinguish a cleaning problem from a defect that needs repair.",
-            "zh": "反复堵塞可能涉及杂物、沉积物、油脂、树根、管道破损或排水能力不足。我们通过管线检查区分单纯清理问题与需要修复的结构性缺陷。"
+            "en": "We inspect the warehouse floor wastes, connected pipework and sediment, and identify where ponding or overflow keeps returning. We separate routine clearing, further drain inspection and repairs to damaged pipework.",
+            "zh": "我们检查仓库地漏、相连管线和沉积物，核对积水或溢流反复发生的位置。根据排查结果，我们会区分日常清理、管线检测和破损管道维修。"
           }
         },
         {
@@ -612,8 +612,8 @@
             "zh": "能检查防回流装置和商用厨房排水系统吗？"
           },
           "answer": {
-            "en": "We first confirm the installed system and its testing and maintenance requirements. For backflow prevention, gas and other regulated plumbing work, we arrange trades with the relevant Victorian licence class and specify the records required.",
-            "zh": "我们先确认设备类型及适用的检测和维护要求。涉及防回流、燃气或其他受监管水管作业时，我们按维州相应的执照类别安排专业人员，并在工作范围中列明所需记录。"
+            "en": "We identify the backflow device, location and available records, then set out the checks and job records to arrange. For commercial kitchens, we itemise pipe and fixture repairs separately from grease-trap servicing and pump-outs.",
+            "zh": "我们会确认防回流装置的位置、类型和现有记录，再明确要安排的检查及留档内容。商用厨房的管道和洁具维修会单独列项，方便区分隔油设施维护和抽运处置。"
           }
         },
         {
@@ -650,8 +650,8 @@
             "zh": "办公室灯闪烁、不亮或整区照明故障能修吗？"
           },
           "answer": {
-            "en": "We arrange a qualified electrician to check the fittings, drivers, wiring, controls and supply. Once the cause is clear, we can plan the repair.",
-            "zh": "我们安排具备相应资质的电工排查灯具、驱动器、布线、控制设备和供电，找出原因后再安排维修。"
+            "en": "We arrange for an electrician to check fittings, drivers, dimming controls and the shared circuit. We distinguish a faulty fitting from a supply or controls issue affecting the whole area before scoping repairs or replacement.",
+            "zh": "我们安排电工检查故障灯具、驱动器、调光控制和共用电路，区分单灯故障与整区供电或控制问题。查明原因后，再确定维修或更换项目。"
           }
         },
         {
@@ -674,8 +674,8 @@
             "zh": "可以检查漏电保护装置、便携电器和应急照明吗？"
           },
           "answer": {
-            "en": "We confirm the applicable requirements for RCDs, portable electrical equipment and emergency lighting. We arrange the appropriate trades and include the tests and records in the work order.",
-            "zh": "我们根据楼宇用途和设备情况确认漏电保护装置（RCD）、便携式电器及应急照明各自的测试要求，安排合适的专业人员，并把测试和记录纳入工单。"
+            "en": "We separate portable appliance test and tag, RCD checks and emergency lighting tests in the scope. Once agreed, we identify the affected equipment and record the results and defects that need repairs against the work order.",
+            "zh": "我们把便携电器的检测贴签、漏电保护装置（RCD）检查和应急照明测试分别列项。确认范围后，我们记录涉及的设备，并把结果和待修缺陷归入工单。"
           }
         },
         {
@@ -724,8 +724,8 @@
             "zh": "墨尔本办公室空调多久保养一次？"
           },
           "answer": {
-            "en": "We set the servicing schedule around operating hours, equipment type, filters, the environment, manufacturer requirements and the unit’s fault history.",
-            "zh": "我们根据空调运行时间、设备类型、滤网、环境、厂家要求和故障记录制定保养周期。"
+            "en": "We plan servicing around the equipment, operating hours, environment and fault history. Our quote sets out the checks and cleaning and identifies whether filter replacement, consumables or fault repairs are priced separately.",
+            "zh": "我们按设备类型、运行时间、使用环境和故障记录制定保养安排。报价会列明检查与清洁项目，并区分哪些滤网更换、耗材或故障维修另行计价。"
           }
         },
         {
@@ -748,8 +748,8 @@
             "zh": "老旧商用空调应该维修还是更换？"
           },
           "answer": {
-            "en": "We look at the fault, the condition of the equipment, parts availability and what the system needs to do. We consider replacement when a repair is unlikely to be practical or reliable.",
-            "zh": "我们对比故障情况、设备状态、配件供应、维修范围和实际运行需求。当维修已无法对现有设备提供合理、稳定的处理结果时，再评估更换方案。"
+            "en": "We compare the fault, condition, parts availability and current cooling demand. We explain the repair and replacement options separately so property management can compare costs and downtime.",
+            "zh": "我们对照故障、设备状况、配件供应和现有制冷需求，分别说明维修和更换的范围，让物业方看清费用及停机安排上的差别。"
           }
         },
         {
@@ -760,8 +760,8 @@
             "zh": "商用厨房排风和大楼通风系统能检修吗？"
           },
           "answer": {
-            "en": "We first check the fan, ductwork, controls and the building's ventilation requirements. We then scope mechanical servicing separately from any specialist cleaning, fire-related controls or other regulated work.",
-            "zh": "我们先核对风机、风管、控制系统和楼宇通风要求，再分别确认机械设备检修、专项清洁、消防联动和其他受监管作业的范围。"
+            "en": "We check the fans, ducts, filters and controls to define the ventilation fault. For commercial kitchen exhaust, we set out equipment repairs separately from any specialist hood or duct cleaning.",
+            "zh": "我们先核对风机、风管、过滤部件和控制系统，明确要处理的通风设备故障。商用厨房排风的设备维修和风罩、风管专项清洁会分别列清。"
           }
         },
         {
@@ -784,8 +784,8 @@
             "zh": "商业楼宇冷却塔需要单独的维护和合规计划吗？"
           },
           "answer": {
-            "en": "We scope cooling tower maintenance separately from routine air conditioning servicing. We work with building management to confirm who handles registration, risk management, audits and water testing.",
-            "zh": "我们会把冷却塔专项维护与常规空调保养分开安排，并与物业管理方确认注册、风险管理、审计和水质检测等事项的负责方。"
+            "en": "We treat a cooling tower as a separate asset when reviewing the job. We review the existing maintenance records with building management and identify where specialist checks and follow-up fit before agreeing the air conditioning scope.",
+            "zh": "我们把冷却塔作为独立设备列入范围核对。我们与物业管理方核对现有维护记录，明确专项检测和后续事项如何衔接，再确认空调保养项目。"
           }
         }
       ]
@@ -822,20 +822,20 @@
             "zh": "可以协助整理楼宇基本安全设施的维护记录吗？"
           },
           "answer": {
-            "en": "We can help organise Essential Safety Measures maintenance records against the building’s approvals. We identify any specialist inspections or sign-off so building management can collate the annual report.",
-            "zh": "我们可以协助整理建筑的基本安全设施（Essential Safety Measures）维护记录，并按建筑已有的审批文件确认所需项目。我们把需由合资格人员检测或签署的事项单独列明，便于物业管理方汇总年度报告。"
+            "en": "We organise Essential Safety Measures (ESM) maintenance records against the building’s existing documentation. We list the equipment, completed work, defects and follow-up, and identify items that need a separate inspection or sign-off.",
+            "zh": "我们按建筑已有的基本安全设施（ESM）资料整理维护记录，列出涉及的设备、已完成项目、缺陷和后续事项。需要单独检测或签署的项目，我们会在清单中标明。"
           }
         },
         {
           "id": "q58",
           "number": 58,
           "question": {
-            "en": "Our fire alarm keeps going off without an obvious fire. Can you investigate?",
-            "zh": "消防警报反复误响，能检查吗？"
+            "en": "Can you arrange an investigation when a fire alarm keeps sounding?",
+            "zh": "消防警报反复响起，能安排排查吗？"
           },
           "answer": {
-            "en": "We arrange for appropriately qualified specialists to check the fire panel, detectors, zones and event history. While they investigate, we coordinate site safety measures with building management.",
-            "zh": "我们安排具备相应资质的专业人员检查消防控制盘、探测器、分区和事件记录。排查期间，我们会与物业管理方协调现场安全措施。"
+            "en": "Each alarm is treated under the site’s emergency procedures. Once the site is cleared for investigation, we coordinate checks of the fire panel, detectors, alarm zones and event history to define the repair scope.",
+            "zh": "每次警报都先按现场应急程序处理。在现场确认可以排查后，我们会协调检查消防控制盘、探测器、报警分区和事件记录，再明确故障处理范围。"
           }
         },
         {
@@ -858,8 +858,8 @@
             "zh": "办公室门禁无法开门或刷卡失灵，能维修吗？"
           },
           "answer": {
-            "en": "We assess the reader, power supply, controller, lock, door hardware and access permissions. We separate electrical or electronic faults from physical door alignment and verify that egress and fire-safety functions remain effective.",
-            "zh": "我们检查读卡器、供电、控制器、锁具、门体五金和权限设置，区分电子系统故障与门扇机械对位问题，并确认疏散及消防安全功能不受影响。"
+            "en": "We check the reader, power, controller, lock, hardware and permissions to separate door alignment problems from electronic faults. Before handover, we check the access, exit and linked functions affected by the work.",
+            "zh": "我们检查读卡器、电源、控制器、锁具、门体五金和权限设置，区分门体对位问题与电子故障。交付前会核对受影响的通行、疏散和联动功能。"
           }
         },
         {
@@ -896,8 +896,8 @@
             "zh": "能在下班后给办公室或商铺重新刷漆吗？"
           },
           "answer": {
-            "en": "We assess after-hours scheduling against site access, ventilation, product curing time and noise restrictions. We can plan painting by area and allow for reopening and normal use in the work schedule.",
-            "zh": "我们会结合进场时间、通风条件、涂料固化时间及噪声限制评估非营业时间施工。可以按区域分阶段安排，并在排期中考虑重新开放使用的时间。"
+            "en": "We can stage painting by room or trading area and plan around access, ventilation, odour and coating curing requirements. We quote the surface preparation and painting scope and set out the conditions for reopening.",
+            "zh": "我们可以把涂装按房间或营业区域分段安排，并核对进场时段、通风、气味和涂层固化要求。报价会列明基层处理、涂装范围及预计恢复使用的条件。"
           }
         },
         {
@@ -932,8 +932,8 @@
             "zh": "吊顶板水渍或破损，能只换几块吗？"
           },
           "answer": {
-            "en": "Individual suspended ceiling tiles can often be replaced when the grid is sound and a compatible product is available. We first confirm whether staining is caused by an unresolved leak or other building-service fault.",
-            "zh": "若吊顶龙骨完好、能找到兼容板材，通常可以局部更换吊顶板。对于水渍板材，我们会先核对是否仍有漏水或其他楼宇设备故障。"
+            "en": "We check the damaged tiles, grid and availability of matching materials before scoping local replacement. If tiles are stained, we investigate whether the leak is still active before scheduling reinstatement.",
+            "zh": "我们检查受损吊顶板、格栅和可匹配的板材，确认是局部换板还是需要调整更换范围。遇到水渍时，我们先查明是否仍在漏水，再安排恢复。"
           }
         },
         {
@@ -970,8 +970,8 @@
             "zh": "办公楼、零售中心和仓库外部绿化能定期维护吗？"
           },
           "answer": {
-            "en": "We assess the lawns, garden beds, hedges, access routes and grounds maintenance needs. We set the work list and visit frequency around the property layout, season and agreed scope.",
-            "zh": "我们检查草坪、花坛、绿篱、通行区域和场地维护需求，再根据物业布局、季节和已确认的工作范围制定维护清单及巡访频次。"
+            "en": "We scope mowing, pruning, weeding and clean-up around commercial lawns, garden beds, hedges and entrances. We plan visits around the season and site access, and flag irrigation faults for follow-up.",
+            "zh": "我们按商业场地的草坪、花坛、绿篱和出入口列出维护项目，安排修剪、除草及清理。我们会按季节和通行需求排期，并把发现的灌溉故障列入安排。"
           }
         },
         {
@@ -994,8 +994,8 @@
             "zh": "商业停车场破损、积水和停车位划线磨损能处理吗？"
           },
           "answer": {
-            "en": "We assess pavement defects, surface falls, drains and marking condition as separate items. The scope identifies repairs, any surface preparation, traffic management and the sections that need to be taken out of use during work.",
-            "zh": "我们分别检查地面破损、坡度、排水和标线磨损情况。施工范围会注明基层处理、维修、车辆动线管理以及临时停用区域。"
+            "en": "We check the pavement, existing line marking, channel drains, pits and grates separately. We quote the preparation, repairs or remarking and plan which sections will close and when they can reopen to traffic.",
+            "zh": "我们分别检查铺面、原有标线、排水沟、集水井和盖板。报价会列明基层处理、修补或重划的范围，以及分区封闭和恢复通车的安排。"
           }
         },
         {
@@ -1032,8 +1032,8 @@
             "zh": "可以为业主委员会或物业经理处理共用区域维修吗？"
           },
           "answer": {
-            "en": "We can assess common-property repairs through the authorised manager, identify the affected building elements and provide a defined scope for approval. Work in shared areas is scheduled around access, residents, tenants and relevant building rules.",
-            "zh": "我们可以通过授权物业管理人对接公共区域维修，核对受影响建筑构件并提交明确的审批范围。共用空间施工会考虑通行、住户、租户及大楼管理要求。"
+            "en": "We coordinate repairs to common entrances, corridors and other shared areas through the authorised building manager. We itemise the affected building elements and scope, then schedule the work around resident and tenant access.",
+            "zh": "我们与获授权的物业管理人对接共用入口、楼道及其他公共区域的维修，列明受影响构件、范围和报价，再按住户和租户的通行时段安排施工。"
           }
         },
         {
@@ -1092,8 +1092,8 @@
             "zh": "商业租约到期，可以安排退租恢复吗？"
           },
           "answer": {
-            "en": "We review the lease handover requirements, current condition and agreed reinstatement scope. The work may include fixture removal, wall and ceiling repairs, painting, flooring reinstatement and other documented make-good items.",
-            "zh": "我们核对租约交还条件、现场现状和确认的恢复范围。项目可包括拆除租户设施、修复墙面与吊顶、重新涂装、恢复地面及其他列明的 Make Good 工作。"
+            "en": "We use the agreed handover scope and the condition of the premises to list what stays, what comes out and what needs patching, painting or floor reinstatement. We coordinate the work around the handover date and report against the agreed scope.",
+            "zh": "我们以确认的交还范围和现场状况为基础，分别列明保留、拆除、修补、涂装和地面恢复项目。我们按交还日期协调施工，完工后按约定范围交接。"
           }
         },
         {
@@ -1104,8 +1104,8 @@
             "zh": "办公室或仓库退租恢复报价需要哪些资料？"
           },
           "answer": {
-            "en": "Send us the property address, lease end date, relevant make-good clauses and the property manager’s handover requirements. Floor plans, measurements or photos are helpful if you have them. We’ll arrange access for an inspection and set out the scope and quote.",
-            "zh": "把物业地址、租约到期日、有关的退租恢复条款及物业方的交还要求发给我们。已有的面积资料和照片也可以一并提供。我们会协调进场检查，明确施工内容和报价。"
+            "en": "We use the address, handover date, agreed make-good requirements and existing photos to prepare the quote. After inspecting the site, we itemise what to retain, remove, repair and replace, and confirm access and handover arrangements.",
+            "zh": "我们把物业地址、交还日期、双方确认的恢复要求和现有照片纳入报价准备。现场检查后，会把保留、拆除、修复和更换分项列明，并确认进场与交接安排。"
           }
         }
       ]

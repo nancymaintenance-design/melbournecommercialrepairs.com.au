@@ -61,12 +61,18 @@ function page(route,zh,en,content,related='',options={}){
  const dest=path.join(root,route,'index.html');fs.mkdirSync(path.dirname(dest),{recursive:true});fs.writeFileSync(dest,versionAssets(withFooterShell.replace('</head>','<link rel="stylesheet" href="/footer-brand.css"><link rel="stylesheet" href="/inner-footer-transition.css"><script src="/inner-footer-transition.js" defer></script>'+(options.serviceReference?'<link rel="stylesheet" href="/service-reference.css"><link rel="stylesheet" href="/service-reference-fidelity.css">':'')+'</head>'),root));
 }
 const topicRecords=require('./content/render-topics.cjs')(page,data,serviceSlugs,sectorSlugs);
-page('services','墨尔本商业维护服务','Commercial maintenance services in Melbourne','');
-page('sectors','按物业类型查看商业维修与维护服务','Commercial Property Maintenance by Property Type','','',{
- descriptionZh:'我们服务的商业物业。Ellis Services Group 为墨尔本商业物业统筹维修与维护项目。',
- descriptionEn:'Commercial properties we maintain. We coordinate commercial property repairs and maintenance in Melbourne.'
+page('services','墨尔本商业维护服务','Commercial maintenance services in Melbourne','','',{
+ descriptionZh:'我们在墨尔本安排建筑维修、屋面防水、商业水电、空调保养、室外工程与退租恢复。我们负责现场检查、报价、施工和交接。',
+ descriptionEn:'We organise building repairs, roofing and waterproofing, electrical, plumbing, HVAC, external works and make good across Melbourne, from inspection to handover.'
 });
-page('about','关于 Ellis Services Group','About Ellis Services Group','');
+page('sectors','按物业类型查看商业维修与维护服务','Commercial Property Maintenance by Property Type','','',{
+ descriptionZh:'我们为墨尔本的办公室、商铺、仓库和其他商业物业统筹维修，按场地用途安排检查、报价和进场。',
+ descriptionEn:'We repair Melbourne offices, shops, warehouses and other commercial properties. We plan inspections, quotes and access around how each property operates.'
+});
+page('about','关于 Ellis Services Group','About Ellis Services Group','','',{
+ descriptionZh:'我们是 ELLIS Services Group。我们为墨尔本商业物业安排建筑、楼宇设备和室外维修，从现场检查与报价到完工交接。',
+ descriptionEn:'We’re Ellis Services Group. We coordinate building, equipment and outdoor repairs for Melbourne commercial properties, from inspection and quote to handover.'
+});
 page('insights',...technicalNotes.libraryTitle,technicalNotes.library(),'',{
  technical:true,extraHead:'<link rel="stylesheet" href="/technical-stage.css"><script src="/technical-stage.js" defer></script>',
  descriptionZh:`查阅 ${technicalNotes.libraryArticles.length} 篇墨尔本商业物业维护文章，了解故障排查、维修安排、预算和验收记录。`,
@@ -93,10 +99,10 @@ areaRegions.forEach(region=>{
  });
 });
 page('privacy','隐私说明','Privacy information',require('./content/enquiry-privacy.cjs')(dual));
-page('faq','商业物业维护常见问题','Commercial Property Maintenance FAQs',`<section class="topic-faq" data-entrance>${dual('h2','先了解，再安排现场','Understand the work. Plan the visit.')}<div class="topic-faq-list">${data.faqs.map(f=>`<details><summary>${dual('span',f[0],f[1])}<span class="faq-symbol" aria-hidden="true">+</span></summary>${dual('p',f[2],f[3])}</details>`).join('')}</div></section>`,dual('h2','按具体任务了解服务','Explore the work by service')+cards(data.services,'services',serviceSlugs),{intro:['单次维修、长期维护与多工种工程。从你关心的问题开始，找到具体的服务范围。','One-off repairs, ongoing care and multi-trade work. Start with your questions and explore the scope for your property.']});
+page('faq','商业物业维护常见问题','Commercial Property Maintenance FAQs',`<section class="topic-faq" data-entrance>${dual('h2','先了解，再安排现场','Understand the work. Plan the visit.')}<div class="topic-faq-list">${data.faqs.map(f=>`<details><summary>${dual('span',f[0],f[1])}<span class="faq-symbol" aria-hidden="true">+</span></summary>${dual('p',f[2],f[3])}</details>`).join('')}</div></section>`,dual('h2','按具体任务了解服务','Explore the work by service')+cards(data.services,'services',serviceSlugs),{intro:['我们回答商业物业报修、分项报价、营业期间进场和完工记录的常见问题。','We answer common questions about commercial repairs, itemised quotes, access during trading and completion records.']});
 page('contact',contactPage.titleZh,contactPage.titleEn,'','',{
- descriptionZh:'聊聊你的墨尔本项目。Ellis Services Group 为墨尔本商业物业统筹维修与维护项目。',
- descriptionEn:'Let’s Talk About Your Melbourne Property. We coordinate commercial property repairs and maintenance in Melbourne.',
+ descriptionZh:'联系我们安排墨尔本商业物业维修。我们核对故障和进场条件，安排检查，并明确施工范围和报价。',
+ descriptionEn:'Contact us about repairs or maintenance for your Melbourne commercial property. We review the fault and access, arrange an inspection and confirm the quote.',
  extraHead:'<link rel="stylesheet" href="/contact-page.css"><script src="/contact-page.js" defer></script>'
 });
 // Provide the same real links in the initial HTML, including without JavaScript.

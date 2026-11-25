@@ -7,7 +7,7 @@ const groups=[
 ];
 const groupFor=i=>[0,1,11].includes(i)?0:[2,3,4,5].includes(i)?1:2;
 exports.section=function(services,slugs,zh,en){
-  const intro=['按物业的具体需求选择服务。单项维修、定期维护与多工种工程均可按现场情况统筹安排。','Choose services for your property’s needs. We coordinate one-off repairs, ongoing maintenance and multi-trade works around the site.'];
+  const intro=['从屋面漏水、灯具故障到退租恢复，我们负责检查、报价和工种衔接。单次维修和定期维护可分别安排。','From roof leaks and lighting faults to end-of-lease make good, we organise inspections, quotes and trades. We arrange one-off repairs and planned maintenance.'];
   return `<section id="page-content" class="service-directory" data-service-directory data-active-group="2" aria-labelledby="directory-heading">
     <div class="directory-heading"><div><p class="eyebrow" data-zh="我们的服务 / MELBOURNE" data-en="OUR SERVICES / MELBOURNE">我们的服务 / MELBOURNE</p>${dual('h1',zh,en).replace('<h1 ','<h1 id="directory-heading" ')}${dual('p',...intro,'directory-intro')}</div><div class="directory-controls"><div class="directory-tabs" role="group" aria-label="Service groups">${groups.map((g,i)=>`<button type="button" data-directory-group="${i}" aria-pressed="${i===2}" aria-controls="directory-card-${i}">${dual('span',g.zh,g.en)}</button>`).join('')}</div><span class="directory-phase" aria-hidden="true"><b data-directory-phase>03</b> / 03</span></div></div>
     <div class="directory-layout"><div class="directory-theatre" aria-label="Building, systems and grounds">

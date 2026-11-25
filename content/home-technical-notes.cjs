@@ -5,7 +5,7 @@ module.exports = [
  {
   slug:'maintenance-plan',category:'building',colour:'lime',image:cover('maintenance-plan'),
   title:['商业物业维护计划：设备台账与保养安排','Commercial Property Maintenance Plans: Asset Registers and Servicing'],
-  summary:['我们按区域和设备梳理维修事项，再根据故障后果、运行状况和进场条件，区分即时维修、例行保养与计划更新。','We map maintenance work by area and asset, then use the consequences of failure, asset condition and site access to separate immediate repairs, routine servicing and planned renewal.'],
+  summary:["我们按区域和设备建立维护清单，用故障记录、运行状态和停机影响区分即时维修、例行保养和计划更新。","We build a maintenance list by area and asset. Fault history, operating condition and downtime help us separate immediate repairs, routine servicing and planned renewal."],
   keywords:[['设备台账','Asset register'],['故障影响','Impact of failure'],['计划维护','Planned maintenance']],
   mechanism:[
    ['同样是门关不严，一扇备用库房门和一处繁忙的公共出入口，影响可能完全不同。我们把物业分成屋面、楼宇设备、室内共用区域及室外场地，再把空调、水电、门禁、照明、园林和清洁等事项落实到位置或设备编号。这样可以看清哪些区域共用一套系统，哪一项故障会影响营业，以及是否有可用的替代设施。','A door that will not close has different consequences in a spare storeroom and at a busy public entrance. We map roofs, building systems, shared interiors and outdoor areas, then assign work on air conditioning, plumbing, electrical, access, lighting, grounds and cleaning to a location or asset ID. This shows which areas share a system, what a failure would interrupt and whether a backup is available.'],
@@ -45,7 +45,7 @@ module.exports = [
  {
   slug:'facade-cleaning',category:'signage',colour:'pink',image:cover('facade-cleaning'),
   title:['我们怎样安排外立面和高处清洁','How we plan façade and high-access cleaning'],
-  summary:['我们按玻璃、金属、石材和涂饰面划分清洁区域，用小范围试清确定方法，并结合出入口、营业和天气安排高处作业。','We plan cleaning by surface, from glazing and metal to stone and coated panels. Trial patches inform the method, and we schedule high-access work around building entry, trading hours and weather.'],
+  summary:["我们按玻璃、金属、石材和涂饰面划分外立面清洁范围，做小范围试清，再结合出入口、营业时段和天气安排高处作业。","We scope façade cleaning by surface, from glazing and metal to stone and coated panels. Trial patches help us choose the method, and we schedule high-access work around building entrances, trading hours and weather."],
   keywords:[['外立面分区','Façade zones'],['小范围试清','Trial cleaning patch'],['高处进场','High-access planning']],
   mechanism:[
    ['雨棚和深窗台下方较少受雨水冲刷，灰尘容易堆积。雨水流过压顶、窗框或接缝时，又可能把污物带到下方，形成一条条水痕。我们按朝向、高度、材料及上下游构造记录污痕分布，比较同一表面受雨部位和遮蔽部位的差异，再决定哪些区可以一起施工。','Sheltered areas beneath awnings and deep sills get less rinsing from rain and can collect dust. Run-off from caps, frames and joints can also carry dirt down the face and leave streaks. We map marks by exposure, height and material, compare sheltered and exposed sections of the same surface and then decide which zones can be cleaned together.'],
@@ -107,7 +107,7 @@ module.exports = [
    ['我们按店面及室内区域核对保留、拆除、修补和新增项目，记录旧孔位处理情况、饰面衔接、标识位置和需要验收的功能。交接清单附现场照片、相关工种检查记录及待跟进事项，说明由谁负责、何时复查。','We check retained, removed, repaired and new items by shopfront and interior zone. We record how old fixing holes were treated, how finishes join, sign positions and the functions checked. The handover list includes photos, relevant trade records and each remaining item with an owner and a review date.']
   ],
   faq:[
-   [['新招牌能直接沿用旧孔位吗？','Can the new sign use the old fixing holes?'],['我们先核对新标识的重量和固定要求，再确认旧孔位的基层和固定状态。条件匹配且范围确认后，才安排沿用。','We check the new sign’s weight and fixing requirements against the substrate and the condition of the old fixing points. We reuse them once their suitability and the scope are confirmed.']],
+   [['新招牌能直接沿用旧孔位吗？','Can the new sign use the old fixing holes?'],["我们把新招牌的重量和固定要求与旧孔位的基层、现有连接状态逐项对照，再在报价中列明哪些固定点可以保留、哪些需要恢复。","We compare the new sign’s weight and fixing requirements with the substrate and condition of the existing fixing points. In the quote we set out which points can stay and which areas need making good."]],
    [['拆招牌和重新刷漆可以一起报价吗？','Can sign removal and repainting be quoted together?'],['可以。我们把拆除、基层修补、涂装和电气工作分别列明，说明可确认的范围，并把拆开后可能新增的修补内容单列确认。','Yes. We set out removal, patching, painting and electrical work as separate items within the same quote. If removal reveals extra repairs, we confirm them separately.']]
   ],
   primary:'fit-outs-make-good',secondary:'signage-wayfinding',

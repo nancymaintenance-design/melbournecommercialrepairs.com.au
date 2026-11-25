@@ -109,8 +109,8 @@
         "metaTitle": "墨尔本商业物业服务地区 | Ellis Services Group",
         "metaDescription": "查看 Ellis 在墨尔本 10 个大区的商业物业维修与维护入口。按地区了解物业场景、关联服务和进场安排，提交你的项目需求。",
         "eyebrow": "ELLIS / MELBOURNE / SERVICE AREAS",
-        "heroLead": "为墨尔本各区商业物业提供维修与维护，统筹建筑、设备及室内外环境。",
-        "intro": "从市中心办公楼到商业街、工业园区与仓库，维修安排需要结合物业用途、现场条件和可进入时间。先选择你的大区，再查看相关服务与项目安排。",
+        "heroLead": "我们为墨尔本各区的办公楼、商铺和仓库安排建筑、设备与室外维修。",
+        "intro": "我们按物业用途和进场条件安排维修。从市中心办公楼的电梯预约，到仓库的装卸时段，我们会与现场负责人确认施工区、工种和交付顺序。",
         "sectionHeadings": {
           "regions": "选择您的服务大区",
           "services": "地区确认后，选择具体服务",
@@ -147,8 +147,8 @@
         "metaTitle": "Commercial Property Service Areas Melbourne | Ellis",
         "metaDescription": "Explore Ellis commercial maintenance by Melbourne region. Find relevant building, equipment and external services, then discuss the scope and access for your property.",
         "eyebrow": "ELLIS / MELBOURNE / SERVICE AREAS",
-        "heroLead": "Find maintenance services in your part of Melbourne.",
-        "intro": "From city offices to commercial strips, industrial premises and warehouses, maintenance needs to reflect the property’s use, site conditions and access. Start with your region, then explore relevant services and project arrangements.",
+        "heroLead": "We arrange building, equipment and outdoor repairs for offices, shops and warehouses across Melbourne.",
+        "intro": "We plan repairs around each property’s operations. From lift bookings in city offices to loading windows at warehouses, we confirm work areas, trades and handover with your site contact.",
         "sectionHeadings": {
           "regions": "Find your area",
           "services": "Find the service you need",
@@ -395,7 +395,8 @@
               "serviceRoutes": [
                 "/services/building-maintenance/",
                 "/services/hvac-building-systems/"
-              ]
+              ],
+              "inspection": "我们按楼层确认门具、板面或地面的损坏和相邻办公室通行。"
             },
             {
               "id": "tenancy-handover",
@@ -410,7 +411,8 @@
               "serviceRoutes": [
                 "/services/fit-outs-make-good/",
                 "/services/cleaning-waste-hygiene/"
-              ]
+              ],
+              "inspection": "我们把约定交还的保留、拆除和修复项目按房间分开记录。"
             },
             {
               "id": "street-front",
@@ -425,7 +427,8 @@
               "serviceRoutes": [
                 "/services/facade-high-access-cleaning/",
                 "/services/building-maintenance/"
-              ]
+              ],
+              "inspection": "我们核对玻璃、檐口和入口的材质及可用进场位置。"
             }
           ],
           "planning": [
@@ -457,8 +460,8 @@
             }
           ],
           "cta": {
-            "title": "安排你的市中心物业项目",
-            "body": "提供楼宇位置、楼层和维修事项，我们从现场条件开始整理范围。",
+            "title": "市中心及内城物业维修",
+            "body": "我们与楼宇联系人确认楼层、进场和施工范围，再安排维修。",
             "label": "咨询此地区项目"
           }
         },
@@ -491,7 +494,8 @@
               "serviceRoutes": [
                 "/services/building-maintenance/",
                 "/services/hvac-building-systems/"
-              ]
+              ],
+              "inspection": "We check hardware, linings or flooring damage by floor and agree on access to occupied rooms."
             },
             {
               "id": "tenancy-handover",
@@ -506,7 +510,8 @@
               "serviceRoutes": [
                 "/services/fit-outs-make-good/",
                 "/services/cleaning-waste-hygiene/"
-              ]
+              ],
+              "inspection": "We record retained, removal and reinstatement items by room against the agreed handover scope."
             },
             {
               "id": "street-front",
@@ -521,7 +526,8 @@
               "serviceRoutes": [
                 "/services/facade-high-access-cleaning/",
                 "/services/building-maintenance/"
-              ]
+              ],
+              "inspection": "We check glazing, canopy and entrance materials and available access points."
             }
           ],
           "planning": [
@@ -553,8 +559,8 @@
             }
           ],
           "cta": {
-            "title": "Plan your city property project",
-            "body": "Tell us which building and floor need repairs. We’ll confirm access and plan the visit.",
+            "title": "CBD and inner-suburb repairs",
+            "body": "We agree on floors, access and repair scope with building management before booking the work.",
             "label": "Enquire about work in this area"
           }
         }
@@ -713,7 +719,8 @@
               "serviceRoutes": [
                 "/services/building-maintenance/",
                 "/services/electrical-lighting/"
-              ]
+              ],
+              "inspection": "我们检查入口门、地面或表面损坏，并划分可作业的营业区域。"
             },
             {
               "id": "shop-refresh",
@@ -728,7 +735,8 @@
               "serviceRoutes": [
                 "/services/fit-outs-make-good/",
                 "/services/signage-wayfinding/"
-              ]
+              ],
+              "inspection": "我们按店面点位核对标识、照明及饰面的局部更新范围。"
             },
             {
               "id": "office-comfort",
@@ -743,7 +751,8 @@
               "serviceRoutes": [
                 "/services/hvac-building-systems/",
                 "/services/electrical-lighting/"
-              ]
+              ],
+              "inspection": "我们把出问题的灯具、空调分区和后场设备位置分开登记。"
             }
           ],
           "planning": [
@@ -775,8 +784,8 @@
             }
           ],
           "cta": {
-            "title": "让东区门店与办公空间保持好状态",
-            "body": "把物业类型、需要处理的部位和可施工时间发给我们。",
+            "title": "东区门店与办公空间维修",
+            "body": "我们按门店前场、后场和办公室分区核对维修，再和物业方确认进场。",
             "label": "咨询东区项目"
           }
         },
@@ -809,7 +818,8 @@
               "serviceRoutes": [
                 "/services/building-maintenance/",
                 "/services/electrical-lighting/"
-              ]
+              ],
+              "inspection": "We inspect door, floor or finish damage and agree on workable zones within trading areas."
             },
             {
               "id": "shop-refresh",
@@ -824,7 +834,8 @@
               "serviceRoutes": [
                 "/services/fit-outs-make-good/",
                 "/services/signage-wayfinding/"
-              ]
+              ],
+              "inspection": "We scope local signage, lighting and finish upgrades by location in the shop."
             },
             {
               "id": "office-comfort",
@@ -839,7 +850,8 @@
               "serviceRoutes": [
                 "/services/hvac-building-systems/",
                 "/services/electrical-lighting/"
-              ]
+              ],
+              "inspection": "We record the affected fittings, air conditioning zones and back-of-house assets separately."
             }
           ],
           "planning": [
@@ -871,8 +883,8 @@
             }
           ],
           "cta": {
-            "title": "Keep your shop or office ready for business",
-            "body": "Send the property type, affected areas and available times for the work.",
+            "title": "Repairs for eastern shops and offices",
+            "body": "We confirm repairs and access for shops, staff areas and offices.",
             "label": "Enquire about the eastern suburbs"
           }
         }
@@ -1032,7 +1044,8 @@
               "serviceRoutes": [
                 "/services/roofing-waterproofing/",
                 "/services/building-maintenance/"
-              ]
+              ],
+              "inspection": "我们对照货物和通道的位置，检查天沟、落水口与屋面交接。"
             },
             {
               "id": "drainage-zones",
@@ -1047,7 +1060,8 @@
               "serviceRoutes": [
                 "/services/plumbing-drainage-gas/",
                 "/services/car-parks-external-works/"
-              ]
+              ],
+              "inspection": "我们记录受影响的用水点和排水口，分清办公室和生产区的检查范围。"
             },
             {
               "id": "workshop-fabric",
@@ -1062,7 +1076,8 @@
               "serviceRoutes": [
                 "/services/building-maintenance/",
                 "/services/electrical-lighting/"
-              ]
+              ],
+              "inspection": "我们核对门、墙面和照明故障是否处在仍运行的作业区。"
             }
           ],
           "planning": [
@@ -1094,8 +1109,8 @@
             }
           ],
           "cta": {
-            "title": "把东南区物业的问题列清楚",
-            "body": "告诉我们现场用途、受影响区域和可进入时间，我们来整理维修范围。",
+            "title": "东南区厂房与办公场地维修",
+            "body": "我们按厂房、办公室和楼宇设备列出检查范围，与现场确认可施工时段。",
             "label": "咨询东南区项目"
           }
         },
@@ -1128,7 +1143,8 @@
               "serviceRoutes": [
                 "/services/roofing-waterproofing/",
                 "/services/building-maintenance/"
-              ]
+              ],
+              "inspection": "We check gutters, outlets and roof junctions against the locations of stock and access routes."
             },
             {
               "id": "drainage-zones",
@@ -1143,7 +1159,8 @@
               "serviceRoutes": [
                 "/services/plumbing-drainage-gas/",
                 "/services/car-parks-external-works/"
-              ]
+              ],
+              "inspection": "We log affected water points and outlets and separate the office and production-area checks."
             },
             {
               "id": "workshop-fabric",
@@ -1158,7 +1175,8 @@
               "serviceRoutes": [
                 "/services/building-maintenance/",
                 "/services/electrical-lighting/"
-              ]
+              ],
+              "inspection": "We identify door, wall and lighting faults in areas where operations are continuing."
             }
           ],
           "planning": [
@@ -1190,8 +1208,8 @@
             }
           ],
           "cta": {
-            "title": "Define the work for your south-east property",
-            "body": "Tell us the site use, affected areas and times we can access the site so the repair scope can be organised.",
+            "title": "South-east office and industrial repairs",
+            "body": "We scope checks for factory areas, offices and building plant, then agree on work windows with your site contact.",
             "label": "Enquire about the south east"
           }
         }
@@ -1346,7 +1364,8 @@
               "serviceRoutes": [
                 "/services/car-parks-external-works/",
                 "/services/signage-wayfinding/"
-              ]
+              ],
+              "inspection": "我们查明坑洞、褪色标线及排水沟附近损坏与装卸车道的交接位置。"
             },
             {
               "id": "warehouse-shell",
@@ -1361,7 +1380,8 @@
               "serviceRoutes": [
                 "/services/roofing-waterproofing/",
                 "/services/building-maintenance/"
-              ]
+              ],
+              "inspection": "我们检查漏点附近的屋面接缝、天沟和入口密封，确认下方保护范围。"
             },
             {
               "id": "multi-tenant-estate",
@@ -1376,7 +1396,8 @@
               "serviceRoutes": [
                 "/services/building-maintenance/",
                 "/services/car-parks-external-works/"
-              ]
+              ],
+              "inspection": "我们按公共入口、车位和导视的位置核对工单，并确认各租户的通行需求。"
             }
           ],
           "planning": [
@@ -1408,8 +1429,8 @@
             }
           ],
           "cta": {
-            "title": "从你的西区场地动线开始",
-            "body": "提供仓库或物业位置、受影响区域和装卸安排，我们一起确定维修方案。",
+            "title": "西区仓库与装卸区维修",
+            "body": "我们在确认货车、叉车和人员路线后安排屋面、装卸区和外场维修。",
             "label": "咨询西区项目"
           }
         },
@@ -1442,7 +1463,8 @@
               "serviceRoutes": [
                 "/services/car-parks-external-works/",
                 "/services/signage-wayfinding/"
-              ]
+              ],
+              "inspection": "We locate potholes, worn line marking and drain surrounds in relation to loading lanes."
             },
             {
               "id": "warehouse-shell",
@@ -1457,7 +1479,8 @@
               "serviceRoutes": [
                 "/services/roofing-waterproofing/",
                 "/services/building-maintenance/"
-              ]
+              ],
+              "inspection": "We check roof joints, gutters and entrance seals near the leak and confirm what needs protection below."
             },
             {
               "id": "multi-tenant-estate",
@@ -1472,7 +1495,8 @@
               "serviceRoutes": [
                 "/services/building-maintenance/",
                 "/services/car-parks-external-works/"
-              ]
+              ],
+              "inspection": "We check work orders by shared entrance, parking bay and sign, and confirm each tenancy’s access needs."
             }
           ],
           "planning": [
@@ -1504,8 +1528,8 @@
             }
           ],
           "cta": {
-            "title": "Start with the way your western site operates",
-            "body": "Share the property, affected areas and loading arrangements so we can discuss the repair plan.",
+            "title": "Western warehouse and loading-area repairs",
+            "body": "We arrange roof, loading-area and external repairs after checking truck, forklift and pedestrian routes.",
             "label": "Enquire about the western suburbs"
           }
         }
@@ -1664,7 +1688,8 @@
               "serviceRoutes": [
                 "/services/building-maintenance/",
                 "/services/electrical-lighting/"
-              ]
+              ],
+              "inspection": "我们按楼层核对门铰链、墙面破损和地板松动，把相邻项目合并排期。"
             },
             {
               "id": "shared-amenities",
@@ -1679,7 +1704,8 @@
               "serviceRoutes": [
                 "/services/plumbing-drainage-gas/",
                 "/services/cleaning-waste-hygiene/"
-              ]
+              ],
+              "inspection": "我们核对反复出问题的龙头、地漏或支管，并记录设施停用影响。"
             },
             {
               "id": "site-presentation",
@@ -1694,7 +1720,8 @@
               "serviceRoutes": [
                 "/services/landscaping-irrigation/",
                 "/services/building-maintenance/"
-              ]
+              ],
+              "inspection": "我们分开登记入口设施、绿化带和停车区项目，再梳理现场顺序。"
             }
           ],
           "planning": [
@@ -1726,8 +1753,8 @@
             }
           ],
           "cta": {
-            "title": "先把北区物业的问题发给我们",
-            "body": "零散小修、设备问题和室外维护可以先放进同一份咨询清单。",
+            "title": "北区商业物业多项维修",
+            "body": "我们把需要处理的建筑、设备和场地问题归入同一张维修清单，并按紧急程度排期。",
             "label": "咨询北区项目"
           }
         },
@@ -1760,7 +1787,8 @@
               "serviceRoutes": [
                 "/services/building-maintenance/",
                 "/services/electrical-lighting/"
-              ]
+              ],
+              "inspection": "We check hinges, damaged walls and loose flooring by level and schedule nearby repairs together."
             },
             {
               "id": "shared-amenities",
@@ -1775,7 +1803,8 @@
               "serviceRoutes": [
                 "/services/plumbing-drainage-gas/",
                 "/services/cleaning-waste-hygiene/"
-              ]
+              ],
+              "inspection": "We check recurring tap, floor waste or branch drain faults and record the impact of taking facilities out of use."
             },
             {
               "id": "site-presentation",
@@ -1790,7 +1819,8 @@
               "serviceRoutes": [
                 "/services/landscaping-irrigation/",
                 "/services/building-maintenance/"
-              ]
+              ],
+              "inspection": "We log entrance fixtures, garden beds and parking repairs separately before sequencing the work."
             }
           ],
           "planning": [
@@ -1822,8 +1852,8 @@
             }
           ],
           "cta": {
-            "title": "Send us your maintenance list",
-            "body": "Tell us about repairs, equipment faults and outdoor maintenance in one enquiry.",
+            "title": "Repairs for your northern property",
+            "body": "We put building, equipment and grounds defects on one work list and schedule them by urgency.",
             "label": "Enquire about the northern suburbs"
           }
         }
@@ -1985,7 +2015,8 @@
               "serviceRoutes": [
                 "/services/building-maintenance/",
                 "/services/hvac-building-systems/"
-              ]
+              ],
+              "inspection": "我们核对门具、墙面和空调故障涉及的诊室与接待通道。"
             },
             {
               "id": "community-amenities",
@@ -2000,7 +2031,8 @@
               "serviceRoutes": [
                 "/services/plumbing-drainage-gas/",
                 "/services/landscaping-irrigation/"
-              ]
+              ],
+              "inspection": "我们按使用时段核对洗手间、茶水间和庭院设施的故障位置。"
             },
             {
               "id": "mixed-tenancy",
@@ -2015,7 +2047,8 @@
               "serviceRoutes": [
                 "/services/building-maintenance/",
                 "/services/hvac-building-systems/"
-              ]
+              ],
+              "inspection": "我们把租户室内和共用入口的维修分开列项，并确认楼宇设备共用范围。"
             }
           ],
           "planning": [
@@ -2047,8 +2080,8 @@
             }
           ],
           "cta": {
-            "title": "把东北区物业的维修事项发给我们",
-            "body": "附上地址、场所用途、照片与可进入时间，先把工作边界安排清楚。",
+            "title": "东北区诊所与公共场所维修",
+            "body": "我们根据诊疗、教学或活动时间，安排建筑、水管和场地维修。",
             "label": "咨询东北区项目"
           }
         },
@@ -2081,7 +2114,8 @@
               "serviceRoutes": [
                 "/services/building-maintenance/",
                 "/services/hvac-building-systems/"
-              ]
+              ],
+              "inspection": "We check which consulting rooms and reception routes have door, wall or air conditioning faults."
             },
             {
               "id": "community-amenities",
@@ -2096,7 +2130,8 @@
               "serviceRoutes": [
                 "/services/plumbing-drainage-gas/",
                 "/services/landscaping-irrigation/"
-              ]
+              ],
+              "inspection": "We check faults in washrooms, kitchenettes and courtyard fixtures against the venue’s hours of use."
             },
             {
               "id": "mixed-tenancy",
@@ -2111,7 +2146,8 @@
               "serviceRoutes": [
                 "/services/building-maintenance/",
                 "/services/hvac-building-systems/"
-              ]
+              ],
+              "inspection": "We itemise tenancy and common-entry repairs separately and confirm which building services are shared."
             }
           ],
           "planning": [
@@ -2143,8 +2179,8 @@
             }
           ],
           "cta": {
-            "title": "Discuss your North East Melbourne property",
-            "body": "Send the address, property use, photos and times we can access the site so we can define the work.",
+            "title": "Repairs for north-east commercial properties",
+            "body": "We arrange building, plumbing and grounds repairs around appointments, classes and events.",
             "label": "Enquire about work in this area"
           }
         }
@@ -2302,7 +2338,8 @@
               "serviceRoutes": [
                 "/services/roofing-waterproofing/",
                 "/services/building-maintenance/"
-              ]
+              ],
+              "inspection": "我们把漏水下方的库存、设备和影响区域与屋面接缝及排水点对应起来。"
             },
             {
               "id": "loading-access",
@@ -2317,7 +2354,8 @@
               "serviceRoutes": [
                 "/services/car-parks-external-works/",
                 "/services/electrical-lighting/"
-              ]
+              ],
+              "inspection": "我们核对受影响的车道、路面、标线和装卸设备，并确认可用的替代路线。"
             },
             {
               "id": "showroom-office",
@@ -2332,7 +2370,8 @@
               "serviceRoutes": [
                 "/services/building-maintenance/",
                 "/services/electrical-lighting/"
-              ]
+              ],
+              "inspection": "我们记录展厅门具、照明和办公室饰面损坏，按接待时段划分工作区。"
             }
           ],
           "planning": [
@@ -2364,8 +2403,8 @@
             }
           ],
           "cta": {
-            "title": "安排您的西北区物业维护",
-            "body": "发来地址、任务清单、装卸时段和现场照片，一起确定进场条件。",
+            "title": "西北区仓库与展厅维修",
+            "body": "我们协调屋面、装卸区和展厅维修，分开安排车辆通行与顾客入口。",
             "label": "咨询西北区项目"
           }
         },
@@ -2398,7 +2437,8 @@
               "serviceRoutes": [
                 "/services/roofing-waterproofing/",
                 "/services/building-maintenance/"
-              ]
+              ],
+              "inspection": "We map affected stock and equipment below a leak against roof joints and drainage points."
             },
             {
               "id": "loading-access",
@@ -2413,7 +2453,8 @@
               "serviceRoutes": [
                 "/services/car-parks-external-works/",
                 "/services/electrical-lighting/"
-              ]
+              ],
+              "inspection": "We check affected lanes, surfaces, line marking and loading fixtures and agree on suitable alternative routes."
             },
             {
               "id": "showroom-office",
@@ -2428,7 +2469,8 @@
               "serviceRoutes": [
                 "/services/building-maintenance/",
                 "/services/electrical-lighting/"
-              ]
+              ],
+              "inspection": "We log door, lighting and finish defects in showrooms and offices and plan zones around customer access."
             }
           ],
           "planning": [
@@ -2460,8 +2502,8 @@
             }
           ],
           "cta": {
-            "title": "Plan maintenance for your North West site",
-            "body": "Send the address, task list, loading windows and photos to discuss site access.",
+            "title": "North-west warehouse and showroom repairs",
+            "body": "We coordinate roof, loading and showroom repairs, keeping vehicle routes and customer access separate in the work plan.",
             "label": "Enquire about work in this area"
           }
         }
@@ -2620,7 +2662,8 @@
               "serviceRoutes": [
                 "/services/facade-high-access-cleaning/",
                 "/services/signage-wayfinding/"
-              ]
+              ],
+              "inspection": "我们检查临街玻璃、檐口和标识位置，并确定需要保护的入口区域。"
             },
             {
               "id": "roof-external",
@@ -2635,7 +2678,8 @@
               "serviceRoutes": [
                 "/services/roofing-waterproofing/",
                 "/services/building-maintenance/"
-              ]
+              ],
+              "inspection": "我们核对积水、天沟接缝和外部饰面损坏，分清清理和修复范围。"
             },
             {
               "id": "industrial-forecourt",
@@ -2650,7 +2694,8 @@
               "serviceRoutes": [
                 "/services/car-parks-external-works/",
                 "/services/electrical-lighting/"
-              ]
+              ],
+              "inspection": "我们检查车辆入口、车位标线和行人路线相交的维修位置。"
             }
           ],
           "planning": [
@@ -2682,8 +2727,8 @@
             }
           ],
           "cta": {
-            "title": "告诉我们门面、屋面或场地需要做什么",
-            "body": "附上物业地址、现场照片和营业安排，咨询相关维护项目。",
+            "title": "Bayside 与南部商业物业维修",
+            "body": "我们按门面、屋面和停车区分项安排，保留约定的顾客与收货通道。",
             "label": "咨询南部项目"
           }
         },
@@ -2716,7 +2761,8 @@
               "serviceRoutes": [
                 "/services/facade-high-access-cleaning/",
                 "/services/signage-wayfinding/"
-              ]
+              ],
+              "inspection": "We check street-facing glass, canopies and signs and identify which entry areas need protection."
             },
             {
               "id": "roof-external",
@@ -2731,7 +2777,8 @@
               "serviceRoutes": [
                 "/services/roofing-waterproofing/",
                 "/services/building-maintenance/"
-              ]
+              ],
+              "inspection": "We check ponding, gutter joints and damaged external finishes and separate cleaning from repairs."
             },
             {
               "id": "industrial-forecourt",
@@ -2746,7 +2793,8 @@
               "serviceRoutes": [
                 "/services/car-parks-external-works/",
                 "/services/electrical-lighting/"
-              ]
+              ],
+              "inspection": "We check where proposed parking and entry repairs meet vehicle and pedestrian routes."
             }
           ],
           "planning": [
@@ -2778,8 +2826,8 @@
             }
           ],
           "cta": {
-            "title": "Tell us what your frontage, roof or site needs",
-            "body": "Send the property address, photos and trading arrangements to discuss the work.",
+            "title": "Bayside and southern commercial repairs",
+            "body": "We plan shopfront, roof and car park work separately and maintain agreed routes for customers and deliveries.",
             "label": "Enquire about work in this area"
           }
         }
@@ -2936,7 +2984,8 @@
               "serviceRoutes": [
                 "/services/fit-outs-make-good/",
                 "/services/building-maintenance/"
-              ]
+              ],
+              "inspection": "我们按现状记录列出固定设施、地面和墙面的保留、拆除和恢复项。"
             },
             {
               "id": "occupied-commercial",
@@ -2951,7 +3000,8 @@
               "serviceRoutes": [
                 "/services/building-maintenance/",
                 "/services/electrical-lighting/"
-              ]
+              ],
+              "inspection": "我们把营业区域的门具、照明及墙地面故障按位置分项。"
             },
             {
               "id": "park-grounds",
@@ -2966,7 +3016,8 @@
               "serviceRoutes": [
                 "/services/landscaping-irrigation/",
                 "/services/car-parks-external-works/"
-              ]
+              ],
+              "inspection": "我们核对园区步道、花坛和灌溉分区与共用入口的交接。"
             }
           ],
           "planning": [
@@ -2998,8 +3049,8 @@
             }
           ],
           "cta": {
-            "title": "为您的 Casey 与 Cardinia 项目安排下一步",
-            "body": "告诉我们物业阶段、维修事项与希望的工作顺序。",
+            "title": "Casey 与 Cardinia 维修及交接",
+            "body": "我们按物业正在使用、空置或交还的状态，安排检查、报价和工程顺序。",
             "label": "咨询外东南区项目"
           }
         },
@@ -3032,7 +3083,8 @@
               "serviceRoutes": [
                 "/services/fit-outs-make-good/",
                 "/services/building-maintenance/"
-              ]
+              ],
+              "inspection": "We use condition records to list fixtures, flooring and walls for retention, removal or reinstatement."
             },
             {
               "id": "occupied-commercial",
@@ -3047,7 +3099,8 @@
               "serviceRoutes": [
                 "/services/building-maintenance/",
                 "/services/electrical-lighting/"
-              ]
+              ],
+              "inspection": "We itemise door, lighting, wall and floor faults by location at occupied premises."
             },
             {
               "id": "park-grounds",
@@ -3062,7 +3115,8 @@
               "serviceRoutes": [
                 "/services/landscaping-irrigation/",
                 "/services/car-parks-external-works/"
-              ]
+              ],
+              "inspection": "We check how paths, garden beds and irrigation zones meet shared entrances."
             }
           ],
           "planning": [
@@ -3094,8 +3148,8 @@
             }
           ],
           "cta": {
-            "title": "Plan the next step for your Casey or Cardinia property",
-            "body": "Tell us the how the property is being used, what needs work and your preferred timing.",
+            "title": "Repairs and handovers in Casey and Cardinia",
+            "body": "We arrange inspections, quotes and work stages according to whether the property is occupied, vacant or being handed back.",
             "label": "Enquire about work in this area"
           }
         }
@@ -3253,7 +3307,8 @@
               "serviceRoutes": [
                 "/services/building-maintenance/",
                 "/services/cleaning-waste-hygiene/"
-              ]
+              ],
+              "inspection": "我们核对出入口、洗手间和接待区受影响的设施，并确认营业窗口。"
             },
             {
               "id": "industrial-maintenance",
@@ -3268,7 +3323,8 @@
               "serviceRoutes": [
                 "/services/roofing-waterproofing/",
                 "/services/building-maintenance/"
-              ]
+              ],
+              "inspection": "我们按装卸和库存的位置检查屋面、门具或共用设施破损。"
             },
             {
               "id": "visitor-grounds",
@@ -3283,7 +3339,8 @@
               "serviceRoutes": [
                 "/services/landscaping-irrigation/",
                 "/services/cleaning-waste-hygiene/"
-              ]
+              ],
+              "inspection": "我们记录步道破损、灌溉覆盖及入口周边的绿化问题。"
             }
           ],
           "planning": [
@@ -3315,8 +3372,8 @@
             }
           ],
           "cta": {
-            "title": "把 Frankston 与半岛项目安排清楚",
-            "body": "发来地址、维修清单与营业时间，先讨论适合现场的工作顺序。",
+            "title": "Frankston 与莫宁顿半岛维修",
+            "body": "我们配合餐饮营业、住客预约与送货安排建筑维修和室外作业。",
             "label": "咨询本大区项目"
           }
         },
@@ -3349,7 +3406,8 @@
               "serviceRoutes": [
                 "/services/building-maintenance/",
                 "/services/cleaning-waste-hygiene/"
-              ]
+              ],
+              "inspection": "We check affected amenities, entrances and reception areas and confirm trading windows."
             },
             {
               "id": "industrial-maintenance",
@@ -3364,7 +3422,8 @@
               "serviceRoutes": [
                 "/services/roofing-waterproofing/",
                 "/services/building-maintenance/"
-              ]
+              ],
+              "inspection": "We check roof, door and common-area defects against loading and stock locations."
             },
             {
               "id": "visitor-grounds",
@@ -3379,7 +3438,8 @@
               "serviceRoutes": [
                 "/services/landscaping-irrigation/",
                 "/services/cleaning-waste-hygiene/"
-              ]
+              ],
+              "inspection": "We record path damage, irrigation coverage and planting issues near entrances."
             }
           ],
           "planning": [
@@ -3411,8 +3471,8 @@
             }
           ],
           "cta": {
-            "title": "Plan your Frankston or Peninsula maintenance",
-            "body": "Send the address, maintenance list and trading hours so we can plan the order of work.",
+            "title": "Frankston and Peninsula commercial repairs",
+            "body": "We plan building and outdoor work around meal service, guest bookings and deliveries.",
             "label": "Enquire about work in this area"
           }
         }

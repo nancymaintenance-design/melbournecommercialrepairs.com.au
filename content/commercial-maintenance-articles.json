@@ -87,20 +87,20 @@
             "list",
             [
               [
-                "把可见损坏与相连部位一起检查，确认实际维修范围。",
-                "Inspect the visible damage and connected areas to establish what needs repairing."
+                "我们把可见损坏与相连部位一起检查，确认实际维修范围。",
+                "We inspect the visible damage and connected areas to confirm what needs repairing."
               ],
               [
-                "根据营业、租户和现场通行安排施工，而不是只排一个上门时间。",
-                "Plan the work around trading, tenants and access to the site."
+                "我们结合营业时段、租户通行和现场进场条件安排施工。",
+                "We plan the work around trading hours, tenant access and site entry."
               ],
               [
-                "分清必要维修、临时保护与后续恢复，让报价对应具体工作。",
-                "Set out the essential repair, temporary protection and reinstatement so each item in the quote has a clear purpose."
+                "我们在报价中分列必要维修、临时保护与后续恢复。",
+                "We separate essential repairs, temporary protection and reinstatement in our quote."
               ],
               [
-                "完工时说明已处理内容、检查结果及需要继续安排的事项。",
-                "At handover, explain what we’ve repaired, what we’ve checked and what still needs to be arranged."
+                "完工交接时，我们说明处理范围、复查结果和后续安排。",
+                "At handover we set out what we repaired, what we checked and what still needs to be arranged."
               ]
             ]
           ],
@@ -392,8 +392,8 @@
           [
             "heading",
             [
-              "现在联系，可以只从问题和位置开始",
-              "You can start with the problem and location"
+              "我们从故障和现场影响开始",
+              "We start with the fault and its impact"
             ]
           ],
           [
@@ -402,8 +402,8 @@
               [
                 "copy",
                 [
-                  "你可以先说明：“入口门不能正常关闭”“办公室吊顶出现水迹”，或“仓库有几项维修需要统一安排”。我们会继续了解现场和营业影响，再确认检查与报价步骤。",
-                  "You can tell us, for example, that an entrance door won’t close, there’s a stain on the office ceiling or several warehouse repairs need coordinating. We’ll ask about the site and the impact on operations, then explain the inspection and quoting process."
+                  "入口门关不上、办公室吊顶有水迹，或者仓库有多项维修，我们都会先核对影响的区域和运营安排，再确认现场检查、工种和报价步骤。",
+                  "For a door that won’t close, a stained office ceiling or a warehouse with several repairs, we first establish the area affected and how it’s used. We then confirm the site inspection, trades and quoting steps."
                 ]
               ]
             ]
@@ -476,8 +476,8 @@
           "Can we get in touch before we know what’s damaged?"
         ],
         [
-          "可以。告诉我们观察到的现象和物业位置，我们安排现场检查，查明原因，再确认维修方案与报价。照片和尺寸都是补充资料。",
-          "Yes. Tell us what you’ve noticed and where the property is. We’ll organise a site inspection to identify the cause, then confirm the repair approach and quote. Photos and measurements are helpful if you already have them."
+          "可以。我们先了解物业位置、现场表现和对使用的影响，再安排相应检查，核定维修范围与报价。已有的照片可帮助我们确认受影响区域。",
+          "Yes. We start with the property location, what’s happening on site and how it affects use. We then arrange the relevant inspection and confirm the repair scope and quote. Any existing photos can help us identify the affected area."
         ]
       ],
       [
@@ -506,8 +506,8 @@
           "Does making an enquiry commit us to all the work?"
         ],
         [
-          "联系用于开始了解项目和安排检查。我们与你确认实际范围、报价和进场安排后，再开展双方同意的工作；你也可以先讨论需要优先处理的部分。",
-          "An enquiry starts the discussion and lets us arrange the relevant checks. We confirm the scope, quote and access arrangements with you before proceeding with agreed work. You can start by discussing the most pressing item."
+          "我们先与物业负责人确认需要优先处理的故障、检查安排和影响区域，再商定该部分的范围、报价和进场时间。",
+          "We start by confirming the priority fault, inspection arrangements and affected area with the property contact. We then agree the scope, quote and access window for that work."
         ]
       ]
     ],
@@ -601,20 +601,20 @@
             "list",
             [
               [
-                "哪个问题需要解决，完工后应恢复什么使用功能。",
-                "The problem to address and the function the work needs to restore."
+                "我们确认故障和需要恢复的使用功能。",
+                "We establish the fault and the function the work needs to restore."
               ],
               [
-                "哪些材料和部件能够保留，哪些需要修复或更换。",
-                "What can stay, what needs repair and what needs replacing."
+                "我们区分可保留、要修复和要更换的部件。",
+                "We distinguish what can stay, what needs repair and what needs replacing."
               ],
               [
-                "施工包括哪些准备、保护、安装、修补和交接。",
-                "The preparation, protection, installation, making good and handover included."
+                "我们列明现场保护、准备、安装、修补和交接范围。",
+                "We set out the site protection, preparation, installation, making good and handover included."
               ],
               [
-                "哪些改善可以另列或分阶段完成，由你决定是否安排。",
-                "The improvements you could approve separately or stage later."
+                "我们把可另列审批或分阶段完成的更新单独列出。",
+                "We list upgrades separately when they can be approved on their own or staged for later."
               ]
             ]
           ],
@@ -977,8 +977,8 @@
               [
                 "copy",
                 [
-                  "如果你已有一份维修清单，我们可以从清单开始；如果只是发现一个故障，也可以先安排该项检查。不需要为了获得沟通机会，先准备完整图纸或作出材料决定。",
-                  "You can send us an existing repair list or start with a single fault. We can discuss the work before you’ve prepared drawings or decided on materials."
+                  "我们可以接手现有维修清单，也可以先安排单项故障检查。尺寸、材料和施工范围由我们在检查及报价时与你确认。",
+                  "We can pick up an existing repair list or arrange an inspection for a single fault. We confirm dimensions, materials and the work scope with you during the assessment and quote."
                 ]
               ]
             ]
@@ -996,8 +996,8 @@
               [
                 "copy",
                 [
-                  "商业物业的维修费用往往需要向业主、经理或相关审批人说明。我们在约定范围内提供对应的工作说明和交接记录，让“为什么这样修、包括什么、完成到哪里”有清楚的依据。",
-                  "Commercial property repairs often need to be explained to an owner, manager or other approver. We provide the agreed scope and handover records so you can show why the repair was chosen, what was included and where it was completed."
+                  "我们把故障原因、必要维修与可分期改善写清楚。交接记录标明各项工作完成的区域，便于物业方把报价范围与实际完工内容对照。",
+                  "We record the fault, the work needed and any improvements that can be staged. Our handover identifies the areas completed so property teams can match the agreed scope with the work delivered."
                 ]
               ]
             ]
@@ -1139,8 +1139,8 @@
           "Do we need to settle materials and dimensions before we contact you?"
         ],
         [
-          "不必。你可以先说明问题、物业位置和使用目标。已有资料有助于沟通，尺寸、选材与施工范围由我们在检查和方案阶段与你确认。",
-          "You can start with the fault, property location and what the area needs to do. Existing information can help. We’ll establish the dimensions, materials and scope with you as part of the assessment and proposal."
+          "我们会结合物业位置、现场故障和区域的使用目标安排核查，并在评估与报价中确认尺寸、选材和施工范围。",
+          "We use the property location, the fault and how the area needs to function to plan the assessment. We confirm dimensions, materials and scope as part of the assessment and quote."
         ]
       ]
     ],
@@ -1211,8 +1211,8 @@
               [
                 "copy",
                 [
-                  "你可以从一份现有维修清单开始，也可以只从当前最影响使用的问题开始。我们先了解物业状态与运营安排，再与你确定适合的维护方式。",
-                  "You can start with an existing repair list or the issue causing the biggest disruption. We’ll ask how the site operates and what condition it’s in, then discuss the right maintenance arrangement for the property."
+                  "我们从现有报修清单或影响当前运营的故障入手，核对物业使用、设备状态及进场时段，再明确维修与计划维护怎样安排。",
+                  "We start with the existing repair list or the fault disrupting operations. We check how the site is used, asset condition and access times before agreeing how to organise repairs and planned maintenance."
                 ]
               ]
             ]
@@ -1233,20 +1233,20 @@
             "list",
             [
               [
-                "当前需要处理的故障与以后安排的改善分开记录。",
-                "Keep current faults separate from improvements planned for later."
+                "我们把现有故障和计划改善分开记录。",
+                "We record current faults separately from improvements planned for later."
               ],
               [
-                "按现场条件组织工种与进场，让租户和现场联系人知道安排。",
-                "Arrange trades and access around the site’s needs and keep tenants and site contacts informed as agreed."
+                "我们按现场条件协调工种与进场，并按约定衔接物业联系人和租户。",
+                "We coordinate trades and access around site operations and keep the site contact and tenants informed as agreed."
               ],
               [
-                "维修、保养和计划更新分别确认范围与费用。",
-                "Confirm scope and cost separately for repairs, servicing and planned upgrades."
+                "我们分列维修、保养和计划更新的费用与范围。",
+                "We confirm scope and cost separately for repairs, servicing and planned renewal."
               ],
               [
-                "把完成情况与待跟进事项留下，供下一次工作继续使用。",
-                "Record what’s complete and what needs follow-up so the next job can pick up from there."
+                "我们把完工事项与待跟进缺陷写进同一份记录。",
+                "We record completed work and defects that need follow-up together."
               ]
             ]
           ],
@@ -1469,8 +1469,8 @@
               [
                 "copy",
                 [
-                  "我们根据检查、材料与人员安排确认进场计划，不用统一的来访频次代替实际物业需求。适合你物业的维护节奏，应当与使用、设备资料和已经发现的问题一致。",
-                  "We confirm access and timing after checking the site, materials and trades needed. The maintenance schedule should reflect how the property is used, the equipment on site and the faults already identified."
+                  "我们结合现场检查、材料和工种确认进场计划，再按物业使用、设备资料和已发现的故障安排维护频率。",
+                  "We agree access after checking the site, materials and trades involved. Then we set a maintenance schedule around how the property is used, the equipment records and faults already identified."
                 ]
               ]
             ]
@@ -1524,8 +1524,8 @@
               [
                 "copy",
                 [
-                  "你也可以先安排一项维修，再讨论持续合作。我们不会要求物业先接受一套固定年度套餐，才开始处理当前需求。",
-                  "You can book one repair before discussing ongoing maintenance. We can start with the work you need now."
+                  "我们可以先安排当前维修，随后用检查和完工记录讨论适合该物业的持续维护。",
+                  "We can arrange the current repair first and use the inspection and completion records to discuss ongoing maintenance for that property."
                 ]
               ]
             ]
@@ -1548,8 +1548,8 @@
               [
                 "copy",
                 [
-                  "我们会在工作安排时确认需要记录的照片、设备或部件信息、已完成项目和后续事项。交接应让现场负责人看懂，也能帮助下一次检查找到已有依据。",
-                  "When planning the work, we confirm which photos, equipment or part details, completed items and follow-up it will be useful to record. The handover should tell the site contact what was done and give us a record to refer to at the next inspection."
+                  "我们在安排工作时确定要留存的照片、设备或部件编号和跟进事项。交接时，我们把已完成和待处理的位置列清楚，供物业方和我们下次检查时对照。",
+                  "When we plan the work, we identify the photos, asset or part numbers and follow-up items worth recording. At handover we list completed and outstanding locations so the property team and our next inspection have the same record."
                 ]
               ]
             ]
@@ -1608,8 +1608,8 @@
           [
             "heading",
             [
-              "让联系从你的需求开始",
-              "You can start with the work you need now"
+              "从当前维修到持续维护",
+              "From today’s repairs to ongoing maintenance"
             ]
           ],
           [
@@ -1618,8 +1618,8 @@
               [
                 "copy",
                 [
-                  "有人希望先了解一处物业能安排哪些维护，有人已经有待批复的维修清单，也有人需要尽快处理当前故障。这些阶段都可以联系，不必先准备完整年度计划。",
-                  "Some property managers want to understand what maintenance can be arranged. Others have repairs awaiting approval or a fault that needs attention. You can get in touch at any of those stages, including before you’ve put together an annual plan."
+                  "无论是当前故障、待审批的维修清单，还是年度维护安排，我们先核对实际影响与进场条件，再把检查、报价和后续事项分开说明。",
+                  "For a current fault, a repair list awaiting approval or an annual maintenance schedule, we first establish the impact and access conditions. We then set out the inspection, quote and follow-up separately."
                 ]
               ]
             ]
@@ -1692,8 +1692,8 @@
           "Can we enquire about a few small repairs at one property?"
         ],
         [
-          "可以。我们安排单次维修，也可根据物业使用情况讨论持续维护。项目从实际需要出发，不要求先达到固定清单数量。",
-          "Yes. We organise one-off repairs and can discuss ongoing maintenance to suit how the property is used. You can start with the work you need now, even if it’s just one item."
+          "可以。我们安排单项维修，也会按物业的使用和设备状况讨论是否有持续维护的需要。",
+          "Yes. We arrange one-off repairs and can discuss ongoing maintenance based on how the property is used and the condition of its assets."
         ]
       ],
       [

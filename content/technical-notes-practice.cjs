@@ -17,7 +17,7 @@ module.exports = [
    [['磨耗随使用次数增长','Wear tracks use'],['可列入计划检查','Candidate for planned checks'],['我们记录使用频度、间隙变化及更换史。','We log usage, changing tolerances and replacements.']]
   ],
   methods:[
-   [['处理由证据定位的故障','Address the identified cause'],['关键部位失败或已出现连带损伤时，先控制影响，并按证据定义修复范围。','For a critical failure or secondary damage, contain the impact and define the scope from the evidence.']],
+   [['处理由证据定位的故障','Address the identified cause'],["关键部位故障或已经出现连带损伤时，我们先控制现场影响，再结合工单、故障点位和受损范围确认需要安排的维修。","When a key asset fails or causes damage elsewhere, we first manage the impact on site. We then use the work orders, fault location and extent of damage to agree what repairs are needed."]],
    [['建立有触发条件的维护计划','Create a condition-based schedule'],['用使用强度和故障后果确定巡检顺序，列明达到何种状态需重新报修。','We prioritise inspection by use and consequence, with clear triggers for reopening a work order.']]
   ],
   judgement:{
@@ -31,7 +31,7 @@ module.exports = [
   ],
   faq:[
    [['维修次数多就该全部换新吗？','Do repeat repairs justify wholesale replacement?'],['我们先比较故障原因、部件状态、运行风险和更换条件，再建议继续维修还是更换。','We weigh up the cause, condition, operational risk and replacement options before recommending repair or replacement.']],
-   [['何时缩短巡检间隔？','When should inspections be more frequent?'],['复发周期缩短或故障后果加重时，重新评估频率和任务内容。','Reassess frequency and scope when faults recur sooner or have greater consequences.']]
+   [['何时缩短巡检间隔？','When should inspections be more frequent?'],["故障复发间隔缩短或影响扩大时，我们用工单对照点位和维修记录，再调整检查项目与维护频率。","When faults return sooner or cause more disruption, we compare locations and repair records across the work orders, then revise the checks and their frequency."]]
   ],
   related:['window-wall-water-ingress','doors-hardware-latching']
  },
@@ -51,7 +51,7 @@ module.exports = [
   ],
   methods:[
    [['检修门组五金','Assess doorset hardware'],['我们安排适合的专业人员选用与门组相容的构件，保留原安全功能与认证条件。','We arrange for a competent specialist to select compatible components and preserve the existing safety function and certification conditions.']],
-   [['联合检查门禁与设备状态','Coordinate access and plant checks'],['如果故障与门禁状态或压差相关，我们安排门禁、消防与楼宇设备人员联合核对。','Where the fault follows access states or pressure, coordinate checks across access control, fire safety and building services.']]
+   [['联合检查门禁与设备状态','Coordinate access and plant checks'],["如果故障随门禁状态或压差变化，我们协调门禁、消防和楼宇系统检查，核对气流、闭门状态和控制反馈，再确认维修范围。","If the fault follows access-control changes or air pressure, we coordinate checks across access control, fire safety and building services. We compare airflow, closing behaviour and control feedback before agreeing the repair scope."]]
   ],
   judgement:{
    heading:["用出现故障的运行状态核对门组","Use the operating state that produced the fault"],
@@ -63,7 +63,7 @@ module.exports = [
    ["我们安排相关专业人员根据该建筑的安全措施文件核验自闭、锁闭及适用的关联功能，保存门组标识、复核状态、已处理部件和检查人。只覆盖普通运行的测试，需要明确注明其他状态是否已由相应专业人员复核。","We arrange for the relevant specialists to verify self-closing, latching and applicable associated functions against the building’s safety measure documentation. We keep the doorset ID, the conditions checked, work performed and who checked it. If the check covered normal operation only, we identify which other states were verified separately."]
   ],
   faq:[
-   [['可以暂时把防火门撑开吗？','Can a fire door be wedged open temporarily?'],['保留门组安全功能，尽快报物业管理方安排处理。','Preserve the safety function and report the problem promptly to building management.']],
+   [['可以暂时把防火门撑开吗？','Can a fire door be wedged open temporarily?'],["我们保留防火门自行关闭的功能，不靠撑门维持通行。我们与物业联系人确认受影响的门和通行范围，安排核查关闭与锁闭，并记录异常及后续安排。","We keep the fire door’s self-closing function intact and do not use a wedge to keep it open. We confirm the door and affected access area with the property contact, then arrange a check and record the defect and follow-up."]],
    [['更换门禁读头能解决关门问题吗？','Will replacing the card reader fix closing?'],['我们分别检查读卡、锁具状态和门扇机械运行，再确定修复范围。','We check the reader, lock state and mechanical door movement separately before confirming the repair scope.']]
   ],
   related:['doors-hardware-latching','uneven-hvac-zones']
@@ -74,7 +74,7 @@ module.exports = [
   summary:['相邻植床同时出现积水和干斑时，我们分别看喷洒分布、分区压力与土壤入渗。','Where adjoining beds are wet and dry at the same time, we look separately at spray distribution, zone pressure and how quickly water soaks in.'],
   keywords:[['喷洒均匀度','Distribution uniformity'],['动态压力','Running pressure'],['硬质路面径流','Hardstand runoff']],
   mechanism:[
-   ["一块草地的平均洒水量可以合适，实际覆盖却不均。干区和湿区同时出现，常见原因是喷头间重叠不足、喷嘴不匹配、分区运行时压力不同，或水在坡面和密实基层上来不及下渗。我们分别观察落水分布与落地后的去向。","Average application can look adequate while parts of a landscape receive very different amounts. Dry and wet spots can occur together when throws do not overlap, nozzles are mismatched, pressure varies across a running zone or water cannot soak in quickly on a slope or compacted soil. We observe where water lands and where it goes after it lands."],
+   ["同一片草地同时有干斑和积水时，我们把喷洒覆盖和落地后的径流分开检查。我们对照喷头重叠、喷嘴、分区运行压力和坡面入渗，再确认是否需要处理喷头、供水或场地条件。","When one lawn has both dry patches and pooling, we check spray coverage and runoff separately. We compare sprinkler overlap, nozzles, pressure within the zone and how water soaks in on slopes before agreeing whether the sprinkler heads, supply or site conditions need attention."],
    ["集水分布能帮助区分平均给水量和均匀度。我们对照同一分区、同一次运行中集水量最低四分之一的平均值和整体平均值，判断平均水量是否掩盖了局部低水量。该比较反映采样时的覆盖情况，不能单独说明根区实际湿润程度。","Catch measurements help distinguish the quantity applied from how evenly it was spread. We compare the average of the lowest quarter of catch measurements with the overall average for the same zone and run. This shows whether the overall number is hiding a poorly watered area. It describes distribution during the check, with root-zone wetting still to be assessed separately."]
   ],
   evidence:[
@@ -108,7 +108,7 @@ module.exports = [
   keywords:[['连接构造','Fixing details'],['承力基层','Structural substrate'],['立面穿孔','Façade penetrations']],
   mechanism:[
    ["外部标识受力要从面板顺着支架、连接件追到承力基层。风向变化会改变受力，突出的边缘处也可能承受与面板中部不同的局部作用。面板一角开始抖动，既可能是面板与支架接头松动，也可能是支架或基层在移动。我们先确定动的是哪一层。","The load from an external sign travels through its face, brackets and fixings into the backing structure. Wind direction changes the action, and loads near exposed edges can differ from those on the centre of the face. Movement at one corner may come from a loose face connection or from the bracket or substrate itself. We establish which part of the assembly is moving first."],
-   ["锈迹和湿痕还需要沿穿孔看水从哪边来。外部补胶可以属于防水处理，却不能补回因腐蚀而失效的连接。高位、屋顶或转角位置的受风条件各异，论文试件的压力或系数不直接用于既有标识选锚栓。","Trace staining at penetrations to see where water may be entering. A seal can be part of a weatherproofing repair, while a corroded connection needs its own structural assessment. Signs at height, on a roof or near a corner have different exposure. Values from a wind-tunnel model are not a fixing schedule for an existing sign."]
+   ["我们沿招牌穿孔查湿痕和锈迹的来向，把立面密封维修与支撑及连接件检查分别列项。对高处、屋顶或建筑转角的招牌，我们记录具体位置和暴露程度，再安排适合该连接和基层的评估。","We trace staining and rust around sign penetrations to check where moisture is coming from. We scope façade sealing separately from work on supports and fixings. For signage at height, on roofs or at corners, we record the location and exposure and arrange an assessment suited to the connection and substrate."]
   ],
   evidence:[
    [['面板随风抖动','Face moves in wind'],['面板连接或支架松动','Loose face connection or bracket'],['我们记录移动位置和范围；我们限制下方通行。','We note where it moves and keep people clear below.']],
@@ -129,8 +129,8 @@ module.exports = [
    ["交接记录标识位置、受检连接和明确的基层类型，并拍下收口封闭前的可见细节。我们分别记录结构稳定性与防水处理的检查结果。若碰撞、风暴后需复核，标明复查部位和触发条件。","We record the location, fixings checked and confirmed backing at handover, with photos of visible details before they are covered. We keep structural and weatherproofing checks separate. We identify which areas should be reinspected after an impact or storm and what triggers that visit."]
   ],
   faq:[
-   [['可以重新拧紧后继续营业吗？','Is tightening enough to keep the area open?'],['若有坠落风险，先隔离影响区域并让适合的人员核实连接与基层。','Where there is a falling-object risk, limit access and have the connection and substrate assessed.']],
-   [['补密封能解决松动吗？','Will resealing cure the movement?'],['密封管水，固定件传力。我们按各自的失效机制处理。','Seals manage weather exposure and fixings transfer load. Each needs its own assessment.']]
+   [['可以重新拧紧后继续营业吗？','Is tightening enough to keep the area open?'],["有坠落风险时，我们与现场联系人协调隔离受影响区域，再安排检查支撑、固定件和承力基层。","Where there’s a falling-object risk, we coordinate isolation of the affected area with the site contact, then arrange checks of the supports, fixings and substrate."]],
+   [['补密封能解决松动吗？','Will resealing cure the movement?'],["我们分开检查密封处的进水痕迹和固定件的受力连接，再列明防水或连接修复的工作范围。","We check moisture around the seals separately from the load-bearing fixings, then set out the work needed on the weather seal or connection."]]
   ],
   related:['window-wall-water-ingress','recurring-faults-maintenance'],secondary:'facade-high-access-cleaning'
  },
@@ -162,8 +162,8 @@ module.exports = [
    ["在封闭节点前记录可见构造、修复材料、连接部位及需要保留的性能要求。我们对照原来能触发裂缝的使用或环境条件复查。如果牵涉评级隔断，我们保留所用系统的文件和复核记录供物业交接。","Before closing up, we record the visible detail, materials, connections and performance requirements that must be retained. We recheck under the operating or environmental conditions that triggered the cracking. For a rated partition, we retain the system documentation and verification record for building management."]
   ],
   faq:[
-   [['加厚腻子能解决反复开裂吗？','Will a thicker coat of compound stop the crack?'],['若位移持续，先处理构造原因。','Where movement continues, address the underlying detail first.']],
-   [['所有顶部接缝做法都一样吗？','Are all wall head details the same?'],['节点取决于隔断系统、楼板位移和应达到的性能。','Head details depend on the wall system, slab movement and required performance.']]
+   [['加厚腻子能解决反复开裂吗？','Will a thicker coat of compound stop the crack?'],["隔断仍在位移时，我们先确定顶端节点和相邻构造哪里限制了位移，再安排相应维修与饰面恢复。","If the partition is still moving, we identify where the head detail or adjoining construction restricts movement before arranging repairs and reinstating the finish."]],
+   [['所有顶部接缝做法都一样吗？','Are all wall head details the same?'],["我们按墙体系统、楼板位移和现有使用要求核对顶端节点，再确认哪些连接或饰面需要恢复。","We check the head detail against the wall system, slab movement and existing performance requirements before confirming which connections or finishes need reinstating."]]
   ],
   related:['doors-hardware-latching','uneven-hvac-zones']
  },
@@ -173,7 +173,7 @@ module.exports = [
   summary:['起翘或气泡背后可能是基层湿度、污染、胶层失黏或尺寸变化。我们先判断失效发生在哪一层。','Bubbles or lifted edges may reflect moisture, contamination, loss of bond or movement. We first identify the layer where the installation has failed.'],
   keywords:[['弹性地材','Resilient flooring'],['基层湿度','Substrate moisture'],['胶层转移','Adhesive transfer']],
   mechanism:[
-   ["鼓泡、开缝或边缘翘起，可能发生在地材与胶之间、胶层内部，或找平层与混凝土之间。我们看失效两面的胶层转移、松动边界与潮湿分布。残余水分或持续进水都要查，但日晒、基层粉尘、旧胶和不合适的铺装开放时间也能造成类似外观。","Bubbles, open joints and raised edges can come from failure at the covering–adhesive interface, within the adhesive or between the levelling layer and concrete. We look at adhesive transfer on both sides of the failure, how far the lifting extends and where moisture is present. Residual slab moisture and active leaks warrant checks, alongside sunlight, dust, old adhesive and installation timing."],
+   ["我们通过鼓泡、开缝和起翘处两侧的残胶、松动边界及潮湿分布，区分地材、胶层或找平层的失效。报价前，我们核对残余水分、持续进水、日晒、基层粉尘、旧胶和铺装时机，再明确局部恢复需处理到哪一层。","We examine adhesive transfer on both sides of a lifted or bubbled section, where the lifting stops and where moisture is present. Before quoting reinstatement, we check for residual slab moisture, active leaks, sunlight, dust, old adhesive and installation timing so the scope addresses the layer that has failed."],
    ["实验研究表明，潮湿且呈碱性的混凝土环境可促成某些黏结地材系统的化学分解，材料组合影响结果。现场一个水分读数不能证明已经发生这类反应。我们把湿度、胶层状态与地材系统要求结合起来，才决定能否局部复铺。","Experimental work has found that damp, alkaline concrete can contribute to chemical breakdown in some bonded flooring systems. The combination of materials affects the result. A single moisture reading does not establish that reaction on site. We consider moisture, the failed bond and the flooring system requirements before deciding whether local replacement is suitable."]
   ],
   evidence:[
@@ -215,7 +215,7 @@ module.exports = [
    [['雨天才出现擦碰','Binds only after rain'],['受潮、温度或门槛变化','Moisture, temperature or threshold movement'],['我们对照天气、湿区与门槛净空。','We compare weather, wet areas and threshold clearance.']]
   ],
   methods:[
-   [['校正有证据支持的部位','Correct the misaligned component'],['连接完好且偏位可定位时，按门组配置调整；避免扩大锁孔来掩盖门扇下垂。','With sound fixings and a clear point of misalignment, adjust within the doorset configuration. Enlarging the strike opening can hide rather than resolve leaf sag.']],
+   [['校正有证据支持的部位','Correct the misaligned component'],["固定点完好而错位明确时，我们按门组配置调整锁舌对位或铰链，并复查闭门和通行。若门扇下垂，我们把下垂原因纳入维修范围，保留原有开启与锁闭功能。","When the fixings are sound and the misalignment is clear, we adjust the latch alignment or hinges to suit the doorset, then check closing and access. If the leaf has dropped, we address the cause as part of the repair and retain the door’s normal opening and latching functions."]],
    [['处理基层与专用门组','Address damage and specialist doorsets'],['遇基层松动、反复受潮或专用安全门组，先核对原构造及性能要求，再确定更换或修复范围。','For damaged backing, repeated moisture or a specialist safety doorset, we check its construction and performance requirements before setting the repair scope.']]
   ],
   judgement:{
@@ -228,7 +228,7 @@ module.exports = [
    ["我们复核几个代表性开角下的闭合和锁闭，记录操作、通行和门扇间隙。若故障随天气、通风或相邻门状态变化，交接说明已复核的状态。专用门组由适合的人员按其功能与适用要求另行检查。","We recheck closing and latching from several representative angles and record operation, passage and gaps. If the fault changes with weather, ventilation or nearby doors, we document the states actually checked. We arrange specialist checks for dedicated doorsets against the applicable requirements."]
   ],
   faq:[
-   [['调大闭门器力度是否更好？','Is more closer force better?'],['阻力来源未明确时可能遮住故障，还可能影响通行和开启。','Extra force can conceal the source of resistance and affect opening effort and access.']],
+   [['调大闭门器力度是否更好？','Is more closer force better?'],["我们先查门扇、门框、铰链和锁舌的阻力来源，再决定是调整、修理还是更换五金。完工时我们核对开启用力和通行状态。","We check the leaf, frame, hinges and latch for the source of resistance before deciding whether to adjust, repair or replace hardware. At completion we check the opening effort and access."]],
    [['能同时移动扣板和调铰链吗？','Can we adjust the strike and hinges together?'],['我们先记录初始状态和接触点，每调整一项就复查一次，确认哪项调整恢复了功能。','We record the starting condition and contact point, then check the door after each adjustment to identify which change restored operation.']]
   ],
   related:['fire-door-latching-and-access','partition-head-movement']
