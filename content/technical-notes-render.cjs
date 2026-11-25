@@ -15,6 +15,8 @@ const link = (href,pair,cls='',symbol='↗') => `<a class="${cls}" href="${href}
 const image = (src, eager=false, alt) => `<img src="${src}" alt="${alt?esc(alt[0]):''}"${alt?` data-alt-zh="${esc(alt[0])}" data-alt-en="${esc(alt[1])}"`:''} decoding="async"${eager?' fetchpriority="high"':' loading="lazy"'}>`;
 const h1 = (title,id) => `<h1 id="${id}">${title[0].split('\n').map((part,index)=>text('span',[part,title[1].split('\n')[index]],index?'tn-accent':'')).join('\n')}</h1>`;
 const brand = '<p class="tn-kicker"><i aria-hidden="true"></i>ELLIS / TECHNICAL NOTES</p>';
+const libraryHeadline = ['墨尔本商业物业\n维修与维护技术指南','Melbourne Commercial\nProperty Maintenance & Repair Guides'];
+const libraryTitle = [libraryHeadline[0].replace('\n',''),flat(libraryHeadline[1])];
 const articleBySlug = Object.fromEntries(articles.map(article=>[article.slug,article]));
 const serviceName = slug => {
  const i = serviceSlugs.indexOf(slug);
@@ -61,7 +63,7 @@ function library() {
  return `<div class="tn tn-library tn-stage-library" data-tn-stage-library>
   <section class="tn-hero tn-hero-library" aria-labelledby="tn-library-title">
    <div class="tn-wrap tn-hero-grid"><div class="tn-hero-copy">${brand}
-    ${h1(['墨尔本商业维护\n技术研究与实务','Melbourne commercial maintenance\nResearch & practice'],'tn-library-title')}
+    ${h1(libraryHeadline,'tn-library-title')}
     ${text('p',['故障机理 · 诊断依据 · 维修方法 · 验收记录','Fault mechanisms · Diagnosis · Repair options · Verification'],'tn-lead')}
     ${link('#technical-library',['查阅技术文章','Browse technical notes'],'tn-button tn-hero-button','↓')}
    </div><div class="tn-hero-art" data-tn-parallax>${stageImage('/assets/news-technical/index-cutaway.webp',true)}</div></div>
@@ -126,4 +128,4 @@ function schema(article) {
   ...(article.publishedOn?{datePublished:article.publishedOn}:{})};
 }
 const assets='<link rel="stylesheet" href="/technical-notes.css"><script src="/technical-notes.js" defer></script>';
-module.exports = {articles,libraryArticles,library,detail,detailAssets:fieldManual.assets,serviceNotes,schema,assets};
+module.exports = {articles,libraryArticles,libraryTitle,library,detail,detailAssets:fieldManual.assets,serviceNotes,schema,assets};

@@ -8,6 +8,20 @@ const control=(scope,i,z,e,selected=false)=>`<button type="button" role="tab" id
 const cta=(s,z='咨询维修项目',en='Discuss your project')=>`<a class="su-button" data-service-enquiry href="/contact/?service=${s.slug}">${dual('span',z,en)}<span aria-hidden="true">↗</span></a>`;
 const heading=(n,z,e)=>`<header class="su-section-heading"><p class="su-eyebrow">${n} / ELLIS MELBOURNE</p>${dual('h2',z,e)}</header>`;
 const panel=(scope,i,html,selected=false)=>`<div class="su-state" id="${scope}-panel-${i}" role="tabpanel" tabindex="${selected?'0':'-1'}" aria-labelledby="${scope}-tab-${i}"${selected?'':' hidden'}>${html}</div>`;
+const serviceHeadingFirstLines = {
+ 'building-maintenance': '墨尔本商业建筑维护',
+ 'roofing-waterproofing': '墨尔本商业屋顶',
+ 'electrical-lighting': '墨尔本商业电气维修',
+ 'plumbing-drainage-gas': '墨尔本商业水管、',
+ 'hvac-building-systems': '墨尔本商业空调维修',
+ 'fire-security-access': '墨尔本商业消防、',
+ 'landscaping-irrigation': '墨尔本商业园林绿化',
+ 'signage-wayfinding': '墨尔本商业广告标识',
+ 'facade-high-access-cleaning': '墨尔本商业外立面',
+ 'cleaning-waste-hygiene': '墨尔本商业清洁',
+ 'car-parks-external-works': '墨尔本商业停车场',
+ 'fit-outs-make-good': '墨尔本商业翻新',
+};
 const heroLabels=[
  [['门与五金','Doors & hardware'],['墙面与吊顶','Walls & ceilings'],['固定木作','Fixed joinery']],
  [['屋面与固定点','Roof & fixings'],['排水槽与落水管','Gutters & downpipes'],['泛水与收口','Flashing & junctions']],
@@ -67,8 +81,11 @@ function gallery(s,en,a){
 exports.section=function(index,topic,records){
  const s=pack.services[index],en=english[index],a=assets[s.slug];if(!en)throw Error('Missing service English '+s.slug);
  const defaultIndex=s.problems.findIndex(p=>p.id===s.defaultProblemId);
- const titleBreaks=['墨尔本商业建筑维护\n与日常维修','墨尔本商业屋顶\n维修与防水','墨尔本商业电气\n与照明','墨尔本商业水管、\n排水与燃气服务','墨尔本商业空调与\n楼宇设备维护','墨尔本商业消防、\n安防与门禁维护','墨尔本商业园林绿化\n与灌溉维护','墨尔本商业广告标识\n与导视安装维护','墨尔本外立面\n与高空清洁','墨尔本商业清洁\n与环境维护','墨尔本停车场\n与室外工程','墨尔本商业翻新\n与退租恢复'];
- const hero=`<section class="su-hero"><div class="su-hero-inner"><div class="su-hero-copy"><p class="su-eyebrow">ELLIS / MELBOURNE / ${s.number}</p>${dual('h1',titleBreaks[index],s.EnglishH1)}${dual('p',s.heroCopy,en.heroCopy,'su-hero-intro')}<div class="su-hero-actions">${cta(s)}<a href="#problems" class="su-text-link">${dual('span','查看维修范围 ↓','Explore the scope ↓')}</a></div><div class="su-insurance"><img src="/assets/sector-selector/icons/shield-check.svg" width="22" height="22" alt=""><span>$20M Public Liability Insurance</span></div></div><div class="su-hero-visual" data-su-float>${image(a.hero,s.title+'专业场景示意',en.title+' service illustration',{hero:true})}<div class="su-hero-hotspots">${heroLabels[index].map(([z,e],i)=>`<a class="su-hero-spot su-hero-spot-${i}" href="#solutions">${dual('span',z,e)}<i aria-hidden="true"></i></a>`).join('')}</div></div></div></section>`;
+ const firstLine = serviceHeadingFirstLines[s.slug];
+ const chineseHeading = firstLine && s.ChineseH1.startsWith(firstLine) && s.ChineseH1.length > firstLine.length
+  ? firstLine + '\n' + s.ChineseH1.slice(firstLine.length)
+  : s.ChineseH1;
+ const hero=`<section class="su-hero"><div class="su-hero-inner"><div class="su-hero-copy"><p class="su-eyebrow">ELLIS / MELBOURNE / ${s.number}</p>${dual('h1',chineseHeading,s.EnglishH1)}${dual('p',s.heroCopy,en.heroCopy,'su-hero-intro')}<div class="su-hero-actions">${cta(s)}<a href="#problems" class="su-text-link">${dual('span','查看维修范围 ↓','Explore the scope ↓')}</a></div><div class="su-insurance"><img src="/assets/sector-selector/icons/shield-check.svg" width="22" height="22" alt=""><span>$20M Public Liability Insurance</span></div></div><div class="su-hero-visual" data-su-float>${image(a.hero,s.title+'专业场景示意',en.title+' service illustration',{hero:true})}<div class="su-hero-hotspots">${heroLabels[index].map(([z,e],i)=>`<a class="su-hero-spot su-hero-spot-${i}" href="#solutions">${dual('span',z,e)}<i aria-hidden="true"></i></a>`).join('')}</div></div></div></section>`;
  const nav=`<nav class="su-section-nav" aria-label="Service page sections" data-aria-label-zh="服务页目录" data-aria-label-en="Service page sections">${[['problems','现场问题','Site issues'],['solutions','维修方案','Our approach'],['workflow','施工流程','Work sequence'],['gallery','维修场景','Gallery'],['questions','项目问答','Questions']].map(([id,z,e])=>`<a href="#${id}">${dual('span',z,e)}</a>`).join('')}</nav>`;
  const problems=`<section id="problems" class="su-problems" data-su-reveal>${heading('01','哪里出了问题，先看清楚。','What needs attention?')}<div class="su-problem-layout"><div class="su-tabs su-problem-tabs" role="tablist" aria-label="Site issues" data-aria-label-zh="选择现场问题" data-aria-label-en="Choose a site issue">${s.problems.map((p,i)=>control('problem',i,p.label,en.problems[i].label,i===defaultIndex)).join('')}</div><div class="su-problem-states">${s.problems.map((p,i)=>panel('problem',i,`<div class="su-problem-picture">${image(a.problems[i],p.label,en.problems[i].label)}${dual('span','场景示意','Illustrative scene','su-image-label')}</div><div class="su-solution">${dual('h3',p.solution.heading,en.problems[i].solution.heading)}<dl>${[['inspection','现场检查','Site inspection','magnifying-glass'],['method','处理方案','Our approach','wrench'],['check','完成检查','Completion check','check-circle']].map(([key,z,e,icon])=>`<div><dt><img src="/assets/sector-selector/icons/${icon}.svg" width="27" height="27" alt="">${dual('span',z,e)}</dt><dd>${dual('p',p.solution[key],en.problems[i].solution[key])}</dd></div>`).join('')}</dl>${cta(s,'咨询这项维修','Discuss this repair')}</div>`,i===defaultIndex)).join('')}</div></div></section>`;
  const workflow=`<section id="workflow" class="su-workflow" data-su-reveal>${heading('03','施工流程：从检查到交付，步骤清楚。','How we carry out the work')}<ol>${s.workflow.map((x,i)=>`<li><span class="su-node">0${i+1}</span><div>${dual('h3',x.title,en.workflow[i].title)}${dual('p',x.body,en.workflow[i].body)}</div>${image(i===3?'/assets/region-reference-v3/clipboard.webp':a.problems[i],x.title,en.workflow[i].title)}</li>`).join('')}</ol></section>`;

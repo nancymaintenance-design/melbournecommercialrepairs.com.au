@@ -4,7 +4,7 @@ const region = name => '/assets/region-reference-v3/detail-' + name + '.webp';
 module.exports = [
  {
   slug:'recurring-faults-maintenance',category:'building',image:'/assets/news-magazine/maintenance-plan-v1.webp',colour:'blue',
-  title:['反复故障与计划维护','Recurring faults and planned maintenance'],
+  title:['设施反复故障：用工单记录追查原因','Recurring Building Faults: Tracing Causes Through Work Orders'],
   summary:['同一构件反复报修时，我们用工单和现场记录区分耗损、运行条件变化与未处理的上游问题。','When a component keeps turning up in call-outs, we use work orders and site records to separate wear, changed operating conditions and unresolved upstream defects.'],
   keywords:[['故障模式','Failure modes'],['资产记录','Asset history'],['计划维护','Planned maintenance']],
   mechanism:[
@@ -169,7 +169,7 @@ module.exports = [
  },
  {
   slug:'resilient-floor-moisture',category:'floors',image:'/assets/news-technical/resilient-floor.webp',colour:'pink',
-  title:['地板起翘与基层状态','Lifted vinyl and the condition of the substrate'],
+  title:['PVC 地板起翘或鼓泡：基层潮气与粘结问题','Vinyl Flooring Lifting or Bubbling: Moisture and Bonding Issues'],
   summary:['起翘或气泡背后可能是基层湿度、污染、胶层失黏或尺寸变化。我们先判断失效发生在哪一层。','Bubbles or lifted edges may reflect moisture, contamination, loss of bond or movement. We first identify the layer where the installation has failed.'],
   keywords:[['弹性地材','Resilient flooring'],['基层湿度','Substrate moisture'],['胶层转移','Adhesive transfer']],
   mechanism:[
@@ -202,7 +202,7 @@ module.exports = [
  },
  {
   slug:'doors-hardware-latching',category:'doors',image:region('door'),colour:'lime',
-  title:['门扇擦碰与锁舌偏位：先查几何关系','Doors that rub or miss the strike'],
+  title:['商业门卡住或锁不上：门扇与五金排查','Commercial Doors That Stick or Won’t Latch'],
   summary:['门关不上时，我们先看门扇、五金、门框和门槛的接触顺序，再选择调整、修复或更换。','When a door fails to shut, we observe contact through the leaf, hardware, frame and threshold before choosing adjustment, repair or replacement.'],
   keywords:[['门扇下垂','Leaf sag'],['锁舌与扣板','Latch and strike'],['间隙测量','Gap measurement']],
   mechanism:[

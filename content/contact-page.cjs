@@ -4,9 +4,15 @@ const escape=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt
 const text=(tag,zh,en,cls='',extra='')=>`<${tag} class="${cls}" data-zh="${escape(zh)}" data-en="${escape(en)}" ${extra}>${escape(zh)}</${tag}>`;
 const field=(labelZh,labelEn,input,cls='')=>`<label class="contact-field ${cls}">${text('span',labelZh,labelEn)}${input}</label>`;
 const options=items=>items.map((s,i)=>`<option value="${i}" data-zh="${escape(s.zh)}" data-en="${escape(s.en)}">${escape(s.zh)}</option>`).join('');
+const headingLines=[
+ ['墨尔本商业物业','Commercial'],
+ ['维修与维护咨询','Repair Enquiries']
+];
+exports.titleZh=headingLines.map(([zh])=>zh).join('');
+exports.titleEn='Commercial Maintenance & Repair Enquiries in Melbourne';
 exports.section=(services,sectors=[])=>`<section class="contact-first-screen" aria-labelledby="contact-heading">
 <div class="contact-surface contact-surface-one" aria-hidden="true"></div><div class="contact-surface contact-surface-two" aria-hidden="true"></div><div class="contact-page-grid">
-<div class="contact-introduction"><p class="contact-eyebrow">ELLIS / MELBOURNE</p><h1 id="contact-heading">${text('span','联系我们，','Let’s talk about your')}${text('span','安排商业维护。','commercial property.')}<span class="contact-heading-underline" aria-hidden="true"></span></h1><p class="contact-intro-copy">${text('span','告诉我们物业位置和需要处理的工作，','Tell us where the property is and what needs attention.')}${text('span','我们来协调安排。','We’ll work out the next steps with you.')}</p></div>
+<div class="contact-introduction"><p class="contact-eyebrow">ELLIS / MELBOURNE</p><h1 id="contact-heading">${headingLines.map(([zh,en])=>text('span',zh,en)).join(' ')}<span class="contact-heading-underline" aria-hidden="true"></span></h1><p class="contact-intro-copy">${text('span','告诉我们物业位置和需要处理的工作，','Tell us where the property is and what needs attention.')}${text('span','我们来协调安排。','We’ll work out the next steps with you.')}</p></div>
 <div class="contact-form-stack"><section class="contact-form-card" aria-labelledby="contact-form-heading"><header class="contact-form-heading"><p>PROJECT ENQUIRY</p>${text('h2','告诉我们项目需求','Tell us about your project','','id="contact-form-heading"')}${text('span','填写物业位置与需要处理的工作。','Tell us where the site is and what work you need.','contact-form-intro')}${text('button','项目咨询 ↗','Enquire ↗','contact-form-pill','id="contact-start-enquiry" type="button"')}</header>
 <form id="contact-enquiry-form"><input type="hidden" name="region" value="Melbourne"><div class="contact-fields">
 ${field('联系人姓名','Your name','<input name="name" autocomplete="name" required maxlength="100" data-placeholder-zh="请输入姓名" data-placeholder-en="Your name" placeholder="请输入姓名">')}

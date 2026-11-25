@@ -4,7 +4,7 @@ const scene = name => '/assets/service-reference-v1/' + name + '.webp';
 module.exports = [
  {
   slug:'maintenance-plan',category:'building',colour:'lime',image:cover('maintenance-plan'),
-  title:['我们怎样制定商业物业维护计划','How we plan commercial property maintenance'],
+  title:['商业物业维护计划：设备台账与保养安排','Commercial Property Maintenance Plans: Asset Registers and Servicing'],
   summary:['我们按区域和设备梳理维修事项，再根据故障后果、运行状况和进场条件，区分即时维修、例行保养与计划更新。','We map maintenance work by area and asset, then use the consequences of failure, asset condition and site access to separate immediate repairs, routine servicing and planned renewal.'],
   keywords:[['设备台账','Asset register'],['故障影响','Impact of failure'],['计划维护','Planned maintenance']],
   mechanism:[
@@ -33,7 +33,7 @@ module.exports = [
   primary:'building-maintenance',
   related:['recurring-faults-maintenance','uneven-hvac-zones'],
   visuals:{
-   titleAccent:['商业物业维护计划','commercial property maintenance'],
+   titleAccent:['设备台账与保养安排','Asset Registers and Servicing'],
    panel:['从现场状况排定维护顺序','Turn site condition into a maintenance plan'],
    guide:[[['物业区域','Property zones'],['楼宇 / 共用区域 / 室外','Building / common areas / grounds']],[['故障影响','Failure impact'],['通行 / 运营 / 替代设施','Access / operations / alternatives']],[['维护记录','Maintenance history'],['工单 / 进场 / 复查','Work orders / access / rechecks']]],
    aside:['优先级取决于故障会影响什么，以及现场状况如何变化。','Priority follows the impact of failure and how the condition is changing.'],

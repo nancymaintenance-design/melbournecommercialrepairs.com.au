@@ -84,7 +84,7 @@ module.exports = {
   ]
  },
  'recurring-faults-maintenance': {
-  titleAccent:['计划维护','planned maintenance'],
+  titleAccent:['用工单记录追查原因','Tracing Causes Through Work Orders'],
   guide: [
    [['复发位置','Location'],['同一部位 / 多处','One location / several locations']],
    [['发生时段','Timing'],['共同工况 / 使用周期','Shared conditions / use cycles']],
@@ -184,7 +184,7 @@ module.exports = {
   ]
  },
  'resilient-floor-moisture': {
-  titleAccent:['基层状态','the condition of the substrate'],
+  titleAccent:['基层潮气与粘结问题','Moisture and Bonding Issues'],
   guide: [
    [['起翘位置','Location'],['外墙边 / 日晒区','Perimeter / sun-exposed area']],
    [['基层状态','Substrate condition'],['湿度 / 表面状态','Moisture / surface condition']],
@@ -204,7 +204,7 @@ module.exports = {
   ]
  },
  'doors-hardware-latching': {
-  titleAccent:['先查几何关系','or miss the strike'],
+  titleAccent:['门扇与五金排查','That Stick or Won’t Latch'],
   guide: [
    [['首个接触点','First point of contact'],['门框上缘 / 侧边','Frame head / jamb']],
    [['锁舌位置','Latch position'],['门扇 / 扣板','Leaf / strike']],

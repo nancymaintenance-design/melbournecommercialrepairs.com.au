@@ -1,5 +1,5 @@
 module.exports={
-I01:{keyword:'office maintenance Melbourne',h1Zh:'墨尔本办公室与写字楼维修维护',
+I01:{keyword:'office maintenance Melbourne',h1Zh:'墨尔本办公室及写字楼维修与维护',
  intro:['我们为墨尔本的办公室和写字楼提供维修与维护，涵盖接待区、会议室、茶水间、洗手间和共用空间。我们按照楼层、租户办公时间和通行要求安排工种。','We maintain offices across Melbourne, from reception areas and meeting rooms to kitchenettes, amenities and common areas. We schedule the trades by floor and around tenant access and office hours.'],
  sections:[
  ['使用中办公室与租户区域维修','门关闭不顺、吊顶板破损、隔墙碰损和地毯边缘松动，可以按房间与楼层形成维修清单。我们先记录对办公的影响，再协调局部木作、墙顶和地面工作，避免不同人员反复进入同一使用区域。','Sticking doors, damaged ceiling tiles, partition damage and loose carpet edges can be logged by room and floor. We record the effect on office use before coordinating local joinery, wall, ceiling and floor work, so related repairs can be planned together around access to occupied areas.'],
@@ -24,7 +24,7 @@ I02:{keyword:'shopping centre maintenance Melbourne',h1Zh:'墨尔本零售店铺
  [2,'入口与相邻停车区可以一起维护吗？','可以统一讨论范围。我们会区分导视、绿化、路面和标线任务，并协调分区及人车通行安排。','We can discuss one coordinated scope, distinguishing signage, planting, pavement and marking tasks and agreeing staging around pedestrian and vehicle access.'],
  [3,'如何配合购物中心的进场要求？','我们与商场管理方协调现场培训、入场审批、工作区域和允许施工的时段。','We coordinate inductions, site access approvals, work zones and permitted hours with centre management.']
  ],related:['S01','S04','S08','S09','S11','S12']},
-I03:{keyword:'restaurant maintenance Melbourne',h1Zh:'墨尔本餐饮与酒店维修维护',
+I03:{keyword:'restaurant maintenance Melbourne',h1Zh:'墨尔本餐饮场所及酒店维修与维护',
  intro:['我们为墨尔本的餐厅、酒店和其他住宿场所维修建筑设施。后厨、用餐区、客房和公共空间的水管、热水、通风及室内维修，按营业和客房周转时间安排。','We maintain Melbourne restaurants, hotels and other accommodation. We schedule plumbing, hot water, ventilation and interior repairs around meal service, guest access and room turnover.'],
  sections:[
  ['餐厅后厨、服务区与排水','我们结合后厨营业时段排查排水缓慢、供水故障和通风问题。我们先记录设备连接和受影响区域，再协调水管、燃气及楼宇通风检查。涉及专用厨具时，我们会按设备型号确认维修范围。','We assess slow drains, water faults and ventilation issues around kitchen service. We record equipment connections and affected areas, then coordinate plumbing, gas and building ventilation checks. For specialist kitchen equipment, we confirm the repair scope by model.'],
@@ -60,7 +60,7 @@ I05:{keyword:'industrial building maintenance Melbourne',h1Zh:'墨尔本工厂�
  [1,'多租户工业园区的共用绿地能统一养护吗？','可以讨论统一计划。我们按绿地边界、植物、灌溉与车辆通行区分任务，并确认共用区域和租户自行使用区域的范围。','We can discuss a coordinated plan, identifying planting, irrigation and traffic conditions and distinguishing shared grounds from tenant-controlled areas.'],
  [2,'维护范围是厂房建筑还是生产机器？','我们维护厂房建筑、园区和楼宇设备。故障涉及专用生产设备时，我们与现场负责人确认建筑及设备维修各自的工作范围。','We maintain factory buildings, grounds and building services. If a fault also involves specialist production machinery, we work with your site contact to scope the building work and the equipment work separately.']
  ],related:['S01','S02','S03','S05','S07','S11']},
-I06:{keyword:'medical centre maintenance Melbourne',h1Zh:'墨尔本医疗中心与健康场所维护',
+I06:{keyword:'medical centre maintenance Melbourne',h1Zh:'墨尔本医疗和健康服务场所设施维护',
  intro:['我们为墨尔本的诊所、医疗中心和其他健康服务场所提供维修。我们按诊室、接待区、楼宇设备和室外通道划分工作区，配合预约、患者通行和现场要求安排施工。','We maintain clinics, medical centres and other healthcare facilities across Melbourne. We organise work in consulting rooms, reception areas, building services and outdoor access routes around bookings, patient access and site requirements.'],
  sections:[
  ['诊室、接待与室内维修','墙面、地面、门和固定柜体的损坏需要按诊室或接待区域记录。我们与现场确认需要进入的空间及可用窗口，再协调局部修补、五金或木作工作，交还使用前按约定检查完成范围。','We record damage to walls, floors, doors and fixed joinery by consulting room or reception area. We arrange site access and work times with your team, then check the repairs before handing each area back.'],
@@ -72,7 +72,7 @@ I06:{keyword:'medical centre maintenance Melbourne',h1Zh:'墨尔本医疗中心�
  [1,'室外维护如何配合患者通行？','我们先核对患者入口、车辆路线和使用高峰，再讨论分区、替代路径和现场联系人。需要暂时受影响的区域在施工安排中提前明确。','We review patient entrances, vehicle routes and busy periods before discussing work zones, alternative paths and site contacts. Any temporarily affected areas are identified in the work plan.'],
  [3,'你们维修建筑设施还是医疗器械？','本页承接建筑及普通楼宇设施维护。医疗器械需要设备专有的服务范围和要求，不包含在一般建筑维修承诺中。','This page covers building and ordinary building-services maintenance. Clinical equipment requires device-specific servicing scope and requirements and is not included as a general building repair commitment.']
  ],related:['S01','S03','S04','S05','S07','S10']},
-I07:{keyword:'school maintenance Melbourne',h1Zh:'墨尔本学校与社区设施维修维护',
+I07:{keyword:'school maintenance Melbourne',h1Zh:'墨尔本学校及社区设施维修与维护',
  intro:['我们为墨尔本的学校和社区设施维修教室、共用空间、场地及楼宇设备。我们按教学、假期和社区活动安排工种，提前确认进场、施工区域和交还时间。','We maintain classrooms, shared spaces, grounds and building services at schools and community facilities across Melbourne. We plan access, work zones and handover around the school calendar and community events.'],
  sections:[
  ['教室、洗手间与室内共用空间','教室、教职员休息室和洗手间的门、墙面、地板和设施故障可按楼栋整理。我们结合空间使用协调局部建筑维修与水电工作，记录需停用的设施、工作区域及交还使用前的复查项目。','Doors, walls, floors and amenity faults in classrooms, staffrooms and washrooms can be grouped by building. We coordinate local repairs and services work around use, recording affected facilities, work zones and the checks needed before spaces are returned.'],
@@ -84,7 +84,7 @@ I07:{keyword:'school maintenance Melbourne',h1Zh:'墨尔本学校与社区设施
  [1,'室内维修与场地养护能一起协调吗？','可以。我们将楼栋、公共区域和室外任务分别列明，衔接建筑、水电与园林工种，并与现场约定进入路线和工作先后。','Yes. We identify building, common-area and grounds tasks separately, coordinating building services and landscaping with agreed entry routes and sequencing.'],
  [2,'进场前可以核对哪些材料与要求？','我们与学校或场所负责人核对人员入场、审批流程和所需文件，再安排施工。','We work with the school or venue manager to confirm site inductions, approvals and project documents before scheduling work.']
  ],related:['S01','S03','S04','S07','S11','S12']},
-I08:{keyword:'commercial strata maintenance Melbourne',h1Zh:'墨尔本商业共用区域与业主委员会物业维护',
+I08:{keyword:'commercial strata maintenance Melbourne',h1Zh:'墨尔本商业物业共用区域维护',
  subsections:{0:[['共用照明、供电与共享管线','Shared Lighting, Power and Pipework','我们按工单记录门厅、楼梯间及共用设施的照明、供电或水管问题，与物业联系人核对共享范围、受影响租户和进入权限。电气与水管工作分别衔接对应工种，先约定停用及复查，再按审批范围交接处理结果。','We record lighting, power and pipework faults in foyers, stairwells and shared amenities against the work order, confirming shared-asset scope, affected tenants and access permissions with the property contact. Electrical and plumbing tasks are assigned to their respective trades, with interruptions, completion checks and handover agreed within the approved scope.']]},
  intro:['我们为墨尔本商业楼宇的业主委员会和物业经理维护门厅、走廊、共用停车场及室外设施。我们按工单明确施工范围，与物业方协调审批、工种和完工记录。','We maintain foyers, corridors, shared car parks and external facilities for owners corporations and property managers across Melbourne. We work to your work orders and coordinate approvals, trades and completion records with your property team.'],
  sections:[

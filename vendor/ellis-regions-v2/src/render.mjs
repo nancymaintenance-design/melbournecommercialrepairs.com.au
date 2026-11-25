@@ -118,9 +118,9 @@ function breadcrumbs(c, region) {
 function insurance(c, className='') {
   return `<span class="insurance ${className}">${icon('shield')}<span>${e(c.data.business.insurance.labelEn)}</span></span>`;
 }
-export function heroHeading(c, heading, region) {
+export function heroHeading(c, heading, region, breakBefore) {
   if (!region) {
-    const start=heading.indexOf(c.lang==='zh'?'从所在地区开始':'Start with your region');
+    const start = breakBefore ? heading.indexOf(breakBefore) : -1;
     return start>0?`<span class="h1-phrase">${e(heading.slice(0,start))}</span><span class="h1-phrase">${e(heading.slice(start))}</span>`:e(heading);
   }
   if (c.lang !== 'zh') return e(heading);
@@ -133,7 +133,7 @@ function hero(c, region) {
   const copy = page.locales[c.lang];
   const v = visual(c,region?.slug || 'melbourne');
   return `<section class="hero ${region?'hero--region':'hero--hub'}" aria-labelledby="page-heading">
-    <div class="hero__inner content-width">${breadcrumbs(c,region)}<div class="hero__grid"><div class="hero__copy">${region?`<p class="eyebrow">ELLIS / MELBOURNE <span>/ ${region.number}</span></p>`:''}<h1 id="page-heading">${heroHeading(c,copy.h1,region)}</h1><p class="hero__lead">${e(copy.heroLead)}</p><div class="hero__actions">${action(c.t(region?'查看相关服务':'查看服务',region?'Explore relevant services':'View services'),region?'#services':'#regions')}${region?`<a class="text-link text-link--light" href="${e(c.contact(region))}">${c.t('咨询本区项目','Discuss your project')}${icon('arrow')}</a>`:insurance(c)}</div>${region?insurance(c):''}</div>
+    <div class="hero__inner content-width">${breadcrumbs(c,region)}<div class="hero__grid"><div class="hero__copy">${region?`<p class="eyebrow">ELLIS / MELBOURNE <span>/ ${region.number}</span></p>`:''}<h1 id="page-heading">${heroHeading(c,copy.h1,region,copy.h1BreakBefore)}</h1><p class="hero__lead">${e(copy.heroLead)}</p><div class="hero__actions">${action(c.t(region?'查看相关服务':'查看服务',region?'Explore relevant services':'View services'),region?'#services':'#regions')}${region?`<a class="text-link text-link--light" href="${e(c.contact(region))}">${c.t('咨询本区项目','Discuss your project')}${icon('arrow')}</a>`:insurance(c)}</div>${region?insurance(c):''}</div>
     <div class="hero__media" data-tilt><div class="hero__ribbon" data-motion-decoration aria-hidden="true"></div>${picture(c,v.hero,{priority:true,className:'hero__image'})}<span class="hero__media-label">${c.t(region?'商业物业 · 场景示意':'MELBOURNE / VICTORIA',region?'COMMERCIAL PROPERTY / ILLUSTRATION':'MELBOURNE / VICTORIA')}</span><span class="hero__coordinate" aria-hidden="true">${region?region.number:'MEL'}</span></div></div></div>
   </section>`;
 }

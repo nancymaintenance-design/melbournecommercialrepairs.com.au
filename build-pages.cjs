@@ -7,6 +7,7 @@ const {serviceSlugs,sectorSlugs,articleSlugs}=data;
 const areaRegions=require('./content/area-data.cjs');
 const areaTheatre=require('./content/area-theatre.cjs');
 const areaDetail=require('./content/area-detail.cjs');
+const contactPage=require('./content/contact-page.cjs');
 const footerTransition=require('./content/footer-transition.cjs');
 const technicalNotes=require('./content/technical-notes-render.cjs');
 const e=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;');
@@ -48,7 +49,7 @@ function page(route,zh,en,content,related='',options={}){
  if(route==='privacy')content+=dual('h2','Google 地图','Google Maps')+dual('p','首页嵌入 Google 地图。加载地图时，浏览器会连接 Google，其隐私政策适用于地图服务。你也可以通过地图链接直接打开商家位置。','The homepage embeds Google Maps. Loading the map connects your browser to Google, whose privacy policy applies to the map service. You can also open our business location using the map link.')+external('https://policies.google.com/privacy','Google 隐私政策 ↗','Google privacy policy ↗');
  const metadata={route:'/'+route+'/',titleZh:options.titleZh||zh+' | Ellis Services Group Melbourne',titleEn:options.titleEn||en+' | Ellis Services Group Melbourne',descriptionZh:options.descriptionZh||zh+'。Ellis Services Group 为墨尔本商业物业统筹维修与维护项目。',descriptionEn:options.descriptionEn||en+'. We coordinate commercial property repairs and maintenance in Melbourne.'};
  const topic=options.topic;
- const heading=options.serviceReference||options.technical?'':compactPage?(route==='faq'?require('./content/faq-stage.cjs').section(data.faqs,data.services,serviceSlugs):require('./content/about-profile.cjs').section(business,registration)):areaOverview?areaTheatre.section({home:false}):areaRegion?'':route==='contact'?require('./content/contact-page.cjs').section(data.services,data.sectors):route==='services'?require('./content/service-directory.cjs').section(data.services,serviceSlugs,zh,en):route==='sectors'?require('./content/sector-explorer.cjs').section(data.sectors,sectorSlugs,zh,en):require('./content/design-shell.cjs').heading(route,zh,en,options);
+ const heading=options.serviceReference||options.technical?'':compactPage?(route==='faq'?require('./content/faq-stage.cjs').section(data.faqs,data.services,serviceSlugs):require('./content/about-profile.cjs').section(business,registration)):areaOverview?areaTheatre.section({home:false}):areaRegion?'':route==='contact'?contactPage.section(data.services,data.sectors):route==='services'?require('./content/service-directory.cjs').section(data.services,serviceSlugs,zh,en):route==='sectors'?require('./content/sector-explorer.cjs').section(data.sectors,sectorSlugs,zh,en):require('./content/design-shell.cjs').heading(route,zh,en,options);
  const pageHead=localeHead(metadata)+(options.extraHead||'');
  const html=`<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${e(metadata.titleZh)}</title><meta name="description" content="${e(metadata.descriptionZh)}">${pageHead}<link rel="icon" href="/assets/ellis-services-logo.png"><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="/lower.css"><link rel="stylesheet" href="/cinematic.css"><link rel="stylesheet" href="/continuous.css"><link rel="stylesheet" href="/designer.css?v=20261114-13"><script src="/locale-ui.js" defer></script><script src="/detail.js" defer></script><script src="/designer-motion.js?v=20261114-13" defer></script></head><body class="cinematic-v2 detail-page${topic?' content-detail':''}${route==='contact'?' contact-page':''}${areaOverview?' area-overview-page':areaRegion?' area-region-page':''}"><a class="skip-link" href="#main">Skip to content</a>${header}<main id="main" class="detail-main"><nav class="breadcrumbs"><a href="/" data-zh="首页" data-en="Home">首页</a><span aria-hidden="true"> / </span>${topic?`<a href="/${topic.isService?'services':'sectors'}/" data-local-page data-zh="${topic.isService?'服务目录':'商业场景'}" data-en="${topic.isService?'Services':'Property sectors'}">${topic.isService?'服务目录':'商业场景'}</a><span aria-hidden="true"> / </span>`:''}<span data-zh="${e(zh)}" data-en="${e(en)}">${e(zh)}</span></nav>${heading}${content}${related}</main>${footer}</body></html>`;
  const areaAssets=areaOverview||areaRegion?'<link rel="stylesheet" href="/area-theatre.css">'+(areaOverview?'<script src="/area-theatre.js" defer></script>':''):'';
@@ -61,10 +62,13 @@ function page(route,zh,en,content,related='',options={}){
 }
 const topicRecords=require('./content/render-topics.cjs')(page,data,serviceSlugs,sectorSlugs);
 page('services','墨尔本商业维护服务','Commercial maintenance services in Melbourne','');
-page('sectors','我们服务的商业物业','Commercial properties we maintain','');
+page('sectors','按物业类型查看商业维修与维护服务','Commercial Property Maintenance by Property Type','','',{
+ descriptionZh:'我们服务的商业物业。Ellis Services Group 为墨尔本商业物业统筹维修与维护项目。',
+ descriptionEn:'Commercial properties we maintain. We coordinate commercial property repairs and maintenance in Melbourne.'
+});
 page('about','关于 Ellis Services Group','About Ellis Services Group','');
-page('insights','墨尔本商业维护技术研究与实务','Melbourne commercial maintenance research and practice',technicalNotes.library(),'',{
- technical:true,extraHead:'<link rel="stylesheet" href="/technical-stage.css"><script src="/technical-stage.js" defer></script>',titleEn:'Melbourne Commercial Maintenance Technical Notes | Ellis Services Group',
+page('insights',...technicalNotes.libraryTitle,technicalNotes.library(),'',{
+ technical:true,extraHead:'<link rel="stylesheet" href="/technical-stage.css"><script src="/technical-stage.js" defer></script>',
  descriptionZh:`查阅 ${technicalNotes.libraryArticles.length} 篇墨尔本商业物业维护文章，了解故障排查、维修安排、预算和验收记录。`,
  descriptionEn:`Explore ${technicalNotes.libraryArticles.length} articles on Melbourne commercial maintenance, covering fault diagnosis, repair options, budgets and handover.`
 });
@@ -90,7 +94,11 @@ areaRegions.forEach(region=>{
 });
 page('privacy','隐私说明','Privacy information',require('./content/enquiry-privacy.cjs')(dual));
 page('faq','商业物业维护常见问题','Commercial Property Maintenance FAQs',`<section class="topic-faq" data-entrance>${dual('h2','先了解，再安排现场','Understand the work. Plan the visit.')}<div class="topic-faq-list">${data.faqs.map(f=>`<details><summary>${dual('span',f[0],f[1])}<span class="faq-symbol" aria-hidden="true">+</span></summary>${dual('p',f[2],f[3])}</details>`).join('')}</div></section>`,dual('h2','按具体任务了解服务','Explore the work by service')+cards(data.services,'services',serviceSlugs),{intro:['单次维修、长期维护与多工种工程。从你关心的问题开始，找到具体的服务范围。','One-off repairs, ongoing care and multi-trade work. Start with your questions and explore the scope for your property.']});
-page('contact','聊聊你的墨尔本项目','Let’s Talk About Your Melbourne Property','','',{extraHead:'<link rel="stylesheet" href="/contact-page.css"><script src="/contact-page.js" defer></script>'});
+page('contact',contactPage.titleZh,contactPage.titleEn,'','',{
+ descriptionZh:'聊聊你的墨尔本项目。Ellis Services Group 为墨尔本商业物业统筹维修与维护项目。',
+ descriptionEn:'Let’s Talk About Your Melbourne Property. We coordinate commercial property repairs and maintenance in Melbourne.',
+ extraHead:'<link rel="stylesheet" href="/contact-page.css"><script src="/contact-page.js" defer></script>'
+});
 // Provide the same real links in the initial HTML, including without JavaScript.
 home=home.replace(/<div class="service-grid" id="service-grid">[\s\S]*?<\/div>\s*<div class="service-bottom">/,`<div class="service-grid" id="service-grid">${data.services.map((x,i)=>`<a class="service-card" href="/services/${serviceSlugs[i]}/" data-local-page data-service="${i}"><div class="service-card-top"><span>${String(i+1).padStart(2,'0')} / 12</span></div><h3>${e(x.zh)}</h3><p>${e(x.subZh)}</p><span class="service-card-arrow">↗</span></a>`).join('')}</div><div class="service-bottom">`);
 home=home.replace(/<section id="news"[\s\S]*?<\/section>/,require('./home-news-magazine.js').section(data.articles,articleSlugs));

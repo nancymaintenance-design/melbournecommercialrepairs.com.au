@@ -91,7 +91,7 @@ module.exports = [
  },
  {
   slug:'occupancy-sensor-lighting-controls',category:'electrical',colour:'blue',image:service('specialist-electrical-lighting'),
-  title:['感应照明误关：\n覆盖、延时与控制分区','Occupancy-controlled lighting:\nCoverage, delays and false offs'],
+  title:['感应灯提前熄灭：\n覆盖范围、延时与控制分区','Occupancy Sensor Lights\nThat Switch Off Too Soon'],
   summary:['人还坐在会议室里，灯却熄了。我们按实际座位、控制分区和关闭时刻复现问题，区分探测不到、定时覆盖与照明指令冲突。','When lights go out while a meeting room is still occupied, we reproduce the issue at the actual seats and check the control zone and timing to separate detection, scheduling and conflicting commands.'],
   keywords:[['感应覆盖','Sensor coverage'],['关闭延时','Switch-off delay'],['分区指令','Zone commands']],
   mechanism:[
@@ -385,7 +385,7 @@ module.exports = [
  },
  {
   slug:'ceramic-floor-tile-debonding',category:'floors',colour:'orange',image:service('gallery-fit-outs-make-good-work'),
-  title:['商业地砖空鼓：\n从响应差异排查粘结层','Hollow-sounding floor tiles:\nAssessing the bond and substrate'],
+  title:['商业地砖空鼓：\n基层与粘结层排查','Hollow-sounding floor tiles:\nAssessing the bond and substrate'],
   summary:['同一层地砖的敲击声不一致时，我们用网格标出变化，再比较松动、裂纹、边界以及基层和胶层的状态。','When tiles sound different across one floor, we grid the variation and compare it with movement, cracking, boundaries and the condition of the bond and substrate.'],
   keywords:[['地砖空鼓','Hollow sounding tiles'],['粘结界面','Bond interface'],['基层位移','Substrate movement']],
   mechanism:[
