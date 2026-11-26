@@ -212,14 +212,17 @@ ${itemXml}
 }
 
 function writeResources(root, records) {
-  for (const [language, pages] of Object.entries(records)) {
-    writeFeed(root, language, pages.flatMap(page => page.entry ? [page.entry] : []));
+  const articlesByLanguage = Object.fromEntries(Object.entries(records).map(([language, pages]) =>
+    [language, pages.flatMap(page => page.entry ? [page.entry] : [])]));
+  for (const [language, entries] of Object.entries(articlesByLanguage)) {
+    writeFeed(root, language, entries);
   }
   const labels = Object.fromEntries(Object.entries(records).map(([language, pages]) =>
     [language, Object.fromEntries(pages.map(page => [page.route, page.title]))]));
   const link = (label, url) => `- [${label}](${url})`;
   const bilingualLinks = routes => routes.flatMap(route => ['en', 'zh'].map(language =>
     link(labels[language][route], canonicalUrl(route, language))));
+  const articleLinks = language => articlesByLanguage[language].map(({title, url}) => link(title, url));
   const overview = ['/','/about/','/contact/','/services/','/sectors/','/areas/melbourne/','/faq/','/insights/'];
   const llms = [
     '# ' + business.name, '',
@@ -233,6 +236,10 @@ function writeResources(root, records) {
     ...bilingualLinks(directories['/sectors/']), '',
     '## Service areas', '',
     ...bilingualLinks(directories['/areas/melbourne/']), '',
+    '## Technical articles (English)', '',
+    ...articleLinks('en'), '',
+    '## 技术文章（简体中文）', '',
+    ...articleLinks('zh'), '',
     '## Optional', '',
     link('Sitemap', origin + '/sitemap.xml'),
     ...Object.keys(languages).flatMap(language => [

@@ -26,7 +26,7 @@ const sitemap = [...read('sitemap.xml').matchAll(/<loc>([^<]+)<\/loc>/g)].map(([
 assert.equal(new Set(sitemap).size,sitemap.length,'Sitemap URL uniqueness');
 const editorialArticles = require('../content/commercial-maintenance-articles.json');
 assert.equal(libraryArticles.length,24+editorialArticles.length+articleSlugs.length);
-assert.equal(new Set(editorialArticles.map(article=>article.slug)).size,3);
+assert.equal(new Set(editorialArticles.map(article=>article.slug)).size,editorialArticles.length);
 assert.deepEqual(articles.map(article=>article.slug),libraryArticles.map(article=>article.slug));
 const homeSlugs = new Set(articleSlugs);
 for (const category of Object.keys(categories)) {
@@ -34,6 +34,19 @@ for (const category of Object.keys(categories)) {
 }
 assert.equal(new Set(articles.map(article=>article.slug)).size,articles.length);
 const bySlug = new Map(articles.map(article=>[article.slug,article]));
+
+const articleHeadings = {zh:'## 技术文章（简体中文）',en:'## Technical articles (English)'};
+const discoverySections = read('llms.txt').split(/^## /m).slice(1).map(section=>('## '+section).trimEnd().split(/\r?\n/));
+for (const [lang, heading] of Object.entries(articleHeadings)) {
+ const sections = discoverySections.filter(([title])=>title===heading);
+ assert.equal(sections.length,1,lang+' has one technical article directory in llms.txt');
+ const actual = sections[0].slice(1).filter(Boolean);
+ const expected = libraryArticles.map(article=>{
+  const title = article.title[lang==='en'?1:0].replace(/\s+/g,' ').trim();
+  return `- [${title}](${canonicalUrl(article.route,lang)})`;
+ });
+ assert.deepEqual(actual.sort(),expected.sort(),lang+' llms.txt lists every article once with its localized title and URL');
+}
 
 for (const lang of ['zh','en']) {
  const library = page('/insights/',lang);
