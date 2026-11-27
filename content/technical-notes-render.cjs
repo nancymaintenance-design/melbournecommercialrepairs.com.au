@@ -66,7 +66,7 @@ function library() {
     ${h1(libraryHeadline,'tn-library-title')}
     ${text('p',['故障机理 · 诊断依据 · 维修方法 · 验收记录','Fault mechanisms · Diagnosis · Repair options · Verification'],'tn-lead')}
     ${link('#technical-library',['查阅技术文章','Browse technical notes'],'tn-button tn-hero-button','↓')}
-   </div><div class="tn-hero-art" data-tn-parallax>${stageImage('/assets/news-technical/index-cutaway.webp',true)}</div></div>
+   </div><div class="tn-hero-art" data-tn-parallax>${stageImage('/assets/news-technical/index-cutaway-v2.webp',true)}</div></div>
   </section>
   <div id="technical-library" class="tn-wrap tn-list">
    <div class="tn-filters" role="group" ${label('按服务筛选技术文章','Filter technical notes by service')} hidden>${controls}</div>
