@@ -21,7 +21,7 @@ const mapSection=require('./content/home-location.cjs').section(business);
 const organizationSchema=`<script type="application/ld+json">${JSON.stringify({'@context':'https://schema.org','@type':'Organization','@id':origin+'/#ellis-organization',url:origin+'/',name:business.name,legalName:business.legalName,taxID:business.abn,identifier:[{'@type':'PropertyValue',propertyID:'ABN',value:business.abn},{'@type':'PropertyValue',propertyID:'ACN',value:business.acn}],address:{'@type':'PostalAddress',addressRegion:business.addressRegion,streetAddress:business.streetAddress,addressLocality:business.addressLocality,postalCode:business.postalCode,addressCountry:'AU'},telephone:business.telephone,email:business.email,areaServed:{'@type':'City',name:'Melbourne'},sameAs:[business.registerUrl,business.mapsUrl]})}</script>`;
 let home=fs.readFileSync(path.join(root,'index.html'),'utf8');
 home=require('./navigation.cjs').rewrite(home);
-home=home.replace(/<script[^>]*src="\/?locale-ui\.js[^"]*"[^>]*><\/script>/g,'').replace('</head>','<script src="/locale-ui.js" defer></script></head>');
+home=home.replace(/<script[^>]*src="\/?locale-ui\.js[^"]*"[^>]*><\/script>/g,'').replace(/(<script\b[^>]*src="\/?app\.js(?:\?[^"]*)?"[^>]*>)/,'<script src="/locale-ui.js" defer></script>$1');
 home=home.replace(/<link\b[^>]*href="\/?navigation-refinement\.css(?:\?[^\"]*)?"[^>]*>/g,'').replace('</head>','<link rel="stylesheet" href="/navigation-refinement.css"></head>');
 home=home.replace(/(<a[^>]*class="brand"[^>]*href=")#[^"]*/,'$1/').replace(/(<a href=")#home(" class="brand")/,'$1/$2');
 let footer=require('./content/footer.cjs')(business);

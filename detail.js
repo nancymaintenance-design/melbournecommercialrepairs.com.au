@@ -1,11 +1,12 @@
 (() => {
  const $=s=>document.querySelector(s),all=s=>[...document.querySelectorAll(s)];
- let language=new URLSearchParams(location.search).get('lang')==='en'?'en':'zh';
+ const localeUI=window.EllisLocaleUI;
+ let language=localeUI.urlLanguage();
  const metadata=JSON.parse($('#page-meta')?.textContent||'{}');
  function apply(){
   document.documentElement.lang=language==='en'?'en':'zh-CN';
   all('[data-zh][data-en]').forEach(n=>{const copy=n.dataset[language].replace(/\\n/g,'\n');if(n.textContent!==copy)n.textContent=copy;});
-  all('a[href^="/"]').forEach(a=>{const u=new URL(a.href);u.searchParams.set('lang',language);a.href=u.pathname+u.search+u.hash});
+  all('a[href^="/"]:not([data-language-switch])').forEach(a=>{const u=new URL(a.href);u.searchParams.set('lang',language);a.href=u.pathname+u.search+u.hash});
   $('.lang-en').classList.toggle('active',language==='en');$('.lang-zh').classList.toggle('active',language==='zh');
   $('#language-switch').setAttribute('aria-label',language==='en'?'切换到中文':'Switch to English');
   $('#main-nav').setAttribute('aria-label',language==='en'?'Main navigation':'主导航');
@@ -15,7 +16,13 @@
   $('#year').textContent=new Date().getFullYear();
   window.EllisLocaleUI?.apply();
  }
- $('#language-switch').onclick=()=>{language=language==='zh'?'en':'zh';apply();const u=new URL(location.href);u.searchParams.set('lang',language);history.replaceState(null,'',u)};
+ $('#language-switch').addEventListener('click',event=>{
+  if(!localeUI.isLanguageClick(event))return;
+  event.preventDefault();
+  language=language==='zh'?'en':'zh';
+  localeUI.syncUrl(language);
+  apply();
+ });
  $('#menu-toggle').onclick=()=>{const open=$('#menu-toggle').getAttribute('aria-expanded')!=='true';$('#menu-toggle').setAttribute('aria-expanded',open);$('#main-nav').classList.toggle('is-open',open);window.EllisLocaleUI?.syncMenu()};
  document.addEventListener('keydown',e=>{if(e.key==='Escape'){$('#main-nav').classList.remove('is-open');$('#menu-toggle').setAttribute('aria-expanded','false');window.EllisLocaleUI?.syncMenu()}});
  apply();

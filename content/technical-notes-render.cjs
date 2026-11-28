@@ -29,8 +29,9 @@ const filters = {
  interiors:['装饰隔断','Interiors & partitions'], floors:['地面墙面','Floor & wall systems'], doors:['门窗五金','Doors & hardware'],
  urgent:['紧急抢修','Urgent repairs']
 };
-const servicesToArticles = Object.fromEntries(serviceSlugs.map(slug=>[slug,serviceArticles
- .filter(a=>a.primary===slug || a.secondary===slug)
+const serviceArticleSet = new Set(serviceArticles);
+const servicesToArticles = Object.fromEntries(serviceSlugs.map(slug=>[slug,articles
+ .filter(a=>a.primary===slug || (a.secondary===slug && serviceArticleSet.has(a)))
  .sort((a,b)=>Number(b.primary===slug)-Number(a.primary===slug))]));
 
 const stageImage = (src, eager=false) => eager
@@ -41,7 +42,7 @@ function card(article, featured=false) {
  return `<article class="tn-card tn-colour-${article.colour}${featured?' tn-feature':''}" id="tn-card-${article.slug}" data-tn-category="${article.category}">
   <div class="tn-card-art">${stageImage(article.image)}</div>
   <div class="tn-card-copy">${text('p',featured?categories[article.category].slice(0,2):filters[article.category],'tn-tag')}
-  ${text('h2',article.title)}${text('p',article.summary,'tn-card-summary')}
+  <h2>${link(article.route,article.title,'tn-card-title','')}</h2>${text('p',article.summary,'tn-card-summary')}
   ${link(article.route,['阅读全文','Read article'],'tn-button tn-card-link')}</div>
  </article>`;
 }

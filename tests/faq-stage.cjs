@@ -28,7 +28,7 @@ for(const file of ['faq/index.html','_ellisl10n/faq/index.html']){
 for(const [attr,url] of [...main.matchAll(/(src|href)="(\/[^"#?]+)(?:[?#][^"]*)?"/g)].map(m=>[m[1],m[2]])){
  const target=path.join(root,url,url.endsWith('/')?'index.html':'');assert(fs.existsSync(target),attr+' valid: '+url);
 }
-assert.equal(html.match(/<header class="site-header"[\s\S]*?<\/header>/)[0],read('about/index.html').match(/<header class="site-header"[\s\S]*?<\/header>/)[0]);
+assert.equal(html.match(/<header class="site-header"[\s\S]*?<\/header>/)[0],read('about/index.html').match(/<header class="site-header"[\s\S]*?<\/header>/)[0].replace(/(id="language-switch"[^>]*href=")\/about\/\?lang=en"/,'$1/faq/?lang=en"'));
 assert.equal(html.match(/<footer\b[\s\S]*?<\/footer>/)[0],read('index.html').match(/<footer\b[\s\S]*?<\/footer>/)[0]);
 const vm=require('node:vm'),handlers={},search={value:'roof',addEventListener:(name,fn)=>{handlers[name]=fn;}},calls=[];
 const ime=read('faq-stage.js').match(/ search.addEventListener\('compositionstart'[\s\S]*?(?=\n clear.addEventListener)/)[0];

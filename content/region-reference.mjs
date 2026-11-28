@@ -24,6 +24,17 @@ export const referenceRegions={
  'casey-cardinia':{title:'Casey 与 Cardinia\n商业物业维修与维护',lead:'结合物业正在使用、交接或更新的\n阶段，安排所需工作。',heading:'按物业阶段，组织维修与更新。',headingEn:'We plan maintenance around your next step.',panel:'我们协调恢复与交接',panelEn:'How we plan make good and handover',labels:['租户交接','使用中维修','园区维护'],labelsEn:['Tenant handover','Occupied premises','Business park care'],services:[M,E,G,B],variant:'stages',positions:[[30,40],[60,55],[75,70]]},
  'frankston-mornington-peninsula':{title:'Frankston 与莫宁顿半岛\n商业物业维修与维护',lead:'餐饮接待、工业物业与外部环境，\n按营业与场地条件安排。',heading:'围绕营业安排，衔接室内与室外维护。',headingEn:'We plan indoor and outdoor work around trading hours',panel:'接待空间与户外使用区',panelEn:'Reception & outdoor spaces',labels:['室内接待','外部场地','设备与排水'],labelsEn:['Indoor reception','Outdoor areas','Services & drainage'],services:[G,B,P,C],variant:'coastal',positions:[[29,40],[76,30],[62,82]]}
 };
+const regionIntroLinks={
+ 'cbd-inner': [
+  ['办公楼','offices','/sectors/offices/'],
+  ['办公楼可按楼层安排','stage work by office floor','/insights/maintenance-plan/']
+ ],
+ western: [
+  ['仓库、物流中心','warehouses, logistics','/sectors/warehouses-logistics/'],
+  ['屋面','roofing','/services/roofing-waterproofing/']
+ ],
+ 'bayside-southern': [['高处作业','plan access and protection','/insights/facade-cleaning/']]
+};
 const serviceInfo={
  [B]:['建筑与日常维修','Building & general maintenance','墙面、门窗、地面及公共设施的检查、维修与修复。','Repairs to walls, doors, floors and shared facilities.','building','wall-repair'],
  [H]:['空调与楼宇设备','HVAC & building systems','空调、通风等楼宇设备的检查、维护与保养。','Inspection and maintenance of HVAC and building equipment.','fan','hvac'],
@@ -91,7 +102,12 @@ export function renderRegionReference({data,page:r,lang='zh'}){
  if(u.variant==='systems')planning=`<section class="rr-system-planning" id="planning"><div><h2>${t('进场前的现场与施工规划','Plan site access and the work')}</h2><ol>${briefPlan.map(step=>`<li>${icon('check')}<div><h3>${esc(step.title)}</h3><p>${esc(step.body)}</p></div></li>`).join('')}</ol></div>${photo('detail-hvac-technician',t('楼顶设备检查场景示意','Rooftop equipment inspection illustration'))}</section>`;
  const areaNames=r.coverageSuburbs;
  const related=r.relatedRegionSlugs.map(slug=>data.regions.find(x=>x.slug===slug)).filter(Boolean);
- const coverage=`<section class="rr-coverage" id="coverage"><h2>${icon('pin')}${esc(regionName)}${t('覆盖范围',' coverage')}</h2><p>${t('本区重点服务地区','Places we cover in this region')}</p><ul class="rr-suburbs">${areaNames.map(name=>`<li>${esc(name)}</li>`).join('')}</ul><details><summary>${t('完整地区与维护说明','Full region and maintenance information')}${icon('plus')}</summary><div class="rr-coverage-body"><p>${esc(copy.localIntro)}</p>${copy.scenarios.map(scene=>`<section><h3>${esc(scene.title)}</h3><p>${esc(scene.problem)}</p><p>${esc(scene.approach)}</p><p>${esc(scene.handover)}</p></section>`).join('')}${copy.planning.map(step=>`<p><strong>${esc(step.title)}</strong> ${esc(step.body)}</p>`).join('')}${r.priorityServices.map(s=>`<p><a href="${service(s.slug)}">${esc(zh?s.anchorZh:s.anchorEn)} ↗</a> ${esc(zh?s.contextZh:s.contextEn)}</p>`).join('')}</div></details><nav aria-label="${t('相关地区','Nearby regions')}">${related.map(region=>button(t(shortNames[region.areaParam],region.nameEn),`${region.route}?lang=${lang}`,'cream')).join('')}</nav></section>`;
+ let localIntro=esc(copy.localIntro);
+ for(const [textZh,textEn,route] of regionIntroLinks[r.areaParam]||[]){
+  const label=esc(t(textZh,textEn));
+  localIntro=localIntro.replace(label,()=>`<a href="${route}?lang=${lang}">${label}</a>`);
+ }
+ const coverage=`<section class="rr-coverage" id="coverage"><h2>${icon('pin')}${esc(regionName)}${t('覆盖范围',' coverage')}</h2><p>${t('本区重点服务地区','Places we cover in this region')}</p><ul class="rr-suburbs">${areaNames.map(name=>`<li>${esc(name)}</li>`).join('')}</ul><details><summary>${t('完整地区与维护说明','Full region and maintenance information')}${icon('plus')}</summary><div class="rr-coverage-body"><p>${localIntro}</p>${copy.scenarios.map(scene=>`<section><h3>${esc(scene.title)}</h3><p>${esc(scene.problem)}</p><p>${esc(scene.approach)}</p><p>${esc(scene.handover)}</p></section>`).join('')}${copy.planning.map(step=>`<p><strong>${esc(step.title)}</strong> ${esc(step.body)}</p>`).join('')}${r.priorityServices.map(s=>`<p><a href="${service(s.slug)}">${esc(zh?s.anchorZh:s.anchorEn)} ↗</a> ${esc(zh?s.contextZh:s.contextEn)}</p>`).join('')}</div></details><nav aria-label="${t('相关地区','Nearby regions')}">${related.map(region=>button(t(shortNames[region.areaParam],region.nameEn),`${region.route}?lang=${lang}`,'cream')).join('')}</nav></section>`;
  const faq=`<section class="rr-faq" aria-labelledby="rr-faq-heading"><h2 id="rr-faq-heading">${t('常见问题','Common questions')}</h2>${copy.faq.map((item,i)=>`<details ${i===0?'open':''}><summary>${esc(item.question)}<span aria-hidden="true"></span></summary><p>${esc(item.answer)}</p></details>`).join('')}</section>`;
  const popular=`<nav class="rr-popular" aria-label="${t('本区重点地区','Region highlights')}"><strong>${t('重点地区','Local areas')}</strong>${areaNames.slice(0,4).map(name=>`<a href="#coverage">${esc(name)}</a>`).join('')}<a href="#coverage">${t('全部','All')} ${areaNames.length} ↗</a></nav>`;
  const cta=`<section class="rr-cta rr-cta--${u.variant}">${icon('building')}<div><h2>${esc(copy.cta.title)}</h2><p>${esc(copy.cta.body)}</p></div>${button(t('咨询本区项目','Discuss your project'),contact(),['workorders','retail','showroom'].includes(u.variant)?'blue':u.variant==='warehouse'?'orange':'lime')}<img src="/assets/region-reference-v3/clipboard.webp" alt="" aria-hidden="true" loading="lazy"></section>`;

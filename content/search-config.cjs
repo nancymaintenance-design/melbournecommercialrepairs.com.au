@@ -12,7 +12,7 @@ function localeHead(metadata) {
  const alternates = Object.entries(languages).map(([locale, hreflang]) =>
   '<link rel="alternate" hreflang="' + hreflang + '" href="' + canonicalUrl(metadata.route, locale) + '">');
  return '<link rel="canonical" href="' + canonicalUrl(metadata.route, 'zh') + '">' +
-  alternates.join('') + '<link rel="alternate" hreflang="x-default" href="' + canonicalUrl(metadata.route, 'zh') + '">' +
+  alternates.join('') + '<link rel="alternate" hreflang="x-default" href="' + canonicalUrl(metadata.route, 'en') + '">' +
   '<script type="application/json" id="page-meta">' + JSON.stringify(metadata).replaceAll('<', '\\u003c') + '</script>';
 }
 module.exports = {origin, languages, canonicalUrl, homeMeta, localeHead};

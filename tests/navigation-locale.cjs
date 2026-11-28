@@ -4,6 +4,10 @@ const path=require('node:path');
 const root=path.join(__dirname,'..');
 const walk=dir=>fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(path.join(dir,e.name)):e.name==='index.html'?[path.join(dir,e.name)]:[]);
 const pages=[path.join(root,'index.html'),...['services','sectors','areas','insights','faq','about','contact','privacy'].flatMap(dir=>walk(path.join(root,dir)))];
+const homeSource=fs.readFileSync(pages[0],'utf8');
+const homeLocale=homeSource.search(/<script[^>]*src="\/locale-ui\.js\?/);
+const homeApp=homeSource.search(/<script[^>]*src="\/?app\.js\?/);
+assert(homeLocale>=0&&homeApp>homeLocale,'Homepage loads the shared locale helper before app.js');
 const homeFooter=fs.readFileSync(pages[0],'utf8').match(/<footer\b[\s\S]*?<\/footer>/)[0];
 for(const file of pages){
  const html=fs.readFileSync(file,'utf8');
@@ -14,6 +18,11 @@ for(const file of pages){
  assert.equal((header.match(/data-nav-path=/g)||[]).length,8,`${file}: all eight original routes`);
  assert(header.includes('<span class="lang-zh active">中</span>'),`${file}: original language button retained`);
  assert(header.includes('<span class="lang-en">EN</span>'),`${file}: original English switch retained`);
+ const route='/' + path.relative(root,file).replaceAll('\\','/').replace(/index\.html$/,'');
+ const flip=page=>page.match(/<a\b[^>]*\bid="language-switch"[^>]*>/)?.[0];
+ const english=fs.readFileSync(path.join(root,'_ellisl10n',route,'index.html'),'utf8');
+ assert(flip(html)?.includes('href="'+route+'?lang=en"'),file+': Chinese switch has a real English href');
+ assert(flip(english)?.includes('href="'+route+'?lang=zh"'),file+': English switch has a real Chinese href');
  const footer=html.match(/<footer\b[\s\S]*?<\/footer>/)?.[0];
  assert(footer&&!footer.includes('<details'),`${file}: footer has no collapsed content`);
  assert.equal(footer,homeFooter,`${file}: full footer markup matches homepage`);

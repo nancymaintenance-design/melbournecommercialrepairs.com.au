@@ -1,8 +1,23 @@
-/* Shared localized attributes. The existing language switch is intentionally
-   untouched; it retains its approved labels and click behavior. */
+/* Keep bilingual links, metadata and accessibility labels in sync. */
 (() => {
  const language=()=>document.documentElement.lang.startsWith('en')?'en':'zh';
  const pageMeta=JSON.parse(document.getElementById('page-meta')?.textContent||'{}');
+ const urlLanguage=()=>new URLSearchParams(location.search).getAll('lang').findLast(value=>value==='en'||value==='zh')||'en';
+ const isLanguageClick=event=>!event.defaultPrevented&&event.button===0&&!event.altKey&&!event.ctrlKey&&!event.metaKey&&!event.shiftKey;
+ const urlFor=lang=>{
+  const url=new URL(location.href);
+  if(pageMeta.route)url.pathname=pageMeta.route;
+  url.searchParams.set('lang',lang);
+  return url;
+ };
+ const syncSwitch=()=>{
+  const link=document.querySelector('a[data-language-switch]');
+  if(!link)return;
+  const next=language()==='en'?'zh':'en';
+  const url=urlFor(next);
+  link.href=url.pathname+url.search+url.hash;
+  link.hreflang=next==='en'?'en-AU':'zh-CN';
+ };
  const syncMenu=()=>{
   const menu=document.getElementById('menu-toggle');if(!menu)return;
   const open=menu.getAttribute('aria-expanded')==='true';
@@ -18,8 +33,7 @@
   alternateGraph.dataset.lang=lang==='en'?'zh':'en';
  };
  const syncUrl=lang=>{
-  const url=new URL(location.href);
-  url.searchParams.set('lang',lang);
+  const url=urlFor(lang);
   if(url.href!==location.href)history.replaceState(history.state,'',url);
  };
  const apply=()=>{
@@ -32,9 +46,16 @@
   const alternate=document.querySelector(lang==='en'?'link[hreflang="en-AU"]':'link[hreflang="zh-CN"]');
   if(canonical&&alternate&&canonical.href!==alternate.href)canonical.href=alternate.href;
   syncDiscovery(lang);
+  syncSwitch();
   for(const attr of ['aria-label','alt','title'])for(const node of document.querySelectorAll(`[data-${attr}-zh][data-${attr}-en]`))node.setAttribute(attr,node.getAttribute(`data-${attr}-${lang}`));
   syncMenu();
  };
- window.EllisLocaleUI={apply,syncMenu,syncUrl};
+ window.EllisLocaleUI={apply,syncMenu,syncUrl,syncSwitch,urlLanguage,isLanguageClick};
+ window.addEventListener('hashchange',syncSwitch);
+ document.querySelector('a[data-language-switch]')?.addEventListener('keydown',event=>{
+  if(event.key!==' '||event.altKey||event.ctrlKey||event.metaKey||event.shiftKey)return;
+  event.preventDefault();
+  if(!event.repeat)event.currentTarget.click();
+ });
  apply();
 })();

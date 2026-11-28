@@ -15,7 +15,7 @@
  const buttons = [...filters.querySelectorAll('[data-tn-filter]')];
  const empty = library.querySelector('.tn-empty');
  const cards = [...track.querySelectorAll('.tn-card')];
- const links = new Map(cards.map(card=>[card,card.querySelector('.tn-card-link')]));
+ const links = new Map(cards.map(card=>[card,[...card.querySelectorAll('.tn-card-title, .tn-card-link')]]));
  const parked = new Map();
  const leadingTitle = {zh:heading.dataset.zh,en:heading.dataset.en};
  const motion = matchMedia('(prefers-reduced-motion: reduce)');
@@ -78,7 +78,7 @@
    card.dataset.tnSlot = names[delta+2] || (incoming ? 'incoming' : 'offstage');
    card.style.setProperty('--tn-layer',String(Math.max(1,6-Math.abs(delta))));
    card.inert = !onStage;
-   links.get(card).tabIndex = delta === 0 ? 0 : -1;
+   for (const link of links.get(card)) link.tabIndex = delta === 0 ? 0 : -1;
    motionPose(card,slot-dragOffset);
    parked.set(card,slot);
   }
@@ -130,13 +130,14 @@
  function setIndex(destination, announce=true, immediate=false) {
   if (!visible.length) return;
   const before = visible[index];
-  const focusedCard = before && before.contains(document.activeElement);
+  const focusedLink = links.get(before)?.indexOf(document.activeElement) ?? -1;
+  const focusedCard = focusedLink >= 0;
   index = cyclic() ? modulo(destination,visible.length) : Math.max(0,Math.min(visible.length-1,destination));
   if (focusedCard && before !== visible[index]) track.focus({preventScroll:true});
   if (immediate) withoutTransition(()=>paint());
   else paint();
   syncControls(announce);
-  if (focusedCard && before !== visible[index]) links.get(visible[index]).focus({preventScroll:true});
+  if (focusedCard && before !== visible[index]) links.get(visible[index])[focusedLink].focus({preventScroll:true});
  }
 
  function select(key) {

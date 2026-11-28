@@ -7,7 +7,7 @@ let localLinks=0;
 for(const [i,s] of pack.services.entries()){
  const html=fs.readFileSync(path.join(root,s.route,'index.html'),'utf8');
  assert.equal((html.match(/<h1\b/g)||[]).length,1,s.slug+': one H1');
- assert.equal(html.match(/<header class="site-header">[\s\S]*?<\/header>/)[0],header,s.slug+': homepage header unchanged');
+ assert.equal(html.match(/<header class="site-header">[\s\S]*?<\/header>/)[0],header.replace(/(id="language-switch"[^>]*href=")\/\?lang=en"/,(_match,start)=>start+s.route+'?lang=en"'),s.slug+': shared header and page-specific language link');
  assert.equal(html.match(/<footer\b[\s\S]*?<\/footer>/)[0],footer,s.slug+': full homepage footer unchanged');
  assert(html.includes(`data-service-reference="${s.slug}"`));
  assert.equal((html.match(/id="problem-tab-/g)||[]).length,4);

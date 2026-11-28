@@ -3,6 +3,10 @@ const business=require('../business.json');
 const blueprint=require('./blueprint-structure.json');
 const {serviceNotes}=require('./technical-notes-render.cjs');
 const sectorDetail=require('./sector-detail-flow.cjs');
+const areaGuides={
+ I01:['cbd-inner','市中心办公楼进场安排','Access planning for central Melbourne offices'],
+ I04:['western','墨尔本西区仓储物业进场安排','Site access for warehouses in western Melbourne']
+};
 const sectorsWithHeadingMetaZh=new Set(['I01','I03','I06','I07','I08']);
 const sectionLinks={S01:[[],[],['S12'],['S02']],S02:[['S04'],[],['S01'],['S09']],S03:[[],['S12'],[],['S06']],S04:[['S01'],['S02'],[],['S05']],S05:[[],['S03','S04'],[],['S06']],S06:[['S03'],[],['S01'],['S05']],S07:[['S11'],[],['S04'],['S08']],S08:[['S01'],['S03'],[],['S12']],S09:[[],['S02'],[],['S10']],S10:[[],[],[],['S09','S12']],S11:[[],['S04'],[],['S03','S10']],S12:[['S01'],['S03'],['S10'],['S08']],I01:[['S01'],['S03','S05'],['S04'],['S10','S12']],I02:[['S01'],['S02','S04'],['S08','S11'],['S12']],I03:[['S04','S05'],['S03'],['S01'],['S10','S12']],I04:[['S02','S04'],['S11'],['S03'],['S12','S01']],I05:[['S01','S02'],['S11'],['S03','S05'],['S07']],I06:[['S01'],['S03','S04','S05'],[],['S07']],I07:[['S01','S03','S04'],['S07','S11'],['S12'],[]],I08:[['S01','S02'],['S06','S07','S11'],[],['S09']]};
 const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;');
@@ -30,8 +34,10 @@ module.exports=function renderTopics(page,data,serviceSlugs,sectorSlugs){
   }
   const faq=`<section class="topic-faq" id="questions" data-entrance>${dual('p','项目常见问题','PROJECT QUESTIONS','eyebrow')}${dual('h2',x.label[0]+'常见问题',x.label[1]+' FAQs')}<div class="topic-faq-list">${x.faqs.map(f=>`<details><summary>${dual('span',f.qZh,f.qEn)}<span class="faq-symbol" aria-hidden="true">+</span></summary>${dual('p',f.zh,f.en)}</details>`).join('')}</div></section>`;
   const ctaCopy=x.cta||{title:['把现场需求告诉我们','Tell us what your site needs'],intro:['告诉我们物业地址和需要处理的问题。我们会与您确认进场要求及施工安排。','Tell us where the property is and what needs fixing. We’ll confirm site access and plan the work with you.'],button:['开始项目咨询 ↗','Discuss your project ↗']};
-  const cta=`<div class="topic-cta" data-entrance><div>${dual('h2',...ctaCopy.title)}${dual('p',...ctaCopy.intro)}</div><div><a class="button button-dark" href="/?${x.isService?'service='+x.index:'region=Melbourne'}#contact" data-local-page data-zh="${esc(ctaCopy.button[0])}" data-en="${esc(ctaCopy.button[1])}">${esc(ctaCopy.button[0])}</a><a class="topic-phone" href="${esc(business.telephoneHref)}">${esc(business.telephoneDisplay)} ↗</a></div></div>`;
-  const related=`<section class="topic-related">${dual('h2',x.isService?'相关维护服务':'本场景对应服务',x.isService?'Related maintenance services':'Services for this property')}${links(x.related)}${x.sectors?dual('h2','相关商业场景','Relevant commercial properties')+links(x.sectors,'detail-links sector-context-links'):''}<p class="topic-directory-links"><a href="/services/" data-local-page data-zh="查看全部 12 类服务 ↗" data-en="Explore all 12 services ↗">查看全部 12 类服务 ↗</a><a href="/sectors/" data-local-page data-zh="查看全部 8 类商业场景 ↗" data-en="Explore all 8 property types ↗">查看全部 8 类商业场景 ↗</a></p></section>`;
+  const cta=`<div class="topic-cta" data-entrance><div>${dual('h2',...ctaCopy.title)}${dual('p',...ctaCopy.intro)}</div><div><a class="button button-dark" href="/contact/#contact-enquiry-form" data-local-page data-zh="${esc(ctaCopy.button[0])}" data-en="${esc(ctaCopy.button[1])}">${esc(ctaCopy.button[0])}</a><a class="topic-phone" href="${esc(business.telephoneHref)}">${esc(business.telephoneDisplay)} ↗</a></div></div>`;
+  const guide=areaGuides[x.id];
+  const areaGuide=guide?`<a href="/areas/melbourne/${guide[0]}/#planning" data-local-page>${dual('span',guide[1]+' ↗',guide[2]+' ↗')}</a>`:'';
+  const related=`<section class="topic-related">${dual('h2',x.isService?'相关维护服务':'本场景对应服务',x.isService?'Related maintenance services':'Services for this property')}${links(x.related)}${x.sectors?dual('h2','相关商业场景','Relevant commercial properties')+links(x.sectors,'detail-links sector-context-links'):''}<p class="topic-directory-links"><a href="/services/" data-local-page data-zh="查看全部 12 类服务 ↗" data-en="Explore all 12 services ↗">查看全部 12 类服务 ↗</a><a href="/sectors/" data-local-page data-zh="查看全部 8 类商业场景 ↗" data-en="Explore all 8 property types ↗">查看全部 8 类商业场景 ↗</a>${areaGuide}</p></section>`;
   const titleZh=(sectorsWithHeadingMetaZh.has(x.id)?x.h1Zh:x.label[0]+'｜墨尔本')+'｜Ellis Services Group',titleEn=x.keyword.replace(/\b\w/g,c=>c.toUpperCase()).replace(/\bHvac\b/g,'HVAC')+' | Ellis Services Group';
   const descriptionZh=x.intro[0],descriptionEn=x.intro[1].split(/(?<=\.) /)[0];
   const schema={'@context':'https://schema.org','@graph':[

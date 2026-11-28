@@ -7,7 +7,7 @@ const {serviceSlugs,articleSlugs} = require('../content/site-data.cjs');
 const {canonicalUrl,origin} = require('../content/search-config.cjs');
 const {routes} = require('../vercel.json');
 const editorialDates = require('../content/search-lastmod.json');
-const localeRoute = new RegExp(routes.find(route=>route.dest==='/_ellisl10n/$1/index.html').src);
+const localeRoute = new RegExp(routes.find(route=>route.dest==='/api/normalize-page?__ellisPage=$1').src);
 
 const root = path.resolve(__dirname,'..');
 const read = file => fs.readFileSync(path.join(root,file),'utf8');
@@ -62,7 +62,10 @@ for (const lang of ['zh','en']) {
   assert(localeRoute.test(route),route+' served as English HTML by Vercel');
   const local = base => base+'?lang='+lang;
   const isHomeArticle = homeSlugs.has(article.slug);
-  assert(urls(library).includes(local(route)),route+' discoverable in initial library HTML');
+  const card = library.find(node=>attribute(node,'id')==='tn-card-'+article.slug);
+  const title = [...tree(card)].find(node=>node.tagName==='h2');
+  assert.deepEqual(urls([...tree(title)]),[local(route)],route+' linked from the visible card title');
+  assert(urls([...tree(card)]).includes(local(route)),route+' discoverable in initial library HTML');
   if(isHomeArticle)assert(urls(page('/',lang)).includes(local(route)),route+' still linked from home');
   const nodes = page(route,lang);
   assert.equal(nodes.filter(node=>node.tagName==='h1').length,1,route);
@@ -91,9 +94,8 @@ for (const lang of ['zh','en']) {
    for (const id of ['mechanism','evidence','methods','verification','questions']) {
     assert(main.some(node=>node.tagName==='section'&&attribute(node,'id')==='tn-'+id),route+' renders '+id);
    }
-  } else {
-   assert(urls([...tree(primary)]).includes(local(route)),route+' reciprocal service link');
   }
+  assert.equal(urls([...tree(primary)]).filter(href=>href===local(route)).length,1,route+' exactly one reciprocal service link');
   const tableCount=article.editorial?article.editorial.flatMap(section=>section.blocks).filter(([kind])=>kind==='table').length:1;
   assert.equal(main.filter(node=>node.tagName==='table').length,tableCount,route+' semantic table');
   assert.equal(main.filter(node=>node.tagName==='td').length,6*tableCount,route+' data cells');
@@ -121,7 +123,7 @@ for (const lang of ['zh','en']) {
  for(const slug of serviceSlugs){
   const service=page('/services/'+slug+'/',lang);
   const section=service.find(node=>hasClass(node,'tn-service-notes'));
-  const required = serviceArticles.filter(article=>article.primary===slug || article.secondary===slug);
+  const required = articles.filter(article=>article.primary===slug || (article.secondary===slug && !homeSlugs.has(article.slug)));
   const destinations = urls([...tree(section)]);
   assert.equal(destinations.length,required.length,slug+' article link count');
   for (const article of required) assert(destinations.includes(article.route+'?lang='+lang));

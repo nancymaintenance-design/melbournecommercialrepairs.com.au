@@ -101,6 +101,7 @@ function structuredData(schema, nodes, route, language) {
 }
 
 function render(source, route, language) {
+ source = source.replace(/<button([^>]*\bid="language-switch"[^>]*)>([\s\S]*?)<\/button>/, '<a$1 data-language-switch>$2</a>');
  const english = language === 'en';
  if (english && route === '/') {
   const selector = nodesOf(source).find(node => attr(node, 'id') === 'property-selector');
@@ -135,7 +136,13 @@ function render(source, route, language) {
   if (node.tagName === 'title') replaceBody(node, escapeText(metadata['title' + suffix]));
   if (node.tagName === 'meta' && attr(node, 'name') === 'description') update.content = metadata['description' + suffix];
   if (node.tagName === 'link' && attr(node, 'rel') === 'canonical') update.href = canonicalUrl(route, language);
-  if (node.tagName === 'a' && attr(node, 'href') !== undefined) update.href = withLocale(attr(node, 'href'), route, language);
+  if (node.tagName === 'link' && attr(node, 'hreflang') === 'x-default') update.href = canonicalUrl(route, 'en');
+  if (attr(node, 'data-language-switch') !== undefined) {
+   update.href = route + '?lang=' + (english ? 'zh' : 'en');
+   update.hreflang = english ? 'zh-CN' : 'en-AU';
+  } else if (node.tagName === 'a' && attr(node, 'href') !== undefined) {
+   update.href = withLocale(attr(node, 'href'), route, language);
+  }
   if (node.tagName === 'script' && attr(node, 'type') === 'application/ld+json' && attr(node,'data-ellis-discovery') === undefined) {
    const json = JSON.stringify(structuredData(readJson(node), nodes, route, language)).replaceAll('<', '\\u003c');
    schemaContent.push(json);

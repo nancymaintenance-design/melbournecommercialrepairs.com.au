@@ -3,7 +3,8 @@
   'use strict';
   const $ = (selector, root = document) => root.querySelector(selector);
   const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
-  let language = new URLSearchParams(location.search).get('lang') === 'en' ? 'en' : 'zh';
+  const localeUI = window.EllisLocaleUI;
+  let language = localeUI.urlLanguage();
   let activeSector = 0;
   let exploded = false;
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -164,7 +165,7 @@
       window.scrollTo(0,story.offsetTop-header+(story.offsetHeight-pin.offsetHeight)*progress);
       document.documentElement.style.scrollBehavior=behavior;
     }
-    $$('a[href^="/"]').forEach(a=>{const u=new URL(a.href);u.searchParams.set('lang',language);a.href=u.pathname+u.search+u.hash;});
+    $$('a[href^="/"]:not([data-language-switch])').forEach(a=>{const u=new URL(a.href);u.searchParams.set('lang',language);a.href=u.pathname+u.search+u.hash;});
     syncHomeNavigation();
     document.dispatchEvent(new CustomEvent('ellislanguagechange'));
     window.EllisLocaleUI?.apply();
@@ -213,9 +214,11 @@
   $$('[data-region]').forEach(button=>button.addEventListener('click',()=>openQuote({region:button.dataset.region})));
 
   function updateMotionControls() {}
-  $('#language-switch').addEventListener('click',()=>{
+  $('#language-switch').addEventListener('click',event=>{
+    if(!localeUI.isLanguageClick(event))return;
+    event.preventDefault();
     language=language==='zh'?'en':'zh';
-    window.EllisLocaleUI?.syncUrl(language);
+    localeUI.syncUrl(language);
     applyLanguage();
   });
   $('#menu-toggle').addEventListener('click',()=>{
