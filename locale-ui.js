@@ -1,5 +1,15 @@
 /* Keep bilingual links, metadata and accessibility labels in sync. */
 (() => {
+ const businessKeys=['service','area','topic'];
+ function localizeUrl(url,lang){
+  const params=url.searchParams;
+  const ordered=new URLSearchParams({lang});
+  for(const key of businessKeys)for(const value of params.getAll(key))ordered.append(key,value);
+  for(const [key,value] of params)if(key!=='lang'&&!businessKeys.includes(key))ordered.append(key,value);
+  url.search=ordered.toString();
+  return url;
+ }
+ if(typeof module!=='undefined'&&module.exports){module.exports={localizeUrl};return;}
  const language=()=>document.documentElement.lang.startsWith('en')?'en':'zh';
  const pageMeta=JSON.parse(document.getElementById('page-meta')?.textContent||'{}');
  const urlLanguage=()=>new URLSearchParams(location.search).getAll('lang').findLast(value=>value==='en'||value==='zh')||'en';
@@ -7,8 +17,7 @@
  const urlFor=lang=>{
   const url=new URL(location.href);
   if(pageMeta.route)url.pathname=pageMeta.route;
-  url.searchParams.set('lang',lang);
-  return url;
+  return localizeUrl(url,lang);
  };
  const syncSwitch=()=>{
   const link=document.querySelector('a[data-language-switch]');
@@ -50,7 +59,7 @@
   for(const attr of ['aria-label','alt','title'])for(const node of document.querySelectorAll(`[data-${attr}-zh][data-${attr}-en]`))node.setAttribute(attr,node.getAttribute(`data-${attr}-${lang}`));
   syncMenu();
  };
- window.EllisLocaleUI={apply,syncMenu,syncUrl,syncSwitch,urlLanguage,isLanguageClick};
+ window.EllisLocaleUI={apply,localizeUrl,syncMenu,syncUrl,syncSwitch,urlLanguage,isLanguageClick};
  window.addEventListener('hashchange',syncSwitch);
  document.querySelector('a[data-language-switch]')?.addEventListener('keydown',event=>{
   if(event.key!==' '||event.altKey||event.ctrlKey||event.metaKey||event.shiftKey)return;

@@ -46,8 +46,22 @@
     const small = matchMedia('(max-width: 700px), (pointer: coarse)');
     const fine = matchMedia('(pointer: fine)');
     const context = canvas?.getContext('2d');
+    const sceneImages = window.EllisStageImages;
+    const day = images.find(image => image.dataset.maPhase === 'day');
+    const warmMargin = 640;
+    // Retain a native lazy fallback if the shared loader script is unavailable.
+    if (!sceneImages) for (const image of images) {
+      if (!image.dataset.src) continue;
+      image.loading = 'lazy';
+      image.sizes = image.dataset.sizes;
+      image.srcset = image.dataset.srcset;
+      image.src = image.dataset.src;
+      if (image === day) image.addEventListener('load', () => {
+        stage.style.setProperty('--ma-day-backdrop', 'url(' + JSON.stringify(image.currentSrc) + ')');
+      });
+    }
     const state = {
-      hour: 14, frozen: false, visible: false, frame: 0, last: 0, elapsed: 0,
+      hour: 14, frozen: false, visible: false, near: false, backdrop: '', lastScene: null, frame: 0, last: 0, elapsed: 0,
       width: 1, height: 1, points: [], specks: [], font: 24, fontReady: false,
       textX: 0, textY: 0, inkWidth: 0, glyph: null,
       pointerX: 0, pointerY: 0, x: 0, y: 0, scrollY: 0, scrollDirty: true
@@ -67,13 +81,49 @@
       text.textContent = 'I love Melbourne';
     }
 
+    function prepareScenes(weights) {
+      if (!sceneImages || !state.near) return;
+      // The existing clock moves .5 hours per second. Look up to four seconds ahead.
+      const upcoming = !state.frozen && !reduce.matches && day && sceneImages.ready(day)
+        ? sceneWeights(state.hour + 2) : {};
+      for (const image of images) {
+        const {maPhase} = image.dataset;
+        if (weights[maPhase] > 0) sceneImages.request(image, 2);
+        else if (image === day) sceneImages.request(image, 1);
+        else if (upcoming[maPhase] > 0) sceneImages.request(image);
+        else sceneImages.cancelQueued(image);
+      }
+    }
+
+    function displayWeights(weights) {
+      if (!sceneImages) return weights;
+      const ready = images.filter(image => sceneImages.ready(image));
+      if (ready.includes(day) && day.currentSrc !== state.backdrop) {
+        state.backdrop = day.currentSrc;
+        stage.style.setProperty('--ma-day-backdrop', 'url(' + JSON.stringify(state.backdrop) + ')');
+      }
+      const active = images.filter(image => weights[image.dataset.maPhase] > 0);
+      if (active.every(image => ready.includes(image))) {
+        state.lastScene = active.reduce((best, image) =>
+          weights[image.dataset.maPhase] >= (weights[best?.dataset.maPhase] || 0) ? image : best, null);
+        return weights;
+      }
+      // Keep the last usable scene while a target downloads or decodes. The
+      // loader's callbacks render current weights, never the old request's phase.
+      const fallback = ready.includes(state.lastScene) ? state.lastScene
+        : active.find(image => ready.includes(image)) || (ready.includes(day) ? day : ready[0]);
+      return fallback ? { [fallback.dataset.maPhase]: 1 } : {};
+    }
+
     function renderTime() {
       const weights = sceneWeights(state.hour);
+      prepareScenes(weights);
+      const displayed = displayWeights(weights);
       // Convert desired contributions into source-over opacity in DOM order.
       // This keeps the composite opaque during transitions between RGB photos.
       let below = 0;
       images.forEach((image, index) => {
-        const contribution = weights[image.dataset.maPhase] || 0;
+        const contribution = displayed[image.dataset.maPhase] || 0;
         below += contribution;
         image.style.opacity = (below > 0 ? contribution / below : 0).toFixed(5);
         image.style.zIndex = String(index);
@@ -252,13 +302,25 @@
     resize.observe(stage); if (canvas) resize.observe(canvas);
     const box = stage.getBoundingClientRect();
     state.visible = box.bottom > 0 && box.top < innerHeight && box.width > 0 && box.height > 0;
+    state.near = box.bottom > -warmMargin && box.top < innerHeight + warmMargin && box.width > 0 && box.height > 0;
     if (state.visible) root.classList.add('ma-has-entered');
+    if (sceneImages) images.forEach(image => sceneImages.watch(image, renderTime));
     if ('IntersectionObserver' in window) {
       const visibility = new IntersectionObserver(entries => {
         state.visible = entries.some(entry => entry.isIntersecting && entry.intersectionRatio > 0);
         if (state.visible) { root.classList.add('ma-has-entered'); state.scrollDirty = true; resume(); } else stop();
       }, { threshold: 0 });
       visibility.observe(stage);
+      if (sceneImages) {
+        const approach = new IntersectionObserver(entries => {
+          state.near = entries.some(entry => entry.isIntersecting);
+          if (state.near) renderTime();
+          else images.forEach(image => sceneImages.cancelQueued(image));
+        }, { rootMargin: warmMargin + 'px 0px' });
+        approach.observe(stage);
+      }
+    } else if (sceneImages) {
+      state.near = true;
     }
     buildParticles(); renderTime(); resume();
     loadScriptFont().then(ready => {

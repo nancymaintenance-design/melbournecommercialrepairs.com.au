@@ -16,19 +16,25 @@
  const lang=()=>english()?'en':'zh';
  const match=q=>!query.trim()||normal(query).split(' ').filter(Boolean).every(term=>index.get(q.id).includes(term));
  function translate(node,zh,en){node.dataset.zh=zh;node.dataset.en=en;node.textContent=tr(zh,en);}
- function stateUrl(hash='') {
-  const url=new URL(location.href);url.searchParams.set('lang',lang());url.searchParams.set('topic',topic);
+ function stateUrl(hash='',category=topic) {
+  const url=new URL(location.href);url.searchParams.set('topic',category);
   if(query.trim())url.searchParams.set('q',query.trim());else url.searchParams.delete('q');url.hash=hash;
-  return url;
+  return window.EllisLocaleUI.localizeUrl(url,lang());
  }
- function remember(hash='',replace=false){const url=stateUrl(hash);if(url.href!==location.href)history[replace?'replaceState':'pushState'](null,'',url);window.EllisLocaleUI?.syncSwitch();}
+ function remember(hash='',replace=false){
+  const url=stateUrl(hash);
+  const current=new URL(location.href);
+  const orderOnly=window.EllisLocaleUI.localizeUrl(current,lang()).href===url.href;
+  if(url.href!==location.href)history[replace||orderOnly?'replaceState':'pushState'](null,'',url);
+  window.EllisLocaleUI.syncSwitch();
+ }
  function render({animate=false}={}) {
   const shown=questions.filter(q=>(topic==='all'||q.topic===topic)&&match(q)),ids=new Set(shown.map(q=>q.id));
   cards.forEach(card=>{card.hidden=!ids.has(card.id);});
   groups.forEach(group=>{group.hidden=!shown.some(q=>q.topic===group.dataset.group);});
   root.classList.toggle('is-single-topic',topic!=='all');
   choices.forEach(a=>{if(a.dataset.faqTopic===topic)a.setAttribute('aria-current','true');else a.removeAttribute('aria-current');
-   const url=new URL('/faq/',location.origin);url.searchParams.set('lang',lang());url.searchParams.set('topic',a.dataset.faqTopic);if(query.trim())url.searchParams.set('q',query.trim());url.hash='faq-results';a.href=url.pathname+url.search+url.hash;
+   const url=stateUrl('faq-results',a.dataset.faqTopic);a.href=url.pathname+url.search+url.hash;
   });
   const selected=byTopic.get(topic);
   translate(title,selected?.title.zh||'全部问题',selected?.title.en||'All questions');
@@ -41,7 +47,7 @@
   form.querySelector('[type=submit]').setAttribute('aria-label',tr('搜索问答','Search questions'));
   const following=selected?topics[topics.indexOf(selected)+1]:null;
   next.hidden=!following||!!query.trim()||shown.length===0;
-  if(following){next.dataset.faqNext=following.key;next.href=`/faq/?lang=${lang()}&topic=${following.key}#faq-results`;next.querySelector('.faq-next-name').textContent=tr(`${following.title.zh} · ${following.questions.length} 个问题`,`${following.title.en} · ${following.questions.length} questions`);}
+  if(following){const url=stateUrl('faq-results',following.key);next.dataset.faqNext=following.key;next.href=url.pathname+url.search+url.hash;next.querySelector('.faq-next-name').textContent=tr(`${following.title.zh} · ${following.questions.length} 个问题`,`${following.title.en} · ${following.questions.length} questions`);}
   if(animate&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
    filterAnimation?.cancel();filterAnimation=root.querySelector('.faq-groups').animate([{opacity:.8,translate:'0 6px'},{opacity:1,translate:'0 0'}],{duration:210,easing:'ease-out'});
   }

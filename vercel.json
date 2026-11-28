@@ -20,6 +20,19 @@
     { "src": "^/feed(?:-en)?\\.xml$", "headers": { "Content-Type": "application/rss+xml; charset=utf-8" }, "continue": true },
     { "src": "^/feed(?:-en)?\\.json$", "headers": { "Content-Type": "application/feed+json; charset=utf-8" }, "continue": true },
     { "src": "^/llms\\.txt$", "headers": { "Content-Type": "text/plain; charset=utf-8" }, "continue": true },
+    {
+      "src": "^/(?:[\\w.-]+|(?:assets|vendor)/(?:[\\w.-]+/)*[\\w.-]+)\\.(?:css|m?js)$",
+      "methods": ["GET", "HEAD"],
+      "has": [{ "type": "query", "key": "v", "value": "^[a-f0-9]{12}$" }],
+      "headers": { "Cache-Control": "public, max-age=31536000, immutable" },
+      "continue": true
+    },
+    {
+      "src": "^/assets/(?:scenes/(?:01-home|02-building-interior|03-equipment|04-landscaping)|areas/melbourne-stage-design-(?:day|dusk|night)|project-process/enquiry-note)-w[1-9][0-9]{2,3}-v[1-9][0-9]*\\.(?:webp|avif)$",
+      "methods": ["GET", "HEAD"],
+      "headers": { "Cache-Control": "public, max-age=31536000, immutable" },
+      "continue": true
+    },
     { "handle": "filesystem" }
   ]
 }

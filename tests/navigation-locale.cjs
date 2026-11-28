@@ -8,6 +8,12 @@ const homeSource=fs.readFileSync(pages[0],'utf8');
 const homeLocale=homeSource.search(/<script[^>]*src="\/locale-ui\.js\?/);
 const homeApp=homeSource.search(/<script[^>]*src="\/?app\.js\?/);
 assert(homeLocale>=0&&homeApp>homeLocale,'Homepage loads the shared locale helper before app.js');
+const {localizeUrl}=require('../locale-ui.js');
+const combined=localizeUrl(new URL('https://example.com/contact/?utm_source=ad&area=cbd-inner&service=roofing-waterproofing&lang=en&gclid=raw%2Bvalue&utm_source=second#contact-enquiry-form'),'zh');
+assert.equal(combined.href,'https://example.com/contact/?lang=zh&service=roofing-waterproofing&area=cbd-inner&utm_source=ad&gclid=raw%2Bvalue&utm_source=second#contact-enquiry-form');
+assert.equal(localizeUrl(combined,'zh').href,combined.href,'Link normalization must be stable');
+const faqUrl=localizeUrl(new URL('https://example.com/faq/?q=roof+repair&lang=zh&topic=roofing&lang=en#faq-results'),'en');
+assert.equal(faqUrl.href,'https://example.com/faq/?lang=en&topic=roofing&q=roof+repair#faq-results');
 const homeFooter=fs.readFileSync(pages[0],'utf8').match(/<footer\b[\s\S]*?<\/footer>/)[0];
 for(const file of pages){
  const html=fs.readFileSync(file,'utf8');
@@ -29,5 +35,14 @@ for(const file of pages){
  assert(!html.includes('rr-footer-expanded'),`${file}: no regional footer fold`);
  const variants=html.match(/id="region-v2-locales">([\s\S]*?)<\/script>/);
  if(variants)assert(!/\p{Script=Han}/u.test(JSON.parse(variants[1]).en),`${file}: entire English region variant contains no Chinese`);
+}
+for(const home of [homeSource,fs.readFileSync(path.join(root,'_ellisl10n/index.html'),'utf8')]){
+ const cards=[...home.matchAll(/<a class="nm-article-link"[^>]*>[\s\S]*?<\/a>/g)].map(([card])=>card);
+ assert.equal(cards.length,3,'Homepage has all three news article links');
+ for(const card of cards){
+  assert.match(card,/<div class="nm-cover" aria-hidden="true"><img[^>]+ alt=""[^>]*>/);
+  const label=card.match(/aria-labelledby="([^"]+)"/)[1];
+  assert(card.includes('id="'+label+'"'),'Article name still uses the localized visible title');
+ }
 }
 console.log(`Navigation/locale contracts passed: ${pages.length} pages share one navigation stylesheet, original language control, localized attributes and fully visible footers; English region variants contain no Chinese.`);

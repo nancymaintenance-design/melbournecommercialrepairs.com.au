@@ -5,6 +5,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const {parse} = require('parse5');
 const {origin, canonicalUrl} = require('./content/search-config.cjs');
+const {localizeUrl} = require('./locale-ui.js');
 const {withAnalytics} = require('./content/ga4.cjs');
 const {pageRecord, writeResources} = require('./content/machine-discovery.cjs');
 const {withBreadcrumb} = require('./content/breadcrumbs.cjs');
@@ -44,7 +45,7 @@ function withLocale(href, route, language) {
  const pathname = url.pathname.replace(/\/index\.html$/, '/').replace(/\/?$/, '/');
  if (!pageRoutes.has(pathname)) return href;
  url.pathname = pathname;
- url.searchParams.set('lang', language);
+ localizeUrl(url, language);
  return url.pathname + url.search + url.hash;
 }
 

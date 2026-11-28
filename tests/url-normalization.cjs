@@ -95,6 +95,15 @@ async function main() {
       .map(link => link.href), [expected], url);
   }
 
+  for (const url of [
+    '/contact/?utm_source=fixture&area=cbd-inner&service=roofing-waterproofing&lang=en',
+    '/faq/?topic=roofing&utm_campaign=fixture&lang=zh',
+  ]) {
+    const result = await request(url);
+    assert.equal(result.status, 200, 'Query ordering alone must not trigger a redirect: ' + url);
+    assert.equal(result.headers.Location, undefined);
+  }
+
   assert(sitemap.length > 0 && new Set(sitemap.map(url => url.href)).size === sitemap.length);
   for (const url of sitemap) {
     const language = url.searchParams.get('lang');

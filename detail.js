@@ -6,7 +6,7 @@
  function apply(){
   document.documentElement.lang=language==='en'?'en':'zh-CN';
   all('[data-zh][data-en]').forEach(n=>{const copy=n.dataset[language].replace(/\\n/g,'\n');if(n.textContent!==copy)n.textContent=copy;});
-  all('a[href^="/"]:not([data-language-switch])').forEach(a=>{const u=new URL(a.href);u.searchParams.set('lang',language);a.href=u.pathname+u.search+u.hash});
+  all('a[href^="/"]:not([data-language-switch])').forEach(a=>{const u=localeUI.localizeUrl(new URL(a.href),language);a.href=u.pathname+u.search+u.hash});
   $('.lang-en').classList.toggle('active',language==='en');$('.lang-zh').classList.toggle('active',language==='zh');
   $('#language-switch').setAttribute('aria-label',language==='en'?'切换到中文':'Switch to English');
   $('#main-nav').setAttribute('aria-label',language==='en'?'Main navigation':'主导航');

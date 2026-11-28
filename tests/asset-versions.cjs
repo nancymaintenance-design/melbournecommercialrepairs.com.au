@@ -44,4 +44,21 @@ function verify(directory) {
   }
 }
 verify(root);
+const cacheRules = require('../vercel.json').routes.filter(rule => rule.headers?.['Cache-Control']?.includes('immutable'));
+const isImmutable = (target, method = 'GET') => {
+  const url = new URL(target, 'https://example.com');
+  return cacheRules.some(rule => new RegExp(rule.src).test(url.pathname)
+    && rule.methods.includes(method)
+    && (!rule.has || rule.has.every(({key, value}) => new RegExp(value).test(url.searchParams.get(key) || ''))));
+};
+assert(isImmutable('/app.js?v=3edfc28dc0ad'));
+assert(isImmutable('/vendor/ellis-regions-v2/src/contact-context.mjs?v=3edfc28dc0ad', 'HEAD'));
+assert(isImmutable('/assets/scenes/01-home-w1536-v2.webp'));
+assert(isImmutable('/assets/areas/melbourne-stage-design-night-w1731-v2.avif'));
+for (const target of ['/app.js', '/style.css?v=stale', '/api/enquiry.js?v=3edfc28dc0ad',
+  '/assets/scenes/01-home.webp', '/assets/areas/melbourne-stage-design-night-v1.webp',
+  '/assets/project-process/enquiry-note.png', '/sitemap.xml', '/contact/?lang=en', '/analytics-frame.html']) {
+  assert(!isImmutable(target), 'Unversioned or non-static response must still revalidate: ' + target);
+}
+assert(!isImmutable('/app.js?v=3edfc28dc0ad', 'POST'));
 console.log('Asset cache regression passed: new code changes URLs; all generated pages have current versions.');

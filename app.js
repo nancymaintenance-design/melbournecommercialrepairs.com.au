@@ -165,7 +165,7 @@
       window.scrollTo(0,story.offsetTop-header+(story.offsetHeight-pin.offsetHeight)*progress);
       document.documentElement.style.scrollBehavior=behavior;
     }
-    $$('a[href^="/"]:not([data-language-switch])').forEach(a=>{const u=new URL(a.href);u.searchParams.set('lang',language);a.href=u.pathname+u.search+u.hash;});
+    $$('a[href^="/"]:not([data-language-switch])').forEach(a=>{const u=localeUI.localizeUrl(new URL(a.href),language);a.href=u.pathname+u.search+u.hash;});
     syncHomeNavigation();
     document.dispatchEvent(new CustomEvent('ellislanguagechange'));
     window.EllisLocaleUI?.apply();

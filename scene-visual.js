@@ -2,6 +2,8 @@
 (() => {
   'use strict';
   const clamp = n => Math.max(0, Math.min(1, n));
+  const loader=window.EllisStageImages;
+  const stops=[0,.18,.51,.81,1];
   const stateByView={all:0,building:1,systems:2,grounds:3};
   // Camera anchors are the original approved H2 adapter's exact view targets.
   const views={all:[0,0,1],building:[6,-2,1.08],systems:[-1,-2,1.10],grounds:[-3,-11,1.10]};
@@ -13,16 +15,13 @@
     camera.insertAdjacentHTML('afterend','<div class="arch-callout" aria-hidden="true"></div>');
     const callout=host.querySelector('.arch-callout');
     const unavailable=host.querySelector('.visual-unavailable');
-    const ready = new Set();
-    const loaded = new Set();
-    const decoding = new Map();
-    let progress = 0, paused = false, view = 'all', exploded=false, lastGood = 0, disposed = false;
+    const isReady=index=>images[index]&&loader.ready(images[index]);
+    let progress = 0, direction = 1, paused = false, view = 'all', exploded=false, disposed = false;
     let shown=-1,desired=0,swapping=false,generation=0,animation=null;
     const style=(node,key,value)=>{if(node.style.getPropertyValue?.(key)!==value)node.style.setProperty(key,value)};
     function show(index){
       if(shown===index)return;
       shown=index;
-      if(ready.has(index))lastGood=index;
       images.forEach((image,i)=>{image.style.opacity=i===index?'1':'0';image.style.clipPath='none';});
       host.dataset.visualState=String(index);
     }
@@ -31,7 +30,7 @@
     }
     function selectState(index){
       desired=index;
-      if(paused||document.hidden||!camera.animate){if(swapping)cancelSwap();show(index);return;}
+      if(paused||document.hidden||!camera.animate||!images[shown]?.naturalWidth){if(swapping)cancelSwap();show(index);return;}
       if(swapping||shown===index)return;
       swapping=true;const token=++generation;
       // Whole-picture handoff: one illustration at a time, no masks or overlaps.
@@ -39,7 +38,8 @@
       animation=camera.animate([{opacity:1},{opacity:.65}],{duration:140,fill:'forwards',easing:'ease-out'});
       animation.finished.then(()=>{
         if(disposed||token!==generation)return;
-        show(desired);animation.cancel();
+        if(isReady(desired))show(desired);
+        animation.cancel();
         animation=camera.animate([{opacity:.65},{opacity:1}],{duration:220,fill:'forwards',easing:'ease-in'});
         return animation.finished.then(()=>{
           if(disposed||token!==generation)return;
@@ -48,14 +48,23 @@
         });
       }).catch(()=>{});
     }
+    function prioritize(requested) {
+      const span=stops[requested+1]-stops[requested];
+      const distance=direction>0?stops[requested+1]-progress:progress-stops[requested];
+      const neighbor=!paused&&isReady(requested)&&distance>=0&&distance<span*.4?requested+direction:-1;
+      images.forEach((image,index)=>{if(index!==requested&&index!==neighbor)loader.cancelQueued(image);});
+      loader.request(images[requested],2);
+      if(images[neighbor])loader.request(images[neighbor]);
+    }
     function paint() {
       if (disposed) return;
       // Each project has exactly one user-confirmed picture. No secondary old frames.
       const requested=stateByView[view]??0;
-      const available=ready.has(requested)?requested:ready.has(lastGood)?lastGood:[...ready][0]??0;
-      selectState(available);
+      prioritize(requested);
+      const fallback=shown>=0&&images[shown].naturalWidth?shown:images.findIndex((_,i)=>isReady(i));
+      selectState(isReady(requested)?requested:fallback<0?0:fallback);
       const target=views[view]||views.all;
-      const stops=[0,.18,.51,.81,1],phase=stateByView[view]??0;
+      const phase=stateByView[view]??0;
       const local=clamp((progress-stops[phase])/(stops[phase+1]-stops[phase]));
       const arc=Math.sin(local*Math.PI);
       style(camera,'--camera-scale', paused ? '1' : String(target[2]+(exploded?.05:0)+arc*.008));
@@ -66,36 +75,24 @@
       if(host.dataset.view!==view)host.dataset.view=view;
       if(host.dataset.motionRunning!==String(!paused))host.dataset.motionRunning=String(!paused);
       if(host.dataset.renderer!=='calibrated-key-states')host.dataset.renderer='calibrated-key-states';
-      if(unavailable.hidden!==(loaded.size>0))unavailable.hidden=loaded.size>0;
+      const visible=images[shown]?.naturalWidth>0;
+      if(unavailable.hidden!==visible)unavailable.hidden=visible;
     }
-    const handlers = images.map((img,i) => {
-      // Decode each source once, off the visible handoff. Keep the last ready
-      // illustration until the requested image can be painted without a decode stall.
-      const load = () => {
-        if(disposed||!img.naturalWidth||decoding.has(i))return;
-        loaded.add(i);
-        const job=Promise.resolve().then(()=>typeof img.decode==='function'?img.decode():undefined);
-        decoding.set(i,job);
-        job.then(()=>{if(disposed)return;ready.add(i);if(shown===i)lastGood=i;paint();},()=>{if(!disposed){ready.delete(i);loaded.delete(i);paint();}});
-      };
-      const error = () => { ready.delete(i); loaded.delete(i); decoding.delete(i); if(!disposed)paint(); };
-      img.addEventListener('load',load); img.addEventListener('error',error);
-      if(img.complete && img.naturalWidth) load();
-      return () => { img.removeEventListener('load',load); img.removeEventListener('error',error); };
-    });
+    const handlers = images.map(image => loader.watch(image,paint));
     show(0);paint();
     document.addEventListener('ellislanguagechange',paint);
     return {
       setFrame(next) {
         const p=clamp(Number(next.progress)||0),e=!!next.exploded,s=!!next.paused;
         if(view===next.view&&progress===p&&exploded===e&&paused===s)return;
+        if(p!==progress)direction=p>progress?1:-1;
         view=next.view;progress=p;exploded=e;paused=s;paint();
       },
       setView(value) { if(view!==value){view=value;paint();} },
       setExploded(value) { if(exploded!==!!value){exploded=!!value;paint();} },
       setPaused(value) { if(paused!==!!value){paused=!!value;paint();} },
-      setScroll(value) { const p=clamp(Number(value)||0);if(progress!==p){progress=p;paint();} },
-      destroy() { disposed=true; cancelSwap(); handlers.forEach(remove=>remove()); document.removeEventListener('ellislanguagechange',paint);host.querySelector('.arch-route')?.remove();callout.remove(); }
+      setScroll(value) { const p=clamp(Number(value)||0);if(progress!==p){direction=p>progress?1:-1;progress=p;paint();} },
+      destroy() { disposed=true; images.forEach(loader.cancelQueued); cancelSwap(); handlers.forEach(remove=>remove()); document.removeEventListener('ellislanguagechange',paint);host.querySelector('.arch-route')?.remove();callout.remove(); }
     };
   };
 })();

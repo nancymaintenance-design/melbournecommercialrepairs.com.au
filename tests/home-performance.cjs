@@ -1,12 +1,20 @@
 const {test}=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
 function deferred(){let resolve,reject;const promise=new Promise((a,b)=>{resolve=a;reject=b});return{promise,resolve,reject}}
 const flush=async()=>{for(let i=0;i<8;i++)await Promise.resolve()};
-function scene(){
+function scene({cold=false}={}){
  let writes=0;const style=()=>new Proxy({setProperty(k,v){writes++;this[k]=v}},{set(o,k,v){if(k!=='setProperty')writes++;o[k]=v;return true}});
- const pending=Array.from({length:4},deferred),images=pending.map((job,i)=>({complete:true,naturalWidth:1536,style:style(),addEventListener(){},removeEventListener(){},decodeCalls:0,decode(){this.decodeCalls++;return job.promise}}));
+ const pending=Array.from({length:4},deferred),images=pending.map((job,i)=>{
+  const initial=!cold||i===0, handlers={}, url='https://test.invalid/scene'+i+'.webp';
+  return {complete:initial,naturalWidth:initial?1536:0,currentSrc:initial?url:'',stateStarted:initial,style:style(),
+   dataset:{src:url,srcset:url+' 1536w',sizes:'100vw'},
+   hasAttribute(name){return name==='src'&&this.stateStarted;},
+   addEventListener(name,fn){handlers[name]=fn;}, removeEventListener(){}, removeAttribute(){},
+   set src(value){this.stateStarted=true;this.currentSrc=value;this.complete=true;this.naturalWidth=1536;},
+   decodeCalls:0,decode(){this.decodeCalls++;return job.promise;}};
+ });
  const animations=[],camera={style:style(),insertAdjacentHTML(){},animate(frames,options){const done=deferred(),a={frames,options,finished:done.promise,finish:done.resolve,cancel(){done.reject(new Error('cancelled'))}};animations.push(a);return a}};
  const callout={textContent:'',remove(){}},unavailable={hidden:false},host={dataset:{},querySelectorAll:()=>images,querySelector:s=>s==='.building-camera'?camera:s==='.arch-callout'?callout:s==='.visual-unavailable'?unavailable:{remove(){}}};
- const document={hidden:false,documentElement:{lang:'zh-CN'},addEventListener(){},removeEventListener(){}};const window={};vm.runInNewContext(fs.readFileSync('scene-visual.js','utf8'),{window,document,console,Set,Map,Promise});
+ const document={hidden:false,documentElement:{lang:'zh-CN'},addEventListener(){},removeEventListener(){}};const window={};const context=vm.createContext({window,document,console,Set,Map,WeakMap,Promise,queueMicrotask,URL});vm.runInContext(fs.readFileSync('stage-images.js','utf8'),context);vm.runInContext(fs.readFileSync('scene-visual.js','utf8'),context);
  return{api:window.createEllisScene(host),pending,images,animations,host,camera,unavailable,get writes(){return writes}};
 }
 test('a scene image is decoded before it can replace the current artwork',async()=>{
@@ -16,6 +24,22 @@ test('a scene image is decoded before it can replace the current artwork',async(
  s.pending[1].resolve();await flush();assert.equal(s.animations.length,1);assert.equal(s.animations[0].options.duration,140);
  s.animations[0].finish();await flush();assert.equal(s.host.dataset.visualState,'1');assert.equal(s.animations[1].options.duration,220);
  s.animations[1].finish();await flush();s.api.destroy();
+});
+test('cold scenes prepare only the approaching and current targets with bounded concurrency',async()=>{
+ const s=scene({cold:true});s.pending[0].resolve();await flush();
+ assert.deepEqual(s.images.map(i=>i.stateStarted),[true,false,false,false]);
+ s.api.setFrame({view:'all',progress:.15});await flush();
+ assert.deepEqual(s.images.map(i=>i.stateStarted),[true,true,false,false]);
+ s.api.setView('grounds');await flush();
+ assert.deepEqual(s.images.map(i=>i.stateStarted),[true,true,false,true]);
+ s.api.setView('systems');await flush();
+ assert.equal(s.images[2].stateStarted,false,'limit prevents a third simultaneous decode');
+ s.pending[1].resolve();await flush();
+ assert.equal(s.images[2].stateStarted,true,'released slot prepares the current target');
+ assert.equal(s.host.dataset.visualState,'0','a late older scene never replaces the current target');
+ s.pending[2].resolve();await flush();s.animations[0].finish();await flush();
+ assert.equal(s.host.dataset.visualState,'2');
+ s.pending[3].resolve();await flush();assert.equal(s.host.dataset.visualState,'2');s.api.destroy();
 });
 test('one timeline frame is idempotent instead of rewriting the camera repeatedly',async()=>{
  const s=scene();s.pending.forEach(p=>p.resolve());await flush();
